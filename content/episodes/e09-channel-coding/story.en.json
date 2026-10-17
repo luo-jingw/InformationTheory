@@ -1,0 +1,1067 @@
+{
+  "episode": "e09-channel-coding",
+  "title": "Noisy Channel Coding Theorem",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-code",
+      "chapter": "Block codes and error criteria",
+      "title": "Can redundancy rescue a noisy bit?",
+      "music": "definition",
+      "terms": [
+        "dmc",
+        "capacity",
+        "fano",
+        "map",
+        "ml"
+      ],
+      "sentences": [
+        {
+          "en": "Can repeating yourself make a noisy link more reliable?",
+          "zh": "重复自己，能让有噪声的链路更可靠吗？"
+        },
+        {
+          "en": "Send zero as zero zero zero and one as one one one through three independent BSC uses, each with crossover probability zero point one.",
+          "zh": "用三次独立的BSC(0.10)信道使用，把0发成000，把1发成111。"
+        },
+        {
+          "en": "The receiver sees zero one zero. Which original bit should it choose?",
+          "zh": "接收者看到010。它应该选择哪个原始比特？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Majority decoding selects zero. It corrects any one flipped position.",
+          "zh": "多数判决选择0，能够纠正任意一个位置的翻转。"
+        },
+        {
+          "en": "An error now requires at least two of the three positions to flip.",
+          "zh": "现在，至少三个位置中有两个翻转才会出错。"
+        },
+        {
+          "en": "The probability is three times .10 squared times .90, plus .10 cubed: .028.",
+          "zh": "概率为3×0.10²×0.90+0.10³，即0.028。"
+        },
+        {
+          "en": "Error falls from .10 to .028, but the rate is only one information bit per three channel uses.",
+          "zh": "错误率从0.10降到0.028，但速率只有每三次信道使用传一个信息比特。"
+        },
+        {
+          "en": "Can longer blocks make error vanish at a positive rate? A finite repetition example cannot prove that.",
+          "zh": "更长的块能在正速率下让错误趋于零吗？一个有限重复码例子还不能证明这一点。"
+        },
+        {
+          "en": "A length n block code starts with a finite message set.",
+          "zh": "长度为n的分组码从有限消息集合开始。"
+        },
+        {
+          "en": "Write its size as M.",
+          "zh": "将其大小记为M。"
+        },
+        {
+          "en": "A deterministic encoder maps each message to an input sequence of length n.",
+          "zh": "确定性编码器将每条消息映射为长度n的输入序列。"
+        },
+        {
+          "en": "The channel produces a random output sequence of length n.",
+          "zh": "信道产生长度为n的随机输出序列。"
+        },
+        {
+          "en": "A decoder maps each received sequence to a message estimate.",
+          "zh": "译码器将每个接收序列映射为消息估计。"
+        },
+        {
+          "en": "The code rate is log two M divided by n.",
+          "zh": "码率R=(log₂M)/n。"
+        },
+        {
+          "en": "Its unit is information bits per channel use.",
+          "zh": "其单位是每次信道使用的信息比特数。"
+        },
+        {
+          "en": "For message m, define its conditional error probability.",
+          "zh": "对消息m，定义其条件错误概率。"
+        },
+        {
+          "en": "Average error is the mean of these probabilities over messages.",
+          "zh": "平均错误概率是这些条件错误概率对消息的平均。"
+        },
+        {
+          "en": "This convention gives every message equal weight.",
+          "zh": "这种约定给每条消息相同权重。"
+        },
+        {
+          "en": "Maximal error is the largest conditional error among messages.",
+          "zh": "最大错误概率是所有消息条件错误中的最大值。"
+        },
+        {
+          "en": "The maximal value cannot be smaller than the average.",
+          "zh": "最大值不可能小于平均值。"
+        },
+        {
+          "en": "An average criterion can hide a few messages with large conditional error.",
+          "zh": "平均准则可能掩盖少数条件错误很大的消息。"
+        },
+        {
+          "en": "A maximal criterion rules out that disparity.",
+          "zh": "最大错误准则排除了这种差异。"
+        },
+        {
+          "en": "Both criteria are defined using the channel law and decoder.",
+          "zh": "两种准则都由信道概率律和译码器定义。"
+        },
+        {
+          "en": "A maximum a posteriori decoder uses prior message probabilities.",
+          "zh": "最大后验译码器使用消息先验概率。"
+        },
+        {
+          "en": "With uniform messages, maximum a posteriori and maximum likelihood agree.",
+          "zh": "消息均匀时，最大后验与最大似然译码一致。"
+        },
+        {
+          "en": "With nonuniform messages, the prior can change the best decision.",
+          "zh": "消息不均匀时，先验可能改变最优判决。"
+        },
+        {
+          "en": "Use codewords zero zero zero and one one one on a BSC with crossover probability zero point two. Receive zero one one.",
+          "zh": "在BSC(0.20)上使用码字000和111，接收到011。"
+        },
+        {
+          "en": "The likelihoods are .032 versus .128. But the message priors are .90 versus .10.",
+          "zh": "两个似然分别为0.032和0.128，但消息先验分别为0.90和0.10。"
+        },
+        {
+          "en": "Does multiplying by those priors keep or reverse the likelihood decision?",
+          "zh": "乘上这些先验后，原来的似然判决会保留还是反转？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The weighted values are zero point zero two eight eight versus zero point zero one two eight. MAP chooses zero zero zero.",
+          "zh": "加权后分别为0.0288和0.0128。最大后验判决选择000。"
+        },
+        {
+          "en": "This episode first studies deterministic encoders and decoders.",
+          "zh": "本集先研究确定性编码器与译码器。"
+        },
+        {
+          "en": "Random codebooks will be a proof device for finding deterministic codes.",
+          "zh": "随机码本将作为寻找确定码的证明工具。"
+        },
+        {
+          "en": "A code is reliable when its block error probability is small.",
+          "zh": "当分组错误概率较小时，称该码可靠。"
+        },
+        {
+          "en": "Vanishing error refers to a sequence of codes as block length grows.",
+          "zh": "错误趋零是指块长增长时的一列编码。"
+        },
+        {
+          "en": "It is not a zero-error promise for every finite block.",
+          "zh": "这并不保证每个有限块都零错误。"
+        },
+        {
+          "en": "The central question is which rates permit vanishing error.",
+          "zh": "核心问题是哪些码率允许错误概率趋零。"
+        },
+        {
+          "en": "For a discrete memoryless channel, the answer will involve mutual information.",
+          "zh": "对离散无记忆信道，答案将由互信息决定。"
+        },
+        {
+          "en": "First we need a test for whether an input-output pair looks typical.",
+          "zh": "首先需要检验输入输出对是否典型。"
+        },
+        {
+          "en": "The test must distinguish the true pair from an independent wrong codeword.",
+          "zh": "该检验必须区分真实配对与独立错误码字。"
+        },
+        {
+          "en": "Both steps use different probability arguments.",
+          "zh": "这两步分别使用不同的概率论证。"
+        },
+        {
+          "en": "The input and output marginal tests prevent atypical sequences from entering.",
+          "zh": "输入与输出边缘检验排除非典型序列。"
+        },
+        {
+          "en": "The joint test checks compatibility under the channel law.",
+          "zh": "联合检验检查输入输出是否符合信道规律。"
+        },
+        {
+          "en": "Next, define weak joint typicality through three surprisal tests.",
+          "zh": "接下来通过三项自信息检验定义弱联合典型性。"
+        }
+      ]
+    },
+    {
+      "id": "c02-joint",
+      "chapter": "Weak joint typicality",
+      "title": "Three surprisal windows control true and wrong pairs",
+      "music": "proof",
+      "terms": [
+        "joint-typicality",
+        "dmc",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Fix an input distribution P X and a discrete memoryless channel, named letter W.",
+          "zh": "固定输入分布P_X与离散无记忆信道W。"
+        },
+        {
+          "en": "Together they define a joint law P X Y.",
+          "zh": "二者共同定义联合分布P_XY。"
+        },
+        {
+          "en": "Draw n input-output pairs independently from this joint law.",
+          "zh": "从该联合分布独立抽取n组输入输出对。"
+        },
+        {
+          "en": "The weak joint typical set uses three conditions.",
+          "zh": "弱联合典型集由三个条件构成。"
+        },
+        {
+          "en": "First, input sequence surprisal per symbol is near H of X.",
+          "zh": "第一，输入序列每符号自信息接近H(X)。"
+        },
+        {
+          "en": "Its distance from H of X is at most epsilon.",
+          "zh": "它与H(X)的差距至多为ε。"
+        },
+        {
+          "en": "Second, output sequence surprisal per symbol is near H of Y.",
+          "zh": "第二，输出序列每符号自信息接近H(Y)。"
+        },
+        {
+          "en": "Its distance from H of Y is at most epsilon.",
+          "zh": "它与H(Y)的差距至多为ε。"
+        },
+        {
+          "en": "Third, joint sequence surprisal per symbol is near H of X,Y.",
+          "zh": "第三，联合序列每符号自信息接近H(X,Y)。"
+        },
+        {
+          "en": "Its distance from joint entropy is at most epsilon.",
+          "zh": "它与联合熵的差距至多为ε。"
+        },
+        {
+          "en": "These are marginal and joint probability tests, rather than empirical joint-frequency tests.",
+          "zh": "这些是边缘和联合概率检验，并非经验联合频率检验。"
+        },
+        {
+          "en": "Each fair four-bit string passes its marginal test. Does every displayed pair then pass the joint test?",
+          "zh": "每个公平四比特串都通过边缘检验。那么图中的每一对也都能通过联合检验吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "No. With epsilon .04, the joint test keeps exactly the pairs one bit apart in this four-bit example.",
+          "zh": "不是。在这个四比特例子中，ε=0.04的联合检验恰好只保留相差一位的串对。"
+        },
+        {
+          "en": "The true-pair probability here is zero point four two one eight seven five. Probability approaching one concerns growing block length.",
+          "zh": "这些串对的真实联合概率为0.421875。趋于一的概率结论针对的是不断增长的块长。"
+        },
+        {
+          "en": "For the true pair, each tested surprisal is a sample average.",
+          "zh": "对真实配对，每项自信息检验都是样本平均。"
+        },
+        {
+          "en": "The input surprisal terms are independent with mean H of X.",
+          "zh": "输入自信息项独立，均值为H(X)。"
+        },
+        {
+          "en": "The output marginal sequence is IID with mean surprisal H of Y.",
+          "zh": "输出边缘序列IID，其平均自信息为H(Y)。"
+        },
+        {
+          "en": "Joint pair surprisal terms are IID with mean H of X,Y.",
+          "zh": "联合配对自信息项IID，均值为H(X,Y)。"
+        },
+        {
+          "en": "Zero-probability events occur with probability zero and are ignored.",
+          "zh": "零概率事件发生概率为零，因此忽略。"
+        },
+        {
+          "en": "The weak law makes each test pass with probability approaching one.",
+          "zh": "弱大数定律保证每项检验通过概率趋于一。"
+        },
+        {
+          "en": "A union bound over the three failures shows the true pair is typical with probability approaching one.",
+          "zh": "对三项失败事件用并集界，可知真实配对典型概率趋于一。"
+        },
+        {
+          "en": "Now consider an independently generated wrong input sequence.",
+          "zh": "现在考虑独立生成的错误输入序列。"
+        },
+        {
+          "en": "It is independent of the actual channel output under the random-code ensemble.",
+          "zh": "在随机码本系综下，它独立于实际信道输出。"
+        },
+        {
+          "en": "This is exact independence, not an approximation.",
+          "zh": "这是精确独立，而非近似独立。"
+        },
+        {
+          "en": "The independent pair has distribution P X to n times P Y to n.",
+          "zh": "独立配对的分布为P_X^n乘P_Y^n。"
+        },
+        {
+          "en": "For every marginally typical input, its probability is at most two to negative n times H X minus epsilon.",
+          "zh": "每个边缘典型输入的概率至多为2^(−n(H(X)−ε))。"
+        },
+        {
+          "en": "For every marginally typical output, its probability is at most two to negative n times H Y minus epsilon.",
+          "zh": "每个边缘典型输出的概率至多为2^(−n(H(Y)−ε))。"
+        },
+        {
+          "en": "Their independent product is therefore at most two to negative n times H X plus H Y minus two epsilon.",
+          "zh": "独立乘积因此至多为2^(−n(H(X)+H(Y)−2ε))。"
+        },
+        {
+          "en": "We also need to count possible joint-typical pairs.",
+          "zh": "还需计算可能的联合典型配对数量。"
+        },
+        {
+          "en": "Each joint-typical pair has probability at least two to negative n times H X,Y plus epsilon.",
+          "zh": "每个联合典型配对的概率至少为2^(−n(H(X,Y)+ε))。"
+        },
+        {
+          "en": "All such joint probabilities sum to at most one.",
+          "zh": "所有这些联合概率之和至多为一。"
+        },
+        {
+          "en": "Hence the set contains at most two to n times H X,Y plus epsilon pairs.",
+          "zh": "因此该集合至多含2^(n(H(X,Y)+ε))个配对。"
+        },
+        {
+          "en": "Multiply this count by the largest independent-pair probability.",
+          "zh": "将该计数乘以独立配对概率的上界。"
+        },
+        {
+          "en": "The result is at most two to negative n times the quantity mutual information minus three epsilon.",
+          "zh": "结果至多为2^(−n(I(X;Y)−3ε))。"
+        },
+        {
+          "en": "Here I equals H X plus H Y minus H X,Y.",
+          "zh": "这里I(X;Y)=H(X)+H(Y)−H(X,Y)。"
+        },
+        {
+          "en": "This bounds the chance that one independent wrong codeword passes all tests.",
+          "zh": "这就界定了一个独立错误码字通过全部检验的概率。"
+        },
+        {
+          "en": "The true pair used a law of large numbers instead.",
+          "zh": "真实配对则使用大数定律论证。"
+        },
+        {
+          "en": "That distinction powers the random-coding proof.",
+          "zh": "这一区别支撑随机编码证明。"
+        },
+        {
+          "en": "Next, union-bound the wrong candidates in a random codebook.",
+          "zh": "接下来对随机码本中的错误候选使用并集界。"
+        }
+      ]
+    },
+    {
+      "id": "c03-random",
+      "chapter": "Random coding achieves mutual information",
+      "title": "One transmitted pair plus a union bound",
+      "music": "proof",
+      "terms": [
+        "random-coding",
+        "joint-typicality",
+        "dmc",
+        "capacity"
+      ],
+      "sentences": [
+        {
+          "en": "Fix an input distribution P X with mutual information I.",
+          "zh": "固定输入分布P_X，其互信息记为I。"
+        },
+        {
+          "en": "Choose a positive target rate R strictly below I.",
+          "zh": "选择满足0<R<I的目标速率R。"
+        },
+        {
+          "en": "For block length n, set M to the integer floor of two to n R.",
+          "zh": "块长为n时，令M=⌊2^(nR)⌋。"
+        },
+        {
+          "en": "The realized rate R n equals log two M divided by n.",
+          "zh": "实际码率Rₙ=(log₂M)/n。"
+        },
+        {
+          "en": "As n grows, R n tends to R.",
+          "zh": "n增大时，Rₙ趋于R。"
+        },
+        {
+          "en": "Generate each of the M codewords independently using P X to n.",
+          "zh": "按照P_X^n独立生成M个码字。"
+        },
+        {
+          "en": "Transmit a uniform message through the DMC. Does this displayed output identify a unique typical candidate?",
+          "zh": "通过DMC发送均匀消息。图中的输出能唯一确定一个典型候选吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The decoder seeks a unique jointly typical codeword. Here two qualify, so this possible book fails the test.",
+          "zh": "译码器寻找唯一的联合典型码字。这里有两个候选符合，因此这本可能的码表未通过检验。"
+        },
+        {
+          "en": "If none or several qualify, choose a fixed default message and count a test failure.",
+          "zh": "若没有或有多个候选通过，就选定默认消息，并计为检验失败。"
+        },
+        {
+          "en": "An error can occur because the true pair is not typical.",
+          "zh": "真实配对不典型可能造成错误。"
+        },
+        {
+          "en": "Call this probability A sub n.",
+          "zh": "将该事件概率记为aₙ。"
+        },
+        {
+          "en": "The weak law gives A sub n tending to zero.",
+          "zh": "弱大数定律给出aₙ趋于零。"
+        },
+        {
+          "en": "An error can also occur when a wrong codeword is jointly typical.",
+          "zh": "错误码字联合典型也可能造成错误。"
+        },
+        {
+          "en": "Fix which message was transmitted, while retaining the random-code ensemble.",
+          "zh": "固定所发消息的编号，同时保留随机码本系综。"
+        },
+        {
+          "en": "Every other random codeword is independent of the actual output under that ensemble.",
+          "zh": "在该系综下，每个其他随机码字都独立于实际输出。"
+        },
+        {
+          "en": "Averaging over that wrong codeword and output gives the preceding joint-typicality bound.",
+          "zh": "对该错误码字与输出共同取平均，得到上一章的联合典型概率界。"
+        },
+        {
+          "en": "There are M minus one wrong candidates.",
+          "zh": "错误候选共有M−1个。"
+        },
+        {
+          "en": "The union bound sums their probabilities.",
+          "zh": "并集界将这些概率相加。"
+        },
+        {
+          "en": "Average over messages, channel outputs, and random codebooks.",
+          "zh": "对消息、信道输出及随机码本取平均。"
+        },
+        {
+          "en": "Expected average error is at most A sub n plus M minus one times that bound.",
+          "zh": "期望平均错误至多为aₙ+(M−1)乘该概率界。"
+        },
+        {
+          "en": "Since M is at most two to n R, wrong-candidate confusion is bounded by two to negative n Delta.",
+          "zh": "由于M≤2^(nR)，错误候选混淆概率至多为2^(−nΔ)。"
+        },
+        {
+          "en": "Choose epsilon positive so Delta, equal to I minus R minus three epsilon, stays positive.",
+          "zh": "选择ε>0，使Δ=I−R−3ε保持为正。"
+        },
+        {
+          "en": "Then the exponent gap is positive.",
+          "zh": "这样指数间隔为正。"
+        },
+        {
+          "en": "Thus ensemble-average error tends to zero.",
+          "zh": "因此系综平均错误趋于零。"
+        },
+        {
+          "en": "At each n, some deterministic codebook has error no greater than its ensemble mean.",
+          "zh": "对每个n，都存在错误不超过系综均值的确定码本。"
+        },
+        {
+          "en": "Otherwise every codebook would exceed the mean.",
+          "zh": "否则每个码本都超过其平均值。"
+        },
+        {
+          "en": "This proves existence of a good codebook.",
+          "zh": "这证明了好码本的存在。"
+        },
+        {
+          "en": "It does not claim every random codebook is good.",
+          "zh": "这并不声称每个随机码本都好。"
+        },
+        {
+          "en": "For any input law, rates below its mutual information are achievable with vanishing average error.",
+          "zh": "对任意输入分布，低于其互信息的速率可实现平均错误趋零。"
+        },
+        {
+          "en": "Maximizing over input laws gives rates below channel capacity.",
+          "zh": "对输入分布最大化，便得到所有低于信道容量的速率。"
+        },
+        {
+          "en": "A rate of zero is trivially achievable by sending one message.",
+          "zh": "零速率可通过只发送一条消息而平凡实现。"
+        },
+        {
+          "en": "Next, convert average error control into maximal error control.",
+          "zh": "接下来将平均错误控制转为最大错误控制。"
+        }
+      ]
+    },
+    {
+      "id": "c04-expurgation",
+      "chapter": "Expurgation controls maximal error",
+      "title": "Remove a vanishing fraction of bad messages",
+      "music": "proof",
+      "terms": [
+        "expurgation",
+        "capacity",
+        "dmc"
+      ],
+      "sentences": [
+        {
+          "en": "Take a length n code with average conditional error eta.",
+          "zh": "取一个平均条件错误为η的长度n码。"
+        },
+        {
+          "en": "Assume eta lies strictly between zero and one for the moment.",
+          "zh": "暂时假设0<η<1。"
+        },
+        {
+          "en": "Set the bad-message threshold to square root eta.",
+          "zh": "将坏消息阈值设为√η。"
+        },
+        {
+          "en": "Call a message bad when its error exceeds the threshold. What fraction can be bad?",
+          "zh": "条件错误率超过阈值的消息称为坏消息。坏消息比例最多能有多大？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The average error is at least the bad fraction times the threshold.",
+          "zh": "平均错误至少等于坏消息比例乘以阈值。"
+        },
+        {
+          "en": "Therefore the bad fraction is at most square root eta.",
+          "zh": "因此坏消息比例至多为√η。"
+        },
+        {
+          "en": "Delete all bad messages and retain the others.",
+          "zh": "删除所有坏消息，保留其余消息。"
+        },
+        {
+          "en": "At least M times one minus square root eta messages remain.",
+          "zh": "至少保留M(1−√η)条消息。"
+        },
+        {
+          "en": "Every retained message had conditional error at most square root eta.",
+          "zh": "每条保留消息的条件错误至多为√η。"
+        },
+        {
+          "en": "Keep each retained message’s original correct decoding region.",
+          "zh": "保留每条保留消息原有的正确译码区域。"
+        },
+        {
+          "en": "Reassign outputs of deleted messages to any one retained message.",
+          "zh": "将原先分给已删消息的输出，重新分给任意一条保留消息。"
+        },
+        {
+          "en": "This does not shrink any retained correct region.",
+          "zh": "这样不会缩小任何保留消息的正确区域。"
+        },
+        {
+          "en": "So no retained message’s error probability increases.",
+          "zh": "因此保留消息的错误概率不会增加。"
+        },
+        {
+          "en": "The new maximal error is at most square root eta.",
+          "zh": "新码的最大错误至多为√η。"
+        },
+        {
+          "en": "The retained rate satisfies R prime at least R plus log two of one minus square root eta divided by n.",
+          "zh": "保留码率满足R′≥R+log₂(1−√η)/n。"
+        },
+        {
+          "en": "The added term is a vanishing rate loss when eta tends to zero.",
+          "zh": "当η趋于零时，新增项对应消失的码率损失。"
+        },
+        {
+          "en": "If eta equals zero, delete nothing.",
+          "zh": "若η=0，则无需删除任何消息。"
+        },
+        {
+          "en": "Average-error achievability below capacity follows from random coding.",
+          "zh": "容量以下的平均错误可达性由随机编码得到。"
+        },
+        {
+          "en": "Expurgation then gives maximal-error achievability at the same limiting rates.",
+          "zh": "随后剔除法在相同极限速率下给出最大错误可达性。"
+        },
+        {
+          "en": "Conversely, maximal error always dominates average error.",
+          "zh": "反过来，最大错误始终不小于平均错误。"
+        },
+        {
+          "en": "Thus average and maximal error capacities agree for a finite DMC.",
+          "zh": "因此有限DMC的平均错误容量与最大错误容量相同。"
+        },
+        {
+          "en": "No symmetry of the channel was used.",
+          "zh": "此处没有使用信道对称性。"
+        },
+        {
+          "en": "This is an asymptotic conversion, not equality for every finite code.",
+          "zh": "这是渐近转换，并非每个有限码都相等。"
+        },
+        {
+          "en": "The argument assumes uniform averaging when defining the starting average error.",
+          "zh": "该论证假设初始平均错误按均匀消息定义。"
+        },
+        {
+          "en": "Next, the Fano bound supplies the rate converse.",
+          "zh": "接下来由Fano界得到速率逆向定理。"
+        }
+      ]
+    },
+    {
+      "id": "c05-converse",
+      "chapter": "Fano converse for a DMC",
+      "title": "Single-letter capacity bounds every reliable code",
+      "music": "proof",
+      "terms": [
+        "fano",
+        "data-processing",
+        "capacity",
+        "dmc"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a deterministic length n code with M equiprobable messages.",
+          "zh": "考虑一个有M条等概率消息的确定性长度n码。"
+        },
+        {
+          "en": "Let J denote the random message, and M at least two the number of possible messages.",
+          "zh": "用J表示随机消息，用M≥2表示消息数。"
+        },
+        {
+          "en": "Let P sub e denote the average block error probability.",
+          "zh": "令P_e表示其平均分组错误概率。"
+        },
+        {
+          "en": "Fano’s inequality gives H of J given Y n at most one plus P sub e times log two of M minus one.",
+          "zh": "Fano不等式给出H(J|Yⁿ)≤1+P_e log₂(M−1)。"
+        },
+        {
+          "en": "Since entropy of J is log two M, information is at least log M minus that bound.",
+          "zh": "消息熵为log₂M，因此互信息至少为log₂M减去该上界。"
+        },
+        {
+          "en": "Fano gives I of J and Y n at least log M times one minus P e, less one.",
+          "zh": "Fano给出I(J;Yⁿ)≥(1−P_e)log₂M−1。"
+        },
+        {
+          "en": "The deterministic encoder maps J to X n.",
+          "zh": "确定性编码器将J映射为Xⁿ。"
+        },
+        {
+          "en": "The memoryless channel then generates Y n from X n.",
+          "zh": "随后无记忆信道根据Xⁿ生成Yⁿ。"
+        },
+        {
+          "en": "This forms the Markov chain J to X n to Y n.",
+          "zh": "这构成Markov链J→Xⁿ→Yⁿ。"
+        },
+        {
+          "en": "Data processing bounds I of J and Y n by I of X n and Y n.",
+          "zh": "数据处理不等式给出I(J;Yⁿ)≤I(Xⁿ;Yⁿ)。"
+        },
+        {
+          "en": "Expand the latter as H of Y n minus H of Y n given X n.",
+          "zh": "将后者展开为H(Yⁿ)−H(Yⁿ|Xⁿ)。"
+        },
+        {
+          "en": "Output entropy subadditivity gives H of Y n at most the sum of H of Y i.",
+          "zh": "输出熵次可加性给出H(Yⁿ)≤ΣᵢH(Yᵢ)。"
+        },
+        {
+          "en": "Memorylessness factors the conditional output law given the input sequence.",
+          "zh": "无记忆性使给定输入序列后的条件输出分布因子化。"
+        },
+        {
+          "en": "Therefore H of Y n given X n equals the sum of H of Y i given X i.",
+          "zh": "因此H(Yⁿ|Xⁿ)=ΣᵢH(Yᵢ|Xᵢ)。"
+        },
+        {
+          "en": "Combining these yields I of X n and Y n at most the sum of I of X i and Y i.",
+          "zh": "合并两式得I(Xⁿ;Yⁿ)≤ΣᵢI(Xᵢ;Yᵢ)。"
+        },
+        {
+          "en": "Each term uses the same single-use channel W.",
+          "zh": "每一项使用同一个单次信道W。"
+        },
+        {
+          "en": "Let P bar be the average of the n input marginals.",
+          "zh": "令P̅为n个输入边缘分布的平均。"
+        },
+        {
+          "en": "Mutual information is concave in the input law for a fixed channel.",
+          "zh": "固定信道时，互信息关于输入分布凹。"
+        },
+        {
+          "en": "Therefore the sum of the n terms is at most n times I of P bar and W.",
+          "zh": "因此n项之和至多为nI(P̅,W)。"
+        },
+        {
+          "en": "That is at most n C by the capacity definition.",
+          "zh": "根据容量定义，它又至多为nC。"
+        },
+        {
+          "en": "Thus log M times one minus P sub e, less one, is at most n times C.",
+          "zh": "因此(1−P_e)log₂M−1≤nC。"
+        },
+        {
+          "en": "The rate R n is log two M divided by n.",
+          "zh": "码率Rₙ=(log₂M)/n。"
+        },
+        {
+          "en": "Rearranging gives R n at most C plus one over n, all divided by one minus P sub e.",
+          "zh": "整理得到Rₙ≤(C+1/n)/(1−P_e)。"
+        },
+        {
+          "en": "As the error probability tends to zero, the upper bound tends to C.",
+          "zh": "当P_e趋于零时，该上界趋于C。"
+        },
+        {
+          "en": "Divide by n and let block error tend to zero.",
+          "zh": "两边除以n，并令分组错误趋于零。"
+        },
+        {
+          "en": "Every reliable code sequence then has limiting upper rate at most C.",
+          "zh": "于是每一列可靠编码的极限上码率至多为C。"
+        },
+        {
+          "en": "This proof uses Fano, data processing, output entropy subadditivity, and memorylessness.",
+          "zh": "证明分别使用Fano、数据处理、输出熵次可加性与无记忆性。"
+        },
+        {
+          "en": "Concavity performs the final single-letter averaging step.",
+          "zh": "最后的单字母平均步骤依赖互信息凹性。"
+        },
+        {
+          "en": "Together with achievability, this identifies capacity as the reliable-rate boundary.",
+          "zh": "结合可达性，这确定了可靠传输速率边界为容量。"
+        },
+        {
+          "en": "This converse uses no feedback; inputs are fixed before outputs arrive.",
+          "zh": "该逆向证明无反馈，输入在收到输出前已确定。"
+        },
+        {
+          "en": "Next, combine source compression and channel coding.",
+          "zh": "接下来结合信源压缩与信道编码。"
+        }
+      ]
+    },
+    {
+      "id": "c06-separation",
+      "chapter": "Source-channel separation",
+      "title": "Compare source bits with channel information budget",
+      "music": "proof",
+      "terms": [
+        "separation",
+        "entropy-rate",
+        "dms",
+        "capacity"
+      ],
+      "sentences": [
+        {
+          "en": "Begin with an IID finite-alphabet source of entropy H per symbol.",
+          "zh": "先考虑每符号熵为H的有限字母IID信源。"
+        },
+        {
+          "en": "Choose a source-code rate H plus delta for these m symbols.",
+          "zh": "为这m个符号选择H+δ的信源码率。"
+        },
+        {
+          "en": "This requires at most about two to m times H plus delta messages.",
+          "zh": "这至多需要约2^(m(H+δ))条压缩消息。"
+        },
+        {
+          "en": "Use n times of a DMC with capacity C.",
+          "zh": "使用容量为C的DMC共n次。"
+        },
+        {
+          "en": "Reliable channel coding supports message counts below roughly two to n C.",
+          "zh": "可靠信道编码支持低于约2^(nC)的消息数量。"
+        },
+        {
+          "en": "A strict inequality leaves room for finite-block margins.",
+          "zh": "严格不等式为有限块长误差留出裕量。"
+        },
+        {
+          "en": "Choose delta positive and smaller than channel capacity.",
+          "zh": "选择满足0<δ<C的裕量δ。"
+        },
+        {
+          "en": "Require m times the sum H plus delta to be below n times the difference C minus delta.",
+          "zh": "要求m(H+δ)<n(C−δ)。"
+        },
+        {
+          "en": "Source coding then makes its block error probability vanish.",
+          "zh": "信源编码由此使分组错误趋于零。"
+        },
+        {
+          "en": "Choose a channel code for the compressed messages at rate below C.",
+          "zh": "为压缩消息选择低于C的信道码。"
+        },
+        {
+          "en": "Use a maximal-error channel code for this step.",
+          "zh": "这一步使用最大错误信道码。"
+        },
+        {
+          "en": "The compressed messages need not be equiprobable.",
+          "zh": "压缩消息不必等概率。"
+        },
+        {
+          "en": "A maximal-error bound controls every message distribution.",
+          "zh": "最大错误界控制任意消息分布。"
+        },
+        {
+          "en": "An end-to-end error requires source failure or channel failure.",
+          "zh": "端到端错误要求信源译码失败或信道译码失败。"
+        },
+        {
+          "en": "The total error is at most the sum of those two probabilities.",
+          "zh": "总错误至多为这两种错误概率之和。"
+        },
+        {
+          "en": "Now extend from an IID source to a stationary ergodic finite-alphabet source.",
+          "zh": "现在将IID信源推广到平稳遍历有限字母信源。"
+        },
+        {
+          "en": "Its block entropy divided by m tends to H bar.",
+          "zh": "其块熵除以m趋于H̅。"
+        },
+        {
+          "en": "E05 gives this source an asymptotic equipartition property.",
+          "zh": "E05已给出该信源的渐近等分性质。"
+        },
+        {
+          "en": "Source coding rates can approach H bar asymptotically.",
+          "zh": "渐近地，信源编码速率可趋近H̅。"
+        },
+        {
+          "en": "Require m times the sum H bar plus delta below n times the difference C minus delta.",
+          "zh": "要求m(H̅+δ)<n(C−δ)。"
+        },
+        {
+          "en": "Keep a positive margin to select both long-block codes reliably.",
+          "zh": "保留正裕量，以便可靠选取两个长块编码。"
+        },
+        {
+          "en": "With m over n tending to a finite positive rho, every strict inequality rho H bar below C is achievable.",
+          "zh": "若m/n趋于有限正数ρ，则每个严格满足ρH̅<C的比率均可达。"
+        },
+        {
+          "en": "The IID special case replaces H bar by H.",
+          "zh": "IID特例中以H替代H̅。"
+        },
+        {
+          "en": "The converse also covers codes that jointly map source blocks to channel blocks.",
+          "zh": "逆向证明也适用于直接将信源块映为信道块的联合码。"
+        },
+        {
+          "en": "For the converse, let U m be the source block over alphabet size K.",
+          "zh": "反向证明中，令Uᵐ为字母表大小K上的信源块。"
+        },
+        {
+          "en": "For the converse, a deterministic nonfeedback joint encoder produces a length-n channel input sequence.",
+          "zh": "反向证明中，确定性无反馈联合编码器输出长度n的信道输入序列。"
+        },
+        {
+          "en": "For K at least two, Fano bounds the conditional entropy by one plus P e m log K.",
+          "zh": "K≥2时，Fano界定条件熵至多为1+P_emlog₂K。"
+        },
+        {
+          "en": "The deterministic nonfeedback encoder gives U m to X n to Y n.",
+          "zh": "确定性无反馈编码器形成Uᵐ→Xⁿ→Yⁿ。"
+        },
+        {
+          "en": "The source-block mutual information is at most n C for a DMC.",
+          "zh": "DMC上的信源块互信息至多为nC。"
+        },
+        {
+          "en": "Decompose H of U m into that information plus conditional entropy.",
+          "zh": "将H(Uᵐ)分解为该互信息与条件熵。"
+        },
+        {
+          "en": "Thus H of U m is at most n times C, plus one, plus P sub e times m times log K.",
+          "zh": "因此H(Uᵐ)≤nC+1+P_emlog₂K。"
+        },
+        {
+          "en": "Divide by n and take m and n large with m over n tending to rho.",
+          "zh": "两边除以n，并令m、n增大且m/n趋于ρ。"
+        },
+        {
+          "en": "Vanishing error and H of U m over m tending to H bar yield rho H bar at most C.",
+          "zh": "错误趋零且H(Uᵐ)/m趋于H̅，得到ρH̅≤C。"
+        },
+        {
+          "en": "Strict inequality is achievable; exceeding the necessary bound is impossible.",
+          "zh": "严格不等式保证可达；超过必要上界则不可能。"
+        },
+        {
+          "en": "These arguments alone do not decide reliability at the equality boundary.",
+          "zh": "仅凭这些论证，不能判定等号边界处能否可靠传输。"
+        },
+        {
+          "en": "This is a separation statement under the stated source and channel assumptions.",
+          "zh": "这就是在所述信源与信道假设下的分离结论。"
+        },
+        {
+          "en": "It does not assert finite-delay optimality.",
+          "zh": "它不声称有限时延下仍然最优。"
+        },
+        {
+          "en": "A one-symbol source alphabet is deterministic and needs no compression converse.",
+          "zh": "单符号信源字母表对应确定信源，无需压缩逆向证明。"
+        },
+        {
+          "en": "Next, test whether causal feedback changes the DMC capacity.",
+          "zh": "接下来检验因果反馈是否改变DMC容量。"
+        }
+      ]
+    },
+    {
+      "id": "c07-feedback",
+      "chapter": "Feedback does not increase DMC capacity",
+      "title": "Condition on past outputs one use at a time",
+      "music": "recap",
+      "terms": [
+        "feedback",
+        "dmc",
+        "capacity",
+        "fano"
+      ],
+      "sentences": [
+        {
+          "en": "Let J be a uniform message among M choices, with noiseless causal feedback.",
+          "zh": "令J为M种取值上的均匀消息，反馈无噪声且因果。"
+        },
+        {
+          "en": "At time i, the encoder chooses X i as a function of J and past outputs.",
+          "zh": "时刻i，编码器根据J与过去输出选择Xᵢ。"
+        },
+        {
+          "en": "Write X i equals f i of J and Y one through Y i minus one.",
+          "zh": "记Xᵢ=fᵢ(J,Y₁,…,Yᵢ₋₁)。"
+        },
+        {
+          "en": "The feedback encoder is causal because X i uses no future output.",
+          "zh": "反馈编码器具有因果性，因为Xᵢ不使用未来输出。"
+        },
+        {
+          "en": "The decoder estimates J from all outputs. Can this causal feedback raise the DMC capacity?",
+          "zh": "译码器根据所有输出估计J。这种因果反馈能提高DMC容量吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Fano gives I of J and Y n at least log M times one minus P e, less one.",
+          "zh": "Fano给出I(J;Yⁿ)≥(1−P_e)log₂M−1。"
+        },
+        {
+          "en": "Expand this mutual information by the chain rule.",
+          "zh": "用链式法则展开该互信息。"
+        },
+        {
+          "en": "I of J and Y n is the sum of I of J and Y i given past outputs.",
+          "zh": "I(J;Yⁿ)=ΣᵢI(J;Yᵢ|Yⁱ⁻¹)。"
+        },
+        {
+          "en": "Each term equals H of Y i given its past minus H of Y i given J and its past.",
+          "zh": "每项等于H(Yᵢ|过去)−H(Yᵢ|J,过去)。"
+        },
+        {
+          "en": "The first entropy is at most the unconditional H of Y i.",
+          "zh": "第一项至多为无条件熵H(Yᵢ)。"
+        },
+        {
+          "en": "Given J and past outputs, the causal encoder fixes X i.",
+          "zh": "给定J和过去输出后，因果编码器确定Xᵢ。"
+        },
+        {
+          "en": "The memoryless channel then draws Y i using only W given X i.",
+          "zh": "无记忆信道随后只按W(·|Xᵢ)产生Yᵢ。"
+        },
+        {
+          "en": "Therefore H of Y i given J and past equals H of Y i given X i.",
+          "zh": "因此H(Yᵢ|J,过去)=H(Yᵢ|Xᵢ)。"
+        },
+        {
+          "en": "The conditional past does not change the current transition law.",
+          "zh": "给定过去不会改变当前转移律。"
+        },
+        {
+          "en": "Each chain-rule term is consequently at most I of X i and Y i.",
+          "zh": "因此每个链式项至多为I(Xᵢ;Yᵢ)。"
+        },
+        {
+          "en": "That single-use mutual information is at most C.",
+          "zh": "该单次互信息至多为C。"
+        },
+        {
+          "en": "Summing over all n channel uses bounds I of J and Y n by n times C.",
+          "zh": "对n次使用求和得I(J;Yⁿ)≤nC。"
+        },
+        {
+          "en": "Fano then gives the same converse rate bound as without feedback.",
+          "zh": "Fano不等式由此给出与无反馈时相同的逆向速率界。"
+        },
+        {
+          "en": "For achievability, the encoder may simply ignore feedback.",
+          "zh": "在可达性证明中，编码器可以直接忽略反馈。"
+        },
+        {
+          "en": "The nonfeedback code already achieves every rate below C.",
+          "zh": "无反馈编码已能达到所有低于C的速率。"
+        },
+        {
+          "en": "Thus noiseless causal feedback does not change DMC capacity.",
+          "zh": "因此无噪声因果反馈不改变DMC容量。"
+        },
+        {
+          "en": "The proof conditions on the output past at each time.",
+          "zh": "证明在每个时刻都对输出过去进行条件化。"
+        },
+        {
+          "en": "It does not assert a whole-block Markov chain from J through X n to Y n.",
+          "zh": "它没有声称整块存在J→Xⁿ→Yⁿ的Markov链。"
+        },
+        {
+          "en": "Feedback makes X i depend on past channel outputs.",
+          "zh": "有反馈时，Xᵢ依赖过去信道输出。"
+        },
+        {
+          "en": "Feedback may still affect delay, error exponents, or coding strategies.",
+          "zh": "反馈仍可能影响时延、错误指数或编码策略。"
+        },
+        {
+          "en": "Those effects do not alter the capacity conclusion proved here.",
+          "zh": "这些影响不改变此处证明的容量结论。"
+        },
+        {
+          "en": "The argument is specific to a memoryless channel.",
+          "zh": "该论证针对无记忆信道。"
+        },
+        {
+          "en": "Channels with memory require a separate analysis.",
+          "zh": "有记忆信道需要另行分析。"
+        },
+        {
+          "en": "The chain rule keeps the causal dependence visible.",
+          "zh": "链式法则使因果依赖始终显式可见。"
+        },
+        {
+          "en": "Next, continuous alphabets require densities and careful units.",
+          "zh": "下一集转向连续字母表，需要密度与谨慎的单位处理。"
+        }
+      ]
+    }
+  ]
+}

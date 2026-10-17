@@ -1,0 +1,977 @@
+{
+  "episode": "e10-differential-gaussian",
+  "title": "Differential Entropy and Gaussian Bounds",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-density",
+      "chapter": "Density and differential entropy",
+      "title": "One distance, two rulers, two entropy values",
+      "music": "definition",
+      "terms": [
+        "differential-entropy",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "One unknown distance, two rulers. Can changing units change its entropy?",
+          "zh": "同一个未知距离，两把标尺。换单位会改变它的熵吗？"
+        },
+        {
+          "en": "Let the distance be uniform from zero to one centimeter.",
+          "zh": "设距离在零到一厘米之间均匀分布。"
+        },
+        {
+          "en": "In centimeters, its interval is zero to one. In meters, the interval is zero to .01.",
+          "zh": "用厘米记录，区间是零到一；用米记录，区间是零到0.01。"
+        },
+        {
+          "en": "The density-based entropy is zero on the first scale, about negative 6.64 bits on the second.",
+          "zh": "第一种尺度的密度熵为零，第二种约为负6.64比特。"
+        },
+        {
+          "en": "Did converting centimeters to meters destroy information?",
+          "zh": "把厘米换成米，难道破坏了信息吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "No. Differential entropy depends on coordinates. We will derive the correction and compare mutual information.",
+          "zh": "没有。微分熵依赖坐标。接下来推导修正量，并与互信息比较。"
+        },
+        {
+          "en": "Let X have a probability density f with respect to length.",
+          "zh": "令随机变量X相对于长度具有概率密度f。"
+        },
+        {
+          "en": "Assume the distribution is absolutely continuous with respect to Lebesgue measure and its density integrates to one.",
+          "zh": "假设分布相对于Lebesgue测度绝对连续，且密度积分为一。"
+        },
+        {
+          "en": "Assume also that the entropy integral exists and is finite.",
+          "zh": "并假设熵积分存在且有限。"
+        },
+        {
+          "en": "Define differential entropy h of X as negative the integral of f log two f.",
+          "zh": "定义微分熵h(X)=−∫f(x)log₂f(x)dx。"
+        },
+        {
+          "en": "Unlike discrete entropy, this quantity can be negative.",
+          "zh": "与离散熵不同，该量可以为负。"
+        },
+        {
+          "en": "Consider a uniform random variable from zero to a positive length, denoted by A.",
+          "zh": "考虑[0,a]上的均匀随机变量，其中a>0。"
+        },
+        {
+          "en": "Its density is one divided by that interval length.",
+          "zh": "其在区间内的密度为1/a。"
+        },
+        {
+          "en": "The log density equals negative log base two of A.",
+          "zh": "其密度对数为−log₂a。"
+        },
+        {
+          "en": "Averaging over total probability one gives log base two of A for the differential entropy.",
+          "zh": "对总概率为一的区域积分，得到h=log₂a。"
+        },
+        {
+          "en": "For interval length two, entropy is one bit.",
+          "zh": "当a=2时，微分熵为一比特。"
+        },
+        {
+          "en": "For interval length one, entropy is zero.",
+          "zh": "当a=1时，微分熵为零。"
+        },
+        {
+          "en": "For interval length one quarter, entropy is negative two bits.",
+          "zh": "当a=1/4时，微分熵为负二比特。"
+        },
+        {
+          "en": "No probability became negative in that example.",
+          "zh": "该例中没有任何概率变成负数。"
+        },
+        {
+          "en": "A density can exceed one because it is probability per unit length.",
+          "zh": "密度可以大于一，因为它表示单位长度上的概率。"
+        },
+        {
+          "en": "Only the density integrated over a region is a probability.",
+          "zh": "只有密度在区域上积分后才是概率。"
+        },
+        {
+          "en": "A density value is not itself constrained to be below one.",
+          "zh": "密度取值本身不受必须小于一的限制。"
+        },
+        {
+          "en": "Discrete entropy is nonnegative, but differential entropy has no such lower bound.",
+          "zh": "离散熵非负，但微分熵没有这样的下界。"
+        },
+        {
+          "en": "Changing units shifts its numerical value without changing the underlying probabilities.",
+          "zh": "改变单位会平移其数值，却不改变底层概率。"
+        },
+        {
+          "en": "The numerical entropy also depends on coordinate units.",
+          "zh": "微分熵的数值还依赖坐标单位。"
+        },
+        {
+          "en": "Changing from meters to centimeters scales this interval length.",
+          "zh": "将米改成厘米会改变区间长度a。"
+        },
+        {
+          "en": "The formula then shifts entropy by the logarithm of that scale.",
+          "zh": "公式会使熵按该尺度的对数发生平移。"
+        },
+        {
+          "en": "Quantization gives one way to see this scale dependence.",
+          "zh": "量化提供了一种观察尺度依赖的方法。"
+        },
+        {
+          "en": "Divide the interval into aligned cells of width delta.",
+          "zh": "将区间划分为宽度δ且对齐的格子。"
+        },
+        {
+          "en": "Suppose the interval length is an integer multiple of delta.",
+          "zh": "假设a是δ的整数倍。"
+        },
+        {
+          "en": "Every cell then has probability delta over a.",
+          "zh": "此时每个格子的概率均为δ/a。"
+        },
+        {
+          "en": "The interval length divided by delta gives the number of equally likely cells.",
+          "zh": "共有a/δ个等概率格子。"
+        },
+        {
+          "en": "Their discrete entropy is log base two of that cell count.",
+          "zh": "其离散熵为log₂(a/δ)。"
+        },
+        {
+          "en": "This equals log base two of the interval length, plus log base two of one over delta.",
+          "zh": "这等于log₂a+log₂(1/δ)。"
+        },
+        {
+          "en": "Thus quantized entropy equals differential entropy plus log resolution.",
+          "zh": "因此量化熵等于微分熵加上分辨率对数。"
+        },
+        {
+          "en": "Here the equality is exact because the density is uniform and cells align.",
+          "zh": "此处等式精确成立，因为密度均匀且格子对齐。"
+        },
+        {
+          "en": "For a general density, the approximation needs regularity conditions.",
+          "zh": "对一般密度，该近似需要正则条件。"
+        },
+        {
+          "en": "An arbitrary density does not automatically satisfy every quantization limit.",
+          "zh": "任意密度并不自动满足所有量化极限。"
+        },
+        {
+          "en": "Differential entropy is not invariant under rescaling coordinates.",
+          "zh": "微分熵在坐标缩放下并不保持不变。"
+        },
+        {
+          "en": "This differs from the entropy of a discrete label.",
+          "zh": "这与离散标签的熵不同。"
+        },
+        {
+          "en": "Next, compute exactly how a smooth invertible map changes the value.",
+          "zh": "接下来精确计算光滑可逆映射如何改变微分熵。"
+        }
+      ]
+    },
+    {
+      "id": "c02-transform",
+      "chapter": "Change of variables",
+      "title": "The Jacobian records local volume expansion",
+      "music": "proof",
+      "terms": [
+        "differential-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Let X be a continuous vector in d dimensions.",
+          "zh": "令X为d维连续随机向量。"
+        },
+        {
+          "en": "Let g be a continuously differentiable diffeomorphism between open domains containing the relevant support.",
+          "zh": "令g为包含相关支撑集的开区域之间的连续可微微分同胚。"
+        },
+        {
+          "en": "Assume its Jacobian determinant is nonzero throughout that support.",
+          "zh": "假设其Jacobian行列式在该支撑集上处处非零。"
+        },
+        {
+          "en": "Assume the relevant entropy integrals are finite.",
+          "zh": "假设相关熵积分均有限。"
+        },
+        {
+          "en": "Also assume the expected log absolute Jacobian is finite.",
+          "zh": "并假设Jacobian绝对值对数的期望有限。"
+        },
+        {
+          "en": "Write U equal to g of X.",
+          "zh": "记U=g(X)。"
+        },
+        {
+          "en": "The density change formula divides f X by the absolute Jacobian determinant.",
+          "zh": "密度换元公式将f_X除以Jacobian行列式绝对值。"
+        },
+        {
+          "en": "At u equals g of x, f U equals f X divided by the Jacobian magnitude.",
+          "zh": "在u=g(x)处，f_U(u)=f_X(x)/|detJ_g(x)|。"
+        },
+        {
+          "en": "Take negative log two of both sides.",
+          "zh": "对两边取−log₂。"
+        },
+        {
+          "en": "The transformed surprisal equals input surprisal plus log two absolute determinant.",
+          "zh": "变换后的自信息等于输入自信息加log₂|detJ|。"
+        },
+        {
+          "en": "Average with respect to X.",
+          "zh": "再按X的分布取期望。"
+        },
+        {
+          "en": "This yields h of g X equals h of X plus expected log two absolute determinant.",
+          "zh": "由此得到h(g(X))=h(X)+Elog₂|detJ_g(X)|。"
+        },
+        {
+          "en": "For a scalar scaling g of x equals c x, the determinant magnitude is absolute c.",
+          "zh": "若标量变换g(x)=cx，行列式绝对值就是|c|。"
+        },
+        {
+          "en": "Thus h of c X equals h of X plus log two absolute c.",
+          "zh": "因此h(cX)=h(X)+log₂|c|。"
+        },
+        {
+          "en": "In d dimensions, scaling every coordinate by c adds d log two absolute c.",
+          "zh": "在d维中每个坐标乘c，会增加dlog₂|c|。"
+        },
+        {
+          "en": "Now let X,Y have a joint density, and transform each separately by such invertible maps.",
+          "zh": "现在令X、Y具有联合密度，并分别进行这样的可逆变换。"
+        },
+        {
+          "en": "The joint entropy gains the expected log Jacobian for both maps.",
+          "zh": "联合熵增加两个映射的期望Jacobian对数。"
+        },
+        {
+          "en": "The marginal entropy of X gains its own Jacobian term.",
+          "zh": "X的边缘熵增加其自身Jacobian项。"
+        },
+        {
+          "en": "The marginal entropy of Y gains its corresponding term.",
+          "zh": "Y的边缘熵增加对应的Jacobian项。"
+        },
+        {
+          "en": "Mutual information is h X plus h Y minus h X,Y. Which Jacobian corrections survive?",
+          "zh": "互信息是h(X)+h(Y)−h(X,Y)。哪些雅可比修正项会留下？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The two marginal corrections cancel the joint correction.",
+          "zh": "两个边缘修正项抵消联合修正项。"
+        },
+        {
+          "en": "Therefore mutual information is invariant under separate invertible transformations.",
+          "zh": "因此分别进行可逆变换不会改变互信息。"
+        },
+        {
+          "en": "This argument requires the entropy differences to be finite.",
+          "zh": "该论证要求相关熵差有限。"
+        },
+        {
+          "en": "Alternatively, the density-ratio Jacobians cancel directly in the mutual-information integral.",
+          "zh": "或者在互信息积分中，密度比里的Jacobian可直接抵消。"
+        },
+        {
+          "en": "In the density ratio, the transformed joint density has both Jacobian factors.",
+          "zh": "在密度比中，变换后的联合密度含两个Jacobian因子。"
+        },
+        {
+          "en": "The transformed marginal densities contain the matching individual factors.",
+          "zh": "变换后的边缘密度含有对应的单独因子。"
+        },
+        {
+          "en": "Their cancellation explains invariance without subtracting infinite entropies.",
+          "zh": "这些因子抵消，因此无需相减无穷熵即可解释不变性。"
+        },
+        {
+          "en": "A one-dimensional expansion by a factor of two adds exactly one bit.",
+          "zh": "一维扩张两倍恰好增加一比特。"
+        },
+        {
+          "en": "A contraction by one half subtracts exactly one bit.",
+          "zh": "收缩为一半恰好减少一比特。"
+        },
+        {
+          "en": "Both transformations must be invertible on the relevant supports.",
+          "zh": "两个变换都必须在相关支撑集上可逆。"
+        },
+        {
+          "en": "We make no corresponding claim for noninvertible maps.",
+          "zh": "这里不对不可逆映射作相应断言。"
+        },
+        {
+          "en": "A many-to-one map can discard information.",
+          "zh": "多对一映射可能丢失信息。"
+        },
+        {
+          "en": "The Jacobian term measures local volume expansion or contraction.",
+          "zh": "Jacobian项衡量局部体积的扩张或收缩。"
+        },
+        {
+          "en": "This is why differential entropy changes with units.",
+          "zh": "这正是微分熵会随单位改变的原因。"
+        },
+        {
+          "en": "Next, covariance eigenvalues summarize multidimensional Gaussian volume.",
+          "zh": "接下来用协方差特征值概括多维高斯体积。"
+        }
+      ]
+    },
+    {
+      "id": "c03-covariance",
+      "chapter": "Covariance and ellipsoid volume",
+      "title": "Eigenvalues set the principal-axis scales",
+      "music": "definition",
+      "terms": [
+        "covariance",
+        "gaussian"
+      ],
+      "sentences": [
+        {
+          "en": "Let X be a d-dimensional random vector with finite second moments.",
+          "zh": "令X为具有有限二阶矩的d维随机向量。"
+        },
+        {
+          "en": "Its mean vector is mu.",
+          "zh": "其均值向量记为μ。"
+        },
+        {
+          "en": "Define covariance K as the expected outer product of X minus mu with itself.",
+          "zh": "定义协方差K=E[(X−μ)(X−μ)^T]。"
+        },
+        {
+          "en": "The matrix is symmetric and positive semidefinite.",
+          "zh": "该矩阵对称且半正定。"
+        },
+        {
+          "en": "For a full-dimensional Gaussian density, assume K is positive definite.",
+          "zh": "若要有全维高斯密度，需假设K正定。"
+        },
+        {
+          "en": "A real symmetric matrix has an orthogonal eigenvector basis.",
+          "zh": "实对称矩阵具有正交特征向量基。"
+        },
+        {
+          "en": "Rotate coordinates into those principal directions.",
+          "zh": "将坐标旋转到这些主方向上。"
+        },
+        {
+          "en": "The rotated covariance becomes diagonal.",
+          "zh": "旋转后的协方差变为对角矩阵。"
+        },
+        {
+          "en": "Its diagonal entries are the eigenvalues lambda one through lambda d.",
+          "zh": "其对角元素就是特征值λ₁至λ_d。"
+        },
+        {
+          "en": "Each eigenvalue gives variance along one principal axis.",
+          "zh": "每个特征值给出一个主轴方向上的方差。"
+        },
+        {
+          "en": "An equal-Mahalanobis-distance surface is an ellipsoid.",
+          "zh": "等Mahalanobis距离曲面是一个椭球。"
+        },
+        {
+          "en": "Its principal-axis lengths scale with square roots of eigenvalues.",
+          "zh": "其主轴长度按特征值平方根缩放。"
+        },
+        {
+          "en": "The volume scales with the product of those axis lengths.",
+          "zh": "椭球体积按这些主轴长度的乘积缩放。"
+        },
+        {
+          "en": "That product is proportional to square root of determinant K.",
+          "zh": "该乘积正比于√detK。"
+        },
+        {
+          "en": "Rotation changes orientation but not determinant or volume.",
+          "zh": "旋转会改变方向，却不改变行列式或体积。"
+        },
+        {
+          "en": "For positive eigenvalues, their product is determinant K.",
+          "zh": "特征值均为正时，其乘积就是detK。"
+        },
+        {
+          "en": "The ellipsoid scale therefore depends on every principal direction.",
+          "zh": "因此椭球尺度取决于每个主方向。"
+        },
+        {
+          "en": "The orientation alone cannot change its volume.",
+          "zh": "仅改变方向不会改变体积。"
+        },
+        {
+          "en": "Covariance describes this spread, not the full distribution shape.",
+          "zh": "协方差描述这种离散程度，而非完整分布形状。"
+        },
+        {
+          "en": "Different distributions can share the same covariance matrix.",
+          "zh": "不同分布可以具有相同协方差矩阵。"
+        },
+        {
+          "en": "The Gaussian comparison will use covariance to fix its ellipsoid scale.",
+          "zh": "高斯比较将用协方差固定椭球尺度。"
+        },
+        {
+          "en": "A large eigenvalue stretches the ellipsoid along its eigenvector.",
+          "zh": "较大特征值会沿对应特征向量拉长椭球。"
+        },
+        {
+          "en": "A smaller positive eigenvalue makes the ellipsoid thinner. What happens when it reaches zero?",
+          "zh": "较小的正特征值让椭球更薄。它降到零时会发生什么？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "If an eigenvalue reaches zero, the ellipsoid collapses onto a lower-dimensional set.",
+          "zh": "若某特征值降为零，椭球会压缩到低维集合。"
+        },
+        {
+          "en": "Then K is singular and has no positive determinant.",
+          "zh": "此时K奇异，行列式不为正。"
+        },
+        {
+          "en": "A Gaussian with singular covariance lies on a lower-dimensional affine subspace.",
+          "zh": "奇异协方差高斯分布落在低维仿射子空间上。"
+        },
+        {
+          "en": "It has no density with respect to full-dimensional Lebesgue measure.",
+          "zh": "它相对于全维Lebesgue测度没有密度。"
+        },
+        {
+          "en": "Therefore the usual full-dimensional Gaussian entropy formula does not apply.",
+          "zh": "因此通常的全维高斯熵公式不适用。"
+        },
+        {
+          "en": "A lower-dimensional reference measure would be a different setup.",
+          "zh": "改用低维参考测度则是另一种设定。"
+        },
+        {
+          "en": "Positive definiteness keeps every principal-axis variance strictly positive.",
+          "zh": "正定性保证每个主轴方差都严格为正。"
+        },
+        {
+          "en": "It also permits the inverse covariance used in the Gaussian density.",
+          "zh": "它也保证高斯密度中的协方差逆矩阵存在。"
+        },
+        {
+          "en": "The covariance determinant therefore controls the Gaussian volume scale.",
+          "zh": "因此协方差行列式控制高斯的体积尺度。"
+        },
+        {
+          "en": "This geometric quantity will enter the entropy upper bound.",
+          "zh": "该几何量将进入熵上界。"
+        },
+        {
+          "en": "Next, compare any density with the Gaussian having the same mean and covariance.",
+          "zh": "接下来将任意密度与同均值、同协方差的高斯比较。"
+        }
+      ]
+    },
+    {
+      "id": "c04-gaussian",
+      "chapter": "Gaussian maximum entropy",
+      "title": "Continuous KL reduces the proof to a quadratic expectation",
+      "music": "proof",
+      "terms": [
+        "differential-entropy",
+        "gaussian",
+        "kl-divergence",
+        "covariance"
+      ],
+      "sentences": [
+        {
+          "en": "Let X have a density f, mean mu, and positive-definite covariance K.",
+          "zh": "令X具有密度f、均值μ和正定协方差K。"
+        },
+        {
+          "en": "Assume its differential entropy is finite.",
+          "zh": "假设其微分熵有限。"
+        },
+        {
+          "en": "Let q be the Gaussian density with that same mean and covariance.",
+          "zh": "令q为具有相同均值与协方差的高斯密度。"
+        },
+        {
+          "en": "Assume finite logarithmic expectations. In the scalar plot, is the Gaussian or matching uniform more entropic?",
+          "zh": "假设相关对数期望有限。在图中的标量例子里，同方差高斯分布与均匀分布谁的熵更大？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Continuous divergence is the integral of f times log two of f over q.",
+          "zh": "连续散度定义为∫f(x)log₂(f(x)/q(x))dx。"
+        },
+        {
+          "en": "We first verify that this divergence is nonnegative.",
+          "zh": "先验证该散度非负。"
+        },
+        {
+          "en": "For positive t, natural log t is at most t minus one.",
+          "zh": "对t>0，有ln t≤t−1。"
+        },
+        {
+          "en": "Where f is positive, set t equal to q divided by f.",
+          "zh": "在f为正处，令t=q/f。"
+        },
+        {
+          "en": "Multiply the inequality by f and integrate.",
+          "zh": "将不等式乘以f并积分。"
+        },
+        {
+          "en": "The right side becomes the integral of q minus the integral of f.",
+          "zh": "右侧化为q的积分减去f的积分。"
+        },
+        {
+          "en": "The f integral is one, while q integrates to at most one on that support.",
+          "zh": "f积分为一，而q在该支撑集上的积分至多为一。"
+        },
+        {
+          "en": "Thus the integral of f log f over q is nonnegative.",
+          "zh": "因此∫f ln(f/q)非负。"
+        },
+        {
+          "en": "Changing to base two preserves the sign.",
+          "zh": "换成以2为底的对数不会改变符号。"
+        },
+        {
+          "en": "Equality requires q equal f almost everywhere.",
+          "zh": "等号要求q=f几乎处处成立。"
+        },
+        {
+          "en": "Write the Gaussian negative log density explicitly.",
+          "zh": "将高斯负对数密度显式写出。"
+        },
+        {
+          "en": "It contains a constant involving two pi and determinant K.",
+          "zh": "其中常数项含2π与detK。"
+        },
+        {
+          "en": "Its remaining term is the quadratic form using inverse K.",
+          "zh": "其余项是使用K逆矩阵的二次型。"
+        },
+        {
+          "en": "The constant is one half log base two of two pi to dimension d, times determinant K.",
+          "zh": "常数项为0.5log₂((2π)^d detK)。"
+        },
+        {
+          "en": "Add the quadratic form divided by two times natural log two.",
+          "zh": "再加上二次型除以2ln2。"
+        },
+        {
+          "en": "Take expectation under f.",
+          "zh": "按照f取期望。"
+        },
+        {
+          "en": "Write the quadratic form as a trace, then replace the expected outer product by covariance K.",
+          "zh": "将二次型写为迹，再将外积的期望换成协方差K。"
+        },
+        {
+          "en": "The quadratic expectation equals the trace of K inverse times K.",
+          "zh": "二次型期望等于tr(K⁻¹K)。"
+        },
+        {
+          "en": "That trace equals the dimension d.",
+          "zh": "该迹等于维数d。"
+        },
+        {
+          "en": "So expected Gaussian negative log density is one half log two of (two pi e) to d times determinant K.",
+          "zh": "所以高斯负对数密度期望为0.5log₂((2πe)^d detK)。"
+        },
+        {
+          "en": "This value is the entropy of q.",
+          "zh": "该值就是q的微分熵。"
+        },
+        {
+          "en": "The divergence equals Gaussian entropy minus the entropy of f.",
+          "zh": "散度等于高斯熵减去f的熵。"
+        },
+        {
+          "en": "Nonnegativity gives h of X at most one half log two of (two pi e) to d determinant K.",
+          "zh": "由散度非负得h(X)≤0.5log₂((2πe)^d detK)。"
+        },
+        {
+          "en": "Equality holds exactly when f equals the matching Gaussian almost everywhere.",
+          "zh": "等号当且仅当f几乎处处等于匹配高斯密度。"
+        },
+        {
+          "en": "The covariance must be positive definite for this full-dimensional formula.",
+          "zh": "该全维公式要求协方差正定。"
+        },
+        {
+          "en": "A singular Gaussian has no full-dimensional Lebesgue density.",
+          "zh": "奇异高斯没有全维Lebesgue密度。"
+        },
+        {
+          "en": "Now bound determinant K using its diagonal entries.",
+          "zh": "现在用对角元素界定detK。"
+        },
+        {
+          "en": "For positive-definite K, Hadamard gives determinant K at most the product of diagonal entries.",
+          "zh": "对正定K，Hadamard不等式给出detK≤对角元素之积。"
+        },
+        {
+          "en": "View K as a Gram matrix of linearly independent vectors.",
+          "zh": "将K视为线性无关向量的Gram矩阵。"
+        },
+        {
+          "en": "Gram-Schmidt replaces each vector by its orthogonal residual.",
+          "zh": "Gram-Schmidt过程将每个向量替换为正交残差。"
+        },
+        {
+          "en": "Each residual norm is at most the original norm.",
+          "zh": "每个残差范数都不超过原向量范数。"
+        },
+        {
+          "en": "Their squared product gives determinant K.",
+          "zh": "残差范数平方的乘积给出detK。"
+        },
+        {
+          "en": "Equality requires every residual to keep its original norm.",
+          "zh": "等号要求每个残差都保持原范数。"
+        },
+        {
+          "en": "That happens exactly when the original vectors are mutually orthogonal.",
+          "zh": "这当且仅当原向量两两正交时发生。"
+        },
+        {
+          "en": "For a positive-definite matrix, equality therefore requires K to be diagonal.",
+          "zh": "对正定矩阵，等号因此要求K为对角矩阵。"
+        },
+        {
+          "en": "For a singular positive-semidefinite matrix, keep only the determinant inequality.",
+          "zh": "对奇异半正定矩阵，只保留行列式不等式。"
+        },
+        {
+          "en": "Both sides may vanish even when the remaining block has off-diagonal terms.",
+          "zh": "即使其余子块仍有非对角项，两边也可能同时为零。"
+        },
+        {
+          "en": "Equality in a zero-zero case does not imply that the matrix is diagonal.",
+          "zh": "两边同为零时的等号，并不蕴含矩阵为对角阵。"
+        },
+        {
+          "en": "Next, turn Gaussian maximum entropy into an estimation-error lower bound.",
+          "zh": "接下来将高斯最大熵转化为估计误差下界。"
+        }
+      ]
+    },
+    {
+      "id": "c05-maximum",
+      "chapter": "Entropy and estimation error",
+      "title": "Conditional entropy constrains every observation-based estimator",
+      "music": "proof",
+      "terms": [
+        "differential-entropy",
+        "gaussian",
+        "covariance"
+      ],
+      "sentences": [
+        {
+          "en": "Let X be a scalar random variable and Y an observation.",
+          "zh": "令X为标量随机变量，Y为观测。"
+        },
+        {
+          "en": "Choose an estimator g that depends only on Y.",
+          "zh": "选择只依赖Y的估计器g。"
+        },
+        {
+          "en": "Define estimation error E as X minus g of Y.",
+          "zh": "定义估计误差E=X−g(Y)。"
+        },
+        {
+          "en": "Assume mean-square error is finite.",
+          "zh": "假设均方误差有限。"
+        },
+        {
+          "en": "Assume the relevant conditional and error differential entropies exist and are finite.",
+          "zh": "假设相关条件微分熵与误差微分熵存在且有限。"
+        },
+        {
+          "en": "For each fixed observation y, subtracting g of y is a translation.",
+          "zh": "对每个固定观测y，减去g(y)只是平移。"
+        },
+        {
+          "en": "Translation leaves the conditional density shape and entropy unchanged.",
+          "zh": "平移不改变条件密度形状与熵。"
+        },
+        {
+          "en": "Therefore h of X given Y equals h of E given Y.",
+          "zh": "因此h(X|Y)=h(E|Y)。"
+        },
+        {
+          "en": "Conditioning cannot increase differential entropy when these quantities are finite.",
+          "zh": "在这些量有限时，条件化不会增加微分熵。"
+        },
+        {
+          "en": "Thus h of E given Y is at most h of E.",
+          "zh": "所以h(E|Y)≤h(E)。"
+        },
+        {
+          "en": "Among scalar variables with fixed variance, the Gaussian has maximum entropy.",
+          "zh": "在方差固定的标量变量中，高斯熵最大。"
+        },
+        {
+          "en": "Hence h of E is at most one half log base two of two pi e times the variance of E.",
+          "zh": "因此h(E)≤0.5log₂(2πe Var(E))。"
+        },
+        {
+          "en": "Variance is no greater than the second moment.",
+          "zh": "方差不超过二阶矩。"
+        },
+        {
+          "en": "If the error has nonzero mean, its second moment also includes squared bias.",
+          "zh": "若误差均值非零，其二阶矩还包含偏差平方。"
+        },
+        {
+          "en": "Thus the final bound uses mean-square error rather than variance alone.",
+          "zh": "因此最终界使用均方误差，而非仅用方差。"
+        },
+        {
+          "en": "So this is at most one half log two of two pi e times expected E squared.",
+          "zh": "所以它至多为0.5log₂(2πe E[E²])。"
+        },
+        {
+          "en": "Combining the steps gives the entropy-to-MSE inequality.",
+          "zh": "合并这些步骤得到熵到均方误差的不等式。"
+        },
+        {
+          "en": "The mean-square error is at least two to twice h of X given Y, divided by two pi e.",
+          "zh": "均方误差至少为2^(2h(X|Y))/(2πe)。"
+        },
+        {
+          "en": "No independent additive-noise assumption was used.",
+          "zh": "推导没有使用独立加性噪声假设。"
+        },
+        {
+          "en": "The estimator may be nonlinear and may depend on Y.",
+          "zh": "估计器可以是非线性的，也可以依赖Y。"
+        },
+        {
+          "en": "An estimate allowed to observe X directly belongs to a different information setup.",
+          "zh": "允许直接观测X的估计，属于另一种可用信息设定。"
+        },
+        {
+          "en": "The unconditional bound using h of X applies to constant estimates without observations.",
+          "zh": "使用h(X)的无条件界，适用于无观测时的常数估计。"
+        },
+        {
+          "en": "Now examine an exact jointly Gaussian example.",
+          "zh": "现在看一个精确的联合高斯例子。"
+        },
+        {
+          "en": "Let Y be standard Gaussian and E an independent, zero-mean Gaussian with variance one quarter.",
+          "zh": "令Y为标准高斯，E为与其独立、零均值且方差为1/4的高斯。"
+        },
+        {
+          "en": "Set X equal to Y plus E and estimate X by g of Y equal to Y.",
+          "zh": "令X=Y+E，并以g(Y)=Y估计X。"
+        },
+        {
+          "en": "The estimation error is exactly E and is independent of Y.",
+          "zh": "估计误差恰为E，且独立于Y。"
+        },
+        {
+          "en": "The conditional variance of X given Y is one quarter.",
+          "zh": "给定Y时，X的条件方差为1/4。"
+        },
+        {
+          "en": "Its conditional entropy is one half log two of two pi e over four.",
+          "zh": "其条件熵为0.5log₂(2πe/4)。"
+        },
+        {
+          "en": "The error second moment is one quarter. Does any gap remain in this chain of inequalities?",
+          "zh": "误差二阶矩为四分之一。这串不等式还剩下任何松弛吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Every inequality in the chain is equality here.",
+          "zh": "此例中整条不等式链每一步都取等号。"
+        },
+        {
+          "en": "This example verifies tightness for a specific observation model.",
+          "zh": "该例验证了特定观测模型下界的紧性。"
+        },
+        {
+          "en": "It does not require independence in the general theorem.",
+          "zh": "一般定理并不要求独立性。"
+        },
+        {
+          "en": "Next, use log-density averages to describe continuous typical volume.",
+          "zh": "接下来利用对数密度平均描述连续典型体积。"
+        }
+      ]
+    },
+    {
+      "id": "c06-continuous-aep",
+      "chapter": "Continuous AEP and typical volume",
+      "title": "Probability mass and geometric volume are distinct",
+      "music": "recap",
+      "terms": [
+        "aep",
+        "typical-set",
+        "differential-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Let X one through X n be IID with density f.",
+          "zh": "令X₁到Xₙ为密度f下的IID样本。"
+        },
+        {
+          "en": "Assume h of X is finite.",
+          "zh": "假设h(X)有限。"
+        },
+        {
+          "en": "Also assume the absolute value of log two f of X has finite expectation.",
+          "zh": "并假设|log₂f(X)|的期望有限。"
+        },
+        {
+          "en": "This condition permits the strong law for information density.",
+          "zh": "该条件允许对信息密度应用强大数定律。"
+        },
+        {
+          "en": "The block density is the product of the n single-sample densities.",
+          "zh": "块密度等于n个单样本密度之积。"
+        },
+        {
+          "en": "Take negative log two and divide by n.",
+          "zh": "取负对数并除以n。"
+        },
+        {
+          "en": "The result is the sample average of negative log two f of X i.",
+          "zh": "所得结果是−log₂f(Xᵢ)的样本平均。"
+        },
+        {
+          "en": "Each term has mean h of X.",
+          "zh": "每项的均值是h(X)。"
+        },
+        {
+          "en": "The strong law makes the average converge almost surely to h.",
+          "zh": "强大数定律保证该平均几乎必然趋于h。"
+        },
+        {
+          "en": "Fix epsilon greater than zero.",
+          "zh": "固定ε>0。"
+        },
+        {
+          "en": "Call a block typical when its negative log density per coordinate lies within epsilon of h.",
+          "zh": "若每坐标负对数密度位于h的ε邻域内，就称该块典型。"
+        },
+        {
+          "en": "Equivalently, the typicality test places each block density between two exponential bounds.",
+          "zh": "等价地，典型性检验将每个块密度限制在两个指数界之间。"
+        },
+        {
+          "en": "For any delta between zero and one, sufficiently large n gives typical-set probability at least one minus delta.",
+          "zh": "任取0<δ<1，n充分大时典型集概率至少为1−δ。"
+        },
+        {
+          "en": "The typical set is a subset of continuous n-dimensional space.",
+          "zh": "典型集是连续n维空间的一个子集。"
+        },
+        {
+          "en": "Its probability mass is the integral of the block density over that set.",
+          "zh": "其概率质量是块密度在该集合上的积分。"
+        },
+        {
+          "en": "On the set, density is at most two to negative n times h minus epsilon.",
+          "zh": "在该集合上，密度至多为2^(−n(h−ε))。"
+        },
+        {
+          "en": "Therefore its mass is at most that density bound times its volume.",
+          "zh": "因此其质量至多为该密度上界乘以体积。"
+        },
+        {
+          "en": "The volume is at least one minus delta times two to n times h minus epsilon.",
+          "zh": "因此体积至少为(1−δ)2^(n(h−ε))。"
+        },
+        {
+          "en": "On the same set, density is at least two to negative n times h plus epsilon.",
+          "zh": "在同一集合上，密度至少为2^(−n(h+ε))。"
+        },
+        {
+          "en": "Its mass cannot exceed one.",
+          "zh": "其质量不能超过一。"
+        },
+        {
+          "en": "So volume is at most two to n times h plus epsilon.",
+          "zh": "所以体积至多为2^(n(h+ε))。"
+        },
+        {
+          "en": "Together, these bounds place logarithmic volume per coordinate near h.",
+          "zh": "两界共同将每坐标对数体积限制在h附近。"
+        },
+        {
+          "en": "First hold epsilon fixed and let n grow.",
+          "zh": "先固定ε并令n增大。"
+        },
+        {
+          "en": "Then choose arbitrarily smaller positive epsilon.",
+          "zh": "随后再选择任意更小的正ε。"
+        },
+        {
+          "en": "The volume exponent approaches differential entropy.",
+          "zh": "体积指数率趋于微分熵。"
+        },
+        {
+          "en": "This is a geometric volume statement, not a probability-mass statement.",
+          "zh": "这是几何体积结论，不是概率质量结论。"
+        },
+        {
+          "en": "It is also not a count of discrete sequences.",
+          "zh": "它也不是离散序列数量的计数。"
+        },
+        {
+          "en": "Differential entropy can be negative. Can a set of probability one have vanishing coordinate volume?",
+          "zh": "微分熵可能为负。概率为一的集合，其坐标体积能趋于零吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "For uniform zero to one quarter, h is negative two. The full block support has mass one and volume four to negative n.",
+          "zh": "对零到四分之一的均匀分布，h为负二。整个块支持集的概率为一，体积为4的负n次方。"
+        },
+        {
+          "en": "A coordinate rescaling changes both density units and differential entropy.",
+          "zh": "坐标缩放会同时改变密度单位与微分熵。"
+        },
+        {
+          "en": "The probability mass remains unchanged under the corresponding change of variables.",
+          "zh": "相应换元下概率质量保持不变。"
+        },
+        {
+          "en": "Thus volume must always be interpreted with its coordinate units.",
+          "zh": "因此体积始终必须结合坐标单位解释。"
+        },
+        {
+          "en": "The absolute-integrability assumption is not automatic for every density.",
+          "zh": "绝对可积假设并非对每个密度都自动成立。"
+        },
+        {
+          "en": "Without it, this strong-law route may fail.",
+          "zh": "若不满足该条件，这条强大数定律证明路线可能失效。"
+        },
+        {
+          "en": "The continuous AEP therefore has explicit regularity requirements.",
+          "zh": "因此连续AEP具有明确的正则条件。"
+        },
+        {
+          "en": "Next, use Gaussian entropy bounds in channel models.",
+          "zh": "下一集将在信道模型中使用高斯熵界。"
+        }
+      ]
+    }
+  ]
+}

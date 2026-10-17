@@ -1,0 +1,9 @@
+{
+  "entries": [
+    {
+      "pattern": "\\bsurprisal\\b",
+      "phonemes": "sɚpɹˈaɪzəl",
+      "note": "Information-theory noun; explicit pronunciation distinguishes it from surprisingly."
+    }
+  ]
+}

@@ -1,0 +1,791 @@
+{
+  "episode": "e06-prefix-kraft",
+  "title": "Prefix Codes and Kraft Inequality",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-decoding",
+      "chapter": "Unique decoding and prefix codes",
+      "title": "Can you find the missing boundaries?",
+      "music": "motivation",
+      "terms": [
+        "uniquely-decodable",
+        "prefix-free"
+      ],
+      "sentences": [
+        {
+          "en": "Decode zero one zero, with no separators. What message did you receive?",
+          "zh": "解读没有分隔符的零一零。你收到的消息是什么？"
+        },
+        {
+          "en": "Symbol A maps to zero, symbol B to zero one, and symbol C to one zero.",
+          "zh": "符号A映射为0，符号B映射为01，符号C映射为10。"
+        },
+        {
+          "en": "Every symbol has a different label. Is that enough to recover the message?",
+          "zh": "每个符号都有不同的标签。这足以还原消息吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Read zero followed by one zero: that means A, then C.",
+          "zh": "读成零后接一零：意思是先 A，后 C。"
+        },
+        {
+          "en": "Or read zero one followed by zero: that means B, then A.",
+          "zh": "也可以读成零一后接零：意思是先 B，后 A。"
+        },
+        {
+          "en": "Two different messages produced exactly the same bits.",
+          "zh": "两条不同的消息产生了完全相同的比特。"
+        },
+        {
+          "en": "A finite code assigns one finite string to each source symbol.",
+          "zh": "有限码为每个信源符号分配一个有限字符串。"
+        },
+        {
+          "en": "For now, every codeword is nonempty.",
+          "zh": "现在假设每个码字都非空。"
+        },
+        {
+          "en": "Different symbols receiving different codewords makes the code nonsingular.",
+          "zh": "不同符号获得不同码字时，这个码就是非奇异的。"
+        },
+        {
+          "en": "Sequence encoding concatenates the words, removing their visible boundaries.",
+          "zh": "序列编码把码字连接起来，去掉可见的边界。"
+        },
+        {
+          "en": "Nonsingularity answers a one-symbol question. It does not settle sequence boundaries.",
+          "zh": "非奇异性回答的是单个符号的问题，不能确定序列的边界。"
+        },
+        {
+          "en": "Unique decodability means each valid encoded string has exactly one source-symbol parsing.",
+          "zh": "唯一可译表示每个合法编码串恰有一种信源符号解析。"
+        },
+        {
+          "en": "Our three-word code fails that requirement, even though it is nonsingular.",
+          "zh": "我们的三码字码不满足这个要求，尽管它是非奇异的。"
+        },
+        {
+          "en": "Remove C. The remaining words are zero and zero one. Zero still prefixes zero one.",
+          "zh": "去掉 C。剩下零和零一，零仍然是零一的前缀。"
+        },
+        {
+          "en": "Must this smaller code also be ambiguous? Try decoding zero one zero one.",
+          "zh": "这个更小的码也一定有歧义吗？试着解读零一零一。",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Each one must pair with its immediately preceding zero, forming a zero-one word.",
+          "zh": "每个一必须和紧邻它之前的零配对，组成零一码字。"
+        },
+        {
+          "en": "Every zero left over is its own one-bit word. The pairs cannot overlap.",
+          "zh": "剩下的每个零各自成为一个单比特码字，这些配对不会重叠。"
+        },
+        {
+          "en": "This forced rule recovers every boundary of every valid encoded string.",
+          "zh": "这条强制规则能找回每个合法编码串的全部边界。"
+        },
+        {
+          "en": "So zero, zero one is uniquely decodable, despite not being prefix-free.",
+          "zh": "所以零、零一是唯一可译码，尽管它不是前缀码。"
+        },
+        {
+          "en": "Prefix-free means no codeword is a prefix of a different codeword.",
+          "zh": "前缀码表示没有码字是另一个不同码字的前缀。"
+        },
+        {
+          "en": "The repaired code uses zero for symbol A, one zero for symbol B, and one one for symbol C.",
+          "zh": "修复后的码对符号A使用0，对B使用10，对C使用11。"
+        },
+        {
+          "en": "Now read zero one zero one one from left to right. Where can the decoder stop?",
+          "zh": "现在从左到右读零一零一一。解码器可以在哪里停下？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The first zero gives A. The next one zero gives B. The final one one gives C.",
+          "zh": "第一个零给出 A，接着的一零给出 B，最后的一一给出 C。"
+        },
+        {
+          "en": "In the tree, each bit selects a branch. A codeword is a leaf.",
+          "zh": "在树中，每个比特选择一条分支，码字就是叶子。"
+        },
+        {
+          "en": "At a leaf, output its symbol and restart from the root for the next word.",
+          "zh": "到达叶子就输出它的符号，然后从根开始解读下一个码字。"
+        },
+        {
+          "en": "Why can a prefix code never give two different parsings?",
+          "zh": "为什么前缀码不可能产生两种不同的解析？"
+        },
+        {
+          "en": "If two first words end at different places, the shorter word prefixes the longer one.",
+          "zh": "如果两个首码字在不同位置结束，较短的码字就是较长码字的前缀。"
+        },
+        {
+          "en": "Prefix-free forbids that. The first word is forced; remove it and repeat.",
+          "zh": "前缀码禁止这种情况。因此首码字被唯一确定，去掉它后重复即可。"
+        },
+        {
+          "en": "Therefore every prefix-free code is uniquely decodable.",
+          "zh": "因此，每个前缀码都是唯一可译码。"
+        },
+        {
+          "en": "Every uniquely decodable code is nonsingular: even one-symbol messages must decode uniquely.",
+          "zh": "每个唯一可译码都是非奇异码：即使只有一个符号，也必须能唯一解码。"
+        },
+        {
+          "en": "The reverse implications fail. We have a concrete counterexample for each.",
+          "zh": "反向推论不成立，两种情况都有具体反例。"
+        },
+        {
+          "en": "Zero, zero one is uniquely decodable but not prefix-free.",
+          "zh": "零、零一唯一可译，但不是前缀码。"
+        },
+        {
+          "en": "Zero, zero one, one zero is nonsingular but not uniquely decodable.",
+          "zh": "零、零一、一零非奇异，但不唯一可译。"
+        },
+        {
+          "en": "Prefix codewords provide immediate boundaries. Unique decodability is the broader property.",
+          "zh": "前缀码字提供即时边界，而唯一可译是范围更大的性质。"
+        },
+        {
+          "en": "Return to the tree. A short codeword blocks every longer word below that leaf.",
+          "zh": "回到树上。一个短码字会挡住该叶子下面的所有更长码字。"
+        },
+        {
+          "en": "How many short words can we afford? Three one-bit binary words are already impossible.",
+          "zh": "我们能容纳多少个短码字？三个单比特二进制码字就已经不可能。"
+        },
+        {
+          "en": "Kraft inequality turns this limited tree space into a precise length budget.",
+          "zh": "Kraft 不等式把有限的树空间转成精确的码长预算。"
+        }
+      ]
+    },
+    {
+      "id": "c02-kraft",
+      "chapter": "Kraft inequality and construction",
+      "title": "Tree leaves occupy disjoint descendant slots",
+      "music": "proof",
+      "terms": [
+        "prefix-free",
+        "kraft"
+      ],
+      "sentences": [
+        {
+          "en": "Represent each binary codeword as a path from the root of a binary tree.",
+          "zh": "将每个二进制码字表示为二叉树根部出发的一条路径。"
+        },
+        {
+          "en": "A codeword of length l ends at depth l.",
+          "zh": "长度为l的码字终止于深度l。"
+        },
+        {
+          "en": "Prefix-free codewords end at leaves with no ancestor among code leaves.",
+          "zh": "前缀码字对应的叶节点之间不存在祖先关系。"
+        },
+        {
+          "en": "Choose a common depth L at least as large as every codeword length.",
+          "zh": "选取公共深度L，使其不小于所有码字长度。"
+        },
+        {
+          "en": "Expand each leaf downward until depth L.",
+          "zh": "将每个叶节点向下展开至深度L。"
+        },
+        {
+          "en": "A leaf at depth l reserves how many slots at the common depth L?",
+          "zh": "深度为 l 的叶子，会在公共深度 L 预留多少个位置？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "It reserves two to L minus l slots. Different prefix leaves reserve disjoint sets.",
+          "zh": "它预留二的 L 减 l 次方个位置。不同前缀叶子预留的集合互不相交。"
+        },
+        {
+          "en": "The full tree has only two to L nodes at that depth.",
+          "zh": "整棵树在该深度只有2^L个节点。"
+        },
+        {
+          "en": "Therefore the sum of two to L minus l i is at most two to L.",
+          "zh": "因此Σᵢ2^(L−lᵢ)≤2^L。"
+        },
+        {
+          "en": "Divide by two to L to obtain the binary Kraft inequality.",
+          "zh": "两边除以2^L，得到二进制Kraft不等式。"
+        },
+        {
+          "en": "The sum over i of two to negative l i is at most one.",
+          "zh": "Σᵢ2^(−lᵢ)≤1。"
+        },
+        {
+          "en": "This proves necessity for prefix-free code lengths.",
+          "zh": "这证明了前缀码长度的必要条件。"
+        },
+        {
+          "en": "For integer lengths, the condition is also sufficient: some prefix code can realize them.",
+          "zh": "对于整数码长，这个条件也充分：存在某个前缀码能实现它们。"
+        },
+        {
+          "en": "Sort the requested lengths from shortest to longest.",
+          "zh": "将指定长度按从短到长排序。"
+        },
+        {
+          "en": "Use half-open dyadic intervals in the unit interval, ordered from left to right.",
+          "zh": "在单位区间内，使用从左到右排列的半开二进制区间。"
+        },
+        {
+          "en": "A length l corresponds to an interval of width two to negative l.",
+          "zh": "长度l对应宽度为2^(−l)的区间。"
+        },
+        {
+          "en": "Kraft ensures the intervals can be placed without exceeding total width one.",
+          "zh": "Kraft条件保证区间可放置且总宽度不超过一。"
+        },
+        {
+          "en": "At each requested length, earlier intervals have widths that are integer multiples of the current width.",
+          "zh": "每次分配时，先前区间宽度都是当前宽度的整数倍。"
+        },
+        {
+          "en": "Place the next interval immediately after the total width already assigned.",
+          "zh": "将新区间紧接在已分配总宽度之后放置。"
+        },
+        {
+          "en": "The Kraft sum guarantees this endpoint never exceeds one.",
+          "zh": "Kraft和保证该端点不会超过一。"
+        },
+        {
+          "en": "Write each left endpoint in exactly l binary digits, padding trailing zeros when necessary.",
+          "zh": "将每个左端点写成恰好l位二进制小数，必要时补末尾零。"
+        },
+        {
+          "en": "Intervals do not overlap, so no assigned word prefixes another.",
+          "zh": "区间互不重叠，因此没有码字会成为另一者前缀。"
+        },
+        {
+          "en": "This constructs a prefix code with the requested lengths.",
+          "zh": "这样就构造出具有指定长度的前缀码。"
+        },
+        {
+          "en": "The tree and interval constructions describe the same dyadic structure.",
+          "zh": "树构造与区间构造描述的是同一二进制结构。"
+        },
+        {
+          "en": "For a D-ary code, each node has D children.",
+          "zh": "对D元码，每个节点有D个子节点。"
+        },
+        {
+          "en": "At depth L, there are D to L descendants.",
+          "zh": "深度L共有D^L个后代。"
+        },
+        {
+          "en": "A leaf of depth l occupies D to L minus l slots.",
+          "zh": "深度l的叶占据D^(L−l)个格位。"
+        },
+        {
+          "en": "The resulting condition is sum D to negative l i at most one.",
+          "zh": "于是得到ΣᵢD^(−lᵢ)≤1。"
+        },
+        {
+          "en": "The construction uses base D intervals in place of binary intervals.",
+          "zh": "这一构造使用D进制区间来替代二进制区间。"
+        },
+        {
+          "en": "Kraft tests whether lengths can support some prefix code, not whether chosen labels already do.",
+          "zh": "Kraft 判断码长能否容纳某个前缀码，而不保证选定的标签已经满足前缀性质。"
+        },
+        {
+          "en": "A particular code may use more average bits than necessary.",
+          "zh": "某个具体码的平均比特数仍可能不是最小。"
+        },
+        {
+          "en": "McMillan extends the same necessary length bound to every uniquely decodable code.",
+          "zh": "McMillan将同一个必要长度界推广到所有唯一可译码。"
+        },
+        {
+          "en": "Its proof counts concatenated codewords rather than tree leaves.",
+          "zh": "其证明统计码字串接结果，而非树叶。"
+        },
+        {
+          "en": "Next, group these concatenations by total length.",
+          "zh": "接下来按总长度对这些串接分组。"
+        },
+        {
+          "en": "Unused space corresponds to branches that need no codeword.",
+          "zh": "未使用空间对应无需码字的树枝。"
+        }
+      ]
+    },
+    {
+      "id": "c03-mcmillan",
+      "chapter": "McMillan inequality",
+      "title": "Unique parsing bounds the number of long concatenations",
+      "music": "proof",
+      "terms": [
+        "uniquely-decodable",
+        "kraft"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a finite uniquely decodable code with nonempty codewords.",
+          "zh": "考虑一个码字非空的有限唯一可译码。"
+        },
+        {
+          "en": "Let l i be the length of codeword i.",
+          "zh": "令lᵢ表示第i个码字的长度。"
+        },
+        {
+          "en": "Define K as the sum of D to negative l i.",
+          "zh": "定义K=ΣᵢD^(−lᵢ)。"
+        },
+        {
+          "en": "We will prove K is at most one.",
+          "zh": "我们将证明K≤1。"
+        },
+        {
+          "en": "Concatenate exactly k codewords in every possible ordered sequence.",
+          "zh": "枚举所有恰由k个码字组成的有序串接。"
+        },
+        {
+          "en": "Let A j count those sequences whose total length is j.",
+          "zh": "令Aⱼ表示总长度为j的串接数量。"
+        },
+        {
+          "en": "Unique decodability makes every such concatenated string distinct.",
+          "zh": "唯一可译性保证这些串接字符串互不相同。"
+        },
+        {
+          "en": "There are only D to j strings of length j.",
+          "zh": "长度为j的字符串总共只有D^j个。"
+        },
+        {
+          "en": "Hence A j is at most D to j.",
+          "zh": "所以Aⱼ≤D^j。"
+        },
+        {
+          "en": "Expand K to the k-th power as a sum over all k-codeword sequences.",
+          "zh": "将K的k次方展开为所有k码字序列的求和。"
+        },
+        {
+          "en": "A sequence with total length j contributes D to negative j.",
+          "zh": "总长度为j的序列贡献D^(−j)。"
+        },
+        {
+          "en": "Grouping equal total lengths gives K to k equals sum over j of A j D to negative j.",
+          "zh": "按总长度分组得K^k=ΣⱼAⱼD^(−j)。"
+        },
+        {
+          "en": "The smallest possible total length is k times l minimum.",
+          "zh": "最小总长度为kl_min。"
+        },
+        {
+          "en": "The largest is k times l maximum.",
+          "zh": "最大总长度为kl_max。"
+        },
+        {
+          "en": "There are at most k times the difference of these lengths plus one integer values of j.",
+          "zh": "可能的整数j至多有k(l_max−l_min)+1个。"
+        },
+        {
+          "en": "Each grouped term A j D to negative j is at most one.",
+          "zh": "每个分组项AⱼD^(−j)都至多为一。"
+        },
+        {
+          "en": "The bound is k times the difference between maximum and minimum code lengths, plus one.",
+          "zh": "因此K^k≤k(l_max−l_min)+1。"
+        },
+        {
+          "en": "Take the k-th root. Does this bound still leave a positive gap above one as k grows?",
+          "zh": "取 k 次方根。随着 k 增大，这个界与一之间还会留下正的间隙吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The root of this linear expression tends to one as k grows.",
+          "zh": "该线性表达式的k次方根随k增大趋于一。"
+        },
+        {
+          "en": "Thus K is at most one.",
+          "zh": "因此K≤1。"
+        },
+        {
+          "en": "This is McMillan inequality for uniquely decodable codes.",
+          "zh": "这就是唯一可译码的McMillan不等式。"
+        },
+        {
+          "en": "Unique parsing is essential because it makes concatenations distinct.",
+          "zh": "唯一解析至关重要，因为它保证串接结果彼此不同。"
+        },
+        {
+          "en": "Without unique decodability, a length group can contain more messages than there are distinct encoded strings.",
+          "zh": "缺少唯一可译码性时，一个长度分组的消息数可能超过不同编码串的数量。"
+        },
+        {
+          "en": "This proof does not assume a prefix tree.",
+          "zh": "这个证明不假设前缀树结构。"
+        },
+        {
+          "en": "It applies to any finite uniquely decodable code.",
+          "zh": "它适用于任意有限唯一可译码。"
+        },
+        {
+          "en": "For binary codes, set D equal to two.",
+          "zh": "对二进制码，令D=2。"
+        },
+        {
+          "en": "Then the same sum of two to negative lengths is bounded by one.",
+          "zh": "此时同一个长度负指数和仍不超过一。"
+        },
+        {
+          "en": "Prefix codes satisfy Kraft directly by tree counting.",
+          "zh": "前缀码可直接由树计数得到Kraft界。"
+        },
+        {
+          "en": "McMillan shows that unique decodability alone implies it too.",
+          "zh": "McMillan证明仅唯一可译性也蕴含该不等式。"
+        },
+        {
+          "en": "The two theorems provide necessity for different code classes.",
+          "zh": "两个定理分别为不同码类提供必要条件。"
+        },
+        {
+          "en": "The factor K to the k expands by choosing one codeword for each position.",
+          "zh": "K^k的展开对应每个位置各选一个码字。"
+        },
+        {
+          "en": "Multiplying their weights adds their lengths in the exponent.",
+          "zh": "权重相乘会使指数中的长度相加。"
+        },
+        {
+          "en": "All possible j values lie between the minimum and maximum total lengths.",
+          "zh": "所有可能的j都位于最小与最大总长度之间。"
+        },
+        {
+          "en": "The number of these integer lengths grows only linearly with k.",
+          "zh": "这些整数长度的数量仅随k线性增长。"
+        },
+        {
+          "en": "Next, convert a length list into a probability distribution.",
+          "zh": "接下来将长度列表转换成概率分布。"
+        }
+      ]
+    },
+    {
+      "id": "c04-length",
+      "chapter": "Entropy lower bound on average length",
+      "title": "Kraft slack and divergence separate cleanly",
+      "music": "proof",
+      "terms": [
+        "kraft",
+        "kl-divergence",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Take a finite uniquely decodable code for the positive-probability source symbols.",
+          "zh": "考虑定义在正概率信源符号上的有限唯一可译码。"
+        },
+        {
+          "en": "Write p i for source probability and l i for code length.",
+          "zh": "用pᵢ表示信源概率，用lᵢ表示码长。"
+        },
+        {
+          "en": "Every source symbol in this support receives a codeword.",
+          "zh": "该支持集中的每个信源符号都有对应码字。"
+        },
+        {
+          "en": "Define average length L as the sum of p i times l i.",
+          "zh": "定义平均码长L=Σᵢpᵢlᵢ。"
+        },
+        {
+          "en": "Let K be the Kraft sum over the codewords.",
+          "zh": "令K表示这些码字的Kraft和。"
+        },
+        {
+          "en": "Kraft or McMillan gives zero less than K at most one.",
+          "zh": "Kraft或McMillan不等式给出0<K≤1。"
+        },
+        {
+          "en": "Define q i as D to negative l i divided by K.",
+          "zh": "定义qᵢ=D^(−lᵢ)/K。"
+        },
+        {
+          "en": "These q values are positive and sum to one.",
+          "zh": "这些qᵢ均为正且总和为一。"
+        },
+        {
+          "en": "The source probabilities p i are also positive on the chosen support.",
+          "zh": "所选支持集上的信源概率pᵢ也均为正。"
+        },
+        {
+          "en": "So the divergence from P to q is finite.",
+          "zh": "因此从P到q的散度有限。"
+        },
+        {
+          "en": "Expand divergence as the sum p i log D of p i over q i.",
+          "zh": "将散度展开为Σᵢpᵢlog_D(pᵢ/qᵢ)。"
+        },
+        {
+          "en": "Substitute q i equals D to negative l i over K.",
+          "zh": "代入qᵢ=D^(−lᵢ)/K。"
+        },
+        {
+          "en": "Its logarithm becomes log D p i plus l i plus log D K.",
+          "zh": "其对数变为log_Dpᵢ+lᵢ+log_DK。"
+        },
+        {
+          "en": "Average the first term to get negative source entropy, measured using logarithm base D.",
+          "zh": "对第一项求平均，得到以D为对数底的负信源熵。"
+        },
+        {
+          "en": "Average the second term to get L.",
+          "zh": "对第二项求平均得到L。"
+        },
+        {
+          "en": "The final constant remains log D K.",
+          "zh": "最后的常数项为log_DK。"
+        },
+        {
+          "en": "Therefore divergence equals L minus H plus log D K.",
+          "zh": "因此D(P∥q)=L−H+log_DK。"
+        },
+        {
+          "en": "Rearrange to obtain L equals H plus divergence minus log D K.",
+          "zh": "整理得L=H+D_D(P∥q)−log_DK。"
+        },
+        {
+          "en": "Divergence is nonnegative.",
+          "zh": "散度非负。"
+        },
+        {
+          "en": "Since K is at most one, negative log D K is also nonnegative.",
+          "zh": "由于K≤1，−log_DK也非负。"
+        },
+        {
+          "en": "Therefore L is at least H.",
+          "zh": "因此L≥H。"
+        },
+        {
+          "en": "When can average length equal entropy? Which two gaps must close?",
+          "zh": "平均码长何时等于熵？哪两个间隙必须消失？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The divergence vanishes exactly when p equals q.",
+          "zh": "散度为零当且仅当p=q。"
+        },
+        {
+          "en": "The Kraft penalty vanishes exactly when K equals one.",
+          "zh": "Kraft惩罚为零当且仅当K=1。"
+        },
+        {
+          "en": "So equality requires K equal one and p i equal q i for every symbol.",
+          "zh": "所以等号要求K=1且每个符号均有pᵢ=qᵢ。"
+        },
+        {
+          "en": "If an original source symbol has probability zero, omit it from this support calculation.",
+          "zh": "若原信源符号概率为零，就从本次支持集计算中略去。"
+        },
+        {
+          "en": "No logarithm of zero is needed.",
+          "zh": "这样无需计算零的对数。"
+        },
+        {
+          "en": "A codeword for an impossible symbol can only increase Kraft usage.",
+          "zh": "不可能符号的码字只会增加Kraft占用。"
+        },
+        {
+          "en": "The bound applies to binary bits when D equals two.",
+          "zh": "令D=2时，该界即适用于二进制比特。"
+        },
+        {
+          "en": "For other alphabets, lengths and entropy use the same logarithm base D.",
+          "zh": "对其他字母表，码长与熵使用同一对数底D。"
+        },
+        {
+          "en": "The inequality is a lower bound, not a claim every code attains it.",
+          "zh": "该不等式只是下界，并不表示每个码都能达到。"
+        },
+        {
+          "en": "Integer lengths usually prevent exact probability matching.",
+          "zh": "整数码长通常无法精确匹配概率。"
+        },
+        {
+          "en": "A ceiling construction will bound the extra average length by one code-alphabet digit.",
+          "zh": "向上取整构造将把平均码长开销限制在一个码字母符号以内。"
+        },
+        {
+          "en": "Changing the logarithm base changes both entropy and length units together.",
+          "zh": "改变对数底会同时改变熵与码长的计量单位。"
+        },
+        {
+          "en": "For binary codewords, the unit is bits.",
+          "zh": "对二进制码字，单位是比特。"
+        },
+        {
+          "en": "The divergence comparison is valid because q has positive probability wherever p does.",
+          "zh": "由于p为正处q也为正，散度比较有定义。"
+        }
+      ]
+    },
+    {
+      "id": "c05-shannon",
+      "chapter": "Shannon lengths and block coding",
+      "title": "Rounding costs less than one bit per block",
+      "music": "proof",
+      "terms": [
+        "prefix-free",
+        "kraft",
+        "entropy",
+        "dms"
+      ],
+      "sentences": [
+        {
+          "en": "With at least two positive-probability symbols, how much can rounding ideal lengths cost?",
+          "zh": "至少有两个正概率符号时，把理想码长向上取整会付出多大代价？"
+        },
+        {
+          "en": "For each positive-probability symbol, set l i to ceiling of negative log two p i.",
+          "zh": "对每个正概率符号，令lᵢ=⌈−log₂pᵢ⌉。"
+        },
+        {
+          "en": "These are finite positive integer lengths.",
+          "zh": "这些长度都是有限正整数。"
+        },
+        {
+          "en": "Because ceiling rounds upward, l i is at least negative log two p i.",
+          "zh": "由于向上取整，lᵢ≥−log₂pᵢ。"
+        },
+        {
+          "en": "Negate both sides and exponentiate base two.",
+          "zh": "两边取负并以2为底取幂。"
+        },
+        {
+          "en": "This gives two to negative l i at most p i.",
+          "zh": "由此得2^(−lᵢ)≤pᵢ。"
+        },
+        {
+          "en": "Summing over symbols gives Kraft sum at most one.",
+          "zh": "对所有符号求和得到Kraft和不超过一。"
+        },
+        {
+          "en": "The converse construction from the previous chapter builds a prefix code.",
+          "zh": "上一章的逆向构造可据此建立前缀码。"
+        },
+        {
+          "en": "Rounding moves each ideal length upward. How large can that extra distance be?",
+          "zh": "取整把每个理想码长向上推。多出的距离能有多大？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "It is strictly less than one. Multiply the lower and upper length bounds by p i.",
+          "zh": "它严格小于一。把码长的上下界乘以 p i。"
+        },
+        {
+          "en": "Sum the lower bounds to obtain entropy at most average length.",
+          "zh": "对下界求和得到熵不超过平均码长。"
+        },
+        {
+          "en": "Sum the upper bounds and use total probability one.",
+          "zh": "对上界求和，并利用总概率为一。"
+        },
+        {
+          "en": "The result is average length strictly below entropy plus one bit.",
+          "zh": "结果是平均码长严格小于熵加一比特。"
+        },
+        {
+          "en": "Thus H is at most L, and L is less than H plus one.",
+          "zh": "因此H≤L<H+1。"
+        },
+        {
+          "en": "This is a guarantee for the Shannon length construction.",
+          "zh": "这是Shannon长度构造的保证。"
+        },
+        {
+          "en": "It does not say every arbitrary code is optimal.",
+          "zh": "它不表示任意码都最优。"
+        },
+        {
+          "en": "Now encode blocks of n independent, identically distributed source symbols as super-symbols.",
+          "zh": "现在将n个独立同分布的信源符号组成的块视为超符号编码。"
+        },
+        {
+          "en": "A block probability is the product of its n symbol probabilities.",
+          "zh": "块概率等于其中n个符号概率之积。"
+        },
+        {
+          "en": "Its negative log probability is the sum of their surprisals.",
+          "zh": "其负对数概率等于各符号自信息之和。"
+        },
+        {
+          "en": "Taking expectation gives block entropy n H.",
+          "zh": "取期望得到块熵nH。"
+        },
+        {
+          "en": "Apply Shannon lengths to the block alphabet.",
+          "zh": "对块字母表应用Shannon长度构造。"
+        },
+        {
+          "en": "Its expected code length is at least n H and less than n H plus one.",
+          "zh": "其期望码长至少为nH且严格小于nH+1。"
+        },
+        {
+          "en": "Divide by n to obtain a per-symbol overhead below one over n bit.",
+          "zh": "除以n，得到每符号开销小于1/n比特。"
+        },
+        {
+          "en": "As n grows, that rounding overhead tends to zero.",
+          "zh": "n增大时，取整开销趋于零。"
+        },
+        {
+          "en": "The block code still needs a prefix construction.",
+          "zh": "块码仍需通过前缀构造实现。"
+        },
+        {
+          "en": "Kraft sufficiency supplies such a code for the integer block lengths.",
+          "zh": "Kraft充分性可为这些整数块长构造相应码。"
+        },
+        {
+          "en": "For a single positive-probability symbol, the formula gives length zero.",
+          "zh": "若只有一个正概率符号，该公式会给出零长度。"
+        },
+        {
+          "en": "For a known fixed block, there is only one possible message. It needs no bits.",
+          "zh": "对于长度已知的固定块，只有一种可能消息，因此不需要比特。"
+        },
+        {
+          "en": "But for an unknown-length stream, how many source symbols does silence contain?",
+          "zh": "但在长度未知的流中，一段沉默包含多少个信源符号？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Repeated empty words cannot reveal how many symbols were sent.",
+          "zh": "重复空码字无法揭示发送了多少个符号。"
+        },
+        {
+          "en": "A one-symbol nonempty code has length at least one.",
+          "zh": "单符号非空码的码长至少为一。"
+        },
+        {
+          "en": "The strict H plus one Shannon bound is stated for at least two positive symbols.",
+          "zh": "严格的H加一Shannon界针对至少两个正概率符号。"
+        },
+        {
+          "en": "For a fixed n-symbol block from a deterministic source, one known message needs no bits.",
+          "zh": "对确定信源的已知n符号块，唯一消息无需比特。"
+        },
+        {
+          "en": "That exception does not license empty codewords for ordinary variable-length coding.",
+          "zh": "这一例外并不允许普通变长编码使用空码字。"
+        },
+        {
+          "en": "Next, compare Shannon coding with Huffman and universal constructions.",
+          "zh": "下一集将比较Shannon编码、Huffman编码与通用构造。"
+        }
+      ]
+    }
+  ]
+}

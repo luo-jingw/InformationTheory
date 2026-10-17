@@ -1,0 +1,1023 @@
+{
+  "episode": "e01-entropy-information",
+  "title": "Entropy and Shared Information",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-communication",
+      "chapter": "Communication and Information",
+      "title": "Messages, Noise, and Reliable Rates",
+      "music": "motivation",
+      "terms": [
+        "dms",
+        "dmc",
+        "capacity"
+      ],
+      "sentences": [
+        {
+          "en": "I hide one of four messages: A, B, C, or D. You may identify it with yes-or-no questions.",
+          "zh": "我藏起A、B、C、D中的一个消息，你可以用是非问题找出它。"
+        },
+        {
+          "en": "Their probabilities are one half, one quarter, one eighth, and one eighth.",
+          "zh": "它们的概率依次为二分之一、四分之一、八分之一、八分之一。"
+        },
+        {
+          "en": "One tree splits the four choices evenly. Another asks about the most likely message first.",
+          "zh": "一棵树均匀划分四个选择，另一棵先询问最可能的消息。"
+        },
+        {
+          "en": "Which tree uses fewer questions on average, under this probability model?",
+          "zh": "在这个概率模型下，哪棵树的平均提问次数更少？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The balanced tree always takes two questions, so its average is two.",
+          "zh": "平衡树总是需要两次提问，因此平均次数为二。"
+        },
+        {
+          "en": "The other costs one half times one, plus one quarter times two, plus two eighths times three: one point seven five.",
+          "zh": "另一棵的代价是二分之一乘一，加四分之一乘二，再加两个八分之一乘三：一点七五。"
+        },
+        {
+          "en": "Its rare outcomes still need three questions. A lower average does not shorten every path.",
+          "zh": "它的稀有结果仍需三次提问；平均值更小，并不代表每条路径都更短。"
+        },
+        {
+          "en": "What quantity measures this average uncertainty before we choose a question tree?",
+          "zh": "在选择提问树之前，什么量能度量这种平均不确定性？"
+        },
+        {
+          "en": "A communication system begins with a sender, a message source, a channel, and a receiver.",
+          "zh": "通信系统从发送者、消息信源、信道和接收者开始。"
+        },
+        {
+          "en": "The source chooses a symbol, and the sender represents that symbol using a physical signal.",
+          "zh": "信源选出一个符号，发送者再用物理信号表示它。"
+        },
+        {
+          "en": "The channel carries that signal, while noise can alter what arrives at the receiver.",
+          "zh": "信道传送该信号，而噪声可能改变接收端收到的内容。"
+        },
+        {
+          "en": "The receiver observes an output and uses it to infer which input symbol was sent.",
+          "zh": "接收者观察输出，并据此推断发送了哪个输入符号。"
+        },
+        {
+          "en": "We describe the chosen source symbol by a random variable called X.",
+          "zh": "我们用随机变量X描述信源选出的符号。"
+        },
+        {
+          "en": "For a finite source, X takes values from a finite alphabet, such as zero and one.",
+          "zh": "对于有限信源，X取自有限字母表，例如零和一。"
+        },
+        {
+          "en": "A source model assigns probabilities to those symbols before any particular message is drawn.",
+          "zh": "信源模型在抽取具体消息之前，为这些符号指定概率。"
+        },
+        {
+          "en": "Those probabilities describe the source's behavior, not errors introduced by the channel.",
+          "zh": "这些概率描述信源行为，而非信道引入的错误。"
+        },
+        {
+          "en": "A binary source might choose zero with probability one half and one with probability one half.",
+          "zh": "二元信源可以用各二分之一的概率选择零或一。"
+        },
+        {
+          "en": "Another binary source might choose zero nine times out of ten and one once out of ten.",
+          "zh": "另一个二元信源可以以十分之九的概率选零，十分之一的概率选一。"
+        },
+        {
+          "en": "Both sources use the same alphabet, but their probability patterns differ substantially.",
+          "zh": "两个信源使用相同字母表，但概率分布差异很大。"
+        },
+        {
+          "en": "A probability model lets us distinguish common messages from rare messages before transmission.",
+          "zh": "概率模型让我们在传输前区分常见消息与罕见消息。"
+        },
+        {
+          "en": "The channel has a separate description: for each input, it specifies probabilities of possible outputs.",
+          "zh": "信道有独立描述：对每个输入，它规定各种输出的概率。"
+        },
+        {
+          "en": "We call the input random variable X and the received output random variable Y.",
+          "zh": "我们把输入随机变量记为X，把接收输出随机变量记为Y。"
+        },
+        {
+          "en": "The conditional probability of Y given X captures the channel's noise and transformation behavior.",
+          "zh": "给定X时Y的条件概率刻画信道噪声与变换行为。"
+        },
+        {
+          "en": "A noiseless channel makes its output determine its input, although the source may still be unpredictable.",
+          "zh": "无噪信道使输出能够确定输入，但信源仍可能不可预测。"
+        },
+        {
+          "en": "A noisy channel can produce several possible outputs from the same transmitted input.",
+          "zh": "有噪信道可能让同一个发送输入对应多个可能输出。"
+        },
+        {
+          "en": "Thus source uncertainty and channel uncertainty refer to different parts of the system.",
+          "zh": "因此，信源不确定性与信道不确定性属于系统的不同部分。"
+        },
+        {
+          "en": "A communication code maps messages into sequences of channel inputs called codewords.",
+          "zh": "通信码将消息映射为一串信道输入，称为码字。"
+        },
+        {
+          "en": "A block code assigns one length n codeword to each of M possible messages.",
+          "zh": "分组码为M个可能消息各分配一个长度为n的码字。"
+        },
+        {
+          "en": "Suppose those M messages are equally likely, so the message choice contains log base two of M bits.",
+          "zh": "假设M个消息等可能，因此消息选择包含log₂M比特。"
+        },
+        {
+          "en": "Each transmission uses n channel symbols. The fixed block rate R is log base two of M, with that entire logarithm divided by n.",
+          "zh": "每次传输使用n个信道符号，因此固定分组码率R=log₂M/n。"
+        },
+        {
+          "en": "The receiver applies a decoder to its observed output sequence and selects one of the M messages.",
+          "zh": "接收者对观测到的输出序列译码，并从M个消息中选出一个。"
+        },
+        {
+          "en": "Reliability concerns the probability that this decoded message differs from the transmitted message.",
+          "zh": "可靠性关注译出的消息不同于发送消息的概率。"
+        },
+        {
+          "en": "A high rate alone does not guarantee a small decoding error probability.",
+          "zh": "仅有高码率并不能保证译码错误概率很小。"
+        },
+        {
+          "en": "Changing the code can trade block rate against error probability while the physical channel remains fixed.",
+          "zh": "物理信道固定时，改变编码可以权衡分组码率与错误概率。"
+        },
+        {
+          "en": "Channel capacity marks the supremum of rates whose block error can vanish as block length grows.",
+          "zh": "信道容量标记分组长度增长时错误概率可趋于零的码率上确界。"
+        },
+        {
+          "en": "A coding theorem is needed to prove that claim; the system diagram alone does not establish it.",
+          "zh": "该结论需要编码定理证明，系统图本身并不能确立它。"
+        },
+        {
+          "en": "For now, ask a more basic question: how much information does one source outcome carry?",
+          "zh": "现在先问一个更基础的问题：信源的一个结果携带多少信息？"
+        },
+        {
+          "en": "A rare outcome should tell us more than an outcome we expected almost certainly.",
+          "zh": "罕见结果应比几乎必然发生的结果告诉我们更多。"
+        },
+        {
+          "en": "To make that idea precise, we need a numerical measure that depends on probability.",
+          "zh": "要精确表达这个想法，我们需要一个依赖概率的数值度量。"
+        },
+        {
+          "en": "We will measure one observed event first, then average its information over the source distribution.",
+          "zh": "我们先度量一次观测事件的信息，再对信源分布取平均。"
+        },
+        {
+          "en": "That average quantifies source uncertainty independently of channel noise and decoding performance.",
+          "zh": "这个平均量刻画信源不确定性，独立于信道噪声和译码表现。"
+        },
+        {
+          "en": "Our next measure depends on source probabilities alone.",
+          "zh": "接下来定义的度量只依赖信源概率。"
+        }
+      ]
+    },
+    {
+      "id": "c02-surprisal",
+      "chapter": "Surprisal and Entropy",
+      "title": "From One Surprising Outcome to an Average",
+      "music": "definition",
+      "terms": [
+        "surprisal",
+        "entropy",
+        "binary-entropy",
+        "chain-rule"
+      ],
+      "sentences": [
+        {
+          "en": "Let x be an outcome with probability p of occurring, where p is positive.",
+          "zh": "令x为概率p大于零的结果。"
+        },
+        {
+          "en": "Its surprisal, also called self-information, is I of x equal to log base two of one over p.",
+          "zh": "它的自信息定义为I(x)等于以二为底的log(1/p)。"
+        },
+        {
+          "en": "The logarithm uses base two, so information is measured in bits.",
+          "zh": "对数采用以二为底，因此信息单位为比特。"
+        },
+        {
+          "en": "An event with probability one has zero surprisal because it provides no surprise.",
+          "zh": "概率为一的事件自信息为零，因为它毫无意外。"
+        },
+        {
+          "en": "An event with probability one half has surprisal one bit.",
+          "zh": "概率为二分之一的事件自信息为一比特。"
+        },
+        {
+          "en": "An event with probability one quarter has two bits of surprisal. What if that probability is cut in half again?",
+          "zh": "概率为四分之一的事件有两比特自信息。再把概率减半，会怎样？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Each time probability is halved, surprisal increases by exactly one bit.",
+          "zh": "概率每减半一次，自信息恰好增加一比特。"
+        },
+        {
+          "en": "This scaling also agrees with independent events: their joint surprisal adds.",
+          "zh": "这种尺度也符合独立事件的情形：联合自信息相加。"
+        },
+        {
+          "en": "If A and B are independent, the probability that both occur is p of A times p of B.",
+          "zh": "若A与B独立，两者同时发生的概率是p(A)乘p(B)。"
+        },
+        {
+          "en": "Taking the negative base two logarithm turns that product into a sum.",
+          "zh": "取负的以二为底对数，就把乘积变成和。"
+        },
+        {
+          "en": "Thus the joint surprisal equals the surprisal of event A, plus the surprisal of event B.",
+          "zh": "因此，A与B同时发生的自信息等于各自自信息之和。"
+        },
+        {
+          "en": "For a source X, different outcomes have different surprisal values, so one value cannot describe every draw.",
+          "zh": "对信源X，不同结果有不同自信息，因此单个数值无法描述每次抽取。"
+        },
+        {
+          "en": "Entropy is the expected surprisal: H of X equals the sum over x of p of x times I of x.",
+          "zh": "熵是自信息的期望：H(X)等于对x求和p(x)I(x)。"
+        },
+        {
+          "en": "Substituting the surprisal definition gives H of X equal to minus the sum p of x log base two p of x.",
+          "zh": "代入自信息定义，得到H(X)等于负的各项p(x)log₂p(x)之和。"
+        },
+        {
+          "en": "An outcome with probability zero never occurs, so it contributes zero to the expected surprisal.",
+          "zh": "概率为零的结果从不发生，因此对期望自信息贡献为零。"
+        },
+        {
+          "en": "We define zero times log of zero to equal zero by the continuous limit of p log p.",
+          "zh": "根据p log p的连续极限，约定零乘log零等于零。"
+        },
+        {
+          "en": "Now consider a binary variable whose probability of one is p and probability of zero is one minus p.",
+          "zh": "现在考虑二元变量：取一的概率为p，取零的概率为一减p。"
+        },
+        {
+          "en": "Binary entropy adds two terms: p times log two of one over p, and the quantity one minus p multiplied by log two of one over the quantity one minus p.",
+          "zh": "H_b等于p乘log(1/p)，加上(1−p)乘log(1/(1−p))。"
+        },
+        {
+          "en": "At p equal to zero, the binary outcome is fixed, and its entropy is zero.",
+          "zh": "p等于零时，二元结果固定，熵为零。"
+        },
+        {
+          "en": "At p equal to one, the outcome is also fixed, and entropy is again zero.",
+          "zh": "p等于一时，结果同样固定，熵仍为零。"
+        },
+        {
+          "en": "At p equal to one half, either outcome is equally likely, and entropy reaches one bit.",
+          "zh": "p等于二分之一时，两种结果等可能，熵达到一比特。"
+        },
+        {
+          "en": "The curve is symmetric around one half because swapping zero and one replaces p by one minus p.",
+          "zh": "曲线关于二分之一对称，因为交换零和一会把p换成一减p。"
+        },
+        {
+          "en": "The curve rises from zero, peaks at one half, then falls back to zero.",
+          "zh": "曲线从零上升，在二分之一处达到峰值，再降回零。"
+        },
+        {
+          "en": "This curve describes average uncertainty, while surprisal describes the information of one realized outcome.",
+          "zh": "这条曲线描述平均不确定性，而自信息描述一次实际结果的信息量。"
+        },
+        {
+          "en": "A useful numerical example has four symbols with probabilities one half, one quarter, one eighth, and one eighth.",
+          "zh": "一个有用例子含四个符号，概率依次为二分之一、四分之一、八分之一、八分之一。"
+        },
+        {
+          "en": "Imagine identifying the symbol by asking yes-or-no questions, with each answer choosing a branch.",
+          "zh": "想象用是非问题识别符号，每个回答选择一条分支。"
+        },
+        {
+          "en": "Ask first whether the symbol is the one with probability one half.",
+          "zh": "先问符号是否为概率二分之一的那个。"
+        },
+        {
+          "en": "If yes, identification ends after one question; if no, three symbols remain in the other branch.",
+          "zh": "若是，一问即可识别；若否，另一分支还剩三个符号。"
+        },
+        {
+          "en": "Ask next whether the remaining symbol is the one with probability one quarter.",
+          "zh": "接着询问剩余符号是否为概率四分之一的那个。"
+        },
+        {
+          "en": "That outcome ends after two questions, while the two one-eighth outcomes require one more question.",
+          "zh": "该符号两问结束，而两个八分之一概率的符号还需再问一题。"
+        },
+        {
+          "en": "The leaf depths are one, two, three, and three. Should an average treat every leaf equally?",
+          "zh": "叶深为一、二、三、三。求平均时，应当给所有叶子相同权重吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Weight each depth by its symbol probability: one half times one, one quarter times two, and two eighths times three.",
+          "zh": "用符号概率加权深度：二分之一乘一、四分之一乘二、两个八分之一乘三。"
+        },
+        {
+          "en": "The average depth is one half plus one half plus three quarters, which equals seven quarters.",
+          "zh": "平均深度为二分之一加二分之一加四分之三，等于四分之七。"
+        },
+        {
+          "en": "The entropy of this distribution is also seven quarters bits because its surprisal values match those depths.",
+          "zh": "此分布的熵也为四分之七比特，因为自信息值恰好对应这些深度。"
+        },
+        {
+          "en": "This tree illustrates a distribution and its average; it does not prove a general optimal coding theorem.",
+          "zh": "这棵树展示了分布与平均值，并未证明一般的最优编码定理。"
+        },
+        {
+          "en": "An expectation is a probability-weighted sum, so frequent outcomes contribute more often to entropy.",
+          "zh": "期望是按概率加权求和，因此常见结果对熵贡献更频繁。"
+        },
+        {
+          "en": "An unlikely result has larger surprisal, but its contribution to entropy is still multiplied by its small probability.",
+          "zh": "罕见结果自信息较大，但它对熵的贡献仍乘以较小概率。"
+        },
+        {
+          "en": "For probabilities one half and one half, each outcome carries one bit and the average is one bit.",
+          "zh": "概率各半时，每个结果携带一比特，平均值也是一比特。"
+        },
+        {
+          "en": "For probabilities one and zero, the certain outcome carries zero bits and the impossible outcome contributes nothing.",
+          "zh": "概率为一和零时，确定结果携带零比特，不可能结果不贡献。"
+        },
+        {
+          "en": "These examples show why entropy depends on the full distribution rather than the alphabet size alone.",
+          "zh": "这些例子说明熵取决于完整分布，而非仅由字母表大小决定。"
+        },
+        {
+          "en": "The question tree gives each symbol a distinct leaf, so following answers identifies the source outcome.",
+          "zh": "问题树为每个符号分配不同叶子，因此沿回答路径即可识别信源结果。"
+        }
+      ]
+    },
+    {
+      "id": "c03-conditional",
+      "chapter": "Conditional Entropy",
+      "title": "When Knowing More Can Leave Us Less Certain",
+      "music": "definition",
+      "terms": [
+        "surprisal",
+        "entropy",
+        "binary-entropy",
+        "conditional-entropy",
+        "joint-entropy",
+        "chain-rule"
+      ],
+      "sentences": [
+        {
+          "en": "This example asks whether knowing X can make Y more uncertain.",
+          "zh": "这个例子问：知道X，会不会让我们对Y更不确定？"
+        },
+        {
+          "en": "Recall, an outcome's surprisal is larger when its probability is smaller.",
+          "zh": "回顾一下：结果的概率越小，它的自信息越大。"
+        },
+        {
+          "en": "Entropy averages those surprisal values using their probabilities.",
+          "zh": "熵按各结果的概率，对自信息取平均。"
+        },
+        {
+          "en": "Let X and Y each take the values zero and one.",
+          "zh": "令X和Y都只取零或一。"
+        },
+        {
+          "en": "The joint table lists the probability of every ordered pair.",
+          "zh": "联合表列出每一对取值的概率。"
+        },
+        {
+          "en": "At X zero and Y zero, the joint probability is zero point zero five.",
+          "zh": "X为零且Y为零的联合概率是零点零五。"
+        },
+        {
+          "en": "The cell for X zero and Y one also contains zero point zero five.",
+          "zh": "X为零且Y为一的格子也是零点零五。"
+        },
+        {
+          "en": "For X one and Y zero, the joint probability is zero point nine.",
+          "zh": "X为一且Y为零的联合概率是零点九。"
+        },
+        {
+          "en": "The final cell, X one and Y one, has probability zero.",
+          "zh": "最后一格，即X和Y都为一，概率为零。"
+        },
+        {
+          "en": "These four entries are joint probabilities, not yet conditional probabilities.",
+          "zh": "这四个数是联合概率，还不是条件概率。"
+        },
+        {
+          "en": "Add across the X zero row to get probability zero point one.",
+          "zh": "把X为零这一行相加，得到概率零点一。"
+        },
+        {
+          "en": "The X one row totals zero point nine.",
+          "zh": "X为一这一行的总和是零点九。"
+        },
+        {
+          "en": "So X has marginal probabilities zero point one and zero point nine.",
+          "zh": "所以X的边缘概率分别是零点一和零点九。"
+        },
+        {
+          "en": "Now sum down each column to find the marginal distribution of Y.",
+          "zh": "现在沿列相加，求出Y的边缘分布。"
+        },
+        {
+          "en": "For Y zero, add zero point zero five and zero point nine.",
+          "zh": "Y为零的概率是零点零五加零点九。"
+        },
+        {
+          "en": "This gives probability zero point nine five.",
+          "zh": "结果是零点九五。"
+        },
+        {
+          "en": "For Y one, add zero point zero five and zero.",
+          "zh": "Y为一的概率是零点零五加零。"
+        },
+        {
+          "en": "Its probability is zero point zero five.",
+          "zh": "它的概率是零点零五。"
+        },
+        {
+          "en": "The column totals sum to one, so they form a distribution.",
+          "zh": "列总和为一，因此确实构成一个分布。"
+        },
+        {
+          "en": "Before seeing X, the entropy of Y is binary entropy at zero point zero five.",
+          "zh": "观察X之前，Y的熵是概率零点零五处的二元熵。"
+        },
+        {
+          "en": "Numerically, H of Y is about zero point two eight six four bits.",
+          "zh": "数值上，Y的熵约为零点二八六四比特。"
+        },
+        {
+          "en": "This is our prior uncertainty about Y, before observing X.",
+          "zh": "这是观察X之前，对Y的不确定性。"
+        },
+        {
+          "en": "To condition on an observed X, divide its joint row by that row's total.",
+          "zh": "要对观察到的X取条件，就用联合表该行除以行总和。"
+        },
+        {
+          "en": "When X is zero, the row total is only zero point one.",
+          "zh": "当X为零时，该行总和只有零点一。"
+        },
+        {
+          "en": "Both joint entries in that row equal zero point zero five.",
+          "zh": "这一行的两个联合概率都是零点零五。"
+        },
+        {
+          "en": "Dividing each by zero point one makes both conditional probabilities zero point five.",
+          "zh": "分别除以零点一后，两个条件概率都变成零点五。"
+        },
+        {
+          "en": "Given X zero, Y has equal probabilities. Will its uncertainty now be above or below the prior value?",
+          "zh": "给定X为零时，Y两种结果等概率。它的不确定性比先验值更高，还是更低？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The entropy of Y given X zero is one bit.",
+          "zh": "已知X为零时，Y的熵是一比特。"
+        },
+        {
+          "en": "This exceeds the prior entropy of about zero point two eight six four bits.",
+          "zh": "这高于约零点二八六四比特的先验熵。"
+        },
+        {
+          "en": "Thus this rare observation of X has increased uncertainty about Y.",
+          "zh": "所以，这个罕见的X观测反而增加了对Y的不确定性。"
+        },
+        {
+          "en": "Now condition on X one, whose row total is zero point nine.",
+          "zh": "现在看X为一的条件分布，该行总和为零点九。"
+        },
+        {
+          "en": "Its joint entries are zero point nine for Y zero and zero for Y one.",
+          "zh": "其中Y为零的联合概率是零点九，Y为一的是零。"
+        },
+        {
+          "en": "Divide by zero point nine to obtain conditional probabilities one and zero.",
+          "zh": "除以零点九后，条件概率分别为一和零。"
+        },
+        {
+          "en": "Given X one, Y is known exactly, so its entropy is zero bits.",
+          "zh": "已知X为一时，Y完全确定，因此熵为零比特。"
+        },
+        {
+          "en": "The two possible observations have moved uncertainty in opposite directions.",
+          "zh": "这两种观测使不确定性朝相反方向变化。"
+        },
+        {
+          "en": "Conditional entropy averages the row entropies with the probabilities of X.",
+          "zh": "条件熵按X各取值的概率，对行熵加权平均。"
+        },
+        {
+          "en": "The X zero row contributes weight zero point one times one bit.",
+          "zh": "X为零这一行贡献零点一乘一比特。"
+        },
+        {
+          "en": "The other row contributes point nine times zero. Is the weighted average above or below the prior uncertainty?",
+          "zh": "另一行贡献零点九乘零。加权平均值比先验不确定性更高，还是更低？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Adding these contributions gives H of Y given X equal to zero point one bit.",
+          "zh": "相加后，给定X时Y的熵为零点一比特。"
+        },
+        {
+          "en": "This average is below H of Y, about zero point two eight six four bits.",
+          "zh": "这个平均值低于Y的熵，约零点二八六四比特。"
+        },
+        {
+          "en": "The inequality concerns the average, not each observed row.",
+          "zh": "这个不等式约束的是平均值，而不是每个观测行。"
+        },
+        {
+          "en": "It does not say every observation must reduce uncertainty.",
+          "zh": "它并没有说每次观测都会降低不确定性。"
+        },
+        {
+          "en": "In this example, the rare X zero row raises uncertainty to one bit.",
+          "zh": "在本例中，罕见的X零行把不确定性提高到一比特。"
+        },
+        {
+          "en": "Its small probability keeps the weighted average below the prior entropy.",
+          "zh": "它的概率很小，因此加权平均仍低于先验熵。"
+        },
+        {
+          "en": "We can verify the joint entropy with the chain rule.",
+          "zh": "我们可以用链式法则核对联合熵。"
+        },
+        {
+          "en": "It says H of X and Y equals H of X plus H of Y given X.",
+          "zh": "它说，X与Y的联合熵等于X的熵加上给定X时Y的熵。"
+        },
+        {
+          "en": "The entropy of X is about zero point four six eight nine nine six bits.",
+          "zh": "X的熵约为零点四六八九九六比特。"
+        },
+        {
+          "en": "Add zero point one to get joint entropy zero point five six eight nine nine six bits.",
+          "zh": "加上零点一，联合熵约为零点五六八九九六比特。"
+        },
+        {
+          "en": "The result matches the entropy computed directly from the joint table.",
+          "zh": "这个结果与直接从联合表计算出的熵一致。"
+        },
+        {
+          "en": "A rare observation can raise uncertainty, even when knowing X lowers it on average.",
+          "zh": "罕见观测可以增加不确定性，即使知道X会降低平均不确定性。"
+        }
+      ]
+    },
+    {
+      "id": "c04-mutual",
+      "chapter": "Mutual Information and Chain Rules",
+      "title": "Shared Information as Uncertainty Removed",
+      "music": "proof",
+      "terms": [
+        "entropy",
+        "joint-entropy",
+        "conditional-entropy",
+        "mutual-information",
+        "conditional-mi",
+        "chain-rule"
+      ],
+      "sentences": [
+        {
+          "en": "We now compare the uncertainty of Y before and after observing X.",
+          "zh": "现在比较观察X之前与之后Y的不确定性。"
+        },
+        {
+          "en": "Before observing X, uncertainty about Y is H of Y.",
+          "zh": "观察X之前，对Y的不确定性是H(Y)。"
+        },
+        {
+          "en": "After observing X, the remaining average uncertainty is H of Y given X.",
+          "zh": "观察X之后，剩余的平均不确定性是H(Y|X)。"
+        },
+        {
+          "en": "Their difference defines mutual information: I of X semicolon Y equals H of Y minus H of Y given X.",
+          "zh": "两者之差定义互信息：I(X;Y)=H(Y)−H(Y|X)。"
+        },
+        {
+          "en": "It measures how much knowing X reduces uncertainty about Y on average.",
+          "zh": "它衡量平均而言，知道X减少了多少关于Y的不确定性。"
+        },
+        {
+          "en": "Terms with zero joint probability contribute zero, using the continuous limit of p log p.",
+          "zh": "联合概率为零的项按p log p的连续极限约定贡献为零。"
+        },
+        {
+          "en": "To derive another form, start with the joint entropy sum over x and y.",
+          "zh": "要推出另一形式，从对x和y求和的联合熵开始。"
+        },
+        {
+          "en": "For every positive joint probability, the product rule gives p of x,y as a product.",
+          "zh": "对每个正联合概率，乘法法则将p(x,y)写成乘积。"
+        },
+        {
+          "en": "The factors are p of x and p of y given x.",
+          "zh": "两个因子是p(x)与p(y|x)。"
+        },
+        {
+          "en": "Taking the negative logarithm converts that product into minus log p of x minus log p of y given x.",
+          "zh": "取负对数把乘积变成−log p(x)−log p(y|x)。"
+        },
+        {
+          "en": "Multiply by p of x,y and sum over both variables.",
+          "zh": "将其乘以p(x,y)，再对两个变量求和。"
+        },
+        {
+          "en": "The first sum collects each x contribution and becomes H of X.",
+          "zh": "第一项对每个x汇总，得到H(X)。"
+        },
+        {
+          "en": "The second sum is exactly the average conditional entropy H of Y given X.",
+          "zh": "第二项恰好是条件熵平均值H(Y|X)。"
+        },
+        {
+          "en": "Therefore H of X comma Y equals H of X plus H of Y given X.",
+          "zh": "因此H(X,Y)=H(X)+H(Y|X)。"
+        },
+        {
+          "en": "Repeating the factorization in the opposite order gives the other chain rule.",
+          "zh": "反向重复该分解，得到另一条熵链式法则。"
+        },
+        {
+          "en": "H of X comma Y equals H of Y plus H of X given Y.",
+          "zh": "H(X,Y)=H(Y)+H(X|Y)。"
+        },
+        {
+          "en": "Subtract H of Y given X from H of Y.",
+          "zh": "用H(Y)减去H(Y|X)。"
+        },
+        {
+          "en": "The result is H of X plus H of Y minus H of X comma Y.",
+          "zh": "结果是H(X)+H(Y)−H(X,Y)。"
+        },
+        {
+          "en": "Swapping X and Y leaves this expression unchanged, so mutual information is symmetric.",
+          "zh": "交换X与Y后表达式不变，所以互信息是对称的。"
+        },
+        {
+          "en": "The alternative mutual information formula is the sum of marginal entropies.",
+          "zh": "互信息的等价公式是边缘熵之和。"
+        },
+        {
+          "en": "Subtract the joint entropy H of X comma Y.",
+          "zh": "再减去联合熵H(X,Y)。"
+        },
+        {
+          "en": "The joint entropy chain rule also says the pair's uncertainty is uncertainty in X plus the remaining uncertainty in Y.",
+          "zh": "联合熵链式法则还说明，成对变量的不确定性等于X的不确定性加上Y的剩余不确定性。"
+        },
+        {
+          "en": "The order can be reversed without changing joint entropy, although the conditional term changes accordingly.",
+          "zh": "顺序可以反转而联合熵不变，但条件项也随之改变。"
+        },
+        {
+          "en": "Does shared information mean that X causes Y?",
+          "zh": "共享信息是否意味着X导致了Y？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "No. Mutual information measures statistical dependence; a common cause can associate X and Y without either causing the other.",
+          "zh": "不是。互信息度量统计依赖；共同原因可以使X与Y相关，而无需它们彼此致因。"
+        },
+        {
+          "en": "Now let Z be a third variable, and ask what X and Z share after Y is known.",
+          "zh": "现在令Z为第三个变量，并询问已知Y后X与Z还共享什么信息。"
+        },
+        {
+          "en": "Define conditional mutual information by subtracting two conditional entropies.",
+          "zh": "条件互信息定义为两个条件熵之差。"
+        },
+        {
+          "en": "I of X semicolon Z given Y equals H of Z given Y minus H of Z given X,Y.",
+          "zh": "I(X;Z|Y)=H(Z|Y)−H(Z|X,Y)。"
+        },
+        {
+          "en": "Each entropy here is already averaged over the variables being conditioned upon.",
+          "zh": "这里每个熵都已经对其条件变量取了平均。"
+        },
+        {
+          "en": "So this difference measures the additional average reduction in uncertainty about Z from also learning X.",
+          "zh": "因此该差值衡量再获知X带来的Z平均不确定性额外减少。"
+        },
+        {
+          "en": "Expand I of X semicolon Y,Z using the same entropy-difference definition.",
+          "zh": "用同一熵差定义展开I(X;Y,Z)。"
+        },
+        {
+          "en": "It equals H of Y,Z minus H of Y,Z given X.",
+          "zh": "它等于H(Y,Z)减H(Y,Z|X)。"
+        },
+        {
+          "en": "Apply the entropy chain rule to the first term: H of Y plus H of Z given Y.",
+          "zh": "对第一项应用熵链式法则：H(Y)+H(Z|Y)。"
+        },
+        {
+          "en": "For each fixed X value, apply the joint entropy chain rule to the pair Y and Z.",
+          "zh": "对每个固定的X取值，对Y与Z这对变量应用联合熵链式法则。"
+        },
+        {
+          "en": "This gives H of Y,Z given X=x equal H of Y given X=x plus H of Z given Y,X=x.",
+          "zh": "得到H(Y,Z|X=x)=H(Y|X=x)+H(Z|Y,X=x)。"
+        },
+        {
+          "en": "Average that identity over X, weighting each value by its probability.",
+          "zh": "按X各取值的概率，对该恒等式加权平均。"
+        },
+        {
+          "en": "Then H of Y,Z given X equals H of Y given X plus H of Z given X,Y.",
+          "zh": "于是H(Y,Z|X)=H(Y|X)+H(Z|X,Y)。"
+        },
+        {
+          "en": "Apply its conditional version to the second term: H of Y given X plus H of Z given X,Y.",
+          "zh": "对第二项应用条件版本：H(Y|X)+H(Z|X,Y)。"
+        },
+        {
+          "en": "Regroup the first terms as H of Y minus H of Y given X.",
+          "zh": "把前两项重组为H(Y)−H(Y|X)。"
+        },
+        {
+          "en": "Regroup the remaining terms as H of Z given Y minus H of Z given X,Y.",
+          "zh": "把剩余项重组为H(Z|Y)−H(Z|X,Y)。"
+        },
+        {
+          "en": "The first group is I of X semicolon Y, and the second is I of X semicolon Z given Y.",
+          "zh": "第一组是I(X;Y)，第二组是I(X;Z|Y)。"
+        },
+        {
+          "en": "Thus I of X semicolon Y,Z equals I of X semicolon Y plus I of X semicolon Z given Y.",
+          "zh": "因此I(X;Y,Z)=I(X;Y)+I(X;Z|Y)。"
+        },
+        {
+          "en": "This is the mutual information chain rule: information about a pair separates into sequential contributions.",
+          "zh": "这就是互信息链式法则：关于一对变量的信息分成依次加入的贡献。"
+        },
+        {
+          "en": "The second contribution is measured after conditioning on the first variable Y.",
+          "zh": "第二项是在对第一个变量Y取条件之后度量的。"
+        },
+        {
+          "en": "Changing the order gives another valid decomposition with Y and Z exchanged inside the pair.",
+          "zh": "交换次序会得到另一种合法分解，即在成对变量中交换Y和Z。"
+        },
+        {
+          "en": "No nonnegativity proof has been used here; that will follow later from divergence arguments.",
+          "zh": "这里尚未证明非负性；稍后将从散度论证推出。"
+        },
+        {
+          "en": "For now, the definitions and algebra establish what each term means and how the terms add.",
+          "zh": "目前，定义与代数说明了各项含义以及它们如何相加。"
+        },
+        {
+          "en": "For the earlier table, Y has entropy H sub b of zero point zero five.",
+          "zh": "对前面的表，Y的熵为H_b(0.05)。"
+        },
+        {
+          "en": "That value is about zero point two eight six three nine seven bits.",
+          "zh": "该值约为零点二八六三九七比特。"
+        },
+        {
+          "en": "Conditional entropy was zero point one bit, so the difference is mutual information.",
+          "zh": "条件熵为零点一比特，两者之差就是互信息。"
+        },
+        {
+          "en": "Its value is zero point one eight six three nine seven bits.",
+          "zh": "其数值为零点一八六三九七比特。"
+        },
+        {
+          "en": "This numerical difference agrees with the interpretation as average uncertainty removed about Y by learning X.",
+          "zh": "这个数值差符合其解释：获知X后，关于Y的平均不确定性减少量。"
+        }
+      ]
+    },
+    {
+      "id": "c05-recap",
+      "chapter": "Worked Entropy and Information Example",
+      "title": "Check Both Routes Through One Joint Table",
+      "music": "recap",
+      "terms": [
+        "entropy",
+        "joint-entropy",
+        "conditional-entropy",
+        "mutual-information",
+        "chain-rule"
+      ],
+      "sentences": [
+        {
+          "en": "We finish by computing every quantity from one new binary joint distribution.",
+          "zh": "最后，我们从一个新的二元联合分布计算各个量。"
+        },
+        {
+          "en": "Rows correspond to X zero and X one, while columns correspond to Y zero and Y one.",
+          "zh": "行对应X为零和一，列对应Y为零和一。"
+        },
+        {
+          "en": "The first row contains joint probabilities zero point three and zero point two.",
+          "zh": "第一行的联合概率为零点三和零点二。"
+        },
+        {
+          "en": "The second row contains zero point one and zero point four.",
+          "zh": "第二行的联合概率为零点一和零点四。"
+        },
+        {
+          "en": "All four entries are nonnegative and sum to one, so this is a valid joint distribution.",
+          "zh": "四项都非负且总和为一，因此这是有效联合分布。"
+        },
+        {
+          "en": "Add across the first row to obtain probability zero point five for X zero.",
+          "zh": "第一行相加，得到X为零的概率零点五。"
+        },
+        {
+          "en": "The second row also sums to zero point five, giving probability one half for X one.",
+          "zh": "第二行也和为零点五，所以X为一的概率也是二分之一。"
+        },
+        {
+          "en": "Now add down the first column: zero point three plus zero point one equals zero point four.",
+          "zh": "再沿第一列相加：零点三加零点一等于零点四。"
+        },
+        {
+          "en": "The second column sums to zero point six, so Y one has probability zero point six.",
+          "zh": "第二列和为零点六，所以Y为一的概率是零点六。"
+        },
+        {
+          "en": "These are the marginals: X is balanced, while Y favors one over zero.",
+          "zh": "这就是边缘分布：X均衡，而Y取一比取零更常见。"
+        },
+        {
+          "en": "For a fair binary X, H of X is one bit.",
+          "zh": "均衡二元X的熵为一比特。"
+        },
+        {
+          "en": "For Y with probability zero point six of one, H of Y is H sub b of zero point six.",
+          "zh": "Y取一的概率为零点六，因此H(Y)=H_b(0.6)。"
+        },
+        {
+          "en": "Numerically, that entropy is about zero point nine seven zero nine five zero bits.",
+          "zh": "数值上，该熵约为零点九七零九五零比特。"
+        },
+        {
+          "en": "To find Y given X zero, divide the first row by its total, zero point five.",
+          "zh": "求给定X为零时Y的分布，将第一行除以行和零点五。"
+        },
+        {
+          "en": "The resulting conditional probabilities are zero point six for Y zero and zero point four for Y one.",
+          "zh": "给定X=0时，Y=0的概率为零点六，Y=1的概率为零点四。"
+        },
+        {
+          "en": "Given X one, divide the second row by the same total, zero point five.",
+          "zh": "给定X为一时，将第二行除以同样的行和零点五。"
+        },
+        {
+          "en": "That conditional row is zero point two for Y zero and zero point eight for Y one.",
+          "zh": "该条件行中，Y为零的概率零点二，Y为一的概率零点八。"
+        },
+        {
+          "en": "For each fixed row, its two conditional probabilities sum to one after normalization.",
+          "zh": "对每一行，归一化后的两个条件概率之和为一。"
+        },
+        {
+          "en": "The first row entropy is H sub b of zero point four, about zero point nine seven zero nine five zero bits.",
+          "zh": "第一行熵为H_b(0.4)，约零点九七零九五零比特。"
+        },
+        {
+          "en": "The second row entropy is H sub b of zero point eight, about zero point seven two one nine two eight bits.",
+          "zh": "第二行熵为H_b(0.8)，约零点七二一九二八比特。"
+        },
+        {
+          "en": "Both X values have probability one half. What average do these two row entropies give?",
+          "zh": "X的两个值均以二分之一概率出现。这两个行熵给出怎样的平均值？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "H of Y given X is about zero point eight four six four three nine bits.",
+          "zh": "H(Y|X)约为零点八四六四三九比特。"
+        },
+        {
+          "en": "Subtracting from H of Y gives mutual information about zero point one two four five one one bits.",
+          "zh": "用H(Y)减去它，得到互信息约零点一二四五一一比特。"
+        },
+        {
+          "en": "For a symmetric check, normalize the Y zero column, whose total probability is zero point four.",
+          "zh": "为做对称核对，将Y为零的列归一化，该列总概率为零点四。"
+        },
+        {
+          "en": "Then X zero has conditional probability three quarters, and X one has probability one quarter.",
+          "zh": "于是X为零的条件概率为四分之三，X为一为四分之一。"
+        },
+        {
+          "en": "In the Y one column, the conditional probabilities of X zero and X one are one third and two thirds.",
+          "zh": "在Y为一的列中，X为零和一的条件概率分别为三分之一、三分之二。"
+        },
+        {
+          "en": "Weight the two column entropies by probabilities zero point four and zero point six.",
+          "zh": "用零点四和零点六分别加权两列熵。"
+        },
+        {
+          "en": "This gives H of X given Y about zero point eight seven five four eight nine bits.",
+          "zh": "得到H(X|Y)约零点八七五四八九比特。"
+        },
+        {
+          "en": "Subtracting that from H of X, one bit, returns the same mutual information.",
+          "zh": "用H(X)一比特减去它，也得到相同互信息。"
+        },
+        {
+          "en": "We can check the same value using H of X plus H of Y minus joint entropy.",
+          "zh": "我们可用H(X)+H(Y)−H(X,Y)核对同一数值。"
+        },
+        {
+          "en": "The joint entropy is the sum of each cell probability times its surprisal.",
+          "zh": "联合熵是每个格子的概率乘其自信息后求和。"
+        },
+        {
+          "en": "The zero point three cell contributes about zero point five two one zero nine bits.",
+          "zh": "零点三的格子贡献约零点五二一零九比特。"
+        },
+        {
+          "en": "The zero point two cell contributes about zero point four six four three eight six bits.",
+          "zh": "零点二的格子贡献约零点四六四三八六比特。"
+        },
+        {
+          "en": "The zero point one cell contributes about zero point three three two one nine two bits.",
+          "zh": "零点一的格子贡献约零点三三二一九二比特。"
+        },
+        {
+          "en": "The zero point four cell contributes about zero point five two eight seven seven one bits.",
+          "zh": "零点四的格子贡献约零点五二八七七一比特。"
+        },
+        {
+          "en": "Adding them gives joint entropy about one point eight four six four three nine bits.",
+          "zh": "相加得到联合熵约一点八四六四三九比特。"
+        },
+        {
+          "en": "Compute one plus zero point nine seven zero nine five zero.",
+          "zh": "先算一加零点九七零九五零。"
+        },
+        {
+          "en": "Then subtract one point eight four six four three nine.",
+          "zh": "再减去一点八四六四三九。"
+        },
+        {
+          "en": "The result is zero point one two four five one one.",
+          "zh": "结果为零点一二四五一一。"
+        },
+        {
+          "en": "Both routes agree, checking the conditional entropy and joint entropy chain calculations.",
+          "zh": "两条路径结果一致，核对了条件熵与联合熵链式计算。"
+        },
+        {
+          "en": "For the same marginals, use rows point two, point three; and point two, point three. What shared information remains?",
+          "zh": "保持相同边缘分布，使用两行零点二、零点三。此时还剩多少共享信息？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Independence makes H of Y given X equal H of Y, so mutual information becomes zero.",
+          "zh": "独立时H(Y|X)=H(Y)，因此互信息为零。"
+        },
+        {
+          "en": "Now let X be fair and set Y equal to X. How many bits do they share?",
+          "zh": "现在令X等概率取值，并令Y等于X。它们共享多少比特？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The X zero row is one half, zero; the X one row is zero, one half.",
+          "zh": "X为零行是二分之一、零；X为一行是零、二分之一。"
+        },
+        {
+          "en": "Then H of Y given X is zero and mutual information equals one bit.",
+          "zh": "此时H(Y|X)为零，互信息等于一比特。"
+        },
+        {
+          "en": "Our table lies between these cases: dependence exists, but uncertainty about Y remains after X is known.",
+          "zh": "本例处于两者之间：变量相关，但知道X后Y仍有不确定性。"
+        },
+        {
+          "en": "The table, marginals, row averages, and two matching formulas provide a reusable calculation routine.",
+          "zh": "联合表、边缘、行平均和两条相符公式构成可复用的计算流程。"
+        },
+        {
+          "en": "Next, divergence will let us prove why mutual information is nonnegative and why independence gives exactly zero.",
+          "zh": "下一集将用散度证明互信息为何非负，以及它为何恰在独立时为零。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1239 @@
+{
+  "episode": "e03-processing-inference",
+  "title": "Information Processing and Statistical Inference",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-markov",
+      "chapter": "Markov Chains",
+      "title": "Conditional independence and its boundary",
+      "music": "definition",
+      "terms": [
+        "markov-chain",
+        "conditional-independence"
+      ],
+      "sentences": [
+        {
+          "en": "Our secret is one of four equally likely two-bit words: zero zero, zero one, one zero, or one one.",
+          "zh": "秘密是四个等概率二比特码字之一：00、01、10、11。"
+        },
+        {
+          "en": "A device keeps only the first bit. The second bit is gone.",
+          "zh": "一个装置只保留第一比特，第二比特丢失了。"
+        },
+        {
+          "en": "A button called sharpen appends zero to the kept bit, making a complete-looking word.",
+          "zh": "一个名为“锐化”的按钮在保留的比特后添零，产生看似完整的码字。"
+        },
+        {
+          "en": "Will this processing recover every original secret?",
+          "zh": "这种处理能恢复每一个原始秘密吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Zero zero and zero one both become zero zero. One zero and one one both become one zero.",
+          "zh": "00和01都变成00；10和11都变成10。"
+        },
+        {
+          "en": "For each kept bit, two originals remain equally likely. Any guess succeeds at most half the time.",
+          "zh": "对每个保留比特，两个原始值仍等概率。任意猜测的成功概率至多为二分之一。"
+        },
+        {
+          "en": "Give the receiver the actual missing bit as extra data, and it can recover every original word.",
+          "zh": "把真正丢失的比特作为额外数据交给接收者，就能恢复全部原始码字。"
+        },
+        {
+          "en": "Processing an observation and adding new information are different operations. Let us make that distinction precise.",
+          "zh": "处理已有观察与增加新信息是两种操作。下面精确刻画这一区别。"
+        },
+        {
+          "en": "A probability arrow records a factorization, not automatically a physical cause.",
+          "zh": "概率箭头记录的是因子分解，并不自动表示物理因果。"
+        },
+        {
+          "en": "For three finite random variables, write the proposed chain as Z to X to Y.",
+          "zh": "对三个有限随机变量，先写出候选链Z→X→Y。"
+        },
+        {
+          "en": "Its defining factorization is p of z, times p of x given z, times p of y given x.",
+          "zh": "它的定义性分解是p(z)p(x|z)p(y|x)。"
+        },
+        {
+          "en": "The final factor does not depend on z once x is specified.",
+          "zh": "一旦给定x，最后一项就不依赖z。"
+        },
+        {
+          "en": "Therefore Y and Z are conditionally independent given X.",
+          "zh": "因此给定X时，Y与Z条件独立。"
+        },
+        {
+          "en": "Equivalently, p of y given x,z equals p of y given x whenever the condition is defined.",
+          "zh": "等价地，在条件有定义时，p(y|x,z)=p(y|x)。"
+        },
+        {
+          "en": "The product form contains the full joint law, not merely a diagram.",
+          "zh": "乘积形式描述完整联合分布，而不只是图示。"
+        },
+        {
+          "en": "Summing over y recovers the joint law of Z and X.",
+          "zh": "对y求和会恢复(Z,X)的联合分布。"
+        },
+        {
+          "en": "Summing over z also recovers the joint law of X and Y.",
+          "zh": "对z求和也会恢复(X,Y)的联合分布。"
+        },
+        {
+          "en": "Each conditional distribution must sum to one on its support.",
+          "zh": "每个条件分布都必须在其支持集上求和为一。"
+        },
+        {
+          "en": "Start with a fair source bit Z.",
+          "zh": "从公平信源比特Z开始。"
+        },
+        {
+          "en": "Let X copy Z, then let Y copy X.",
+          "zh": "令X复制Z，再令Y复制X。"
+        },
+        {
+          "en": "The chain factorization holds exactly.",
+          "zh": "该链因子分解精确成立。"
+        },
+        {
+          "en": "Given X, both Z and Y are fixed, so their conditional joint law factors.",
+          "zh": "给定X后，Z和Y都确定，因此它们的条件联合分布可分解。"
+        },
+        {
+          "en": "This example has conditional independence.",
+          "zh": "这个例子满足条件独立。"
+        },
+        {
+          "en": "Yet Z and Y are identical fair bits, so they are not ordinarily independent.",
+          "zh": "但Z和Y是相同的公平比特，所以它们并非普通独立。"
+        },
+        {
+          "en": "Thus conditional independence does not imply ordinary independence.",
+          "zh": "因此条件独立不推出普通独立。"
+        },
+        {
+          "en": "Now take X and Y as independent fair bits.",
+          "zh": "现在令X和Y为独立公平比特。"
+        },
+        {
+          "en": "Let Z indicate whether the two bits differ.",
+          "zh": "令Z表示两个比特是否不同。"
+        },
+        {
+          "en": "Before observing Z, X and Y remain independent.",
+          "zh": "观测Z之前，X与Y仍然独立。"
+        },
+        {
+          "en": "After fixing Z, one bit determines the other.",
+          "zh": "给定Z后，一个比特就决定另一个比特。"
+        },
+        {
+          "en": "They are then conditionally dependent.",
+          "zh": "此时二者条件相关。"
+        },
+        {
+          "en": "Therefore ordinary independence does not imply conditional independence.",
+          "zh": "因此普通独立也不推出条件独立。"
+        },
+        {
+          "en": "For a genuine chain, conditioning on X removes the remaining statistical association between Z and Y.",
+          "zh": "对真正的链，给定X会消除Z与Y之间剩余的统计关联。"
+        },
+        {
+          "en": "This statement is about the joint probability law.",
+          "zh": "这句话描述的是联合概率律。"
+        },
+        {
+          "en": "It does not tell us whether an experiment physically caused one variable.",
+          "zh": "它不说明某个变量是否在物理实验中造成了另一个变量。"
+        },
+        {
+          "en": "The arrows specify how the distribution factors.",
+          "zh": "箭头指定分布如何因子分解。"
+        },
+        {
+          "en": "A causal interpretation would require an additional structural model.",
+          "zh": "因果解释还需要额外的结构模型。"
+        },
+        {
+          "en": "The factorization also provides a mathematical sampling recipe.",
+          "zh": "该因子分解还给出一种数学上的抽样步骤。"
+        },
+        {
+          "en": "First choose Z from its marginal distribution.",
+          "zh": "先从边缘分布中抽取Z。"
+        },
+        {
+          "en": "Then draw X using the conditional distribution given Z.",
+          "zh": "再按给定Z的条件分布抽取X。"
+        },
+        {
+          "en": "Finally draw Y using only the conditional distribution given X.",
+          "zh": "最后只按给定X的条件分布抽取Y。"
+        },
+        {
+          "en": "The last sampling step cannot inspect Z.",
+          "zh": "最后一步的抽样不能查看Z。"
+        },
+        {
+          "en": "That restriction is precisely the conditional independence in the chain.",
+          "zh": "这个限制正是链中的条件独立。"
+        },
+        {
+          "en": "If Y also uses Z through a bypass, the proposed factorization can fail.",
+          "zh": "如果Y还通过旁路使用Z，原先的因子分解就可能失效。"
+        },
+        {
+          "en": "A direct arrow in a picture is only a warning to test the law.",
+          "zh": "图中的直连箭头只是提醒我们检验概率律。"
+        },
+        {
+          "en": "For each x with positive probability, compare p of z,y given x with the product of its conditional marginals.",
+          "zh": "对每个正概率x，比较p(z,y|x)与条件边缘分布的乘积。"
+        },
+        {
+          "en": "Equality at every such x verifies the chain.",
+          "zh": "所有这类x都满足等式，便验证了该链。"
+        },
+        {
+          "en": "Failure at even one such x rules it out.",
+          "zh": "只要其中一个x不满足等式，就可排除该链。"
+        },
+        {
+          "en": "Reversing the whole chain preserves the same middle variable and conditional independence.",
+          "zh": "将整条链反向，仍保留相同的中间变量与条件独立关系。"
+        },
+        {
+          "en": "Moving a different variable into the middle generally changes the assertion.",
+          "zh": "若换一个变量放在中间，所断言的条件独立通常就会改变。"
+        },
+        {
+          "en": "A chain asserts independence of its endpoints only after conditioning on the middle variable.",
+          "zh": "链断言的只是给定中间变量后端点独立。"
+        },
+        {
+          "en": "It does not generally assert that Z and Y are marginally independent.",
+          "zh": "它通常不意味着Z与Y边缘独立。"
+        },
+        {
+          "en": "An observation can be a noisy copy rather than an exact copy.",
+          "zh": "观测可以是带噪复制，而不必是精确复制。"
+        },
+        {
+          "en": "Passing Z through one channel creates X.",
+          "zh": "将Z通过一个信道得到X。"
+        },
+        {
+          "en": "Passing X through another channel creates Y.",
+          "zh": "再将X通过另一个信道得到Y。"
+        },
+        {
+          "en": "If the second channel uses only X, the Markov factorization still holds.",
+          "zh": "若第二个信道只使用X，马尔可夫因子分解仍成立。"
+        },
+        {
+          "en": "The combined path may lose information even when neither step erases everything.",
+          "zh": "即便两个步骤都没有完全抹去信息，整条路径仍可能损失信息。"
+        },
+        {
+          "en": "We will quantify that loss using mutual information.",
+          "zh": "接下来我们将用互信息量化这种损失。"
+        }
+      ]
+    },
+    {
+      "id": "c02-dpi",
+      "chapter": "Data Processing Inequality",
+      "title": "Information cannot increase along a chain",
+      "music": "proof",
+      "terms": [
+        "markov-chain",
+        "data-processing",
+        "conditional-mi",
+        "mutual-information",
+        "binary-entropy",
+        "bsc"
+      ],
+      "sentences": [
+        {
+          "en": "The data processing inequality compares information before and after a channel.",
+          "zh": "数据处理不等式比较信道处理前后的信息量。"
+        },
+        {
+          "en": "Suppose Z, X, and Y form the Markov chain Z to X to Y.",
+          "zh": "假设Z、X、Y形成马尔可夫链Z→X→Y。"
+        },
+        {
+          "en": "The chain rule expands information about the pair X,Y in two orders.",
+          "zh": "链式法则可以按两种顺序展开关于(X,Y)的信息。"
+        },
+        {
+          "en": "Mutual information is entropy of Z minus conditional entropy of Z.",
+          "zh": "互信息等于Z的熵减去给定条件时Z的条件熵。"
+        },
+        {
+          "en": "For the first order, split the conditional entropy after revealing X.",
+          "zh": "第一种顺序中，先揭示X再拆分条件熵。"
+        },
+        {
+          "en": "The difference H of Z given X minus H of Z given X,Y is I of Z with Y given X.",
+          "zh": "H(Z|X)−H(Z|X,Y)正是I(Z;Y|X)。"
+        },
+        {
+          "en": "First, I of Z with X,Y equals I of Z with X plus I of Z with Y given X.",
+          "zh": "第一种展开是I(Z;X,Y)=I(Z;X)+I(Z;Y|X)。"
+        },
+        {
+          "en": "The chain makes Y conditionally independent of Z given X.",
+          "zh": "该链使给定X时的Y与Z条件独立。"
+        },
+        {
+          "en": "Therefore the conditional mutual information term is zero.",
+          "zh": "因此条件互信息项为零。"
+        },
+        {
+          "en": "The joint information consequently equals I of Z with X.",
+          "zh": "所以联合信息等于I(Z;X)。"
+        },
+        {
+          "en": "Expand the same joint information in the opposite order.",
+          "zh": "按相反顺序展开同一个联合信息。"
+        },
+        {
+          "en": "It equals I of Z with Y plus I of Z with X given Y.",
+          "zh": "它等于I(Z;Y)+I(Z;X|Y)。"
+        },
+        {
+          "en": "This second expansion splits conditional entropy after revealing Y.",
+          "zh": "第二种展开是在揭示Y后拆分条件熵。"
+        },
+        {
+          "en": "The remaining difference is exactly I of Z with X given Y.",
+          "zh": "剩余差值恰为I(Z;X|Y)。"
+        },
+        {
+          "en": "Conditional mutual information is nonnegative.",
+          "zh": "条件互信息非负。"
+        },
+        {
+          "en": "Thus I of Z with Y cannot exceed I of Z with X.",
+          "zh": "因此I(Z;Y)不超过I(Z;X)。"
+        },
+        {
+          "en": "The processing step cannot increase information about Z.",
+          "zh": "处理步骤不会增加关于Z的信息。"
+        },
+        {
+          "en": "Equality holds exactly when I of Z with X given Y is zero.",
+          "zh": "当且仅当I(Z;X|Y)=0时取等。"
+        },
+        {
+          "en": "Equivalently, Z and X are conditionally independent given Y.",
+          "zh": "等价地，给定Y时Z与X条件独立。"
+        },
+        {
+          "en": "That condition says Y retains all information X carried about Z.",
+          "zh": "该条件表示Y保留了X所携带的关于Z的全部信息。"
+        },
+        {
+          "en": "The conditional distribution of Z given X,Y then matches that given Y.",
+          "zh": "此时给定X、Y的Z条件分布等于给定Y的条件分布。"
+        },
+        {
+          "en": "It does not require Y to reconstruct X exactly.",
+          "zh": "它不要求Y精确重建X。"
+        },
+        {
+          "en": "It requires only that the remaining uncertainty about Z not improve upon seeing X after Y.",
+          "zh": "它只要求已知Y后再看X，不会进一步减少对Z的不确定性。"
+        },
+        {
+          "en": "Now follow a fair bit Z through two binary symmetric channels.",
+          "zh": "现在让公平比特Z依次通过两个二元对称信道。"
+        },
+        {
+          "en": "The first channel flips its input with probability point one.",
+          "zh": "第一个信道以0.1概率翻转输入。"
+        },
+        {
+          "en": "Call its output X.",
+          "zh": "将输出记为X。"
+        },
+        {
+          "en": "The second channel flips X with probability point two to produce Y.",
+          "zh": "第二个信道以0.2概率翻转X，得到Y。"
+        },
+        {
+          "en": "The two flip events are independent.",
+          "zh": "两次翻转事件相互独立。"
+        },
+        {
+          "en": "Two independent flips can undo each other. What is the final probability that Y differs from Z?",
+          "zh": "两次独立翻转可以相互抵消。最终Y不同于Z的概率是多少？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Exactly one flip causes an error: point one times point eight plus point nine times point two.",
+          "zh": "恰好一次翻转导致错误：零点一乘零点八，加零点九乘零点二。"
+        },
+        {
+          "en": "That value is point two six.",
+          "zh": "结果是0.26。"
+        },
+        {
+          "en": "For a fair bit through a binary symmetric channel, mutual information is one minus binary entropy of the flip probability.",
+          "zh": "公平比特通过二元对称信道时，互信息为1减去翻转概率的二元熵。"
+        },
+        {
+          "en": "Therefore I of Z with X is one minus h of point one.",
+          "zh": "因此I(Z;X)=1−h₂(0.1)。"
+        },
+        {
+          "en": "Its value is approximately point five three one bits.",
+          "zh": "数值约为0.531比特。"
+        },
+        {
+          "en": "I of Z with Y is one minus h of point two six.",
+          "zh": "I(Z;Y)=1−h₂(0.26)。"
+        },
+        {
+          "en": "Its value is approximately point one seven three bits.",
+          "zh": "数值约为0.173比特。"
+        },
+        {
+          "en": "The difference between the two mutual informations is about point three five eight bits.",
+          "zh": "两个互信息之差约为0.358比特。"
+        },
+        {
+          "en": "The conditional mutual information records information about Z remaining in X after Y is observed.",
+          "zh": "条件互信息记录观测Y后X中仍保留的关于Z的信息。"
+        },
+        {
+          "en": "The second noisy step strictly reduces information in this example.",
+          "zh": "在这个例子中，第二次加噪严格减少了信息。"
+        },
+        {
+          "en": "The strict gap equals I of Z with X given Y.",
+          "zh": "严格差值等于I(Z;X|Y)。"
+        },
+        {
+          "en": "More generally, I of Z with X minus I of Z with Y equals that conditional mutual information.",
+          "zh": "一般地，I(Z;X)−I(Z;Y)等于该条件互信息。"
+        },
+        {
+          "en": "A path diagram alone is not enough to invoke this inequality.",
+          "zh": "仅有路径图还不足以使用该不等式。"
+        },
+        {
+          "en": "The factorization or conditional independence must actually hold.",
+          "zh": "必须确实满足相应的因子分解或条件独立。"
+        },
+        {
+          "en": "For a counterexample, let X be independent of a fair bit Z.",
+          "zh": "看一个反例：令X与公平比特Z独立。"
+        },
+        {
+          "en": "Set Y equal to Z through a bypass that ignores X.",
+          "zh": "令Y通过一条忽略X的旁路直接等于Z。"
+        },
+        {
+          "en": "Then I of Z with X is zero.",
+          "zh": "此时I(Z;X)=0。"
+        },
+        {
+          "en": "But I of Z with Y is one bit.",
+          "zh": "而I(Z;Y)=1比特。"
+        },
+        {
+          "en": "The claimed inequality would fail because its Markov premise is false.",
+          "zh": "由于马尔可夫前提不成立，所声称的不等式就会失败。"
+        },
+        {
+          "en": "Data processing is a theorem about specified conditional independence, not every three-stage story.",
+          "zh": "数据处理定理依赖明确的条件独立，并不适用于所有三阶段叙述。"
+        }
+      ]
+    },
+    {
+      "id": "c03-sufficiency",
+      "chapter": "Sufficient Statistics",
+      "title": "Compressing samples without losing parameter information",
+      "music": "definition",
+      "terms": [
+        "sufficient-statistic",
+        "markov-chain",
+        "mutual-information",
+        "gaussian"
+      ],
+      "sentences": [
+        {
+          "en": "A statistical model is a family of sampling distributions indexed by a parameter theta.",
+          "zh": "统计模型是由参数θ索引的一族抽样分布。"
+        },
+        {
+          "en": "The parameter is fixed but unknown during one sampling experiment.",
+          "zh": "一次抽样实验中，参数固定但未知。"
+        },
+        {
+          "en": "The observed sample X is random under the distribution selected by theta.",
+          "zh": "观测样本X在θ选定的分布下随机产生。"
+        },
+        {
+          "en": "One may place a prior distribution on theta for Bayesian analysis.",
+          "zh": "在贝叶斯分析中，可以给θ指定先验分布。"
+        },
+        {
+          "en": "That prior makes capital Theta a random variable across experiments or beliefs.",
+          "zh": "该先验使大写Θ成为跨实验或信念中的随机变量。"
+        },
+        {
+          "en": "The fixed parameter theta and random parameter Theta play different roles.",
+          "zh": "固定参数θ与随机参数Θ扮演不同角色。"
+        },
+        {
+          "en": "A statistic T is a function of the observed sample.",
+          "zh": "统计量T是观测样本的函数。"
+        },
+        {
+          "en": "It compresses X to a value intended to retain information about theta.",
+          "zh": "它把X压缩为一个值，目标是保留关于θ的信息。"
+        },
+        {
+          "en": "The model-family definition of sufficiency is conditional-distribution based.",
+          "zh": "模型族中的充分性以条件分布定义。"
+        },
+        {
+          "en": "T is sufficient when the conditional law of X given T does not depend on theta.",
+          "zh": "若给定T后X的条件律不依赖θ，则T充分。"
+        },
+        {
+          "en": "Equivalently, within a fixed T-value class, the remaining sample pattern carries no parameter dependence.",
+          "zh": "等价地，在固定T值的样本类中，剩余样本排列不再携带参数依赖。"
+        },
+        {
+          "en": "For any prior supported on finitely many candidate parameter values, sufficiency preserves mutual information.",
+          "zh": "对支持于有限个候选参数值的任意先验，充分统计量都保留互信息。"
+        },
+        {
+          "en": "The reason is the Markov chain Theta to X to T.",
+          "zh": "原因是Θ→X→T构成马尔可夫链。"
+        },
+        {
+          "en": "Sufficiency also makes X and Theta conditionally independent given T.",
+          "zh": "充分性还使给定T时X与Θ条件独立。"
+        },
+        {
+          "en": "The chain rule then gives I of Theta with X equal I of Theta with T.",
+          "zh": "链式法则于是给出I(Θ;X)=I(Θ;T)。"
+        },
+        {
+          "en": "A prior concentrated on one parameter makes both informations zero. Does that certify sufficiency for the family?",
+          "zh": "先验集中于一个参数时，两个互信息均为零。这能证明整个模型族的充分性吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "No. That prior makes Theta known in advance; every statistic gives both mutual informations zero.",
+          "zh": "不能。此先验使Theta事先已知；任何统计量都会使两个互信息为零。"
+        },
+        {
+          "en": "We now prove a factorization criterion in a finite sample space with counting measure.",
+          "zh": "现在在有限样本空间及计数测度下证明因子分解判据。"
+        },
+        {
+          "en": "Suppose the family has probability mass function p theta of x.",
+          "zh": "设该模型族的概率质量函数为pθ(x)。"
+        },
+        {
+          "en": "Assume nonnegative factors g theta of T x and h of x multiply to p theta of x.",
+          "zh": "假设非负因子gθ(T(x))与h(x)相乘等于pθ(x)。"
+        },
+        {
+          "en": "Fix a statistic value t with positive probability under theta.",
+          "zh": "固定一个在该θ下概率为正的统计量值t。"
+        },
+        {
+          "en": "For T of x equal t, its conditional probability is p theta of x over P theta of T equal t.",
+          "zh": "对满足T(x)=t的样本，其条件概率是pθ(x)除以Pθ(T=t)。"
+        },
+        {
+          "en": "The numerator factors into g theta of t times h of x.",
+          "zh": "分子分解为gθ(t)h(x)。"
+        },
+        {
+          "en": "The denominator sums the same factor over all samples x prime with T x prime equal t.",
+          "zh": "分母则对所有T(x′)=t的样本求和同一因子。"
+        },
+        {
+          "en": "The common g theta of t cancels from numerator and denominator.",
+          "zh": "分子分母的共同因子gθ(t)相消。"
+        },
+        {
+          "en": "The resulting conditional law is h of x divided by the sum of h over that class.",
+          "zh": "所得条件律为h(x)除以该样本类内h值之和。"
+        },
+        {
+          "en": "This conditional law is independent of theta wherever the class has positive probability.",
+          "zh": "只要该样本类的概率为正，这个条件律就不依赖θ。"
+        },
+        {
+          "en": "A zero-probability class imposes no conditional-law requirement for that parameter.",
+          "zh": "对某参数，概率为零的样本类不施加条件律要求。"
+        },
+        {
+          "en": "Therefore the factorization implies sufficiency.",
+          "zh": "因此因子分解推出充分性。"
+        },
+        {
+          "en": "For the converse, assume that conditional law q of x given T=t is independent of theta.",
+          "zh": "反过来，假设给定T=t时x的条件律q(x|t)不依赖θ。"
+        },
+        {
+          "en": "For every x, factor its probability as the probability of T=t times q of x given t.",
+          "zh": "对每个x，将其概率分解为T=t的概率乘q(x|t)。"
+        },
+        {
+          "en": "Set g theta of t equal to P theta that T equals t.",
+          "zh": "令gθ(t)=Pθ(T=t)。"
+        },
+        {
+          "en": "Set h of x equal to q of x given T of x.",
+          "zh": "令h(x)=q(x|T(x))。"
+        },
+        {
+          "en": "Then p theta of x equals g theta of T x times h of x.",
+          "zh": "于是pθ(x)=gθ(T(x))h(x)。"
+        },
+        {
+          "en": "This proves the factorization criterion in the stated finite model.",
+          "zh": "这就证明了所述有限模型中的因子分解判据。"
+        },
+        {
+          "en": "Fisher's factorization theorem extends the criterion to dominated density families.",
+          "zh": "Fisher因子分解定理将该判据扩展到有共同支配测度的密度模型族。"
+        },
+        {
+          "en": "The finite proof uses counting measure explicitly.",
+          "zh": "这里的有限样本证明明确使用计数测度。"
+        },
+        {
+          "en": "Common support is not a universal prerequisite for every factorization theorem.",
+          "zh": "共同支持并不是所有因子分解定理的普遍前提。"
+        },
+        {
+          "en": "Consider n independent Bernoulli observations with parameter theta strictly between zero and one.",
+          "zh": "考虑n个参数θ严格介于零与一之间的独立Bernoulli观测。"
+        },
+        {
+          "en": "The likelihood is theta raised to the count t, multiplied by the quantity one minus theta, raised to the power n minus t.",
+          "zh": "含t个一的序列似然为θ的t次方乘(1−θ)的n−t次方。"
+        },
+        {
+          "en": "It depends on the sample only through the count T.",
+          "zh": "似然只通过计数T依赖样本。"
+        },
+        {
+          "en": "Thus the factorization theorem makes T sufficient.",
+          "zh": "因此因子分解定理说明T充分。"
+        },
+        {
+          "en": "There are n choose t sequences with that count.",
+          "zh": "具有该计数的序列共有C(n,t)个。"
+        },
+        {
+          "en": "Every such sequence has the same likelihood.",
+          "zh": "每个这样的序列似然都相同。"
+        },
+        {
+          "en": "Conditioned on T=t, each arrangement therefore has probability one over n choose t.",
+          "zh": "给定T=t后，每种排列的概率均为1/C(n,t)。"
+        },
+        {
+          "en": "That conditional law contains no theta.",
+          "zh": "该条件律不含θ。"
+        },
+        {
+          "en": "Now define minimal sufficiency precisely.",
+          "zh": "现在精确定义最小充分性。"
+        },
+        {
+          "en": "A sufficient statistic T is minimal if it is a function of every other sufficient statistic S.",
+          "zh": "充分统计量T若是任意其他充分统计量S的函数，就称为最小充分统计量。"
+        },
+        {
+          "en": "Minimality means no other sufficient summary can compress it further.",
+          "zh": "最小性表示没有其他充分摘要能再压缩它。"
+        },
+        {
+          "en": "Suppose another statistic S groups together two Bernoulli samples with different counts t and t prime.",
+          "zh": "假设另一个统计量S把计数为t与t′的两个Bernoulli样本归为一类。"
+        },
+        {
+          "en": "Their likelihood ratio is theta divided by the quantity one minus theta, with that entire ratio raised to the difference t minus t prime.",
+          "zh": "两样本的似然比为(θ/(1−θ))^(t−t′)。"
+        },
+        {
+          "en": "Because their counts differ, this ratio varies with theta.",
+          "zh": "由于计数不同，该比值随θ变化。"
+        },
+        {
+          "en": "Given S, the odds of these two samples equal that likelihood ratio.",
+          "zh": "给定S后，这两个样本的条件概率之比就是该似然比。"
+        },
+        {
+          "en": "The conditional probabilities of the two samples given S therefore depend on theta.",
+          "zh": "因此给定S后这两个样本的条件概率依赖θ。"
+        },
+        {
+          "en": "So S cannot be sufficient.",
+          "zh": "所以S不可能充分。"
+        },
+        {
+          "en": "Every sufficient S must distinguish samples with different counts.",
+          "zh": "任何充分统计量S都必须区分计数不同的样本。"
+        },
+        {
+          "en": "If S merged them, the conditional odds would vary as theta varies across the family.",
+          "zh": "若S把它们合并，条件概率比就会随模型族中的θ变化。"
+        },
+        {
+          "en": "That dependence violates the defining conditional-law criterion for sufficiency.",
+          "zh": "这种依赖违反充分性的条件律定义。"
+        },
+        {
+          "en": "Consequently the count T is a function of every sufficient S.",
+          "zh": "因此计数T是任意充分统计量S的函数。"
+        },
+        {
+          "en": "The count is minimal sufficient for this Bernoulli family.",
+          "zh": "对该Bernoulli模型族，计数是最小充分统计量。"
+        },
+        {
+          "en": "A second example uses independent Gaussian observations with known positive variance sigma squared.",
+          "zh": "第二个例子使用方差σ²已知且为正的独立高斯观测。"
+        },
+        {
+          "en": "Each observation has a normal density with mean theta and known variance sigma squared.",
+          "zh": "每个观测服从均值θ、已知方差σ²的正态密度。"
+        },
+        {
+          "en": "The normalizer raises the entire quantity two times pi times sigma squared to the power negative n divided by two. It multiplies an exponential.",
+          "zh": "联合密度为(2πσ²)^(−n/2)乘一个指数项。"
+        },
+        {
+          "en": "The exponent is the negative sum of squared differences from theta, divided by the product of two and sigma squared.",
+          "zh": "指数为各观测与θ之差的平方和，除以2σ²后取负。"
+        },
+        {
+          "en": "Expand each square into x i squared minus two theta x i plus theta squared.",
+          "zh": "将每个平方展开为xᵢ²−2θxᵢ+θ²。"
+        },
+        {
+          "en": "Summing gives the sum of x i squared minus two theta times the sum of x i plus n theta squared.",
+          "zh": "求和得到Σxᵢ²−2θΣxᵢ+nθ²。"
+        },
+        {
+          "en": "The parameter-dependent factor uses the sample only through the sum of x i.",
+          "zh": "含参数的因子只通过Σxᵢ依赖样本。"
+        },
+        {
+          "en": "Separate the density into a theta-dependent factor and a sample-only factor.",
+          "zh": "将密度分为依赖θ的因子与仅依赖样本的因子。"
+        },
+        {
+          "en": "The first factor is exp of a difference: theta times the sample sum over sigma squared, minus n theta squared over twice sigma squared.",
+          "zh": "前者为exp(θΣxᵢ/σ²−nθ²/(2σ²))。"
+        },
+        {
+          "en": "The second factor is the normalizing constant times an exponential whose exponent is the negative sum of x i squared, divided by twice sigma squared.",
+          "zh": "后者为归一化常数乘exp(−Σxᵢ²/(2σ²))。"
+        },
+        {
+          "en": "This is the factorization with statistic equal to the sample sum.",
+          "zh": "这就是以样本和为统计量的因子分解。"
+        },
+        {
+          "en": "The remaining factor depends on the sample but not theta.",
+          "zh": "剩余因子依赖样本，但不依赖θ。"
+        },
+        {
+          "en": "Thus the sample sum is sufficient.",
+          "zh": "因此样本和是充分统计量。"
+        },
+        {
+          "en": "For known n, the sample mean is an invertible rescaling and is sufficient as well.",
+          "zh": "n已知时，样本均值是样本和的可逆缩放，因此也充分。"
+        },
+        {
+          "en": "The ordinary Lebesgue measure supplies a common dominating measure for this family.",
+          "zh": "Lebesgue测度为该模型族提供共同支配测度。"
+        },
+        {
+          "en": "No differential entropy is needed for either sufficiency example.",
+          "zh": "这两个充分性例子都不需要微分熵。"
+        },
+        {
+          "en": "Next, we convert estimation error into a bound on remaining uncertainty.",
+          "zh": "下一步将把估计错误转化为剩余不确定性的上界。"
+        }
+      ]
+    },
+    {
+      "id": "c04-fano",
+      "chapter": "Fano Inequality",
+      "title": "Error probability bounds remaining uncertainty",
+      "music": "proof",
+      "terms": [
+        "fano",
+        "conditional-entropy",
+        "data-processing"
+      ],
+      "sentences": [
+        {
+          "en": "Let Theta take values in a finite set with M at least two elements.",
+          "zh": "令Θ取值于含M≥2个元素的有限集合。"
+        },
+        {
+          "en": "Let Theta hat be a function g of observation X, taking values in that parameter set.",
+          "zh": "令Θ帽为观测X的函数g(X)，且其值属于该参数集合。"
+        },
+        {
+          "en": "Define the error indicator E to equal one when Theta differs from Theta hat.",
+          "zh": "当Θ不等于Θ帽时，定义错误指示变量E=1。"
+        },
+        {
+          "en": "Otherwise E equals zero.",
+          "zh": "否则E=0。"
+        },
+        {
+          "en": "The probability that E equals one is the error probability P e.",
+          "zh": "E=1的概率就是错误概率Pₑ。"
+        },
+        {
+          "en": "We want to bound the uncertainty in Theta after seeing the estimate.",
+          "zh": "我们要界定看到估计值后Θ的剩余不确定性。"
+        },
+        {
+          "en": "Since E is determined by Theta and Theta hat, adding E changes no conditional entropy.",
+          "zh": "因为E由Θ和Θ帽决定，加入E不改变条件熵。"
+        },
+        {
+          "en": "In particular, H of E given Theta and Theta hat is zero.",
+          "zh": "特别地，H(E|Θ,Θ帽)=0。"
+        },
+        {
+          "en": "Thus H of Theta given Theta hat equals H of E,Theta given Theta hat.",
+          "zh": "所以H(Θ|Θ帽)=H(E,Θ|Θ帽)。"
+        },
+        {
+          "en": "Apply the entropy chain rule, first revealing E.",
+          "zh": "应用熵链式法则，先揭示E。"
+        },
+        {
+          "en": "The result is H of E given Theta hat plus H of Theta given E and Theta hat.",
+          "zh": "结果为H(E|Θ帽)+H(Θ|E,Θ帽)。"
+        },
+        {
+          "en": "The first term is at most the entropy of the error indicator E.",
+          "zh": "第一项不超过H(E)。"
+        },
+        {
+          "en": "On average, conditioning cannot increase entropy.",
+          "zh": "平均而言，条件化不会增加熵。"
+        },
+        {
+          "en": "Because E is Bernoulli with error probability P e, its entropy is the binary entropy h of P e.",
+          "zh": "由于E以概率Pₑ取一，H(E)=h₂(Pₑ)。"
+        },
+        {
+          "en": "All logarithms and entropies in this derivation use base two.",
+          "zh": "这段推导中的对数与熵均以二为底。"
+        },
+        {
+          "en": "The binary entropy term measures uncertainty about whether an error occurred.",
+          "zh": "二元熵项度量错误是否发生的不确定性。"
+        },
+        {
+          "en": "When E equals zero, Theta is already determined by Theta hat.",
+          "zh": "当E=0时，Θ已由Θ帽确定。"
+        },
+        {
+          "en": "The conditional entropy on that branch is zero.",
+          "zh": "该分支的条件熵为零。"
+        },
+        {
+          "en": "When E equals one, Theta cannot equal the reported estimate.",
+          "zh": "当E=1时，Θ不能等于报告的估计值。"
+        },
+        {
+          "en": "The estimate is one of M possible values. If it is wrong, how many alternatives can remain?",
+          "zh": "估计值是M个可能值之一。如果估计错误，还可能剩下多少个备选值？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "At most M minus one parameter values remain possible.",
+          "zh": "最多还剩M−1个参数值。"
+        },
+        {
+          "en": "An entropy on at most M minus one values is at most their uniform entropy.",
+          "zh": "至多M−1个候选值上的熵，不超过其均匀熵。"
+        },
+        {
+          "en": "Entropy on that branch is at most log base two of the quantity M minus one.",
+          "zh": "该分支上的熵至多为log₂(M−1)。"
+        },
+        {
+          "en": "Weight this branch by its probability P e.",
+          "zh": "用该分支概率Pₑ加权。"
+        },
+        {
+          "en": "A branch with zero probability contributes zero to this average.",
+          "zh": "概率为零的分支，对这个平均值贡献为零。"
+        },
+        {
+          "en": "H of Theta given the estimate is at most h of P e plus P e times log base two of the quantity M minus one.",
+          "zh": "H(Θ|Θ帽)≤h₂(Pₑ)+Pₑlog₂(M−1)。"
+        },
+        {
+          "en": "This is Fano's inequality for a finite parameter set.",
+          "zh": "这就是有限参数集合上的Fano不等式。"
+        },
+        {
+          "en": "When M equals two, the error branch has one alternative and its logarithmic term is zero.",
+          "zh": "当M=2时，错误分支只剩一个选项，因此对应的对数项为零。"
+        },
+        {
+          "en": "The bound depends on the finite number of possible parameter values.",
+          "zh": "该界依赖有限的参数候选数量。"
+        },
+        {
+          "en": "It also depends on the specified estimator and its actual error event.",
+          "zh": "它还依赖指定的估计量及其实际错误事件。"
+        },
+        {
+          "en": "Now connect the estimate to the original observation.",
+          "zh": "现在把估计值与原始观测联系起来。"
+        },
+        {
+          "en": "The estimate is a function of X, so Theta to X to Theta hat is a Markov chain.",
+          "zh": "估计值是X的函数，因此Θ→X→Θ帽构成马尔可夫链。"
+        },
+        {
+          "en": "Data processing says I of Theta with Theta hat is at most I of Theta with X.",
+          "zh": "数据处理不等式给出I(Θ;Θ帽)≤I(Θ;X)。"
+        },
+        {
+          "en": "Subtract each side from H of Theta.",
+          "zh": "用H(Θ)分别减去不等式两侧。"
+        },
+        {
+          "en": "This reverses the order of conditional entropies.",
+          "zh": "这样条件熵的不等方向会反过来。"
+        },
+        {
+          "en": "We obtain H of Theta given X at most H of Theta given Theta hat.",
+          "zh": "于是H(Θ|X)≤H(Θ|Θ帽)。"
+        },
+        {
+          "en": "X contains at least as much information about Theta as its estimate does.",
+          "zh": "X所含的关于Θ的信息，至少与其估计值所含的信息一样多。"
+        },
+        {
+          "en": "Conditioning on X can only reduce uncertainty relative to conditioning on its function.",
+          "zh": "相较于其函数，给定X只会减少或保持不确定性。"
+        },
+        {
+          "en": "Combining with Fano bounds uncertainty after seeing X by the same error expression.",
+          "zh": "结合Fano不等式，用同一错误表达式上界观测X后的不确定性。"
+        },
+        {
+          "en": "The direction matters: processing X into an estimate cannot improve information.",
+          "zh": "不等方向很重要：把X处理成估计值不能增加信息。"
+        },
+        {
+          "en": "The finite-alphabet and discrete-parameter assumptions are explicit here.",
+          "zh": "这里明确假设有限字母表与离散参数。"
+        },
+        {
+          "en": "The bound applies to every such estimator based on X.",
+          "zh": "该界适用于每个这样的基于X的估计量。"
+        },
+        {
+          "en": "Fano's inequality is a necessary relation, not a decoding recipe.",
+          "zh": "Fano不等式给出必要关系，而不是译码步骤。"
+        },
+        {
+          "en": "Next, we choose an estimator whose error probability is smallest under a stated loss.",
+          "zh": "下一步将在指定损失下选择错误概率最小的估计量。"
+        }
+      ]
+    },
+    {
+      "id": "c05-estimation",
+      "chapter": "MAP Estimation and Recovery Bounds",
+      "title": "Decision rules and information limits",
+      "music": "recap",
+      "terms": [
+        "map",
+        "fano",
+        "binary-entropy",
+        "mutual-information"
+      ],
+      "sentences": [
+        {
+          "en": "Assume a finite parameter set and equal cost for every incorrect decision.",
+          "zh": "假设参数集合有限，且每种错误判决代价相同。"
+        },
+        {
+          "en": "This is the zero-one loss.",
+          "zh": "这就是零一损失。"
+        },
+        {
+          "en": "For a fixed observation x, consider the posterior probabilities of all parameter values.",
+          "zh": "固定观测x，考察所有参数值的后验概率。"
+        },
+        {
+          "en": "If we choose theta, the conditional probability of error is one minus its posterior probability.",
+          "zh": "若选择θ，条件错误概率就是1减去它的后验概率。"
+        },
+        {
+          "en": "Minimizing this quantity means choosing a parameter with largest posterior probability.",
+          "zh": "最小化该量就应选择后验概率最大的参数。"
+        },
+        {
+          "en": "That rule is maximum a posteriori estimation, abbreviated MAP.",
+          "zh": "该规则称为最大后验估计，简称MAP。"
+        },
+        {
+          "en": "A tie can be broken arbitrarily without changing the conditional error probability.",
+          "zh": "出现并列时可任意打破平局，而不改变条件错误概率。"
+        },
+        {
+          "en": "The posterior combines a prior and an observation likelihood.",
+          "zh": "后验由先验与观测似然共同决定。"
+        },
+        {
+          "en": "Bayes' rule multiplies prior probability by likelihood, then normalizes across candidates.",
+          "zh": "贝叶斯公式将先验概率乘以似然，再对候选归一化。"
+        },
+        {
+          "en": "For observation x, posterior probability is prior times likelihood divided by total evidence.",
+          "zh": "观测x的后验概率等于先验乘似然，再除以总证据。"
+        },
+        {
+          "en": "A likelihood alone does not include how probable each parameter was beforehand.",
+          "zh": "单独的似然不包含参数事先出现的概率。"
+        },
+        {
+          "en": "Consider two parameters, zero and one.",
+          "zh": "考虑两个参数零和一。"
+        },
+        {
+          "en": "Let the prior probabilities be point nine for zero and point one for one.",
+          "zh": "令先验概率分别为P(0)=0.9、P(1)=0.1。"
+        },
+        {
+          "en": "Suppose observation one has likelihood point two under parameter zero.",
+          "zh": "假设参数零下观测到一的似然为0.2。"
+        },
+        {
+          "en": "That likelihood is point eight under parameter one. With these priors, which parameter should MAP choose?",
+          "zh": "参数为一时，该似然为零点八。结合这些先验，MAP应选哪个参数？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The joint probability of parameter zero and observation one is point nine times point two.",
+          "zh": "参数零与观测一的联合概率为0.9×0.2。"
+        },
+        {
+          "en": "It equals point one eight.",
+          "zh": "结果为0.18。"
+        },
+        {
+          "en": "The corresponding joint probability for parameter one is point one times point eight.",
+          "zh": "参数一对应的联合概率为0.1×0.8。"
+        },
+        {
+          "en": "It equals point zero eight.",
+          "zh": "结果为0.08。"
+        },
+        {
+          "en": "The observation-one probability is their sum, point two six.",
+          "zh": "观测一的概率为二者之和0.26。"
+        },
+        {
+          "en": "The posterior probability of parameter one is point zero eight over point two six.",
+          "zh": "参数一的后验概率为0.08/0.26。"
+        },
+        {
+          "en": "That equals four thirteenths, approximately point three zero seven seven.",
+          "zh": "它等于4/13，约为0.3077。"
+        },
+        {
+          "en": "The posterior probability of zero is approximately point six nine two three.",
+          "zh": "参数零的后验概率约为0.6923。"
+        },
+        {
+          "en": "The two posterior probabilities sum to one after normalization.",
+          "zh": "归一化后的两个后验概率之和为一。"
+        },
+        {
+          "en": "MAP therefore chooses zero even though observation one has larger likelihood under parameter one.",
+          "zh": "因此MAP选择零，尽管观测一在参数一下似然更大。"
+        },
+        {
+          "en": "The prior changes the decision.",
+          "zh": "先验改变了判决。"
+        },
+        {
+          "en": "For every observation, MAP minimizes posterior error under zero-one loss.",
+          "zh": "对每个观测，MAP在零一损失下最小化后验错误。"
+        },
+        {
+          "en": "Its conditional error is one minus the largest posterior mass.",
+          "zh": "其条件错误概率是1减去最大的后验概率。"
+        },
+        {
+          "en": "No other choice at that observation can have smaller conditional error.",
+          "zh": "在该观测下，其他选择都不可能有更小条件错误概率。"
+        },
+        {
+          "en": "Averaging those conditional errors shows MAP minimizes overall probability of error.",
+          "zh": "对条件错误取平均，可知MAP最小化总体错误概率。"
+        },
+        {
+          "en": "The averaging uses the actual distribution of observations under the prior and channel.",
+          "zh": "该平均依据先验与信道共同决定的真实观测分布。"
+        },
+        {
+          "en": "Other loss functions can choose a different action.",
+          "zh": "其他损失函数可能选择不同动作。"
+        },
+        {
+          "en": "MAP is not automatically optimal for squared error or unequal costs.",
+          "zh": "MAP对平方误差或不等代价并非自动最优。"
+        },
+        {
+          "en": "Now suppose the true parameter Theta is uniform over M candidates.",
+          "zh": "现在假设真实参数Θ在M个候选中均匀分布。"
+        },
+        {
+          "en": "Its entropy is log two M.",
+          "zh": "它的熵为log₂M。"
+        },
+        {
+          "en": "For any estimate based on X, Fano gives H of Theta given X at most one plus P e log two M.",
+          "zh": "对任何基于X的估计，Fano给出H(Θ|X)≤1+Pₑlog₂M。"
+        },
+        {
+          "en": "Here we used binary entropy at most one, and log base two of the quantity M minus one at most log base two of M.",
+          "zh": "这里使用h₂(Pₑ)≤1以及log₂(M−1)≤log₂M。"
+        },
+        {
+          "en": "But H of Theta given X equals log two M minus I of Theta with X.",
+          "zh": "另一方面H(Θ|X)=log₂M−I(Θ;X)。"
+        },
+        {
+          "en": "Combine these inequalities and rearrange.",
+          "zh": "合并并整理这两个不等式。"
+        },
+        {
+          "en": "First divide mutual information plus one by log base two of M.",
+          "zh": "先把互信息加一，除以log₂M。"
+        },
+        {
+          "en": "Subtract that ratio from one to obtain a lower bound on P e.",
+          "zh": "用一减去这个比值，就得到Pₑ的下界。"
+        },
+        {
+          "en": "If the right side is negative, the bound only says probability is nonnegative.",
+          "zh": "若右侧为负，该界只说明概率非负。"
+        },
+        {
+          "en": "The inequality is necessary for reliable recovery, not sufficient.",
+          "zh": "该不等式是可靠恢复的必要条件，而非充分条件。"
+        },
+        {
+          "en": "For a large candidate set, small error requires information close to log base two of M.",
+          "zh": "候选集合较大时，小错误概率要求信息量接近log₂M。"
+        },
+        {
+          "en": "The coarse bound allows a one-bit slack.",
+          "zh": "这个粗略界允许一比特的余量。"
+        },
+        {
+          "en": "It does not construct an estimator or promise that a particular estimator works.",
+          "zh": "它不构造估计量，也不保证某个特定估计量有效。"
+        },
+        {
+          "en": "For a fair binary parameter observed through a crossover point one channel, MAP chooses the received bit.",
+          "zh": "公平二元参数通过交叉概率0.1的信道观测时，MAP选择接收比特。"
+        },
+        {
+          "en": "Its error probability is point one.",
+          "zh": "其错误概率为0.1。"
+        },
+        {
+          "en": "The posterior entropy is binary entropy at point one.",
+          "zh": "后验熵为H_b(0.1)。"
+        },
+        {
+          "en": "Fano's right side is h of point one plus point one log two of one.",
+          "zh": "Fano右侧为h₂(0.1)+0.1log₂1。"
+        },
+        {
+          "en": "The second term is zero, so equality holds.",
+          "zh": "第二项为零，因此取等。"
+        },
+        {
+          "en": "This shows the bound can be sharp.",
+          "zh": "这说明该界可以取到等号。"
+        },
+        {
+          "en": "If X reveals Theta perfectly, must every estimator have zero error?",
+          "zh": "如果X完全揭示Theta，每个估计器都一定零误差吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Suppose X reveals Theta perfectly, but an estimator always reports zero.",
+          "zh": "假设X完全揭示Θ，但估计量总是报告零。"
+        },
+        {
+          "en": "For a uniform M-valued parameter, its error is one minus one over M.",
+          "zh": "对均匀的M值参数，该估计量错误概率为1−1/M。"
+        },
+        {
+          "en": "The posterior uncertainty is zero despite that poor rule.",
+          "zh": "尽管该规则很差，后验不确定性仍为零。"
+        },
+        {
+          "en": "Fano constrains error through information; it does not rescue a deliberately bad decision rule.",
+          "zh": "Fano通过信息限制错误，但不会挽救故意选差的决策规则。"
+        },
+        {
+          "en": "To use the lower bound, specify the prior, observation model, and information available.",
+          "zh": "使用该下界时，须明确先验、观测模型和可用信息。"
+        },
+        {
+          "en": "Return to the fair two-bit secret X. Keeping its first bit Y leaves exactly one bit of uncertainty about X.",
+          "zh": "回到等概率二比特秘密X。仅保留第一比特Y后，X恰好仍有一比特不确定性。"
+        },
+        {
+          "en": "Appending zero preserves the same one bit of information. Its best guess still has error one half.",
+          "zh": "添零仍只保留同样的一比特信息；最佳猜测的错误概率仍为二分之一。"
+        },
+        {
+          "en": "The extra true bit S instead makes X equal two Y plus S. Both bits are available, and exact recovery is possible.",
+          "zh": "额外真实比特S则给出X=2Y+S。此时两比特均可用，因而能够精确恢复。"
+        },
+        {
+          "en": "The next episode uses asymptotic equipartition to turn information limits into block compression rates.",
+          "zh": "下一集将用渐近等分性质把信息限制转化为分组压缩率。"
+        }
+      ]
+    }
+  ]
+}

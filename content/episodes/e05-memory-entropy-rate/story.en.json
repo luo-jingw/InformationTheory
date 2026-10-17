@@ -1,0 +1,1083 @@
+{
+  "episode": "e05-memory-entropy-rate",
+  "title": "Entropy Rate",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-memory",
+      "chapter": "Memory changes sequence uncertainty",
+      "title": "Would you pay for the next bit?",
+      "music": "motivation",
+      "terms": [
+        "entropy",
+        "conditional-entropy",
+        "markov-chain"
+      ],
+      "sentences": [
+        {
+          "en": "Two machines promise fair bits. After seeing the past, would you pay one bit for their next output?",
+          "zh": "两台机器都输出公平比特。知道过去后，你还愿为下一次输出支付 1 bit 吗？"
+        },
+        {
+          "en": "Machine A flips a fresh fair coin every time.",
+          "zh": "机器 A 每次重新抛一枚公平硬币。"
+        },
+        {
+          "en": "Machine B flips one fair coin, then copies that first result forever.",
+          "zh": "机器 B 只抛一次公平硬币，之后永远复制第一次的结果。"
+        },
+        {
+          "en": "Here is one possible output from each. Keep the final bit hidden.",
+          "zh": "各看一条可能的输出序列，先藏住最后一个比特。"
+        },
+        {
+          "en": "Predict the next bit for each machine. Which answer is forced by the past?",
+          "zh": "分别猜猜下一比特。哪台机器的答案已经由过去决定？",
+          "hold_after_s": 3.2
+        },
+        {
+          "en": "A can still produce either bit with equal probability.",
+          "zh": "A 仍然以相同概率输出 0 或 1。"
+        },
+        {
+          "en": "B must repeat its first bit. The answer is already in the past.",
+          "zh": "B 必须重复第一比特。答案已经包含在过去之中。"
+        },
+        {
+          "en": "At any fixed time, both machines have probability one half for zero and for one.",
+          "zh": "在任意固定时刻，两台机器输出 0 和 1 的概率都各为 1/2。"
+        },
+        {
+          "en": "The fair marginal describes fresh runs. Memory describes dependence within each run.",
+          "zh": "公平边缘分布描述多次重新启动的实验；记忆描述每条序列内部的依赖。"
+        },
+        {
+          "en": "Their marginal entropies are both one bit.",
+          "zh": "它们的边缘熵都等于 1 bit。"
+        },
+        {
+          "en": "Yet the past changes how much their next observation can tell us.",
+          "zh": "但知道过去以后，下一次观察能提供的信息量就不同了。"
+        },
+        {
+          "en": "A contributes one fresh bit of conditional entropy at every step.",
+          "zh": "A 每一步都增加 1 bit 的条件熵。"
+        },
+        {
+          "en": "B contributes one bit on its first output, and zero bits after that.",
+          "zh": "B 第一次输出贡献 1 bit，此后每次贡献 0 bit。"
+        },
+        {
+          "en": "Add these conditional entropies with the chain rule.",
+          "zh": "用链式法则，把这些条件熵相加。"
+        },
+        {
+          "en": "A has n bits of block entropy.",
+          "zh": "A 的块熵是 n bit。"
+        },
+        {
+          "en": "B has exactly one bit of block entropy, for every positive block length.",
+          "zh": "对任意正块长，B 的块熵都恰好是 1 bit。"
+        },
+        {
+          "en": "Only two blocks are possible for B: all zeros and all ones, each with probability one half.",
+          "zh": "B 只有两种可能的块：全 0 和全 1，概率各为 1/2。"
+        },
+        {
+          "en": "For A, every length-n block has probability two to the negative n.",
+          "zh": "A 的每条 n 比特序列，概率都是 2 的 −n 次方。"
+        },
+        {
+          "en": "Negative log probability gives n bits for A, and one bit for B.",
+          "zh": "取概率的负对数，A 得到 n bit，B 得到 1 bit。"
+        },
+        {
+          "en": "Divide by block length. A stays at one bit per symbol; B approaches zero.",
+          "zh": "再除以块长。A 始终为每符号 1 bit，B 则趋于零。"
+        },
+        {
+          "en": "The limit, when it exists, is called the entropy rate.",
+          "zh": "这个极限若存在，就称为熵率。"
+        },
+        {
+          "en": "It measures new information per symbol over a long sequence.",
+          "zh": "它度量长序列中，平均每个符号带来的新信息。"
+        },
+        {
+          "en": "Now a third machine. Its first bit is fair; each later bit flips the preceding bit.",
+          "zh": "再加一台机器。首比特公平随机，此后每一比特都与前一比特相反。"
+        },
+        {
+          "en": "Its output changes every time. Does that guarantee fresh information?",
+          "zh": "它的输出每次都变化。这一定代表新信息吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Predict its next bit after the first observation.",
+          "zh": "看到第一比特后，再预测它的下一比特。"
+        },
+        {
+          "en": "The answer is forced again. Only two alternating blocks are possible, each with probability one half.",
+          "zh": "答案再次完全确定。只有两种交替序列，概率各为 1/2。"
+        },
+        {
+          "en": "Its block entropy is one bit and its entropy rate is zero.",
+          "zh": "它的块熵为 1 bit，熵率为零。"
+        },
+        {
+          "en": "A changing signal can be fully predictable.",
+          "zh": "不断变化的信号，也可以完全可预测。"
+        },
+        {
+          "en": "All three machines have a fair marginal at every time.",
+          "zh": "三台机器在每个时刻都有公平的边缘分布。"
+        },
+        {
+          "en": "Only the independent machine adds a new bit of uncertainty at every step.",
+          "zh": "只有独立机器，每一步都增加一个新的不确定比特。"
+        },
+        {
+          "en": "The copied and alternating sequences show two different kinds of dependence.",
+          "zh": "复制序列和交替序列，展示了两种不同的依赖。"
+        },
+        {
+          "en": "The three rules give stationary processes when the initial bit is fair.",
+          "zh": "首比特公平随机时，这三种规则都产生平稳过程。"
+        },
+        {
+          "en": "Stationarity means every finite-block distribution survives a shift of the time origin.",
+          "zh": "平稳性指：平移时间原点后，每种有限块的分布都保持不变。"
+        },
+        {
+          "en": "For the alternating machine, a one-step shift exchanges two equally likely phases.",
+          "zh": "对交替机器，平移一步只是交换两种等可能的相位。"
+        },
+        {
+          "en": "We have not assumed that dependence disappears at long time lags.",
+          "zh": "这里并未假设：相隔足够久以后，依赖关系就会消失。"
+        },
+        {
+          "en": "Next, we prove that stationarity makes the finite-alphabet entropy-rate limit exist.",
+          "zh": "接下来证明：平稳性保证有限字母表过程的熵率极限存在。"
+        }
+      ]
+    },
+    {
+      "id": "c02-rate",
+      "chapter": "Entropy rate for stationary sources",
+      "title": "Conditional entropy settles to a long-run average",
+      "music": "proof",
+      "terms": [
+        "entropy-rate",
+        "stationary",
+        "chain-rule",
+        "conditional-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "For a stationary finite-alphabet source, must the information cost per symbol settle down?",
+          "zh": "对平稳有限字母表信源，每个符号的信息代价一定会趋于稳定吗？"
+        },
+        {
+          "en": "Define a n as the conditional entropy of X n given all earlier symbols.",
+          "zh": "定义aₙ为给定此前所有符号时Xₙ的条件熵。"
+        },
+        {
+          "en": "For n equal one, a one is simply the marginal entropy.",
+          "zh": "当n等于一时，a₁就是边缘熵。"
+        },
+        {
+          "en": "The chain rule writes block entropy as the sum of these terms.",
+          "zh": "链式法则将块熵写成这些项的和。"
+        },
+        {
+          "en": "H of X one through X n equals the sum from i one to n of a i.",
+          "zh": "H(X₁,…,Xₙ)=从i=1到n的aᵢ之和。"
+        },
+        {
+          "en": "Stationarity lets us shift every finite block without changing its law.",
+          "zh": "平稳性允许我们平移任意有限块而不改变其分布。"
+        },
+        {
+          "en": "Compare a n plus one with a n. Which one can be larger?",
+          "zh": "比较 a n 加一和 a n。哪一个可能更大？",
+          "hold_after_s": 2.0
+        },
+        {
+          "en": "The first conditions on X one through X n.",
+          "zh": "前者给定X₁到Xₙ。"
+        },
+        {
+          "en": "Stationarity rewrites a n using the shifted block from X two through X n plus one.",
+          "zh": "平稳性可用从X₂到Xₙ₊₁的平移块改写aₙ。"
+        },
+        {
+          "en": "By stationarity, the second quantity equals H of X n plus one given X two through X n.",
+          "zh": "由平稳性，后者等于H(Xₙ₊₁|X₂,…,Xₙ)。"
+        },
+        {
+          "en": "Adding X one to the conditioning cannot increase conditional entropy.",
+          "zh": "将X₁加入条件不会增加条件熵。"
+        },
+        {
+          "en": "Therefore a n plus one is no greater than a n.",
+          "zh": "因此aₙ₊₁不大于aₙ。"
+        },
+        {
+          "en": "Every conditional entropy is nonnegative.",
+          "zh": "每个条件熵都非负。"
+        },
+        {
+          "en": "So the decreasing sequence a n has a finite limit.",
+          "zh": "所以递减序列aₙ收敛到有限极限。"
+        },
+        {
+          "en": "Call that limit h.",
+          "zh": "将该极限记为h。"
+        },
+        {
+          "en": "The block entropy per symbol is the average of a one through a n.",
+          "zh": "每符号块熵是a₁至aₙ的平均值。"
+        },
+        {
+          "en": "Cesaro averaging says averages of a convergent sequence share its limit.",
+          "zh": "Cesàro平均定理说明，收敛序列的平均值趋向同一极限。"
+        },
+        {
+          "en": "For any positive tolerance, all sufficiently late a i values lie near h.",
+          "zh": "对任意正容差，足够靠后的所有aᵢ都接近h。"
+        },
+        {
+          "en": "The finite number of early terms contributes vanishing weight to their average.",
+          "zh": "有限个早期项对平均值的权重趋于零。"
+        },
+        {
+          "en": "The remaining terms stay within that tolerance of h.",
+          "zh": "其余各项始终在该容差范围内接近h。"
+        },
+        {
+          "en": "Hence H of X one through X n divided by n tends to h.",
+          "zh": "因此H(X₁,…,Xₙ)/n趋向h。"
+        },
+        {
+          "en": "This limit is the entropy rate of the stationary process.",
+          "zh": "该极限就是平稳过程的熵率。"
+        },
+        {
+          "en": "It equals the limiting uncertainty of the next symbol given a growing past.",
+          "zh": "它等于给定不断增长的过去时下一符号不确定性的极限。"
+        },
+        {
+          "en": "For any stationary finite-alphabet source, h is no greater than H of X one.",
+          "zh": "对任何平稳有限字母信源，h不超过H(X₁)。"
+        },
+        {
+          "en": "The first term is marginal entropy; later terms account for predictability.",
+          "zh": "首项是边缘熵，后续各项体现可预测性。"
+        },
+        {
+          "en": "Equality holds for an independent stationary source.",
+          "zh": "对独立平稳信源，两者相等。"
+        },
+        {
+          "en": "Dependence can make later conditional entropies smaller.",
+          "zh": "依赖关系可能降低后续条件熵。"
+        },
+        {
+          "en": "Stationarity is essential in the shift comparison.",
+          "zh": "平稳性是平移比较成立的关键。"
+        },
+        {
+          "en": "Without it, the conditional terms may describe different time laws.",
+          "zh": "若不平稳，各条件熵项可能描述不同的时刻分布。"
+        },
+        {
+          "en": "No independence assumption entered this limit proof.",
+          "zh": "这个极限证明没有假设独立性。"
+        },
+        {
+          "en": "The result covers stationary processes with memory.",
+          "zh": "该结果适用于有记忆的平稳过程。"
+        },
+        {
+          "en": "The Markov property will make their conditional terms easier to compute.",
+          "zh": "Markov性质将使这些条件熵项更易计算。"
+        },
+        {
+          "en": "Before computing rates, we need precise language for finite chains.",
+          "zh": "在计算熵率前，我们需要准确描述有限状态链。"
+        },
+        {
+          "en": "Next, distinguish recurrent classes, transient states, and period.",
+          "zh": "接下来区分常返类、暂态状态与周期。"
+        }
+      ]
+    },
+    {
+      "id": "c03-classes",
+      "chapter": "Finite Markov chain structure",
+      "title": "Classes describe paths; period describes return times",
+      "music": "definition",
+      "terms": [
+        "markov-chain"
+      ],
+      "sentences": [
+        {
+          "en": "A finite Markov chain has a finite state set and transition matrix P.",
+          "zh": "有限Markov链具有有限状态集合和转移矩阵P。"
+        },
+        {
+          "en": "An arrow from i to j means P i j is positive.",
+          "zh": "从i到j的箭头表示Pᵢⱼ为正。"
+        },
+        {
+          "en": "State j is reachable from i if some finite path has positive probability.",
+          "zh": "若存在正概率有限路径从i到j，则称j从i可达。"
+        },
+        {
+          "en": "Two states communicate when each is reachable from the other.",
+          "zh": "若两个状态彼此可达，就称它们互通。"
+        },
+        {
+          "en": "Communication partitions states into irreducible classes.",
+          "zh": "互通关系将状态划分为不可约类。"
+        },
+        {
+          "en": "A class is closed when no transition leaves it.",
+          "zh": "若没有转移离开某类，该类就是闭类。"
+        },
+        {
+          "en": "A finite chain eventually enters a closed recurrent class with probability one.",
+          "zh": "有限链以概率一最终进入某个闭常返类。"
+        },
+        {
+          "en": "A transient state can be left with a positive chance of never returning.",
+          "zh": "暂态状态存在正概率离开后永不返回。"
+        },
+        {
+          "en": "A recurrent state returns with probability one.",
+          "zh": "常返状态以概率一返回自身。"
+        },
+        {
+          "en": "Within a finite irreducible class, every state is recurrent.",
+          "zh": "在有限不可约类中，每个状态都常返。"
+        },
+        {
+          "en": "A recurrent class is a communicating class of recurrent states.",
+          "zh": "常返类是由常返状态构成的互通类。"
+        },
+        {
+          "en": "It is closed in a finite chain.",
+          "zh": "有限链中的常返类必为闭类。"
+        },
+        {
+          "en": "A state and a class are different counting units.",
+          "zh": "状态与类是不同的计数单位。"
+        },
+        {
+          "en": "One closed class may contain many recurrent states.",
+          "zh": "一个闭类可以包含多个常返状态。"
+        },
+        {
+          "en": "Now define the period of state i.",
+          "zh": "现在定义状态i的周期。"
+        },
+        {
+          "en": "List every positive number of steps that can return i to itself.",
+          "zh": "列出所有能够从i返回自身的正步数。"
+        },
+        {
+          "en": "The period is the greatest common divisor of those return times.",
+          "zh": "周期是这些返回步数的最大公约数。"
+        },
+        {
+          "en": "All states in one irreducible class share the same period.",
+          "zh": "同一不可约类内所有状态周期相同。"
+        },
+        {
+          "en": "A state is aperiodic when its period is one.",
+          "zh": "周期为一的状态称为非周期状态。"
+        },
+        {
+          "en": "Consider a chain that alternates deterministically between states zero and one.",
+          "zh": "考虑在状态0和1之间确定性交替的链。"
+        },
+        {
+          "en": "It returns to zero after two, four, six, and later even steps.",
+          "zh": "它在2、4、6等后续偶数步返回状态0。"
+        },
+        {
+          "en": "Its return-time greatest common divisor is two.",
+          "zh": "其返回步数的最大公约数为二。"
+        },
+        {
+          "en": "The chain is irreducible but periodic.",
+          "zh": "该链不可约但有周期。"
+        },
+        {
+          "en": "Start this alternating chain at zero. Will its distribution settle down?",
+          "zh": "让这条交替链从零出发。它的分布会稳定下来吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "It alternates forever. Yet a fair initial distribution stays fixed.",
+          "zh": "它会永远交替。但公平的初始分布会保持不变。"
+        },
+        {
+          "en": "This already separates stationarity from convergence of an initial distribution.",
+          "zh": "这已将平稳性与初始分布的收敛区分开。"
+        },
+        {
+          "en": "Irreducibility alone does not force powers of P to converge.",
+          "zh": "仅有不可约性并不能保证P的幂收敛。"
+        },
+        {
+          "en": "Aperiodicity will be an additional condition for convergence.",
+          "zh": "非周期性将是分布收敛所需的额外条件。"
+        },
+        {
+          "en": "It is not required merely to define a stationary law.",
+          "zh": "但定义平稳分布并不需要非周期性。"
+        },
+        {
+          "en": "A self-loop permits a one-step return and forces period one.",
+          "zh": "自环允许一步返回，因此周期为一。"
+        },
+        {
+          "en": "Next, solve the balance equations and count their extreme solutions.",
+          "zh": "接下来求解平衡方程，并计数其极端解。"
+        }
+      ]
+    },
+    {
+      "id": "c04-stationary",
+      "chapter": "Stationary distributions and classes",
+      "title": "Probability flow balances at every state",
+      "music": "proof",
+      "terms": [
+        "stationary",
+        "markov-chain"
+      ],
+      "sentences": [
+        {
+          "en": "A probability row vector pi is stationary when pi P equals pi.",
+          "zh": "若概率行向量π满足πP=π，就称其为平稳分布。"
+        },
+        {
+          "en": "Its components are nonnegative and sum to one.",
+          "zh": "它的分量非负且总和为一。"
+        },
+        {
+          "en": "The equation says one transition step preserves the distribution.",
+          "zh": "该方程表示经过一步转移后分布保持不变。"
+        },
+        {
+          "en": "For each state j, incoming stationary flow equals pi j.",
+          "zh": "对每个状态j，流入的平稳概率质量等于πⱼ。"
+        },
+        {
+          "en": "Both transition rows are one half, one half. How many stationary laws does this chain have?",
+          "zh": "两行转移概率都是二分之一、二分之一。这条链有多少个平稳分布？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Write pi as (a, one minus a).",
+          "zh": "将π写成(a,1−a)。"
+        },
+        {
+          "en": "The first coordinate of pi P is one half for every a.",
+          "zh": "无论a取何值，πP第一坐标都是二分之一。"
+        },
+        {
+          "en": "Stationarity therefore forces a to equal one half.",
+          "zh": "平稳条件因此迫使a等于二分之一。"
+        },
+        {
+          "en": "The unique stationary distribution is (one half, one half).",
+          "zh": "唯一平稳分布为(1/2,1/2)。"
+        },
+        {
+          "en": "Both states are recurrent because both communicate in one closed class.",
+          "zh": "两个状态都常返，因为它们属于同一个闭互通类。"
+        },
+        {
+          "en": "Thus two recurrent states do not imply two stationary distributions.",
+          "zh": "因此两个常返状态不意味着有两个平稳分布。"
+        },
+        {
+          "en": "Now consider a finite chain with several closed irreducible classes.",
+          "zh": "现在考虑具有多个闭不可约类的有限链。"
+        },
+        {
+          "en": "Each closed irreducible class has one stationary distribution supported on that class.",
+          "zh": "每个闭不可约类都有一个支撑于该类的平稳分布。"
+        },
+        {
+          "en": "Transient states receive zero mass under every stationary distribution.",
+          "zh": "任何平稳分布都不给暂态状态正质量。"
+        },
+        {
+          "en": "Collect all transient states in a submatrix Q.",
+          "zh": "将所有暂态状态的转移收集为子矩阵Q。"
+        },
+        {
+          "en": "From each transient state, a finite path reaches a closed class with positive probability.",
+          "zh": "从每个暂态状态出发，都存在正概率有限路径到达闭类。"
+        },
+        {
+          "en": "Finiteness gives a common step bound and a positive lower bound on this exit probability.",
+          "zh": "状态有限，因此可选共同步数界和正的离开概率下界。"
+        },
+        {
+          "en": "Repeated blocks of that many steps make the probability of remaining transient tend to zero.",
+          "zh": "反复经历这么多步后，仍留在暂态区域的概率趋于零。"
+        },
+        {
+          "en": "Closed classes send no probability back to transient states.",
+          "zh": "闭类不会将概率送回暂态状态。"
+        },
+        {
+          "en": "Thus a stationary transient row vector would satisfy mu equals mu Q to the n for every n.",
+          "zh": "因此暂态部分的平稳行向量必须对所有n满足μ=μQⁿ。"
+        },
+        {
+          "en": "Taking the limit forces mu to be zero.",
+          "zh": "取极限就迫使μ为零。"
+        },
+        {
+          "en": "Within each occupied closed class, normalize its stationary mass to total one.",
+          "zh": "对每个具有正质量的闭类，将其平稳质量归一到一。"
+        },
+        {
+          "en": "The finite irreducible-chain theorem gives one stationary distribution within that class.",
+          "zh": "有限不可约链定理保证，该类内部只有一个平稳分布。"
+        },
+        {
+          "en": "Its class mass becomes the coefficient in the mixture.",
+          "zh": "该类总质量就是混合中的系数。"
+        },
+        {
+          "en": "Any stationary distribution is a mixture of the class distributions.",
+          "zh": "任意平稳分布都是这些类分布的混合。"
+        },
+        {
+          "en": "The mixture weights are nonnegative and sum to one.",
+          "zh": "混合权重非负且总和为一。"
+        },
+        {
+          "en": "Each choice of class weights gives a stationary distribution.",
+          "zh": "每组类权重都给出一个平稳分布。"
+        },
+        {
+          "en": "The extreme points correspond exactly to individual closed recurrent classes.",
+          "zh": "极端点恰好对应各个闭常返类。"
+        },
+        {
+          "en": "Their number is the number of closed recurrent classes.",
+          "zh": "极端平稳分布的数量等于闭常返类数量。"
+        },
+        {
+          "en": "It is not the number of recurrent states.",
+          "zh": "它不等于常返状态数量。"
+        },
+        {
+          "en": "For a finite irreducible chain, there is one such class.",
+          "zh": "有限不可约链只有一个这样的类。"
+        },
+        {
+          "en": "Therefore its stationary distribution is unique.",
+          "zh": "因此它的平稳分布唯一。"
+        },
+        {
+          "en": "Uniqueness does not imply convergence from every initial distribution.",
+          "zh": "唯一性并不意味着从任意初始分布都会收敛。"
+        },
+        {
+          "en": "The alternating two-state chain is the counterexample already seen.",
+          "zh": "前面看到的两态交替链就是反例。"
+        },
+        {
+          "en": "Its stationary vector is fixed, but P to the n keeps alternating.",
+          "zh": "它的平稳向量不变，但Pⁿ仍持续交替。"
+        },
+        {
+          "en": "For a finite irreducible chain, aperiodicity guarantees convergence from every initial law.",
+          "zh": "有限不可约链再加非周期性，才保证任意初始分布收敛。"
+        },
+        {
+          "en": "This convergence theorem concerns initialization, not existence of stationarity.",
+          "zh": "这个收敛定理讨论初始条件，而非平稳分布是否存在。"
+        },
+        {
+          "en": "A stationary process is defined by shift-invariant finite-block laws.",
+          "zh": "平稳过程由平移不变的有限块分布定义。"
+        },
+        {
+          "en": "Ergodicity is a separate property of shift-invariant events.",
+          "zh": "遍历性是关于平移不变事件的另一性质。"
+        },
+        {
+          "en": "Now take two disjoint closed classes with their own stationary laws pi one and pi two.",
+          "zh": "再考虑两个不相交闭类，其平稳分布分别为π₁和π₂。"
+        },
+        {
+          "en": "A weighted vector lambda pi one plus one minus lambda pi two is stationary.",
+          "zh": "加权向量λπ₁+(1−λ)π₂仍然平稳。"
+        },
+        {
+          "en": "Its mass on each class is exactly the chosen weight.",
+          "zh": "它在每个类上的质量恰好等于相应权重。"
+        },
+        {
+          "en": "Aperiodicity affects long-run convergence but not this convex description.",
+          "zh": "非周期性影响长期收敛，却不影响上述凸组合描述。"
+        },
+        {
+          "en": "The stationary equation is linear together with normalization.",
+          "zh": "平稳方程与归一化条件共同构成线性系统。"
+        },
+        {
+          "en": "Its solutions form a convex set because mixtures preserve both conditions.",
+          "zh": "由于混合仍满足两条件，其解集构成凸集。"
+        },
+        {
+          "en": "Each closed irreducible class contributes one independent extreme solution.",
+          "zh": "每个闭不可约类贡献一个独立极端解。"
+        },
+        {
+          "en": "Next, use stationary flow to compute a Markov source rate.",
+          "zh": "接下来利用平稳流量计算Markov信源熵率。"
+        }
+      ]
+    },
+    {
+      "id": "c05-markov-rate",
+      "chapter": "Entropy rate of a Markov source",
+      "title": "Weight each transition-row entropy by stationary flow",
+      "music": "proof",
+      "terms": [
+        "entropy-rate",
+        "stationary",
+        "markov-chain",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "For a stationary first-order Markov source, the past predicts through the current state.",
+          "zh": "对平稳一阶Markov信源，过去通过当前状态预测未来。"
+        },
+        {
+          "en": "Given state i, the next-symbol distribution is row i of P.",
+          "zh": "给定状态i，下一个符号分布就是P的第i行。"
+        },
+        {
+          "en": "Let H of P i denote that row entropy.",
+          "zh": "用H(Pᵢ)表示该行熵。"
+        },
+        {
+          "en": "The entropy rate is the stationary average of these row entropies.",
+          "zh": "熵率是这些行熵按平稳分布加权的平均值。"
+        },
+        {
+          "en": "Thus h equals the sum over i of pi i times H of P i.",
+          "zh": "因此h=ΣᵢπᵢH(Pᵢ)。"
+        },
+        {
+          "en": "Use transition rows (zero point nine, zero point one) and (zero point three, zero point seven).",
+          "zh": "取转移行(0.9,0.1)和(0.3,0.7)。"
+        },
+        {
+          "en": "Let pi be (a, one minus a).",
+          "zh": "设π=(a,1−a)。"
+        },
+        {
+          "en": "Balance for state zero says a equals zero point nine a plus zero point three times one minus a.",
+          "zh": "状态0的平衡式为a=0.9a+0.3(1−a)。"
+        },
+        {
+          "en": "Expand the right side to zero point six a plus zero point three.",
+          "zh": "展开右侧得到0.6a+0.3。"
+        },
+        {
+          "en": "Move zero point six a left to obtain zero point four a equals zero point three.",
+          "zh": "移项得0.4a=0.3。"
+        },
+        {
+          "en": "Therefore a equals zero point seven five.",
+          "zh": "因此a=0.75。"
+        },
+        {
+          "en": "The other stationary probability is zero point two five.",
+          "zh": "另一个平稳概率为0.25。"
+        },
+        {
+          "en": "The stationary distribution is (zero point seven five, zero point two five).",
+          "zh": "平稳分布为(0.75,0.25)。"
+        },
+        {
+          "en": "The stationary transition flow from zero to zero is zero point six seven five.",
+          "zh": "从0到0的平稳转移流量为0.675。"
+        },
+        {
+          "en": "The flow from zero to one is zero point zero seven five.",
+          "zh": "从0到1的流量为0.075。"
+        },
+        {
+          "en": "The flow from one to zero is also zero point zero seven five.",
+          "zh": "从1到0的流量也为0.075。"
+        },
+        {
+          "en": "The remaining flow from one to one is zero point one seven five.",
+          "zh": "从1到1的流量为0.175。"
+        },
+        {
+          "en": "Incoming flow to state zero is zero point six seven five plus zero point zero seven five.",
+          "zh": "流入状态0的总量是0.675加0.075。"
+        },
+        {
+          "en": "That sum equals zero point seven five, its stationary mass.",
+          "zh": "该和等于其平稳质量0.75。"
+        },
+        {
+          "en": "The two crossing flows match, as balance requires.",
+          "zh": "两个交叉方向的流量相等，符合平衡要求。"
+        },
+        {
+          "en": "The first row entropy is binary entropy at zero point one.",
+          "zh": "第一行熵为二元熵H_b(0.1)。"
+        },
+        {
+          "en": "Its value is approximately zero point four six nine zero bits.",
+          "zh": "其值约为0.4690比特。"
+        },
+        {
+          "en": "The second row entropy is binary entropy at zero point three.",
+          "zh": "第二行熵为二元熵H_b(0.3)。"
+        },
+        {
+          "en": "Its value is approximately zero point eight eight one three bits.",
+          "zh": "其值约为0.8813比特。"
+        },
+        {
+          "en": "Weight the first row by zero point seven five.",
+          "zh": "将第一行按0.75加权。"
+        },
+        {
+          "en": "Weight the second row by zero point two five. What is the total uncertainty?",
+          "zh": "第二行乘以零点二五。总的不确定性是多少？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The result is approximately zero point five seven two zero six nine four two bits per symbol.",
+          "zh": "结果约为每符号0.57206942比特。"
+        },
+        {
+          "en": "The stationary probability of state one is zero point two five.",
+          "zh": "状态1的平稳概率为0.25。"
+        },
+        {
+          "en": "So the one-symbol marginal is (zero point seven five, zero point two five).",
+          "zh": "所以单符号边缘分布为(0.75,0.25)。"
+        },
+        {
+          "en": "Its entropy is approximately zero point eight one one two seven eight one two bits.",
+          "zh": "其边缘熵约为0.81127812比特。"
+        },
+        {
+          "en": "The rate is smaller because the current state carries information about the next one.",
+          "zh": "熵率较小，因为当前状态携带了下一个状态的信息。"
+        },
+        {
+          "en": "The chain rule gives block entropy H of X one through X n.",
+          "zh": "链式法则给出块熵H(X₁,…,Xₙ)。"
+        },
+        {
+          "en": "The first term is the stationary marginal entropy.",
+          "zh": "第一项是平稳边缘熵。"
+        },
+        {
+          "en": "Every later term equals the same conditional row-entropy average.",
+          "zh": "此后每一项都等于同一个条件行熵加权平均。"
+        },
+        {
+          "en": "Therefore block entropy equals H of pi plus n minus one times h.",
+          "zh": "因此块熵等于H(π)+(n−1)h。"
+        },
+        {
+          "en": "Dividing by n and taking the limit leaves h.",
+          "zh": "除以n再取极限便得到h。"
+        },
+        {
+          "en": "Zero transition probabilities contribute zero entropy by the usual limiting convention.",
+          "zh": "零转移概率按通常极限约定贡献零熵。"
+        },
+        {
+          "en": "This formula requires stationarity for the weights pi.",
+          "zh": "该公式使用π作为权重，因此要求信源平稳。"
+        },
+        {
+          "en": "The Markov assumption reduces the relevant history to one state.",
+          "zh": "Markov假设将相关历史压缩为一个状态。"
+        },
+        {
+          "en": "Next, connect entropy rate to typical path probabilities.",
+          "zh": "接下来将熵率连接到典型路径概率。"
+        }
+      ]
+    },
+    {
+      "id": "c06-ergodic-aep",
+      "chapter": "AEP for stationary ergodic sources",
+      "title": "Stationarity and ergodicity give a pathwise AEP",
+      "music": "recap",
+      "terms": [
+        "entropy-rate",
+        "stationary",
+        "ergodicity",
+        "aep",
+        "typical-set",
+        "markov-chain"
+      ],
+      "sentences": [
+        {
+          "en": "For an IID source, sequence probability factors into symbol probabilities.",
+          "zh": "对IID信源，序列概率分解为各符号概率之积。"
+        },
+        {
+          "en": "A source with memory generally has no such product factorization.",
+          "zh": "有记忆信源一般没有这种乘积分解。"
+        },
+        {
+          "en": "We therefore invoke the Shannon–McMillan–Breiman theorem.",
+          "zh": "因此我们调用Shannon–McMillan–Breiman定理。"
+        },
+        {
+          "en": "Assume a stationary ergodic process over a finite alphabet.",
+          "zh": "假设过程平稳遍历且字母表有限。"
+        },
+        {
+          "en": "The theorem states that negative log probability of a length-n block, divided by n, converges almost surely.",
+          "zh": "定理断言，长度n块的负对数概率除以n几乎必然收敛。"
+        },
+        {
+          "en": "The limit is the entropy rate h.",
+          "zh": "该极限就是熵率h。"
+        },
+        {
+          "en": "This statement does not use an IID product formula.",
+          "zh": "该结论不依赖IID乘积分解。"
+        },
+        {
+          "en": "The finite alphabet ensures finite block entropies and integrability of the information density.",
+          "zh": "有限字母表保证块熵有限且信息密度可积。"
+        },
+        {
+          "en": "Ergodicity means every shift-invariant event has probability zero or one.",
+          "zh": "遍历性指每个平移不变事件的概率都是零或一。"
+        },
+        {
+          "en": "Ergodicity prevents different invariant components from retaining different long-run information rates.",
+          "zh": "遍历性排除不同不变分量保留不同长期信息率的情况。"
+        },
+        {
+          "en": "A proof outline studies conditional information increments and their time averages.",
+          "zh": "证明思路研究条件信息增量及其时间平均。"
+        },
+        {
+          "en": "Martingale convergence controls the increments as more of the past is revealed.",
+          "zh": "鞅收敛控制随着过去信息增加而变化的增量。"
+        },
+        {
+          "en": "The ergodic theorem then identifies their long-run average.",
+          "zh": "随后遍历定理识别其长期平均。"
+        },
+        {
+          "en": "This is a theorem invocation, not a full measure-theoretic proof here.",
+          "zh": "这里调用该定理，并不展开完整测度论证明。"
+        },
+        {
+          "en": "Almost-sure convergence also implies convergence in probability.",
+          "zh": "几乎必然收敛也蕴含依概率收敛。"
+        },
+        {
+          "en": "Therefore blocks with surprisal per symbol near h carry probability approaching one.",
+          "zh": "因此，每符号自信息接近h的块总概率趋近于一。"
+        },
+        {
+          "en": "The displayed band uses negative n times the whole quantity h plus epsilon, or h minus epsilon, as its exponents.",
+          "zh": "图中概率带的指数是负 n 乘以整个 h 加 epsilon，或 h 减 epsilon。"
+        },
+        {
+          "en": "This is the AEP for stationary ergodic sources.",
+          "zh": "这就是平稳遍历信源的AEP。"
+        },
+        {
+          "en": "It supplies the typical-set ingredients for compression at rates above h.",
+          "zh": "它提供以高于h的速率压缩所需的典型集依据。"
+        },
+        {
+          "en": "Now verify the theorem on a finite positive Markov chain.",
+          "zh": "现在在有限正转移Markov链上验证该定理。"
+        },
+        {
+          "en": "Use the previous positive transition matrix, initialized in its stationary law.",
+          "zh": "采用上一章的正转移矩阵，并以其平稳分布初始化。"
+        },
+        {
+          "en": "Its empirical transition frequency from i to j converges to pi i times P i j.",
+          "zh": "从i到j的经验转移频率收敛到πᵢPᵢⱼ。"
+        },
+        {
+          "en": "The path probability equals the initial-state probability times its transition probabilities.",
+          "zh": "路径概率等于初始状态概率乘以各步转移概率。"
+        },
+        {
+          "en": "Take negative logarithms and divide by n.",
+          "zh": "取负对数并除以n。"
+        },
+        {
+          "en": "The initial-state contribution vanishes because it is one term divided by n.",
+          "zh": "初始状态项只有一项，除以n后趋于零。"
+        },
+        {
+          "en": "Transition counts turn the remaining sum into an empirical average.",
+          "zh": "转移计数将其余求和化为经验平均。"
+        },
+        {
+          "en": "Each transition probability is positive, so its negative logarithm is finite.",
+          "zh": "每个转移概率为正，因此其负对数有限。"
+        },
+        {
+          "en": "The empirical frequencies converge to stationary transition frequencies.",
+          "zh": "经验频率收敛到平稳转移频率。"
+        },
+        {
+          "en": "The limiting average is the weighted row entropy formula.",
+          "zh": "极限平均正是加权行熵公式。"
+        },
+        {
+          "en": "Thus the Markov path surprisal per symbol tends to h.",
+          "zh": "因此Markov路径的每符号自信息趋向h。"
+        },
+        {
+          "en": "Positive transitions guarantee irreducibility and aperiodicity in this example.",
+          "zh": "此例中正转移保证不可约性与非周期性。"
+        },
+        {
+          "en": "But periodicity alone does not invalidate the general stationary ergodic theorem.",
+          "zh": "但周期性本身不会使一般平稳遍历定理失效。"
+        },
+        {
+          "en": "A stationary irreducible periodic chain can still be ergodic under time shift.",
+          "zh": "平稳不可约周期链仍可对时间平移遍历。"
+        },
+        {
+          "en": "Do not confuse this with convergence from every initial distribution.",
+          "zh": "不要将此与任意初始分布收敛混淆。"
+        },
+        {
+          "en": "That convergence for a finite irreducible chain additionally needs aperiodicity.",
+          "zh": "有限不可约链从任意初值收敛还需要非周期性。"
+        },
+        {
+          "en": "Stationarity alone is not ergodicity.",
+          "zh": "仅有平稳性并不意味着遍历性。"
+        },
+        {
+          "en": "For example, choose a fair hidden component once.",
+          "zh": "例如，只抽取一次公平隐藏分量。"
+        },
+        {
+          "en": "In component A, emit independent fair bits forever.",
+          "zh": "在分量A中，永远输出独立公平比特。"
+        },
+        {
+          "en": "In component B, emit zero forever.",
+          "zh": "在分量B中，永远输出零。"
+        },
+        {
+          "en": "The mixture is stationary, and its long-run fraction of ones identifies the chosen component almost surely.",
+          "zh": "混合过程平稳，而且1的长期频率几乎必然能够识别所选分量。"
+        },
+        {
+          "en": "Its entropy rate averages to one half bit. Must a single path have that same rate?",
+          "zh": "它的熵率平均为半比特。单条路径也一定具有这个速率吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Yet a realized path has limiting surprisal rate one in A and zero in B.",
+          "zh": "但实现路径在A中的自信息率趋于1，在B中趋于0。"
+        },
+        {
+          "en": "There is no single almost-sure limit equal to the mixture-average rate.",
+          "zh": "不存在几乎必然等于混合平均率的单一极限。"
+        },
+        {
+          "en": "Stationarity alone does not force different paths to share one information rate.",
+          "zh": "仅有平稳性，不能保证不同路径共享同一个信息速率。"
+        },
+        {
+          "en": "In the mixed example, the component label is invariant under time shift.",
+          "zh": "在混合例子中，分量标签在时间平移下保持不变。"
+        },
+        {
+          "en": "That nontrivial invariant event prevents ergodicity.",
+          "zh": "这个非平凡不变事件使过程不遍历。"
+        },
+        {
+          "en": "The entropy-rate average still exists, but pathwise surprisal has component-dependent limits.",
+          "zh": "熵率平均仍存在，但路径自信息极限依赖分量。"
+        },
+        {
+          "en": "Therefore stationarity alone cannot justify one deterministic AEP value almost surely.",
+          "zh": "因此仅凭平稳性，不能推出几乎必然共享一个确定AEP值。"
+        },
+        {
+          "en": "A typical path in A eventually contains a one, so only its IID component contributes to its block probability.",
+          "zh": "A中的典型路径最终出现1，因此其块概率仅由IID分量贡献。"
+        },
+        {
+          "en": "Its block probability is one half times two to negative n, giving asymptotic rate one.",
+          "zh": "其块概率为二分之一乘以2^(−n)，渐近自信息率为一。"
+        },
+        {
+          "en": "The all-zero block has probability one half plus one half times two to negative n.",
+          "zh": "全零块概率为二分之一加上二分之一乘以2^(−n)。"
+        },
+        {
+          "en": "Its normalized negative logarithm tends to zero.",
+          "zh": "其归一化负对数趋于零。"
+        },
+        {
+          "en": "The hidden binary label changes block entropy by at most one bit.",
+          "zh": "隐藏二元标签对块熵的影响最多一比特。"
+        },
+        {
+          "en": "Conditioned on that label, average block entropy is n over two, so the entropy rate is one half.",
+          "zh": "给定该标签，平均块熵为n/2，因此熵率为二分之一。"
+        },
+        {
+          "en": "SMB strengthens this averaged statement to pathwise surprisal convergence under ergodicity.",
+          "zh": "SMB在遍历条件下将平均熵结论加强为路径自信息收敛。"
+        },
+        {
+          "en": "Return to the stationary ergodic case. Its typical set has most probability and exponential size near two to n h.",
+          "zh": "回到平稳遍历的情形。典型集承载大部分概率，其规模在指数意义下接近二的 n h 次方。"
+        },
+        {
+          "en": "It does not assert identical probability for all finite blocks.",
+          "zh": "它不声称所有有限块概率完全相同。"
+        },
+        {
+          "en": "Their negative log probabilities differ by a tolerance proportional to n.",
+          "zh": "它们的负对数概率可相差与n成比例的容差。"
+        },
+        {
+          "en": "The next episode uses entropy bounds to build prefix codes.",
+          "zh": "下一集将利用熵界构造前缀码。"
+        }
+      ]
+    }
+  ]
+}

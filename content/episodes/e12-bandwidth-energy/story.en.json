@@ -1,0 +1,837 @@
+{
+  "episode": "e12-bandwidth-energy",
+  "title": "Bandwidth, Power, and Energy",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-dimensions",
+      "chapter": "Time and Bandwidth Degrees of Freedom",
+      "title": "Time and Bandwidth Degrees of Freedom",
+      "music": "definition",
+      "terms": [
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "Would unlimited bandwidth give unlimited rate at fixed total power? Use a real lowpass band from minus W to plus W.",
+          "zh": "总功率固定时，无限带宽会带来无限速率吗？先取从−W到W的实低通信号频带。"
+        },
+        {
+          "en": "Here W is measured in cycles per second, or hertz.",
+          "zh": "这里W以每秒周期数，即赫兹计量。"
+        },
+        {
+          "en": "Observe the signal over a time interval of length T seconds.",
+          "zh": "在长度为T秒的时间区间内观察该信号。"
+        },
+        {
+          "en": "A first intuition comes from Nyquist sampling at about twice W samples per second.",
+          "zh": "一个初步直觉来自Nyquist采样，即每秒约采两倍W个样本。"
+        },
+        {
+          "en": "Over T seconds, that gives roughly two W T real samples.",
+          "zh": "持续T秒，便约有2WT个实数样本。"
+        },
+        {
+          "en": "Those samples suggest about two W T effective real degrees of freedom.",
+          "zh": "这些样本提示约有2WT个有效实自由度。"
+        },
+        {
+          "en": "Does this make the finite-window signal space exactly two W T dimensional?",
+          "zh": "这是否意味着有限时间窗内的信号空间恰好是2WT维？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "A signal cannot be both strictly bandlimited and strictly time limited unless it is zero.",
+          "zh": "除零信号外，信号不能同时严格带限且严格限时。"
+        },
+        {
+          "en": "Cutting off a bandlimited waveform in time introduces spectral tails.",
+          "zh": "在时间上截断带限波形会引入频谱尾部。"
+        },
+        {
+          "en": "Likewise, exact bandlimiting spreads a waveform beyond any finite time window.",
+          "zh": "同样，精确带限会使波形延伸到任意有限时间窗之外。"
+        },
+        {
+          "en": "So two W T is not an exact dimension count for every finite window.",
+          "zh": "因此2WT并非每个有限时间窗的精确维数计数。"
+        },
+        {
+          "en": "It describes effective dimension when the time-bandwidth product is sufficiently large.",
+          "zh": "当时间带宽积足够大时，它描述有效维数。"
+        },
+        {
+          "en": "A more careful basis uses prolate spheroidal wave functions.",
+          "zh": "更精细的基底会使用长椭球波函数。"
+        },
+        {
+          "en": "These functions concentrate most of their energy inside both chosen regions.",
+          "zh": "这些函数能将大部分能量集中在所选两个区域内。"
+        },
+        {
+          "en": "Their strongly concentrated modes number approximately two W T.",
+          "zh": "其中高度集中的模态数约为2WT。"
+        },
+        {
+          "en": "Modes near the boundary have intermediate concentration.",
+          "zh": "边界附近的模态具有中间程度的集中性。"
+        },
+        {
+          "en": "We use the effective count without proving that advanced spectral result.",
+          "zh": "我们采用有效维数估计，不证明该高级谱结论。"
+        },
+        {
+          "en": "Each real orthonormal coefficient will serve as one real channel use.",
+          "zh": "每个实正交系数将作为一次实信道使用。"
+        },
+        {
+          "en": "The count is therefore approximately two W uses per second.",
+          "zh": "因此每秒使用次数约为2W。"
+        },
+        {
+          "en": "Do not count positive and negative frequencies as separate complex uses here.",
+          "zh": "这里不要将正负频率分别计作复信道使用。"
+        },
+        {
+          "en": "The model is real lowpass, with real coefficients.",
+          "zh": "该模型是实低通模型，系数均为实数。"
+        },
+        {
+          "en": "The factor two already accounts for the real Nyquist degrees of freedom.",
+          "zh": "因子二已经计入实信号的Nyquist自由度。"
+        },
+        {
+          "en": "This count will turn bits per real use into bits per second.",
+          "zh": "该计数将把每次实使用比特数转换为每秒比特数。"
+        },
+        {
+          "en": "Bandwidth alone is not a signal power.",
+          "zh": "带宽本身并不是信号功率。"
+        },
+        {
+          "en": "Power P is distributed across the available coefficients.",
+          "zh": "功率P分布在可用系数上。"
+        },
+        {
+          "en": "Noise spectral density determines the noise variance of each coefficient.",
+          "zh": "噪声谱密度决定每个系数上的噪声方差。"
+        },
+        {
+          "en": "We next compute both quantities with a consistent two-sided convention.",
+          "zh": "接下来用一致的双边约定计算这两个量。"
+        },
+        {
+          "en": "The distinction between approximate dimension and exact waveform space remains in force.",
+          "zh": "有效维数近似与精确波形空间的区别始终成立。"
+        },
+        {
+          "en": "Keep the real lowpass model visible in every unit conversion.",
+          "zh": "每次单位换算都要明确保留实低通模型。"
+        },
+        {
+          "en": "The output will be a rate in bits per second.",
+          "zh": "结果将是以比特每秒计量的速率。"
+        }
+      ]
+    },
+    {
+      "id": "c02-capacity",
+      "chapter": "From Uses to Bits per Second",
+      "title": "From Uses to Bits per Second",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "capacity",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "Use a real lowpass band from negative W to positive W.",
+          "zh": "使用频带为−W至W的实低通信道。"
+        },
+        {
+          "en": "Its approximate real orthonormal coefficient rate is two W per second.",
+          "zh": "其正交实系数速率近似为每秒2W个。"
+        },
+        {
+          "en": "Let total average signal power be P watts.",
+          "zh": "令总平均信号功率为P瓦。"
+        },
+        {
+          "en": "Over T seconds, the energy budget is P T across approximately two W T coefficients.",
+          "zh": "在T秒内，能量预算PT分布在约2WT个系数上。"
+        },
+        {
+          "en": "Orthonormality equates total waveform energy with the sum of squared coefficients.",
+          "zh": "正交归一性使波形总能量等于系数平方和。"
+        },
+        {
+          "en": "Under uniform allocation, each real coefficient has input second moment P divided by the product two times W.",
+          "zh": "均匀分配时，每个实系数的输入二阶矩为P/(2W)。"
+        },
+        {
+          "en": "This is mean energy per orthonormal coefficient, rather than total power P.",
+          "zh": "这是每个正交系数的平均能量，而不是总功率P。"
+        },
+        {
+          "en": "Let the two-sided white-noise spectral density be N zero over two.",
+          "zh": "令双边白噪声谱密度为N₀/2。"
+        },
+        {
+          "en": "Assume W and N zero are positive, with Gaussian white noise independent of the input.",
+          "zh": "假设W与N₀均为正，且高斯白噪声独立于输入。"
+        },
+        {
+          "en": "Orthogonal projections of this noise are jointly Gaussian and uncorrelated, hence independent.",
+          "zh": "该噪声的正交投影联合高斯且不相关，因此独立。"
+        },
+        {
+          "en": "Integrate that density across the band from negative W to positive W.",
+          "zh": "将该谱密度在−W至W频带上积分。"
+        },
+        {
+          "en": "The total in-band noise power is N zero W.",
+          "zh": "带内总噪声功率为N₀W。"
+        },
+        {
+          "en": "An orthonormal real coefficient therefore has noise variance N zero over two.",
+          "zh": "因此每个正交实系数的噪声方差为N₀/2。"
+        },
+        {
+          "en": "A unit-energy basis function gives this variance through its squared-norm integral.",
+          "zh": "对单位能量基函数积分其模平方，就得到该噪声方差。"
+        },
+        {
+          "en": "The coefficient signal-to-noise ratio is its input second moment divided by noise variance.",
+          "zh": "系数信噪比等于输入二阶矩除以噪声方差。"
+        },
+        {
+          "en": "Substitution gives P divided by the product N zero times W.",
+          "zh": "代入后得到P/(N₀W)。"
+        },
+        {
+          "en": "One real use has capacity one half log two of one plus that ratio.",
+          "zh": "一次实信道使用的容量为二分之一log₂(1加该比值)。"
+        },
+        {
+          "en": "The one half is the real Gaussian capacity factor from the previous episode.",
+          "zh": "因子二分之一是上一集实高斯容量公式中的因子。"
+        },
+        {
+          "en": "Multiply by about two W real uses per second. Does the real Gaussian factor one half remain?",
+          "zh": "再乘每秒约2W次实信道使用。实高斯公式中的二分之一还会留下吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The two factors of one half and two cancel.",
+          "zh": "两个因子二分之一与二相消。"
+        },
+        {
+          "en": "Capacity is W times log base two of one plus the ratio P divided by the product N zero times W.",
+          "zh": "所得容量为W log₂(1+P/(N₀W))。"
+        },
+        {
+          "en": "Its unit is bits per second.",
+          "zh": "其单位是比特每秒。"
+        },
+        {
+          "en": "The logarithm argument is dimensionless.",
+          "zh": "对数的自变量是无量纲量。"
+        },
+        {
+          "en": "The coefficient variance must not be confused with total power.",
+          "zh": "不能把系数方差误当成总功率。"
+        },
+        {
+          "en": "Total noise power is an integral over the full band.",
+          "zh": "总噪声功率是对整个频带积分所得。"
+        },
+        {
+          "en": "Each coefficient receives only its share of signal energy.",
+          "zh": "每个系数只获得其对应的信号能量份额。"
+        },
+        {
+          "en": "Changing to a one-sided density would require changing the convention consistently.",
+          "zh": "若改用单边谱密度，必须一致地更改约定。"
+        },
+        {
+          "en": "Here all calculations use two-sided density N zero over two.",
+          "zh": "这里所有计算均采用双边谱密度N₀/2。"
+        },
+        {
+          "en": "At fixed W, more total power raises the coefficient ratio.",
+          "zh": "固定W时，总功率增加会提高系数信噪比。"
+        },
+        {
+          "en": "At fixed P, widening the band lowers power per coefficient.",
+          "zh": "固定P时，增宽频带会降低每系数功率。"
+        },
+        {
+          "en": "This conversion depends on the real lowpass interpretation.",
+          "zh": "该换算依赖实低通解释。"
+        },
+        {
+          "en": "It does not add a constant to bits per use.",
+          "zh": "它不是在每次使用比特数上加一个常数。"
+        },
+        {
+          "en": "The bandwidth multiplies a dimensionless logarithmic rate.",
+          "zh": "带宽乘以一个无量纲对数速率。"
+        },
+        {
+          "en": "The next limit balances that weaker coefficient against more uses per second.",
+          "zh": "接下来考察这一较弱系数与更多每秒使用次数之间的平衡。"
+        }
+      ]
+    },
+    {
+      "id": "c03-wideband",
+      "chapter": "The Wideband Limit",
+      "title": "The Wideband Limit",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "capacity",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "Fix positive total power P and positive noise density N zero. Can unlimited bandwidth give unlimited bits per second?",
+          "zh": "固定正总功率P和正噪声谱密度N₀。无限带宽能带来每秒无限比特吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Capacity is W times log base two of one plus the ratio P divided by the product N zero times W.",
+          "zh": "每秒容量为W log₂(1+P/(N₀W))。"
+        },
+        {
+          "en": "As bandwidth W grows, the power in each coefficient falls.",
+          "zh": "带宽W增大时，每个系数分到的功率下降。"
+        },
+        {
+          "en": "Define x as P divided by the product N zero times W.",
+          "zh": "定义x=P/(N₀W)。"
+        },
+        {
+          "en": "Then x tends to zero as W tends to infinity.",
+          "zh": "当W趋于无穷时，x趋于零。"
+        },
+        {
+          "en": "Capacity is P divided by N zero, times the fraction log base two of one plus x, all over x.",
+          "zh": "将容量改写为P/N₀乘以log₂(1+x)/x。"
+        },
+        {
+          "en": "For small x, natural log of one plus x divided by x tends to one.",
+          "zh": "当x很小时，ln(1+x)/x趋于一。"
+        },
+        {
+          "en": "Changing from natural logarithms to base two divides by natural log two.",
+          "zh": "从自然对数换为以二为底的对数，需除以ln2。"
+        },
+        {
+          "en": "Therefore capacity tends to P divided by the product N zero times natural log two.",
+          "zh": "因此容量趋于P/(N₀ln2)。"
+        },
+        {
+          "en": "The limiting unit remains bits per second.",
+          "zh": "极限单位仍为比特每秒。"
+        },
+        {
+          "en": "For positive P and finite W, capacity is strictly below this limit.",
+          "zh": "当P为正且W有限时，容量严格低于该极限。"
+        },
+        {
+          "en": "This follows because natural log of one plus x is strictly less than x for positive x.",
+          "zh": "这是因为x>0时，自然对数ln(1+x)严格小于x。"
+        },
+        {
+          "en": "Thus widening the band gives diminishing extra capacity.",
+          "zh": "因此增宽频带带来的额外容量逐渐减小。"
+        },
+        {
+          "en": "It never makes capacity grow without bound at fixed total power.",
+          "zh": "固定总功率时，容量不会因此无限增长。"
+        },
+        {
+          "en": "Spectral efficiency is capacity divided by bandwidth.",
+          "zh": "频谱效率定义为容量除以带宽。"
+        },
+        {
+          "en": "Here that ratio is log two of one plus x.",
+          "zh": "这里该比值为log₂(1+x)。"
+        },
+        {
+          "en": "As bandwidth grows, spectral efficiency tends to zero.",
+          "zh": "带宽增大时，频谱效率趋于零。"
+        },
+        {
+          "en": "More hertz carry progressively fewer bits per second per hertz.",
+          "zh": "每赫兹承载的每秒比特数逐渐减少。"
+        },
+        {
+          "en": "Meanwhile the total rate approaches the finite power-limited value.",
+          "zh": "与此同时，总速率趋于有限的功率限制值。"
+        },
+        {
+          "en": "This is not a contradiction because the bandwidth itself keeps increasing.",
+          "zh": "这并不矛盾，因为带宽本身仍持续增加。"
+        },
+        {
+          "en": "The small coefficient signal-to-noise ratio is compensated by more real uses.",
+          "zh": "更多实信道使用次数补偿了较低的系数信噪比。"
+        },
+        {
+          "en": "The first-order logarithm term determines the limit.",
+          "zh": "对数展开的一阶项决定该极限。"
+        },
+        {
+          "en": "Higher-order terms vanish after multiplication by W.",
+          "zh": "乘以W后，高阶项趋于零。"
+        },
+        {
+          "en": "The fixed quantity is total power, not power per hertz.",
+          "zh": "固定的是总功率，而不是每赫兹功率。"
+        },
+        {
+          "en": "If power per hertz stayed fixed, total power would instead grow with bandwidth.",
+          "zh": "若每赫兹功率固定，总功率反而会随带宽增加。"
+        },
+        {
+          "en": "That would be a different limiting experiment.",
+          "zh": "那将是另一种极限设定。"
+        },
+        {
+          "en": "This produces an energy-per-bit measure.",
+          "zh": "由此得到每比特能量指标。"
+        },
+        {
+          "en": "The limiting value can be stated in units of noise density.",
+          "zh": "极限值可以噪声谱密度为单位表示。"
+        },
+        {
+          "en": "The logarithm base determines the factor natural log two.",
+          "zh": "对数底数决定因子ln2。"
+        },
+        {
+          "en": "At P equal zero, capacity is zero at every bandwidth, including its wideband limit.",
+          "zh": "若P=0，则任意带宽下容量及其宽带极限都为零。"
+        },
+        {
+          "en": "The next chapter divides power by the actual communication rate.",
+          "zh": "下一章将用总功率除以实际通信速率。"
+        }
+      ]
+    },
+    {
+      "id": "c04-energy",
+      "chapter": "Energy per Bit and Spectral Efficiency",
+      "title": "Energy per Bit and Spectral Efficiency",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "capacity",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "Let R be an actual reliable communication rate in bits per second.",
+          "zh": "令R为实际可靠通信速率，单位为比特每秒。"
+        },
+        {
+          "en": "The noise density N zero has units of watts per hertz.",
+          "zh": "噪声谱密度N₀的单位是瓦特每赫兹。"
+        },
+        {
+          "en": "The reliable rate R cannot exceed channel capacity C.",
+          "zh": "可靠速率R不能超过信道容量C。"
+        },
+        {
+          "en": "Define energy per bit as total signal power P divided by R.",
+          "zh": "定义每比特能量E_b=P/R。"
+        },
+        {
+          "en": "This definition applies to any positive operating rate.",
+          "zh": "该定义适用于任意正工作速率。"
+        },
+        {
+          "en": "Define spectral efficiency eta as R divided by bandwidth W.",
+          "zh": "定义频谱效率η=R/W。"
+        },
+        {
+          "en": "At the Shannon boundary, R equals C.",
+          "zh": "在Shannon边界上，R=C。"
+        },
+        {
+          "en": "Then eta equals log two of one plus P over N zero W.",
+          "zh": "此时η=log₂(1+P/(N₀W))。"
+        },
+        {
+          "en": "Rearrange: P divided by the product N zero times W equals two raised to eta, minus one.",
+          "zh": "整理得P/(N₀W)=2^η−1。"
+        },
+        {
+          "en": "Divide power by rate and normalize by N zero.",
+          "zh": "用功率除以速率，再以N₀归一化。"
+        },
+        {
+          "en": "At capacity, E b over N zero is two raised to eta, minus one, with the entire difference divided by eta.",
+          "zh": "在容量边界上，E_b/N₀=(2^η−1)/η。"
+        },
+        {
+          "en": "For an operating rate below capacity, the required ratio is at least this frontier value.",
+          "zh": "若工作速率低于容量，所需比值至少达到该前沿值。"
+        },
+        {
+          "en": "Since R cannot exceed C, the ratio P divided by the product N zero times W must be at least two raised to eta, minus one.",
+          "zh": "由于R≤C，支持速率R要求P/(N₀W)至少为2^η−1。"
+        },
+        {
+          "en": "The inequality follows because the same power supports a larger capacity rate.",
+          "zh": "这是因为相同功率支持的容量速率更高。"
+        },
+        {
+          "en": "Let spectral efficiency approach zero. Must the required energy per bit approach zero too?",
+          "zh": "让频谱效率趋于零。所需每比特能量也一定趋于零吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Since two to eta is one plus eta ln two plus a term smaller than eta, the ratio tends to natural log two.",
+          "zh": "因为2的η次方等于1+ηln2，再加比η更小阶的项，这个比值趋于ln2。"
+        },
+        {
+          "en": "Its numerical value is about zero point six nine three one four seven.",
+          "zh": "其数值约为0.693147。"
+        },
+        {
+          "en": "In decibels relative to N zero, this is about negative one point five nine one seven four five decibels.",
+          "zh": "以N₀为基准的分贝值约为−1.591745分贝。"
+        },
+        {
+          "en": "This is a limiting minimum, approached at vanishing spectral efficiency.",
+          "zh": "这是一个极限最小值，在频谱效率趋零时逼近。"
+        },
+        {
+          "en": "At every finite positive eta, the ratio is strictly larger than natural log two.",
+          "zh": "对每个有限正η，该比值都严格大于ln2。"
+        },
+        {
+          "en": "Finite constellations and practical codes may require still more energy.",
+          "zh": "有限星座和实际编码可能需要更多能量。"
+        },
+        {
+          "en": "The frontier assumes capacity-achieving signaling and coding.",
+          "zh": "该前沿假设采用达到容量的调制与编码。"
+        },
+        {
+          "en": "For comparison with the lecture plot, place energy per bit over noise density on the horizontal axis.",
+          "zh": "为与讲义图对照，将归一化每比特能量置于横轴。"
+        },
+        {
+          "en": "Place spectral efficiency in bits per second per hertz on the vertical axis.",
+          "zh": "将每赫兹每秒比特数表示的频谱效率置于纵轴。"
+        },
+        {
+          "en": "Moving toward higher spectral efficiency raises the energy requirement.",
+          "zh": "向更高频谱效率移动会提高能量需求。"
+        },
+        {
+          "en": "At fixed positive rate, approaching the minimum energy requires ever more bandwidth.",
+          "zh": "在固定正速率下，逼近最低能量需要越来越大的带宽。"
+        },
+        {
+          "en": "The two resources trade against each other.",
+          "zh": "这两种资源彼此权衡。"
+        },
+        {
+          "en": "The curve is obtained from a formula, not an experimental measurement.",
+          "zh": "该曲线由公式计算，而非实验测量。"
+        },
+        {
+          "en": "Keep actual rate R distinct from capacity C in the energy definition.",
+          "zh": "能量定义中要区分实际速率R与容量C。"
+        },
+        {
+          "en": "Only on the frontier may they be set equal.",
+          "zh": "只有在前沿上才能令二者相等。"
+        },
+        {
+          "en": "The next comparison asks what practical signaling curves can be inferred.",
+          "zh": "下一章将讨论可以从实际调制曲线推断什么。"
+        }
+      ]
+    },
+    {
+      "id": "c05-signaling",
+      "chapter": "Modulation Families and Their Conditions",
+      "title": "Modulation Families and Their Conditions",
+      "music": "definition",
+      "terms": [
+        "awgn",
+        "bpsk",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "A modulation family restricts which waveforms represent transmitted symbols.",
+          "zh": "调制族限制哪些波形可表示发送符号。"
+        },
+        {
+          "en": "Different families use amplitude, phase, timing, or orthogonal waveforms differently.",
+          "zh": "不同调制族对振幅、相位、时序或正交波形的使用不同。"
+        },
+        {
+          "en": "The lecture compares several named families at a displayed error target.",
+          "zh": "讲义在图示错误目标下比较若干调制族。"
+        },
+        {
+          "en": "The displayed target is P capital M equal to ten to negative five.",
+          "zh": "图中目标为P_M=10^−5。"
+        },
+        {
+          "en": "The source lists QAM with sixteen and sixty-four signal points.",
+          "zh": "原图列出16阶与64阶QAM。"
+        },
+        {
+          "en": "Quadrature amplitude modulation varies both in-phase and quadrature amplitudes.",
+          "zh": "正交振幅调制同时改变同相与正交分量的振幅。"
+        },
+        {
+          "en": "Its symbols are naturally represented using two real coordinates.",
+          "zh": "其符号自然用两个实坐标表示。"
+        },
+        {
+          "en": "Sixteen-QAM and sixty-four-QAM have different point densities and decision regions.",
+          "zh": "16-QAM与64-QAM具有不同点密度和判决区域。"
+        },
+        {
+          "en": "The source also lists four- and eight-level PAM in a single-sideband context.",
+          "zh": "原图还列出单边带语境下的4阶与8阶PAM。"
+        },
+        {
+          "en": "Pulse-amplitude modulation primarily varies one real amplitude coordinate.",
+          "zh": "脉冲振幅调制主要改变一个实振幅坐标。"
+        },
+        {
+          "en": "Single-sideband signaling changes how the spectrum occupies the channel.",
+          "zh": "单边带传输会改变频谱占用方式。"
+        },
+        {
+          "en": "Phase-shift keying uses distinct carrier phases.",
+          "zh": "相移键控使用不同载波相位。"
+        },
+        {
+          "en": "The listed orders are four, eight, and sixteen.",
+          "zh": "列出的阶数为4、8与16。"
+        },
+        {
+          "en": "Ideal phase-constellation points share a common radius; pulse shaping also affects the transmitted envelope.",
+          "zh": "理想相位星座点具有相同半径；脉冲成形也影响发送包络。"
+        },
+        {
+          "en": "Differential phase-shift keying encodes changes between successive phases.",
+          "zh": "差分相移键控编码相邻时刻的相位变化。"
+        },
+        {
+          "en": "It can avoid requiring an absolute carrier phase reference.",
+          "zh": "它可以避免要求绝对载波相位参考。"
+        },
+        {
+          "en": "The listed differential orders are two, four, and eight.",
+          "zh": "列出的差分阶数为2、4与8。"
+        },
+        {
+          "en": "Orthogonal signaling assigns different symbols to mutually orthogonal waveforms.",
+          "zh": "正交信号传输将不同符号分配给两两正交波形。"
+        },
+        {
+          "en": "The source lists orders eight, sixteen, thirty-two, and sixty-four.",
+          "zh": "原图列出8、16、32与64阶。"
+        },
+        {
+          "en": "Its caption specifies coherent detection.",
+          "zh": "图注注明采用相干检测。"
+        },
+        {
+          "en": "Coherent detection uses a phase reference to compare received waveform components.",
+          "zh": "相干检测使用相位参考来比较接收波形分量。"
+        },
+        {
+          "en": "Larger orthogonal families trade more signal dimensions for symbol choices.",
+          "zh": "更大的正交族以更多信号维度换取更多符号选择。"
+        },
+        {
+          "en": "These families occupy real or complex dimensions in different ways.",
+          "zh": "这些调制族以不同方式占用实维或复维。"
+        },
+        {
+          "en": "Their bandwidth efficiency depends on pulse shapes and symbol rates.",
+          "zh": "它们的带宽效率取决于脉冲形状与符号率。"
+        },
+        {
+          "en": "Energy efficiency depends on coding, detection, and error definitions. Can the plot determine universal numerical curves?",
+          "zh": "能量效率依赖编码、检测与错误定义。仅凭这张图能确定通用的数值曲线吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The source does not specify every pulse-shape or coding assumption.",
+          "zh": "原图没有说明所有脉冲形状或编码假设。"
+        },
+        {
+          "en": "It also does not fully define coherent, hard, or soft processing for every curve.",
+          "zh": "它也未为每条曲线完整定义相干、硬判决或软处理。"
+        },
+        {
+          "en": "Therefore its plot supports a qualitative scheme comparison only.",
+          "zh": "因此该图只支持调制方案的定性比较。"
+        },
+        {
+          "en": "It does not establish Shannon capacity achievability for those schemes.",
+          "zh": "它不能证明这些方案达到Shannon容量。"
+        },
+        {
+          "en": "Exact reconstruction requires occupied bandwidth, symbol rate, code rate, and detector assumptions.",
+          "zh": "精确重建需要占用带宽、符号率、码率与检测器假设。"
+        },
+        {
+          "en": "The exact numerical curves depend on these assumptions, while the Shannon frontier remains a separate benchmark.",
+          "zh": "精确数值曲线依赖这些假设，Shannon前沿则是独立基准。"
+        }
+      ]
+    },
+    {
+      "id": "c06-tradeoff",
+      "chapter": "Bandwidth and Power Tradeoffs",
+      "title": "Bandwidth and Power Tradeoffs",
+      "music": "recap",
+      "terms": [
+        "awgn",
+        "capacity",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "Return to capacity: W times log base two of one plus the ratio P divided by the product N zero times W.",
+          "zh": "回到容量公式C=Wlog₂(1+P/(N₀W))。"
+        },
+        {
+          "en": "First hold bandwidth W fixed and increase total power P.",
+          "zh": "先固定带宽W并增大总功率P。"
+        },
+        {
+          "en": "Capacity rises logarithmically with that increase.",
+          "zh": "容量随功率增加而按对数上升。"
+        },
+        {
+          "en": "Doubling power does not generally double capacity.",
+          "zh": "功率加倍通常不会令容量加倍。"
+        },
+        {
+          "en": "Now hold power P fixed and increase bandwidth W.",
+          "zh": "现在固定功率P并增大带宽W。"
+        },
+        {
+          "en": "Capacity rises but approaches the finite wideband limit.",
+          "zh": "容量会上升，但趋于有限的宽带极限。"
+        },
+        {
+          "en": "At the same time, spectral efficiency tends toward zero.",
+          "zh": "与此同时，频谱效率趋于零。"
+        },
+        {
+          "en": "The coefficients become weaker while their number per second grows.",
+          "zh": "每个系数变弱，但每秒系数数量增加。"
+        },
+        {
+          "en": "Power and bandwidth therefore provide different routes to higher rate.",
+          "zh": "因此功率与带宽是提高速率的不同途径。"
+        },
+        {
+          "en": "Neither resource is free in a physical communication system.",
+          "zh": "在实际通信系统中，这两种资源都不是免费的。"
+        },
+        {
+          "en": "Increasing one resource can reduce pressure on the other.",
+          "zh": "增加一种资源可以减轻对另一种资源的压力。"
+        },
+        {
+          "en": "The Shannon frontier quantifies the energy cost of spectral efficiency.",
+          "zh": "Shannon前沿量化了频谱效率对应的能量代价。"
+        },
+        {
+          "en": "Its lowest limiting energy requires spectral efficiency to approach zero.",
+          "zh": "最低极限能量要求频谱效率趋于零。"
+        },
+        {
+          "en": "At positive spectral efficiency, the required energy is strictly above that limit.",
+          "zh": "频谱效率为正时，所需能量严格高于该极限。"
+        },
+        {
+          "en": "The formula assumes ideal real lowpass AWGN conditions.",
+          "zh": "该公式假设理想实低通AWGN条件。"
+        },
+        {
+          "en": "Practical signaling may require more energy at the same spectral efficiency than the Gaussian-input frontier.",
+          "zh": "在相同频谱效率下，实际调制可能比高斯输入前沿需要更多能量。"
+        },
+        {
+          "en": "The gap reflects input restrictions and implementation assumptions.",
+          "zh": "差距反映输入限制与实现假设。"
+        },
+        {
+          "en": "A modulation curve must be read together with its detection rules.",
+          "zh": "解读调制曲线时必须同时查看其检测规则。"
+        },
+        {
+          "en": "It must also be read with its bandwidth and error target.",
+          "zh": "还必须结合带宽与错误目标解读。"
+        },
+        {
+          "en": "The source comparison displays the common error target P capital M equal to ten to negative five.",
+          "zh": "原图比较显示共同错误目标P_M=10^−5。"
+        },
+        {
+          "en": "It does not provide enough data to recover every precise curve point.",
+          "zh": "它没有提供足够数据来恢复每个精确曲线点。"
+        },
+        {
+          "en": "The capacity equations remain the precise benchmark in this episode.",
+          "zh": "本集中容量方程仍是精确基准。"
+        },
+        {
+          "en": "The time-bandwidth count explains the conversion from uses to seconds.",
+          "zh": "时间带宽自由度计数解释了从使用次数到秒的换算。"
+        },
+        {
+          "en": "The noise integral explains the term N zero W.",
+          "zh": "噪声积分解释了N₀W这一项。"
+        },
+        {
+          "en": "The wideband limit explains why rate saturates at fixed power.",
+          "zh": "宽带极限解释了固定功率下速率为何饱和。"
+        },
+        {
+          "en": "The energy relation explains the price of a chosen spectral efficiency.",
+          "zh": "能量关系解释了指定频谱效率的代价。"
+        },
+        {
+          "en": "These pieces describe one consistent real-channel model.",
+          "zh": "这些部分共同描述一个一致的实信道模型。"
+        },
+        {
+          "en": "That allocation will use the same total-power principle.",
+          "zh": "该分配仍将使用相同的总功率原则。"
+        },
+        {
+          "en": "The resource tradeoff now has a precise rate and energy scale.",
+          "zh": "现在资源权衡已有精确的速率与能量尺度。"
+        },
+        {
+          "en": "The next episode allocates power across parallel frequency channels.",
+          "zh": "下一集将在并行频率信道之间分配功率。"
+        }
+      ]
+    }
+  ]
+}

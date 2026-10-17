@@ -1,0 +1,1023 @@
+{
+  "episode": "e07-huffman-universal",
+  "title": "Huffman Coding and Universal Compression",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-shannon-mismatch",
+      "chapter": "Shannon coding with a mismatched model",
+      "title": "Can the same message cost fewer bits?",
+      "music": "motivation",
+      "terms": [
+        "kl-divergence",
+        "shannon-code",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Two bits for every source symbol sounds simple. Can a prefix code do better?",
+          "zh": "每个信源符号都用两比特很简单。前缀码还能更省吗？"
+        },
+        {
+          "en": "Imagine one hundred source symbols: fifty A, thirty B, and twenty C. Their order does not change this bit bill.",
+          "zh": "设有一百个信源符号：五十个A、三十个B、二十个C。排列顺序不改变这笔比特账单。"
+        },
+        {
+          "en": "The first codebook uses A zero zero, B zero one, and C one zero. It costs two hundred bits.",
+          "zh": "第一本码表取A为00、B为01、C为10，共用二百比特。"
+        },
+        {
+          "en": "You may give one symbol a shorter word. Which symbol should receive it?",
+          "zh": "现在可以给一个符号更短的码字。应该选谁？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "A occurs most often. Try A zero, B one zero, and C one one zero.",
+          "zh": "A出现最多。试取A为0、B为10、C为110。"
+        },
+        {
+          "en": "The bill falls to one hundred seventy bits. Both codebooks are prefix-free.",
+          "zh": "账单降到一百七十比特。这两本码表都是前缀码。"
+        },
+        {
+          "en": "But A zero, B one zero, and C one one uses only one hundred fifty bits for the same inventory.",
+          "zh": "而A为0、B为10、C为11时，同样的一百个符号只用一百五十比特。"
+        },
+        {
+          "en": "Why three different bills? The probability model and the tree construction both matter.",
+          "zh": "为什么会有三笔不同的账单？概率模型和码树构造都会影响代价。"
+        },
+        {
+          "en": "Let P be the true source distribution and Q the coding model.",
+          "zh": "令P为真实信源分布，Q为编码所用模型。"
+        },
+        {
+          "en": "The source produces symbols according to P.",
+          "zh": "信源按照P产生符号。"
+        },
+        {
+          "en": "The encoder assigns Shannon lengths using Q.",
+          "zh": "编码器使用Q分配Shannon码长。"
+        },
+        {
+          "en": "For each symbol i, set l i to ceiling of negative log two Q i.",
+          "zh": "对每个符号i，令lᵢ=⌈−log₂Qᵢ⌉。"
+        },
+        {
+          "en": "Assume Q is positive wherever P is positive.",
+          "zh": "假设凡P为正之处，Q也为正。"
+        },
+        {
+          "en": "Also assume at least two Q probabilities are positive.",
+          "zh": "并假设至少两个Q概率为正。"
+        },
+        {
+          "en": "Then the Shannon construction gives a prefix code.",
+          "zh": "此时Shannon构造可得到前缀码。"
+        },
+        {
+          "en": "First imagine using ideal real-valued lengths negative log Q i.",
+          "zh": "先设想使用理想实数码长−log₂Qᵢ。"
+        },
+        {
+          "en": "Average those lengths under the true distribution P.",
+          "zh": "按照真实分布P对这些码长取平均。"
+        },
+        {
+          "en": "The result is the cross entropy from P to Q.",
+          "zh": "所得结果是P到Q的交叉熵。"
+        },
+        {
+          "en": "Expand it as the sum of negative P i log Q i.",
+          "zh": "将它展开为−ΣᵢPᵢlog₂Qᵢ。"
+        },
+        {
+          "en": "Add and subtract negative P i log P i.",
+          "zh": "加上并减去−Pᵢlog₂Pᵢ。"
+        },
+        {
+          "en": "The first group is entropy H of P.",
+          "zh": "第一组就是熵H(P)。"
+        },
+        {
+          "en": "The remaining group is divergence D of P from Q.",
+          "zh": "剩余部分是D(P∥Q)。"
+        },
+        {
+          "en": "So ideal expected length equals H of P plus D of P relative to Q.",
+          "zh": "因此理想期望码长等于H(P)+D(P∥Q)。"
+        },
+        {
+          "en": "Integer ceiling never shortens an ideal length.",
+          "zh": "取整数上整不会缩短理想码长。"
+        },
+        {
+          "en": "It adds strictly less than one bit to each positive-probability symbol.",
+          "zh": "它给每个正概率符号增加严格少于一比特。"
+        },
+        {
+          "en": "Averaging gives H of P plus divergence, at most L Q.",
+          "zh": "取平均得H(P)+D(P∥Q)≤L_Q。"
+        },
+        {
+          "en": "The strict ceiling bound also gives L Q less than H plus divergence plus one.",
+          "zh": "严格取整界还给出L_Q<H(P)+D(P∥Q)+1。"
+        },
+        {
+          "en": "Thus the full mismatch bound is H plus KL at most L Q, below H plus KL plus one.",
+          "zh": "所以错配界为H+KL≤L_Q<H+KL+1。"
+        },
+        {
+          "en": "When Q equals P, the divergence vanishes.",
+          "zh": "当Q=P时，KL散度为零。"
+        },
+        {
+          "en": "At the ideal real-length level, mismatch adds the nonnegative KL penalty.",
+          "zh": "在理想实数码长层面，错配增加非负KL代价。"
+        },
+        {
+          "en": "The penalty is asymmetric because KL divergence is asymmetric.",
+          "zh": "KL散度不对称，因此该惩罚也有方向性。"
+        },
+        {
+          "en": "If Q i is zero while P i is positive, that source symbol has infinite ideal length.",
+          "zh": "若Qᵢ为零而Pᵢ为正，该信源符号的理想码长为无穷。"
+        },
+        {
+          "en": "No finite Shannon codeword can be assigned by that zero-probability model.",
+          "zh": "该零概率模型无法用Shannon公式为此符号分配有限码字。"
+        },
+        {
+          "en": "A usable model must cover the true source support.",
+          "zh": "可用模型必须覆盖真实信源的支持集。"
+        },
+        {
+          "en": "Probabilities where P is zero contribute nothing to the P-weighted expectation.",
+          "zh": "P为零处的概率不贡献P加权期望。"
+        },
+        {
+          "en": "This avoids taking a positive weight times an undefined logarithm.",
+          "zh": "这样可避免正权重乘以未定义对数。"
+        },
+        {
+          "en": "The entropy term describes the matched baseline.",
+          "zh": "熵项描述匹配模型时的基线。"
+        },
+        {
+          "en": "The divergence term isolates the cost of using Q instead.",
+          "zh": "散度项单独刻画改用Q造成的代价。"
+        },
+        {
+          "en": "This identity lets us compare models without drawing code trees.",
+          "zh": "利用该恒等式，无需画码树也能比较模型。"
+        },
+        {
+          "en": "Next, we seek an optimal prefix tree when the true probabilities are known.",
+          "zh": "接下来，在真实概率已知时寻找最优前缀树。"
+        }
+      ]
+    },
+    {
+      "id": "c02-huffman",
+      "chapter": "Huffman construction",
+      "title": "Repeatedly merge the two lightest items",
+      "music": "definition",
+      "terms": [
+        "huffman",
+        "prefix-free",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Huffman coding builds a binary prefix tree from known symbol probabilities.",
+          "zh": "Huffman编码根据已知符号概率构造二叉前缀树。"
+        },
+        {
+          "en": "At each step, choose two smallest current weights.",
+          "zh": "每一步选取当前最小的两个权重。"
+        },
+        {
+          "en": "Join them as siblings under a new parent.",
+          "zh": "将它们合并为新父节点下的兄弟节点。"
+        },
+        {
+          "en": "Give the parent the sum of their weights.",
+          "zh": "新父节点的权重等于两者之和。"
+        },
+        {
+          "en": "Repeat until one root remains.",
+          "zh": "重复操作直到只剩一个根节点。"
+        },
+        {
+          "en": "Assign zero and one to the two branches at each split.",
+          "zh": "在每次分叉处为两条边分别标记0和1。"
+        },
+        {
+          "en": "Read each symbol codeword along its root-to-leaf path.",
+          "zh": "沿根到叶的路径读取每个符号的码字。"
+        },
+        {
+          "en": "The resulting leaves define a prefix code.",
+          "zh": "所得叶节点构成前缀码。"
+        },
+        {
+          "en": "Use probabilities .4, .2, .2, .1, .05, and .05.",
+          "zh": "取概率.4、.2、.2、.1、.05和.05。"
+        },
+        {
+          "en": "Label these symbols A, B, C, D, E, and F in that order.",
+          "zh": "依次将这些符号标为A、B、C、D、E、F。"
+        },
+        {
+          "en": "Break ties by placing leaves before compound nodes, then alphabetical order. Which pair goes first?",
+          "zh": "平局时，叶节点优先于合并节点，再按字母排序。第一步应合并哪一对？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "First merge E and F, each with weight .05.",
+          "zh": "先合并权重均为.05的E和F。"
+        },
+        {
+          "en": "Their parent EF has weight .10.",
+          "zh": "父节点EF的权重为.10。"
+        },
+        {
+          "en": "Next merge D at .10 with EF at .10.",
+          "zh": "接着将D的.10与EF的.10合并。"
+        },
+        {
+          "en": "The new node DEF has weight .20. Three items now weigh .20. Which pair does our tie rule choose?",
+          "zh": "新节点DEF的权重为0.20。现在有三个0.20项。平局规则会选哪一对？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Among the three .20 items, choose leaves B and C first.",
+          "zh": "三个.20项并列时，先选叶节点B和C。"
+        },
+        {
+          "en": "Their parent BC has weight .40.",
+          "zh": "父节点BC的权重为.40。"
+        },
+        {
+          "en": "Now merge DEF at .20 with A at .40.",
+          "zh": "现在合并.20的DEF与.40的A。"
+        },
+        {
+          "en": "The resulting node has weight .60.",
+          "zh": "所得节点权重为.60。"
+        },
+        {
+          "en": "Finally merge BC at .40 with that .60 node.",
+          "zh": "最后将.40的BC与该.60节点合并。"
+        },
+        {
+          "en": "For a reproducible tree, put the first item on the zero branch.",
+          "zh": "为固定树形，将每次所选第一项放在0分支。"
+        },
+        {
+          "en": "Symbol A receives one one; symbol B receives zero zero; symbol C receives zero one.",
+          "zh": "符号A的码字为11，符号B为00，符号C为01。"
+        },
+        {
+          "en": "D receives one zero zero.",
+          "zh": "D获得100。"
+        },
+        {
+          "en": "E receives one zero one zero.",
+          "zh": "E获得1010。"
+        },
+        {
+          "en": "F receives one zero one one.",
+          "zh": "F获得1011。"
+        },
+        {
+          "en": "Their lengths are two, two, two, three, four, and four.",
+          "zh": "对应码长为2、2、2、3、4、4。"
+        },
+        {
+          "en": "Weight the lengths by the source probabilities.",
+          "zh": "用信源概率对码长加权。"
+        },
+        {
+          "en": "The mean length is .4 times two plus .2 times two twice.",
+          "zh": "平均码长为.4乘2，再加两项.2乘2。"
+        },
+        {
+          "en": "Add .1 times three and two terms of .05 times four.",
+          "zh": "再加.1乘3，以及两项.05乘4。"
+        },
+        {
+          "en": "The result is 2.3 bits per symbol.",
+          "zh": "结果为每符号2.3比特。"
+        },
+        {
+          "en": "The source entropy is approximately 2.221928 bits per symbol.",
+          "zh": "信源熵约为每符号2.221928比特。"
+        },
+        {
+          "en": "This finite example shows a small coding gap.",
+          "zh": "这个有限例子显示了较小的编码差距。"
+        },
+        {
+          "en": "The merge procedure needs a proof before we call it optimal.",
+          "zh": "在称该合并过程最优之前，还需要证明。"
+        },
+        {
+          "en": "Next, prove that the two lightest symbols can occupy deepest sibling leaves.",
+          "zh": "接下来证明两个最小概率符号可放在最深兄弟叶上。"
+        }
+      ]
+    },
+    {
+      "id": "c03-optimality",
+      "chapter": "Why Huffman is optimal",
+      "title": "Exchange, merge, and apply induction",
+      "music": "proof",
+      "terms": [
+        "huffman",
+        "prefix-free"
+      ],
+      "sentences": [
+        {
+          "en": "Consider at least two symbols, all with positive probability, and binary prefix trees.",
+          "zh": "考虑至少两个正概率符号及其二元前缀树。"
+        },
+        {
+          "en": "A full binary tree with m leaves has exactly m minus one internal nodes.",
+          "zh": "有m个叶的满二叉树恰有m−1个内部节点。"
+        },
+        {
+          "en": "If an internal node has only one child, contract that edge.",
+          "zh": "若某内部节点只有一个子节点，就收缩该边。"
+        },
+        {
+          "en": "Every descendant codeword becomes shorter.",
+          "zh": "所有后代码字都会变短。"
+        },
+        {
+          "en": "Because their probabilities are positive, average length strictly decreases.",
+          "zh": "由于它们概率为正，平均码长会严格下降。"
+        },
+        {
+          "en": "Therefore an optimal tree has no single-child internal node.",
+          "zh": "因此最优树不存在单子节点内部节点。"
+        },
+        {
+          "en": "Such a tree is full: every internal node has two children.",
+          "zh": "这种树是满二叉树：每个内部节点都有两个子节点。"
+        },
+        {
+          "en": "Their depth is at most m minus one, so only finitely many full tree shapes and labels are needed.",
+          "zh": "其深度至多为m−1，因此只需考虑有限种满树形状与标签安排。"
+        },
+        {
+          "en": "An optimal tree therefore exists among these finitely many candidates.",
+          "zh": "因此在这些有限候选中必存在最优树。"
+        },
+        {
+          "en": "Choose a leaf at maximum depth.",
+          "zh": "选择一个深度最大的叶节点。"
+        },
+        {
+          "en": "Its sibling must also be a leaf.",
+          "zh": "它的兄弟节点也必为叶节点。"
+        },
+        {
+          "en": "Otherwise that sibling subtree would contain a deeper leaf.",
+          "zh": "否则兄弟子树中会有更深的叶节点。"
+        },
+        {
+          "en": "Name the two lightest symbols A and B. Their probabilities satisfy p sub A at most p sub B.",
+          "zh": "将两个最轻符号记为a和b，其概率满足p_a≤p_b。"
+        },
+        {
+          "en": "Reserve the two deepest sibling positions. Will moving the lightest labels there increase or decrease the bill?",
+          "zh": "留出两个最深的兄弟位置。把最轻的标签移过去，账单会增加还是减少？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Move A into one position by exchanging its label with the current occupant u.",
+          "zh": "将a与其中一个位置原有标签u交换。"
+        },
+        {
+          "en": "If symbol A already belongs to this sibling pair, choose its current position.",
+          "zh": "若符号a已经位于这对兄弟叶中，就选它当前的位置。"
+        },
+        {
+          "en": "Let its maximum depth be L, at least the original depth of A.",
+          "zh": "记该最大深度为L，它不小于a原有深度。"
+        },
+        {
+          "en": "The change in cost is p sub A minus p sub u, times L minus the old depth of A.",
+          "zh": "代价变化为(pₐ−pᵤ)(L−原来a的深度)。"
+        },
+        {
+          "en": "Both factors have opposite signs or are zero, so this change is nonpositive.",
+          "zh": "两因子符号相反或为零，因此代价变化非正。"
+        },
+        {
+          "en": "Now move B into the other sibling position in the same way.",
+          "zh": "再用相同方式将b移到另一个兄弟位置。"
+        },
+        {
+          "en": "The other position does not contain symbol A, so its probability is at least p sub B.",
+          "zh": "另一位置不含符号a，因此该位置的概率至少为p_b。"
+        },
+        {
+          "en": "This second exchange also cannot increase average length.",
+          "zh": "第二次交换也不会增加平均码长。"
+        },
+        {
+          "en": "Now the deepest sibling pair carries symbol A and symbol B.",
+          "zh": "现在，最深的兄弟叶对承载符号a和符号b。"
+        },
+        {
+          "en": "Merge them into one pseudo-symbol with probability p sub A plus p sub B.",
+          "zh": "将它们合并成概率为pₐ+p_b的伪符号。"
+        },
+        {
+          "en": "The pseudo-symbol sits at their parent depth.",
+          "zh": "伪符号位于它们父节点的深度。"
+        },
+        {
+          "en": "Expanding it back adds one level to both original leaves.",
+          "zh": "将其展开后，两个原叶都增加一层深度。"
+        },
+        {
+          "en": "That increases total weighted length by exactly p sub A plus p sub B.",
+          "zh": "这使加权总码长恰好增加pₐ+p_b。"
+        },
+        {
+          "en": "The reduced tree is an optimal tree for the reduced probabilities.",
+          "zh": "缩减后的树是缩减概率问题的最优树。"
+        },
+        {
+          "en": "If a better reduced tree existed, expanding it would improve the original.",
+          "zh": "若存在更优缩减树，将其展开便会改进原问题。"
+        },
+        {
+          "en": "That would contradict the original tree’s optimality.",
+          "zh": "这将与原树最优性矛盾。"
+        },
+        {
+          "en": "Conversely, take an optimal tree for the reduced problem.",
+          "zh": "反过来，取缩减问题的一棵最优树。"
+        },
+        {
+          "en": "Replace the pseudo-symbol leaf by sibling leaves for symbol A and symbol B.",
+          "zh": "将伪符号叶展开为承载符号a和符号b的兄弟叶。"
+        },
+        {
+          "en": "The cost rises by the fixed amount p sub A plus p sub B.",
+          "zh": "代价增加固定量pₐ+p_b。"
+        },
+        {
+          "en": "Thus minimizing the reduced tree also minimizes the expanded tree.",
+          "zh": "所以最小化缩减树也就最小化展开树。"
+        },
+        {
+          "en": "Induction on the number of symbols proves the repeated merge algorithm optimal.",
+          "zh": "对符号数归纳，即可证明重复合并算法最优。"
+        },
+        {
+          "en": "With two symbols, codewords zero and one give the full-tree base case.",
+          "zh": "两个符号时，码字0和1给出满树归纳基例。"
+        },
+        {
+          "en": "The induction step uses the exchange property and exact merge cost.",
+          "zh": "归纳步骤依赖交换性质和精确合并代价。"
+        },
+        {
+          "en": "For D-ary trees, an internal node has D children.",
+          "zh": "对D元树，每个内部节点有D个子节点。"
+        },
+        {
+          "en": "A full D-ary tree with m leaves requires m minus one divisible by D minus one.",
+          "zh": "满D元树的叶数m须满足m−1可被D−1整除。"
+        },
+        {
+          "en": "Pad zero-weight leaves until this congruence holds.",
+          "zh": "补入零权重叶，直到满足该同余条件。"
+        },
+        {
+          "en": "The needed padding count is the smallest nonnegative r making it hold.",
+          "zh": "所需补叶数r是使其成立的最小非负整数。"
+        },
+        {
+          "en": "Equivalently, r equals the remainder correction modulo D minus one.",
+          "zh": "等价地，r是模D−1所需的余数修正。"
+        },
+        {
+          "en": "At each step, merge exactly D of the lightest current weights.",
+          "zh": "每一步恰好合并当前最轻的D个权重。"
+        },
+        {
+          "en": "The padding leaves do not change positive-symbol weighted cost.",
+          "zh": "补入的叶不会改变正概率符号的加权代价。"
+        },
+        {
+          "en": "Next, build a prefix code directly from cumulative probability intervals.",
+          "zh": "接下来直接从累积概率区间构造前缀码。"
+        }
+      ]
+    },
+    {
+      "id": "c04-sfe",
+      "chapter": "Shannon–Fano–Elias construction",
+      "title": "A midpoint cell fits inside each probability interval",
+      "music": "proof",
+      "terms": [
+        "sfe",
+        "prefix-free"
+      ],
+      "sentences": [
+        {
+          "en": "Order the positive-probability symbols in any fixed sequence.",
+          "zh": "按任意固定顺序排列正概率符号。"
+        },
+        {
+          "en": "Let F left i be the total probability before symbol i.",
+          "zh": "令F_left(i)为符号i之前的累计概率。"
+        },
+        {
+          "en": "Symbol i owns the half-open interval from F left i to F left i plus p i.",
+          "zh": "符号i拥有半开区间[F_left(i),F_left(i)+p_i)。"
+        },
+        {
+          "en": "Its midpoint is F left i plus p i over two.",
+          "zh": "其中点为F_left(i)+p_i/2。"
+        },
+        {
+          "en": "Let l i equal ceiling of negative log two p i plus one.",
+          "zh": "令lᵢ=⌈−log₂pᵢ⌉+1。"
+        },
+        {
+          "en": "Write the midpoint in binary and keep its first l i bits.",
+          "zh": "将中点写成二进制，并保留前lᵢ位。"
+        },
+        {
+          "en": "Those bits identify a dyadic cell of width two to negative l i.",
+          "zh": "这些位对应宽度为2^(−lᵢ)的二进制区间。"
+        },
+        {
+          "en": "Since l i exceeds negative log two p i by at least one, cell width is at most p i over two.",
+          "zh": "由于lᵢ至少比−log₂pᵢ大一，区间宽度至多为pᵢ/2。"
+        },
+        {
+          "en": "The midpoint lies inside its source interval.",
+          "zh": "中点位于对应信源区间内部。"
+        },
+        {
+          "en": "Each cell endpoint is at most one cell width from the midpoint.",
+          "zh": "区间端点到中点的距离至多为一个区间宽度。"
+        },
+        {
+          "en": "The endpoint distance is at most half the interval width. Which containment does that guarantee?",
+          "zh": "端点距离不超过区间宽度的一半。这能保证哪种包含关系？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Therefore the entire dyadic cell lies inside its source interval.",
+          "zh": "因此整个二进制区间都包含在信源区间内。"
+        },
+        {
+          "en": "Distinct source intervals are disjoint.",
+          "zh": "不同信源区间互不相交。"
+        },
+        {
+          "en": "Their contained dyadic cells are also disjoint.",
+          "zh": "其中的二进制区间也彼此不交。"
+        },
+        {
+          "en": "A dyadic cell for a word contains every cell for its extensions.",
+          "zh": "某个词的二进制区间包含其所有扩展词的区间。"
+        },
+        {
+          "en": "Disjoint cells therefore imply that no codeword prefixes another.",
+          "zh": "区间互不相交，因此没有码字是另一者的前缀。"
+        },
+        {
+          "en": "The SFE construction is prefix-free.",
+          "zh": "SFE构造得到前缀码。"
+        },
+        {
+          "en": "Its length is at least negative log two p i plus one.",
+          "zh": "其码长至少为−log₂pᵢ+1。"
+        },
+        {
+          "en": "It is strictly less than negative log two p i plus two.",
+          "zh": "其码长严格小于−log₂pᵢ+2。"
+        },
+        {
+          "en": "Averaging gives a length below H plus two bits.",
+          "zh": "取平均得到码长小于H+2比特。"
+        },
+        {
+          "en": "The general prefix-code lower bound still gives H at most L.",
+          "zh": "一般前缀码下界仍给出H≤L。"
+        },
+        {
+          "en": "Thus SFE satisfies H at most L and L strictly below H plus two.",
+          "zh": "所以SFE满足H≤L<H+2。"
+        },
+        {
+          "en": "The extra protection bit ensures the selected cell fits inside the source interval.",
+          "zh": "额外的保护位确保选中区间落在信源区间内部。"
+        },
+        {
+          "en": "For a dyadic midpoint, choose the terminating binary expansion followed by zeros.",
+          "zh": "若中点是有限二进制小数，选择有限展开并在末尾补零。"
+        },
+        {
+          "en": "Use half-open intervals consistently at shared boundaries.",
+          "zh": "对共享边界始终采用半开区间约定。"
+        },
+        {
+          "en": "No source symbol with zero probability needs a midpoint.",
+          "zh": "概率为零的信源符号无需定义中点。"
+        },
+        {
+          "en": "The construction assumes a known distribution and a fixed symbol order.",
+          "zh": "该构造假设分布已知且符号顺序固定。"
+        },
+        {
+          "en": "The cumulative interval uses the source probabilities, not estimated code lengths.",
+          "zh": "累积区间使用信源概率，而非估计的码长。"
+        },
+        {
+          "en": "Changing the fixed symbol order changes intervals but preserves the proof.",
+          "zh": "改变固定符号顺序会改变区间，但不影响证明。"
+        },
+        {
+          "en": "This gives a constructive code whenever the distribution is available.",
+          "zh": "只要分布已知，这就给出可构造的编码。"
+        },
+        {
+          "en": "For probabilities one half, one quarter, one quarter, the cumulative midpoints are one quarter, five eighths, and seven eighths.",
+          "zh": "对概率(1/2,1/4,1/4)，累计区间中点为1/4、5/8、7/8。"
+        },
+        {
+          "en": "Their binary expansions begin point zero one, point one zero one, and point one one one.",
+          "zh": "它们的二进制展开分别以0.01、0.101、0.111开头。"
+        },
+        {
+          "en": "The selected lengths are two, three, and three.",
+          "zh": "所选码长为2、3、3。"
+        },
+        {
+          "en": "The SFE codewords are zero one, one zero one, and one one one.",
+          "zh": "SFE码字为01、101、111。"
+        },
+        {
+          "en": "Their dyadic cells lie inside the three original probability intervals.",
+          "zh": "它们的二进制区间分别位于三个原概率区间内。"
+        },
+        {
+          "en": "Average length is two point five bits, while entropy is one point five.",
+          "zh": "平均码长为2.5比特，熵为1.5比特。"
+        },
+        {
+          "en": "Next, ask what coding means when the distribution is unknown.",
+          "zh": "接下来讨论分布未知时编码意味着什么。"
+        }
+      ]
+    },
+    {
+      "id": "c05-universal",
+      "chapter": "What universal coding promises",
+      "title": "One code, two possible sources",
+      "music": "definition",
+      "terms": [
+        "universal-code",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Two sources swap which symbol is common. Choose one code before discovering the source.",
+          "zh": "两个信源中，最常见的符号互换了。必须在得知信源之前选择同一码。"
+        },
+        {
+          "en": "Source one gives probabilities .8, .1, .1. Source two gives .1, .8, .1.",
+          "zh": "信源一的概率为0.8、0.1、0.1，信源二为0.1、0.8、0.1。"
+        },
+        {
+          "en": "Code one gives A one bit and B and C two bits. Code two gives B the one-bit word instead.",
+          "zh": "码一给A一比特，给B和C各两比特。码二改为给B一比特。"
+        },
+        {
+          "en": "Which of these two codebooks costs less for both sources?",
+          "zh": "这两本码表中，哪一本对两个信源都更便宜？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Neither. The costs are 1.2 versus 1.9 bits, and they exchange when the source switches.",
+          "zh": "都不是。代价分别是1.2和1.9比特；切换信源后，二者互换。"
+        },
+        {
+          "en": "A universal encoder is selected without knowing the true source distribution.",
+          "zh": "通用编码器在不知道真实信源分布时选定。"
+        },
+        {
+          "en": "The word universal is incomplete unless we name a source class.",
+          "zh": "若不说明信源类别，“通用”一词并不完整。"
+        },
+        {
+          "en": "It also needs a performance criterion.",
+          "zh": "还需要明确性能标准。"
+        },
+        {
+          "en": "For a fixed distribution P and block length n, measure expected code length under P.",
+          "zh": "对固定分布P和块长n，计算P下的期望码长。"
+        },
+        {
+          "en": "Subtract n times H of P to obtain expected redundancy.",
+          "zh": "减去nH(P)，得到期望冗余。"
+        },
+        {
+          "en": "This is pointwise redundancy for that particular P.",
+          "zh": "这就是该特定P下的逐源冗余。"
+        },
+        {
+          "en": "A sequence of codes can be studied separately for each fixed P.",
+          "zh": "可对每个固定P分别研究一列码。"
+        },
+        {
+          "en": "Another benchmark takes the worst expected redundancy over a class C.",
+          "zh": "另一种基准是在类别C上取最坏期望冗余。"
+        },
+        {
+          "en": "For each block length, minimize that worst value over admissible codes.",
+          "zh": "对每个块长，在允许的码中最小化该最坏值。"
+        },
+        {
+          "en": "This is a minimax expected-redundancy criterion.",
+          "zh": "这就是极小极大期望冗余准则。"
+        },
+        {
+          "en": "Pointwise and minimax questions are different.",
+          "zh": "逐源问题与极小极大问题不同。"
+        },
+        {
+          "en": "A code can perform well for one distribution and poorly for another.",
+          "zh": "一个码可能对某分布表现良好，却对另一个分布很差。"
+        },
+        {
+          "en": "The class might be all IID laws on a finite alphabet.",
+          "zh": "信源类别可以是有限字母表上的所有IID分布。"
+        },
+        {
+          "en": "It might instead restrict parameters or impose memory structure.",
+          "zh": "也可以限制参数范围或规定记忆结构。"
+        },
+        {
+          "en": "A redundancy statement must say which choice is intended.",
+          "zh": "冗余结论必须说明采用哪种设定。"
+        },
+        {
+          "en": "An unknown model can cause a mismatch penalty like KL divergence.",
+          "zh": "模型未知会引入类似KL散度的错配代价。"
+        },
+        {
+          "en": "A universal method aims to control coding cost without selecting P in advance.",
+          "zh": "通用方法力图在事先不选定P时控制编码代价。"
+        },
+        {
+          "en": "This aim does not imply zero overhead at every finite block length.",
+          "zh": "这一目标不意味着每个有限块长下开销都为零。"
+        },
+        {
+          "en": "It also does not imply optimality for every individual sequence.",
+          "zh": "它也不意味着对每个单独序列都最优。"
+        },
+        {
+          "en": "Expected redundancy is averaged over the source law.",
+          "zh": "期望冗余是按照信源分布平均的。"
+        },
+        {
+          "en": "A worst-case sequence criterion would require a different definition.",
+          "zh": "最坏序列准则需要另行定义。"
+        },
+        {
+          "en": "A specific theorem must identify its code, class, and asymptotic claim.",
+          "zh": "具体定理必须指出编码器、信源类和渐近结论。"
+        },
+        {
+          "en": "We make no general rate claim from the word universal alone.",
+          "zh": "仅凭“通用”一词，我们不作一般速率断言。"
+        },
+        {
+          "en": "LZ78 provides a concrete dictionary mechanism that does not start from P.",
+          "zh": "LZ78提供一种无需预先给定P的具体词典机制。"
+        },
+        {
+          "en": "One short example illustrates its operation, not its asymptotic performance.",
+          "zh": "一个短例子只说明其操作，不证明渐近性能。"
+        },
+        {
+          "en": "A pointwise question fixes P before taking block length large.",
+          "zh": "逐源问题先固定P，再令块长增大。"
+        },
+        {
+          "en": "A minimax question takes the worst P in the class at each length.",
+          "zh": "极小极大问题则在每个块长下取类别内最坏的P。"
+        },
+        {
+          "en": "The order of optimization and limits matters.",
+          "zh": "优化与取极限的顺序很重要。"
+        },
+        {
+          "en": "No pointwise or minimax theorem is proved in this discussion.",
+          "zh": "本段讨论并未证明逐源或极小极大定理。"
+        },
+        {
+          "en": "Next, encode and decode that example explicitly.",
+          "zh": "接下来明确演示该例的编码与解码。"
+        }
+      ]
+    },
+    {
+      "id": "c06-lz78",
+      "chapter": "LZ78 dictionary parsing",
+      "title": "Encoder and decoder add identical phrases",
+      "music": "recap",
+      "terms": [
+        "lz78",
+        "universal-code"
+      ],
+      "sentences": [
+        {
+          "en": "Use the binary input string zero one zero zero one zero zero.",
+          "zh": "使用二进制输入串0100100。"
+        },
+        {
+          "en": "The dictionary begins with the empty phrase at index zero.",
+          "zh": "词典以索引0的空短语开始。"
+        },
+        {
+          "en": "At each step, find the longest dictionary phrase matching the unread prefix.",
+          "zh": "每一步寻找与未读前缀匹配的最长词典短语。"
+        },
+        {
+          "en": "Append the next input symbol to form a new phrase.",
+          "zh": "再接上下一个输入符号，形成新短语。"
+        },
+        {
+          "en": "Output the old phrase index and the new symbol.",
+          "zh": "输出旧短语索引及新符号。"
+        },
+        {
+          "en": "Then add the new phrase at the next dictionary index.",
+          "zh": "随后将新短语加入下一个词典索引。"
+        },
+        {
+          "en": "Initially, zero is not yet in the dictionary.",
+          "zh": "起初，短语0尚未进入词典。"
+        },
+        {
+          "en": "Emit index zero with new symbol zero, then add phrase zero at index one.",
+          "zh": "输出(0,0)，再将短语0加入索引1。"
+        },
+        {
+          "en": "The unread input now begins with one.",
+          "zh": "此时未读输入以1开头。"
+        },
+        {
+          "en": "Emit index zero with symbol one, then add phrase one at index two.",
+          "zh": "输出(0,1)，再将短语1加入索引2。"
+        },
+        {
+          "en": "The remaining input begins with zero zero.",
+          "zh": "剩余输入以00开头。"
+        },
+        {
+          "en": "Phrase zero already exists. Which record sends the next new phrase?",
+          "zh": "短语0已在词典里。下一条新短语应发送哪条记录？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Emit index one with zero, adding phrase zero zero at index three.",
+          "zh": "输出(1,0)，并将短语00加入索引3。"
+        },
+        {
+          "en": "The remaining input begins with one zero.",
+          "zh": "剩余输入以10开头。"
+        },
+        {
+          "en": "Phrase one exists, so append zero.",
+          "zh": "短语1已存在，因此接上0。"
+        },
+        {
+          "en": "Emit index two with zero, adding phrase one zero at index four.",
+          "zh": "输出(2,0)，并将短语10加入索引4。"
+        },
+        {
+          "en": "One final zero remains, and phrase zero already exists. Should the dictionary gain another entry?",
+          "zh": "最后还剩一个0，而短语0已存在。词典还应该新增一项吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "At known end of file, emit a pointer-only terminal record for index one.",
+          "zh": "已知文件结束时，输出指向索引1的仅指针终止记录。"
+        },
+        {
+          "en": "The decoder treats that distinguished terminal record as the final existing phrase.",
+          "zh": "译码器将该特殊终止记录视为最后一个已有短语。"
+        },
+        {
+          "en": "It does not add a new dictionary phrase for that terminal record.",
+          "zh": "译码器不会为该终止记录新增词典短语。"
+        },
+        {
+          "en": "Now decode the first pair as empty phrase plus zero.",
+          "zh": "现在将第一对译为“空短语加0”。"
+        },
+        {
+          "en": "Output zero and add dictionary entry one as zero.",
+          "zh": "输出0，并将词典项1加入为0。"
+        },
+        {
+          "en": "Decode the second pair as empty phrase plus one.",
+          "zh": "将第二对译为“空短语加1”。"
+        },
+        {
+          "en": "Output one and add dictionary entry two as one.",
+          "zh": "输出1，并将词典项2加入为1。"
+        },
+        {
+          "en": "The third pair points to entry one and appends zero.",
+          "zh": "第三对指向词典项1并接上0。"
+        },
+        {
+          "en": "Output zero zero and add that phrase at entry three.",
+          "zh": "输出00，并将该短语加入词典项3。"
+        },
+        {
+          "en": "The fourth pair points to entry two and appends zero.",
+          "zh": "第四对指向词典项2并接上0。"
+        },
+        {
+          "en": "Output one zero and add that phrase at entry four.",
+          "zh": "输出10，并将该短语加入词典项4。"
+        },
+        {
+          "en": "The terminal pointer outputs entry one, which is zero.",
+          "zh": "终止指针输出词典项1，即0。"
+        },
+        {
+          "en": "Concatenate outputs zero, one, zero zero, one zero, and zero.",
+          "zh": "串接输出0、1、00、10和0。"
+        },
+        {
+          "en": "The seven recovered bits, in order, are zero, one, zero, zero, one, zero, zero.",
+          "zh": "按顺序恢复的七个比特是0、1、0、0、1、0、0。"
+        },
+        {
+          "en": "Both sides added phrases zero, one, zero zero, and one zero in order.",
+          "zh": "两端依次加入短语0、1、00和10。"
+        },
+        {
+          "en": "For raw fields, include a pointer and one new bit in each ordinary record.",
+          "zh": "按原始字段计，每个普通记录含指针和一个新比特。"
+        },
+        {
+          "en": "Before the four records, dictionary sizes are one, two, three, and four.",
+          "zh": "四条普通记录之前，词典大小依次为1、2、3、4。"
+        },
+        {
+          "en": "Pointer widths are zero, one, two, and two bits using ceiling log two size.",
+          "zh": "按⌈log₂词典大小⌉，指针宽度依次为0、1、2、2比特。"
+        },
+        {
+          "en": "The pointers therefore use five bits, and new symbols use four bits.",
+          "zh": "因此普通指针共用5比特，新符号共用4比特。"
+        },
+        {
+          "en": "The terminal pointer uses three bits with dictionary size five. Does this seven-bit example actually save bits?",
+          "zh": "词典大小为五时，末尾指针占三比特。这段七比特输入真的被压缩了吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "This gives twelve counted field bits under the stated convention.",
+          "zh": "按上述约定，计数字段共12比特。"
+        },
+        {
+          "en": "Framing, record types, and end-of-file signaling add separate protocol overhead.",
+          "zh": "帧界定、记录类型和文件结束信号另有协议开销。"
+        },
+        {
+          "en": "This small dictionary example proves no asymptotic compression theorem.",
+          "zh": "这个小词典例子不证明任何渐近压缩定理。"
+        },
+        {
+          "en": "It only shows synchronized parsing and dictionary growth.",
+          "zh": "它只展示同步解析与词典增长。"
+        },
+        {
+          "en": "Next, noisy channels require a different notion of reliable coding.",
+          "zh": "下一集转向噪声信道下的可靠编码问题。"
+        }
+      ]
+    }
+  ]
+}

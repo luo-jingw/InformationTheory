@@ -1,0 +1,923 @@
+{
+  "episode": "e11-awgn-coding",
+  "title": "AWGN Channel Coding",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-awgn",
+      "chapter": "The Real AWGN Model",
+      "title": "The Real AWGN Model",
+      "music": "definition",
+      "terms": [
+        "awgn",
+        "snr"
+      ],
+      "sentences": [
+        {
+          "en": "For each real channel use, the receiver observes Y equals X plus Z.",
+          "zh": "每次实信道使用中，接收端观测Y=X+Z。"
+        },
+        {
+          "en": "The noise Z is Gaussian with mean zero and variance N.",
+          "zh": "噪声Z服从均值零、方差N的高斯分布。"
+        },
+        {
+          "en": "Assume N is strictly positive.",
+          "zh": "假设N严格为正。"
+        },
+        {
+          "en": "Across uses, the noises are independent and identically distributed.",
+          "zh": "各次使用中的噪声独立同分布。"
+        },
+        {
+          "en": "They are also independent of the message and transmitted codeword.",
+          "zh": "噪声还与消息及发送码字独立。"
+        },
+        {
+          "en": "A block code assigns one real vector x of length n to each message m.",
+          "zh": "分组码为每个消息m分配一个长度为n的实向量x。"
+        },
+        {
+          "en": "The transmitted vector is the codeword associated with the selected message.",
+          "zh": "发送向量就是所选消息对应的码字。"
+        },
+        {
+          "en": "Constrain every codeword separately. With n equal to two and P equal to one, does a codeword with both coordinates equal to one point five qualify?",
+          "zh": "每个码字分别受约束。当n为二、P为一时，点(1.5,1.5)合格吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "For every message m, its squared Euclidean norm is at most n times P.",
+          "zh": "对每个消息m，其欧几里得范数平方至多为nP。"
+        },
+        {
+          "en": "Equivalently, the average squared coordinate of each codeword is at most P.",
+          "zh": "等价地，每个码字的坐标平方平均至多为P。"
+        },
+        {
+          "en": "This is stronger than bounding power only after averaging over messages.",
+          "zh": "这比只对消息平均后限制功率更强。"
+        },
+        {
+          "en": "The parameter P is nonnegative.",
+          "zh": "参数P非负。"
+        },
+        {
+          "en": "When P is zero, every allowed codeword must be the zero vector.",
+          "zh": "当P为零时，每个允许码字都必须是零向量。"
+        },
+        {
+          "en": "The output then contains only noise, so reliable positive-rate communication is impossible.",
+          "zh": "此时输出只有噪声，因此无法可靠传输正速率。"
+        },
+        {
+          "en": "The signal-to-noise ratio is P divided by N.",
+          "zh": "信噪比是P除以N。"
+        },
+        {
+          "en": "Both P and N are measured per real channel use.",
+          "zh": "P与N都按每次实信道使用计量。"
+        },
+        {
+          "en": "The capacity will therefore be measured in bits per real use.",
+          "zh": "因此容量单位是每次实信道使用的比特数。"
+        },
+        {
+          "en": "Each use contributes one scalar coordinate to the block.",
+          "zh": "每次使用向分组贡献一个标量坐标。"
+        },
+        {
+          "en": "The channel law is memoryless because each output uses its own independent noise.",
+          "zh": "由于每个输出使用各自独立的噪声，该信道是无记忆的。"
+        },
+        {
+          "en": "The input coordinates need not be independent for the converse.",
+          "zh": "反向证明不要求输入坐标相互独立。"
+        },
+        {
+          "en": "The code may coordinate all coordinates of a codeword.",
+          "zh": "编码器可以协调一个码字的所有坐标。"
+        },
+        {
+          "en": "Only the total squared norm of each codeword is constrained.",
+          "zh": "约束的只是每个码字的总范数平方。"
+        },
+        {
+          "en": "We first use this exact constraint to bound every reliable code.",
+          "zh": "我们先用这一精确约束界定所有可靠码。"
+        },
+        {
+          "en": "Then random Gaussian codewords will approach the bound while respecting it.",
+          "zh": "随后将用高斯随机码字逼近该界并满足约束。"
+        },
+        {
+          "en": "The random ensemble itself may contain codewords that exceed the limit.",
+          "zh": "随机码本整体中可能含有超出限制的码字。"
+        },
+        {
+          "en": "The proof will remove those words before claiming a valid code.",
+          "zh": "证明会在宣称码本有效之前删去这些码字。"
+        },
+        {
+          "en": "Keep this distinction between an ensemble and a selected codebook.",
+          "zh": "请区分随机码本集合与最终选定的码本。"
+        },
+        {
+          "en": "No probability average can replace the requirement on every retained message.",
+          "zh": "对概率取平均不能替代对每个保留消息的要求。"
+        },
+        {
+          "en": "The model is now fixed for the converse and achievability arguments.",
+          "zh": "现在模型已固定，可以进行反向证明与可达性证明。"
+        },
+        {
+          "en": "We next derive the rate ceiling from Fano and Gaussian entropy.",
+          "zh": "接下来用Fano不等式和高斯熵推出速率上界。"
+        }
+      ]
+    },
+    {
+      "id": "c02-upper",
+      "chapter": "The Converse Bound",
+      "title": "The Converse Bound",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "fano",
+        "gaussian",
+        "jensen"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a code with M equiprobable messages and block length n.",
+          "zh": "考虑含M个等概率消息、块长为n的码。"
+        },
+        {
+          "en": "Let the average decoding error probability be P sub e.",
+          "zh": "令平均译码错误概率为Pe。"
+        },
+        {
+          "en": "Fano bounds the remaining message uncertainty by one plus P sub e times log base two of M.",
+          "zh": "Fano不等式将剩余消息不确定性界为1加Pe log₂M。"
+        },
+        {
+          "en": "The product of one minus P sub e and log base two of M, minus one, is at most the message-output mutual information.",
+          "zh": "因此(1−Pe)log₂M−1不超过消息与输出的互信息。"
+        },
+        {
+          "en": "The encoded vector is a deterministic function of the message.",
+          "zh": "编码向量是消息的确定函数。"
+        },
+        {
+          "en": "The message, codeword, and output form a Markov chain in that order.",
+          "zh": "消息、码字与输出依次构成马尔可夫链。"
+        },
+        {
+          "en": "Data processing bounds message-output information by codeword-output information.",
+          "zh": "由数据处理不等式，消息与输出的互信息不超过码字与输出的互信息。"
+        },
+        {
+          "en": "Independence of noise gives codeword-output information as h of Y block minus h of Z block.",
+          "zh": "噪声独立，因此码字与输出互信息为h(Y^n)−h(Z^n)。"
+        },
+        {
+          "en": "The output block entropy is at most the sum of its coordinate entropies.",
+          "zh": "输出块熵至多为各坐标熵之和。"
+        },
+        {
+          "en": "This is entropy subadditivity; the outputs need not be independent.",
+          "zh": "这是熵的次可加性；输出不必相互独立。"
+        },
+        {
+          "en": "For each coordinate, Gaussian noise is independent of the input coordinate.",
+          "zh": "对每个坐标，高斯噪声与输入坐标独立。"
+        },
+        {
+          "en": "Therefore its output variance equals input variance plus N.",
+          "zh": "因此输出方差等于输入方差加N。"
+        },
+        {
+          "en": "Input variance is no greater than input second moment.",
+          "zh": "输入方差不超过输入二阶矩。"
+        },
+        {
+          "en": "The maximum-entropy property bounds each output entropy by a Gaussian entropy.",
+          "zh": "最大熵性质用高斯熵界定每个输出熵。"
+        },
+        {
+          "en": "Subtract the entropy of the independent Gaussian noise in every coordinate.",
+          "zh": "在每个坐标上减去独立高斯噪声的熵。"
+        },
+        {
+          "en": "The result is at most one half log two of one plus input second moment over N.",
+          "zh": "结果至多为二分之一log₂(1加输入二阶矩除以N)。"
+        },
+        {
+          "en": "Summing leaves one logarithm for each coordinate.",
+          "zh": "求和后每个坐标贡献一个对数项。"
+        },
+        {
+          "en": "The codeword constraint bounds the sum of these second moments by n times P.",
+          "zh": "码字约束将这些二阶矩之和限制为nP。"
+        },
+        {
+          "en": "Apply Jensen because log one plus power over N is concave.",
+          "zh": "由于log(1加功率除以N)是凹函数，应用Jensen不等式。"
+        },
+        {
+          "en": "The average of the logarithms is at most the logarithm at average power.",
+          "zh": "对数的平均值至多为平均功率处的对数。"
+        },
+        {
+          "en": "This gives mutual information at most n divided by two, times log base two of one plus P over N.",
+          "zh": "由此互信息至多为n/2 log₂(1+P/N)。"
+        },
+        {
+          "en": "The factor one half comes from a real Gaussian degree of freedom.",
+          "zh": "因子二分之一来自一个实高斯自由度。"
+        },
+        {
+          "en": "It is not a conversion from bits per use to bits per second.",
+          "zh": "它不是从每次使用比特数换算成每秒比特数。"
+        },
+        {
+          "en": "Combine this bound with Fano and divide by n.",
+          "zh": "将此界与Fano不等式合并并除以n。"
+        },
+        {
+          "en": "For a sequence of codes with P sub e tending to zero, the limiting rate cannot exceed this value.",
+          "zh": "若一列码的Pe趋于零，其极限速率不超过该值。"
+        },
+        {
+          "en": "When P is zero, the expression is zero, matching the noise-only channel.",
+          "zh": "当P为零时，该表达式为零，与纯噪声信道相符。"
+        },
+        {
+          "en": "For positive P and N, the ceiling is one half log two of one plus SNR.",
+          "zh": "当P与N为正时，上界为二分之一log₂(1+SNR)。"
+        },
+        {
+          "en": "The proof used the power of every codeword, not merely ensemble-average power.",
+          "zh": "证明使用了每个码字的功率，而非仅用码本平均功率。"
+        },
+        {
+          "en": "We next construct codes approaching any rate below the ceiling.",
+          "zh": "接下来构造逼近该上界以下任意速率的码。"
+        },
+        {
+          "en": "The construction needs a fixed power margin before selecting a deterministic code.",
+          "zh": "该构造需要先留出固定功率裕量，再选出确定码。"
+        },
+        {
+          "en": "That margin makes the later expurgation rigorous.",
+          "zh": "该裕量使后续删选步骤严格成立。"
+        }
+      ]
+    },
+    {
+      "id": "c03-codebook",
+      "chapter": "Gaussian Random Codebooks",
+      "title": "Gaussian Random Codebooks",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "random-coding",
+        "joint-typicality",
+        "expurgation",
+        "gaussian"
+      ],
+      "sentences": [
+        {
+          "en": "Assume P is positive and choose a fixed P prime strictly between zero and P.",
+          "zh": "假设P为正，选取固定的P′，使0<P′<P。"
+        },
+        {
+          "en": "Generate each codeword with independent, zero-mean Gaussian coordinates of variance P prime.",
+          "zh": "为每个码字生成独立、零均值、方差P′的高斯坐标。"
+        },
+        {
+          "en": "Choose a positive rate R below one half log two of one plus P prime over N.",
+          "zh": "选择正速率R，低于0.5log₂(1+P′/N)。"
+        },
+        {
+          "en": "The information density between one true codeword and its output has that mean.",
+          "zh": "真实码字与其输出之间的信息密度均值就是该量。"
+        },
+        {
+          "en": "The output is zero-mean Gaussian with variance P prime plus N.",
+          "zh": "输出为零均值、方差P′+N的高斯。"
+        },
+        {
+          "en": "Subtracting the Gaussian noise entropy gives exactly that mutual information.",
+          "zh": "减去高斯噪声熵，恰好得到该互信息。"
+        },
+        {
+          "en": "Use M equal to the integer floor of two raised to n times R messages.",
+          "zh": "取消息数M=⌊2^(nR)⌋。"
+        },
+        {
+          "en": "Fix epsilon positive with three epsilon smaller than the gap I minus R.",
+          "zh": "选定ε>0，使3ε小于I−R。"
+        },
+        {
+          "en": "Independent coordinates make the true pair satisfy typical density tests with probability approaching one.",
+          "zh": "独立坐标使真实码字对以趋近一的概率满足典型密度检验。"
+        },
+        {
+          "en": "Use three negative-log-density tests for input, output, and their joint law.",
+          "zh": "分别对输入、输出及联合分布使用三项负对数密度检验。"
+        },
+        {
+          "en": "Their empirical negative log densities approach the corresponding expectations by the law of large numbers.",
+          "zh": "由大数定律，其经验负对数密度趋于相应期望。"
+        },
+        {
+          "en": "A wrong codeword is independent of the received output under the ensemble.",
+          "zh": "在随机码本集合下，错误码字与接收输出相互独立。"
+        },
+        {
+          "en": "This independence is exact, not an approximation.",
+          "zh": "这种独立是精确的，而非近似。"
+        },
+        {
+          "en": "On the joint typical set, the likelihood ratio is exponentially large.",
+          "zh": "在联合典型集上，似然比呈指数级增大。"
+        },
+        {
+          "en": "Joint surprisal bounds make fXY at least two raised to negative n times (hXY plus epsilon).",
+          "zh": "联合自信息界使f_XY^n至少为2^(−n(h(X,Y)+ε))。"
+        },
+        {
+          "en": "Input and output surprisal bounds make fX and fY at most two raised to negative n times (their entropies minus epsilon).",
+          "zh": "输入与输出自信息界使f_X^n、f_Y^n至多为各自2^(−n(h−ε))。"
+        },
+        {
+          "en": "Their product divided by fXY is at most two raised to negative n times (I minus three epsilon).",
+          "zh": "二者乘积除以fXY至多为2^(−n(I−3ε))。"
+        },
+        {
+          "en": "Integrate under the independent product law and replace its density by that ratio times fXY.",
+          "zh": "在独立乘积分布下积分，并将其密度改写为该比值乘fXY。"
+        },
+        {
+          "en": "The joint probability of the typical set is at most one.",
+          "zh": "联合典型集的概率至多为一。"
+        },
+        {
+          "en": "Therefore the independent wrong-pair probability is at most two raised to negative n times (I minus three epsilon).",
+          "zh": "因此独立错误码字对概率至多为2^(−n(I−3ε))。"
+        },
+        {
+          "en": "A union bound over fewer than two raised to n times R competitors makes this vanish when R is below I.",
+          "zh": "当R<I时，对少于2^(nR)个竞争码字作并集界可使概率趋零。"
+        },
+        {
+          "en": "Together with the true-pair atypical probability, ensemble-average error tends to zero.",
+          "zh": "结合真实码字对的非典型概率，码本集合平均错误趋于零。"
+        },
+        {
+          "en": "Now check power separately for each generated codeword.",
+          "zh": "现在分别检查每个生成码字的功率。"
+        },
+        {
+          "en": "Its coordinate squares are independent with mean P prime.",
+          "zh": "其坐标平方独立，均值为P′。"
+        },
+        {
+          "en": "The law of large numbers makes the probability of average power above P tend to zero.",
+          "zh": "大数定律使平均功率超过P的概率趋于零。"
+        },
+        {
+          "en": "The strict power margin matters. If P prime equals P, must the overpowered fraction still vanish?",
+          "zh": "严格功率裕量很关键。如果P′等于P，超功率比例还一定趋于零吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "At variance exactly P, exceedance probability need not tend to zero.",
+          "zh": "方差恰为P时，超限概率未必趋于零。"
+        },
+        {
+          "en": "The expected fraction of overpowered codewords therefore tends to zero.",
+          "zh": "因此，超功率码字比例的期望趋于零。"
+        },
+        {
+          "en": "Let beta n denote that expected fraction and epsilon n the expected average decoding error.",
+          "zh": "令βₙ为该比例期望，εₙ为平均译码错误的期望。"
+        },
+        {
+          "en": "Both quantities tend to zero.",
+          "zh": "这两个量都趋于零。"
+        },
+        {
+          "en": "Select a deterministic codebook whose actual average error plus actual overpowered fraction is at most epsilon n plus beta n.",
+          "zh": "选定确定码本，使其实际平均错误加实际超功率比例不超过εₙ+βₙ。"
+        },
+        {
+          "en": "In that codebook, discard every overpowered message.",
+          "zh": "在该码本中，删去所有超功率消息。"
+        },
+        {
+          "en": "Define delta n as epsilon n plus beta n, which tends to zero.",
+          "zh": "定义δₙ=εₙ+βₙ，它趋于零。"
+        },
+        {
+          "en": "If delta n is zero, all messages already have valid power and zero error.",
+          "zh": "若δₙ为零，则所有消息都满足功率且错误为零。"
+        },
+        {
+          "en": "Otherwise also discard messages whose conditional error exceeds square root delta n.",
+          "zh": "否则，再删去条件错误超过√δₙ的消息。"
+        },
+        {
+          "en": "Markov inequality bounds the latter fraction by square root of delta n.",
+          "zh": "Markov不等式将后者比例界为√δₙ。"
+        },
+        {
+          "en": "The total discarded fraction is at most delta n plus square root delta n.",
+          "zh": "总删去比例至多为δₙ+√δₙ。"
+        },
+        {
+          "en": "Reassign deleted decoding outputs to retained messages, preserving every retained correct region.",
+          "zh": "将已删消息的译码输出重新分给保留消息，保留原有正确区域。"
+        },
+        {
+          "en": "Every retained codeword satisfies the power constraint individually.",
+          "zh": "每个保留码字都逐个满足功率约束。"
+        },
+        {
+          "en": "Every retained message has conditional error tending uniformly to zero.",
+          "zh": "每个保留消息的条件错误率都一致趋于零。"
+        },
+        {
+          "en": "Retaining a fraction tending to one changes the rate by a quantity tending to zero.",
+          "zh": "保留趋于一的比例只使速率改变趋零量。"
+        },
+        {
+          "en": "For each fixed P prime, rates below its Gaussian mutual information are achievable.",
+          "zh": "对每个固定P′，低于其高斯互信息的速率均可达。"
+        },
+        {
+          "en": "Finally let P prime increase toward P.",
+          "zh": "最后令P′逐渐增至P。"
+        },
+        {
+          "en": "Continuity gives every rate strictly below the claimed capacity.",
+          "zh": "由连续性可得容量以下的每个严格较低速率。"
+        },
+        {
+          "en": "If P is zero, the trivial zero-rate code handles the boundary.",
+          "zh": "若P为零，平凡零速率码处理该边界。"
+        },
+        {
+          "en": "This is an existence proof, not a claim that every random codebook is good.",
+          "zh": "这是存在性证明，不表示每个随机码本都好。"
+        }
+      ]
+    },
+    {
+      "id": "c04-geometry",
+      "chapter": "A Volume Analogy",
+      "title": "A Volume Analogy",
+      "music": "motivation",
+      "terms": [
+        "awgn",
+        "snr"
+      ],
+      "sentences": [
+        {
+          "en": "A high-dimensional picture can explain the capacity formula intuitively.",
+          "zh": "高维图像可以直观解释容量公式。"
+        },
+        {
+          "en": "Every permitted input vector lies inside the ball with radius equal to the square root of n times P.",
+          "zh": "每个允许输入向量都位于半径√(nP)的球内。"
+        },
+        {
+          "en": "This input ball expresses the codeword constraint.",
+          "zh": "这个输入球表达码字约束。"
+        },
+        {
+          "en": "It is not the numerator of the decisive output-volume ratio.",
+          "zh": "它不是关键输出体积比的分子。"
+        },
+        {
+          "en": "For a zero-mean Gaussian input with variance P, typical output norm is about the square root of n times the sum P plus N.",
+          "zh": "零均值、方差P的高斯输入下，典型输出范数约为√(n(P+N))。"
+        },
+        {
+          "en": "Typical noise norm is about the square root of n times N.",
+          "zh": "典型噪声范数约为√(nN)。"
+        },
+        {
+          "en": "Thus the receiver-side region has squared radius about n times the sum P plus N.",
+          "zh": "因此接收端区域的半径平方约为n(P+N)。"
+        },
+        {
+          "en": "Noise neighborhoods have squared radius about n times N. Which outer region belongs in the volume ratio?",
+          "zh": "噪声邻域的半径平方约为nN。体积比中应该用哪个外部区域？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Compare these receiver-side volumes, not the input ball against the noise ball.",
+          "zh": "比较的是接收端体积，而非输入球与噪声球。"
+        },
+        {
+          "en": "In n real dimensions, ball volume is proportional to radius raised to power n.",
+          "zh": "在n维实空间中，球体积正比于半径的n次方。"
+        },
+        {
+          "en": "The ratio therefore contributes one half log two of P plus N over N.",
+          "zh": "该比值因此贡献二分之一log₂((P+N)/N)。"
+        },
+        {
+          "en": "This simplifies to one half log two of one plus P over N.",
+          "zh": "这化简为二分之一log₂(1+P/N)。"
+        },
+        {
+          "en": "The exponent one half comes from comparing squared radii.",
+          "zh": "指数中的二分之一来自比较半径平方。"
+        },
+        {
+          "en": "A packing picture places distinguishable noise neighborhoods inside the output region.",
+          "zh": "打包图像将可区分的噪声邻域置于输出区域内。"
+        },
+        {
+          "en": "The volume ratio suggests how many neighborhoods can fit exponentially.",
+          "zh": "体积比提示可指数级容纳多少个邻域。"
+        },
+        {
+          "en": "Taking logarithms converts that count into bits per coordinate.",
+          "zh": "取对数便将该数量转换为每坐标比特数。"
+        },
+        {
+          "en": "This is an analogy for the exponent, not a disjoint-sphere proof.",
+          "zh": "这是指数率的类比，并非互不相交球的证明。"
+        },
+        {
+          "en": "Actual Gaussian codewords are not a perfect sphere packing.",
+          "zh": "实际高斯码字并非完美球堆积。"
+        },
+        {
+          "en": "The earlier random-coding argument supplies the probability proof.",
+          "zh": "前面的随机编码论证才提供概率证明。"
+        },
+        {
+          "en": "The converse also came from entropy rather than literal packing.",
+          "zh": "反向证明也来自熵界，而非字面球堆积。"
+        },
+        {
+          "en": "The separate input ball remains useful as a visual power check.",
+          "zh": "单独的输入球仍可用于可视化功率检查。"
+        },
+        {
+          "en": "Keep its radius label distinct from the output radius.",
+          "zh": "要将它的半径标签与输出半径区分开。"
+        },
+        {
+          "en": "The noise radius represents uncertainty remaining after the signal arrives.",
+          "zh": "噪声半径表示信号到达后仍然存在的不确定性。"
+        },
+        {
+          "en": "More signal power enlarges the output region relative to noise.",
+          "zh": "信号功率越大，输出区域相对噪声区域越大。"
+        },
+        {
+          "en": "That enlarges the volume ratio and the logarithmic rate.",
+          "zh": "这会增大体积比和对数速率。"
+        },
+        {
+          "en": "Increasing noise has the opposite effect.",
+          "zh": "增大噪声则产生相反效果。"
+        },
+        {
+          "en": "The formula is exact even though this geometric story is approximate.",
+          "zh": "尽管几何解释近似，容量公式本身是精确的。"
+        },
+        {
+          "en": "Typical regions concentrate probability rather than contain every possible vector.",
+          "zh": "典型区域集中大部分概率，而非包含所有可能向量。"
+        },
+        {
+          "en": "Next restrict the input to two antipodal signal points.",
+          "zh": "接下来将输入限制为两个相反信号点。"
+        },
+        {
+          "en": "That finite alphabet creates a different information curve.",
+          "zh": "这个有限字母表会产生不同的信息曲线。"
+        }
+      ]
+    },
+    {
+      "id": "c05-bpsk",
+      "chapter": "BPSK Soft and Hard Decisions",
+      "title": "BPSK Soft and Hard Decisions",
+      "music": "definition",
+      "terms": [
+        "awgn",
+        "bpsk",
+        "snr",
+        "data-processing",
+        "binary-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "BPSK restricts the input to two real values, plus square root P and minus square root P.",
+          "zh": "BPSK将输入限制为两个实数值：正√P与负√P。"
+        },
+        {
+          "en": "For this binary-input Gaussian channel, equiprobable symbols maximize mutual information.",
+          "zh": "对此二元输入高斯信道，等概率符号使互信息最大。"
+        },
+        {
+          "en": "For a fixed channel, mutual information is concave in the input distribution.",
+          "zh": "固定信道时，互信息关于输入分布是凹函数。"
+        },
+        {
+          "en": "Reflection swaps the two input symbols and preserves the channel law.",
+          "zh": "反射会交换两个输入符号，并保持信道规律不变。"
+        },
+        {
+          "en": "Averaging an input law with its reflection gives equal probabilities without reducing information.",
+          "zh": "将输入分布与其反射取平均便得到等概率，且不会降低互信息。"
+        },
+        {
+          "en": "Reflecting the output swaps the two conditional Gaussian density curves.",
+          "zh": "反射输出坐标会交换两个条件高斯密度曲线。"
+        },
+        {
+          "en": "The binary input has one bit of entropy under this distribution.",
+          "zh": "该输入分布下二元输入熵为一比特。"
+        },
+        {
+          "en": "The receiver observes the noisy real value R.",
+          "zh": "接收端观测含噪实数R。"
+        },
+        {
+          "en": "A soft decision retains sign and magnitude. Do received values .25 and 2 imply the same confidence?",
+          "zh": "软判决保留符号与幅度。接收值0.25和2意味着相同置信度吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "A hard decision keeps only whether R is positive or negative.",
+          "zh": "硬判决只保留R为正还是为负。"
+        },
+        {
+          "en": "The sign operation is a deterministic function of the soft observation.",
+          "zh": "取符号是软观测的确定函数。"
+        },
+        {
+          "en": "Data processing therefore gives hard-decision information no greater than soft information.",
+          "zh": "由数据处理不等式，硬判决信息不超过软信息。"
+        },
+        {
+          "en": "Normalize the observation by square root N, giving unit noise variance and signal power gamma equal to P over N.",
+          "zh": "将观测除以√N，噪声方差归一为一，信号功率γ=P/N。"
+        },
+        {
+          "en": "The natural log likelihood ratio for a received value r equals two square root P times r divided by N.",
+          "zh": "接收值r的自然对数似然比为2√P·r/N。"
+        },
+        {
+          "en": "The posterior probability of the positive symbol is one divided by one plus the exponential of minus that ratio.",
+          "zh": "正符号的后验概率为1/[1+exp(−该对数似然比)]。"
+        },
+        {
+          "en": "Conditional entropy averages the negative log posterior of the actual transmitted symbol.",
+          "zh": "条件熵对实际所发符号的负对数后验概率取平均。"
+        },
+        {
+          "en": "Reflection symmetry makes that average identical for either transmitted sign.",
+          "zh": "反射对称性使两个发送符号对应的平均相同。"
+        },
+        {
+          "en": "Given the positive symbol, substitute r equal square root P plus square root N times a standard normal variable.",
+          "zh": "给定正符号，代入r=√P+√N乘以标准正态变量。"
+        },
+        {
+          "en": "The soft mutual information equals one minus an expected log expression.",
+          "zh": "软输出互信息等于一减去一个对数项的期望。"
+        },
+        {
+          "en": "Draw a standard normal variable Z inside that expectation.",
+          "zh": "在该期望中取标准正态变量Z。"
+        },
+        {
+          "en": "Then subtract the expectation of log two of one plus exp of negative two gamma minus two root gamma Z.",
+          "zh": "再减去log₂(1+exp(−2γ−2√γ Z))的期望。"
+        },
+        {
+          "en": "This is a numerical integral over the standard normal density.",
+          "zh": "这是对标准正态密度的数值积分。"
+        },
+        {
+          "en": "It is a computed formula value, not a measured experiment.",
+          "zh": "这是公式计算值，不是实验测量值。"
+        },
+        {
+          "en": "For hard decisions, the error probability is Q of square root gamma.",
+          "zh": "硬判决的错误概率为Q(√γ)。"
+        },
+        {
+          "en": "The resulting binary symmetric channel has information one minus binary entropy of that probability.",
+          "zh": "所得二元对称信道的互信息为一减该错误概率的二元熵。"
+        },
+        {
+          "en": "At gamma one, soft information is about zero point four eight five nine four four bits per use.",
+          "zh": "γ=1时，软信息约为每次使用0.485944比特。"
+        },
+        {
+          "en": "The hard-decision value at that point is about zero point three six eight nine one seven bits per use.",
+          "zh": "同一点的硬判决信息约为每次使用0.368917比特。"
+        },
+        {
+          "en": "At gamma ten, soft information is about zero point nine nine six seven five six bits per use.",
+          "zh": "γ=10时，软信息约为每次使用0.996756比特。"
+        },
+        {
+          "en": "Hard-decision information there is about zero point nine nine zero seven nine four bits per use.",
+          "zh": "此时硬判决信息约为每次使用0.990794比特。"
+        },
+        {
+          "en": "Both values approach one bit at high signal-to-noise ratio.",
+          "zh": "信噪比很高时，两者都趋近一比特。"
+        },
+        {
+          "en": "The soft value never exceeds the input entropy of one bit.",
+          "zh": "软信息不会超过一比特的输入熵。"
+        },
+        {
+          "en": "The Gaussian-input formula has no such one-bit ceiling.",
+          "zh": "高斯输入公式没有这一比特上限。"
+        },
+        {
+          "en": "Its input alphabet contains continuously many possible values.",
+          "zh": "它的输入字母表包含连续多个可能值。"
+        },
+        {
+          "en": "The two capacities differ because the permitted input distributions differ.",
+          "zh": "两种容量不同，是因为允许的输入分布不同。"
+        },
+        {
+          "en": "They use the same power and the same Gaussian noise variance.",
+          "zh": "它们使用相同功率与相同高斯噪声方差。"
+        },
+        {
+          "en": "The formula does not imply BPSK achieves Gaussian-input capacity.",
+          "zh": "该公式不意味着BPSK达到高斯输入容量。"
+        },
+        {
+          "en": "The next comparison uses identical power and noise for both input families at each SNR.",
+          "zh": "下一段在每个信噪比下，为两种输入族采用相同功率和噪声。"
+        },
+        {
+          "en": "The numerical integration settings should accompany any plotted values.",
+          "zh": "绘制数值时应同时记录数值积分设置。"
+        }
+      ]
+    },
+    {
+      "id": "c06-comparison",
+      "chapter": "Comparing Input Constraints",
+      "title": "Comparing Input Constraints",
+      "music": "recap",
+      "terms": [
+        "awgn",
+        "bpsk",
+        "snr",
+        "capacity"
+      ],
+      "sentences": [
+        {
+          "en": "Compare both models at the same real-use power P and noise variance N.",
+          "zh": "在相同的每次实使用功率P与噪声方差N下比较两种模型。"
+        },
+        {
+          "en": "The Gaussian-input capacity is one half log two of one plus P over N.",
+          "zh": "高斯输入容量为二分之一log₂(1+P/N)。"
+        },
+        {
+          "en": "The BPSK information is the soft-output integral from the previous chapter.",
+          "zh": "BPSK信息量是上一章的软输出积分。"
+        },
+        {
+          "en": "Both quantities are measured in bits per real channel use.",
+          "zh": "两者单位都是每次实信道使用的比特数。"
+        },
+        {
+          "en": "For normalized noise variance one, set P equal to the SNR value s.",
+          "zh": "噪声方差归一为一时，令P等于信噪比s。"
+        },
+        {
+          "en": "At s equal one tenth, Gaussian capacity is about zero point zero six eight seven five two bits.",
+          "zh": "s=0.1时，高斯容量约为0.068752比特。"
+        },
+        {
+          "en": "BPSK soft information is about zero point zero six eight seven four three bits at the same point.",
+          "zh": "同一点的BPSK软信息约为0.068743比特。"
+        },
+        {
+          "en": "At s equal one, the Gaussian value is one half bit.",
+          "zh": "s=1时，高斯容量为二分之一比特。"
+        },
+        {
+          "en": "BPSK gives about zero point four eight five nine four four bits at SNR one. Will it keep tracking the Gaussian curve at SNR ten?",
+          "zh": "SNR为一时，BPSK约有0.485944比特。SNR升到十时，它还能继续紧随高斯曲线吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "At s equal ten, Gaussian capacity is about one point seven two nine seven one six bits.",
+          "zh": "s=10时，高斯容量约为1.729716比特。"
+        },
+        {
+          "en": "BPSK soft information is about zero point nine nine six seven five six bits.",
+          "zh": "BPSK软信息约为0.996756比特。"
+        },
+        {
+          "en": "These values come from a finite-interval Gaussian quadrature calculation.",
+          "zh": "这些数值来自有限区间上的高斯求积计算。"
+        },
+        {
+          "en": "The integration used standard normal values between negative twelve and twelve.",
+          "zh": "积分使用了负十二至十二之间的标准正态取值。"
+        },
+        {
+          "en": "The reported quadrature errors were below four times ten to the negative nine.",
+          "zh": "报告的求积误差低于四乘十的负九次方。"
+        },
+        {
+          "en": "The omitted normal tails have negligible probability at the displayed precision.",
+          "zh": "在所示精度下，被省略的正态尾部概率可忽略。"
+        },
+        {
+          "en": "Those are numerical integration error estimates, not channel measurements.",
+          "zh": "这些是数值积分误差估计，不是信道测量。"
+        },
+        {
+          "en": "At high SNR, BPSK approaches at most one bit per use.",
+          "zh": "高信噪比下，BPSK至多趋近每次使用一比特。"
+        },
+        {
+          "en": "The Gaussian formula continues increasing without that finite-alphabet ceiling.",
+          "zh": "高斯公式则继续增长，不受有限字母表上限限制。"
+        },
+        {
+          "en": "Hard decisions lie below soft decisions by data processing.",
+          "zh": "由数据处理不等式，硬判决低于软判决。"
+        },
+        {
+          "en": "At SNR ten, the hard value is about zero point nine nine zero seven nine four bits.",
+          "zh": "信噪比为十时，硬判决值约为0.990794比特。"
+        },
+        {
+          "en": "The soft value at the same SNR is about zero point nine nine six seven five six bits.",
+          "zh": "相同信噪比下，软判决值约为0.996756比特。"
+        },
+        {
+          "en": "The difference comes from discarding the received magnitude.",
+          "zh": "差异来自丢弃接收幅值。"
+        },
+        {
+          "en": "No additional noise was introduced by changing the decision rule.",
+          "zh": "改变判决规则并未引入额外噪声。"
+        },
+        {
+          "en": "Rather, the hard output retains less information about the input.",
+          "zh": "相反，硬输出保留的输入信息更少。"
+        },
+        {
+          "en": "At low SNR, the BPSK and Gaussian curves are close.",
+          "zh": "低信噪比时，BPSK与高斯曲线接近。"
+        },
+        {
+          "en": "At high SNR, the alphabet restriction dominates the gap.",
+          "zh": "高信噪比时，字母表限制主导两者差距。"
+        },
+        {
+          "en": "The comparison assumes equal average power and equal noise variance.",
+          "zh": "该比较假设平均功率与噪声方差相同。"
+        },
+        {
+          "en": "The Gaussian capacity permits optimized continuous input distributions.",
+          "zh": "高斯容量允许优化连续输入分布。"
+        },
+        {
+          "en": "BPSK permits only its two antipodal signal values.",
+          "zh": "BPSK只允许两个相反的信号值。"
+        },
+        {
+          "en": "This distinction separates modulation performance from the channel coding limit.",
+          "zh": "这一区别将调制性能与信道编码极限区分开。"
+        },
+        {
+          "en": "The capacity formula remains the benchmark for all allowed codes.",
+          "zh": "容量公式仍是所有允许码的基准。"
+        },
+        {
+          "en": "The next episode converts bits per use into bits per second using bandwidth.",
+          "zh": "下一集将利用带宽把每次使用比特数转换为每秒比特数。"
+        }
+      ]
+    }
+  ]
+}

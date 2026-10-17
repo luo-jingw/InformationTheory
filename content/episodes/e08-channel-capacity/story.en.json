@@ -1,0 +1,872 @@
+{
+  "episode": "e08-channel-capacity",
+  "title": "Discrete Memoryless Channel Capacity",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-dmc",
+      "chapter": "Discrete memoryless channels",
+      "title": "Hidden mistakes or marked blanks?",
+      "music": "definition",
+      "terms": [
+        "dmc",
+        "capacity",
+        "mutual-information"
+      ],
+      "sentences": [
+        {
+          "en": "Choose a communication link. Would you prefer fewer hidden mistakes or more marked blanks?",
+          "zh": "选择一条通信链路：你更愿意要较少的隐蔽错误，还是较多但有标记的空缺？"
+        },
+        {
+          "en": "Link A flips each bit independently with probability .10. Its output never marks a flip.",
+          "zh": "链路A以0.10的概率独立翻转每个比特，输出不标记哪里翻转了。"
+        },
+        {
+          "en": "Link B independently erases a bit with probability .40. Every erased position is explicitly marked.",
+          "zh": "链路B以0.40的概率独立擦除一个比特，并明确标记每个被擦除的位置。"
+        },
+        {
+          "en": "Both spend one channel use per input bit. Which has the larger information capacity?",
+          "zh": "两条链路每输入一个比特都用一次信道。哪条的信息容量更大？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Keep that choice open. We must count what the receiver learns, beyond how often a symbol changes.",
+          "zh": "先保留你的选择。除了符号改变的频率，还要计算接收者究竟获得了多少信息。"
+        },
+        {
+          "en": "A discrete memoryless channel has finite input and output alphabets.",
+          "zh": "离散无记忆信道具有有限输入字母表和输出字母表。"
+        },
+        {
+          "en": "Its transition kernel W gives the conditional law of output Y given input X.",
+          "zh": "转移核W给出给定输入X时输出Y的条件分布。"
+        },
+        {
+          "en": "Each row contains nonnegative probabilities summing to one.",
+          "zh": "每一行都是和为一的非负概率。"
+        },
+        {
+          "en": "Choose an input distribution P X before using the channel.",
+          "zh": "使用信道前先选择输入分布P_X。"
+        },
+        {
+          "en": "The joint law is P X of x times W of y given x.",
+          "zh": "联合分布为P_X(x)W(y|x)。"
+        },
+        {
+          "en": "The output law sums this joint probability over input values.",
+          "zh": "输出分布需对输入值求和联合概率。"
+        },
+        {
+          "en": "For example, use rows (.9,.1) and (.2,.8).",
+          "zh": "例如，取两行为(.9,.1)和(.2,.8)。"
+        },
+        {
+          "en": "Let input probabilities for zero and one be .25 and .75.",
+          "zh": "令输入0和1的概率分别为.25和.75。"
+        },
+        {
+          "en": "The joint probability of input zero and output zero is .225.",
+          "zh": "输入0且输出0的联合概率为.225。"
+        },
+        {
+          "en": "Input zero and output one has probability .025.",
+          "zh": "输入0且输出1的概率为.025。"
+        },
+        {
+          "en": "Input one and output zero has probability .15.",
+          "zh": "输入1且输出0的概率为.15。"
+        },
+        {
+          "en": "Input one and output one has probability .6.",
+          "zh": "输入1且输出1的概率为.6。"
+        },
+        {
+          "en": "Sum over the two input rows at each output to get probabilities .375 and .625.",
+          "zh": "对每个输出沿两个输入行求和，得到输出概率.375和.625。"
+        },
+        {
+          "en": "The input distribution is a prior chosen by the sender.",
+          "zh": "输入分布是发送者选择的先验。"
+        },
+        {
+          "en": "The transition rows describe randomness imposed by the channel.",
+          "zh": "转移行描述信道施加的随机性。"
+        },
+        {
+          "en": "These are distinct ingredients of the joint law.",
+          "zh": "它们是联合分布中的不同要素。"
+        },
+        {
+          "en": "The channel is memoryless when repeated uses factor conditionally.",
+          "zh": "当重复使用在给定输入后条件分解时，信道无记忆。"
+        },
+        {
+          "en": "For n input and output symbols, W n equals the product of single-use transitions.",
+          "zh": "对n个输入输出符号，Wⁿ等于各次单用转移的乘积。"
+        },
+        {
+          "en": "The output conditional law at each use depends only on that use’s input.",
+          "zh": "每次使用的输出条件分布仅依赖当次输入。"
+        },
+        {
+          "en": "It does not require the input symbols themselves to be independent.",
+          "zh": "它不要求输入符号本身相互独立。"
+        },
+        {
+          "en": "A channel with hidden state may fail this factorization.",
+          "zh": "具有隐藏状态的信道可能不满足该分解。"
+        },
+        {
+          "en": "For one use, mutual information depends on both P X and W.",
+          "zh": "单次使用时，互信息同时依赖P_X和W。"
+        },
+        {
+          "en": "Define the information capacity as the maximum mutual information over input laws.",
+          "zh": "定义信息容量为所有输入分布上的最大互信息。"
+        },
+        {
+          "en": "C equals max over P X of I of X and Y.",
+          "zh": "C=max_{P_X}I(X;Y)。"
+        },
+        {
+          "en": "This is a single-use mathematical definition.",
+          "zh": "这是单次使用的数学定义。"
+        },
+        {
+          "en": "We have not yet proved any operational coding theorem.",
+          "zh": "我们尚未证明任何操作性编码定理。"
+        },
+        {
+          "en": "The maximization asks which input distribution best uses this channel.",
+          "zh": "该最大化问题询问哪种输入分布最能利用此信道。"
+        },
+        {
+          "en": "For the example matrix, different input weights change the output law.",
+          "zh": "对该示例矩阵，不同输入权重会改变输出分布。"
+        },
+        {
+          "en": "That in turn changes the mutual information.",
+          "zh": "这又会改变互信息。"
+        },
+        {
+          "en": "Next, solve the maximization explicitly for a binary symmetric channel.",
+          "zh": "接下来对二元对称信道显式求解该最大化问题。"
+        }
+      ]
+    },
+    {
+      "id": "c02-bsc",
+      "chapter": "Binary symmetric channel",
+      "title": "The fair input maximizes its mutual information",
+      "music": "proof",
+      "terms": [
+        "bsc",
+        "capacity",
+        "binary-entropy",
+        "mutual-information"
+      ],
+      "sentences": [
+        {
+          "en": "A binary symmetric channel flips its input bit with probability p.",
+          "zh": "二元对称信道以概率p翻转输入比特。"
+        },
+        {
+          "en": "The row for zero is one minus p, then p. The row for one is p, then one minus p.",
+          "zh": "其转移行是(1−p,p)与(p,1−p)。"
+        },
+        {
+          "en": "Equivalently, output Y is X exclusive-or noise N.",
+          "zh": "等价地，输出Y=X异或噪声N。"
+        },
+        {
+          "en": "The noise bit is independent of X and Bernoulli with parameter p.",
+          "zh": "噪声比特独立于X，且服从参数为p的伯努利分布。"
+        },
+        {
+          "en": "Let the letter A denote the probability that input X equals one.",
+          "zh": "令a表示输入X为1的概率。"
+        },
+        {
+          "en": "Output one occurs when input and noise differ.",
+          "zh": "输入与噪声不同时，输出为1。"
+        },
+        {
+          "en": "Its probability is p times one minus A, plus one minus p times A.",
+          "zh": "其概率为p(1−a)+(1−p)a。"
+        },
+        {
+          "en": "This simplifies to p plus the product of one minus two p and A.",
+          "zh": "化简为p+(1−2p)a。"
+        },
+        {
+          "en": "Given either input, the output uncertainty is binary entropy of p.",
+          "zh": "给定任一输入，输出不确定性均为H_b(p)。"
+        },
+        {
+          "en": "Therefore I of X and Y equals output entropy minus H b of p.",
+          "zh": "因此I(X;Y)=H(Y)−H_b(p)。"
+        },
+        {
+          "en": "Take binary entropy of this output probability, then subtract binary entropy of p.",
+          "zh": "写成a的函数即H_b(p+(1−2p)a)−H_b(p)。"
+        },
+        {
+          "en": "Output entropy cannot exceed one bit.",
+          "zh": "输出熵至多为一比特。"
+        },
+        {
+          "en": "A fair input has bias one half and makes the output fair.",
+          "zh": "输入公平即a=1/2时，输出也公平。"
+        },
+        {
+          "en": "That achieves output entropy one while conditional entropy stays H b of p.",
+          "zh": "此时输出熵为一，条件熵仍是H_b(p)。"
+        },
+        {
+          "en": "So capacity is one minus H b of p.",
+          "zh": "所以容量C=1−H_b(p)。"
+        },
+        {
+          "en": "When p equals zero point one, capacity is about zero point five three one bits per use.",
+          "zh": "当p=0.1时，容量约为每次使用0.531比特。"
+        },
+        {
+          "en": "This value is a formula calculation, not a measured performance result.",
+          "zh": "该数值由公式计算得出，并非性能测量结果。"
+        },
+        {
+          "en": "When p equals zero, the channel copies every input exactly.",
+          "zh": "当p=0时，信道精确复制每个输入。"
+        },
+        {
+          "en": "Its capacity is one bit per use.",
+          "zh": "其容量为每次使用一比特。"
+        },
+        {
+          "en": "When p equals one half, both rows are identical and output is independent of input.",
+          "zh": "当p=1/2时，两行相同，输出独立于输入。"
+        },
+        {
+          "en": "Every input law then gives zero mutual information.",
+          "zh": "此时任意输入分布都给出零互信息。"
+        },
+        {
+          "en": "Thus capacity is zero at the half-flip point.",
+          "zh": "因此翻转概率为二分之一时容量为零。"
+        },
+        {
+          "en": "At p equal one, every bit flips. Is all information lost?",
+          "zh": "当p等于一，每个比特都翻转。信息就全部丢失了吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The receiver can invert that deterministic mapping.",
+          "zh": "接收端可以反转该确定性映射。"
+        },
+        {
+          "en": "Capacity returns to one bit per use.",
+          "zh": "容量重新达到每次使用一比特。"
+        },
+        {
+          "en": "The bias formula is symmetric about input bias one half.",
+          "zh": "偏置公式也显示关于a=1/2的对称性。"
+        },
+        {
+          "en": "For p below one half, the output bias is reduced toward one half.",
+          "zh": "当p<1/2时，输出偏置被压向二分之一。"
+        },
+        {
+          "en": "A fair input maximizes output entropy and hence mutual information.",
+          "zh": "公平输入使输出熵最大，因而使互信息最大。"
+        },
+        {
+          "en": "The output-entropy upper bound is attained because the fair input makes each output equally likely.",
+          "zh": "公平输入使各输出等概率，因此达到输出熵上界。"
+        },
+        {
+          "en": "Next, replace flipping with an explicit erasure symbol.",
+          "zh": "接下来用显式擦除符号取代翻转。"
+        }
+      ]
+    },
+    {
+      "id": "c03-bec",
+      "chapter": "Binary erasure channel",
+      "title": "Erasure leaves uncertainty only on erased uses",
+      "music": "proof",
+      "terms": [
+        "bec",
+        "capacity",
+        "binary-entropy",
+        "conditional-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "A binary erasure channel outputs zero, one, or an erasure marker.",
+          "zh": "二元擦除信道输出0、1或擦除标记。"
+        },
+        {
+          "en": "Let the erasure probability be epsilon.",
+          "zh": "令擦除概率为ε。"
+        },
+        {
+          "en": "With probability one minus epsilon, the input bit is revealed exactly.",
+          "zh": "以概率1−ε，输入比特被精确揭示。"
+        },
+        {
+          "en": "With probability epsilon, the output is the marker.",
+          "zh": "以概率ε，输出为擦除标记。"
+        },
+        {
+          "en": "The erasure event is independent of the input bit.",
+          "zh": "擦除事件独立于输入比特。"
+        },
+        {
+          "en": "If the output is zero or one, the conditional entropy of X is zero.",
+          "zh": "若输出为0或1，X的条件熵为零。"
+        },
+        {
+          "en": "If the output is erased, the receiver retains the prior uncertainty H of X.",
+          "zh": "若输出被擦除，接收端仍保留先验不确定性H(X)。"
+        },
+        {
+          "en": "Average these cases using their event probabilities.",
+          "zh": "按两种事件概率对结果取平均。"
+        },
+        {
+          "en": "The conditional entropy H of X given Y equals epsilon times H of X.",
+          "zh": "条件熵H(X|Y)=εH(X)。"
+        },
+        {
+          "en": "Subtract from H of X to obtain mutual information.",
+          "zh": "用H(X)减去它，得到互信息。"
+        },
+        {
+          "en": "Mutual information equals H of X multiplied by one minus epsilon.",
+          "zh": "互信息等于H(X)乘以(1−ε)。"
+        },
+        {
+          "en": "Binary entropy is maximized by a fair input.",
+          "zh": "二元熵在公平输入时最大。"
+        },
+        {
+          "en": "Therefore BEC capacity is one minus epsilon bits per use.",
+          "zh": "因此BEC容量为每次使用1−ε比特。"
+        },
+        {
+          "en": "The linear factor counts the probability of a revealed input.",
+          "zh": "线性因子表示输入被揭示的概率。"
+        },
+        {
+          "en": "An erased symbol means unknown, not an incorrectly flipped bit.",
+          "zh": "擦除符号表示未知，而不是被错误翻转的比特。"
+        },
+        {
+          "en": "A BSC with the same numerical parameter has a different observation law.",
+          "zh": "数值参数相同的BSC具有不同的观测分布。"
+        },
+        {
+          "en": "A BSC output always names a bit, though it may be wrong.",
+          "zh": "BSC输出始终是某个比特，只是可能错误。"
+        },
+        {
+          "en": "A BEC output explicitly tells the receiver when information is missing.",
+          "zh": "BEC输出会明确告诉接收端信息何时缺失。"
+        },
+        {
+          "en": "The formulas compare single-use mutual information.",
+          "zh": "这些公式比较的是单次使用互信息。"
+        },
+        {
+          "en": "They do not by themselves rank operational systems under every protocol.",
+          "zh": "仅凭这些公式不能对所有协议下的操作系统排序。"
+        },
+        {
+          "en": "For epsilon zero, no symbols are erased and capacity is one.",
+          "zh": "ε=0时没有符号被擦除，容量为一。"
+        },
+        {
+          "en": "For epsilon one, every output is erased and capacity is zero.",
+          "zh": "ε=1时所有输出都被擦除，容量为零。"
+        },
+        {
+          "en": "Return to the opening choice: .10 hidden flips, or .40 marked erasures. Which has larger capacity?",
+          "zh": "回到开头的选择：0.10概率的隐蔽翻转，还是0.40概率的标记擦除，哪条容量更大？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Link A gives about zero point five three one bits per use. Link B gives zero point six. The more frequently marked blank wins here.",
+          "zh": "链路A约为每次0.531比特，链路B为0.6。这里出现标记空缺更频繁的链路胜出。"
+        },
+        {
+          "en": "The erasure marker is part of the observation. Both numbers use one binary input per channel use.",
+          "zh": "擦除标记也是观测的一部分。这两个数都按每次信道输入一个二进制符号计算。"
+        },
+        {
+          "en": "Counting symbol changes alone misses what the receiver knows.",
+          "zh": "只统计符号改变，会忽略接收者掌握的信息。"
+        },
+        {
+          "en": "Next, use row symmetry to solve a broader channel family.",
+          "zh": "接下来利用行对称性求解更一般的信道族。"
+        }
+      ]
+    },
+    {
+      "id": "c04-symmetric",
+      "chapter": "Weakly symmetric channels",
+      "title": "Equal row entropy and column sums certify a uniform output",
+      "music": "proof",
+      "terms": [
+        "capacity",
+        "dmc",
+        "mutual-information",
+        "binary-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a channel whose rows are permutations of one another.",
+          "zh": "考虑各行互为排列的信道。"
+        },
+        {
+          "en": "Assume also that all column sums are equal.",
+          "zh": "并假设所有列的列和相等。"
+        },
+        {
+          "en": "This is the weak symmetry condition used here.",
+          "zh": "这就是此处采用的弱对称条件。"
+        },
+        {
+          "en": "Permuting entries does not change entropy.",
+          "zh": "排列概率项不会改变熵。"
+        },
+        {
+          "en": "Thus every transition row has the same entropy.",
+          "zh": "因此每个转移行具有相同熵。"
+        },
+        {
+          "en": "Call this common row entropy h row.",
+          "zh": "将共同的行熵称为h_row。"
+        },
+        {
+          "en": "For any input distribution, H of Y given X equals h row.",
+          "zh": "对任意输入分布，H(Y|X)=h_row。"
+        },
+        {
+          "en": "The output alphabet size is m.",
+          "zh": "令输出字母表大小为m。"
+        },
+        {
+          "en": "Output entropy is at most log two m.",
+          "zh": "输出熵至多为log₂m。"
+        },
+        {
+          "en": "Therefore every input gives mutual information at most log two m minus h row.",
+          "zh": "因此任意输入的互信息至多为log₂m−h_row。"
+        },
+        {
+          "en": "Now choose the uniform distribution over input symbols.",
+          "zh": "现在令输入符号服从均匀分布。"
+        },
+        {
+          "en": "Each output probability equals its column sum divided by the number of inputs.",
+          "zh": "每个输出概率等于对应列和除以输入数。"
+        },
+        {
+          "en": "Equal column sums therefore make output probabilities equal.",
+          "zh": "列和相等，因此输出概率也相等。"
+        },
+        {
+          "en": "The output is uniform over its m symbols.",
+          "zh": "输出在m个符号上均匀分布。"
+        },
+        {
+          "en": "Its entropy reaches log two m.",
+          "zh": "其熵达到log₂m。"
+        },
+        {
+          "en": "Thus the upper bound is attained by uniform input.",
+          "zh": "因此均匀输入达到该上界。"
+        },
+        {
+          "en": "Capacity equals log two m minus h row.",
+          "zh": "容量C=log₂m−h_row。"
+        },
+        {
+          "en": "This proof uses only row permutations and equal column sums.",
+          "zh": "此证明只使用行排列和列和相等。"
+        },
+        {
+          "en": "It does not assume an input permutation group for every such channel.",
+          "zh": "它没有假设每个此类信道都有输入置换群。"
+        },
+        {
+          "en": "Consider a four-symbol typewriter channel.",
+          "zh": "考虑四符号打字机信道。"
+        },
+        {
+          "en": "Given input x, output x or x plus one modulo four, each with probability one half.",
+          "zh": "给定输入x，输出以各二分之一概率为x或x+1模4。"
+        },
+        {
+          "en": "Each row has entropy one bit.",
+          "zh": "每一行的熵为一比特。"
+        },
+        {
+          "en": "The rows are cyclic permutations.",
+          "zh": "各行互为循环排列。"
+        },
+        {
+          "en": "Each column receives total probability one across all four rows.",
+          "zh": "四行中每列的概率总和为一。"
+        },
+        {
+          "en": "Uniform input therefore produces uniform output over four symbols.",
+          "zh": "因此均匀输入产生四符号均匀输出。"
+        },
+        {
+          "en": "Output entropy is two bits and conditional entropy is one.",
+          "zh": "输出熵为二比特，条件熵为一比特。"
+        },
+        {
+          "en": "The channel capacity is one bit per use.",
+          "zh": "信道容量为每次使用一比特。"
+        },
+        {
+          "en": "The two possible outputs still leave uncertainty about which input occurred.",
+          "zh": "两个可能输出仍使原输入存在不确定性。"
+        },
+        {
+          "en": "Are equal row entropies enough if the columns are not balanced?",
+          "zh": "如果列和不平衡，仅有相同的行熵足够吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "For instance, two identical rows (.9,.1) have row entropy H b of .1, but capacity zero.",
+          "zh": "例如两行均为(.9,.1)，行熵为H_b(.1)，容量却为零。"
+        },
+        {
+          "en": "Their column sums are 1.8 and .2, so the output-entropy upper bound cannot be attained.",
+          "zh": "其列和为1.8和.2，因此无法达到输出熵上界。"
+        },
+        {
+          "en": "Next, break row symmetry and optimize a Z-channel directly.",
+          "zh": "接下来打破行对称性，直接优化Z信道。"
+        }
+      ]
+    },
+    {
+      "id": "c05-asymmetric",
+      "chapter": "An asymmetric Z-channel",
+      "title": "The optimal input bias follows from differentiation",
+      "music": "proof",
+      "terms": [
+        "z-channel",
+        "capacity",
+        "binary-entropy"
+      ],
+      "sentences": [
+        {
+          "en": "In this Z-channel, input zero always produces output zero.",
+          "zh": "在该Z信道中，输入0总产生输出0。"
+        },
+        {
+          "en": "Input one flips to output zero with probability alpha.",
+          "zh": "输入1以概率α翻转为输出0。"
+        },
+        {
+          "en": "Otherwise input one produces output one.",
+          "zh": "否则输入1产生输出1。"
+        },
+        {
+          "en": "Set alpha to .3 and q to the probability of input one.",
+          "zh": "取α=.3，并令q为输入1的概率。"
+        },
+        {
+          "en": "Output one then has probability .7 q.",
+          "zh": "于是输出1的概率为.7q。"
+        },
+        {
+          "en": "The output entropy is binary entropy of .7 q.",
+          "zh": "输出熵为H_b(.7q)。"
+        },
+        {
+          "en": "Given input zero, output entropy is zero.",
+          "zh": "给定输入0时，输出熵为零。"
+        },
+        {
+          "en": "Given input one, output entropy is H b of .3.",
+          "zh": "给定输入1时，输出熵为H_b(.3)。"
+        },
+        {
+          "en": "Average conditional entropy is q times H b of .3.",
+          "zh": "平均条件熵为qH_b(.3)。"
+        },
+        {
+          "en": "Thus I of q is H b of .7 q minus q H b of .3. Does a fair input still maximize it?",
+          "zh": "因此I(q)=H_b(0.7q)−qH_b(0.3)。公平输入仍然能使它最大吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Differentiate binary entropy with respect to its probability argument, called R.",
+          "zh": "在内部概率r处对二元熵求导。"
+        },
+        {
+          "en": "Its derivative is log two of one minus r divided by r.",
+          "zh": "其导数为log₂((1−r)/r)。"
+        },
+        {
+          "en": "Apply the chain rule to r equals .7 q.",
+          "zh": "对r=.7q应用链式法则。"
+        },
+        {
+          "en": "The output-entropy derivative contributes .7 log two of the ratio one minus .7 q to .7 q.",
+          "zh": "输出熵的导数贡献.7log₂((1−.7q)/(.7q))。"
+        },
+        {
+          "en": "Subtract H b of .3 to obtain the full derivative of mutual information.",
+          "zh": "再减去H_b(.3)，得到互信息的完整导数。"
+        },
+        {
+          "en": "Set this derivative to zero for the interior optimum.",
+          "zh": "令此导数为零以求内部最优点。"
+        },
+        {
+          "en": "Setting the derivative to zero gives a log ratio equal to H b of .3 divided by .7.",
+          "zh": "令导数为零，得到对数比值等于H_b(.3)/.7。"
+        },
+        {
+          "en": "The denominator is .7 times the quantity one plus two to the entropy ratio.",
+          "zh": "分母是.7乘以“1加2的熵比次方”。"
+        },
+        {
+          "en": "The maximizing q is the reciprocal of that denominator.",
+          "zh": "使互信息最大的q就是该分母的倒数。"
+        },
+        {
+          "en": "The second derivative is negative throughout the interior.",
+          "zh": "该函数在整个内部区间的二阶导数为负。"
+        },
+        {
+          "en": "With r equal .7 q, its second derivative is negative .7 squared divided by ln two times r times one minus r.",
+          "zh": "令r=.7q，其二阶导数为−.7²/[ln2·r(1−r)]。"
+        },
+        {
+          "en": "The optimum input probability is about zero point four two one.",
+          "zh": "最优输入概率约为0.421。"
+        },
+        {
+          "en": "Substitution gives about zero point five zero three seven bits per use.",
+          "zh": "代入得到容量约为每次使用0.5037比特。"
+        },
+        {
+          "en": "These displayed values evaluate the stated formula numerically.",
+          "zh": "这些显示值是对所列公式的数值计算。"
+        },
+        {
+          "en": "They are not measured channel performance.",
+          "zh": "它们不是信道性能测量结果。"
+        },
+        {
+          "en": "At q equal zero, the input is fixed and mutual information is zero.",
+          "zh": "q=0时输入固定，互信息为零。"
+        },
+        {
+          "en": "At q equal one, the output is a noisy version of a fixed input.",
+          "zh": "q=1时输出是固定输入的带噪版本。"
+        },
+        {
+          "en": "Its output entropy equals its conditional entropy, so information is zero.",
+          "zh": "此时输出熵等于条件熵，故互信息为零。"
+        },
+        {
+          "en": "Strict concavity gives a unique maximizing q between the endpoints.",
+          "zh": "严格凹性保证端点之间存在唯一最大化q。"
+        },
+        {
+          "en": "The maximizing input is not uniform.",
+          "zh": "最优输入并非均匀分布。"
+        },
+        {
+          "en": "Asymmetry makes the two inputs carry different information value.",
+          "zh": "信道不对称使两个输入携带的信息价值不同。"
+        },
+        {
+          "en": "The output marginal probability is the key variable in the entropy term.",
+          "zh": "输出边缘概率是熵项中的关键变量。"
+        },
+        {
+          "en": "Next, establish general capacity properties for finite channels.",
+          "zh": "接下来建立有限信道容量的一般性质。"
+        }
+      ]
+    },
+    {
+      "id": "c06-properties",
+      "chapter": "Basic properties of channel capacity",
+      "title": "Outputs are unique at optimum; inputs need not be",
+      "music": "recap",
+      "terms": [
+        "capacity",
+        "dmc",
+        "mutual-information",
+        "concavity"
+      ],
+      "sentences": [
+        {
+          "en": "For finite input and output alphabets, input laws form a compact simplex.",
+          "zh": "有限输入输出字母表下，输入分布构成紧单纯形。"
+        },
+        {
+          "en": "Mutual information is continuous on that simplex.",
+          "zh": "互信息在该单纯形上连续。"
+        },
+        {
+          "en": "Continuity includes zero probabilities using the limit zero log zero equals zero.",
+          "zh": "连续性通过0log0极限约定延伸到零概率处。"
+        },
+        {
+          "en": "A continuous function on a compact set attains its maximum.",
+          "zh": "紧集上的连续函数可达到最大值。"
+        },
+        {
+          "en": "So a capacity-achieving input exists.",
+          "zh": "因此容量最大化输入存在。"
+        },
+        {
+          "en": "Mutual information is at most H of X and at most H of Y.",
+          "zh": "互信息至多为H(X)，也至多为H(Y)。"
+        },
+        {
+          "en": "These entropies are bounded by log input size and log output size.",
+          "zh": "这两个熵分别不超过输入数和输出数的对数。"
+        },
+        {
+          "en": "Hence capacity is at most log two of the smaller alphabet size.",
+          "zh": "因此容量至多为较小字母表大小的log₂。"
+        },
+        {
+          "en": "Capacity is zero exactly when all channel rows are identical.",
+          "zh": "容量为零当且仅当所有信道行完全相同。"
+        },
+        {
+          "en": "If all rows match, output law does not depend on input.",
+          "zh": "若所有行相同，输出分布便不依赖输入。"
+        },
+        {
+          "en": "Then input and output are independent for every input law.",
+          "zh": "于是任意输入分布下输入与输出都独立。"
+        },
+        {
+          "en": "Mutual information and capacity are zero.",
+          "zh": "互信息与容量均为零。"
+        },
+        {
+          "en": "Now suppose two rows differ.",
+          "zh": "现在假设有两行不同。"
+        },
+        {
+          "en": "Use input only on those two symbols with positive weights.",
+          "zh": "只在这两个符号上取正输入权重。"
+        },
+        {
+          "en": "Let R be the resulting mixture output distribution.",
+          "zh": "令R为由此得到的混合输出分布。"
+        },
+        {
+          "en": "Mutual information equals the weighted sum of divergences from each row to R.",
+          "zh": "互信息等于各行到R的KL散度加权和。"
+        },
+        {
+          "en": "Both divergences are nonnegative.",
+          "zh": "这两个散度均非负。"
+        },
+        {
+          "en": "They cannot both vanish because the two rows differ.",
+          "zh": "由于两行不同，它们不可能同时为零。"
+        },
+        {
+          "en": "Thus this input law gives positive mutual information.",
+          "zh": "因此该输入分布给出正互信息。"
+        },
+        {
+          "en": "Capacity is then positive.",
+          "zh": "于是容量为正。"
+        },
+        {
+          "en": "The maximizing output distribution is unique.",
+          "zh": "最大化输出分布是唯一的。"
+        },
+        {
+          "en": "Suppose two maximizing inputs produce different output laws.",
+          "zh": "假设两个最大化输入产生不同输出分布。"
+        },
+        {
+          "en": "Mix the input distributions with a weight strictly between zero and one.",
+          "zh": "用严格介于0与1之间的权重混合两个输入分布。"
+        },
+        {
+          "en": "The output law is the same mixture of their output laws.",
+          "zh": "输出分布也按相同权重混合。"
+        },
+        {
+          "en": "Entropy is strictly concave between two distinct output laws.",
+          "zh": "两个不同输出分布之间的熵严格凹。"
+        },
+        {
+          "en": "Conditional output entropy is linear in the input distribution.",
+          "zh": "条件输出熵关于输入分布是线性的。"
+        },
+        {
+          "en": "Their difference, mutual information, strictly increases under this mixture.",
+          "zh": "两者之差即互信息，在混合后严格增加。"
+        },
+        {
+          "en": "That contradicts maximality.",
+          "zh": "这与最大性矛盾。"
+        },
+        {
+          "en": "The optimal output law is unique. Must the maximizing input law also be unique?",
+          "zh": "最优输出分布唯一。达到最大值的输入分布也必须唯一吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Take three input symbols with rows (one,zero), (one,zero), and (zero,one).",
+          "zh": "取三种输入，对应行分别为(1,0)、(1,0)和(0,1)。"
+        },
+        {
+          "en": "The channel output is a deterministic function of the input group.",
+          "zh": "该信道输出是输入所属类别的确定函数。"
+        },
+        {
+          "en": "Choose input probability one half on symbol three.",
+          "zh": "给符号3分配输入概率二分之一。"
+        },
+        {
+          "en": "Split the remaining half arbitrarily between symbols one and two.",
+          "zh": "将剩余一半任意分给符号1和2。"
+        },
+        {
+          "en": "The output is uniform binary and mutual information equals one bit.",
+          "zh": "输出为公平二元分布，互信息为一比特。"
+        },
+        {
+          "en": "Every such split is optimal, while the output law stays fixed.",
+          "zh": "所有此类拆分均最优，但输出分布保持不变。"
+        },
+        {
+          "en": "This separates uniqueness of the output from uniqueness of the input.",
+          "zh": "这区分了输出唯一性与输入唯一性。"
+        },
+        {
+          "en": "Next, coding theorems will connect capacity to reliable transmission rates.",
+          "zh": "下一集将用编码定理把容量连接到可靠传输速率。"
+        }
+      ]
+    }
+  ]
+}

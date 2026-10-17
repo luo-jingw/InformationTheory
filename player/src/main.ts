@@ -1,0 +1,125 @@
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/noto-sans-sc/400.css";
+import "@fontsource/noto-sans-sc/500.css";
+import "@fontsource/noto-sans-sc/700.css";
+import "katex/dist/katex.min.css";
+import "./styles.css";
+import { DevDataSource, StaticDataSource, type DataSource } from "./core/DataSource";
+import { EpisodeLoader } from "./core/EpisodeLoader";
+import { EpisodeRenderer } from "./core/EpisodeRenderer";
+import { FRAME_HEIGHT, FRAME_WIDTH } from "./core/Frame";
+import { PreviewClock } from "./core/PreviewClock";
+import { SceneRegistry } from "./core/SceneRegistry";
+import { FormulaLayer } from "./layers/FormulaLayer";
+import { StageLayer } from "./layers/StageLayer";
+import { EPISODE_SCENES } from "./episodes/registry";
+import { Palette } from "./primitives/Palette";
+import { EpisodeIndex } from "./web/EpisodeIndex";
+import { PlayerControls } from "./web/PlayerControls";
+
+declare global {
+  interface Window {
+    /** Draws time t and resolves once fonts used by the frame are loaded. */
+    renderAt: (t: number) => Promise<void>;
+    playerInfo: { ready: boolean; duration: number; missingScenes: string[]; error: string | null };
+  }
+}
+
+async function waitFonts(host: HTMLElement): Promise<void> {
+  host.getBoundingClientRect();          // force layout so pending glyph loads are requested
+  await document.fonts.ready;
+}
+
+async function boot(): Promise<void> {
+  window.playerInfo = { ready: false, duration: 0, missingScenes: [], error: null };
+  const params = new URLSearchParams(location.search);
+  const episodeId = params.get("episode") ?? "";
+  const capture = params.get("capture") === "1";
+  if (capture) document.body.classList.add("capture");
+
+  // Dev server reads project files; the static site (vite build) reads its own data/ folder.
+  const source: DataSource = import.meta.env.DEV ? new DevDataSource(params.get("series") ?? undefined) : new StaticDataSource();
+  const loader = new EpisodeLoader(source);
+  if (!episodeId && !capture) {
+    document.body.classList.add("index");
+    new EpisodeIndex().render(document.body, await loader.series());
+    window.playerInfo = { ready: true, duration: 0, missingScenes: [], error: null };
+    return;
+  }
+
+  const frame = document.getElementById("frame") as HTMLDivElement;
+  const stage = new StageLayer(frame, Palette.background);
+  const formulas = new FormulaLayer(frame);
+  const overlay = document.createElement("div");
+  overlay.className = "overlay-layer";
+  frame.appendChild(overlay);
+
+  const data = await loader.load(episodeId);
+  const registry = new SceneRegistry(EPISODE_SCENES[episodeId] ?? {});
+  const nextHref = !capture && data.next ? `?episode=${encodeURIComponent(data.next.id)}` : null;
+  const renderer = new EpisodeRenderer(data, { stage, formulas }, registry, overlay, nextHref);
+
+  window.renderAt = async (t: number): Promise<void> => {
+    renderer.renderAt(t);
+    while (renderer.pending) {              // a scene is loading resources: wait, then draw the frame again
+      await renderer.pending;
+      renderer.renderAt(t);
+    }
+    await waitFonts(frame);
+  };
+  await document.fonts.load('500 36px "Inter"');
+  await document.fonts.load('500 33px "Noto Sans SC"', "中文字幕");
+  await document.fonts.load('40px "KaTeX_Main"');
+  await document.fonts.load('italic 40px "KaTeX_Math"');
+  window.playerInfo = { ready: true, duration: data.timeline.duration, missingScenes: renderer.missingScenes(), error: null };
+
+  if (capture) return;
+
+  const fit = (): void => {
+    const s = Math.min(window.innerWidth / FRAME_WIDTH, (window.innerHeight - 56) / FRAME_HEIGHT);
+    frame.style.transform = `scale(${s})`;
+  };
+  fit();
+  window.addEventListener("resize", fit);
+  document.title = `E${data.episode.order} · ${data.episode.title} · Information Theory`;
+  const audio = new Audio(data.audioUrl);
+  audio.preload = "auto";
+  audio.hidden = true;
+  document.body.appendChild(audio);
+  let controls: PlayerControls | null = null;
+  const clock = new PreviewClock(audio, (t) => {
+    renderer.renderAt(t);   // live rendering at the clock time
+    controls?.update(t, clock.isPlaying);
+  }, data.timeline.duration);
+  controls = new PlayerControls(document.getElementById("controls") as HTMLDivElement, frame, data.timeline,
+    `Episode ${data.episode.order} · ${data.episode.title}`, {
+      toggle: () => {
+        clock.toggle();
+        controls?.update(clock.time, clock.isPlaying);   // the render loop stops while paused, so refresh here
+      },
+      seek: (t) => clock.seek(t),
+    });
+  clock.start(Number(params.get("t") ?? "0"));
+  window.addEventListener("keydown", (ev) => {
+    if ((ev.target as HTMLElement).tagName === "SELECT") return;
+    const t = clock.time;
+    if (ev.key === " ") {
+      ev.preventDefault();
+      clock.toggle();
+      controls?.update(clock.time, clock.isPlaying);
+    } else if (ev.key === "ArrowRight") clock.seek(t + 5);
+    else if (ev.key === "ArrowLeft") clock.seek(t - 5);
+    else if (ev.key === ".") clock.seek(t + 1 / 30);
+    else if (ev.key === ",") clock.seek(t - 1 / 30);
+    else if (ev.key === "n") clock.seek(data.timeline.chapters.find((c) => c.start > t + 0.01)?.start ?? t);
+    else if (ev.key === "p") clock.seek([...data.timeline.chapters].reverse().find((c) => c.start < t - 0.5)?.start ?? 0);
+  });
+}
+
+boot().catch((err: unknown) => {
+  window.playerInfo = { ready: false, duration: 0, missingScenes: [], error: String(err) };
+  console.error(err);
+});

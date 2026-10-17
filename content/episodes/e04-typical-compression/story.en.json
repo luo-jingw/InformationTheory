@@ -1,0 +1,1128 @@
+{
+  "episode": "e04-typical-compression",
+  "title": "Typicality and Lossless Compression",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-aep",
+      "chapter": "Asymptotic Equipartition",
+      "title": "Average surprisal converges to entropy",
+      "music": "proof",
+      "terms": [
+        "dms",
+        "surprisal",
+        "aep",
+        "typical-set"
+      ],
+      "sentences": [
+        {
+          "en": "A biased coin keeps flipping. Can we predict the probability of its whole message before seeing it?",
+          "zh": "一枚偏置硬币不断翻转。看到结果之前，能预判整条消息的概率吗？"
+        },
+        {
+          "en": "More generally, take independent draws from one finite alphabet, all with the same probability mass function p.",
+          "zh": "更一般地，从有限字母表独立抽样，每次都服从同一个概率质量函数 p。"
+        },
+        {
+          "en": "Write X one through X n for the random source symbols.",
+          "zh": "将信源随机符号记作X₁到Xₙ。"
+        },
+        {
+          "en": "For a realized sequence, its probability is the product of its symbol probabilities.",
+          "zh": "对一个实现序列，其概率等于各符号概率的乘积。"
+        },
+        {
+          "en": "This product follows from independence and identical distribution.",
+          "zh": "这个乘积来自独立同分布假设。"
+        },
+        {
+          "en": "Multiplying tiny probabilities is hard to read. What happens if we take a logarithm?",
+          "zh": "一串微小概率的乘积难以理解。取对数会怎样？",
+          "hold_after_s": 2
+        },
+        {
+          "en": "The negative logarithm of a product becomes a sum.",
+          "zh": "乘积的负对数会变成求和。"
+        },
+        {
+          "en": "Therefore negative log two of P of X n equals the sum of negative log probabilities for each symbol.",
+          "zh": "因此−log₂P(Xⁿ)等于各符号负对数概率之和。"
+        },
+        {
+          "en": "Divide by n to obtain the average surprisal per source symbol.",
+          "zh": "再除以n，得到每个信源符号的平均自信息。"
+        },
+        {
+          "en": "Define Z i as negative log two of p of X i.",
+          "zh": "定义Zᵢ=−log₂p(Xᵢ)。"
+        },
+        {
+          "en": "If a symbol has probability zero, it occurs with probability zero.",
+          "zh": "概率为零的符号发生概率也为零。"
+        },
+        {
+          "en": "We therefore define Z only on the positive-probability support and ignore null events.",
+          "zh": "因此只在正概率支持集上定义Z，并忽略零概率事件。"
+        },
+        {
+          "en": "The random variables Z i are independent and identically distributed.",
+          "zh": "随机变量Zᵢ仍然独立同分布。"
+        },
+        {
+          "en": "Their expectation is the source entropy H of X.",
+          "zh": "它们的期望就是信源熵H(X)。"
+        },
+        {
+          "en": "Their average surprisal is negative log sequence probability divided by n.",
+          "zh": "平均自信息就是序列负对数概率除以n。"
+        },
+        {
+          "en": "Assume this single-symbol surprisal has finite variance.",
+          "zh": "假设单符号自信息具有有限方差。"
+        },
+        {
+          "en": "Finite positive support bounds surprisal, so its variance is finite.",
+          "zh": "有限正概率支持集使自信息有界，因此其方差有限。"
+        },
+        {
+          "en": "The weak law of large numbers says the sample average converges in probability to its expectation.",
+          "zh": "弱大数定律说明样本平均依概率收敛到期望。"
+        },
+        {
+          "en": "Thus the per-symbol surprisal converges in probability to H.",
+          "zh": "因此每符号自信息依概率收敛到H。"
+        },
+        {
+          "en": "The strong law gives almost-sure convergence under the same IID finite-mean setting.",
+          "zh": "在同样的IID有限均值条件下，强大数定律给出几乎必然收敛。"
+        },
+        {
+          "en": "We will use the weak-law statement to quantify a finite-length typical event.",
+          "zh": "我们将用弱大数定律量化有限长度的典型事件。"
+        },
+        {
+          "en": "Fix a tolerance epsilon greater than zero.",
+          "zh": "固定正容差ε。"
+        },
+        {
+          "en": "Call a sequence weakly epsilon-typical when its per-symbol surprisal is within epsilon of H.",
+          "zh": "若序列每符号自信息与H的差不超过ε，就称其弱ε典型。"
+        },
+        {
+          "en": "Equivalently, its probability lies between two exponential bounds.",
+          "zh": "等价地，其概率落在两个指数界之间。"
+        },
+        {
+          "en": "The lower bound is two raised to minus n times the quantity H plus epsilon.",
+          "zh": "概率下界为2^(−n(H+ε))。"
+        },
+        {
+          "en": "The upper bound is two raised to minus n times the quantity H minus epsilon.",
+          "zh": "概率上界为2^(−n(H−ε))。"
+        },
+        {
+          "en": "The signs reverse because taking negative logarithms reverses the order.",
+          "zh": "因为取负对数会反转大小关系，所以指数中的符号次序相反。"
+        },
+        {
+          "en": "The weak law says the probability of this typical set approaches one.",
+          "zh": "弱大数定律说明该典型集的概率趋近于一。"
+        },
+        {
+          "en": "A run of rare symbols is still possible. The theorem concerns probability, not every finite message.",
+          "zh": "全是罕见符号的序列依然可能出现。定理讨论概率，并不保证每条有限消息都典型。"
+        },
+        {
+          "en": "Chebyshev's inequality gives an explicit bound when the variance is finite.",
+          "zh": "方差有限时，切比雪夫不等式给出显式界。"
+        },
+        {
+          "en": "Independence makes the variance of the average equal Var Z divided by n.",
+          "zh": "独立性使平均值的方差等于Var(Z)/n。"
+        },
+        {
+          "en": "Chebyshev compares that variance with the squared distance epsilon squared.",
+          "zh": "切比雪夫不等式用该方差除以距离平方ε²。"
+        },
+        {
+          "en": "The probability of leaving the epsilon interval is at most Var Z divided by n epsilon squared.",
+          "zh": "离开ε区间的概率至多为Var(Z)/(nε²)。"
+        },
+        {
+          "en": "A positive epsilon is essential because the denominator contains epsilon squared.",
+          "zh": "ε必须为正，因为分母含ε²。"
+        },
+        {
+          "en": "For any fixed positive tolerance, this bound tends to zero as n grows.",
+          "zh": "对任意固定正容差，n增大时该界趋于零。"
+        },
+        {
+          "en": "That is a concrete route from the law of large numbers to AEP.",
+          "zh": "这就给出了从大数定律到AEP的一条具体路径。"
+        },
+        {
+          "en": "Most mass lies on sequences whose log probabilities per symbol are close to the same number.",
+          "zh": "大部分概率集中在每符号对数概率接近同一个数的序列上。"
+        },
+        {
+          "en": "The common probability scale is about two to the negative n H.",
+          "zh": "共同概率尺度约为2^(−nH)。"
+        },
+        {
+          "en": "“Equipartition” refers to probabilities within the typical set, not uniformity of the entire source.",
+          "zh": "“等分”指典型集内的序列概率近似相等，并非整个信源均匀。"
+        },
+        {
+          "en": "The tolerance controls the multiplicative exponential slack.",
+          "zh": "容差控制指数尺度上的乘法松弛。"
+        },
+        {
+          "en": "A smaller tolerance gives a tighter probability band but may require larger n.",
+          "zh": "较小容差会收紧概率带，但可能需要更大的n。"
+        },
+        {
+          "en": "The order of limits is to fix epsilon first and then increase n.",
+          "zh": "极限顺序是先固定ε，再增大n。"
+        },
+        {
+          "en": "The probability of the typical set then approaches one.",
+          "zh": "随后典型集的概率趋近于一。"
+        },
+        {
+          "en": "Next, we use the probability band to count its members.",
+          "zh": "接下来利用概率带计算典型序列数量。"
+        }
+      ]
+    },
+    {
+      "id": "c02-counting",
+      "chapter": "Counting Typical Sequences",
+      "title": "Probability mass is not counting fraction",
+      "music": "proof",
+      "terms": [
+        "typical-set",
+        "entropy",
+        "dms"
+      ],
+      "sentences": [
+        {
+          "en": "Now place two bets: how much probability mass, and how many strings? They need not agree.",
+          "zh": "现在比较两个问题：概率质量有多大，字符串数量有多少？两者并不相同。",
+          "hold_after_s": 1.5
+        },
+        {
+          "en": "Probability mass sums source probabilities over the selected set.",
+          "zh": "概率质量是对集合内的信源概率求和。"
+        },
+        {
+          "en": "Counting fraction divides the number of selected strings by all alphabet strings.",
+          "zh": "计数比例是集合字符串数量除以全部字母表字符串数。"
+        },
+        {
+          "en": "For an alphabet of size K, there are K to the n total strings.",
+          "zh": "字母表大小为K时，总字符串数为Kⁿ。"
+        },
+        {
+          "en": "A set can carry almost all probability without occupying a large fraction of all strings.",
+          "zh": "一个集合可以承载几乎全部概率，却只占全部字符串的一小部分。"
+        },
+        {
+          "en": "Can a small set carry almost all probability? Call the weakly typical set A epsilon n.",
+          "zh": "一个小集合能承载几乎全部概率吗？把弱典型集记为 Aεⁿ。"
+        },
+        {
+          "en": "The probability lower bound is two raised to negative n times the quantity H plus epsilon.",
+          "zh": "概率下界为2^(−n(H+ε))。"
+        },
+        {
+          "en": "Summing those probabilities cannot exceed one.",
+          "zh": "这些概率之和不能超过一。"
+        },
+        {
+          "en": "The typical-set size is therefore at most two raised to n times the quantity H plus epsilon.",
+          "zh": "因此典型序列数量至多为2^(n(H+ε))。"
+        },
+        {
+          "en": "The probability upper bound is two raised to negative n times the quantity H minus epsilon.",
+          "zh": "概率上界为2^(−n(H−ε))。"
+        },
+        {
+          "en": "Suppose the typical set has probability at least one minus delta.",
+          "zh": "假设典型集概率至少为1−δ。"
+        },
+        {
+          "en": "Its total probability is at most its size times the largest typical-sequence probability.",
+          "zh": "其总概率至多为集合大小乘最大典型序列概率。"
+        },
+        {
+          "en": "Rearrange that inequality to lower-bound the size.",
+          "zh": "整理该不等式即可得到集合大小的下界。"
+        },
+        {
+          "en": "The lower bound multiplies one minus delta by two raised to n times the quantity H minus epsilon.",
+          "zh": "集合大小至少为(1−δ)2^(n(H−ε))。"
+        },
+        {
+          "en": "The size is at most two raised to n times the quantity H plus epsilon.",
+          "zh": "集合大小至多为2^(n(H+ε))。"
+        },
+        {
+          "en": "Together, these bounds place its exponential growth around two to n H.",
+          "zh": "两界合起来将其指数增长率夹在2^(nH)附近。"
+        },
+        {
+          "en": "For fixed epsilon, the exponential growth rate is only bracketed within that tolerance.",
+          "zh": "ε固定时，指数增长率只能被夹在该容差范围内。"
+        },
+        {
+          "en": "The entropy rate emerges from these bounds after the tolerance is made arbitrarily small.",
+          "zh": "再让容差任意小，才能从这些界中得到熵所给出的指数增长率。"
+        },
+        {
+          "en": "For a nonuniform source, H is strictly below log two K.",
+          "zh": "对非均匀信源，H严格小于log₂K。"
+        },
+        {
+          "en": "Choose epsilon smaller than log two K minus H.",
+          "zh": "取ε<log₂K−H。"
+        },
+        {
+          "en": "The upper counting bound divided by K to the n then decays exponentially.",
+          "zh": "此时数量上界除以Kⁿ便指数衰减。"
+        },
+        {
+          "en": "Specifically, the fraction is at most two raised to negative n times the quantity log base two K minus H minus epsilon.",
+          "zh": "具体地，该比例至多为2^(−n(log₂K−H−ε))。"
+        },
+        {
+          "en": "This conclusion needs a nonuniform source and a sufficiently small tolerance.",
+          "zh": "该结论需要非均匀信源和足够小的容差。"
+        },
+        {
+          "en": "Try a uniform source. Is the typical set still a tiny corner? This time the answer flips.",
+          "zh": "换成均匀信源，典型集还是一个小角落吗？这一次答案变了。",
+          "hold_after_s": 2
+        },
+        {
+          "en": "If all K symbols have probability one over K, every length-n sequence has probability K to the negative n.",
+          "zh": "若K个符号概率均为1/K，每个长度n序列概率都是K^(−n)。"
+        },
+        {
+          "en": "Its surprisal per symbol is exactly log two K for every sequence.",
+          "zh": "每个序列的每符号自信息都恰为log₂K。"
+        },
+        {
+          "en": "Every sequence is therefore weakly typical for every positive epsilon.",
+          "zh": "因此每个序列对任意正ε都弱典型。"
+        },
+        {
+          "en": "The weakly typical set then equals the whole K to the n space.",
+          "zh": "此时弱典型集就是整个Kⁿ空间。"
+        },
+        {
+          "en": "This uniform case shows that typical mass and typical count are logically separate.",
+          "zh": "这个均匀情形表明典型质量与典型计数逻辑上彼此独立。"
+        },
+        {
+          "en": "Its probability is one and its counting fraction is also one.",
+          "zh": "它的概率质量和计数比例都为一。"
+        },
+        {
+          "en": "High probability alone never implies a small counting fraction.",
+          "zh": "高概率本身绝不意味着计数比例很小。"
+        },
+        {
+          "en": "We should also distinguish weak and strong typicality.",
+          "zh": "我们还应区分弱典型性与强典型性。"
+        },
+        {
+          "en": "Weak typicality checks only the average surprisal of a sequence.",
+          "zh": "弱典型性只检查序列的平均自信息。"
+        },
+        {
+          "en": "Strong typicality checks each symbol's empirical frequency against its source probability.",
+          "zh": "强典型性逐个检查符号的经验频率是否接近源概率。"
+        },
+        {
+          "en": "Each positive-probability symbol must have frequency within a positive tolerance eta of its source probability.",
+          "zh": "每个正概率符号的经验频率，与其源概率的差必须不超过正容差η。"
+        },
+        {
+          "en": "For every zero-probability symbol, its observed count must equal zero.",
+          "zh": "对每个零概率符号，其观测次数必须为零。"
+        },
+        {
+          "en": "Such a symbol also rules out weak typicality, since the whole sequence would have probability zero.",
+          "zh": "这样的符号也会使弱典型性失败，因为整个序列的概率会为零。"
+        },
+        {
+          "en": "A sufficiently small eta then ensures weak epsilon-typicality on this finite support.",
+          "zh": "在该有限支持集上，η足够小时便能保证弱ε典型性。"
+        },
+        {
+          "en": "The surprisal error is at most eta times the sum of absolute log probabilities.",
+          "zh": "自信息误差至多为η乘以各正概率符号的绝对对数概率之和。"
+        },
+        {
+          "en": "Strong typicality therefore carries more coordinatewise information.",
+          "zh": "因此强典型性包含更多逐符号信息。"
+        },
+        {
+          "en": "Can one average conceal different symbol frequencies? Try this three-symbol source.",
+          "zh": "一个平均数能掩盖不同的符号频率吗？试试这个三符号信源。"
+        },
+        {
+          "en": "Consider source probabilities one half, one quarter, and one quarter.",
+          "zh": "考虑概率为1/2、1/4、1/4的信源。"
+        },
+        {
+          "en": "Its entropy is one point five bits per symbol.",
+          "zh": "其熵为每符号1.5比特。"
+        },
+        {
+          "en": "Take an even-length sequence with half zeros, half ones, and no twos.",
+          "zh": "取偶数长度序列，其中一半为零、一半为一，没有二。",
+          "hold_after_s": 2
+        },
+        {
+          "en": "Its average surprisal is half times one bit plus half times two bits.",
+          "zh": "其平均自信息为一半乘1比特加一半乘2比特。"
+        },
+        {
+          "en": "That equals one point five, exactly the source entropy.",
+          "zh": "结果为1.5，恰等于信源熵。"
+        },
+        {
+          "en": "Such a sequence has positive probability because both used symbols have positive source probability.",
+          "zh": "该序列有正概率，因为实际出现的两个符号源概率都为正。"
+        },
+        {
+          "en": "Its exact information average satisfies the weak criterion without matching every coordinate frequency.",
+          "zh": "它的精确信息平均满足弱典型条件，却没有匹配每个坐标频率。"
+        },
+        {
+          "en": "The sequence is weakly typical for every positive tolerance.",
+          "zh": "该序列对任意正容差都弱典型。"
+        },
+        {
+          "en": "Its empirical frequencies are one half, one half, and zero.",
+          "zh": "其经验频率为1/2、1/2、0。"
+        },
+        {
+          "en": "They differ from the source probabilities one half, one quarter, and one quarter.",
+          "zh": "这与源概率1/2、1/4、1/4不同。"
+        },
+        {
+          "en": "For eta smaller than one quarter, this sequence is not strongly typical.",
+          "zh": "当η小于四分之一时，该序列不强典型。"
+        },
+        {
+          "en": "The distinction matters because different coding proofs use different typicality notions.",
+          "zh": "这种区别很重要，因为不同编码证明会用不同典型性概念。"
+        },
+        {
+          "en": "Here random binning needs the weak typical-set size and probability bounds already proved.",
+          "zh": "这里随机分箱只需使用刚证明的弱典型集数量与概率界。"
+        },
+        {
+          "en": "Next, we examine exactly which collision event a random bin controls.",
+          "zh": "下一步精确考察随机分箱控制的是哪种碰撞事件。"
+        }
+      ]
+    },
+    {
+      "id": "c03-binning",
+      "chapter": "Random Binning",
+      "title": "A collision somewhere — a problem for you?",
+      "music": "definition",
+      "terms": [
+        "typical-set",
+        "random-binning",
+        "random-coding"
+      ],
+      "sentences": [
+        {
+          "en": "A hundred messages. A thousand numbered drawers. Sounds roomy enough.",
+          "zh": "100 条消息，1000 个编号格子。看起来绰绰有余。"
+        },
+        {
+          "en": "Give every message a drawer, independently and uniformly at random.",
+          "zh": "让每条消息独立、均匀地随机选择一个格子。"
+        },
+        {
+          "en": "Now pick one message: the green card marked YOU.",
+          "zh": "现在选定一条消息：标着 YOU 的绿色卡片。"
+        },
+        {
+          "en": "Two bets. Does any pair of messages share a drawer?",
+          "zh": "两个问题。是否存在任意一对消息，共用一个格子？"
+        },
+        {
+          "en": "And can the receiver recover your green card from its drawer number?",
+          "zh": "接收者能否仅凭格子编号，还原你的绿色卡片？"
+        },
+        {
+          "en": "Make a prediction. Do these bets have the same answer?",
+          "zh": "先猜一猜。这两个问题会有相同的答案吗？",
+          "hold_after_s": 3.2
+        },
+        {
+          "en": "Here is the surprise. A collision happens somewhere over ninety-nine percent of the time.",
+          "zh": "意外的是：超过 99% 的情况下，某处会发生碰撞。"
+        },
+        {
+          "en": "Yet your green card is alone more than ninety percent of the time.",
+          "zh": "但超过 90% 的情况下，你的绿色卡片仍独占一个格子。",
+          "hold_after_s": 1.0
+        },
+        {
+          "en": "The same random experiment. Two very different questions.",
+          "zh": "同一次随机实验，两个差别很大的问题。"
+        },
+        {
+          "en": "This is one possible assignment, not a measured simulation.",
+          "zh": "这里展示一种可能的分配，并非仿真统计结果。"
+        },
+        {
+          "en": "The orange pair shares a drawer. That spoils the all-distinct bet.",
+          "zh": "橙色卡片共用一个格子，使“所有卡片各不相同”失败。"
+        },
+        {
+          "en": "But your drawer contains only your message. Its number still identifies you.",
+          "zh": "但你的格子里只有你的消息。编号仍能唯一确定它。"
+        },
+        {
+          "en": "Now move one competitor into your drawer.",
+          "zh": "现在，把一个竞争者移进你的格子。"
+        },
+        {
+          "en": "Both cards produce the same number. The receiver cannot tell them apart.",
+          "zh": "两张卡片产生同一编号，接收者便无法区分。"
+        },
+        {
+          "en": "Move it back. A collision elsewhere does not make your drawer ambiguous.",
+          "zh": "把它移回去。别处碰撞，并不会让你的格子产生歧义。",
+          "hold_after_s": 1.0
+        },
+        {
+          "en": "Let us calculate your risk, with M messages and N drawers.",
+          "zh": "用 M 条消息、N 个格子，算算你的风险。"
+        },
+        {
+          "en": "Condition on your drawer. Each other message avoids it with probability one minus one over N.",
+          "zh": "固定你的格子。每个其他消息避开它的概率是 1−1/N。"
+        },
+        {
+          "en": "These assignments are independent. All M minus one competitors avoid it with the probability shown.",
+          "zh": "这些分配彼此独立。所有 M−1 个竞争者避开它的概率如式。"
+        },
+        {
+          "en": "Subtract from one to get your collision probability.",
+          "zh": "用 1 减去这个概率，就得到你的碰撞概率。"
+        },
+        {
+          "en": "For a hundred messages and a thousand drawers, that is about nine point four three percent.",
+          "zh": "100 条消息、1000 个格子时，结果约为 9.43%。"
+        },
+        {
+          "en": "A simpler bound adds the M minus one possible competitor events.",
+          "zh": "更简单的界，把 M−1 个竞争者各自的碰撞事件相加。"
+        },
+        {
+          "en": "The union bound gives M minus one, all divided by N. Here, nine point nine percent.",
+          "zh": "并集界得到 (M−1)/N。这里是 9.9%。"
+        },
+        {
+          "en": "That is the trick compression needs: protect the message actually sent.",
+          "zh": "压缩需要的正是这一点：保护实际发出的那条消息。",
+          "hold_after_s": 2.2
+        },
+        {
+          "en": "Now change the question. Require every drawer to contain at most one message.",
+          "zh": "现在换个问题：要求每个格子最多放一条消息。"
+        },
+        {
+          "en": "Reveal assignments one at a time. The first message is always safe.",
+          "zh": "逐个揭开分配结果。第一条消息总是安全。"
+        },
+        {
+          "en": "The second avoids one occupied drawer. The third avoids two, if the first two were distinct.",
+          "zh": "第二条避开 1 个已占格子；若前两条不同，第三条要避开 2 个。"
+        },
+        {
+          "en": "Continue this argument, conditioning on all earlier assignments being distinct.",
+          "zh": "继续下去，每一步都以前面的分配互不相同为条件。"
+        },
+        {
+          "en": "Multiplying gives this product, for M no larger than N.",
+          "zh": "当 M≤N 时，相乘得到这个乘积。"
+        },
+        {
+          "en": "Each factor, one minus u, is at most the exponential of negative u.",
+          "zh": "每个因子满足 1−u≤exp(−u)。"
+        },
+        {
+          "en": "The product is bounded by the exponential of negative one over N times the sum of k.",
+          "zh": "乘积至多为 exp(−Σk/N)。"
+        },
+        {
+          "en": "That sum is M times M minus one, divided by two.",
+          "zh": "这个和等于 M(M−1)/2。"
+        },
+        {
+          "en": "Subtracting from one gives a lower bound on any collision.",
+          "zh": "再用 1 减去，便得到“任意处碰撞”的概率下界。"
+        },
+        {
+          "en": "For our cabinet, the exact product gives about ninety-nine point four zero percent.",
+          "zh": "对我们的格子，精确乘积给出约 99.40%。",
+          "hold_after_s": 1.0
+        },
+        {
+          "en": "Your risk counts your competitors. The global risk gathers pairs across the whole set.",
+          "zh": "你的风险只统计你的竞争者；全局风险汇集整个集合中的消息对。"
+        },
+        {
+          "en": "The distinction survives even as block length grows.",
+          "zh": "即使块长增大，这个区别依然存在。"
+        },
+        {
+          "en": "Choose n divisible by four, with M and N growing at these two exponential rates.",
+          "zh": "取 n 为 4 的正整数倍，让 M 和 N 按图示的两个指数增长。"
+        },
+        {
+          "en": "The chosen-message union bound is at most two to the negative n over four. It tends to zero.",
+          "zh": "选中消息的并集界至多为 2 的 −n/4 次方，趋于零。"
+        },
+        {
+          "en": "But the birthday exponent equals one half times the difference shown here.",
+          "zh": "但生日界的指数等于图中这两个量之差的一半。"
+        },
+        {
+          "en": "It grows without bound. The probability of some collision therefore tends to one.",
+          "zh": "它无限增大，因此某处发生碰撞的概率趋于一。"
+        },
+        {
+          "en": "A random codebook can almost always contain a collision, while a fixed message is almost always safe.",
+          "zh": "随机码本几乎总有碰撞，固定消息却几乎总是安全。",
+          "hold_after_s": 1.0
+        },
+        {
+          "en": "For source coding, we average the error for the message actually drawn from the source.",
+          "zh": "信源编码平均的是：实际从信源抽到的消息，其解码错误。"
+        },
+        {
+          "en": "A collision in a drawer that was never used does not itself make this transmission fail.",
+          "zh": "未被本次传输使用的格子发生碰撞，本身不会导致本次失败。"
+        },
+        {
+          "en": "Next, combine this bound with the probability of landing outside the typical set.",
+          "zh": "接下来，把这个界与落在典型集之外的概率结合。"
+        },
+        {
+          "en": "The green card was the error event we needed to study, all along.",
+          "zh": "从一开始，我们需要研究的错误事件，就在这张绿色卡片上。"
+        }
+      ]
+    },
+    {
+      "id": "c04-achievability",
+      "chapter": "Achievability",
+      "title": "A low-error fixed-rate code exists",
+      "music": "proof",
+      "terms": [
+        "aep",
+        "typical-set",
+        "random-binning",
+        "random-coding"
+      ],
+      "sentences": [
+        {
+          "en": "Can randomness prove that a good fixed-rate code exists? Fix a rate R greater than H.",
+          "zh": "随机性能证明一个好的固定率码存在吗？固定 R>H。"
+        },
+        {
+          "en": "Choose epsilon positive and smaller than R minus H.",
+          "zh": "取0<ε<R−H。"
+        },
+        {
+          "en": "For length n, let A be the weak epsilon-typical set.",
+          "zh": "对长度n，令A为弱ε典型集。"
+        },
+        {
+          "en": "Its probability of containing the source block approaches one by AEP.",
+          "zh": "根据AEP，信源块落入A的概率趋近于一。"
+        },
+        {
+          "en": "Its size is at most two raised to n times the quantity H plus epsilon.",
+          "zh": "其大小至多为2^(n(H+ε))。"
+        },
+        {
+          "en": "Set the number of bins N to two to the ceiling of n R.",
+          "zh": "令箱数N=2^⌈nR⌉。"
+        },
+        {
+          "en": "The transmitted bin index takes at most ceiling of n R bits.",
+          "zh": "发送箱索引至多需要⌈nR⌉比特。"
+        },
+        {
+          "en": "The actual rate is at least R and strictly below R plus one over n.",
+          "zh": "实际码率至少为R，且严格小于R+1/n。"
+        },
+        {
+          "en": "Independently assign each possible source block to a uniformly chosen bin.",
+          "zh": "将每个可能的信源块独立地分配到均匀随机选择的箱。"
+        },
+        {
+          "en": "The encoder sends the bin label assigned to its source sequence.",
+          "zh": "编码器发送信源序列对应的箱标签。"
+        },
+        {
+          "en": "The decoder searches that bin for a unique weakly typical sequence.",
+          "zh": "译码器在该箱中寻找唯一弱典型序列。"
+        },
+        {
+          "en": "If exactly one candidate appears, it outputs that candidate.",
+          "zh": "若恰有一个候选，就输出该序列。"
+        },
+        {
+          "en": "With zero or multiple typical candidates, the decoder outputs a fixed default sequence.",
+          "zh": "若典型候选为零个或多个，译码器输出一个固定默认序列。"
+        },
+        {
+          "en": "Atypical source blocks contribute at most their probability to block error.",
+          "zh": "非典型信源块对块错误概率的贡献至多为其发生概率。"
+        },
+        {
+          "en": "For a fixed typical transmitted sequence, each other typical sequence collides with its bin with probability one over N.",
+          "zh": "给定一个典型发送序列，每个其他典型序列以1/N概率与它同箱。"
+        },
+        {
+          "en": "A union bound makes this conditional collision probability at most the quantity cardinality of A minus one, divided by N.",
+          "zh": "由并集界，条件碰撞概率至多为(|A|−1)/N。"
+        },
+        {
+          "en": "Average now over source blocks and random assignments.",
+          "zh": "现在对信源块和随机分配取平均。"
+        },
+        {
+          "en": "For each typical source string, the random assignment is independent across competing strings.",
+          "zh": "对每个典型信源串，其与竞争串的随机分配相互独立。"
+        },
+        {
+          "en": "The encoder and decoder are fixed once a particular assignment is selected.",
+          "zh": "选定某个分配后，编码器和译码器就固定下来。"
+        },
+        {
+          "en": "The ensemble average includes atypical blocks as errors and bounds typical collisions separately.",
+          "zh": "系综平均把非典型块计为错误，并单独界定典型串碰撞。"
+        },
+        {
+          "en": "The expected block error is at most probability outside A plus cardinality of A over N.",
+          "zh": "平均块错误至多为P(Aᶜ)+|A|/N。"
+        },
+        {
+          "en": "The first term tends to zero by AEP.",
+          "zh": "第一项由AEP趋于零。"
+        },
+        {
+          "en": "The second term is at most two raised to n times the quantity H plus epsilon, divided by two raised to the ceiling of n R.",
+          "zh": "第二项至多为2^(n(H+ε))/2^⌈nR⌉。"
+        },
+        {
+          "en": "This is at most two raised to minus n times the positive gap R minus H minus epsilon.",
+          "zh": "该项至多为2^(−n(R−H−ε))，其中括号内差值为正。"
+        },
+        {
+          "en": "Our choice of epsilon makes R minus H minus epsilon positive.",
+          "zh": "所选ε使R−H−ε为正。"
+        },
+        {
+          "en": "Thus the second term also tends to zero exponentially.",
+          "zh": "因此第二项也指数趋于零。"
+        },
+        {
+          "en": "We first fix epsilon and R, then let n grow.",
+          "zh": "我们先固定ε和R，再让n增长。"
+        },
+        {
+          "en": "This parameter order keeps a positive rate gap in the exponent.",
+          "zh": "这样的参数次序使指数中保留正码率差。"
+        },
+        {
+          "en": "The expectation is taken over complete bin assignments, not over source sequences alone.",
+          "zh": "这里的期望针对完整分箱分配，而不只是信源序列。"
+        },
+        {
+          "en": "A nonnegative random error with mean at most alpha has at least one realization no greater than alpha.",
+          "zh": "非负随机错误若均值至多为α，则至少有一个实现不超过α。"
+        },
+        {
+          "en": "Therefore at least one deterministic assignment achieves the ensemble-average bound.",
+          "zh": "因此至少存在一个确定分配达到该随机系综平均界。"
+        },
+        {
+          "en": "If every assignment exceeded the mean bound, their average would exceed it too.",
+          "zh": "若每个分配都超过该均值界，它们的平均也会超过该界。"
+        },
+        {
+          "en": "This proves existence; it does not construct the best assignment.",
+          "zh": "这证明存在性，但没有构造最佳分配。"
+        },
+        {
+          "en": "Markov's inequality also shows most assignments are good once the mean is small.",
+          "zh": "均值很小时，马尔可夫不等式还表明大多数分配都较好。"
+        },
+        {
+          "en": "For positive alpha, the probability that error exceeds square root alpha is at most square root alpha.",
+          "zh": "α为正时，错误概率超过√α的码本比例至多为√α。"
+        },
+        {
+          "en": "A bad codebook does not refute this proof. The claim is existence, not universal success.",
+          "zh": "坏码本不能推翻这个证明。结论是好码本存在，并非每个码本都好。"
+        },
+        {
+          "en": "An alternative description indexes typical strings directly.",
+          "zh": "另一种描述是直接给典型字符串编号。"
+        },
+        {
+          "en": "Their indices need at most n times the quantity H plus epsilon bits, rounded up.",
+          "zh": "它们的索引所需比特数，至多为n(H+ε)向上取整。"
+        },
+        {
+          "en": "Random binning adds a controlled collision risk while keeping a fixed-length label.",
+          "zh": "随机分箱保留固定长度标签，同时引入可控碰撞风险。"
+        },
+        {
+          "en": "Both pictures rely on the same typical-set count.",
+          "zh": "两种图景都依赖相同的典型集计数。"
+        },
+        {
+          "en": "The result concerns block error, meaning whether the entire decoded block is correct.",
+          "zh": "结论针对块错误，即整个译码块是否正确。"
+        },
+        {
+          "en": "It is not a claim about average per-symbol distortion.",
+          "zh": "它并非关于平均逐符号失真的结论。"
+        },
+        {
+          "en": "The rate is measured in bits per source symbol.",
+          "zh": "码率单位是每个信源符号的比特数。"
+        },
+        {
+          "en": "Next, Fano's inequality shows that rates below H cannot have vanishing block error.",
+          "zh": "下一步用Fano不等式证明低于H的码率无法使块错误趋于零。"
+        }
+      ]
+    },
+    {
+      "id": "c05-converse",
+      "chapter": "Converse",
+      "title": "Rates below entropy retain block error",
+      "music": "proof",
+      "terms": [
+        "fano",
+        "entropy",
+        "typical-set"
+      ],
+      "sentences": [
+        {
+          "en": "Could a clever encoder beat entropy anyway? Take an IID source with K symbols, K at least two.",
+          "zh": "聪明的编码器能突破熵吗？考虑 K≥2 个符号的 IID 信源。"
+        },
+        {
+          "en": "Its block entropy is n times H.",
+          "zh": "其块熵为nH。"
+        },
+        {
+          "en": "A fixed-length encoder has at most M possible messages.",
+          "zh": "固定长度编码器至多有M种消息。"
+        },
+        {
+          "en": "Let the decoder's reconstruction be X hat n.",
+          "zh": "令译码器重建结果为X帽ⁿ。"
+        },
+        {
+          "en": "Let P e denote the probability that the reconstructed block differs anywhere.",
+          "zh": "令Pₑ表示重建块任一位置不同的概率。"
+        },
+        {
+          "en": "This is block error probability, not symbol error probability.",
+          "zh": "这是块错误概率，不是符号错误概率。"
+        },
+        {
+          "en": "Apply Fano to the entire source block.",
+          "zh": "对整个信源块应用Fano不等式。"
+        },
+        {
+          "en": "Fano bounds the conditional block entropy by one plus P e times log base two of the quantity K to n minus one.",
+          "zh": "Fano界定H(Xⁿ|重建)≤1+Pₑlog₂(Kⁿ−1)。"
+        },
+        {
+          "en": "It is further at most one plus P e n log two K.",
+          "zh": "它还至多为1+Pₑnlog₂K。"
+        },
+        {
+          "en": "The mutual information between the source block and reconstruction is at most the entropy of the reconstruction.",
+          "zh": "信源块与重建结果的互信息不超过重建结果的熵。"
+        },
+        {
+          "en": "That entropy cannot exceed log two M because there are at most M reconstructions.",
+          "zh": "重建结果最多M种，因此其熵不超过log₂M。"
+        },
+        {
+          "en": "Decompose source entropy into that mutual information plus conditional entropy.",
+          "zh": "将信源熵分解为该互信息加条件熵。"
+        },
+        {
+          "en": "This is the entropy identity established in the first episode.",
+          "zh": "这就是第一集建立的熵恒等式。"
+        },
+        {
+          "en": "Then n H is at most log two M plus one plus P e n log two K.",
+          "zh": "于是nH≤log₂M+1+Pₑnlog₂K。"
+        },
+        {
+          "en": "Define the fixed-length rate R n as log two M divided by n.",
+          "zh": "定义固定长度码率Rₙ=(log₂M)/n。"
+        },
+        {
+          "en": "Divide the inequality by n and rearrange.",
+          "zh": "将不等式除以n并整理。"
+        },
+        {
+          "en": "The result is R n at least H minus one over n minus P e log two K.",
+          "zh": "得到Rₙ≥H−1/n−Pₑlog₂K。"
+        },
+        {
+          "en": "If block error tends to zero, the final error term vanishes.",
+          "zh": "若块错误趋于零，最后的错误项也趋于零。"
+        },
+        {
+          "en": "Therefore the lower limit of rates is at least H.",
+          "zh": "因此码率下极限至少为H。"
+        },
+        {
+          "en": "This is a weak converse.",
+          "zh": "这是弱逆定理。"
+        },
+        {
+          "en": "It proves that error cannot vanish below H.",
+          "zh": "它证明H以下错误不能趋于零。"
+        },
+        {
+          "en": "A positive error floor is not the same as error approaching one. This proof establishes the former.",
+          "zh": "错误率有正下界，不等于错误率趋于一。这里证明的是前者。"
+        },
+        {
+          "en": "For a fixed gap below H, the same inequality gives a positive error floor.",
+          "zh": "若与H保持固定差距，同一不等式给出正的错误下界。"
+        },
+        {
+          "en": "Explicitly, P e is at least H minus R n minus one over n, all divided by log two K.",
+          "zh": "明确地，Pₑ≥(H−Rₙ−1/n)/log₂K。"
+        },
+        {
+          "en": "For fixed R below H, this lower bound stays positive for large n.",
+          "zh": "若固定R<H，n足够大时该下界仍为正。"
+        },
+        {
+          "en": "The argument assumes a finite source alphabet and a decoder with at most M outputs.",
+          "zh": "该论证假设有限信源字母表，且译码器至多有M种输出。"
+        },
+        {
+          "en": "The source is IID, so block entropy is exactly n H.",
+          "zh": "信源独立同分布，因此块熵恰为nH。"
+        },
+        {
+          "en": "No finite-block zero-error claim follows from this asymptotic converse.",
+          "zh": "该渐近逆定理并未推出有限块长零错误结论。"
+        },
+        {
+          "en": "We have now proved both sides of the fixed-rate threshold.",
+          "zh": "现在固定码率阈值的两侧都已证明。"
+        },
+        {
+          "en": "Rates above H admit vanishing block error.",
+          "zh": "高于H的码率允许块错误趋于零。"
+        },
+        {
+          "en": "Rates bounded below H force block error to stay positive.",
+          "zh": "低于H并保持间隔的码率迫使块错误保持为正。"
+        },
+        {
+          "en": "The entropy is the asymptotic boundary for this IID finite-alphabet model.",
+          "zh": "在该有限字母IID模型中，熵是渐近边界。"
+        },
+        {
+          "en": "Next, distinguish this limit from exact zero-error coding at each block length.",
+          "zh": "下一步区分这种极限与每个块长都精确零错误的编码。"
+        }
+      ]
+    },
+    {
+      "id": "c06-boundaries",
+      "chapter": "Zero Error and Vanishing Error",
+      "title": "Different operational guarantees",
+      "music": "recap",
+      "terms": [
+        "dms",
+        "prefix-free",
+        "entropy",
+        "entropy-rate"
+      ],
+      "sentences": [
+        {
+          "en": "Would you accept one rare decoding failure, or must every possible message be safe? Those are different promises.",
+          "zh": "你愿意接受极罕见的解码失败，还是要求所有可能消息都安全？这是不同的承诺。"
+        },
+        {
+          "en": "A zero-error fixed-length code must distinguish every possible source block.",
+          "zh": "零错误固定长度码必须区分每个可能的信源块。"
+        },
+        {
+          "en": "For an IID source, let K support count the number of positive-probability symbols.",
+          "zh": "对IID信源，令K支撑为正概率符号的数量。"
+        },
+        {
+          "en": "Every length-n sequence over that support has positive probability.",
+          "zh": "支撑集上的每个长度n序列都有正概率。"
+        },
+        {
+          "en": "There are K support to the n such sequences.",
+          "zh": "这类序列共有K支撑的n次方个。"
+        },
+        {
+          "en": "Two distinct supported sequences cannot share one encoded message under zero-error decoding.",
+          "zh": "零错误译码时，两个不同的支持序列不能共用一条编码消息。"
+        },
+        {
+          "en": "The encoder must therefore be injective on the full support.",
+          "zh": "因此编码器必须在整个支持集上单射。"
+        },
+        {
+          "en": "A fixed-length code needs at least K support to the n messages.",
+          "zh": "固定长度码至少需要K支撑的n次方种消息。"
+        },
+        {
+          "en": "Its rate is at least log two of K support.",
+          "zh": "其码率至少为log₂K支撑。"
+        },
+        {
+          "en": "Probabilities nonuniform on their positive support give entropy strictly below log support size.",
+          "zh": "若概率在正概率支持集上不均匀，熵就严格小于支持集大小的对数。"
+        },
+        {
+          "en": "So exact fixed-length zero error can require more bits than asymptotically reliable compression.",
+          "zh": "因此精确固定长度零错误可能比渐近可靠压缩需要更多比特。"
+        },
+        {
+          "en": "A coin lands heads only one time in five. Would fixed-length zero error still cost one bit per flip?",
+          "zh": "一枚硬币平均每 5 次才出现 1 次正面。固定长度零错误仍要每次 1 bit 吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Its fixed-length zero-error rate is at least one bit per symbol.",
+          "zh": "其固定长度零错误码率至少为每符号一比特。"
+        },
+        {
+          "en": "Its entropy is only about zero point seven two two bits per symbol.",
+          "zh": "但它的熵仅约为每符号 0.722 bit。"
+        },
+        {
+          "en": "The difference is not a contradiction.",
+          "zh": "这并不矛盾。"
+        },
+        {
+          "en": "The fixed-length zero-error requirement protects every supported sequence at every block length.",
+          "zh": "固定长度零错误要求在每个块长上保护每个有支持的序列。"
+        },
+        {
+          "en": "The Shannon theorem allows a small block-error probability that vanishes only as n increases.",
+          "zh": "香农定理允许块错误概率较小，并仅在n增大时趋于零。"
+        },
+        {
+          "en": "Rare sequences may be assigned to an error event in the asymptotic code.",
+          "zh": "渐近码可以把罕见序列纳入错误事件。"
+        },
+        {
+          "en": "Their total probability can vanish even though each individual sequence remains possible.",
+          "zh": "尽管每个序列仍可能发生，它们的总概率仍可趋零。"
+        },
+        {
+          "en": "A variable-length prefix code changes the comparison again.",
+          "zh": "变长前缀码会再次改变比较方式。"
+        },
+        {
+          "en": "It can assign shorter descriptions to common sequences while preserving error-free decoding for every supported sequence.",
+          "zh": "它可以为常见序列分配较短描述，同时保证每个支持序列都能无误译码。"
+        },
+        {
+          "en": "Later coding constructions will bring its average rate close to H.",
+          "zh": "后续编码构造会使其平均码率接近H。"
+        },
+        {
+          "en": "A prefix restriction prevents one codeword from being the beginning of another.",
+          "zh": "前缀限制禁止一个码字成为另一码字的开头。"
+        },
+        {
+          "en": "Variable lengths allow common source strings to receive shorter descriptions.",
+          "zh": "变长编码允许常见信源串获得更短描述。"
+        },
+        {
+          "en": "The expected length weights each description by its source probability.",
+          "zh": "期望码长按每个描述的信源概率加权。"
+        },
+        {
+          "en": "This probability weighting is absent from fixed-length zero-error counting.",
+          "zh": "固定长度零错误计数中没有这种概率加权。"
+        },
+        {
+          "en": "That statement concerns expected length, not a fixed-length block budget.",
+          "zh": "该结论针对期望码长，而非固定长度块预算。"
+        },
+        {
+          "en": "Keep the operational quantities separate.",
+          "zh": "要把操作指标分开。"
+        },
+        {
+          "en": "Rate here means bits per source symbol.",
+          "zh": "这里的码率指每个信源符号的比特数。"
+        },
+        {
+          "en": "Block error asks whether an entire block is reconstructed correctly.",
+          "zh": "块错误问的是整个数据块是否被正确重建。"
+        },
+        {
+          "en": "Symbol error counts individual incorrect symbols and can behave differently.",
+          "zh": "符号错误统计单个错误符号，行为可能不同。"
+        },
+        {
+          "en": "A theorem about vanishing block error does not promise finite-block zero error.",
+          "zh": "块错误趋零的定理不保证有限块长零错误。"
+        },
+        {
+          "en": "A rate bound does not alone specify the code construction.",
+          "zh": "码率界本身并未指定编码构造。"
+        },
+        {
+          "en": "For this chapter, the source is finite-alphabet and IID.",
+          "zh": "本章讨论有限字母表独立同分布信源。"
+        },
+        {
+          "en": "For stationary sources with memory, block entropy per symbol defines an entropy rate.",
+          "zh": "对平稳的有记忆信源，每符号块熵定义了熵率。"
+        },
+        {
+          "en": "When a suitable AEP holds, that rate governs high-probability block probabilities.",
+          "zh": "若适当的AEP成立，这个熵率就控制高概率块的概率尺度。"
+        },
+        {
+          "en": "The next episode builds that extension.",
+          "zh": "下一集将建立这一推广。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[project]
+name = "rvideo"
+version = "0.1.0"
+description = "Build pipeline for the Information Theory series"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "kokoro==0.9.4",
+    "misaki==0.9.4",
+    "torch==2.6.0+cu124",
+    "spacy==3.8.16",
+    "en-core-web-sm==3.8.0",
+    "soundfile==0.14.0",
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+]
+
+[project.optional-dependencies]
+qa = ["faster-whisper==1.2.1"]
+
+[project.scripts]
+rvideo = "rvideo.cli.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["rvideo*"]

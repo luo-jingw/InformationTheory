@@ -1,0 +1,403 @@
+{
+  "terms": [
+    {
+      "id": "surprisal",
+      "en": "surprisal",
+      "zh": "自信息",
+      "symbol": "−log₂ p(x)",
+      "spoken": "surprisal"
+    },
+    {
+      "id": "entropy",
+      "en": "entropy",
+      "zh": "熵",
+      "symbol": "H(X)",
+      "spoken": "entropy"
+    },
+    {
+      "id": "binary-entropy",
+      "en": "binary entropy",
+      "zh": "二元熵",
+      "symbol": "H_b(p)",
+      "spoken": "binary entropy"
+    },
+    {
+      "id": "joint-entropy",
+      "en": "joint entropy",
+      "zh": "联合熵",
+      "symbol": "H(X,Y)",
+      "spoken": "joint entropy"
+    },
+    {
+      "id": "conditional-entropy",
+      "en": "conditional entropy",
+      "zh": "条件熵",
+      "symbol": "H(X|Y)",
+      "spoken": "conditional entropy"
+    },
+    {
+      "id": "mutual-information",
+      "en": "mutual information",
+      "zh": "互信息",
+      "symbol": "I(X;Y)",
+      "spoken": "mutual information"
+    },
+    {
+      "id": "conditional-mi",
+      "en": "conditional mutual information",
+      "zh": "条件互信息",
+      "symbol": "I(X;Y|Z)",
+      "spoken": "conditional mutual information"
+    },
+    {
+      "id": "chain-rule",
+      "en": "chain rule",
+      "zh": "链式法则",
+      "symbol": "",
+      "spoken": "chain rule"
+    },
+    {
+      "id": "markov-chain",
+      "en": "Markov chain",
+      "zh": "马尔可夫链",
+      "symbol": "X→Y→Z",
+      "spoken": "Markov chain"
+    },
+    {
+      "id": "conditional-independence",
+      "en": "conditional independence",
+      "zh": "条件独立",
+      "symbol": "X ⟂ Y | Z",
+      "spoken": "conditional independence"
+    },
+    {
+      "id": "convexity",
+      "en": "convexity",
+      "zh": "凸性",
+      "symbol": "",
+      "spoken": "convexity"
+    },
+    {
+      "id": "concavity",
+      "en": "concavity",
+      "zh": "凹性",
+      "symbol": "",
+      "spoken": "concavity"
+    },
+    {
+      "id": "jensen",
+      "en": "Jensen inequality",
+      "zh": "詹森不等式",
+      "symbol": "",
+      "spoken": "Jensen inequality"
+    },
+    {
+      "id": "kl-divergence",
+      "en": "Kullback–Leibler divergence",
+      "zh": "库尔贝克–莱布勒散度",
+      "symbol": "D(p‖q)",
+      "spoken": "Kullback–Leibler divergence"
+    },
+    {
+      "id": "probability-simplex",
+      "en": "probability simplex",
+      "zh": "概率单纯形",
+      "symbol": "Δ",
+      "spoken": "probability simplex"
+    },
+    {
+      "id": "data-processing",
+      "en": "data processing inequality",
+      "zh": "数据处理不等式",
+      "symbol": "I(X;Z)≤I(X;Y)",
+      "spoken": "data processing inequality"
+    },
+    {
+      "id": "sufficient-statistic",
+      "en": "sufficient statistic",
+      "zh": "充分统计量",
+      "symbol": "T(X)",
+      "spoken": "sufficient statistic"
+    },
+    {
+      "id": "fano",
+      "en": "Fano inequality",
+      "zh": "法诺不等式",
+      "symbol": "",
+      "spoken": "Fano inequality"
+    },
+    {
+      "id": "aep",
+      "en": "asymptotic equipartition property",
+      "zh": "渐近等分性质",
+      "symbol": "AEP",
+      "spoken": "asymptotic equipartition property"
+    },
+    {
+      "id": "typical-set",
+      "en": "typical set",
+      "zh": "典型集",
+      "symbol": "A_εⁿ",
+      "spoken": "typical set"
+    },
+    {
+      "id": "random-binning",
+      "en": "random binning",
+      "zh": "随机分箱",
+      "symbol": "",
+      "spoken": "random binning"
+    },
+    {
+      "id": "random-coding",
+      "en": "random coding",
+      "zh": "随机编码",
+      "symbol": "",
+      "spoken": "random coding"
+    },
+    {
+      "id": "dms",
+      "en": "discrete memoryless source",
+      "zh": "离散无记忆信源",
+      "symbol": "DMS",
+      "spoken": "discrete memoryless source"
+    },
+    {
+      "id": "entropy-rate",
+      "en": "entropy rate",
+      "zh": "熵率",
+      "symbol": "H̅",
+      "spoken": "entropy rate"
+    },
+    {
+      "id": "stationary",
+      "en": "stationary distribution",
+      "zh": "平稳分布",
+      "symbol": "π",
+      "spoken": "stationary distribution"
+    },
+    {
+      "id": "ergodicity",
+      "en": "ergodicity",
+      "zh": "遍历性",
+      "symbol": "",
+      "spoken": "ergodicity"
+    },
+    {
+      "id": "prefix-free",
+      "en": "prefix-free code",
+      "zh": "前缀码",
+      "symbol": "",
+      "spoken": "prefix-free code"
+    },
+    {
+      "id": "uniquely-decodable",
+      "en": "uniquely decodable code",
+      "zh": "唯一可译码",
+      "symbol": "",
+      "spoken": "uniquely decodable code"
+    },
+    {
+      "id": "kraft",
+      "en": "Kraft–McMillan inequality",
+      "zh": "克拉夫特–麦克米伦不等式",
+      "symbol": "∑D⁻ˡ≤1",
+      "spoken": "Kraft–McMillan inequality"
+    },
+    {
+      "id": "huffman",
+      "en": "Huffman code",
+      "zh": "霍夫曼编码",
+      "symbol": "",
+      "spoken": "Huffman code"
+    },
+    {
+      "id": "shannon-code",
+      "en": "Shannon code",
+      "zh": "香农编码",
+      "symbol": "",
+      "spoken": "Shannon code"
+    },
+    {
+      "id": "sfe",
+      "en": "Shannon–Fano–Elias code",
+      "zh": "香农–法诺–埃利亚斯编码",
+      "symbol": "",
+      "spoken": "Shannon–Fano–Elias code"
+    },
+    {
+      "id": "universal-code",
+      "en": "universal source coding",
+      "zh": "通用信源编码",
+      "symbol": "",
+      "spoken": "universal source coding"
+    },
+    {
+      "id": "lz78",
+      "en": "Lempel–Ziv 78",
+      "zh": "LZ78字典编码",
+      "symbol": "LZ78",
+      "spoken": "Lempel–Ziv 78"
+    },
+    {
+      "id": "dmc",
+      "en": "discrete memoryless channel",
+      "zh": "离散无记忆信道",
+      "symbol": "DMC",
+      "spoken": "discrete memoryless channel"
+    },
+    {
+      "id": "capacity",
+      "en": "channel capacity",
+      "zh": "信道容量",
+      "symbol": "C",
+      "spoken": "channel capacity"
+    },
+    {
+      "id": "bsc",
+      "en": "binary symmetric channel",
+      "zh": "二元对称信道",
+      "symbol": "BSC",
+      "spoken": "binary symmetric channel"
+    },
+    {
+      "id": "bec",
+      "en": "binary erasure channel",
+      "zh": "二元擦除信道",
+      "symbol": "BEC",
+      "spoken": "binary erasure channel"
+    },
+    {
+      "id": "z-channel",
+      "en": "Z channel",
+      "zh": "Z信道",
+      "symbol": "",
+      "spoken": "Z channel"
+    },
+    {
+      "id": "joint-typicality",
+      "en": "joint typicality",
+      "zh": "联合典型性",
+      "symbol": "",
+      "spoken": "joint typicality"
+    },
+    {
+      "id": "expurgation",
+      "en": "expurgation",
+      "zh": "删码",
+      "symbol": "",
+      "spoken": "expurgation"
+    },
+    {
+      "id": "separation",
+      "en": "source–channel separation",
+      "zh": "信源信道分离",
+      "symbol": "",
+      "spoken": "source–channel separation"
+    },
+    {
+      "id": "feedback",
+      "en": "feedback",
+      "zh": "反馈",
+      "symbol": "",
+      "spoken": "feedback"
+    },
+    {
+      "id": "map",
+      "en": "maximum a posteriori decoding",
+      "zh": "最大后验译码",
+      "symbol": "MAP",
+      "spoken": "maximum a posteriori decoding"
+    },
+    {
+      "id": "ml",
+      "en": "maximum likelihood decoding",
+      "zh": "最大似然译码",
+      "symbol": "ML",
+      "spoken": "maximum likelihood decoding"
+    },
+    {
+      "id": "differential-entropy",
+      "en": "differential entropy",
+      "zh": "微分熵",
+      "symbol": "h(X)",
+      "spoken": "differential entropy"
+    },
+    {
+      "id": "covariance",
+      "en": "covariance matrix",
+      "zh": "协方差矩阵",
+      "symbol": "K",
+      "spoken": "covariance matrix"
+    },
+    {
+      "id": "gaussian",
+      "en": "Gaussian distribution",
+      "zh": "高斯分布",
+      "symbol": "N(μ,K)",
+      "spoken": "Gaussian distribution"
+    },
+    {
+      "id": "awgn",
+      "en": "additive white Gaussian noise",
+      "zh": "加性白高斯噪声",
+      "symbol": "AWGN",
+      "spoken": "additive white Gaussian noise"
+    },
+    {
+      "id": "bpsk",
+      "en": "binary phase shift keying",
+      "zh": "二进制相移键控",
+      "symbol": "BPSK",
+      "spoken": "binary phase shift keying"
+    },
+    {
+      "id": "snr",
+      "en": "signal-to-noise ratio",
+      "zh": "信噪比",
+      "symbol": "SNR",
+      "spoken": "signal-to-noise ratio"
+    },
+    {
+      "id": "spectral-efficiency",
+      "en": "spectral efficiency",
+      "zh": "频谱效率",
+      "symbol": "R/W",
+      "spoken": "spectral efficiency"
+    },
+    {
+      "id": "kkt",
+      "en": "Karush–Kuhn–Tucker conditions",
+      "zh": "KKT条件",
+      "symbol": "KKT",
+      "spoken": "Karush–Kuhn–Tucker conditions"
+    },
+    {
+      "id": "water-filling",
+      "en": "water-filling",
+      "zh": "水填充",
+      "symbol": "P_i=(ν−N_i)⁺",
+      "spoken": "water-filling"
+    },
+    {
+      "id": "toeplitz",
+      "en": "Toeplitz matrix",
+      "zh": "托普利茨矩阵",
+      "symbol": "T_n",
+      "spoken": "Toeplitz matrix"
+    },
+    {
+      "id": "psd",
+      "en": "power spectral density",
+      "zh": "功率谱密度",
+      "symbol": "S(f)",
+      "spoken": "power spectral density"
+    },
+    {
+      "id": "karhunen-loeve",
+      "en": "Karhunen–Loeve expansion",
+      "zh": "卡尔胡宁–洛埃夫展开",
+      "symbol": "",
+      "spoken": "Karhunen–Loeve expansion"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "sample_rate": 48000,
+  "root_note_convention": "Recorded C3 is MIDI 60, verified from the C3/C4 piano and string spectra.",
+  "samples": [
+    {
+      "instrument": "piano",
+      "root_midi": 58,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_A#2_v1_rr1_Player.wav",
+      "sha256": "6653569508248cff83cffb5ab5448a37ada4e007036d947eaaf6c562c719db8b"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 70,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_A#3_v1_rr1_Player.wav",
+      "sha256": "d6b6618419031245603e88c3245f1f8a4442e39981b103a8fbe5eb5fd5cdd2c3"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 82,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_A#4_v1_rr1_Player.wav",
+      "sha256": "d126e50d8f9118fe962af3d55e529f5fc0ecde81d8d9882ecd82db235589e121"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 93,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_A5_v1_rr1_Player.wav",
+      "sha256": "d3dbe83e0d4bc46e23c847cf4473c5c4d2797e179a1d29abc9834badb2d8b637"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 48,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_C2_v1_rr1_Player.wav",
+      "sha256": "eba9adfb3977605a494830081d4e9e4ff0a4efd017439fe402a208aca9f11d7a"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 60,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_C3_v1_rr1_Player.wav",
+      "sha256": "eb52431464cc160cb7c3576d5087b6cc67326fd903b620088c0874f6bcff4a8e"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 72,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_C4_v1_rr1_Player.wav",
+      "sha256": "f921d4737ee847ecb55ce251a94e1841069b70e206b00342676954992ea7d0dc"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 84,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_C5_v1_rr1_Player.wav",
+      "sha256": "94186af4a11f4a5aa4a550615bd923ff12bdc2db22ea0cbfd24a58bca77308c0"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 96,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_C6_v1_rr1_Player.wav",
+      "sha256": "3441f01103d79e1fcc4047a2ea4125aa475d6a6688d25e10f193a2f3a6349080"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 87,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_D#5_v1_rr1_Player.wav",
+      "sha256": "a207576b7a205d7eb7ad4d5aa9eb79dd2ededd42415b2dc8cc36d4c576c213ea"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 50,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_D2_v1_rr1_Player.wav",
+      "sha256": "b573344ccba8ac6a0b7717f865da6d30df40a0574bb5884d9292206209316b79"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 62,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_D3_v1_rr1_Player.wav",
+      "sha256": "af2195a00925e777ce32ede7e5fba4f4ea617fa6e7bf9147ba0ab8726f44e195"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 74,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_D4_v1_rr1_Player.wav",
+      "sha256": "1cff98cc70bbc9fdfc284cd30cc55450ed68a0cd6fc383b254f6c471fac1914e"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 52,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_E2_v1_rr1_Player.wav",
+      "sha256": "9fca1df9661fc3ea3cc32b5e5e605672a7d63bea56d5f04ca33e1d2eebf34b89"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 64,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_E3_v1_rr1_Player.wav",
+      "sha256": "3986177d766ad67acaeb8d0d53114c4380dea65bc1632938dc597006e5123771"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 76,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_E4_v1_rr1_Player.wav",
+      "sha256": "2bbea3d9e280e7b87605eaa01853b9e81c8ce21eae1db61cfb6fa33b94ca449f"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 54,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_F#2_v1_rr1_Player.wav",
+      "sha256": "b2f0d5b6e58a9e05879cf2da90240cd3aa4e8c565e488d77ed5718d430cb59b6"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 66,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_F#3_v1_rr1_Player.wav",
+      "sha256": "087e5826a7868cc3c923e6628869cc516ad690a4cbe69a8b4019be91f14b3a9b"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 78,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_F#4_v1_rr1_Player.wav",
+      "sha256": "252a182b6030b9e23b5b4702b6e9d38cd90e980d4e179809bd874f3e8c699c1b"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 90,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_F#5_v1_rr1_Player.wav",
+      "sha256": "667f2626784c3bbbdc76f0ef88dcfc31f6cffa5924051ece277fa5f801a1e19a"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 56,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_G#2_v1_rr1_Player.wav",
+      "sha256": "053d5e2e25cbff8b3c65905963d1aa184003a1a44268f4ca5cce45e412789296"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 68,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_G#3_v1_rr1_Player.wav",
+      "sha256": "a812c31c7f474ee603a7a3eb83e6e285ee87878344ce9a372bd00730281852c5"
+    },
+    {
+      "instrument": "piano",
+      "root_midi": 80,
+      "path": "samples/VCSL/Chordophones/Zithers/Grand Piano, Kawai/Sustains/GPiano_sus_G#4_v1_rr1_Player.wav",
+      "sha256": "09f8fc60ff5fde5ca7bc80f189885c2678df7405adf27a251139eae8c39c6390"
+    },
+    {
+      "instrument": "shaker",
+      "root_midi": 0,
+      "path": "samples/VCSL/Idiophones/Struck Idiophones/Shaker, Small/Mid_ShakerDouble_Down_rr1.wav",
+      "sha256": "0df7c271e1dba4de7304f7df81886390dd9ae698bfdd6df570026af4f2223574"
+    },
+    {
+      "instrument": "shaker",
+      "root_midi": 1,
+      "path": "samples/VCSL/Idiophones/Struck Idiophones/Shaker, Small/Mid_ShakerDouble_Up_rr1.wav",
+      "sha256": "69a10776db0b838bc6555be2dbdb41e1521bb28bba2e89963d1bf779bfb5b61f"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 71,
+      "path": "samples/VSCO-2-CE/Strings/Cello Section/susvib/susvib_B3_v1_1.wav",
+      "sha256": "bd25d66c1c4e73f5827bf3b931244e51ec8388594d8004529a762be81258097f"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 60,
+      "path": "samples/VSCO-2-CE/Strings/Cello Section/susvib/susvib_C3_v1_1.wav",
+      "sha256": "a614ee7ca821b44660236e47b89620cf914ec6ad27a99bc0d9764f47dbe512e1"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 64,
+      "path": "samples/VSCO-2-CE/Strings/Cello Section/susvib/susvib_E3_v1_1.wav",
+      "sha256": "d2f961e30bf64021cf4acbd88e0e7a1fd1840943ae78c62a711bcce3d109216e"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 67,
+      "path": "samples/VSCO-2-CE/Strings/Cello Section/susvib/susvib_G3_v1_1.wav",
+      "sha256": "8d658346b8d2054fd534b3222b5d7a23196d22a83a68c3a04ffb76b21853a3db"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 83,
+      "path": "samples/VSCO-2-CE/Strings/Viola Section/susvib/ViolaEns_susvib_B4_v1_1.wav",
+      "sha256": "abb1fe57a4a3175e1e243ceba0c0c0052ec5af5c3061e4f446266b9c832d6d02"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 72,
+      "path": "samples/VSCO-2-CE/Strings/Viola Section/susvib/ViolaEns_susvib_C4_v1_1.wav",
+      "sha256": "144ec7666be1b3b4da50937db4b1fc3675ca34bc2e871264707d83b8a0d526e6"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 76,
+      "path": "samples/VSCO-2-CE/Strings/Viola Section/susvib/ViolaEns_susvib_E4_v1_1.wav",
+      "sha256": "b70d7b94014a9fc40f0e8cc12542fa85e0304386fe411ef4305b55b7f194afcb"
+    },
+    {
+      "instrument": "strings",
+      "root_midi": 79,
+      "path": "samples/VSCO-2-CE/Strings/Viola Section/susvib/ViolaEns_susvib_G4_v1_1.wav",
+      "sha256": "624a70ef842744cb7847a07fba3115ace5689746a107da91f237bf2534d42b03"
+    }
+  ]
+}

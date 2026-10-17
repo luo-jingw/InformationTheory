@@ -1,0 +1,844 @@
+{
+  "episode": "e13-kkt-waterfilling",
+  "title": "KKT and Water-Filling",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-dmc-optimum",
+      "chapter": "The Optimal Input to a Discrete Channel",
+      "title": "The Optimal Input to a Discrete Channel",
+      "music": "proof",
+      "terms": [
+        "dmc",
+        "capacity",
+        "kl-divergence"
+      ],
+      "sentences": [
+        {
+          "en": "Must a capacity-achieving input use every symbol? Let a finite DMC have input x and output y.",
+          "zh": "达到容量的输入分布必须使用每个符号吗？设有限DMC的输入为x、输出为y。"
+        },
+        {
+          "en": "Each input x selects an output distribution W sub x.",
+          "zh": "每个输入x对应一个输出分布W_x。"
+        },
+        {
+          "en": "Choose an input distribution p over the finite input alphabet.",
+          "zh": "在有限输入字母表上选取输入分布p。"
+        },
+        {
+          "en": "The induced output distribution is q sub p.",
+          "zh": "由此诱导的输出分布记为q_p。"
+        },
+        {
+          "en": "Mutual information equals the input-weighted row divergences from that output law.",
+          "zh": "互信息等于各输入行相对输出分布的散度加权和。"
+        },
+        {
+          "en": "Write I of p as the sum of p sub x times D of W sub x relative to q sub p.",
+          "zh": "写作I(p)=Σ_x p_x D(W_x‖q_p)。"
+        },
+        {
+          "en": "The capacity C is the maximum of I over the input simplex.",
+          "zh": "容量C是输入单纯形上I的最大值。"
+        },
+        {
+          "en": "A maximizer exists because the simplex is compact and mutual information is continuous.",
+          "zh": "单纯形紧致且互信息连续，因此最大值存在。"
+        },
+        {
+          "en": "First remove output symbols unreachable from every input.",
+          "zh": "先删除所有输入都无法到达的输出符号。"
+        },
+        {
+          "en": "Their probabilities are always zero and they affect no divergence.",
+          "zh": "这些符号的概率始终为零，不影响任何散度。"
+        },
+        {
+          "en": "Call an output reachable if at least one input can produce it.",
+          "zh": "若至少一个输入可产生某输出，就称该输出可达。"
+        },
+        {
+          "en": "At an optimal input, every reachable output has positive probability.",
+          "zh": "在最优输入下，每个可达输出的概率都为正。"
+        },
+        {
+          "en": "Suppose instead that a reachable output y has zero optimal probability.",
+          "zh": "反设某个可达输出y在最优分布下概率为零。"
+        },
+        {
+          "en": "Choose an input row that assigns positive mass to y.",
+          "zh": "选择一个在y处赋正概率的输入行。"
+        },
+        {
+          "en": "Mix a small amount epsilon of that row into the optimal input.",
+          "zh": "向最优输入混入少量ε的该输入行。"
+        },
+        {
+          "en": "The new output law gives y probability proportional to epsilon.",
+          "zh": "新输出分布会赋予y与ε成比例的概率。"
+        },
+        {
+          "en": "Its output entropy gains a positive epsilon log one over epsilon term.",
+          "zh": "其输出熵增加正的εlog(1/ε)项。"
+        },
+        {
+          "en": "Changes at already-positive output coordinates are only of order epsilon.",
+          "zh": "原先已为正的输出坐标，其熵变化只有ε阶。"
+        },
+        {
+          "en": "The conditional output entropy changes only linearly with epsilon.",
+          "zh": "条件输出熵只随ε线性变化。"
+        },
+        {
+          "en": "For sufficiently small epsilon, the entropy gain dominates.",
+          "zh": "ε足够小时，熵增益占主导。"
+        },
+        {
+          "en": "That would increase mutual information and contradict optimality.",
+          "zh": "这会提高互信息，与最优性矛盾。"
+        },
+        {
+          "en": "Thus logarithmic derivatives are well defined on every reachable output.",
+          "zh": "因此每个可达输出上的对数导数都有定义。"
+        },
+        {
+          "en": "Consider moving a small probability mass from the optimum toward row i.",
+          "zh": "考虑将少量概率质量从最优分布移向第i行。"
+        },
+        {
+          "en": "The output direction is W sub i minus q star.",
+          "zh": "输出分布的变化方向为W_i−q*。"
+        },
+        {
+          "en": "Differentiating its entropy gives minus the sum of that direction times log two q star.",
+          "zh": "对其熵求导，得到负的Σ_y(W_i(y)−q*(y))log₂q*(y)。"
+        },
+        {
+          "en": "The derivative of conditional entropy is row entropy of W sub i minus the current average row entropy.",
+          "zh": "条件熵导数为第i行熵减去当前平均行熵。"
+        },
+        {
+          "en": "Subtracting these two derivatives gives the row divergence minus the current mutual information.",
+          "zh": "两导数相减，得到行散度减去当前互信息。"
+        },
+        {
+          "en": "The directional derivative of mutual information is D of W sub i relative to q star minus C.",
+          "zh": "互信息方向导数为D(W_i‖q*)−C。"
+        },
+        {
+          "en": "At a maximum, each feasible directional derivative is nonpositive. Must an unused row have divergence C?",
+          "zh": "在最大值处，每个可行单侧方向导数都非正。未使用行的散度也必须等于C吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Therefore every input row has divergence at most C.",
+          "zh": "因此每个输入行的散度都不超过C。"
+        },
+        {
+          "en": "Now average these divergences using the optimal input probabilities.",
+          "zh": "现在用最优输入概率对这些散度取平均。"
+        },
+        {
+          "en": "Their weighted average equals mutual information at the optimum.",
+          "zh": "这些散度的加权平均等于最优点处的互信息。"
+        },
+        {
+          "en": "That value is C.",
+          "zh": "该值就是C。"
+        },
+        {
+          "en": "An average of values at most C equals C only when every used value equals C.",
+          "zh": "不超过C的数值平均为C，意味着每个被使用的数值都等于C。"
+        },
+        {
+          "en": "Thus positive-probability input rows satisfy D of W sub i relative to q star equals C.",
+          "zh": "因此正概率输入行满足D(W_i‖q*)=C。"
+        },
+        {
+          "en": "Unused rows need only satisfy the inequality at most C.",
+          "zh": "未使用行只需满足不超过C的不等式。"
+        },
+        {
+          "en": "This is a boundary condition, not equality for every row.",
+          "zh": "这是边界条件，并非所有输入行都取等号。"
+        },
+        {
+          "en": "For any input p, mutual information equals its input-weighted average row divergence to q star, minus the divergence of q sub p relative to q star.",
+          "zh": "对任意p，I(p)=Σ_i p_iD(W_i‖q*)−D(q_p‖q*)。"
+        },
+        {
+          "en": "To check sufficiency, start with any candidate input and call its information value J.",
+          "zh": "验证充分性时，从任意候选输入出发，将其互信息记为J。"
+        },
+        {
+          "en": "Suppose every row divergence to its output law is at most J.",
+          "zh": "假设每行到其输出分布的散度均至多为J。"
+        },
+        {
+          "en": "Add and subtract the log of that candidate output law inside each row divergence.",
+          "zh": "在每个行散度中，加减候选输出分布的对数。"
+        },
+        {
+          "en": "Averaging the added output log ratio produces the divergence between the two output laws.",
+          "zh": "对所加的输出对数比取平均，就得到两个输出分布之间的散度。"
+        },
+        {
+          "en": "The same identity therefore bounds every other input’s information by J.",
+          "zh": "因此同一恒等式将所有其他输入的互信息界为J。"
+        },
+        {
+          "en": "The candidate attains that value and is globally optimal.",
+          "zh": "候选自身达到该值，因此全局最优。"
+        },
+        {
+          "en": "The same equal-marginal-benefit idea will reappear in power allocation.",
+          "zh": "同一等边际收益思想将在功率分配中再次出现。"
+        }
+      ]
+    },
+    {
+      "id": "c02-kkt",
+      "chapter": "KKT Conditions for Power Allocation",
+      "title": "KKT Conditions for Power Allocation",
+      "music": "proof",
+      "terms": [
+        "convexity",
+        "kkt"
+      ],
+      "sentences": [
+        {
+          "en": "Now maximize a differentiable concave objective F of powers p sub i.",
+          "zh": "现在最大化关于功率p_i的可微凹目标F。"
+        },
+        {
+          "en": "Each power must be nonnegative.",
+          "zh": "每个功率都必须非负。"
+        },
+        {
+          "en": "Their sum cannot exceed the budget P.",
+          "zh": "功率总和不能超过预算P。"
+        },
+        {
+          "en": "Write the constraints as sum p sub i minus P at most zero.",
+          "zh": "将总功率约束写成Σp_i−P≤0。"
+        },
+        {
+          "en": "Write each lower bound as negative p sub i at most zero.",
+          "zh": "将每个下界写成−p_i≤0。"
+        },
+        {
+          "en": "Assign multiplier lambda at least zero to the total-power constraint.",
+          "zh": "给总功率约束分配非负乘子λ。"
+        },
+        {
+          "en": "Assign multiplier mu sub i at least zero to each lower bound.",
+          "zh": "给每个下界分配非负乘子μ_i。"
+        },
+        {
+          "en": "For this maximization convention, subtract lambda times the total constraint.",
+          "zh": "按此最大化约定，从目标中减去λ乘总约束。"
+        },
+        {
+          "en": "Adding mu sub i times p sub i enforces its nonnegative boundary.",
+          "zh": "加上μ_i p_i项以处理其非负边界。"
+        },
+        {
+          "en": "The Lagrangian is F minus lambda times the difference between total allocated power and budget P, plus the sum of mu sub i times p sub i.",
+          "zh": "拉格朗日函数为F−λ(Σp_i−P)+Σμ_i p_i。"
+        },
+        {
+          "en": "Stationarity sets every power derivative minus lambda plus mu sub i equal to zero.",
+          "zh": "驻点条件令每个功率导数减λ再加μ_i等于零。"
+        },
+        {
+          "en": "Primal feasibility requires nonnegative powers and total power at most P.",
+          "zh": "原始可行性要求功率非负且总功率不超过P。"
+        },
+        {
+          "en": "Dual feasibility requires lambda and every mu sub i nonnegative.",
+          "zh": "对偶可行性要求λ与每个μ_i均非负。"
+        },
+        {
+          "en": "Complementary slackness sets lambda times the difference between total allocated power and budget P to zero.",
+          "zh": "互补松弛令λ(Σp_i−P)=0。"
+        },
+        {
+          "en": "For each mode, mu i times p i equals zero. If power is positive, which factor vanishes?",
+          "zh": "每个模式都满足μ_i p_i=0。若功率为正，哪个因子必须为零？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Thus a positive power forces its lower-bound multiplier to zero.",
+          "zh": "因此正功率会迫使其下界乘子为零。"
+        },
+        {
+          "en": "A zero power may instead have a positive lower-bound multiplier.",
+          "zh": "零功率则可能对应正的下界乘子。"
+        },
+        {
+          "en": "If the total budget is slack, lambda must be zero.",
+          "zh": "若总预算未用满，则λ必须为零。"
+        },
+        {
+          "en": "For a strictly increasing objective and positive P, the budget is tight.",
+          "zh": "若目标严格递增且P为正，预算必定用满。"
+        },
+        {
+          "en": "Then lambda can represent the marginal value of additional budget.",
+          "zh": "此时λ可表示增加预算的边际价值。"
+        },
+        {
+          "en": "At a strictly positive power, stationarity gives derivative equal to lambda.",
+          "zh": "功率严格为正时，驻点条件令导数等于λ。"
+        },
+        {
+          "en": "At a zero power, stationarity gives derivative at most lambda.",
+          "zh": "在零功率处，驻点条件给出导数至多为λ。"
+        },
+        {
+          "en": "A larger derivative at an unused mode would make a transfer from a used mode improve the objective.",
+          "zh": "若未用模式的导数更大，从已用模式转移少量功率就会提高目标。"
+        },
+        {
+          "en": "The constraints are affine, so the feasible region is convex.",
+          "zh": "这些约束是仿射的，因此可行域是凸集。"
+        },
+        {
+          "en": "A concave objective makes any feasible KKT point globally optimal.",
+          "zh": "目标为凹函数时，任一满足KKT的可行点都是全局最优。"
+        },
+        {
+          "en": "For any feasible q, concavity bounds F of q by F of p star plus the dot product of its gradient with the difference q minus p star.",
+          "zh": "对任意可行q，凹性给出F(q)≤F(p*)+∇F(p*)·(q−p*)。"
+        },
+        {
+          "en": "Substitute the gradient components lambda minus mu sub i from stationarity.",
+          "zh": "由驻点条件，将梯度分量替换成λ−μ_i。"
+        },
+        {
+          "en": "The lambda contribution is nonpositive by the total constraint and complementary slackness.",
+          "zh": "由总约束与互补松弛，λ对应的项非正。"
+        },
+        {
+          "en": "The remaining contribution is minus the sum of mu sub i q sub i, also nonpositive.",
+          "zh": "其余项为−Σμ_iq_i，也非正。"
+        },
+        {
+          "en": "Thus no feasible q can improve the objective.",
+          "zh": "因此不存在目标更优的可行q。"
+        },
+        {
+          "en": "For positive P, choose all powers positive with sum strictly below P.",
+          "zh": "P为正时，可选全正且总和严格低于P的功率。"
+        },
+        {
+          "en": "This is a Slater point and supplies the constraint qualification.",
+          "zh": "这就是Slater点，并提供约束资格条件。"
+        },
+        {
+          "en": "KKT conditions are then necessary as well as sufficient.",
+          "zh": "因此KKT条件既必要也充分。"
+        },
+        {
+          "en": "At P equal zero, the only feasible allocation is zero.",
+          "zh": "P等于零时，唯一可行分配为全零。"
+        },
+        {
+          "en": "That boundary case is solved directly without claiming Slater.",
+          "zh": "该边界情形直接求解，不宣称满足Slater条件。"
+        },
+        {
+          "en": "A one-variable example checks the multiplier sign.",
+          "zh": "一个单变量例子可以核对乘子符号。"
+        },
+        {
+          "en": "Maximize log one plus p subject to p at most P and p nonnegative.",
+          "zh": "在p≤P且p≥0下最大化log(1+p)。"
+        },
+        {
+          "en": "Its optimum uses p equal P, with positive lambda and zero mu.",
+          "zh": "最优解用满p=P，λ为正而μ为零。"
+        },
+        {
+          "en": "This matches the stationarity equation and tight budget.",
+          "zh": "这与驻点方程及紧约束相符。"
+        },
+        {
+          "en": "Next apply these conditions to independent Gaussian modes.",
+          "zh": "接下来将这些条件用于独立高斯模式。"
+        }
+      ]
+    },
+    {
+      "id": "c03-parallel",
+      "chapter": "Parallel Real Gaussian Modes",
+      "title": "Parallel Real Gaussian Modes",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "gaussian",
+        "capacity"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a finite collection of independent real Gaussian channel modes.",
+          "zh": "考虑有限个相互独立的实高斯信道模式。"
+        },
+        {
+          "en": "Mode i has noise variance N sub i, strictly positive.",
+          "zh": "第i个模式的噪声方差为N_i，且严格为正。"
+        },
+        {
+          "en": "Allocate nonnegative input power p sub i to each mode.",
+          "zh": "为每个模式分配非负输入功率p_i。"
+        },
+        {
+          "en": "The total allocation cannot exceed P.",
+          "zh": "分配总功率不得超过P。"
+        },
+        {
+          "en": "For one real mode, capacity is one half log two of one plus p sub i over N sub i.",
+          "zh": "一个实模式的容量为二分之一log₂(1+p_i/N_i)。"
+        },
+        {
+          "en": "With independent input coordinates as well, the mutual informations add across modes.",
+          "zh": "若输入坐标也相互独立，互信息即可跨模式相加。"
+        },
+        {
+          "en": "The optimization objective is the sum of these mode capacities.",
+          "zh": "优化目标是这些模式容量之和。"
+        },
+        {
+          "en": "Only the sum-power constraint couples the allocations.",
+          "zh": "只有总功率约束将各分配耦合起来。"
+        },
+        {
+          "en": "A lower noise variance gives a larger initial marginal return.",
+          "zh": "噪声方差较低的模式具有更大的初始边际收益。"
+        },
+        {
+          "en": "Different noise levels therefore make equal allocation suspicious.",
+          "zh": "因此噪声水平不同会使均匀分配值得怀疑。"
+        },
+        {
+          "en": "We must also justify that separate powers capture the full vector channel.",
+          "zh": "还需说明分配独立功率已能刻画完整向量信道。"
+        },
+        {
+          "en": "Let X vector be any possibly correlated input vector.",
+          "zh": "令X向量为任意可能相关的输入向量。"
+        },
+        {
+          "en": "Conditional output entropy given X equals the sum of noise entropies.",
+          "zh": "给定X时的输出条件熵等于各噪声熵之和。"
+        },
+        {
+          "en": "Output entropy is at most the sum of marginal output entropies.",
+          "zh": "输出熵至多为各边缘输出熵之和。"
+        },
+        {
+          "en": "Each marginal output variance is its input variance plus N sub i.",
+          "zh": "每个边缘输出方差等于输入方差加N_i。"
+        },
+        {
+          "en": "Gaussian maximum entropy bounds that marginal entropy.",
+          "zh": "高斯最大熵性质界定该边缘熵。"
+        },
+        {
+          "en": "Input variance is no larger than its assigned second moment p sub i.",
+          "zh": "输入方差不超过分配的二阶矩p_i。"
+        },
+        {
+          "en": "Subtracting the noise entropies gives the sum of scalar capacity bounds.",
+          "zh": "减去噪声熵后得到各标量容量界之和。"
+        },
+        {
+          "en": "Thus correlations cannot improve on the separate-mode objective.",
+          "zh": "因此跨模式相关不能超过独立模式目标。"
+        },
+        {
+          "en": "Independent Gaussian inputs with variances p sub i attain each bound.",
+          "zh": "方差为p_i的独立高斯输入可达到各自上界。"
+        },
+        {
+          "en": "They also make output modes independent.",
+          "zh": "它们也使输出模式相互独立。"
+        },
+        {
+          "en": "So maximizing the sum of mode formulas gives the vector capacity.",
+          "zh": "因此最大化各模式公式之和即得向量容量。"
+        },
+        {
+          "en": "The objective is a sum of concave logarithms.",
+          "zh": "该目标是凹对数函数之和。"
+        },
+        {
+          "en": "Each mode utility is strictly increasing for every finite nonnegative power.",
+          "zh": "每个模式效用在有限非负功率上都严格递增。"
+        },
+        {
+          "en": "Every term has strictly negative second derivative throughout the nonnegative power range.",
+          "zh": "每项在整个非负功率范围内均有严格负的二阶导数。"
+        },
+        {
+          "en": "With P positive, the optimal allocation is unique.",
+          "zh": "P为正时，最优分配唯一。"
+        },
+        {
+          "en": "The sum-power budget is used fully because every mode benefits from added power.",
+          "zh": "每个模式都受益于增功率，因此总预算会用满。"
+        },
+        {
+          "en": "The model here uses real modes and one half per logarithm.",
+          "zh": "这里采用实模式，每个对数前有二分之一。"
+        },
+        {
+          "en": "Complex modes would require a separately stated variance convention.",
+          "zh": "复模式需要另行声明方差约定。"
+        },
+        {
+          "en": "Do not silently double the real-mode capacity.",
+          "zh": "不要在未说明时将实模式容量加倍。"
+        },
+        {
+          "en": "The finite-mode model will make the active-set calculation explicit.",
+          "zh": "有限模式模型将使活跃集计算明确可行。"
+        },
+        {
+          "en": "The modes with excessive noise may receive no power.",
+          "zh": "噪声过大的模式可能得不到功率。"
+        },
+        {
+          "en": "Their derivatives will determine the active-set threshold.",
+          "zh": "它们的导数将决定活跃集阈值。"
+        },
+        {
+          "en": "The solution remains subject to one shared total budget.",
+          "zh": "所有解仍受一个共同总预算约束。"
+        },
+        {
+          "en": "Next, stationarity turns equal marginal returns into a water level.",
+          "zh": "接下来，驻点条件会将边际收益相等转化为水位。"
+        }
+      ]
+    },
+    {
+      "id": "c04-waterfill",
+      "chapter": "Deriving the Water Level",
+      "title": "Deriving the Water Level",
+      "music": "definition",
+      "terms": [
+        "awgn",
+        "kkt"
+      ],
+      "sentences": [
+        {
+          "en": "For mode i, differentiate one half log two of one plus p sub i over N sub i.",
+          "zh": "对第i项二分之一log₂(1+p_i/N_i)求导。"
+        },
+        {
+          "en": "The derivative is one divided by the product of two, natural log two, and the quantity N sub i plus p sub i.",
+          "zh": "导数为1/[2ln2(N_i+p_i)]。"
+        },
+        {
+          "en": "Let lambda be the nonnegative price of total power.",
+          "zh": "令λ为总功率的非负价格。"
+        },
+        {
+          "en": "The multiplier is a marginal price; the water level will be its scaled reciprocal.",
+          "zh": "该乘子是边际价格，水位则是其带比例的倒数。"
+        },
+        {
+          "en": "For a mode receiving positive power, its lower-bound multiplier is zero.",
+          "zh": "获得正功率的模式，其下界乘子为零。"
+        },
+        {
+          "en": "Stationarity sets that mode derivative equal to lambda.",
+          "zh": "驻点条件令该模式导数等于λ。"
+        },
+        {
+          "en": "Thus all active modes have equal marginal capacity per extra watt.",
+          "zh": "因此所有活跃模式每增加一瓦的边际容量相同。"
+        },
+        {
+          "en": "For an unused mode, its derivative at zero is no greater than lambda.",
+          "zh": "对未使用模式，其零点导数不超过λ。"
+        },
+        {
+          "en": "If it exceeded lambda, transferring power there would help.",
+          "zh": "若其超过λ，将功率转移到该模式便会有利。"
+        },
+        {
+          "en": "For P positive, at least one powered mode has positive derivative, forcing lambda to be positive.",
+          "zh": "P为正时，至少一个有功率模式的导数为正，从而λ为正。"
+        },
+        {
+          "en": "Define the water level nu as one divided by the product of two, natural log two, and lambda.",
+          "zh": "定义水位ν=1/(2ln2λ)。"
+        },
+        {
+          "en": "The symbols nu and lambda describe different quantities.",
+          "zh": "ν与λ表示不同量。"
+        },
+        {
+          "en": "The multiplier lambda is a marginal price.",
+          "zh": "乘子λ是边际价格。"
+        },
+        {
+          "en": "The water level nu has units of noise variance.",
+          "zh": "水位ν具有噪声方差的单位。"
+        },
+        {
+          "en": "Solving the active stationarity equation gives p sub i equal nu minus N sub i.",
+          "zh": "求解活跃模式驻点式得p_i=ν−N_i。"
+        },
+        {
+          "en": "Nonnegative power clips that expression at zero.",
+          "zh": "功率非负约束将该表达式截断于零。"
+        },
+        {
+          "en": "Therefore p sub i equals the positive part of nu minus N sub i.",
+          "zh": "因此p_i=(ν−N_i)^+。"
+        },
+        {
+          "en": "The water level is chosen so all allocated powers sum to P.",
+          "zh": "水位由所有分配功率之和等于P来确定。"
+        },
+        {
+          "en": "The allocated sum increases continuously with the water level while modes activate.",
+          "zh": "模式逐渐激活时，分配总和随水位连续增加。"
+        },
+        {
+          "en": "For positive P, this budget equality is active.",
+          "zh": "P为正时，该预算等式活跃。"
+        },
+        {
+          "en": "Sort the noise variances from smallest to largest.",
+          "zh": "将噪声方差从小到大排序。"
+        },
+        {
+          "en": "Begin by assuming the k smallest modes are active.",
+          "zh": "先假设最小的k个模式活跃。"
+        },
+        {
+          "en": "Their total power equation is k nu minus their noise sum equals P.",
+          "zh": "它们的总功率方程为kν减去噪声之和等于P。"
+        },
+        {
+          "en": "Solve to get nu sub k as P plus the sum of the first k noise variances, with that entire numerator divided by k.",
+          "zh": "解得ν_k=(P加前k个噪声方差之和)/k。"
+        },
+        {
+          "en": "If every mode is active, there is no next-noise upper test.",
+          "zh": "若所有模式均活跃，则无需检查下一个噪声阈值。"
+        },
+        {
+          "en": "The active-set test is N sub k less than nu sub k.",
+          "zh": "活跃集检验为N_k<ν_k。"
+        },
+        {
+          "en": "The next mode stays inactive when nu sub k is at most the noise variance of mode k plus one.",
+          "zh": "当ν_k≤N_{k+1}时，下一个模式保持不活跃。"
+        },
+        {
+          "en": "Equality at a noise floor still gives zero power. For floors one, two, five, when does mode three switch on?",
+          "zh": "水位等于噪声底时，功率仍为零。噪声底为一、二、五时，第三个模式何时开启？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "It stays dry up through budget seven and receives power strictly above seven. Raising P raises the water level.",
+          "zh": "预算不超过七时，它仍是干的；严格超过七才分到功率。增加P会抬高水位。"
+        },
+        {
+          "en": "Increasing one noise floor can deactivate its mode.",
+          "zh": "提高某个噪声底可能使该模式退出活跃集。"
+        },
+        {
+          "en": "The rule fills only modes whose floors lie below the water.",
+          "zh": "该规则只填充噪声底低于水位的模式。"
+        },
+        {
+          "en": "Each active mode then has the same marginal derivative.",
+          "zh": "每个活跃模式随后具有相同边际导数。"
+        },
+        {
+          "en": "Inactive modes have no greater derivative than the shared price.",
+          "zh": "不活跃模式的导数不超过共同价格。"
+        },
+        {
+          "en": "These are precisely the KKT stationarity and complementary conditions.",
+          "zh": "这正是KKT驻点条件与互补条件。"
+        },
+        {
+          "en": "Concavity makes the resulting allocation globally optimal.",
+          "zh": "由凹性，所得分配是全局最优的。"
+        },
+        {
+          "en": "A numeric example will check the budget and both derivative cases.",
+          "zh": "数值例子将核对预算及两类导数条件。"
+        },
+        {
+          "en": "The next chapter reports computed values as arithmetic, not measurements.",
+          "zh": "下一章将把计算值作为算术结果报告，而非测量值。"
+        }
+      ]
+    },
+    {
+      "id": "c05-check",
+      "chapter": "Auditing a Water-Filling Solution",
+      "title": "Auditing a Water-Filling Solution",
+      "music": "recap",
+      "terms": [
+        "awgn",
+        "capacity",
+        "kkt"
+      ],
+      "sentences": [
+        {
+          "en": "Take three real modes with noise variances one, two, and five.",
+          "zh": "取三个实模式，噪声方差分别为1、2、5。"
+        },
+        {
+          "en": "Set the total power budget P equal to six.",
+          "zh": "令总功率预算P=6。"
+        },
+        {
+          "en": "Assume the first two modes are active.",
+          "zh": "假设前两个模式活跃。"
+        },
+        {
+          "en": "Their water level is the sum of six, one, and two, all divided by two.",
+          "zh": "其水位为(6+1+2)/2。"
+        },
+        {
+          "en": "This gives nu equal to four point five.",
+          "zh": "得到ν=4.5。"
+        },
+        {
+          "en": "The first power is four point five minus one, or three point five.",
+          "zh": "第一个功率为4.5−1，即3.5。"
+        },
+        {
+          "en": "The second power is four point five minus two, or two point five.",
+          "zh": "第二个功率为4.5−2，即2.5。"
+        },
+        {
+          "en": "The third noise floor is five, above water level 4.5. Should that mode receive any power?",
+          "zh": "第三个噪声底为五，高于水位4.5。这个模式应该分到功率吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "It receives zero power.",
+          "zh": "它获得零功率。"
+        },
+        {
+          "en": "The allocation is three point five, two point five, and zero.",
+          "zh": "功率分配为3.5、2.5、0。"
+        },
+        {
+          "en": "Their sum is exactly six.",
+          "zh": "它们的和恰为6。"
+        },
+        {
+          "en": "The arithmetic budget residual is zero.",
+          "zh": "算术预算残差为零。"
+        },
+        {
+          "en": "For active mode one, noise plus power equals four point five.",
+          "zh": "第一个活跃模式的噪声加功率为4.5。"
+        },
+        {
+          "en": "The same total holds for active mode two.",
+          "zh": "第二个活跃模式的总量也为4.5。"
+        },
+        {
+          "en": "Both derivatives therefore equal one divided by the product of nine and natural log two.",
+          "zh": "因此两者导数均为1/(9ln2)。"
+        },
+        {
+          "en": "The shadow price lambda is also one divided by the product of nine and natural log two.",
+          "zh": "影子价格λ也为1/(9ln2)。"
+        },
+        {
+          "en": "For unused mode three, the derivative at zero is one divided by the product of ten and natural log two.",
+          "zh": "第三个未用模式在零功率处的导数为1/(10ln2)。"
+        },
+        {
+          "en": "That derivative is smaller than lambda.",
+          "zh": "该导数小于λ。"
+        },
+        {
+          "en": "Its lower-bound multiplier is lambda minus that derivative.",
+          "zh": "其下界乘子为λ减去该导数。"
+        },
+        {
+          "en": "This equals one divided by the product of ninety and natural log two.",
+          "zh": "该值为1/(90ln2)。"
+        },
+        {
+          "en": "All primal, dual, stationarity, and complementarity checks hold.",
+          "zh": "原始可行、对偶可行、驻点与互补条件均成立。"
+        },
+        {
+          "en": "The optimized capacity is the sum of three half-log terms.",
+          "zh": "最优容量是三个二分之一对数项之和。"
+        },
+        {
+          "en": "For powers three point five, two point five, and zero, it is about one point six six nine nine two five bits.",
+          "zh": "功率为3.5、2.5、0时，容量约为1.669925比特。"
+        },
+        {
+          "en": "The unit is bits per vector use.",
+          "zh": "单位是每次向量使用的比特数。"
+        },
+        {
+          "en": "Now allocate two units of power to every mode instead.",
+          "zh": "现在改为每个模式都分配2单位功率。"
+        },
+        {
+          "en": "Equal allocation uses total power six too. Does it achieve the same capacity?",
+          "zh": "均分同样使用总功率六。它能达到相同的容量吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Its capacity is about one point five three five one nine five bits per vector use.",
+          "zh": "其容量约为每次向量使用1.535195比特。"
+        },
+        {
+          "en": "The difference comes from directing more power toward lower noise.",
+          "zh": "差异来自将更多功率分配给较低噪声模式。"
+        },
+        {
+          "en": "Both values are direct formula calculations, not physical measurements.",
+          "zh": "两个数值都是公式直接计算所得，并非物理测量。"
+        },
+        {
+          "en": "Displayed rounding does not change the underlying allocation.",
+          "zh": "显示时的舍入不会改变底层分配。"
+        },
+        {
+          "en": "The third mode remains inactive because its marginal return is lower.",
+          "zh": "第三个模式保持不活跃，因为其边际收益较低。"
+        },
+        {
+          "en": "A numerical audit checks equations rather than the water-tank drawing.",
+          "zh": "数值核查依据方程，而非水箱图像。"
+        },
+        {
+          "en": "For other noise lists, sorting gives the active set systematically.",
+          "zh": "对其他噪声列表，排序可系统确定活跃集。"
+        },
+        {
+          "en": "For continuous spectra, sums will become integrals.",
+          "zh": "对连续频谱，求和将变为积分。"
+        },
+        {
+          "en": "That extension leads to spectral water-filling in the next episode.",
+          "zh": "该推广将引出下一集的频谱注水。"
+        }
+      ]
+    }
+  ]
+}

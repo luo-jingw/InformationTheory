@@ -1,0 +1,976 @@
+{
+  "episode": "e14-colored-channels",
+  "title": "Colored Noise and Feedback Limits",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-toeplitz",
+      "chapter": "Finite Stationary Gaussian Blocks",
+      "title": "Finite Stationary Gaussian Blocks",
+      "music": "definition",
+      "terms": [
+        "toeplitz",
+        "gaussian",
+        "psd"
+      ],
+      "sentences": [
+        {
+          "en": "Let Z one through Z n be a finite block from a real stationary Gaussian noise process.",
+          "zh": "令Z₁至Zₙ是实平稳高斯噪声过程的有限块。"
+        },
+        {
+          "en": "Stationarity makes covariance depend only on the index difference.",
+          "zh": "平稳性使协方差只依赖索引差。"
+        },
+        {
+          "en": "Write K sub i j as r of i minus j.",
+          "zh": "写作K_ij=r(i−j)。"
+        },
+        {
+          "en": "Every diagonal therefore repeats the same covariance lag.",
+          "zh": "因此每条对角线都重复同一协方差时滞。"
+        },
+        {
+          "en": "The resulting finite matrix is Toeplitz.",
+          "zh": "所得有限矩阵是Toeplitz矩阵。"
+        },
+        {
+          "en": "Assume the finite-block covariance matrix is positive definite.",
+          "zh": "假设有限块协方差矩阵正定。"
+        },
+        {
+          "en": "For a Gaussian vector, an orthogonal eigenbasis diagonalizes this covariance.",
+          "zh": "对高斯向量，正交特征基可对角化该协方差。"
+        },
+        {
+          "en": "Rotating into that basis produces independent Gaussian noise modes.",
+          "zh": "旋转到该基底后，得到相互独立的高斯噪声模式。"
+        },
+        {
+          "en": "Their variances are the covariance eigenvalues lambda one through lambda n.",
+          "zh": "各模式方差就是协方差特征值λ₁至λₙ。"
+        },
+        {
+          "en": "The expected block energy budget is n times P.",
+          "zh": "整块的期望能量预算为nP。"
+        },
+        {
+          "en": "Orthogonal rotation preserves squared Euclidean norm, so it preserves this energy budget.",
+          "zh": "正交旋转保持欧氏范数平方，因此保持该能量预算。"
+        },
+        {
+          "en": "Let capital P sub i denote input variance allocated to eigenmode i.",
+          "zh": "令大写P_i表示分配给第i个特征模式的输入方差。"
+        },
+        {
+          "en": "Independent Gaussian inputs attain the parallel-mode information bound established earlier.",
+          "zh": "独立高斯输入达到前面推导的并行模式信息上界。"
+        },
+        {
+          "en": "For allocations P sub i, normalized block information is the sum of log terms divided by two n.",
+          "zh": "对分配P_i，归一化分组信息为对数项之和除以2n。"
+        },
+        {
+          "en": "Maximizing this expression under the block budget gives capacity C sub n.",
+          "zh": "在分组预算约束下最大化该式，得到容量C_n。"
+        },
+        {
+          "en": "Each term is log two of one plus P sub i over lambda sub i.",
+          "zh": "每项为log₂(1+P_i/λ_i)。"
+        },
+        {
+          "en": "The allocations are nonnegative and sum to at most n P.",
+          "zh": "各分配非负且总和不超过nP。"
+        },
+        {
+          "en": "Eigenvectors are exact finite-block modes.",
+          "zh": "特征向量是精确的有限块模式。"
+        },
+        {
+          "en": "At finite n, must these eigenvectors be exactly the discrete Fourier vectors?",
+          "zh": "有限n时，这些特征向量一定恰好是离散Fourier向量吗？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "Consider a noise covariance with r zero equal one.",
+          "zh": "考虑r₀=1的噪声协方差。"
+        },
+        {
+          "en": "Let the lag-one covariances r plus one and r minus one equal point three.",
+          "zh": "令一阶协方差r₁与r₋₁均为0.3。"
+        },
+        {
+          "en": "All other nonzero-lag covariances vanish.",
+          "zh": "其他非零时滞协方差均为零。"
+        },
+        {
+          "en": "The finite matrix is tridiagonal with point three on adjacent diagonals.",
+          "zh": "有限矩阵为三对角矩阵，相邻对角线元素为0.3。"
+        },
+        {
+          "en": "Its spectral density is one plus point six cosine omega.",
+          "zh": "其谱密度为1+0.6cosω。"
+        },
+        {
+          "en": "This density stays between point four and one point six.",
+          "zh": "该谱密度始终介于0.4与1.6之间。"
+        },
+        {
+          "en": "The noise spectrum is therefore strictly positive.",
+          "zh": "因此噪声谱严格为正。"
+        },
+        {
+          "en": "The finite eigenvalues are one plus zero point six times the cosine of the fraction k times pi divided by the quantity n plus one.",
+          "zh": "有限特征值为1+0.6cos(kπ/(n+1))。"
+        },
+        {
+          "en": "Here k ranges from one through n.",
+          "zh": "这里k从1取到n。"
+        },
+        {
+          "en": "The corresponding eigenvectors are sine vectors, not finite discrete Fourier vectors.",
+          "zh": "对应特征向量是正弦向量，而非有限离散Fourier向量。"
+        },
+        {
+          "en": "This example shows why finite modes and frequency bins must be distinguished.",
+          "zh": "此例说明必须区分有限模式与频率格点。"
+        },
+        {
+          "en": "At large block lengths, eigenvalue distributions can approach the spectrum.",
+          "zh": "块长增大时，特征值分布可以趋近谱分布。"
+        },
+        {
+          "en": "That statement needs regularity assumptions.",
+          "zh": "该结论需要正则性假设。"
+        },
+        {
+          "en": "Stationarity alone is not enough for every spectral limit.",
+          "zh": "仅有平稳性不足以保证所有谱极限。"
+        },
+        {
+          "en": "We next state one sufficient Toeplitz theorem setting.",
+          "zh": "接下来说明一种充分的Toeplitz定理条件。"
+        },
+        {
+          "en": "The theorem concerns empirical eigenvalue averages, not termwise matching.",
+          "zh": "定理讨论特征值经验平均，而非逐项匹配。"
+        },
+        {
+          "en": "This distinction will matter when applying water-filling.",
+          "zh": "应用注水法时，这一区别很重要。"
+        },
+        {
+          "en": "Finite eigenvalues remain the exact starting point for each block.",
+          "zh": "每个分组仍以精确有限特征值为起点。"
+        },
+        {
+          "en": "The asymptotic spectrum replaces their empirical distribution under stated hypotheses.",
+          "zh": "满足明确假设时，渐近谱可替代其经验分布。"
+        },
+        {
+          "en": "No continuous-time units have entered yet.",
+          "zh": "此处尚未引入连续时间单位。"
+        },
+        {
+          "en": "We are still counting bits per real transmission, after dividing block information by n.",
+          "zh": "分组信息除以n后，单位仍为每次实传输比特数。"
+        }
+      ]
+    },
+    {
+      "id": "c02-spectrum",
+      "chapter": "Toeplitz Eigenvalue Distribution",
+      "title": "Toeplitz Eigenvalue Distribution",
+      "music": "proof",
+      "terms": [
+        "toeplitz",
+        "psd"
+      ],
+      "sentences": [
+        {
+          "en": "Let r of k be an absolutely summable covariance sequence.",
+          "zh": "令r(k)为绝对可和的协方差序列。"
+        },
+        {
+          "en": "Its Fourier series defines a continuous real nonnegative spectrum S of omega.",
+          "zh": "其Fourier级数定义连续、实且非负的谱S(ω)。"
+        },
+        {
+          "en": "Build the n by n Toeplitz covariance matrix from these lags.",
+          "zh": "用这些时滞构造n乘n Toeplitz协方差矩阵。"
+        },
+        {
+          "en": "Let lambda one through lambda n be its eigenvalues.",
+          "zh": "令λ₁至λₙ为该矩阵特征值。"
+        },
+        {
+          "en": "For every continuous test function F, the eigenvalue average converges.",
+          "zh": "对每个连续测试函数F，特征值平均值均收敛。"
+        },
+        {
+          "en": "The limit is the integral of F of S omega, divided by the product of two and pi.",
+          "zh": "极限为(1/(2π))∫F(S(ω))dω。"
+        },
+        {
+          "en": "The integral runs from negative pi to pi.",
+          "zh": "积分区间为−π至π。"
+        },
+        {
+          "en": "This is convergence of empirical distributions.",
+          "zh": "这是经验分布的收敛。"
+        },
+        {
+          "en": "It does not pair every finite eigenvalue with one exact frequency.",
+          "zh": "它不把每个有限特征值与某个精确频率配对。"
+        },
+        {
+          "en": "Here is the proof roadmap, not a full theorem proof.",
+          "zh": "下面给出证明路线，而非完整定理证明。"
+        },
+        {
+          "en": "First truncate the absolutely summable covariance sequence to a finite lag range.",
+          "zh": "首先将绝对可和协方差序列截断到有限时滞范围。"
+        },
+        {
+          "en": "For the truncated sequence, first consider polynomial test functions of the eigenvalues.",
+          "zh": "对截断序列，先考虑特征值的多项式测试函数。"
+        },
+        {
+          "en": "Normalized traces of powers are sums of products of covariance lags.",
+          "zh": "归一化幂迹是协方差时滞乘积之和。"
+        },
+        {
+          "en": "For fixed polynomial degree and lag range, only a fixed-width boundary differs.",
+          "zh": "对固定多项式次数与时滞范围，只有固定宽度的边界部分不同。"
+        },
+        {
+          "en": "That boundary contribution divided by n tends to zero.",
+          "zh": "该边界贡献除以n后趋于零。"
+        },
+        {
+          "en": "Absolute summability makes the truncation error vanish as the lag range grows.",
+          "zh": "时滞范围增大时，绝对可和性使截断误差趋于零。"
+        },
+        {
+          "en": "Thus the limit holds for polynomial test functions.",
+          "zh": "因此该极限对多项式测试函数成立。"
+        },
+        {
+          "en": "On the compact spectral interval, approximate continuous F uniformly by polynomials.",
+          "zh": "在紧谱区间上，用多项式一致逼近连续函数F。"
+        },
+        {
+          "en": "Uniform approximation transfers the limit to F.",
+          "zh": "一致逼近将极限推广到F。"
+        },
+        {
+          "en": "This argument requires absolute summability and continuity as stated.",
+          "zh": "该论证需要前述绝对可和与连续性条件。"
+        },
+        {
+          "en": "For water-filling, assume additionally that S is bounded below by a positive m.",
+          "zh": "对注水法，还假设S有正下界m。"
+        },
+        {
+          "en": "Assume it is bounded above by a finite M as well.",
+          "zh": "同时假设其有有限上界M。"
+        },
+        {
+          "en": "For fixed water level nu, allocated power is the positive part of nu minus S.",
+          "zh": "固定水位ν时，功率密度为(ν−S)^+。"
+        },
+        {
+          "en": "This function is continuous in the spectral value.",
+          "zh": "该函数关于谱值连续。"
+        },
+        {
+          "en": "So the eigenvalue theorem gives its empirical mean limit.",
+          "zh": "因此特征值定理给出其经验均值极限。"
+        },
+        {
+          "en": "The capacity integrand is continuous under the same positive bounds.",
+          "zh": "在相同正下界条件下，容量被积函数连续。"
+        },
+        {
+          "en": "For positive P, choose the finite-block water level to meet its power budget.",
+          "zh": "对正功率P，选择有限块水位以满足功率预算。"
+        },
+        {
+          "en": "Bracket the limiting water level by two nearby fixed levels. How can this constrain nu sub n?",
+          "zh": "用两个相邻固定水位夹住极限水位。这如何约束ν_n？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Monotonicity of allocated power transfers this bracket to nu sub n.",
+          "zh": "分配功率的单调性将该夹逼传递给ν_n。"
+        },
+        {
+          "en": "As the bracket narrows, nu sub n converges to nu.",
+          "zh": "夹逼区间收窄时，ν_n趋于ν。"
+        },
+        {
+          "en": "Continuity then transfers the limit to the optimized capacity.",
+          "zh": "随后由连续性将极限传递到最优容量。"
+        },
+        {
+          "en": "When P is zero, all allocations and capacities vanish without requiring a unique water level.",
+          "zh": "P为零时，各功率分配与容量均为零，无需唯一水位。"
+        },
+        {
+          "en": "These steps do not assert the result for every stationary process.",
+          "zh": "这些步骤并未断言该结果适用于所有平稳过程。"
+        },
+        {
+          "en": "These conclusions use absolute summability together with a continuous spectrum bounded away from zero.",
+          "zh": "这些结论采用绝对可和性，以及有正下界的连续谱。"
+        },
+        {
+          "en": "Finite-block fluctuations remain before taking the limit.",
+          "zh": "取极限之前，有限块波动仍然存在。"
+        },
+        {
+          "en": "Next translate these discrete frequencies into physical hertz.",
+          "zh": "接下来将离散频率换算为物理赫兹。"
+        },
+        {
+          "en": "The normalization changes with that translation.",
+          "zh": "这种换算会改变归一化方式。"
+        }
+      ]
+    },
+    {
+      "id": "c03-frequency",
+      "chapter": "Discrete and Continuous Spectral Water-Filling",
+      "title": "Discrete and Continuous Spectral Water-Filling",
+      "music": "proof",
+      "terms": [
+        "awgn",
+        "water-filling",
+        "psd",
+        "spectral-efficiency"
+      ],
+      "sentences": [
+        {
+          "en": "First use discrete time with normalized frequency omega.",
+          "zh": "首先考虑归一化角频率ω下的离散时间模型。"
+        },
+        {
+          "en": "Its angular frequency ranges from negative pi to positive pi.",
+          "zh": "其角频率范围为−π至π。"
+        },
+        {
+          "en": "Define the input spectrum S sub x under a two-sided convention.",
+          "zh": "按双边约定定义输入谱S_x。"
+        },
+        {
+          "en": "Average input power is its spectral integral divided by the product of two and pi.",
+          "zh": "平均输入功率为(1/(2π))乘谱积分。"
+        },
+        {
+          "en": "That integral runs from negative pi to pi.",
+          "zh": "积分区间为−π至π。"
+        },
+        {
+          "en": "For a real discrete-time Gaussian channel, capacity is the log integral divided by the product of four and pi.",
+          "zh": "对实离散时间高斯信道，容量为(1/(4π))乘以对数积分。"
+        },
+        {
+          "en": "The integrand is log two of one plus S x over S z.",
+          "zh": "被积函数为log₂(1+S_x/S_z)。"
+        },
+        {
+          "en": "Its unit is bits per real discrete-time use.",
+          "zh": "其单位是每次实离散时间使用的比特数。"
+        },
+        {
+          "en": "The one half accounts for a real degree of freedom.",
+          "zh": "因子二分之一来自实自由度。"
+        },
+        {
+          "en": "The discrete-time water-filling spectrum is the positive part of nu minus S z.",
+          "zh": "离散时间注水谱为(ν−S_z)^+。"
+        },
+        {
+          "en": "Now use continuous time and frequency f in hertz.",
+          "zh": "现在考虑以赫兹计量的连续时间频率f。"
+        },
+        {
+          "en": "For a real signal, integrate over both positive and negative frequencies.",
+          "zh": "对实信号，要对正负频率两侧积分。"
+        },
+        {
+          "en": "Transmit power is the integral of S x over the real line.",
+          "zh": "发送功率为S_x在实数频率轴上的积分。"
+        },
+        {
+          "en": "Continuous-time capacity is one half the log integral over hertz.",
+          "zh": "连续时间容量为赫兹域对数积分的一半。"
+        },
+        {
+          "en": "It equals one half integral over the reals of log two of one plus S x over S z.",
+          "zh": "即实数域上log₂(1+S_x/S_z)积分的一半。"
+        },
+        {
+          "en": "Its unit is bits per second.",
+          "zh": "其单位为比特每秒。"
+        },
+        {
+          "en": "Here S x and S z use power per hertz.",
+          "zh": "这里S_x与S_z均采用功率每赫兹单位。"
+        },
+        {
+          "en": "Their ratio is dimensionless.",
+          "zh": "二者之比是无量纲量。"
+        },
+        {
+          "en": "For alias-free sampling, band-limit signal and observed noise to negative W through W, and sample at two W.",
+          "zh": "无混叠采样时，将信号与观测噪声限于−W至W，并以2W采样。"
+        },
+        {
+          "en": "Map hertz f to omega: f equals F s times omega, divided by the product of two and pi.",
+          "zh": "用f=F_sω/(2π)将赫兹频率映射到ω。"
+        },
+        {
+          "en": "The discrete spectrum equals F s times the continuous spectrum at that frequency.",
+          "zh": "离散谱等于该频率处连续谱乘F_s。"
+        },
+        {
+          "en": "Thus the signal-to-noise spectral ratio is unchanged.",
+          "zh": "因此信噪谱比保持不变。"
+        },
+        {
+          "en": "In the discrete integral, d omega equals two pi divided by F s, times d f.",
+          "zh": "频率微分按2π/F_s缩放。"
+        },
+        {
+          "en": "Multiplying discrete bits per use by F s uses per second gives bits per second.",
+          "zh": "将每次使用比特数乘以每秒F_s次，得到比特每秒。"
+        },
+        {
+          "en": "This exactly yields the continuous-time half-integral convention.",
+          "zh": "这恰好得到连续时间的半积分约定。"
+        },
+        {
+          "en": "Now take white noise with two-sided density N zero over two.",
+          "zh": "现在令白噪声双边谱密度为N₀/2。"
+        },
+        {
+          "en": "Restrict transmission to the lowpass band from negative W to positive W.",
+          "zh": "将发送限制在−W至W的低通频带。"
+        },
+        {
+          "en": "Uniform optimal input density is P divided by the product of two and W.",
+          "zh": "均匀最优输入谱密度为P/(2W)。"
+        },
+        {
+          "en": "Its power integral over width two W equals P.",
+          "zh": "该谱密度在总宽2W上积分为P。"
+        },
+        {
+          "en": "The ratio to noise density becomes P divided by the product N zero times W.",
+          "zh": "与噪声谱密度之比变为P/(N₀W)。"
+        },
+        {
+          "en": "The capacity integral reduces to W times log base two of one plus the ratio P divided by the product N zero times W.",
+          "zh": "容量积分化为Wlog₂(1+P/(N₀W))。"
+        },
+        {
+          "en": "This matches the real lowpass formula from the bandwidth episode.",
+          "zh": "这与带宽章节的实低通公式一致。"
+        },
+        {
+          "en": "The half factor and the two-sided band must travel together.",
+          "zh": "二分之一因子与双边频带必须配套使用。"
+        },
+        {
+          "en": "Changing to one-sided spectra requires consistent conversion.",
+          "zh": "改用单边谱时必须一致换算。"
+        },
+        {
+          "en": "Next consider frequency response before assigning the effective noise floor.",
+          "zh": "接下来先考虑频率响应，再定义有效噪声底。"
+        }
+      ]
+    },
+    {
+      "id": "c04-filter",
+      "chapter": "Filtering and Effective Modes",
+      "title": "Filtering and Effective Modes",
+      "music": "definition",
+      "terms": [
+        "awgn",
+        "psd"
+      ],
+      "sentences": [
+        {
+          "en": "Consider a linear time-invariant channel with frequency response H of f.",
+          "zh": "考虑频率响应为H(f)的线性时不变信道。"
+        },
+        {
+          "en": "The transmitted signal spectrum is S x of f.",
+          "zh": "发送信号谱为S_x(f)。"
+        },
+        {
+          "en": "The receiver observes H times X plus additive noise N.",
+          "zh": "接收端观测H乘X再加加性噪声N。"
+        },
+        {
+          "en": "The input power constraint applies before H.",
+          "zh": "输入功率约束施加在H之前。"
+        },
+        {
+          "en": "The signal contribution to output spectrum is absolute H squared times S x.",
+          "zh": "输出谱中的信号项为|H|²S_x。"
+        },
+        {
+          "en": "Let additive noise have spectrum S n of f.",
+          "zh": "令加性噪声谱为S_n(f)。"
+        },
+        {
+          "en": "At a frequency with nonzero H, output signal-to-noise ratio is absolute H squared times S x, all divided by S n.",
+          "zh": "在H非零的频率，输出信噪比为|H|²S_x/S_n。"
+        },
+        {
+          "en": "Equivalently, the effective input noise floor is S n over absolute H squared.",
+          "zh": "等价地，有效输入噪声底为S_n/|H|²。"
+        },
+        {
+          "en": "This equivalent floor is defined only when H is nonzero.",
+          "zh": "该等效噪声底仅在H非零时定义。"
+        },
+        {
+          "en": "When H equals zero and noise remains positive, no input signal passes.",
+          "zh": "当H为零且噪声仍为正时，没有输入信号通过。"
+        },
+        {
+          "en": "That mode carries zero information.",
+          "zh": "该模式承载零信息。"
+        },
+        {
+          "en": "The effective-noise quotient is undefined there; the direct signal-to-noise expression gives zero.",
+          "zh": "该处等效噪声商未定义；直接信噪比表达式给出零。"
+        },
+        {
+          "en": "A zero at an isolated frequency has measure zero in a continuous integral.",
+          "zh": "连续积分中单个孤立频率的测度为零。"
+        },
+        {
+          "en": "Such a point does not automatically remove positive integral capacity.",
+          "zh": "因此该点不会自动损失正的积分容量。"
+        },
+        {
+          "en": "Assume S n is strictly positive wherever the formula is used.",
+          "zh": "假设公式使用处的S_n严格为正。"
+        },
+        {
+          "en": "A zero-noise mode lies outside this stated formula regime.",
+          "zh": "零噪声模式不属于此处声明的公式范围。"
+        },
+        {
+          "en": "Their capacity requires separate assumptions on the noiseless degrees of freedom and admissible inputs.",
+          "zh": "其容量需要另行声明无噪自由度与允许输入的假设。"
+        },
+        {
+          "en": "Now place a receive filter G after the additive noise.",
+          "zh": "现在将接收滤波器G置于加性噪声之后。"
+        },
+        {
+          "en": "It multiplies the signal spectrum by absolute G squared.",
+          "zh": "它将信号谱乘以|G|²。"
+        },
+        {
+          "en": "It also multiplies the noise spectrum by absolute G squared. Can amplification alone improve their ratio?",
+          "zh": "它也将噪声谱乘以|G|²。仅靠放大能提高二者比值吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Where G is nonzero, these factors cancel in their ratio.",
+          "zh": "G非零处，这些因子在比值中抵消。"
+        },
+        {
+          "en": "Thus receive weighting alone cannot improve that modewise signal-to-noise ratio.",
+          "zh": "因此仅靠接收加权不能提高该模式信噪比。"
+        },
+        {
+          "en": "This cancellation does not reverse the location of the transmitter power constraint.",
+          "zh": "这种抵消不会改变发射功率约束的位置。"
+        },
+        {
+          "en": "Thus an invertible receive weighting does not change that mode ratio.",
+          "zh": "因此可逆接收加权不会改变该模式信噪比。"
+        },
+        {
+          "en": "Where G is zero, the filter erases the mode.",
+          "zh": "G为零处，滤波器会抹去该模式。"
+        },
+        {
+          "en": "There the ratio is not evaluated by cancelling zero over zero.",
+          "zh": "此处不能通过抵消0/0来计算比值。"
+        },
+        {
+          "en": "Input filtering and receive filtering have different power consequences.",
+          "zh": "输入滤波与接收滤波对功率约束的影响不同。"
+        },
+        {
+          "en": "The transmitter pays for power before the channel response.",
+          "zh": "发射端为信道响应之前的功率付出预算。"
+        },
+        {
+          "en": "A receive filter acts after signal and noise arrive.",
+          "zh": "接收滤波器作用于信号与噪声到达之后。"
+        },
+        {
+          "en": "A frequency-dependent H can make some modes more favorable.",
+          "zh": "频率相关的H会使某些模式更有利。"
+        },
+        {
+          "en": "Power allocation should account for that effective signal-to-noise ratio.",
+          "zh": "功率分配应考虑该有效信噪比。"
+        },
+        {
+          "en": "The spectrum integral must retain its stated units and domain.",
+          "zh": "谱积分必须保留声明的单位与定义域。"
+        },
+        {
+          "en": "The power constraint remains the integral of the transmitted input spectrum.",
+          "zh": "功率约束始终是发送输入谱的积分。"
+        },
+        {
+          "en": "Next state the separate finite-block result for causal feedback.",
+          "zh": "接下来陈述因果反馈的独立有限块结果。"
+        },
+        {
+          "en": "Its half-bit comparison is per real transmission, not per second.",
+          "zh": "其半比特比较按每次实传输计，而非每秒。"
+        }
+      ]
+    },
+    {
+      "id": "c05-feedback-boundary",
+      "chapter": "Finite-Block Gaussian Feedback",
+      "title": "Finite-Block Gaussian Feedback",
+      "music": "proof",
+      "terms": [
+        "feedback",
+        "awgn"
+      ],
+      "sentences": [
+        {
+          "en": "Now return to a discrete-time real additive Gaussian sequence channel.",
+          "zh": "现在回到离散时间实加性高斯序列信道。"
+        },
+        {
+          "en": "The block noise is Gaussian with positive-definite covariance and may be nonstationary.",
+          "zh": "分组噪声为协方差正定的高斯噪声，且可以非平稳。"
+        },
+        {
+          "en": "No stationarity or Toeplitz structure is required for this finite-block comparison.",
+          "zh": "该有限块比较不要求平稳性或Toeplitz结构。"
+        },
+        {
+          "en": "Its coordinates may be correlated across time.",
+          "zh": "其坐标可以在时间上相关。"
+        },
+        {
+          "en": "The noise is independent of the message.",
+          "zh": "噪声与消息独立。"
+        },
+        {
+          "en": "The transmitter has noiseless causal access to previous channel outputs.",
+          "zh": "发送端无噪声地因果获知先前信道输出。"
+        },
+        {
+          "en": "Thus input X sub i may depend on Y before time i.",
+          "zh": "因此输入X_i可依赖时刻i之前的输出。"
+        },
+        {
+          "en": "The power constraint averages expected squared input across the block.",
+          "zh": "功率约束对整个分组的输入平方取期望平均。"
+        },
+        {
+          "en": "One over n times the sum of expected X sub i squared is at most P.",
+          "zh": "(1/n)ΣE[X_i²]≤P。"
+        },
+        {
+          "en": "This is an expected average-power constraint.",
+          "zh": "这是期望平均功率约束。"
+        },
+        {
+          "en": "It is not a separate deterministic bound on every message codeword.",
+          "zh": "它不是对每个消息码字分别施加的确定性约束。"
+        },
+        {
+          "en": "Cover and Pombra give finite-block comparisons for this model.",
+          "zh": "Cover与Pombra为该模型给出有限块比较界。"
+        },
+        {
+          "en": "Let C sub n denote the normalized no-feedback information bound.",
+          "zh": "令C_n表示归一化无反馈信息界。"
+        },
+        {
+          "en": "It divides the best no-feedback block information by n transmissions.",
+          "zh": "它将无反馈最优分组信息量除以n次传输。"
+        },
+        {
+          "en": "Let C sub n feedback denote the corresponding feedback quantity.",
+          "zh": "令C_{n,fb}表示相应的反馈量。"
+        },
+        {
+          "en": "The feedback quantity uses the same normalization and power budget.",
+          "zh": "反馈量采用相同归一化与功率预算。"
+        },
+        {
+          "en": "Their comparison is C n at most C n feedback.",
+          "zh": "其比较关系为C_n≤C_{n,fb}。"
+        },
+        {
+          "en": "The feedback quantity is at most the smaller of twice C sub n and C sub n plus one half. Is that half a bit per second?",
+          "zh": "反馈量至多为2C_n与C_n+1/2中的较小值。这里是每秒半比特吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "These quantities are measured in bits per real transmission.",
+          "zh": "这些量以每次实传输比特数计量。"
+        },
+        {
+          "en": "The half-bit increment is not a universal half bit per second.",
+          "zh": "半比特增量不是通用的每秒半比特。"
+        },
+        {
+          "en": "A conversion to bits per second needs an explicit use rate.",
+          "zh": "换算成比特每秒需要明确的使用速率。"
+        },
+        {
+          "en": "It also needs a continuous-time model with matching bandwidth assumptions.",
+          "zh": "还需要具有匹配带宽假设的连续时间模型。"
+        },
+        {
+          "en": "This is an invoked advanced comparison, not a derivation here.",
+          "zh": "这里引用这项高级比较结果，而不作推导。"
+        },
+        {
+          "en": "It is not a finite-block zero-error guarantee.",
+          "zh": "它不是有限块零错误保证。"
+        },
+        {
+          "en": "Nor does it make every feedback code attain the upper bound.",
+          "zh": "它也不意味着每个反馈码都能达到上界。"
+        },
+        {
+          "en": "Memoryless Gaussian channels have no feedback capacity increase.",
+          "zh": "无记忆高斯信道的容量不会因反馈而增加。"
+        },
+        {
+          "en": "That agrees with the memoryless-channel argument from earlier.",
+          "zh": "这与前面对无记忆信道的论证一致。"
+        },
+        {
+          "en": "Colored noise has memory that feedback can exploit.",
+          "zh": "彩色噪声具有反馈可能利用的记忆。"
+        },
+        {
+          "en": "Its finite-block comparison therefore has a different scope.",
+          "zh": "因此其有限块比较具有不同适用范围。"
+        },
+        {
+          "en": "Keep the message, causal outputs, and current input in time order.",
+          "zh": "应按时间顺序排列消息、过去输出与当前输入。"
+        },
+        {
+          "en": "Feedback cannot depend on future outputs.",
+          "zh": "反馈不能依赖未来输出。"
+        },
+        {
+          "en": "The stated covariance and power assumptions matter to the result.",
+          "zh": "声明的协方差与功率假设对该结果至关重要。"
+        },
+        {
+          "en": "This bound concerns a real discrete-time sequence channel.",
+          "zh": "该界针对实离散时间序列信道。"
+        },
+        {
+          "en": "It does not automatically extend to every continuous spectrum.",
+          "zh": "它不会自动推广到每种连续频谱模型。"
+        },
+        {
+          "en": "The final chapter will connect source rates and channel budgets.",
+          "zh": "最后一章将连接信源速率与信道预算。"
+        },
+        {
+          "en": "It will preserve each theorem’s assumptions and units.",
+          "zh": "它将保留各定理的假设与单位。"
+        }
+      ]
+    },
+    {
+      "id": "c06-course-map",
+      "chapter": "The Information-Theory Course Map",
+      "title": "The Information-Theory Course Map",
+      "music": "recap",
+      "terms": [
+        "entropy-rate",
+        "aep",
+        "separation",
+        "capacity",
+        "water-filling",
+        "feedback"
+      ],
+      "sentences": [
+        {
+          "en": "A source produces symbols that must be represented or transmitted with a specified error requirement.",
+          "zh": "信源产生符号，需要在明确错误要求下表示或传输。"
+        },
+        {
+          "en": "For a finite memoryless source, typical code lengths are governed by entropy.",
+          "zh": "有限无记忆信源的典型码长由熵控制。"
+        },
+        {
+          "en": "For a stationary ergodic finite-alphabet source, entropy rate replaces single-symbol entropy.",
+          "zh": "对平稳遍历有限字母表信源，熵率取代单符号熵。"
+        },
+        {
+          "en": "The source coding theorem states its own asymptotic assumptions.",
+          "zh": "信源编码定理有其自身渐近假设。"
+        },
+        {
+          "en": "The channel coding theorem asks whether messages can cross reliably.",
+          "zh": "信道编码定理讨论消息能否可靠传输。"
+        },
+        {
+          "en": "For a discrete memoryless channel, capacity is maximum mutual information per use.",
+          "zh": "对离散无记忆信道，容量是每次使用最大互信息。"
+        },
+        {
+          "en": "For real AWGN, the unit is bits per real channel use.",
+          "zh": "对实AWGN，单位是每次实信道使用比特数。"
+        },
+        {
+          "en": "For continuous-time real lowpass AWGN, capacity is measured in bits per second.",
+          "zh": "对连续时间实低通AWGN，容量单位为比特每秒。"
+        },
+        {
+          "en": "Bandwidth converts real uses per second into a physical rate.",
+          "zh": "带宽将每秒实使用次数转换为物理速率。"
+        },
+        {
+          "en": "A sequence of m source symbols requires about m times entropy rate bits.",
+          "zh": "m个信源符号约需要m乘熵率个比特。"
+        },
+        {
+          "en": "A channel block of n uses offers about n times capacity bits.",
+          "zh": "n次信道使用约提供n乘容量个比特。"
+        },
+        {
+          "en": "A strict gap suffices for reliable separation under the source and channel coding assumptions.",
+          "zh": "在信源与信道编码假设下，严格余量足以保证可靠分离。"
+        },
+        {
+          "en": "Let block lengths grow with a fixed source-to-channel ratio.",
+          "zh": "令分组长度增长，同时保持信源块与信道块的固定比例。"
+        },
+        {
+          "en": "Choose m times entropy rate less than n times capacity.",
+          "zh": "选择m乘熵率小于n乘容量。"
+        },
+        {
+          "en": "Writing rho as m over n, the strict condition is rho times entropy rate below capacity.",
+          "zh": "令ρ=m/n，严格条件为ρ乘熵率小于容量。"
+        },
+        {
+          "en": "The channel model and source theorem hypotheses must both hold.",
+          "zh": "信道模型与信源定理假设必须同时成立。"
+        },
+        {
+          "en": "A fixed positive margin lets both coding error probabilities vanish.",
+          "zh": "固定正余量可使两端编码错误概率都趋于零。"
+        },
+        {
+          "en": "A converse requires the source rate not exceed capacity. Does this inequality itself certify achievability at equality?",
+          "zh": "反向结论要求信源速率不超过容量。这条不等式本身能证明等号处可达吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "At equality, asymptotic achievability itself needs separate analysis.",
+          "zh": "等号边界处，渐近可达性本身也需要单独分析。"
+        },
+        {
+          "en": "The entropy rate has units of bits per source symbol.",
+          "zh": "熵率单位是每个信源符号的比特数。"
+        },
+        {
+          "en": "Channel capacity has units of bits per channel use.",
+          "zh": "信道容量单位是每次信道使用的比特数。"
+        },
+        {
+          "en": "When capacity is positive, entropy rate divided by capacity gives the asymptotic threshold of channel uses per source symbol.",
+          "zh": "容量为正时，熵率除以容量给出每信源符号所需信道使用次数的渐近门槛。"
+        },
+        {
+          "en": "AWGN capacity turns available power and noise into a rate.",
+          "zh": "AWGN容量将可用功率与噪声转换为速率。"
+        },
+        {
+          "en": "Water-filling distributes a shared power budget across parallel modes.",
+          "zh": "注水法将共享功率预算分配到并行模式。"
+        },
+        {
+          "en": "Toeplitz eigenvalue limits connect stationary covariance to asymptotic modes.",
+          "zh": "Toeplitz特征值极限将平稳协方差连接到渐近模式。"
+        },
+        {
+          "en": "That connection needs spectral regularity such as absolute summability.",
+          "zh": "该连接需要绝对可和等谱正则条件。"
+        },
+        {
+          "en": "Continuous-time spectra require hertz and two-sided density conventions.",
+          "zh": "连续时间频谱需要明确赫兹与双边谱密度约定。"
+        },
+        {
+          "en": "A finite-block feedback bound returns to bits per real transmission.",
+          "zh": "有限块反馈界则回到每次实传输比特数。"
+        },
+        {
+          "en": "No per-use constant becomes a rate without an explicit use rate.",
+          "zh": "没有明确使用速率时，每次使用常数不能变成速率。"
+        },
+        {
+          "en": "Each result therefore carries a model, a limit, and a unit.",
+          "zh": "因此每个结果都带有模型、极限与单位。"
+        },
+        {
+          "en": "Computed examples illustrate formulas but do not replace proofs.",
+          "zh": "计算示例用于说明公式，却不能替代证明。"
+        },
+        {
+          "en": "The Gaussian feedback comparison is an invoked result under its covariance, causality, and expected-power assumptions.",
+          "zh": "高斯反馈比较是在其协方差、因果性与期望功率假设下引用的结果。"
+        },
+        {
+          "en": "The spectral water-fill limit is likewise conditional on Toeplitz hypotheses.",
+          "zh": "谱注水极限同样依赖Toeplitz假设。"
+        },
+        {
+          "en": "Together, entropy, coding, capacity, and allocation form a reusable chain.",
+          "zh": "熵、编码、容量与分配共同构成可复用推理链。"
+        },
+        {
+          "en": "A new source or channel model requires new assumptions.",
+          "zh": "新的信源或信道模型需要新的假设。"
+        },
+        {
+          "en": "Nonstationary or non-Gaussian extensions are not automatic.",
+          "zh": "非平稳或非高斯推广并非自动成立。"
+        },
+        {
+          "en": "Given a source and a channel, first express their information budgets in matching units.",
+          "zh": "面对一个信源和一个信道，先用一致的单位表达它们的信息预算。"
+        },
+        {
+          "en": "Then identify the assumptions that justify compression, transmission, and allocation. That makes the budget usable.",
+          "zh": "再确定压缩、传输和分配各自依赖的假设，这样才能运用这个预算。"
+        }
+      ]
+    }
+  ]
+}

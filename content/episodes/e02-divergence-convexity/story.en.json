@@ -1,0 +1,1461 @@
+{
+  "episode": "e02-divergence-convexity",
+  "title": "Divergence and Convexity",
+  "voice": "af_heart",
+  "rate": 1.0,
+  "scenes": [
+    {
+      "id": "c01-convex",
+      "chapter": "Convexity, Chords, and Averages",
+      "title": "Convex functions control averages",
+      "music": "definition",
+      "terms": [
+        "convexity",
+        "concavity",
+        "jensen"
+      ],
+      "sentences": [
+        {
+          "en": "The same thousand messages can cost different numbers of bits. Our inventory has five hundred messages labeled A.",
+          "zh": "同样的一千条消息，可能需要不同的比特数。这份清单中有五百个A。"
+        },
+        {
+          "en": "It also has two hundred fifty B messages, and one hundred twenty-five each of C and D.",
+          "zh": "还有二百五十个B，以及各一百二十五个C和D。"
+        },
+        {
+          "en": "One code uses words zero, one zero, one one zero, and one one one. The other uses two bits for every symbol.",
+          "zh": "一个码使用0、10、110、111，另一个码对每个符号均使用两比特。"
+        },
+        {
+          "en": "Which code gives the smaller total bill for this fixed inventory?",
+          "zh": "对这份固定清单，哪个码的总比特数更少？",
+          "hold_after_s": 3.0
+        },
+        {
+          "en": "The first uses five hundred, plus five hundred, plus three hundred seventy-five twice: seventeen hundred fifty bits.",
+          "zh": "第一个码使用五百，加五百，再加两份三百七十五：共一千七百五十比特。"
+        },
+        {
+          "en": "The second needs two thousand bits. The extra two hundred fifty bits equal a quarter bit per message.",
+          "zh": "第二个码需要两千比特。多出的二百五十比特，相当于每条消息四分之一比特。"
+        },
+        {
+          "en": "In each code, no word starts a longer word. Both decode without ambiguity; their probability models differ.",
+          "zh": "每个码中都没有码字是较长码字的开头。两者解码均无歧义，但概率模型不同。"
+        },
+        {
+          "en": "Why does a logarithmic comparison predict this average model penalty? We first need a tool for curved averages.",
+          "zh": "为何对数比较能预测这种平均模型代价？先建立处理曲线下平均值的工具。"
+        },
+        {
+          "en": "A weighted average can fall below a curved graph, above it, or exactly on it.",
+          "zh": "加权平均可能落在弯曲图像下方、上方，或恰好落在图像上。"
+        },
+        {
+          "en": "We need a property that predicts which side contains the average graph height.",
+          "zh": "我们需要一种性质，预测图像平均高度落在哪一侧。"
+        },
+        {
+          "en": "Let the domain be a convex subset of the real line or a vector space.",
+          "zh": "令定义域为实线或向量空间中的凸子集。"
+        },
+        {
+          "en": "A set is convex when it contains every segment joining any two of its points.",
+          "zh": "一个集合若包含连接任意两点的整条线段，就称为凸集。"
+        },
+        {
+          "en": "For points x and y, lambda times x plus the quantity one minus lambda times y stays in the domain.",
+          "zh": "对点x和y，混合λx+(1−λ)y仍留在定义域内。"
+        },
+        {
+          "en": "Here lambda lies between zero and one, including both endpoints.",
+          "zh": "这里λ介于零和一之间，端点也包括在内。"
+        },
+        {
+          "en": "A function f is convex when its graph lies below each chord joining two graph points.",
+          "zh": "若函数图像位于任意两图像点连成的弦下方，函数f就是凸函数。"
+        },
+        {
+          "en": "Algebraically, f of the mixture is at most the same mixture of function values.",
+          "zh": "代数上，混合点处的f值不超过函数值的相同加权平均。"
+        },
+        {
+          "en": "The weights are nonnegative and add to one.",
+          "zh": "权重非负且总和为一。"
+        },
+        {
+          "en": "For a concave function, reverse that inequality.",
+          "zh": "凹函数则满足相反的不等式。"
+        },
+        {
+          "en": "Concavity is a property of functions, while convexity can describe either sets or functions.",
+          "zh": "凹性是函数的性质，而凸性可描述集合或函数。"
+        },
+        {
+          "en": "A nonconvex set is not called a concave set.",
+          "zh": "非凸集合不称为凹集合。"
+        },
+        {
+          "en": "The two terms do not divide all sets into opposite classes.",
+          "zh": "这两个术语并不把所有集合划分成两个对立类别。"
+        },
+        {
+          "en": "Take only two distinct points in the plane and omit the segment between them.",
+          "zh": "在平面上只取两个不同的点，并省略它们之间的线段。"
+        },
+        {
+          "en": "That set is nonconvex because it fails the segment test.",
+          "zh": "该集合未通过线段检验，因此是非凸的。"
+        },
+        {
+          "en": "But concavity cannot describe it, because concavity concerns function values.",
+          "zh": "但不能用凹性描述它，因为凹性讨论的是函数值。"
+        },
+        {
+          "en": "A function itself may be convex, concave, both, or neither.",
+          "zh": "函数本身可以是凸的、凹的、两者皆是，或两者皆非。"
+        },
+        {
+          "en": "For example, a linear function is both convex and concave.",
+          "zh": "例如，线性函数既凸又凹。"
+        },
+        {
+          "en": "The function x squared is convex on the real line.",
+          "zh": "函数x平方在实数线上是凸函数。"
+        },
+        {
+          "en": "The negative of x squared is concave there.",
+          "zh": "负的x平方在那里是凹函数。"
+        },
+        {
+          "en": "Now place two domain points under a candidate convex function.",
+          "zh": "现在在候选凸函数下标出两个定义域点。"
+        },
+        {
+          "en": "Connect their graph values with a straight chord.",
+          "zh": "用直线弦连接这两个函数值。"
+        },
+        {
+          "en": "Choose lambda one quarter, so the interior point lies one quarter along from y toward x.",
+          "zh": "取λ为四分之一，使内点从y向x移动四分之一。"
+        },
+        {
+          "en": "The chord height is three quarters f of y plus one quarter f of x.",
+          "zh": "弦高是四分之三f(y)加四分之一f(x)。"
+        },
+        {
+          "en": "The graph height at that same input cannot exceed the chord height.",
+          "zh": "同一输入处的图像高度不能超过弦高。"
+        },
+        {
+          "en": "Varying lambda slides the point continuously along the chord.",
+          "zh": "改变λ会让点沿弦连续滑动。"
+        },
+        {
+          "en": "The convexity inequality therefore controls every two-point average.",
+          "zh": "因此，凸性不等式控制所有两点加权平均。"
+        },
+        {
+          "en": "With three points, first combine two using their normalized relative weights.",
+          "zh": "对三个点，先按归一化后的相对权重合并其中两个。"
+        },
+        {
+          "en": "Then mix that result with the third point using its remaining weight.",
+          "zh": "再用剩余权重把所得结果与第三点混合。"
+        },
+        {
+          "en": "Applying the two-point inequality at each step gives the three-point inequality.",
+          "zh": "每一步应用两点不等式，就得到三点不等式。"
+        },
+        {
+          "en": "Repeat this grouping to include any finite number of points.",
+          "zh": "重复这种分组即可纳入任意有限个点。"
+        },
+        {
+          "en": "For probabilities lambda i summing to one, the mean input is the weighted sum of x i.",
+          "zh": "若概率λᵢ总和为一，平均输入就是xᵢ的加权和。"
+        },
+        {
+          "en": "Jensen's inequality says f of that mean is at most the mean of f.",
+          "zh": "詹森不等式说，平均输入处的f值不超过f值的平均。"
+        },
+        {
+          "en": "Every mixture point must remain inside a convex domain where f is defined.",
+          "zh": "每个混合点都必须留在f有定义的凸定义域内。"
+        },
+        {
+          "en": "For a random variable, f of the expectation is at most the expectation of f.",
+          "zh": "对随机变量，期望处的函数值不超过函数值的期望。"
+        },
+        {
+          "en": "The expectation must exist, and the function values must be integrable for that statement.",
+          "zh": "该陈述要求期望存在，并且函数值可积。"
+        },
+        {
+          "en": "A tangent can provide another test for convexity.",
+          "zh": "切线还能提供另一种凸性检验。"
+        },
+        {
+          "en": "At a differentiable interior point labeled A, every graph value lies above its tangent.",
+          "zh": "在可微内点a，所有图像值都位于该点切线上方。"
+        },
+        {
+          "en": "Thus f of x is at least f of the letter A, plus the product of f-prime of the letter A and the difference x minus the letter A.",
+          "zh": "因此f(x)至少为f(a)+f′(a)(x−a)。"
+        },
+        {
+          "en": "When the mean is a differentiable interior point, choose that point as the tangent's point of contact.",
+          "zh": "当均值是可微内点时，令a等于该均值。"
+        },
+        {
+          "en": "Averaging cancels the linear term and yields Jensen's inequality.",
+          "zh": "取平均后线性项相消，便得到詹森不等式。"
+        },
+        {
+          "en": "A C two function on an open interval is convex exactly when its second derivative is nonnegative throughout.",
+          "zh": "开区间上的C²函数凸，当且仅当其二阶导数处处非负。"
+        },
+        {
+          "en": "On an open convex domain, a C two function is convex exactly when its Hessian is positive semidefinite everywhere.",
+          "zh": "在开凸定义域上，C²函数凸，当且仅当其Hessian处处半正定。"
+        },
+        {
+          "en": "These equivalences require the stated differentiability and open-domain conditions.",
+          "zh": "这些等价刻画要求满足所述可微性和开定义域条件。"
+        },
+        {
+          "en": "Without this regularity, return to the chord definition rather than applying a derivative test.",
+          "zh": "不满足这些正则性时，应回到弦定义，而不是套用导数检验。"
+        },
+        {
+          "en": "The chord definition remains meaningful even when derivatives do not exist.",
+          "zh": "即使导数不存在，弦的不等式定义仍然有意义。"
+        },
+        {
+          "en": "A finite convex function is continuous at every interior point of its convex domain.",
+          "zh": "有限凸函数在其凸定义域的每个内点连续。"
+        },
+        {
+          "en": "Convexity also turns any local minimum into a global minimum.",
+          "zh": "凸性还保证任何局部极小点都是全局极小点。"
+        },
+        {
+          "en": "Suppose x star is a local minimum, but some domain point y has a smaller value.",
+          "zh": "假设x*是局部极小点，但定义域中某点y的函数值更小。"
+        },
+        {
+          "en": "By convexity, the segment from x star to y stays in the domain.",
+          "zh": "根据定义域凸性，从x*到y的线段留在定义域中。"
+        },
+        {
+          "en": "Choose a sufficiently small positive t. The point z, formed by the quantity one minus t times x star plus t times y, lies nearby.",
+          "zh": "取足够小的正t，使z=(1−t)x*+ty落在附近。"
+        },
+        {
+          "en": "Convexity makes f of z at most that weighted average of the endpoint values.",
+          "zh": "凸性给出f(z)不超过两端函数值的相同加权平均。"
+        },
+        {
+          "en": "Because f of y is smaller, this average is strictly below f of x star.",
+          "zh": "由于f(y)更小，该平均严格小于f(x*)。"
+        },
+        {
+          "en": "That contradicts the local minimum, proving it is global.",
+          "zh": "这与局部极小性矛盾，故该点也是全局极小点。"
+        },
+        {
+          "en": "We will apply this averaging control to a logarithmic function.",
+          "zh": "接下来我们将把这种平均控制应用于对数函数。"
+        },
+        {
+          "en": "Its curvature will compare probabilities assigned by two models.",
+          "zh": "它的曲率将比较两个模型分配给结果的概率。"
+        },
+        {
+          "en": "The next scene defines the resulting directed divergence.",
+          "zh": "下一场将定义由此产生的有向散度。"
+        }
+      ]
+    },
+    {
+      "id": "c02-kl",
+      "chapter": "Relative Entropy and Support",
+      "title": "Why divergence has a direction",
+      "music": "definition",
+      "terms": [
+        "kl-divergence",
+        "probability-simplex"
+      ],
+      "sentences": [
+        {
+          "en": "Let P and Q be probability distributions on the same finite alphabet.",
+          "zh": "令P和Q是同一有限字母表上的概率分布。"
+        },
+        {
+          "en": "For each symbol i, P assigns probability p i and Q assigns probability q i.",
+          "zh": "对每个符号i，P分配概率pᵢ，Q分配概率qᵢ。"
+        },
+        {
+          "en": "The Kullback–Leibler divergence from P to Q is the P average of log base two of p i over q i.",
+          "zh": "从P到Q的Kullback–Leibler散度，是在P下对log₂(pᵢ/qᵢ)取平均。"
+        },
+        {
+          "en": "Written out, it sums p i times that log ratio across the alphabet.",
+          "zh": "写开后，它对字母表求和pᵢ乘该对数比值。"
+        },
+        {
+          "en": "The weight p i comes from the distribution generating observations.",
+          "zh": "权重pᵢ来自生成观测的分布。"
+        },
+        {
+          "en": "The ratio compares that generating distribution with the model Q.",
+          "zh": "比值比较生成分布与模型Q。"
+        },
+        {
+          "en": "This order matters: the first argument supplies the averaging weights.",
+          "zh": "这个顺序很重要：第一个参数提供平均权重。"
+        },
+        {
+          "en": "If p i is zero, define its summand as zero by convention, including when q i is also zero.",
+          "zh": "若pᵢ为零，按约定该项取零，包括qᵢ也为零的情形。"
+        },
+        {
+          "en": "If p i is positive while q i is zero, the divergence is infinite.",
+          "zh": "若pᵢ为正而qᵢ为零，散度就是无穷大。"
+        },
+        {
+          "en": "The model declares an event impossible even though P can generate it.",
+          "zh": "模型把一个P能够生成的事件宣告为不可能。"
+        },
+        {
+          "en": "In support language, finite divergence requires the support of P to be contained in the support of Q.",
+          "zh": "用支持集表述，散度有限要求P的支持集包含于Q的支持集。"
+        },
+        {
+          "en": "A zero-probability symbol under both distributions contributes nothing.",
+          "zh": "若两个分布都给某符号零概率，该符号不作贡献。"
+        },
+        {
+          "en": "The divergence is not generally symmetric under exchanging its arguments.",
+          "zh": "交换两个参数通常不会保持散度不变。"
+        },
+        {
+          "en": "Take P equal to point eight and point two.",
+          "zh": "取P=(0.8,0.2)。"
+        },
+        {
+          "en": "Take Q equal to point five and point five.",
+          "zh": "取Q=(0.5,0.5)。"
+        },
+        {
+          "en": "Forward divergence adds point eight log two of one point six to point two log two of point four.",
+          "zh": "正向散度将0.8log₂1.6与0.2log₂0.4相加。"
+        },
+        {
+          "en": "Their sum is approximately point two seven eight zero seven one bits. Will reversing the models keep this value?",
+          "zh": "其和约为零点二七八零七一比特。交换两个模型，数值还会相同吗？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Now reverse the distributions, so the weights become one half and one half.",
+          "zh": "现在交换分布，权重变为二分之一和二分之一。"
+        },
+        {
+          "en": "The ratios become point five over point eight and point five over point two.",
+          "zh": "比值变为0.5除以0.8和0.5除以0.2。"
+        },
+        {
+          "en": "The reverse divergence is approximately point three two one nine two eight bits.",
+          "zh": "反向散度约为0.321928比特。"
+        },
+        {
+          "en": "Different averaging weights explain why the two answers differ.",
+          "zh": "平均权重不同，解释了两个结果为何不同。"
+        },
+        {
+          "en": "A binary simplex is a line segment with one degree of freedom.",
+          "zh": "二元概率单纯形是一条线段，只有一个自由度。"
+        },
+        {
+          "en": "For an alphabet of n symbols, the probability simplex has dimension n minus one.",
+          "zh": "对含n个符号的字母表，概率单纯形的维数为n−1。"
+        },
+        {
+          "en": "Three-symbol distributions therefore fill a triangular simplex.",
+          "zh": "因此，三符号分布构成一个三角形单纯形。"
+        },
+        {
+          "en": "Each vertex places probability one on one symbol and zero on all others.",
+          "zh": "每个顶点把概率一赋给某个符号，其他符号的概率为零。"
+        },
+        {
+          "en": "Every probability vector is the convex combination of those vertices, with its own probabilities as weights.",
+          "zh": "每个概率向量都以自身概率为权重，表示为这些顶点的凸组合。"
+        },
+        {
+          "en": "KL divergence is not a metric.",
+          "zh": "KL散度不是度量。"
+        },
+        {
+          "en": "A metric must be symmetric and obey the triangle inequality.",
+          "zh": "度量必须对称并满足三角不等式。"
+        },
+        {
+          "en": "KL divergence can fail symmetry and the triangle inequality.",
+          "zh": "KL散度通常不满足这两项要求。"
+        },
+        {
+          "en": "The value can also decrease or increase sharply as Q changes.",
+          "zh": "改变Q可能使散度明显增大或减小。"
+        },
+        {
+          "en": "In the probability simplex, binary distributions lie along a line segment.",
+          "zh": "在概率单纯形中，二元分布位于一条线段上。"
+        },
+        {
+          "en": "Mark P at point eight and Q at point five on that segment.",
+          "zh": "在线段上标出P的0.8和Q的0.5。"
+        },
+        {
+          "en": "The divergence arrow has a direction because its weights belong to its starting distribution.",
+          "zh": "散度箭头具有方向，因为权重属于起点分布。"
+        },
+        {
+          "en": "Move the first component of Q toward zero while the corresponding P probability remains positive.",
+          "zh": "保持p为正，并让q趋近于零。"
+        },
+        {
+          "en": "The log ratio grows without bound, so that contribution diverges.",
+          "zh": "对数比值无界增大，因此该项发散。"
+        },
+        {
+          "en": "If P assigns exactly zero to a symbol, its summand is defined as zero.",
+          "zh": "若P对某个符号赋予恰好为零的概率，该求和项按约定为零。"
+        },
+        {
+          "en": "For multiple symbols, the same support rule applies coordinate by coordinate.",
+          "zh": "对多个符号，同一支持集规则逐坐标适用。"
+        },
+        {
+          "en": "One unsupported P event is enough to make the whole sum infinite.",
+          "zh": "只要有一个P支持的事件缺失于Q支持，整个和就为无穷。"
+        },
+        {
+          "en": "Finite values can still be negative term by term.",
+          "zh": "有限散度中的单项仍可能为负。"
+        },
+        {
+          "en": "The definition alone does not show that their sum is nonnegative.",
+          "zh": "仅凭定义还看不出这些项的和非负。"
+        },
+        {
+          "en": "A proof must compare all support terms together.",
+          "zh": "证明必须把支持集上的各项合起来比较。"
+        },
+        {
+          "en": "That proof will use a logarithm inequality and track Q's unused mass.",
+          "zh": "证明将使用对数不等式，并追踪Q未用在P支持上的质量。"
+        },
+        {
+          "en": "The support convention is essential to that argument.",
+          "zh": "支持集约定对该论证至关重要。"
+        }
+      ]
+    },
+    {
+      "id": "c03-gibbs",
+      "chapter": "Gibbs Inequality",
+      "title": "A proof from the logarithm",
+      "music": "proof",
+      "terms": [
+        "kl-divergence",
+        "mutual-information",
+        "conditional-mi",
+        "entropy"
+      ],
+      "sentences": [
+        {
+          "en": "For positive t, define g of t as t minus one minus natural log t.",
+          "zh": "对正数t，定义g(t)=t−1−ln t。"
+        },
+        {
+          "en": "Its derivative is one minus one over t, negative below one and positive above.",
+          "zh": "其导数为1−1/t，在1以下为负、1以上为正。"
+        },
+        {
+          "en": "Thus g has minimum g of one equal to zero, proving ln t at most t minus one.",
+          "zh": "因此g在t=1处取最小值零，证明ln t≤t−1。"
+        },
+        {
+          "en": "Let S contain exactly the symbols with positive P probability.",
+          "zh": "令S恰好包含P概率为正的符号。"
+        },
+        {
+          "en": "Assume first that Q is positive at every symbol in S.",
+          "zh": "先假设Q在S中每个符号上都为正。"
+        },
+        {
+          "en": "Otherwise the KL divergence is infinite, and nonnegativity is immediate.",
+          "zh": "否则KL散度为无穷大，非负性立即成立。"
+        },
+        {
+          "en": "For each i in S, substitute t equal to q i over p i.",
+          "zh": "对每个i∈S，代入t=qᵢ/pᵢ。"
+        },
+        {
+          "en": "Then negative ln of q i over p i is at least one minus q i over p i.",
+          "zh": "于是−ln(qᵢ/pᵢ)至少为1−qᵢ/pᵢ。"
+        },
+        {
+          "en": "Multiply this inequality by p i, which is positive.",
+          "zh": "将不等式乘以正数pᵢ。"
+        },
+        {
+          "en": "The left side becomes p i ln of p i over q i.",
+          "zh": "左侧变为pᵢln(pᵢ/qᵢ)。"
+        },
+        {
+          "en": "The right side becomes p i minus q i.",
+          "zh": "右侧变为pᵢ−qᵢ。"
+        },
+        {
+          "en": "Now sum only over S, because all remaining P weights are zero.",
+          "zh": "现在只在S上求和，因为其余P权重全为零。"
+        },
+        {
+          "en": "The p terms sum to one.",
+          "zh": "p项之和为一。"
+        },
+        {
+          "en": "Let r be the Q probability outside S.",
+          "zh": "令r为Q在S以外的总概率。"
+        },
+        {
+          "en": "The q terms inside S therefore sum to one minus r.",
+          "zh": "于是S内q项之和为1−r。"
+        },
+        {
+          "en": "The summed right side is r, which is nonnegative.",
+          "zh": "右侧求和为r，因而非负。"
+        },
+        {
+          "en": "So the natural-log divergence is at least r.",
+          "zh": "因此自然对数散度至少为r。"
+        },
+        {
+          "en": "Divide by ln two to convert from natural units to bits.",
+          "zh": "除以ln2，将自然对数单位换算为比特。"
+        },
+        {
+          "en": "Division by a positive constant preserves nonnegativity.",
+          "zh": "除以正数不会改变非负性。"
+        },
+        {
+          "en": "This proves D of P given Q is nonnegative.",
+          "zh": "这就证明了D(P‖Q)非负。"
+        },
+        {
+          "en": "Equality requires r to equal zero and every term inequality to be tight.",
+          "zh": "等号要求r=0且每一项不等式都取等。"
+        },
+        {
+          "en": "Tightness of the logarithm inequality requires q i over p i equal one for every i in S.",
+          "zh": "对数不等式取等要求对所有i∈S均有qᵢ/pᵢ=1。"
+        },
+        {
+          "en": "Thus Q equals P on S and has no mass outside S.",
+          "zh": "因此Q在S上等于P，且S之外没有质量。"
+        },
+        {
+          "en": "Consequently equality holds exactly when P equals Q.",
+          "zh": "所以当且仅当P=Q时取等。"
+        },
+        {
+          "en": "This is Gibbs' inequality, with support conditions visible in its proof.",
+          "zh": "这就是Gibbs不等式，证明中明确展示了支持集条件。"
+        },
+        {
+          "en": "Apply it to the joint law PXY and the product law PX times PY.",
+          "zh": "将它应用于联合分布PXY与乘积分布PX乘PY。"
+        },
+        {
+          "en": "Their KL divergence sums p x y times log base two of the ratio p x y divided by the product p x times p y.",
+          "zh": "两者的KL散度是对x,y求和pxy log₂(pxy/(pxpy))。"
+        },
+        {
+          "en": "Expanding the logarithm gives H of X plus H of Y minus H of X,Y.",
+          "zh": "展开对数得到H(X)+H(Y)−H(X,Y)。"
+        },
+        {
+          "en": "By the entropy chain rule, that difference is mutual information.",
+          "zh": "根据熵链式法则，该差值就是互信息。"
+        },
+        {
+          "en": "Therefore mutual information is nonnegative.",
+          "zh": "因此互信息非负。"
+        },
+        {
+          "en": "Equality holds exactly when the joint law factors as PX PY.",
+          "zh": "当且仅当联合分布分解为PX PY时取等。"
+        },
+        {
+          "en": "For every z with positive PZ probability, the conditional mutual information contribution is a KL divergence.",
+          "zh": "对每个满足P_Z(z)>0的z，条件互信息对应一项KL散度。"
+        },
+        {
+          "en": "It compares PXY given z with the product PX given z times PY given z.",
+          "zh": "它比较给定z的PXY与条件边缘PX和PY的乘积。"
+        },
+        {
+          "en": "Average these nonnegative divergences using probabilities PZ of z.",
+          "zh": "用PZ(z)对这些非负散度加权平均。"
+        },
+        {
+          "en": "The average is I of X and Y given Z, so it is nonnegative.",
+          "zh": "该平均就是I(X;Y|Z)，因此非负。"
+        },
+        {
+          "en": "Fix a finite alphabet with k symbols, and compare PX with its uniform distribution U.",
+          "zh": "现在将任意PX与其k个符号上的均匀分布U比较。"
+        },
+        {
+          "en": "Dividing p sub i by the uniform probability one over k gives k times p sub i.",
+          "zh": "比值pᵢ/(1/k)等于kpᵢ。"
+        },
+        {
+          "en": "Expanding D of P given U gives the sum p i log two of k p i.",
+          "zh": "展开D(P‖U)，得到Σpᵢlog₂(kpᵢ)。"
+        },
+        {
+          "en": "Separate log k from log p i and use entropy's definition.",
+          "zh": "把logk与logpᵢ分开，并使用熵的定义。"
+        },
+        {
+          "en": "The result is log two k minus H of X.",
+          "zh": "结果是log₂k−H(X)。"
+        },
+        {
+          "en": "Gibbs nonnegativity therefore gives H of X at most log two k.",
+          "zh": "因此由Gibbs非负性得H(X)≤log₂k。"
+        },
+        {
+          "en": "Equality requires P to equal U, so the uniform source has maximum entropy.",
+          "zh": "等号要求P=U，因此均匀信源具有最大熵。"
+        },
+        {
+          "en": "Every term in finite-alphabet entropy is nonnegative.",
+          "zh": "有限字母表熵中的每一项都非负。"
+        },
+        {
+          "en": "A probability strictly between zero and one contributes a strictly positive entropy term.",
+          "zh": "介于零与一之间的正概率会产生严格为正的自信息项。"
+        },
+        {
+          "en": "Therefore entropy is zero exactly when one symbol has probability one.",
+          "zh": "因此，当且仅当某个符号概率为一时，熵为零。"
+        },
+        {
+          "en": "Mutual information equals H of X minus H of X given Y.",
+          "zh": "互信息等于H(X)减去H(X|Y)。"
+        },
+        {
+          "en": "Conditional entropy is nonnegative for finite discrete variables.",
+          "zh": "有限离散随机变量的条件熵非负。"
+        },
+        {
+          "en": "Thus mutual information cannot exceed H of X.",
+          "zh": "因此互信息不超过H(X)。"
+        },
+        {
+          "en": "The symmetric identity also shows it cannot exceed H of Y.",
+          "zh": "对称恒等式也表明互信息不超过H(Y)。"
+        },
+        {
+          "en": "Together these bounds give mutual information at most the smaller marginal entropy.",
+          "zh": "合起来，互信息至多等于较小的边缘熵。"
+        },
+        {
+          "en": "For X paired with itself, knowing X leaves no conditional uncertainty.",
+          "zh": "把X与自身配对时，已知X后没有条件不确定性。"
+        },
+        {
+          "en": "So I of X with X equals H of X.",
+          "zh": "所以I(X;X)=H(X)。"
+        },
+        {
+          "en": "These identities have been proved here under finite-alphabet assumptions.",
+          "zh": "这里同一论证只针对所述有限字母表。"
+        },
+        {
+          "en": "For countably infinite alphabets, extra finiteness conditions matter.",
+          "zh": "对可数无限字母表，还需要额外的有限性条件。"
+        },
+        {
+          "en": "Next we prove entropy concavity under mixing using Jensen’s inequality.",
+          "zh": "下一步将用詹森不等式建立相同的熵混合不等式。"
+        }
+      ]
+    },
+    {
+      "id": "c04-jensen",
+      "chapter": "Entropy of a Mixture",
+      "title": "The exact Jensen gap",
+      "music": "proof",
+      "terms": [
+        "entropy",
+        "jensen",
+        "kl-divergence"
+      ],
+      "sentences": [
+        {
+          "en": "Let P one through P m be distributions on one finite alphabet.",
+          "zh": "令P₁到Pₘ为同一有限字母表上的分布。"
+        },
+        {
+          "en": "Choose nonnegative mixing weights lambda j that sum to one.",
+          "zh": "取非负混合权重λⱼ，且总和为一。"
+        },
+        {
+          "en": "The mixed distribution P assigns each symbol the weighted average of its component probabilities.",
+          "zh": "混合分布P给每个符号分配各分量概率的加权平均。"
+        },
+        {
+          "en": "For a fixed symbol i, call its component probabilities p sub j i.",
+          "zh": "固定符号i，并把分量概率记作pⱼᵢ。"
+        },
+        {
+          "en": "The function minus u log two u is concave for positive u.",
+          "zh": "函数−u log₂u在u为正时是凹函数。"
+        },
+        {
+          "en": "Its second derivative is negative one divided by the product of u and natural log two.",
+          "zh": "它的二阶导数为−1/(u ln2)，为负。"
+        },
+        {
+          "en": "At zero, define the value by its continuous limit, which is zero.",
+          "zh": "在零点按连续极限定义函数值为零。"
+        },
+        {
+          "en": "Apply concavity to the component probabilities at this single symbol.",
+          "zh": "在这个固定符号的各分量概率上应用凹性。"
+        },
+        {
+          "en": "The contribution of the mixed probability is at least the weighted contributions.",
+          "zh": "混合概率的熵贡献至少为各分量贡献的加权和。"
+        },
+        {
+          "en": "Now sum that inequality over every symbol i.",
+          "zh": "现在对所有符号i求和。"
+        },
+        {
+          "en": "The left side becomes entropy of the mixture P.",
+          "zh": "左侧变成混合分布P的熵。"
+        },
+        {
+          "en": "The right side becomes the weighted sum of component entropies.",
+          "zh": "右侧变成各分量熵的加权和。"
+        },
+        {
+          "en": "Thus mixing distributions cannot reduce entropy below their average entropy.",
+          "zh": "因此混合分布的熵不会低于各分量熵的平均值。"
+        },
+        {
+          "en": "The proof applied scalar concavity separately to each coordinate.",
+          "zh": "证明对每个坐标分别应用标量凹性。"
+        },
+        {
+          "en": "No picture of a curve alone proves the vector inequality.",
+          "zh": "仅凭曲线图像本身不能证明向量不等式。"
+        },
+        {
+          "en": "There is a second derivation that exposes the divergence gap exactly.",
+          "zh": "还有第二种推导，可精确显露散度差额。"
+        },
+        {
+          "en": "For each component with positive weight lambda j, include D of P j given mixture P in the weighted sum.",
+          "zh": "只把正权重分量的D(Pⱼ‖P)计入加权和。"
+        },
+        {
+          "en": "Omit zero-weight components entirely, since zero times infinite divergence is undefined.",
+          "zh": "完全略去零权重分量，因为零乘无穷大没有定义。"
+        },
+        {
+          "en": "At each symbol i, mixture probability p i equals the sum of lambda j p sub j i.",
+          "zh": "对每个符号i，混合概率pᵢ等于Σⱼλⱼpⱼᵢ。"
+        },
+        {
+          "en": "Therefore p i is at least lambda j p sub j i for every component j.",
+          "zh": "因此对每个分量j，都有pᵢ≥λⱼpⱼᵢ。"
+        },
+        {
+          "en": "For positive lambda j, every symbol with positive p sub j i also has positive mixture probability.",
+          "zh": "当λⱼ为正时，只要pⱼᵢ为正，混合概率也为正。"
+        },
+        {
+          "en": "Thus each positively weighted component has support contained in the mixture support.",
+          "zh": "因此，每个正权重分量的支持集都包含于混合分布的支持集。"
+        },
+        {
+          "en": "Expand it as the sum of lambda j p sub j i times log two of p sub j i over p i.",
+          "zh": "将其展开为Σⱼᵢλⱼpⱼᵢlog₂(pⱼᵢ/pᵢ)。"
+        },
+        {
+          "en": "The terms with log p sub j i sum to minus the weighted component entropies.",
+          "zh": "含log₂pⱼᵢ的项求和，得到负的分量熵加权和。"
+        },
+        {
+          "en": "Because p i is the mixture probability, the terms with minus log p i sum to mixture entropy.",
+          "zh": "由于pᵢ是混合概率，含−log₂pᵢ的项求和得到混合熵。"
+        },
+        {
+          "en": "Thus average divergence equals mixture entropy minus average component entropy.",
+          "zh": "因此平均散度等于混合熵减去分量平均熵。"
+        },
+        {
+          "en": "Every included divergence is nonnegative by Gibbs inequality.",
+          "zh": "根据Gibbs不等式，计入的每项散度都非负。"
+        },
+        {
+          "en": "This recovers the concavity inequality with an exact expression for its gap.",
+          "zh": "这再次得到凹性不等式，并精确给出差额。"
+        },
+        {
+          "en": "Equality holds exactly when all positively weighted component distributions are identical.",
+          "zh": "当且仅当所有正权重分量分布都相同时取等。"
+        },
+        {
+          "en": "Consider two binary components, one concentrated at zero and one at one.",
+          "zh": "考虑两个二元分量，一个集中在零，另一个集中在一。"
+        },
+        {
+          "en": "Each component entropy is zero because its outcome is certain. What entropy will their equal mixture have?",
+          "zh": "每个分量的结果都确定，因此熵为零。它们等权混合后的熵是多少？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Mix them equally and the resulting distribution is one half, one half.",
+          "zh": "将它们等权混合，所得分布为二分之一、二分之一。"
+        },
+        {
+          "en": "Its entropy is one bit.",
+          "zh": "它的熵为一比特。"
+        },
+        {
+          "en": "The average component entropy is zero, while mixture entropy is one.",
+          "zh": "分量平均熵为零，而混合熵为一。"
+        },
+        {
+          "en": "The one-bit gap equals the average divergence from either endpoint to the mixture.",
+          "zh": "一比特差额等于两个端点到混合分布的平均散度。"
+        },
+        {
+          "en": "Now use unequal weights: point eight on zero and point two on one.",
+          "zh": "现在改用不等权重：零的权重为0.8，一的权重为0.2。"
+        },
+        {
+          "en": "The mixture has probabilities point eight and point two.",
+          "zh": "混合分布的概率为0.8和0.2。"
+        },
+        {
+          "en": "Its entropy is binary entropy at point two, approximately point seven two one nine three bits.",
+          "zh": "其熵是二元熵H_b(0.2)，约为0.72193比特。"
+        },
+        {
+          "en": "Both endpoint entropies remain zero.",
+          "zh": "两个端点分量熵仍为零。"
+        },
+        {
+          "en": "The entropy gap is therefore exactly the mixture entropy.",
+          "zh": "因此熵差额恰为混合分布的熵。"
+        },
+        {
+          "en": "The weighted divergences account for that gap without any geometric shortcut.",
+          "zh": "加权散度完整解释了该差额，无需几何捷径。"
+        },
+        {
+          "en": "This result will determine one shape of mutual information.",
+          "zh": "该结果将决定互信息的一种函数形状。"
+        }
+      ]
+    },
+    {
+      "id": "c05-mi-shape",
+      "chapter": "Mutual Information Changes Shape",
+      "title": "What is held fixed matters",
+      "music": "proof",
+      "terms": [
+        "mutual-information",
+        "concavity",
+        "convexity",
+        "kl-divergence",
+        "binary-entropy",
+        "bsc"
+      ],
+      "sentences": [
+        {
+          "en": "A finite single-use channel is specified by transition probabilities W of y given x.",
+          "zh": "有限信道的单次使用概率律，由转移概率W(y|x)给出。"
+        },
+        {
+          "en": "First hold every channel transition probability fixed.",
+          "zh": "首先固定每个信道转移概率。"
+        },
+        {
+          "en": "Change only the input distribution P of X.",
+          "zh": "只改变输入X的分布P。"
+        },
+        {
+          "en": "The output distribution is the input weighted sum of the channel rows.",
+          "zh": "输出分布是信道各行按输入概率加权的和。"
+        },
+        {
+          "en": "That dependence on the input distribution is affine.",
+          "zh": "输出分布对输入分布的依赖是仿射的。"
+        },
+        {
+          "en": "Mutual information equals output entropy minus conditional output entropy given input.",
+          "zh": "互信息等于输出熵减去给定输入时的输出条件熵。"
+        },
+        {
+          "en": "Entropy of the output is concave in its distribution.",
+          "zh": "输出熵关于输出分布是凹函数。"
+        },
+        {
+          "en": "Because output probabilities depend affinely on P, output entropy is concave in P.",
+          "zh": "由于输出概率仿射依赖P，输出熵关于P是凹函数。"
+        },
+        {
+          "en": "The conditional entropy is a sum over x of p x times the entropy of channel row x.",
+          "zh": "条件熵是对x求和pₓ乘以信道第x行熵。"
+        },
+        {
+          "en": "With the channel fixed, each row entropy is constant.",
+          "zh": "信道固定时，每行熵都是常数。"
+        },
+        {
+          "en": "That weighted sum is linear in P.",
+          "zh": "这个加权和关于P是线性的。"
+        },
+        {
+          "en": "Subtracting a linear function from a concave function remains concave.",
+          "zh": "凹函数减去线性函数仍然凹。"
+        },
+        {
+          "en": "Therefore mutual information is concave in the input distribution for a fixed channel.",
+          "zh": "因此固定信道时，互信息关于输入分布是凹函数。"
+        },
+        {
+          "en": "Take a binary symmetric channel with crossover probability point one.",
+          "zh": "取交叉概率为0.1的二元对称信道。"
+        },
+        {
+          "en": "Denote the probability of input one by the letter A.",
+          "zh": "令a为输入等于一的概率。"
+        },
+        {
+          "en": "The output-one probability is point one plus point eight times the letter A.",
+          "zh": "输出为一的概率是0.1+0.8a。"
+        },
+        {
+          "en": "Each conditional output distribution has binary entropy at point one.",
+          "zh": "每个条件输出分布的二元熵都是H_b(0.1)。"
+        },
+        {
+          "en": "I of X and Y is binary entropy at the quantity zero point one plus zero point eight times the letter A, minus binary entropy at zero point one.",
+          "zh": "I(X;Y)=H_b(0.1+0.8a)−H_b(0.1)。"
+        },
+        {
+          "en": "With deterministic input zero, that input probability is zero and mutual information is zero.",
+          "zh": "输入确定为零时a=0，互信息为零。"
+        },
+        {
+          "en": "At fair input, the letter A equals one half, and mutual information is about point five three one bits.",
+          "zh": "输入公平时a=1/2，互信息约为0.531比特。"
+        },
+        {
+          "en": "The fixed-channel argument establishes this curvature for every finite single-use channel.",
+          "zh": "固定信道的论证确立了每个有限单次信道都具有这种曲率。"
+        },
+        {
+          "en": "Now hold the input distribution fixed and vary the channel.",
+          "zh": "现在固定输入分布，改变信道。"
+        },
+        {
+          "en": "The shape is different: mutual information is convex in the channel transition law.",
+          "zh": "形状不同：互信息关于信道转移律是凸的。"
+        },
+        {
+          "en": "We will prove that claim from a scalar log-sum inequality.",
+          "zh": "我们将从标量log-sum不等式证明该结论。"
+        },
+        {
+          "en": "To prove log-sum, apply Jensen inequality to negative natural logarithm.",
+          "zh": "证明log-sum时，对负自然对数应用詹森不等式。"
+        },
+        {
+          "en": "First assume every entry in both lists is strictly positive.",
+          "zh": "先假设所有aᵢ和bᵢ都严格为正。"
+        },
+        {
+          "en": "Let the first total be the sum of the first list, and the second total the sum of the second list.",
+          "zh": "令A为Σaᵢ，B为Σbᵢ。"
+        },
+        {
+          "en": "Normalize the first list to obtain weights. Use each second entry divided by its first entry partner as the argument.",
+          "zh": "使用权重aᵢ/A及参数bᵢ/aᵢ。"
+        },
+        {
+          "en": "Jensen bounds negative log of the weighted argument by the weighted negative logarithms.",
+          "zh": "詹森不等式给出，加权参数的负对数不超过负对数的加权平均。"
+        },
+        {
+          "en": "The weighted argument is the second total divided by the first total.",
+          "zh": "加权参数为B/A。"
+        },
+        {
+          "en": "Multiply by the first total and rearrange.",
+          "zh": "两边乘A并整理。"
+        },
+        {
+          "en": "Sum each first entry times log of its ratio to the second. This is at least the first total times log of first total over second total.",
+          "zh": "结果为Σaᵢlog(aᵢ/bᵢ)≥Alog(A/B)。"
+        },
+        {
+          "en": "Now replace each entry by its value plus epsilon, apply the positive case, then let epsilon decrease to zero.",
+          "zh": "现在将每项替换为其值加ε，应用正数情形，再令ε趋于零。"
+        },
+        {
+          "en": "A zero numerator contributes zero, including when its denominator is zero.",
+          "zh": "分子为零时该项取零，包括分母也为零的情形。"
+        },
+        {
+          "en": "A positive numerator over zero contributes positive infinity.",
+          "zh": "正分子除以零则贡献正无穷。"
+        },
+        {
+          "en": "The total term uses the same zero and infinity conventions for A and B.",
+          "zh": "总量A和B构成的项也采用相同的零项与无穷大约定。"
+        },
+        {
+          "en": "Choose lambda strictly between zero and one; the endpoint cases give equality.",
+          "zh": "取严格介于零和一之间的λ；端点情形取等。"
+        },
+        {
+          "en": "For two distribution pairs, compare their mixtures using that lambda.",
+          "zh": "用该λ比较两组分布混合后的结果。"
+        },
+        {
+          "en": "Fix one coordinate. The two entries are lambda times its first P probability, and the quantity one minus lambda times its second P probability.",
+          "zh": "固定一个坐标，构造列表：第一组P概率乘λ，第二组乘1−λ。"
+        },
+        {
+          "en": "Form the corresponding list from the two Q probabilities with those same weights.",
+          "zh": "用相同权重乘两组Q概率，构造对应列表。"
+        },
+        {
+          "en": "Within each ratio on the log-sum left side, its common mixing weight cancels.",
+          "zh": "在log-sum左侧每个比值中，共同混合权重相消。"
+        },
+        {
+          "en": "The right-side totals are exactly the two mixed probabilities at this coordinate.",
+          "zh": "右侧总量恰为该坐标处的两种混合概率。"
+        },
+        {
+          "en": "Thus the weighted component contributions dominate the mixed contribution coordinate by coordinate.",
+          "zh": "因此，各加权分量贡献在每个坐标上都不小于混合贡献。"
+        },
+        {
+          "en": "Sum over coordinates to obtain joint convexity of relative entropy.",
+          "zh": "对所有坐标求和，即得相对熵的联合凸性。"
+        },
+        {
+          "en": "Zero entries follow by the same epsilon limit, with positive-over-zero contributions infinite.",
+          "zh": "零项由同一ε极限处理，正数除以零时贡献无穷大。"
+        },
+        {
+          "en": "Now express mutual information as divergence of joint XY from the product of its marginals.",
+          "zh": "现在将互信息写为联合XY相对其边缘乘积的散度。"
+        },
+        {
+          "en": "With fixed input P, the joint probability at x,y is p x times W of y given x.",
+          "zh": "固定输入P时，联合概率为pₓW(y|x)。"
+        },
+        {
+          "en": "It is affine in the channel W.",
+          "zh": "它关于信道W是仿射的。"
+        },
+        {
+          "en": "The output marginal at y is the sum over x of p x W of y given x.",
+          "zh": "输出边缘概率是对x求和pₓW(y|x)。"
+        },
+        {
+          "en": "It is also affine in W.",
+          "zh": "它对W也仿射。"
+        },
+        {
+          "en": "The product reference probability p x p y is therefore affine in W.",
+          "zh": "因此乘积参照概率pₓpᵧ也关于W仿射。"
+        },
+        {
+          "en": "Mixing two channels mixes both arguments of this KL expression.",
+          "zh": "混合两个信道会同时混合该KL表达式的两个参数。"
+        },
+        {
+          "en": "Joint convexity then proves mutual information is convex in W for fixed P.",
+          "zh": "联合凸性由此证明固定P时互信息关于W凸。"
+        },
+        {
+          "en": "Fix a fair input and mix the identity channel with the bit-flip channel.",
+          "zh": "固定公平输入，并混合恒等信道与比特翻转信道。"
+        },
+        {
+          "en": "Let t be the mixing weight on the bit-flip channel.",
+          "zh": "令t为比特翻转信道所占的混合权重。"
+        },
+        {
+          "en": "The resulting binary symmetric channel flips with probability t.",
+          "zh": "所得二元对称信道以概率t翻转。"
+        },
+        {
+          "en": "Given either input, the output entropy is binary entropy at t.",
+          "zh": "给定任一输入，输出熵为H_b(t)。"
+        },
+        {
+          "en": "Its output remains fair, so I of X and Y equals one minus binary entropy at t.",
+          "zh": "输出仍为公平分布，因此I(X;Y)=1−H_b(t)。"
+        },
+        {
+          "en": "At both endpoints t zero and t one, mutual information is one bit.",
+          "zh": "在端点t=0和t=1，互信息均为一比特。"
+        },
+        {
+          "en": "At t one half, the output reveals nothing and mutual information is zero.",
+          "zh": "t=1/2时，输出不提供信息，互信息为零。"
+        },
+        {
+          "en": "Because binary entropy is concave, one minus that entropy is convex.",
+          "zh": "由于二元熵凹，1减去该熵就是凸函数。"
+        },
+        {
+          "en": "The input distribution remains fixed throughout this channel-convexity result.",
+          "zh": "整个信道凸性结论中，输入分布始终固定。"
+        },
+        {
+          "en": "Conditional mutual information need not equal ordinary mutual information.",
+          "zh": "条件互信息不一定等于普通互信息。"
+        },
+        {
+          "en": "Conditioning may increase it, decrease it, or leave it unchanged.",
+          "zh": "条件化可能使互信息增加、减少，也可能保持不变。"
+        },
+        {
+          "en": "For an increase example, let X and Y be independent fair bits.",
+          "zh": "看一个增加的例子：令X和Y为独立公平比特。"
+        },
+        {
+          "en": "Their ordinary mutual information is zero.",
+          "zh": "它们的普通互信息为零。"
+        },
+        {
+          "en": "Define Z to indicate whether X and Y differ.",
+          "zh": "令Z表示X与Y是否不同。"
+        },
+        {
+          "en": "Z is itself a fair bit, and it is independent of X.",
+          "zh": "Z本身是公平比特，且与X独立。"
+        },
+        {
+          "en": "Therefore H of X given Z remains one bit. If we also learn Y, how much uncertainty about X remains?",
+          "zh": "因此给定Z后X的熵仍为一比特。如果再知道Y，X还剩多少不确定性？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "Once both Y and Z are known, X is determined.",
+          "zh": "已知Y和Z后，X便确定。"
+        },
+        {
+          "en": "Thus H of X given Y and Z is zero.",
+          "zh": "因此H(X|Y,Z)=0。"
+        },
+        {
+          "en": "The conditional mutual information is consequently one bit.",
+          "zh": "所以条件互信息为一比特。"
+        },
+        {
+          "en": "Here conditioning revealed a relation hidden by the unconditional independence.",
+          "zh": "这里条件化揭示了无条件独立掩盖的关系。"
+        },
+        {
+          "en": "For a decrease example, let Y equal X and choose a nonconstant bit.",
+          "zh": "看一个减少的例子：令Y=X，并取非恒定比特。"
+        },
+        {
+          "en": "Their ordinary mutual information equals H of X, which is positive.",
+          "zh": "它们的普通互信息等于正的H(X)。"
+        },
+        {
+          "en": "Now set Z equal to X.",
+          "zh": "现在令Z=X。"
+        },
+        {
+          "en": "Given Z, X is already known, so conditional mutual information is zero.",
+          "zh": "给定Z后X已知，因此条件互信息为零。"
+        },
+        {
+          "en": "For equality, take Z independent of the pair X,Y.",
+          "zh": "相等的例子是令Z与变量对(X,Y)独立。"
+        },
+        {
+          "en": "Then conditioning on Z changes neither relevant joint nor marginal laws.",
+          "zh": "此时对Z条件化不会改变相关的联合分布或边缘分布。"
+        },
+        {
+          "en": "Averaging over Z therefore returns the original mutual information.",
+          "zh": "对Z取平均便恢复原来的互信息。"
+        },
+        {
+          "en": "These examples rule out a universal direction for the effect of conditioning.",
+          "zh": "这些例子排除了条件化影响具有固定方向的说法。"
+        },
+        {
+          "en": "The input-concavity proof used entropy concavity and linear conditional entropy.",
+          "zh": "输入凹性证明使用熵凹性和线性条件熵。"
+        },
+        {
+          "en": "The channel-convexity proof used joint convexity of KL.",
+          "zh": "信道凸性证明使用KL的联合凸性。"
+        },
+        {
+          "en": "Confusing these proofs erases the roles of their variables.",
+          "zh": "混淆两种证明会抹去各自变量的角色。"
+        },
+        {
+          "en": "Next, the same divergence identity will quantify a model's coding penalty.",
+          "zh": "接下来，同一散度恒等式将量化模型造成的编码惩罚。"
+        }
+      ]
+    },
+    {
+      "id": "c06-mismatch",
+      "chapter": "Mismatch Costs Information",
+      "title": "Cross-entropy and conditional divergence",
+      "music": "recap",
+      "terms": [
+        "kl-divergence",
+        "entropy",
+        "chain-rule",
+        "data-processing",
+        "sufficient-statistic",
+        "fano"
+      ],
+      "sentences": [
+        {
+          "en": "Suppose observations are actually generated from distribution P.",
+          "zh": "假设观测实际上由分布P生成。"
+        },
+        {
+          "en": "A coding model instead assigns each symbol probability q x.",
+          "zh": "编码模型却给每个符号分配概率qₓ。"
+        },
+        {
+          "en": "The ideal logarithmic length assigned by that model is negative log base two q x bits.",
+          "zh": "模型分配的理想对数长度是−log₂qₓ比特。"
+        },
+        {
+          "en": "This is a real-valued ideal length, not necessarily an integer code length.",
+          "zh": "这是实数理想长度，不一定是整数码长。"
+        },
+        {
+          "en": "Average it under the true distribution P.",
+          "zh": "在真实分布P下对它取平均。"
+        },
+        {
+          "en": "The expected length is the sum over x of p x times negative log two q x.",
+          "zh": "期望长度是对x求和pₓ乘−log₂qₓ。"
+        },
+        {
+          "en": "Add and subtract negative log two p x inside every summand.",
+          "zh": "在每一项中加上并减去−log₂pₓ。"
+        },
+        {
+          "en": "The terms containing negative log p x sum to entropy H of P.",
+          "zh": "含−log₂pₓ的项求和得到P的熵H(P)。"
+        },
+        {
+          "en": "The remaining terms sum p x log two of p x over q x.",
+          "zh": "其余项求和得到Σpₓlog₂(pₓ/qₓ)。"
+        },
+        {
+          "en": "That remaining sum is D of P given Q.",
+          "zh": "余下的和就是D(P‖Q)。"
+        },
+        {
+          "en": "Thus expected ideal length equals entropy plus KL divergence.",
+          "zh": "因此期望理想码长等于熵加KL散度。"
+        },
+        {
+          "en": "If Q equals P, the excess length vanishes.",
+          "zh": "若Q=P，额外长度为零。"
+        },
+        {
+          "en": "If Q misses a possible P outcome, its ideal length is infinite.",
+          "zh": "若Q漏掉P可能发生的结果，其理想长度为无穷。"
+        },
+        {
+          "en": "Support mismatch and infinite coding cost express the same model failure.",
+          "zh": "支持集不匹配与无限编码代价表达的是同一种模型失效。"
+        },
+        {
+          "en": "For a numerical check, let P be point eight and point two.",
+          "zh": "数值核对时，取P=(0.8,0.2)。"
+        },
+        {
+          "en": "Use the uniform model Q equal to point five and point five.",
+          "zh": "采用均匀模型Q=(0.5,0.5)。"
+        },
+        {
+          "en": "The ideal lengths are one bit for either symbol.",
+          "zh": "两个符号的理想长度都是一比特。"
+        },
+        {
+          "en": "The average ideal length is one bit. How much exceeds the true entropy of this point-eight source?",
+          "zh": "平均理想长度为一比特。它比这个零点八信源的真实熵多出多少？",
+          "hold_after_s": 2.5
+        },
+        {
+          "en": "The true entropy is approximately point seven two one nine three bits.",
+          "zh": "真实熵约为0.72193比特。"
+        },
+        {
+          "en": "The excess is approximately point two seven eight zero seven bits.",
+          "zh": "额外长度约为0.27807比特。"
+        },
+        {
+          "en": "That is precisely D of P given Q.",
+          "zh": "这恰好等于D(P‖Q)。"
+        },
+        {
+          "en": "Actual prefix codes use integer lengths and need separate rounding analysis.",
+          "zh": "实际前缀码使用整数长度，需要另行分析取整代价。"
+        },
+        {
+          "en": "Now include a conditioning variable Y.",
+          "zh": "现在加入条件变量Y。"
+        },
+        {
+          "en": "Let PXY and QXY be two joint models with finite divergence.",
+          "zh": "令PXY和QXY为两个散度有限的联合模型。"
+        },
+        {
+          "en": "Finite divergence requires every positive PXY pair to have positive QXY probability.",
+          "zh": "散度有限要求每个PXY正概率对在QXY下也为正。"
+        },
+        {
+          "en": "Factor each joint probability into a marginal and a conditional probability.",
+          "zh": "将每个联合概率分解成边缘概率与条件概率。"
+        },
+        {
+          "en": "Write p x y as p x times p of y given x.",
+          "zh": "写作pₓᵧ=pₓp(y|x)。"
+        },
+        {
+          "en": "Write q x y as q x times q of y given x.",
+          "zh": "写作qₓᵧ=qₓq(y|x)。"
+        },
+        {
+          "en": "The log ratio of joint probabilities splits into two log ratios.",
+          "zh": "联合概率的对数比值拆成两个对数比值。"
+        },
+        {
+          "en": "The first compares p x with q x.",
+          "zh": "第一项比较pₓ与qₓ。"
+        },
+        {
+          "en": "The second compares conditional probabilities p of y given x and q of y given x.",
+          "zh": "第二项比较条件概率p(y|x)与q(y|x)。"
+        },
+        {
+          "en": "Multiply this split by p x y and sum over x and y.",
+          "zh": "将分解式乘以pₓᵧ，再对x、y求和。"
+        },
+        {
+          "en": "For the first part, sum p of y given x over y.",
+          "zh": "第一部分中，对y求和p(y|x)。"
+        },
+        {
+          "en": "For each x with positive p x, that conditional sum equals one.",
+          "zh": "对每个pₓ为正的x，该条件概率和为一。"
+        },
+        {
+          "en": "The first part therefore reduces to the marginal divergence D of PX given QX.",
+          "zh": "因此第一部分化为边缘散度D(PX‖QX)。"
+        },
+        {
+          "en": "In the second part, factor p x y into p x times p of y given x.",
+          "zh": "第二部分把pₓᵧ写成pₓ乘p(y|x)。"
+        },
+        {
+          "en": "For each fixed x, the inner sum is conditional divergence.",
+          "zh": "对固定x，内层求和就是条件散度。"
+        },
+        {
+          "en": "The outer p x weights those conditional divergences.",
+          "zh": "外层的pₓ对条件散度加权。"
+        },
+        {
+          "en": "We obtain joint divergence equals marginal divergence plus P-weighted conditional divergence.",
+          "zh": "于是联合散度等于边缘散度加P加权的条件散度。"
+        },
+        {
+          "en": "The conditionals are compared only where p x is positive.",
+          "zh": "只在pₓ为正的地方比较条件分布。"
+        },
+        {
+          "en": "On such an x, finite joint divergence ensures conditional support compatibility.",
+          "zh": "对这样的x，联合散度有限保证条件支持兼容。"
+        },
+        {
+          "en": "Terms with p x equal zero carry no weight in the conditional sum.",
+          "zh": "pₓ为零的项在条件和中权重为零。"
+        },
+        {
+          "en": "Both terms on the right are nonnegative by Gibbs' inequality.",
+          "zh": "根据Gibbs不等式，右侧两项均非负。"
+        },
+        {
+          "en": "The identity explains how model error separates into a marginal penalty and conditional penalties.",
+          "zh": "该恒等式说明模型误差如何分解为边缘惩罚和条件惩罚。"
+        },
+        {
+          "en": "A model can predict X well but still misrepresent Y given X.",
+          "zh": "模型可能准确预测X，却仍错误描述给定X时的Y。"
+        },
+        {
+          "en": "Or it can match every conditional law while mismatching the marginal of X.",
+          "zh": "它也可能匹配所有条件律，却不匹配X的边缘分布。"
+        },
+        {
+          "en": "The decomposition identifies both errors without conflating them.",
+          "zh": "该分解分别识别两类误差，而不将它们混为一谈。"
+        },
+        {
+          "en": "Return to our four-symbol source: probabilities one half, one quarter, one eighth, and one eighth.",
+          "zh": "回到四符号信源：概率为二分之一、四分之一、八分之一、八分之一。"
+        },
+        {
+          "en": "Its entropy and matched mean length are one point seven five. The uniform model costs two, leaving divergence one quarter bit.",
+          "zh": "其熵和匹配平均码长均为一点七五；均匀模型需要二比特，留下四分之一比特的散度。"
+        },
+        {
+          "en": "For that exact thousand-message inventory, this is two hundred fifty extra bits. Here both ideal length lists are already integers.",
+          "zh": "对那份恰有一千条消息的清单，这就是多出的二百五十比特。这里两组理想码长原本就为整数。"
+        },
+        {
+          "en": "Next, data processing, sufficient statistics, and Fano inequality apply information bounds to inference.",
+          "zh": "下一集将用数据处理不等式、充分统计量和Fano不等式分析推断。"
+        }
+      ]
+    }
+  ]
+}
