@@ -1,0 +1,1493 @@
+{
+ "language": "en",
+ "episode": "e06-prefix-kraft",
+ "duration": 936.0667,
+ "chapters": [
+  {
+   "id": "c01-decoding",
+   "index": 0,
+   "start": 5.0,
+   "end": 222.8333,
+   "title": "Can you find the missing boundaries?",
+   "music": "motivation",
+   "sentenceStarts": [
+    2.4,
+    8.0,
+    13.925,
+    22.025,
+    26.275,
+    30.9,
+    35.125,
+    39.85,
+    43.225,
+    48.4,
+    53.95,
+    60.375,
+    67.55,
+    72.85,
+    79.35,
+    87.8,
+    93.525,
+    99.225,
+    104.6,
+    110.5,
+    115.475,
+    122.675,
+    131.525,
+    137.275,
+    142.075,
+    147.1,
+    151.475,
+    157.65,
+    163.125,
+    167.775,
+    175.325,
+    180.775,
+    185.9,
+    191.75,
+    198.625,
+    204.55,
+    210.725
+   ],
+   "sentenceEnds": [
+    7.55,
+    13.475,
+    18.575,
+    25.825,
+    30.45,
+    34.675,
+    39.4,
+    42.775,
+    47.95,
+    53.5,
+    59.925,
+    67.1,
+    72.4,
+    78.9,
+    84.85,
+    93.075,
+    98.775,
+    104.15,
+    110.05,
+    115.025,
+    122.225,
+    128.075,
+    136.825,
+    141.625,
+    146.65,
+    151.025,
+    157.2,
+    162.675,
+    167.325,
+    174.875,
+    180.325,
+    185.45,
+    191.3,
+    198.175,
+    204.1,
+    210.275,
+    216.225
+   ]
+  },
+  {
+   "id": "c02-kraft",
+   "index": 1,
+   "start": 222.8333,
+   "end": 403.5333,
+   "title": "Tree leaves occupy disjoint descendant slots",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.9,
+    11.15,
+    16.7,
+    21.525,
+    25.1,
+    32.35,
+    38.825,
+    42.925,
+    47.675,
+    52.5,
+    57.175,
+    61.1,
+    67.6,
+    71.35,
+    77.025,
+    81.925,
+    87.4,
+    94.3,
+    99.575,
+    103.95,
+    110.8,
+    115.85,
+    120.1,
+    125.5,
+    129.3,
+    132.775,
+    137.475,
+    142.825,
+    148.05,
+    154.675,
+    159.275,
+    165.95,
+    170.7,
+    174.775
+   ],
+   "sentenceEnds": [
+    7.45,
+    10.7,
+    16.25,
+    21.075,
+    24.65,
+    29.4,
+    38.375,
+    42.475,
+    47.225,
+    52.05,
+    56.725,
+    60.65,
+    67.15,
+    70.9,
+    76.575,
+    81.475,
+    86.95,
+    93.85,
+    99.125,
+    103.5,
+    110.35,
+    115.4,
+    119.65,
+    125.05,
+    128.85,
+    132.325,
+    137.025,
+    142.375,
+    147.6,
+    154.225,
+    158.825,
+    165.5,
+    170.25,
+    174.325,
+    179.1
+   ]
+  },
+  {
+   "id": "c03-mcmillan",
+   "index": 2,
+   "start": 403.5333,
+   "end": 574.7333,
+   "title": "Unique parsing bounds the number of long concatenations",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.0,
+    11.125,
+    15.075,
+    17.85,
+    23.3,
+    27.6,
+    32.725,
+    36.05,
+    38.975,
+    44.925,
+    49.85,
+    56.8,
+    61.375,
+    64.7,
+    70.625,
+    75.175,
+    81.275,
+    90.175,
+    94.8,
+    97.3,
+    102.25,
+    107.45,
+    115.025,
+    118.35,
+    122.55,
+    126.15,
+    130.975,
+    135.625,
+    140.65,
+    145.0,
+    150.775,
+    154.925,
+    160.675,
+    165.325
+   ],
+   "sentenceEnds": [
+    7.55,
+    10.675,
+    14.625,
+    17.4,
+    22.85,
+    27.15,
+    32.275,
+    35.6,
+    38.525,
+    44.475,
+    49.4,
+    56.35,
+    60.925,
+    64.25,
+    70.175,
+    74.725,
+    80.825,
+    87.225,
+    94.35,
+    96.85,
+    101.8,
+    107.0,
+    114.575,
+    117.9,
+    122.1,
+    125.7,
+    130.525,
+    135.175,
+    140.2,
+    144.55,
+    150.325,
+    154.475,
+    160.225,
+    164.875,
+    169.575
+   ]
+  },
+  {
+   "id": "c04-length",
+   "index": 3,
+   "start": 574.7333,
+   "end": 749.2333,
+   "title": "Kraft slack and divergence separate cleanly",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.525,
+    13.25,
+    17.375,
+    22.15,
+    25.575,
+    30.025,
+    34.725,
+    38.5,
+    43.8,
+    47.25,
+    52.6,
+    57.325,
+    62.425,
+    68.8,
+    71.7,
+    75.1,
+    79.55,
+    84.875,
+    87.775,
+    93.175,
+    95.85,
+    103.25,
+    107.325,
+    112.025,
+    118.05,
+    124.225,
+    127.3,
+    132.4,
+    136.325,
+    141.775,
+    146.9,
+    151.725,
+    157.875,
+    163.425,
+    166.85
+   ],
+   "sentenceEnds": [
+    8.075,
+    12.8,
+    16.925,
+    21.7,
+    25.125,
+    29.575,
+    34.275,
+    38.05,
+    43.35,
+    46.8,
+    52.15,
+    56.875,
+    61.975,
+    68.35,
+    71.25,
+    74.65,
+    79.1,
+    84.425,
+    87.325,
+    92.725,
+    95.4,
+    100.3,
+    106.875,
+    111.575,
+    117.6,
+    123.775,
+    126.85,
+    131.95,
+    135.875,
+    141.325,
+    146.45,
+    151.275,
+    157.425,
+    162.975,
+    166.4,
+    172.875
+   ]
+  },
+  {
+   "id": "c05-shannon",
+   "index": 4,
+   "start": 749.2333,
+   "end": 931.0667,
+   "title": "Rounding costs less than one bit per block",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.475,
+    14.925,
+    18.3,
+    23.725,
+    27.725,
+    31.475,
+    35.3,
+    40.425,
+    48.75,
+    54.95,
+    59.65,
+    63.825,
+    68.8,
+    73.325,
+    77.425,
+    81.525,
+    88.35,
+    93.375,
+    98.075,
+    102.15,
+    105.575,
+    111.025,
+    116.725,
+    120.95,
+    124.625,
+    129.475,
+    134.75,
+    140.25,
+    148.05,
+    152.9,
+    156.95,
+    162.675,
+    169.025,
+    175.35
+   ],
+   "sentenceEnds": [
+    8.025,
+    14.475,
+    17.85,
+    23.275,
+    27.275,
+    31.025,
+    34.85,
+    39.975,
+    45.8,
+    54.5,
+    59.2,
+    63.375,
+    68.35,
+    72.875,
+    76.975,
+    81.075,
+    87.9,
+    92.925,
+    97.625,
+    101.7,
+    105.125,
+    110.575,
+    116.275,
+    120.5,
+    124.175,
+    129.025,
+    134.3,
+    139.8,
+    145.1,
+    152.45,
+    156.5,
+    162.225,
+    168.575,
+    174.9,
+    180.225
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 12.55,
+   "text": "Decode zero one zero, with no separators. What message did you receive?",
+   "translation": "解读没有分隔符的零一零。你收到的消息是什么？"
+  },
+  {
+   "start": 13.0,
+   "end": 18.475,
+   "text": "Symbol A maps to zero, symbol B to zero one, and symbol C to one zero.",
+   "translation": "符号A映射为0，符号B映射为01，符号C映射为10。"
+  },
+  {
+   "start": 18.925,
+   "end": 23.575,
+   "text": "Every symbol has a different label. Is that enough to recover the message?",
+   "translation": "每个符号都有不同的标签。这足以还原消息吗？"
+  },
+  {
+   "start": 27.025,
+   "end": 30.825,
+   "text": "Read zero followed by one zero: that means A, then C.",
+   "translation": "读成零后接一零：意思是先 A，后 C。"
+  },
+  {
+   "start": 31.275,
+   "end": 35.45,
+   "text": "Or read zero one followed by zero: that means B, then A.",
+   "translation": "也可以读成零一后接零：意思是先 B，后 A。"
+  },
+  {
+   "start": 35.9,
+   "end": 39.675,
+   "text": "Two different messages produced exactly the same bits.",
+   "translation": "两条不同的消息产生了完全相同的比特。"
+  },
+  {
+   "start": 40.125,
+   "end": 44.4,
+   "text": "A finite code assigns one finite string to each source symbol.",
+   "translation": "有限码为每个信源符号分配一个有限字符串。"
+  },
+  {
+   "start": 44.85,
+   "end": 47.775,
+   "text": "For now, every codeword is nonempty.",
+   "translation": "现在假设每个码字都非空。"
+  },
+  {
+   "start": 48.225,
+   "end": 52.95,
+   "text": "Different symbols receiving different codewords makes the code nonsingular.",
+   "translation": "不同符号获得不同码字时，这个码就是非奇异的。"
+  },
+  {
+   "start": 53.4,
+   "end": 58.5,
+   "text": "Sequence encoding concatenates the words, removing their visible boundaries.",
+   "translation": "序列编码把码字连接起来，去掉可见的边界。"
+  },
+  {
+   "start": 58.95,
+   "end": 64.925,
+   "text": "Nonsingularity answers a one-symbol question. It does not settle sequence boundaries.",
+   "translation": "非奇异性回答的是单个符号的问题，不能确定序列的边界。"
+  },
+  {
+   "start": 65.375,
+   "end": 72.1,
+   "text": "Unique decodability means each valid encoded string has exactly one source-symbol parsing.",
+   "translation": "唯一可译表示每个合法编码串恰有一种信源符号解析。"
+  },
+  {
+   "start": 72.55,
+   "end": 77.4,
+   "text": "Our three-word code fails that requirement, even though it is nonsingular.",
+   "translation": "我们的三码字码不满足这个要求，尽管它是非奇异的。"
+  },
+  {
+   "start": 77.85,
+   "end": 83.9,
+   "text": "Remove C. The remaining words are zero and zero one. Zero still prefixes zero one.",
+   "translation": "去掉 C。剩下零和零一，零仍然是零一的前缀。"
+  },
+  {
+   "start": 84.35,
+   "end": 89.85,
+   "text": "Must this smaller code also be ambiguous? Try decoding zero one zero one.",
+   "translation": "这个更小的码也一定有歧义吗？试着解读零一零一。"
+  },
+  {
+   "start": 92.8,
+   "end": 98.075,
+   "text": "Each one must pair with its immediately preceding zero, forming a zero-one word.",
+   "translation": "每个一必须和紧邻它之前的零配对，组成零一码字。"
+  },
+  {
+   "start": 98.525,
+   "end": 103.775,
+   "text": "Every zero left over is its own one-bit word. The pairs cannot overlap.",
+   "translation": "剩下的每个零各自成为一个单比特码字，这些配对不会重叠。"
+  },
+  {
+   "start": 104.225,
+   "end": 109.15,
+   "text": "This forced rule recovers every boundary of every valid encoded string.",
+   "translation": "这条强制规则能找回每个合法编码串的全部边界。"
+  },
+  {
+   "start": 109.6,
+   "end": 115.05,
+   "text": "So zero, zero one is uniquely decodable, despite not being prefix-free.",
+   "translation": "所以零、零一是唯一可译码，尽管它不是前缀码。"
+  },
+  {
+   "start": 115.5,
+   "end": 120.025,
+   "text": "Prefix-free means no codeword is a prefix of a different codeword.",
+   "translation": "前缀码表示没有码字是另一个不同码字的前缀。"
+  },
+  {
+   "start": 120.475,
+   "end": 127.225,
+   "text": "The repaired code uses zero for symbol A, one zero for symbol B, and one one for symbol C.",
+   "translation": "修复后的码对符号A使用0，对B使用10，对C使用11。"
+  },
+  {
+   "start": 127.675,
+   "end": 133.075,
+   "text": "Now read zero one zero one one from left to right. Where can the decoder stop?",
+   "translation": "现在从左到右读零一零一一。解码器可以在哪里停下？"
+  },
+  {
+   "start": 136.525,
+   "end": 141.825,
+   "text": "The first zero gives A. The next one zero gives B. The final one one gives C.",
+   "translation": "第一个零给出 A，接着的一零给出 B，最后的一一给出 C。"
+  },
+  {
+   "start": 142.275,
+   "end": 146.625,
+   "text": "In the tree, each bit selects a branch. A codeword is a leaf.",
+   "translation": "在树中，每个比特选择一条分支，码字就是叶子。"
+  },
+  {
+   "start": 147.075,
+   "end": 151.65,
+   "text": "At a leaf, output its symbol and restart from the root for the next word.",
+   "translation": "到达叶子就输出它的符号，然后从根开始解读下一个码字。"
+  },
+  {
+   "start": 152.1,
+   "end": 156.025,
+   "text": "Why can a prefix code never give two different parsings?",
+   "translation": "为什么前缀码不可能产生两种不同的解析？"
+  },
+  {
+   "start": 156.475,
+   "end": 162.2,
+   "text": "If two first words end at different places, the shorter word prefixes the longer one.",
+   "translation": "如果两个首码字在不同位置结束，较短的码字就是较长码字的前缀。"
+  },
+  {
+   "start": 162.65,
+   "end": 167.675,
+   "text": "Prefix-free forbids that. The first word is forced; remove it and repeat.",
+   "translation": "前缀码禁止这种情况。因此首码字被唯一确定，去掉它后重复即可。"
+  },
+  {
+   "start": 168.125,
+   "end": 172.325,
+   "text": "Therefore every prefix-free code is uniquely decodable.",
+   "translation": "因此，每个前缀码都是唯一可译码。"
+  },
+  {
+   "start": 172.775,
+   "end": 179.875,
+   "text": "Every uniquely decodable code is nonsingular: even one-symbol messages must decode uniquely.",
+   "translation": "每个唯一可译码都是非奇异码：即使只有一个符号，也必须能唯一解码。"
+  },
+  {
+   "start": 180.325,
+   "end": 185.325,
+   "text": "The reverse implications fail. We have a concrete counterexample for each.",
+   "translation": "反向推论不成立，两种情况都有具体反例。"
+  },
+  {
+   "start": 185.775,
+   "end": 190.45,
+   "text": "Zero, zero one is uniquely decodable but not prefix-free.",
+   "translation": "零、零一唯一可译，但不是前缀码。"
+  },
+  {
+   "start": 190.9,
+   "end": 196.3,
+   "text": "Zero, zero one, one zero is nonsingular but not uniquely decodable.",
+   "translation": "零、零一、一零非奇异，但不唯一可译。"
+  },
+  {
+   "start": 196.75,
+   "end": 203.175,
+   "text": "Prefix codewords provide immediate boundaries. Unique decodability is the broader property.",
+   "translation": "前缀码字提供即时边界，而唯一可译是范围更大的性质。"
+  },
+  {
+   "start": 203.625,
+   "end": 209.1,
+   "text": "Return to the tree. A short codeword blocks every longer word below that leaf.",
+   "translation": "回到树上。一个短码字会挡住该叶子下面的所有更长码字。"
+  },
+  {
+   "start": 209.55,
+   "end": 215.275,
+   "text": "How many short words can we afford? Three one-bit binary words are already impossible.",
+   "translation": "我们能容纳多少个短码字？三个单比特二进制码字就已经不可能。"
+  },
+  {
+   "start": 215.725,
+   "end": 221.225,
+   "text": "Kraft inequality turns this limited tree space into a precise length budget.",
+   "translation": "Kraft 不等式把有限的树空间转成精确的码长预算。"
+  },
+  {
+   "start": 225.2333,
+   "end": 230.2833,
+   "text": "Represent each binary codeword as a path from the root of a binary tree.",
+   "translation": "将每个二进制码字表示为二叉树根部出发的一条路径。"
+  },
+  {
+   "start": 230.7333,
+   "end": 233.5333,
+   "text": "A codeword of length l ends at depth l.",
+   "translation": "长度为l的码字终止于深度l。"
+  },
+  {
+   "start": 233.9833,
+   "end": 239.0833,
+   "text": "Prefix-free codewords end at leaves with no ancestor among code leaves.",
+   "translation": "前缀码字对应的叶节点之间不存在祖先关系。"
+  },
+  {
+   "start": 239.5333,
+   "end": 243.9083,
+   "text": "Choose a common depth L at least as large as every codeword length.",
+   "translation": "选取公共深度L，使其不小于所有码字长度。"
+  },
+  {
+   "start": 244.3583,
+   "end": 247.4833,
+   "text": "Expand each leaf downward until depth L.",
+   "translation": "将每个叶节点向下展开至深度L。"
+  },
+  {
+   "start": 247.9333,
+   "end": 252.2333,
+   "text": "A leaf at depth l reserves how many slots at the common depth L?",
+   "translation": "深度为 l 的叶子，会在公共深度 L 预留多少个位置？"
+  },
+  {
+   "start": 255.1833,
+   "end": 261.2083,
+   "text": "It reserves two to L minus l slots. Different prefix leaves reserve disjoint sets.",
+   "translation": "它预留二的 L 减 l 次方个位置。不同前缀叶子预留的集合互不相交。"
+  },
+  {
+   "start": 261.6583,
+   "end": 265.3083,
+   "text": "The full tree has only two to L nodes at that depth.",
+   "translation": "整棵树在该深度只有2^L个节点。"
+  },
+  {
+   "start": 265.7583,
+   "end": 270.0583,
+   "text": "Therefore the sum of two to L minus l i is at most two to L.",
+   "translation": "因此Σᵢ2^(L−lᵢ)≤2^L。"
+  },
+  {
+   "start": 270.5083,
+   "end": 274.8833,
+   "text": "Divide by two to L to obtain the binary Kraft inequality.",
+   "translation": "两边除以2^L，得到二进制Kraft不等式。"
+  },
+  {
+   "start": 275.3333,
+   "end": 279.5583,
+   "text": "The sum over i of two to negative l i is at most one.",
+   "translation": "Σᵢ2^(−lᵢ)≤1。"
+  },
+  {
+   "start": 280.0083,
+   "end": 283.4833,
+   "text": "This proves necessity for prefix-free code lengths.",
+   "translation": "这证明了前缀码长度的必要条件。"
+  },
+  {
+   "start": 283.9333,
+   "end": 289.9833,
+   "text": "For integer lengths, the condition is also sufficient: some prefix code can realize them.",
+   "translation": "对于整数码长，这个条件也充分：存在某个前缀码能实现它们。"
+  },
+  {
+   "start": 290.4333,
+   "end": 293.7333,
+   "text": "Sort the requested lengths from shortest to longest.",
+   "translation": "将指定长度按从短到长排序。"
+  },
+  {
+   "start": 294.1833,
+   "end": 299.4083,
+   "text": "Use half-open dyadic intervals in the unit interval, ordered from left to right.",
+   "translation": "在单位区间内，使用从左到右排列的半开二进制区间。"
+  },
+  {
+   "start": 299.8583,
+   "end": 304.3083,
+   "text": "A length l corresponds to an interval of width two to negative l.",
+   "translation": "长度l对应宽度为2^(−l)的区间。"
+  },
+  {
+   "start": 304.7583,
+   "end": 309.7833,
+   "text": "Kraft ensures the intervals can be placed without exceeding total width one.",
+   "translation": "Kraft条件保证区间可放置且总宽度不超过一。"
+  },
+  {
+   "start": 310.2333,
+   "end": 316.6833,
+   "text": "At each requested length, earlier intervals have widths that are integer multiples of the current width.",
+   "translation": "每次分配时，先前区间宽度都是当前宽度的整数倍。"
+  },
+  {
+   "start": 317.1333,
+   "end": 321.9583,
+   "text": "Place the next interval immediately after the total width already assigned.",
+   "translation": "将新区间紧接在已分配总宽度之后放置。"
+  },
+  {
+   "start": 322.4083,
+   "end": 326.3333,
+   "text": "The Kraft sum guarantees this endpoint never exceeds one.",
+   "translation": "Kraft和保证该端点不会超过一。"
+  },
+  {
+   "start": 326.7833,
+   "end": 333.1833,
+   "text": "Write each left endpoint in exactly l binary digits, padding trailing zeros when necessary.",
+   "translation": "将每个左端点写成恰好l位二进制小数，必要时补末尾零。"
+  },
+  {
+   "start": 333.6333,
+   "end": 338.2333,
+   "text": "Intervals do not overlap, so no assigned word prefixes another.",
+   "translation": "区间互不重叠，因此没有码字会成为另一者前缀。"
+  },
+  {
+   "start": 338.6833,
+   "end": 342.4833,
+   "text": "This constructs a prefix code with the requested lengths.",
+   "translation": "这样就构造出具有指定长度的前缀码。"
+  },
+  {
+   "start": 342.9333,
+   "end": 347.8833,
+   "text": "The tree and interval constructions describe the same dyadic structure.",
+   "translation": "树构造与区间构造描述的是同一二进制结构。"
+  },
+  {
+   "start": 348.3333,
+   "end": 351.6833,
+   "text": "For a D-ary code, each node has D children.",
+   "translation": "对D元码，每个节点有D个子节点。"
+  },
+  {
+   "start": 352.1333,
+   "end": 355.1583,
+   "text": "At depth L, there are D to L descendants.",
+   "translation": "深度L共有D^L个后代。"
+  },
+  {
+   "start": 355.6083,
+   "end": 359.8583,
+   "text": "A leaf of depth l occupies D to L minus l slots.",
+   "translation": "深度l的叶占据D^(L−l)个格位。"
+  },
+  {
+   "start": 360.3083,
+   "end": 365.2083,
+   "text": "The resulting condition is sum D to negative l i at most one.",
+   "translation": "于是得到ΣᵢD^(−lᵢ)≤1。"
+  },
+  {
+   "start": 365.6583,
+   "end": 370.4333,
+   "text": "The construction uses base D intervals in place of binary intervals.",
+   "translation": "这一构造使用D进制区间来替代二进制区间。"
+  },
+  {
+   "start": 370.8833,
+   "end": 377.0583,
+   "text": "Kraft tests whether lengths can support some prefix code, not whether chosen labels already do.",
+   "translation": "Kraft 判断码长能否容纳某个前缀码，而不保证选定的标签已经满足前缀性质。"
+  },
+  {
+   "start": 377.5083,
+   "end": 381.6583,
+   "text": "A particular code may use more average bits than necessary.",
+   "translation": "某个具体码的平均比特数仍可能不是最小。"
+  },
+  {
+   "start": 382.1083,
+   "end": 388.3333,
+   "text": "McMillan extends the same necessary length bound to every uniquely decodable code.",
+   "translation": "McMillan将同一个必要长度界推广到所有唯一可译码。"
+  },
+  {
+   "start": 388.7833,
+   "end": 393.0833,
+   "text": "Its proof counts concatenated codewords rather than tree leaves.",
+   "translation": "其证明统计码字串接结果，而非树叶。"
+  },
+  {
+   "start": 393.5333,
+   "end": 397.1583,
+   "text": "Next, group these concatenations by total length.",
+   "translation": "接下来按总长度对这些串接分组。"
+  },
+  {
+   "start": 397.6083,
+   "end": 401.9333,
+   "text": "Unused space corresponds to branches that need no codeword.",
+   "translation": "未使用空间对应无需码字的树枝。"
+  },
+  {
+   "start": 405.9333,
+   "end": 411.0833,
+   "text": "Consider a finite uniquely decodable code with nonempty codewords.",
+   "translation": "考虑一个码字非空的有限唯一可译码。"
+  },
+  {
+   "start": 411.5333,
+   "end": 414.2083,
+   "text": "Let l i be the length of codeword i.",
+   "translation": "令lᵢ表示第i个码字的长度。"
+  },
+  {
+   "start": 414.6583,
+   "end": 418.1583,
+   "text": "Define K as the sum of D to negative l i.",
+   "translation": "定义K=ΣᵢD^(−lᵢ)。"
+  },
+  {
+   "start": 418.6083,
+   "end": 420.9333,
+   "text": "We will prove K is at most one.",
+   "translation": "我们将证明K≤1。"
+  },
+  {
+   "start": 421.3833,
+   "end": 426.3833,
+   "text": "Concatenate exactly k codewords in every possible ordered sequence.",
+   "translation": "枚举所有恰由k个码字组成的有序串接。"
+  },
+  {
+   "start": 426.8333,
+   "end": 430.6833,
+   "text": "Let A j count those sequences whose total length is j.",
+   "translation": "令Aⱼ表示总长度为j的串接数量。"
+  },
+  {
+   "start": 431.1333,
+   "end": 435.8083,
+   "text": "Unique decodability makes every such concatenated string distinct.",
+   "translation": "唯一可译性保证这些串接字符串互不相同。"
+  },
+  {
+   "start": 436.2583,
+   "end": 439.1333,
+   "text": "There are only D to j strings of length j.",
+   "translation": "长度为j的字符串总共只有D^j个。"
+  },
+  {
+   "start": 439.5833,
+   "end": 442.0583,
+   "text": "Hence A j is at most D to j.",
+   "translation": "所以Aⱼ≤D^j。"
+  },
+  {
+   "start": 442.5083,
+   "end": 448.0083,
+   "text": "Expand K to the k-th power as a sum over all k-codeword sequences.",
+   "translation": "将K的k次方展开为所有k码字序列的求和。"
+  },
+  {
+   "start": 448.4583,
+   "end": 452.9333,
+   "text": "A sequence with total length j contributes D to negative j.",
+   "translation": "总长度为j的序列贡献D^(−j)。"
+  },
+  {
+   "start": 453.3833,
+   "end": 459.8833,
+   "text": "Grouping equal total lengths gives K to k equals sum over j of A j D to negative j.",
+   "translation": "按总长度分组得K^k=ΣⱼAⱼD^(−j)。"
+  },
+  {
+   "start": 460.3333,
+   "end": 464.4583,
+   "text": "The smallest possible total length is k times l minimum.",
+   "translation": "最小总长度为kl_min。"
+  },
+  {
+   "start": 464.9083,
+   "end": 467.7833,
+   "text": "The largest is k times l maximum.",
+   "translation": "最大总长度为kl_max。"
+  },
+  {
+   "start": 468.2333,
+   "end": 473.7083,
+   "text": "There are at most k times the difference of these lengths plus one integer values of j.",
+   "translation": "可能的整数j至多有k(l_max−l_min)+1个。"
+  },
+  {
+   "start": 474.1583,
+   "end": 478.2583,
+   "text": "Each grouped term A j D to negative j is at most one.",
+   "translation": "每个分组项AⱼD^(−j)都至多为一。"
+  },
+  {
+   "start": 478.7083,
+   "end": 484.3583,
+   "text": "The bound is k times the difference between maximum and minimum code lengths, plus one.",
+   "translation": "因此K^k≤k(l_max−l_min)+1。"
+  },
+  {
+   "start": 484.8083,
+   "end": 490.7583,
+   "text": "Take the k-th root. Does this bound still leave a positive gap above one as k grows?",
+   "translation": "取 k 次方根。随着 k 增大，这个界与一之间还会留下正的间隙吗？"
+  },
+  {
+   "start": 493.7083,
+   "end": 497.8833,
+   "text": "The root of this linear expression tends to one as k grows.",
+   "translation": "该线性表达式的k次方根随k增大趋于一。"
+  },
+  {
+   "start": 498.3333,
+   "end": 500.3833,
+   "text": "Thus K is at most one.",
+   "translation": "因此K≤1。"
+  },
+  {
+   "start": 500.8333,
+   "end": 505.3333,
+   "text": "This is McMillan inequality for uniquely decodable codes.",
+   "translation": "这就是唯一可译码的McMillan不等式。"
+  },
+  {
+   "start": 505.7833,
+   "end": 510.5333,
+   "text": "Unique parsing is essential because it makes concatenations distinct.",
+   "translation": "唯一解析至关重要，因为它保证串接结果彼此不同。"
+  },
+  {
+   "start": 510.9833,
+   "end": 518.1083,
+   "text": "Without unique decodability, a length group can contain more messages than there are distinct encoded strings.",
+   "translation": "缺少唯一可译码性时，一个长度分组的消息数可能超过不同编码串的数量。"
+  },
+  {
+   "start": 518.5583,
+   "end": 521.4333,
+   "text": "This proof does not assume a prefix tree.",
+   "translation": "这个证明不假设前缀树结构。"
+  },
+  {
+   "start": 521.8833,
+   "end": 525.6333,
+   "text": "It applies to any finite uniquely decodable code.",
+   "translation": "它适用于任意有限唯一可译码。"
+  },
+  {
+   "start": 526.0833,
+   "end": 529.2333,
+   "text": "For binary codes, set D equal to two.",
+   "translation": "对二进制码，令D=2。"
+  },
+  {
+   "start": 529.6833,
+   "end": 534.0583,
+   "text": "Then the same sum of two to negative lengths is bounded by one.",
+   "translation": "此时同一个长度负指数和仍不超过一。"
+  },
+  {
+   "start": 534.5083,
+   "end": 538.7083,
+   "text": "Prefix codes satisfy Kraft directly by tree counting.",
+   "translation": "前缀码可直接由树计数得到Kraft界。"
+  },
+  {
+   "start": 539.1583,
+   "end": 543.7333,
+   "text": "McMillan shows that unique decodability alone implies it too.",
+   "translation": "McMillan证明仅唯一可译性也蕴含该不等式。"
+  },
+  {
+   "start": 544.1833,
+   "end": 548.0833,
+   "text": "The two theorems provide necessity for different code classes.",
+   "translation": "两个定理分别为不同码类提供必要条件。"
+  },
+  {
+   "start": 548.5333,
+   "end": 553.8583,
+   "text": "The factor K to the k expands by choosing one codeword for each position.",
+   "translation": "K^k的展开对应每个位置各选一个码字。"
+  },
+  {
+   "start": 554.3083,
+   "end": 558.0083,
+   "text": "Multiplying their weights adds their lengths in the exponent.",
+   "translation": "权重相乘会使指数中的长度相加。"
+  },
+  {
+   "start": 558.4583,
+   "end": 563.7583,
+   "text": "All possible j values lie between the minimum and maximum total lengths.",
+   "translation": "所有可能的j都位于最小与最大总长度之间。"
+  },
+  {
+   "start": 564.2083,
+   "end": 568.4083,
+   "text": "The number of these integer lengths grows only linearly with k.",
+   "translation": "这些整数长度的数量仅随k线性增长。"
+  },
+  {
+   "start": 568.8583,
+   "end": 573.1083,
+   "text": "Next, convert a length list into a probability distribution.",
+   "translation": "接下来将长度列表转换成概率分布。"
+  },
+  {
+   "start": 577.1333,
+   "end": 582.8083,
+   "text": "Take a finite uniquely decodable code for the positive-probability source symbols.",
+   "translation": "考虑定义在正概率信源符号上的有限唯一可译码。"
+  },
+  {
+   "start": 583.2583,
+   "end": 587.5333,
+   "text": "Write p i for source probability and l i for code length.",
+   "translation": "用pᵢ表示信源概率，用lᵢ表示码长。"
+  },
+  {
+   "start": 587.9833,
+   "end": 591.6583,
+   "text": "Every source symbol in this support receives a codeword.",
+   "translation": "该支持集中的每个信源符号都有对应码字。"
+  },
+  {
+   "start": 592.1083,
+   "end": 596.4333,
+   "text": "Define average length L as the sum of p i times l i.",
+   "translation": "定义平均码长L=Σᵢpᵢlᵢ。"
+  },
+  {
+   "start": 596.8833,
+   "end": 599.8583,
+   "text": "Let K be the Kraft sum over the codewords.",
+   "translation": "令K表示这些码字的Kraft和。"
+  },
+  {
+   "start": 600.3083,
+   "end": 604.3083,
+   "text": "Kraft or McMillan gives zero less than K at most one.",
+   "translation": "Kraft或McMillan不等式给出0<K≤1。"
+  },
+  {
+   "start": 604.7583,
+   "end": 609.0083,
+   "text": "Define q i as D to negative l i divided by K.",
+   "translation": "定义qᵢ=D^(−lᵢ)/K。"
+  },
+  {
+   "start": 609.4583,
+   "end": 612.7833,
+   "text": "These q values are positive and sum to one.",
+   "translation": "这些qᵢ均为正且总和为一。"
+  },
+  {
+   "start": 613.2333,
+   "end": 618.0833,
+   "text": "The source probabilities p i are also positive on the chosen support.",
+   "translation": "所选支持集上的信源概率pᵢ也均为正。"
+  },
+  {
+   "start": 618.5333,
+   "end": 621.5333,
+   "text": "So the divergence from P to q is finite.",
+   "translation": "因此从P到q的散度有限。"
+  },
+  {
+   "start": 621.9833,
+   "end": 626.8833,
+   "text": "Expand divergence as the sum p i log D of p i over q i.",
+   "translation": "将散度展开为Σᵢpᵢlog_D(pᵢ/qᵢ)。"
+  },
+  {
+   "start": 627.3333,
+   "end": 631.6083,
+   "text": "Substitute q i equals D to negative l i over K.",
+   "translation": "代入qᵢ=D^(−lᵢ)/K。"
+  },
+  {
+   "start": 632.0583,
+   "end": 636.7083,
+   "text": "Its logarithm becomes log D p i plus l i plus log D K.",
+   "translation": "其对数变为log_Dpᵢ+lᵢ+log_DK。"
+  },
+  {
+   "start": 637.1583,
+   "end": 643.0833,
+   "text": "Average the first term to get negative source entropy, measured using logarithm base D.",
+   "translation": "对第一项求平均，得到以D为对数底的负信源熵。"
+  },
+  {
+   "start": 643.5333,
+   "end": 645.9833,
+   "text": "Average the second term to get L.",
+   "translation": "对第二项求平均得到L。"
+  },
+  {
+   "start": 646.4333,
+   "end": 649.3833,
+   "text": "The final constant remains log D K.",
+   "translation": "最后的常数项为log_DK。"
+  },
+  {
+   "start": 649.8333,
+   "end": 653.8333,
+   "text": "Therefore divergence equals L minus H plus log D K.",
+   "translation": "因此D(P∥q)=L−H+log_DK。"
+  },
+  {
+   "start": 654.2833,
+   "end": 659.1583,
+   "text": "Rearrange to obtain L equals H plus divergence minus log D K.",
+   "translation": "整理得L=H+D_D(P∥q)−log_DK。"
+  },
+  {
+   "start": 659.6083,
+   "end": 662.0583,
+   "text": "Divergence is nonnegative.",
+   "translation": "散度非负。"
+  },
+  {
+   "start": 662.5083,
+   "end": 667.4583,
+   "text": "Since K is at most one, negative log D K is also nonnegative.",
+   "translation": "由于K≤1，−log_DK也非负。"
+  },
+  {
+   "start": 667.9083,
+   "end": 670.1333,
+   "text": "Therefore L is at least H.",
+   "translation": "因此L≥H。"
+  },
+  {
+   "start": 670.5833,
+   "end": 675.0333,
+   "text": "When can average length equal entropy? Which two gaps must close?",
+   "translation": "平均码长何时等于熵？哪两个间隙必须消失？"
+  },
+  {
+   "start": 677.9833,
+   "end": 681.6083,
+   "text": "The divergence vanishes exactly when p equals q.",
+   "translation": "散度为零当且仅当p=q。"
+  },
+  {
+   "start": 682.0583,
+   "end": 686.3083,
+   "text": "The Kraft penalty vanishes exactly when K equals one.",
+   "translation": "Kraft惩罚为零当且仅当K=1。"
+  },
+  {
+   "start": 686.7583,
+   "end": 692.3333,
+   "text": "So equality requires K equal one and p i equal q i for every symbol.",
+   "translation": "所以等号要求K=1且每个符号均有pᵢ=qᵢ。"
+  },
+  {
+   "start": 692.7833,
+   "end": 698.5083,
+   "text": "If an original source symbol has probability zero, omit it from this support calculation.",
+   "translation": "若原信源符号概率为零，就从本次支持集计算中略去。"
+  },
+  {
+   "start": 698.9583,
+   "end": 701.5833,
+   "text": "No logarithm of zero is needed.",
+   "translation": "这样无需计算零的对数。"
+  },
+  {
+   "start": 702.0333,
+   "end": 706.6833,
+   "text": "A codeword for an impossible symbol can only increase Kraft usage.",
+   "translation": "不可能符号的码字只会增加Kraft占用。"
+  },
+  {
+   "start": 707.1333,
+   "end": 710.6083,
+   "text": "The bound applies to binary bits when D equals two.",
+   "translation": "令D=2时，该界即适用于二进制比特。"
+  },
+  {
+   "start": 711.0583,
+   "end": 716.0583,
+   "text": "For other alphabets, lengths and entropy use the same logarithm base D.",
+   "translation": "对其他字母表，码长与熵使用同一对数底D。"
+  },
+  {
+   "start": 716.5083,
+   "end": 721.1833,
+   "text": "The inequality is a lower bound, not a claim every code attains it.",
+   "translation": "该不等式只是下界，并不表示每个码都能达到。"
+  },
+  {
+   "start": 721.6333,
+   "end": 726.0083,
+   "text": "Integer lengths usually prevent exact probability matching.",
+   "translation": "整数码长通常无法精确匹配概率。"
+  },
+  {
+   "start": 726.4583,
+   "end": 732.1583,
+   "text": "A ceiling construction will bound the extra average length by one code-alphabet digit.",
+   "translation": "向上取整构造将把平均码长开销限制在一个码字母符号以内。"
+  },
+  {
+   "start": 732.6083,
+   "end": 737.7083,
+   "text": "Changing the logarithm base changes both entropy and length units together.",
+   "translation": "改变对数底会同时改变熵与码长的计量单位。"
+  },
+  {
+   "start": 738.1583,
+   "end": 741.1333,
+   "text": "For binary codewords, the unit is bits.",
+   "translation": "对二进制码字，单位是比特。"
+  },
+  {
+   "start": 741.5833,
+   "end": 747.6083,
+   "text": "The divergence comparison is valid because q has positive probability wherever p does.",
+   "translation": "由于p为正处q也为正，散度比较有定义。"
+  },
+  {
+   "start": 751.6333,
+   "end": 757.2583,
+   "text": "With at least two positive-probability symbols, how much can rounding ideal lengths cost?",
+   "translation": "至少有两个正概率符号时，把理想码长向上取整会付出多大代价？"
+  },
+  {
+   "start": 757.7083,
+   "end": 763.7083,
+   "text": "For each positive-probability symbol, set l i to ceiling of negative log two p i.",
+   "translation": "对每个正概率符号，令lᵢ=⌈−log₂pᵢ⌉。"
+  },
+  {
+   "start": 764.1583,
+   "end": 767.0833,
+   "text": "These are finite positive integer lengths.",
+   "translation": "这些长度都是有限正整数。"
+  },
+  {
+   "start": 767.5333,
+   "end": 772.5083,
+   "text": "Because ceiling rounds upward, l i is at least negative log two p i.",
+   "translation": "由于向上取整，lᵢ≥−log₂pᵢ。"
+  },
+  {
+   "start": 772.9583,
+   "end": 776.5083,
+   "text": "Negate both sides and exponentiate base two.",
+   "translation": "两边取负并以2为底取幂。"
+  },
+  {
+   "start": 776.9583,
+   "end": 780.2583,
+   "text": "This gives two to negative l i at most p i.",
+   "translation": "由此得2^(−lᵢ)≤pᵢ。"
+  },
+  {
+   "start": 780.7083,
+   "end": 784.0833,
+   "text": "Summing over symbols gives Kraft sum at most one.",
+   "translation": "对所有符号求和得到Kraft和不超过一。"
+  },
+  {
+   "start": 784.5333,
+   "end": 789.2083,
+   "text": "The converse construction from the previous chapter builds a prefix code.",
+   "translation": "上一章的逆向构造可据此建立前缀码。"
+  },
+  {
+   "start": 789.6583,
+   "end": 795.0333,
+   "text": "Rounding moves each ideal length upward. How large can that extra distance be?",
+   "translation": "取整把每个理想码长向上推。多出的距离能有多大？"
+  },
+  {
+   "start": 797.9833,
+   "end": 803.7333,
+   "text": "It is strictly less than one. Multiply the lower and upper length bounds by p i.",
+   "translation": "它严格小于一。把码长的上下界乘以 p i。"
+  },
+  {
+   "start": 804.1833,
+   "end": 808.4333,
+   "text": "Sum the lower bounds to obtain entropy at most average length.",
+   "translation": "对下界求和得到熵不超过平均码长。"
+  },
+  {
+   "start": 808.8833,
+   "end": 812.6083,
+   "text": "Sum the upper bounds and use total probability one.",
+   "translation": "对上界求和，并利用总概率为一。"
+  },
+  {
+   "start": 813.0583,
+   "end": 817.5833,
+   "text": "The result is average length strictly below entropy plus one bit.",
+   "translation": "结果是平均码长严格小于熵加一比特。"
+  },
+  {
+   "start": 818.0333,
+   "end": 822.1083,
+   "text": "Thus H is at most L, and L is less than H plus one.",
+   "translation": "因此H≤L<H+1。"
+  },
+  {
+   "start": 822.5583,
+   "end": 826.2083,
+   "text": "This is a guarantee for the Shannon length construction.",
+   "translation": "这是Shannon长度构造的保证。"
+  },
+  {
+   "start": 826.6583,
+   "end": 830.3083,
+   "text": "It does not say every arbitrary code is optimal.",
+   "translation": "它不表示任意码都最优。"
+  },
+  {
+   "start": 830.7583,
+   "end": 837.1333,
+   "text": "Now encode blocks of n independent, identically distributed source symbols as super-symbols.",
+   "translation": "现在将n个独立同分布的信源符号组成的块视为超符号编码。"
+  },
+  {
+   "start": 837.5833,
+   "end": 842.1583,
+   "text": "A block probability is the product of its n symbol probabilities.",
+   "translation": "块概率等于其中n个符号概率之积。"
+  },
+  {
+   "start": 842.6083,
+   "end": 846.8583,
+   "text": "Its negative log probability is the sum of their surprisals.",
+   "translation": "其负对数概率等于各符号自信息之和。"
+  },
+  {
+   "start": 847.3083,
+   "end": 850.9333,
+   "text": "Taking expectation gives block entropy n H.",
+   "translation": "取期望得到块熵nH。"
+  },
+  {
+   "start": 851.3833,
+   "end": 854.3583,
+   "text": "Apply Shannon lengths to the block alphabet.",
+   "translation": "对块字母表应用Shannon长度构造。"
+  },
+  {
+   "start": 854.8083,
+   "end": 859.8083,
+   "text": "Its expected code length is at least n H and less than n H plus one.",
+   "translation": "其期望码长至少为nH且严格小于nH+1。"
+  },
+  {
+   "start": 860.2583,
+   "end": 865.5083,
+   "text": "Divide by n to obtain a per-symbol overhead below one over n bit.",
+   "translation": "除以n，得到每符号开销小于1/n比特。"
+  },
+  {
+   "start": 865.9583,
+   "end": 869.7333,
+   "text": "As n grows, that rounding overhead tends to zero.",
+   "translation": "n增大时，取整开销趋于零。"
+  },
+  {
+   "start": 870.1833,
+   "end": 873.4083,
+   "text": "The block code still needs a prefix construction.",
+   "translation": "块码仍需通过前缀构造实现。"
+  },
+  {
+   "start": 873.8583,
+   "end": 878.2583,
+   "text": "Kraft sufficiency supplies such a code for the integer block lengths.",
+   "translation": "Kraft充分性可为这些整数块长构造相应码。"
+  },
+  {
+   "start": 878.7083,
+   "end": 883.5333,
+   "text": "For a single positive-probability symbol, the formula gives length zero.",
+   "translation": "若只有一个正概率符号，该公式会给出零长度。"
+  },
+  {
+   "start": 883.9833,
+   "end": 889.0333,
+   "text": "For a known fixed block, there is only one possible message. It needs no bits.",
+   "translation": "对于长度已知的固定块，只有一种可能消息，因此不需要比特。"
+  },
+  {
+   "start": 889.4833,
+   "end": 894.3333,
+   "text": "But for an unknown-length stream, how many source symbols does silence contain?",
+   "translation": "但在长度未知的流中，一段沉默包含多少个信源符号？"
+  },
+  {
+   "start": 897.2833,
+   "end": 901.6833,
+   "text": "Repeated empty words cannot reveal how many symbols were sent.",
+   "translation": "重复空码字无法揭示发送了多少个符号。"
+  },
+  {
+   "start": 902.1333,
+   "end": 905.7333,
+   "text": "A one-symbol nonempty code has length at least one.",
+   "translation": "单符号非空码的码长至少为一。"
+  },
+  {
+   "start": 906.1833,
+   "end": 911.4583,
+   "text": "The strict H plus one Shannon bound is stated for at least two positive symbols.",
+   "translation": "严格的H加一Shannon界针对至少两个正概率符号。"
+  },
+  {
+   "start": 911.9083,
+   "end": 917.8083,
+   "text": "For a fixed n-symbol block from a deterministic source, one known message needs no bits.",
+   "translation": "对确定信源的已知n符号块，唯一消息无需比特。"
+  },
+  {
+   "start": 918.2583,
+   "end": 924.1333,
+   "text": "That exception does not license empty codewords for ordinary variable-length coding.",
+   "translation": "这一例外并不允许普通变长编码使用空码字。"
+  },
+  {
+   "start": 924.5833,
+   "end": 929.4583,
+   "text": "Next, compare Shannon coding with Huffman and universal constructions.",
+   "translation": "下一集将比较Shannon编码、Huffman编码与通用构造。"
+  }
+ ]
+}

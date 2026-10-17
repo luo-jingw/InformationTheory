@@ -1,0 +1,1857 @@
+{
+ "language": "en",
+ "episode": "e10-differential-gaussian",
+ "duration": 1185.7,
+ "chapters": [
+  {
+   "id": "c01-density",
+   "index": 0,
+   "start": 5.0,
+   "end": 226.8333,
+   "title": "One distance, two rulers, two entropy values",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    8.075,
+    12.5,
+    19.55,
+    27.025,
+    34.525,
+    42.35,
+    46.975,
+    55.0,
+    59.675,
+    65.9,
+    70.125,
+    76.3,
+    80.625,
+    85.1,
+    92.0,
+    95.725,
+    99.175,
+    103.8,
+    107.775,
+    112.725,
+    117.475,
+    122.15,
+    128.425,
+    134.925,
+    139.4,
+    144.05,
+    148.9,
+    153.125,
+    157.45,
+    162.25,
+    166.225,
+    171.85,
+    176.35,
+    182.95,
+    188.825,
+    194.625,
+    199.925,
+    206.3,
+    211.425,
+    215.1
+   ],
+   "sentenceEnds": [
+    7.625,
+    12.05,
+    19.1,
+    26.575,
+    31.075,
+    41.9,
+    46.525,
+    54.55,
+    59.225,
+    65.45,
+    69.675,
+    75.85,
+    80.175,
+    84.65,
+    91.55,
+    95.275,
+    98.725,
+    103.35,
+    107.325,
+    112.275,
+    117.025,
+    121.7,
+    127.975,
+    134.475,
+    138.95,
+    143.6,
+    148.45,
+    152.675,
+    157.0,
+    161.8,
+    165.775,
+    171.4,
+    175.9,
+    182.5,
+    188.375,
+    194.175,
+    199.475,
+    205.85,
+    210.975,
+    214.65,
+    220.225
+   ]
+  },
+  {
+   "id": "c02-transform",
+   "index": 1,
+   "start": 226.8333,
+   "end": 417.2333,
+   "title": "The Jacobian records local volume expansion",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    6.3,
+    14.25,
+    19.3,
+    23.275,
+    28.125,
+    30.75,
+    37.0,
+    43.25,
+    46.425,
+    53.0,
+    55.6,
+    62.7,
+    69.05,
+    74.175,
+    80.125,
+    86.95,
+    92.1,
+    96.625,
+    101.15,
+    111.425,
+    115.75,
+    122.1,
+    126.8,
+    133.7,
+    139.825,
+    145.3,
+    151.0,
+    156.375,
+    160.775,
+    165.75,
+    170.075,
+    173.725,
+    179.1,
+    183.225
+   ],
+   "sentenceEnds": [
+    5.85,
+    13.8,
+    18.85,
+    22.825,
+    27.675,
+    30.3,
+    36.55,
+    42.8,
+    45.975,
+    52.55,
+    55.15,
+    62.25,
+    68.6,
+    73.725,
+    79.675,
+    86.5,
+    91.65,
+    96.175,
+    100.7,
+    107.975,
+    115.3,
+    121.65,
+    126.35,
+    133.25,
+    139.375,
+    144.85,
+    150.55,
+    155.925,
+    160.325,
+    165.3,
+    169.625,
+    173.275,
+    178.65,
+    182.775,
+    188.775
+   ]
+  },
+  {
+   "id": "c03-covariance",
+   "index": 2,
+   "start": 417.2333,
+   "end": 591.3667,
+   "title": "Eigenvalues set the principal-axis scales",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    7.5,
+    10.05,
+    16.55,
+    20.625,
+    26.0,
+    31.025,
+    35.075,
+    38.675,
+    43.95,
+    48.75,
+    53.0,
+    57.975,
+    62.175,
+    66.875,
+    72.1,
+    76.65,
+    81.6,
+    85.55,
+    90.525,
+    95.15,
+    100.575,
+    105.45,
+    114.8,
+    121.05,
+    125.5,
+    131.625,
+    136.525,
+    142.15,
+    146.575,
+    152.225,
+    157.25,
+    162.575,
+    167.175
+   ],
+   "sentenceEnds": [
+    7.05,
+    9.6,
+    16.1,
+    20.175,
+    25.55,
+    30.575,
+    34.625,
+    38.225,
+    43.5,
+    48.3,
+    52.55,
+    57.525,
+    61.725,
+    66.425,
+    71.65,
+    76.2,
+    81.15,
+    85.1,
+    90.075,
+    94.7,
+    100.125,
+    105.0,
+    111.35,
+    120.6,
+    125.05,
+    131.175,
+    136.075,
+    141.7,
+    146.125,
+    151.775,
+    156.8,
+    162.125,
+    166.725,
+    172.525
+   ]
+  },
+  {
+   "id": "c04-gaussian",
+   "index": 3,
+   "start": 591.3667,
+   "end": 815.7,
+   "title": "Continuous KL reduces the proof to a quadratic expectation",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.05,
+    11.525,
+    16.55,
+    27.875,
+    33.75,
+    37.9,
+    42.65,
+    47.225,
+    51.175,
+    56.15,
+    61.525,
+    66.1,
+    69.525,
+    73.65,
+    77.7,
+    82.325,
+    86.975,
+    93.325,
+    98.4,
+    101.05,
+    107.9,
+    113.125,
+    116.125,
+    124.075,
+    127.2,
+    131.975,
+    138.925,
+    144.825,
+    150.225,
+    155.05,
+    159.325,
+    166.375,
+    171.375,
+    176.2,
+    180.225,
+    183.625,
+    188.55,
+    193.85,
+    199.85,
+    206.15,
+    211.625,
+    217.3
+   ],
+   "sentenceEnds": [
+    7.6,
+    11.075,
+    16.1,
+    24.425,
+    33.3,
+    37.45,
+    42.2,
+    46.775,
+    50.725,
+    55.7,
+    61.075,
+    65.65,
+    69.075,
+    73.2,
+    77.25,
+    81.875,
+    86.525,
+    92.875,
+    97.95,
+    100.6,
+    107.45,
+    112.675,
+    115.675,
+    123.625,
+    126.75,
+    131.525,
+    138.475,
+    144.375,
+    149.775,
+    154.6,
+    158.875,
+    165.925,
+    170.925,
+    175.75,
+    179.775,
+    183.175,
+    188.1,
+    193.4,
+    199.4,
+    205.7,
+    211.175,
+    216.85,
+    222.725
+   ]
+  },
+  {
+   "id": "c05-maximum",
+   "index": 4,
+   "start": 815.7,
+   "end": 992.0,
+   "title": "Conditional entropy constrains every observation-based estimator",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.125,
+    11.325,
+    15.825,
+    18.725,
+    24.875,
+    30.525,
+    36.05,
+    40.75,
+    46.5,
+    50.05,
+    55.825,
+    62.3,
+    65.875,
+    71.525,
+    76.9,
+    82.525,
+    87.175,
+    93.475,
+    97.5,
+    101.875,
+    107.975,
+    115.175,
+    119.05,
+    126.025,
+    131.725,
+    136.975,
+    141.4,
+    146.725,
+    156.025,
+    160.025,
+    165.125,
+    169.275
+   ],
+   "sentenceEnds": [
+    6.675,
+    10.875,
+    15.375,
+    18.275,
+    24.425,
+    30.075,
+    35.6,
+    40.3,
+    46.05,
+    49.6,
+    55.375,
+    61.85,
+    65.425,
+    71.075,
+    76.45,
+    82.075,
+    86.725,
+    93.025,
+    97.05,
+    101.425,
+    107.525,
+    114.725,
+    118.6,
+    125.575,
+    131.275,
+    136.525,
+    140.95,
+    146.275,
+    152.575,
+    159.575,
+    164.675,
+    168.825,
+    174.7
+   ]
+  },
+  {
+   "id": "c06-continuous-aep",
+   "index": 5,
+   "start": 992.0,
+   "end": 1180.7,
+   "title": "Probability mass and geometric volume are distinct",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    6.75,
+    9.475,
+    15.6,
+    20.175,
+    25.175,
+    28.875,
+    34.175,
+    36.825,
+    41.225,
+    44.2,
+    51.05,
+    57.925,
+    66.3,
+    71.4,
+    76.9,
+    82.775,
+    87.775,
+    94.025,
+    99.875,
+    102.65,
+    107.025,
+    111.7,
+    115.4,
+    119.5,
+    123.675,
+    129.05,
+    132.7,
+    142.875,
+    152.05,
+    157.775,
+    163.975,
+    169.05,
+    174.675,
+    177.725,
+    183.225
+   ],
+   "sentenceEnds": [
+    6.3,
+    9.025,
+    15.15,
+    19.725,
+    24.725,
+    28.425,
+    33.725,
+    36.375,
+    40.775,
+    43.75,
+    50.6,
+    57.475,
+    65.85,
+    70.95,
+    76.45,
+    82.325,
+    87.325,
+    93.575,
+    99.425,
+    102.2,
+    106.575,
+    111.25,
+    114.95,
+    119.05,
+    123.225,
+    128.6,
+    132.25,
+    139.425,
+    151.6,
+    157.325,
+    163.525,
+    168.6,
+    174.225,
+    177.275,
+    182.775,
+    187.1
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 12.625,
+   "text": "One unknown distance, two rulers. Can changing units change its entropy?",
+   "translation": "同一个未知距离，两把标尺。换单位会改变它的熵吗？"
+  },
+  {
+   "start": 13.075,
+   "end": 17.05,
+   "text": "Let the distance be uniform from zero to one centimeter.",
+   "translation": "设距离在零到一厘米之间均匀分布。"
+  },
+  {
+   "start": 17.5,
+   "end": 24.1,
+   "text": "In centimeters, its interval is zero to one. In meters, the interval is zero to .01.",
+   "translation": "用厘米记录，区间是零到一；用米记录，区间是零到0.01。"
+  },
+  {
+   "start": 24.55,
+   "end": 31.575,
+   "text": "The density-based entropy is zero on the first scale, about negative 6.64 bits on the second.",
+   "translation": "第一种尺度的密度熵为零，第二种约为负6.64比特。"
+  },
+  {
+   "start": 32.025,
+   "end": 36.075,
+   "text": "Did converting centimeters to meters destroy information?",
+   "translation": "把厘米换成米，难道破坏了信息吗？"
+  },
+  {
+   "start": 39.525,
+   "end": 46.9,
+   "text": "No. Differential entropy depends on coordinates. We will derive the correction and compare mutual information.",
+   "translation": "没有。微分熵依赖坐标。接下来推导修正量，并与互信息比较。"
+  },
+  {
+   "start": 47.35,
+   "end": 51.525,
+   "text": "Let X have a probability density f with respect to length.",
+   "translation": "令随机变量X相对于长度具有概率密度f。"
+  },
+  {
+   "start": 51.975,
+   "end": 59.55,
+   "text": "Assume the distribution is absolutely continuous with respect to Lebesgue measure and its density integrates to one.",
+   "translation": "假设分布相对于Lebesgue测度绝对连续，且密度积分为一。"
+  },
+  {
+   "start": 60.0,
+   "end": 64.225,
+   "text": "Assume also that the entropy integral exists and is finite.",
+   "translation": "并假设熵积分存在且有限。"
+  },
+  {
+   "start": 64.675,
+   "end": 70.45,
+   "text": "Define differential entropy h of X as negative the integral of f log two f.",
+   "translation": "定义微分熵h(X)=−∫f(x)log₂f(x)dx。"
+  },
+  {
+   "start": 70.9,
+   "end": 74.675,
+   "text": "Unlike discrete entropy, this quantity can be negative.",
+   "translation": "与离散熵不同，该量可以为负。"
+  },
+  {
+   "start": 75.125,
+   "end": 80.85,
+   "text": "Consider a uniform random variable from zero to a positive length, denoted by A.",
+   "translation": "考虑[0,a]上的均匀随机变量，其中a>0。"
+  },
+  {
+   "start": 81.3,
+   "end": 85.175,
+   "text": "Its density is one divided by that interval length.",
+   "translation": "其在区间内的密度为1/a。"
+  },
+  {
+   "start": 85.625,
+   "end": 89.65,
+   "text": "The log density equals negative log base two of A.",
+   "translation": "其密度对数为−log₂a。"
+  },
+  {
+   "start": 90.1,
+   "end": 96.55,
+   "text": "Averaging over total probability one gives log base two of A for the differential entropy.",
+   "translation": "对总概率为一的区域积分，得到h=log₂a。"
+  },
+  {
+   "start": 97.0,
+   "end": 100.275,
+   "text": "For interval length two, entropy is one bit.",
+   "translation": "当a=2时，微分熵为一比特。"
+  },
+  {
+   "start": 100.725,
+   "end": 103.725,
+   "text": "For interval length one, entropy is zero.",
+   "translation": "当a=1时，微分熵为零。"
+  },
+  {
+   "start": 104.175,
+   "end": 108.35,
+   "text": "For interval length one quarter, entropy is negative two bits.",
+   "translation": "当a=1/4时，微分熵为负二比特。"
+  },
+  {
+   "start": 108.8,
+   "end": 112.325,
+   "text": "No probability became negative in that example.",
+   "translation": "该例中没有任何概率变成负数。"
+  },
+  {
+   "start": 112.775,
+   "end": 117.275,
+   "text": "A density can exceed one because it is probability per unit length.",
+   "translation": "密度可以大于一，因为它表示单位长度上的概率。"
+  },
+  {
+   "start": 117.725,
+   "end": 122.025,
+   "text": "Only the density integrated over a region is a probability.",
+   "translation": "只有密度在区域上积分后才是概率。"
+  },
+  {
+   "start": 122.475,
+   "end": 126.7,
+   "text": "A density value is not itself constrained to be below one.",
+   "translation": "密度取值本身不受必须小于一的限制。"
+  },
+  {
+   "start": 127.15,
+   "end": 132.975,
+   "text": "Discrete entropy is nonnegative, but differential entropy has no such lower bound.",
+   "translation": "离散熵非负，但微分熵没有这样的下界。"
+  },
+  {
+   "start": 133.425,
+   "end": 139.475,
+   "text": "Changing units shifts its numerical value without changing the underlying probabilities.",
+   "translation": "改变单位会平移其数值，却不改变底层概率。"
+  },
+  {
+   "start": 139.925,
+   "end": 143.95,
+   "text": "The numerical entropy also depends on coordinate units.",
+   "translation": "微分熵的数值还依赖坐标单位。"
+  },
+  {
+   "start": 144.4,
+   "end": 148.6,
+   "text": "Changing from meters to centimeters scales this interval length.",
+   "translation": "将米改成厘米会改变区间长度a。"
+  },
+  {
+   "start": 149.05,
+   "end": 153.45,
+   "text": "The formula then shifts entropy by the logarithm of that scale.",
+   "translation": "公式会使熵按该尺度的对数发生平移。"
+  },
+  {
+   "start": 153.9,
+   "end": 157.675,
+   "text": "Quantization gives one way to see this scale dependence.",
+   "translation": "量化提供了一种观察尺度依赖的方法。"
+  },
+  {
+   "start": 158.125,
+   "end": 162.0,
+   "text": "Divide the interval into aligned cells of width delta.",
+   "translation": "将区间划分为宽度δ且对齐的格子。"
+  },
+  {
+   "start": 162.45,
+   "end": 166.8,
+   "text": "Suppose the interval length is an integer multiple of delta.",
+   "translation": "假设a是δ的整数倍。"
+  },
+  {
+   "start": 167.25,
+   "end": 170.775,
+   "text": "Every cell then has probability delta over a.",
+   "translation": "此时每个格子的概率均为δ/a。"
+  },
+  {
+   "start": 171.225,
+   "end": 176.4,
+   "text": "The interval length divided by delta gives the number of equally likely cells.",
+   "translation": "共有a/δ个等概率格子。"
+  },
+  {
+   "start": 176.85,
+   "end": 180.9,
+   "text": "Their discrete entropy is log base two of that cell count.",
+   "translation": "其离散熵为log₂(a/δ)。"
+  },
+  {
+   "start": 181.35,
+   "end": 187.5,
+   "text": "This equals log base two of the interval length, plus log base two of one over delta.",
+   "translation": "这等于log₂a+log₂(1/δ)。"
+  },
+  {
+   "start": 187.95,
+   "end": 193.375,
+   "text": "Thus quantized entropy equals differential entropy plus log resolution.",
+   "translation": "因此量化熵等于微分熵加上分辨率对数。"
+  },
+  {
+   "start": 193.825,
+   "end": 199.175,
+   "text": "Here the equality is exact because the density is uniform and cells align.",
+   "translation": "此处等式精确成立，因为密度均匀且格子对齐。"
+  },
+  {
+   "start": 199.625,
+   "end": 204.475,
+   "text": "For a general density, the approximation needs regularity conditions.",
+   "translation": "对一般密度，该近似需要正则条件。"
+  },
+  {
+   "start": 204.925,
+   "end": 210.85,
+   "text": "An arbitrary density does not automatically satisfy every quantization limit.",
+   "translation": "任意密度并不自动满足所有量化极限。"
+  },
+  {
+   "start": 211.3,
+   "end": 215.975,
+   "text": "Differential entropy is not invariant under rescaling coordinates.",
+   "translation": "微分熵在坐标缩放下并不保持不变。"
+  },
+  {
+   "start": 216.425,
+   "end": 219.65,
+   "text": "This differs from the entropy of a discrete label.",
+   "translation": "这与离散标签的熵不同。"
+  },
+  {
+   "start": 220.1,
+   "end": 225.225,
+   "text": "Next, compute exactly how a smooth invertible map changes the value.",
+   "translation": "接下来精确计算光滑可逆映射如何改变微分熵。"
+  },
+  {
+   "start": 229.2333,
+   "end": 232.6833,
+   "text": "Let X be a continuous vector in d dimensions.",
+   "translation": "令X为d维连续随机向量。"
+  },
+  {
+   "start": 233.1333,
+   "end": 240.6333,
+   "text": "Let g be a continuously differentiable diffeomorphism between open domains containing the relevant support.",
+   "translation": "令g为包含相关支撑集的开区域之间的连续可微微分同胚。"
+  },
+  {
+   "start": 241.0833,
+   "end": 245.6833,
+   "text": "Assume its Jacobian determinant is nonzero throughout that support.",
+   "translation": "假设其Jacobian行列式在该支撑集上处处非零。"
+  },
+  {
+   "start": 246.1333,
+   "end": 249.6583,
+   "text": "Assume the relevant entropy integrals are finite.",
+   "translation": "假设相关熵积分均有限。"
+  },
+  {
+   "start": 250.1083,
+   "end": 254.5083,
+   "text": "Also assume the expected log absolute Jacobian is finite.",
+   "translation": "并假设Jacobian绝对值对数的期望有限。"
+  },
+  {
+   "start": 254.9583,
+   "end": 257.1333,
+   "text": "Write U equal to g of X.",
+   "translation": "记U=g(X)。"
+  },
+  {
+   "start": 257.5833,
+   "end": 263.3833,
+   "text": "The density change formula divides f X by the absolute Jacobian determinant.",
+   "translation": "密度换元公式将f_X除以Jacobian行列式绝对值。"
+  },
+  {
+   "start": 263.8333,
+   "end": 269.6333,
+   "text": "At u equals g of x, f U equals f X divided by the Jacobian magnitude.",
+   "translation": "在u=g(x)处，f_U(u)=f_X(x)/|detJ_g(x)|。"
+  },
+  {
+   "start": 270.0833,
+   "end": 272.8083,
+   "text": "Take negative log two of both sides.",
+   "translation": "对两边取−log₂。"
+  },
+  {
+   "start": 273.2583,
+   "end": 279.3833,
+   "text": "The transformed surprisal equals input surprisal plus log two absolute determinant.",
+   "translation": "变换后的自信息等于输入自信息加log₂|detJ|。"
+  },
+  {
+   "start": 279.8333,
+   "end": 281.9833,
+   "text": "Average with respect to X.",
+   "translation": "再按X的分布取期望。"
+  },
+  {
+   "start": 282.4333,
+   "end": 289.0833,
+   "text": "This yields h of g X equals h of X plus expected log two absolute determinant.",
+   "translation": "由此得到h(g(X))=h(X)+Elog₂|detJ_g(X)|。"
+  },
+  {
+   "start": 289.5333,
+   "end": 295.4333,
+   "text": "For a scalar scaling g of x equals c x, the determinant magnitude is absolute c.",
+   "translation": "若标量变换g(x)=cx，行列式绝对值就是|c|。"
+  },
+  {
+   "start": 295.8833,
+   "end": 300.5583,
+   "text": "Thus h of c X equals h of X plus log two absolute c.",
+   "translation": "因此h(cX)=h(X)+log₂|c|。"
+  },
+  {
+   "start": 301.0083,
+   "end": 306.5083,
+   "text": "In d dimensions, scaling every coordinate by c adds d log two absolute c.",
+   "translation": "在d维中每个坐标乘c，会增加dlog₂|c|。"
+  },
+  {
+   "start": 306.9583,
+   "end": 313.3333,
+   "text": "Now let X,Y have a joint density, and transform each separately by such invertible maps.",
+   "translation": "现在令X、Y具有联合密度，并分别进行这样的可逆变换。"
+  },
+  {
+   "start": 313.7833,
+   "end": 318.4833,
+   "text": "The joint entropy gains the expected log Jacobian for both maps.",
+   "translation": "联合熵增加两个映射的期望Jacobian对数。"
+  },
+  {
+   "start": 318.9333,
+   "end": 323.0083,
+   "text": "The marginal entropy of X gains its own Jacobian term.",
+   "translation": "X的边缘熵增加其自身Jacobian项。"
+  },
+  {
+   "start": 323.4583,
+   "end": 327.5333,
+   "text": "The marginal entropy of Y gains its corresponding term.",
+   "translation": "Y的边缘熵增加对应的Jacobian项。"
+  },
+  {
+   "start": 327.9833,
+   "end": 334.8083,
+   "text": "Mutual information is h X plus h Y minus h X,Y. Which Jacobian corrections survive?",
+   "translation": "互信息是h(X)+h(Y)−h(X,Y)。哪些雅可比修正项会留下？"
+  },
+  {
+   "start": 338.2583,
+   "end": 342.1333,
+   "text": "The two marginal corrections cancel the joint correction.",
+   "translation": "两个边缘修正项抵消联合修正项。"
+  },
+  {
+   "start": 342.5833,
+   "end": 348.4833,
+   "text": "Therefore mutual information is invariant under separate invertible transformations.",
+   "translation": "因此分别进行可逆变换不会改变互信息。"
+  },
+  {
+   "start": 348.9333,
+   "end": 353.1833,
+   "text": "This argument requires the entropy differences to be finite.",
+   "translation": "该论证要求相关熵差有限。"
+  },
+  {
+   "start": 353.6333,
+   "end": 360.0833,
+   "text": "Alternatively, the density-ratio Jacobians cancel directly in the mutual-information integral.",
+   "translation": "或者在互信息积分中，密度比里的Jacobian可直接抵消。"
+  },
+  {
+   "start": 360.5333,
+   "end": 366.2083,
+   "text": "In the density ratio, the transformed joint density has both Jacobian factors.",
+   "translation": "在密度比中，变换后的联合密度含两个Jacobian因子。"
+  },
+  {
+   "start": 366.6583,
+   "end": 371.6833,
+   "text": "The transformed marginal densities contain the matching individual factors.",
+   "translation": "变换后的边缘密度含有对应的单独因子。"
+  },
+  {
+   "start": 372.1333,
+   "end": 377.3833,
+   "text": "Their cancellation explains invariance without subtracting infinite entropies.",
+   "translation": "这些因子抵消，因此无需相减无穷熵即可解释不变性。"
+  },
+  {
+   "start": 377.8333,
+   "end": 382.7583,
+   "text": "A one-dimensional expansion by a factor of two adds exactly one bit.",
+   "translation": "一维扩张两倍恰好增加一比特。"
+  },
+  {
+   "start": 383.2083,
+   "end": 387.1583,
+   "text": "A contraction by one half subtracts exactly one bit.",
+   "translation": "收缩为一半恰好减少一比特。"
+  },
+  {
+   "start": 387.6083,
+   "end": 392.1333,
+   "text": "Both transformations must be invertible on the relevant supports.",
+   "translation": "两个变换都必须在相关支撑集上可逆。"
+  },
+  {
+   "start": 392.5833,
+   "end": 396.4583,
+   "text": "We make no corresponding claim for noninvertible maps.",
+   "translation": "这里不对不可逆映射作相应断言。"
+  },
+  {
+   "start": 396.9083,
+   "end": 400.1083,
+   "text": "A many-to-one map can discard information.",
+   "translation": "多对一映射可能丢失信息。"
+  },
+  {
+   "start": 400.5583,
+   "end": 405.4833,
+   "text": "The Jacobian term measures local volume expansion or contraction.",
+   "translation": "Jacobian项衡量局部体积的扩张或收缩。"
+  },
+  {
+   "start": 405.9333,
+   "end": 409.6083,
+   "text": "This is why differential entropy changes with units.",
+   "translation": "这正是微分熵会随单位改变的原因。"
+  },
+  {
+   "start": 410.0583,
+   "end": 415.6083,
+   "text": "Next, covariance eigenvalues summarize multidimensional Gaussian volume.",
+   "translation": "接下来用协方差特征值概括多维高斯体积。"
+  },
+  {
+   "start": 419.6333,
+   "end": 424.2833,
+   "text": "Let X be a d-dimensional random vector with finite second moments.",
+   "translation": "令X为具有有限二阶矩的d维随机向量。"
+  },
+  {
+   "start": 424.7333,
+   "end": 426.8333,
+   "text": "Its mean vector is mu.",
+   "translation": "其均值向量记为μ。"
+  },
+  {
+   "start": 427.2833,
+   "end": 433.3333,
+   "text": "Define covariance K as the expected outer product of X minus mu with itself.",
+   "translation": "定义协方差K=E[(X−μ)(X−μ)^T]。"
+  },
+  {
+   "start": 433.7833,
+   "end": 437.4083,
+   "text": "The matrix is symmetric and positive semidefinite.",
+   "translation": "该矩阵对称且半正定。"
+  },
+  {
+   "start": 437.8583,
+   "end": 442.7833,
+   "text": "For a full-dimensional Gaussian density, assume K is positive definite.",
+   "translation": "若要有全维高斯密度，需假设K正定。"
+  },
+  {
+   "start": 443.2333,
+   "end": 447.8083,
+   "text": "A real symmetric matrix has an orthogonal eigenvector basis.",
+   "translation": "实对称矩阵具有正交特征向量基。"
+  },
+  {
+   "start": 448.2583,
+   "end": 451.8583,
+   "text": "Rotate coordinates into those principal directions.",
+   "translation": "将坐标旋转到这些主方向上。"
+  },
+  {
+   "start": 452.3083,
+   "end": 455.4583,
+   "text": "The rotated covariance becomes diagonal.",
+   "translation": "旋转后的协方差变为对角矩阵。"
+  },
+  {
+   "start": 455.9083,
+   "end": 460.7333,
+   "text": "Its diagonal entries are the eigenvalues lambda one through lambda d.",
+   "translation": "其对角元素就是特征值λ₁至λ_d。"
+  },
+  {
+   "start": 461.1833,
+   "end": 465.5333,
+   "text": "Each eigenvalue gives variance along one principal axis.",
+   "translation": "每个特征值给出一个主轴方向上的方差。"
+  },
+  {
+   "start": 465.9833,
+   "end": 469.7833,
+   "text": "An equal-Mahalanobis-distance surface is an ellipsoid.",
+   "translation": "等Mahalanobis距离曲面是一个椭球。"
+  },
+  {
+   "start": 470.2333,
+   "end": 474.7583,
+   "text": "Its principal-axis lengths scale with square roots of eigenvalues.",
+   "translation": "其主轴长度按特征值平方根缩放。"
+  },
+  {
+   "start": 475.2083,
+   "end": 478.9583,
+   "text": "The volume scales with the product of those axis lengths.",
+   "translation": "椭球体积按这些主轴长度的乘积缩放。"
+  },
+  {
+   "start": 479.4083,
+   "end": 483.6583,
+   "text": "That product is proportional to square root of determinant K.",
+   "translation": "该乘积正比于√detK。"
+  },
+  {
+   "start": 484.1083,
+   "end": 488.8833,
+   "text": "Rotation changes orientation but not determinant or volume.",
+   "translation": "旋转会改变方向，却不改变行列式或体积。"
+  },
+  {
+   "start": 489.3333,
+   "end": 493.4333,
+   "text": "For positive eigenvalues, their product is determinant K.",
+   "translation": "特征值均为正时，其乘积就是detK。"
+  },
+  {
+   "start": 493.8833,
+   "end": 498.3833,
+   "text": "The ellipsoid scale therefore depends on every principal direction.",
+   "translation": "因此椭球尺度取决于每个主方向。"
+  },
+  {
+   "start": 498.8333,
+   "end": 502.3333,
+   "text": "The orientation alone cannot change its volume.",
+   "translation": "仅改变方向不会改变体积。"
+  },
+  {
+   "start": 502.7833,
+   "end": 507.3083,
+   "text": "Covariance describes this spread, not the full distribution shape.",
+   "translation": "协方差描述这种离散程度，而非完整分布形状。"
+  },
+  {
+   "start": 507.7583,
+   "end": 511.9333,
+   "text": "Different distributions can share the same covariance matrix.",
+   "translation": "不同分布可以具有相同协方差矩阵。"
+  },
+  {
+   "start": 512.3833,
+   "end": 517.3583,
+   "text": "The Gaussian comparison will use covariance to fix its ellipsoid scale.",
+   "translation": "高斯比较将用协方差固定椭球尺度。"
+  },
+  {
+   "start": 517.8083,
+   "end": 522.2333,
+   "text": "A large eigenvalue stretches the ellipsoid along its eigenvector.",
+   "translation": "较大特征值会沿对应特征向量拉长椭球。"
+  },
+  {
+   "start": 522.6833,
+   "end": 528.5833,
+   "text": "A smaller positive eigenvalue makes the ellipsoid thinner. What happens when it reaches zero?",
+   "translation": "较小的正特征值让椭球更薄。它降到零时会发生什么？"
+  },
+  {
+   "start": 532.0333,
+   "end": 537.8333,
+   "text": "If an eigenvalue reaches zero, the ellipsoid collapses onto a lower-dimensional set.",
+   "translation": "若某特征值降为零，椭球会压缩到低维集合。"
+  },
+  {
+   "start": 538.2833,
+   "end": 542.2833,
+   "text": "Then K is singular and has no positive determinant.",
+   "translation": "此时K奇异，行列式不为正。"
+  },
+  {
+   "start": 542.7333,
+   "end": 548.4083,
+   "text": "A Gaussian with singular covariance lies on a lower-dimensional affine subspace.",
+   "translation": "奇异协方差高斯分布落在低维仿射子空间上。"
+  },
+  {
+   "start": 548.8583,
+   "end": 553.3083,
+   "text": "It has no density with respect to full-dimensional Lebesgue measure.",
+   "translation": "它相对于全维Lebesgue测度没有密度。"
+  },
+  {
+   "start": 553.7583,
+   "end": 558.9333,
+   "text": "Therefore the usual full-dimensional Gaussian entropy formula does not apply.",
+   "translation": "因此通常的全维高斯熵公式不适用。"
+  },
+  {
+   "start": 559.3833,
+   "end": 563.3583,
+   "text": "A lower-dimensional reference measure would be a different setup.",
+   "translation": "改用低维参考测度则是另一种设定。"
+  },
+  {
+   "start": 563.8083,
+   "end": 569.0083,
+   "text": "Positive definiteness keeps every principal-axis variance strictly positive.",
+   "translation": "正定性保证每个主轴方差都严格为正。"
+  },
+  {
+   "start": 569.4583,
+   "end": 574.0333,
+   "text": "It also permits the inverse covariance used in the Gaussian density.",
+   "translation": "它也保证高斯密度中的协方差逆矩阵存在。"
+  },
+  {
+   "start": 574.4833,
+   "end": 579.3583,
+   "text": "The covariance determinant therefore controls the Gaussian volume scale.",
+   "translation": "因此协方差行列式控制高斯的体积尺度。"
+  },
+  {
+   "start": 579.8083,
+   "end": 583.9583,
+   "text": "This geometric quantity will enter the entropy upper bound.",
+   "translation": "该几何量将进入熵上界。"
+  },
+  {
+   "start": 584.4083,
+   "end": 589.7583,
+   "text": "Next, compare any density with the Gaussian having the same mean and covariance.",
+   "translation": "接下来将任意密度与同均值、同协方差的高斯比较。"
+  },
+  {
+   "start": 593.7667,
+   "end": 598.9667,
+   "text": "Let X have a density f, mean mu, and positive-definite covariance K.",
+   "translation": "令X具有密度f、均值μ和正定协方差K。"
+  },
+  {
+   "start": 599.4167,
+   "end": 602.4417,
+   "text": "Assume its differential entropy is finite.",
+   "translation": "假设其微分熵有限。"
+  },
+  {
+   "start": 602.8917,
+   "end": 607.4667,
+   "text": "Let q be the Gaussian density with that same mean and covariance.",
+   "translation": "令q为具有相同均值与协方差的高斯密度。"
+  },
+  {
+   "start": 607.9167,
+   "end": 615.7917,
+   "text": "Assume finite logarithmic expectations. In the scalar plot, is the Gaussian or matching uniform more entropic?",
+   "translation": "假设相关对数期望有限。在图中的标量例子里，同方差高斯分布与均匀分布谁的熵更大？"
+  },
+  {
+   "start": 619.2417,
+   "end": 624.6667,
+   "text": "Continuous divergence is the integral of f times log two of f over q.",
+   "translation": "连续散度定义为∫f(x)log₂(f(x)/q(x))dx。"
+  },
+  {
+   "start": 625.1167,
+   "end": 628.8167,
+   "text": "We first verify that this divergence is nonnegative.",
+   "translation": "先验证该散度非负。"
+  },
+  {
+   "start": 629.2667,
+   "end": 633.5667,
+   "text": "For positive t, natural log t is at most t minus one.",
+   "translation": "对t>0，有ln t≤t−1。"
+  },
+  {
+   "start": 634.0167,
+   "end": 638.1417,
+   "text": "Where f is positive, set t equal to q divided by f.",
+   "translation": "在f为正处，令t=q/f。"
+  },
+  {
+   "start": 638.5917,
+   "end": 642.0917,
+   "text": "Multiply the inequality by f and integrate.",
+   "translation": "将不等式乘以f并积分。"
+  },
+  {
+   "start": 642.5417,
+   "end": 647.0667,
+   "text": "The right side becomes the integral of q minus the integral of f.",
+   "translation": "右侧化为q的积分减去f的积分。"
+  },
+  {
+   "start": 647.5167,
+   "end": 652.4417,
+   "text": "The f integral is one, while q integrates to at most one on that support.",
+   "translation": "f积分为一，而q在该支撑集上的积分至多为一。"
+  },
+  {
+   "start": 652.8917,
+   "end": 657.0167,
+   "text": "Thus the integral of f log f over q is nonnegative.",
+   "translation": "因此∫f ln(f/q)非负。"
+  },
+  {
+   "start": 657.4667,
+   "end": 660.4417,
+   "text": "Changing to base two preserves the sign.",
+   "translation": "换成以2为底的对数不会改变符号。"
+  },
+  {
+   "start": 660.8917,
+   "end": 664.5667,
+   "text": "Equality requires q equal f almost everywhere.",
+   "translation": "等号要求q=f几乎处处成立。"
+  },
+  {
+   "start": 665.0167,
+   "end": 668.6167,
+   "text": "Write the Gaussian negative log density explicitly.",
+   "translation": "将高斯负对数密度显式写出。"
+  },
+  {
+   "start": 669.0667,
+   "end": 673.2417,
+   "text": "It contains a constant involving two pi and determinant K.",
+   "translation": "其中常数项含2π与detK。"
+  },
+  {
+   "start": 673.6917,
+   "end": 677.8917,
+   "text": "Its remaining term is the quadratic form using inverse K.",
+   "translation": "其余项是使用K逆矩阵的二次型。"
+  },
+  {
+   "start": 678.3417,
+   "end": 684.2417,
+   "text": "The constant is one half log base two of two pi to dimension d, times determinant K.",
+   "translation": "常数项为0.5log₂((2π)^d detK)。"
+  },
+  {
+   "start": 684.6917,
+   "end": 689.3167,
+   "text": "Add the quadratic form divided by two times natural log two.",
+   "translation": "再加上二次型除以2ln2。"
+  },
+  {
+   "start": 689.7667,
+   "end": 691.9667,
+   "text": "Take expectation under f.",
+   "translation": "按照f取期望。"
+  },
+  {
+   "start": 692.4167,
+   "end": 698.8167,
+   "text": "Write the quadratic form as a trace, then replace the expected outer product by covariance K.",
+   "translation": "将二次型写为迹，再将外积的期望换成协方差K。"
+  },
+  {
+   "start": 699.2667,
+   "end": 704.0417,
+   "text": "The quadratic expectation equals the trace of K inverse times K.",
+   "translation": "二次型期望等于tr(K⁻¹K)。"
+  },
+  {
+   "start": 704.4917,
+   "end": 707.0417,
+   "text": "That trace equals the dimension d.",
+   "translation": "该迹等于维数d。"
+  },
+  {
+   "start": 707.4917,
+   "end": 714.9917,
+   "text": "So expected Gaussian negative log density is one half log two of (two pi e) to d times determinant K.",
+   "translation": "所以高斯负对数密度期望为0.5log₂((2πe)^d detK)。"
+  },
+  {
+   "start": 715.4417,
+   "end": 718.1167,
+   "text": "This value is the entropy of q.",
+   "translation": "该值就是q的微分熵。"
+  },
+  {
+   "start": 718.5667,
+   "end": 722.8917,
+   "text": "The divergence equals Gaussian entropy minus the entropy of f.",
+   "translation": "散度等于高斯熵减去f的熵。"
+  },
+  {
+   "start": 723.3417,
+   "end": 729.8417,
+   "text": "Nonnegativity gives h of X at most one half log two of (two pi e) to d determinant K.",
+   "translation": "由散度非负得h(X)≤0.5log₂((2πe)^d detK)。"
+  },
+  {
+   "start": 730.2917,
+   "end": 735.7417,
+   "text": "Equality holds exactly when f equals the matching Gaussian almost everywhere.",
+   "translation": "等号当且仅当f几乎处处等于匹配高斯密度。"
+  },
+  {
+   "start": 736.1917,
+   "end": 741.1417,
+   "text": "The covariance must be positive definite for this full-dimensional formula.",
+   "translation": "该全维公式要求协方差正定。"
+  },
+  {
+   "start": 741.5917,
+   "end": 745.9667,
+   "text": "A singular Gaussian has no full-dimensional Lebesgue density.",
+   "translation": "奇异高斯没有全维Lebesgue密度。"
+  },
+  {
+   "start": 746.4167,
+   "end": 750.2417,
+   "text": "Now bound determinant K using its diagonal entries.",
+   "translation": "现在用对角元素界定detK。"
+  },
+  {
+   "start": 750.6917,
+   "end": 757.2917,
+   "text": "For positive-definite K, Hadamard gives determinant K at most the product of diagonal entries.",
+   "translation": "对正定K，Hadamard不等式给出detK≤对角元素之积。"
+  },
+  {
+   "start": 757.7417,
+   "end": 762.2917,
+   "text": "View K as a Gram matrix of linearly independent vectors.",
+   "translation": "将K视为线性无关向量的Gram矩阵。"
+  },
+  {
+   "start": 762.7417,
+   "end": 767.1167,
+   "text": "Gram-Schmidt replaces each vector by its orthogonal residual.",
+   "translation": "Gram-Schmidt过程将每个向量替换为正交残差。"
+  },
+  {
+   "start": 767.5667,
+   "end": 771.1417,
+   "text": "Each residual norm is at most the original norm.",
+   "translation": "每个残差范数都不超过原向量范数。"
+  },
+  {
+   "start": 771.5917,
+   "end": 774.5417,
+   "text": "Their squared product gives determinant K.",
+   "translation": "残差范数平方的乘积给出detK。"
+  },
+  {
+   "start": 774.9917,
+   "end": 779.4667,
+   "text": "Equality requires every residual to keep its original norm.",
+   "translation": "等号要求每个残差都保持原范数。"
+  },
+  {
+   "start": 779.9167,
+   "end": 784.7667,
+   "text": "That happens exactly when the original vectors are mutually orthogonal.",
+   "translation": "这当且仅当原向量两两正交时发生。"
+  },
+  {
+   "start": 785.2167,
+   "end": 790.7667,
+   "text": "For a positive-definite matrix, equality therefore requires K to be diagonal.",
+   "translation": "对正定矩阵，等号因此要求K为对角矩阵。"
+  },
+  {
+   "start": 791.2167,
+   "end": 797.0667,
+   "text": "For a singular positive-semidefinite matrix, keep only the determinant inequality.",
+   "translation": "对奇异半正定矩阵，只保留行列式不等式。"
+  },
+  {
+   "start": 797.5167,
+   "end": 802.5417,
+   "text": "Both sides may vanish even when the remaining block has off-diagonal terms.",
+   "translation": "即使其余子块仍有非对角项，两边也可能同时为零。"
+  },
+  {
+   "start": 802.9917,
+   "end": 808.2167,
+   "text": "Equality in a zero-zero case does not imply that the matrix is diagonal.",
+   "translation": "两边同为零时的等号，并不蕴含矩阵为对角阵。"
+  },
+  {
+   "start": 808.6667,
+   "end": 814.0917,
+   "text": "Next, turn Gaussian maximum entropy into an estimation-error lower bound.",
+   "translation": "接下来将高斯最大熵转化为估计误差下界。"
+  },
+  {
+   "start": 818.1,
+   "end": 822.375,
+   "text": "Let X be a scalar random variable and Y an observation.",
+   "translation": "令X为标量随机变量，Y为观测。"
+  },
+  {
+   "start": 822.825,
+   "end": 826.575,
+   "text": "Choose an estimator g that depends only on Y.",
+   "translation": "选择只依赖Y的估计器g。"
+  },
+  {
+   "start": 827.025,
+   "end": 831.075,
+   "text": "Define estimation error E as X minus g of Y.",
+   "translation": "定义估计误差E=X−g(Y)。"
+  },
+  {
+   "start": 831.525,
+   "end": 833.975,
+   "text": "Assume mean-square error is finite.",
+   "translation": "假设均方误差有限。"
+  },
+  {
+   "start": 834.425,
+   "end": 840.125,
+   "text": "Assume the relevant conditional and error differential entropies exist and are finite.",
+   "translation": "假设相关条件微分熵与误差微分熵存在且有限。"
+  },
+  {
+   "start": 840.575,
+   "end": 845.775,
+   "text": "For each fixed observation y, subtracting g of y is a translation.",
+   "translation": "对每个固定观测y，减去g(y)只是平移。"
+  },
+  {
+   "start": 846.225,
+   "end": 851.3,
+   "text": "Translation leaves the conditional density shape and entropy unchanged.",
+   "translation": "平移不改变条件密度形状与熵。"
+  },
+  {
+   "start": 851.75,
+   "end": 856.0,
+   "text": "Therefore h of X given Y equals h of E given Y.",
+   "translation": "因此h(X|Y)=h(E|Y)。"
+  },
+  {
+   "start": 856.45,
+   "end": 861.75,
+   "text": "Conditioning cannot increase differential entropy when these quantities are finite.",
+   "translation": "在这些量有限时，条件化不会增加微分熵。"
+  },
+  {
+   "start": 862.2,
+   "end": 865.3,
+   "text": "Thus h of E given Y is at most h of E.",
+   "translation": "所以h(E|Y)≤h(E)。"
+  },
+  {
+   "start": 865.75,
+   "end": 871.075,
+   "text": "Among scalar variables with fixed variance, the Gaussian has maximum entropy.",
+   "translation": "在方差固定的标量变量中，高斯熵最大。"
+  },
+  {
+   "start": 871.525,
+   "end": 877.55,
+   "text": "Hence h of E is at most one half log base two of two pi e times the variance of E.",
+   "translation": "因此h(E)≤0.5log₂(2πe Var(E))。"
+  },
+  {
+   "start": 878.0,
+   "end": 881.125,
+   "text": "Variance is no greater than the second moment.",
+   "translation": "方差不超过二阶矩。"
+  },
+  {
+   "start": 881.575,
+   "end": 886.775,
+   "text": "If the error has nonzero mean, its second moment also includes squared bias.",
+   "translation": "若误差均值非零，其二阶矩还包含偏差平方。"
+  },
+  {
+   "start": 887.225,
+   "end": 892.15,
+   "text": "Thus the final bound uses mean-square error rather than variance alone.",
+   "translation": "因此最终界使用均方误差，而非仅用方差。"
+  },
+  {
+   "start": 892.6,
+   "end": 897.775,
+   "text": "So this is at most one half log two of two pi e times expected E squared.",
+   "translation": "所以它至多为0.5log₂(2πe E[E²])。"
+  },
+  {
+   "start": 898.225,
+   "end": 902.425,
+   "text": "Combining the steps gives the entropy-to-MSE inequality.",
+   "translation": "合并这些步骤得到熵到均方误差的不等式。"
+  },
+  {
+   "start": 902.875,
+   "end": 908.725,
+   "text": "The mean-square error is at least two to twice h of X given Y, divided by two pi e.",
+   "translation": "均方误差至少为2^(2h(X|Y))/(2πe)。"
+  },
+  {
+   "start": 909.175,
+   "end": 912.75,
+   "text": "No independent additive-noise assumption was used.",
+   "translation": "推导没有使用独立加性噪声假设。"
+  },
+  {
+   "start": 913.2,
+   "end": 917.125,
+   "text": "The estimator may be nonlinear and may depend on Y.",
+   "translation": "估计器可以是非线性的，也可以依赖Y。"
+  },
+  {
+   "start": 917.575,
+   "end": 923.225,
+   "text": "An estimate allowed to observe X directly belongs to a different information setup.",
+   "translation": "允许直接观测X的估计，属于另一种可用信息设定。"
+  },
+  {
+   "start": 923.675,
+   "end": 930.425,
+   "text": "The unconditional bound using h of X applies to constant estimates without observations.",
+   "translation": "使用h(X)的无条件界，适用于无观测时的常数估计。"
+  },
+  {
+   "start": 930.875,
+   "end": 934.3,
+   "text": "Now examine an exact jointly Gaussian example.",
+   "translation": "现在看一个精确的联合高斯例子。"
+  },
+  {
+   "start": 934.75,
+   "end": 941.275,
+   "text": "Let Y be standard Gaussian and E an independent, zero-mean Gaussian with variance one quarter.",
+   "translation": "令Y为标准高斯，E为与其独立、零均值且方差为1/4的高斯。"
+  },
+  {
+   "start": 941.725,
+   "end": 946.975,
+   "text": "Set X equal to Y plus E and estimate X by g of Y equal to Y.",
+   "translation": "令X=Y+E，并以g(Y)=Y估计X。"
+  },
+  {
+   "start": 947.425,
+   "end": 952.225,
+   "text": "The estimation error is exactly E and is independent of Y.",
+   "translation": "估计误差恰为E，且独立于Y。"
+  },
+  {
+   "start": 952.675,
+   "end": 956.65,
+   "text": "The conditional variance of X given Y is one quarter.",
+   "translation": "给定Y时，X的条件方差为1/4。"
+  },
+  {
+   "start": 957.1,
+   "end": 961.975,
+   "text": "Its conditional entropy is one half log two of two pi e over four.",
+   "translation": "其条件熵为0.5log₂(2πe/4)。"
+  },
+  {
+   "start": 962.425,
+   "end": 968.275,
+   "text": "The error second moment is one quarter. Does any gap remain in this chain of inequalities?",
+   "translation": "误差二阶矩为四分之一。这串不等式还剩下任何松弛吗？"
+  },
+  {
+   "start": 971.725,
+   "end": 975.275,
+   "text": "Every inequality in the chain is equality here.",
+   "translation": "此例中整条不等式链每一步都取等号。"
+  },
+  {
+   "start": 975.725,
+   "end": 980.375,
+   "text": "This example verifies tightness for a specific observation model.",
+   "translation": "该例验证了特定观测模型下界的紧性。"
+  },
+  {
+   "start": 980.825,
+   "end": 984.525,
+   "text": "It does not require independence in the general theorem.",
+   "translation": "一般定理并不要求独立性。"
+  },
+  {
+   "start": 984.975,
+   "end": 990.4,
+   "text": "Next, use log-density averages to describe continuous typical volume.",
+   "translation": "接下来利用对数密度平均描述连续典型体积。"
+  },
+  {
+   "start": 994.4,
+   "end": 998.3,
+   "text": "Let X one through X n be IID with density f.",
+   "translation": "令X₁到Xₙ为密度f下的IID样本。"
+  },
+  {
+   "start": 998.75,
+   "end": 1001.025,
+   "text": "Assume h of X is finite.",
+   "translation": "假设h(X)有限。"
+  },
+  {
+   "start": 1001.475,
+   "end": 1007.15,
+   "text": "Also assume the absolute value of log two f of X has finite expectation.",
+   "translation": "并假设|log₂f(X)|的期望有限。"
+  },
+  {
+   "start": 1007.6,
+   "end": 1011.725,
+   "text": "This condition permits the strong law for information density.",
+   "translation": "该条件允许对信息密度应用强大数定律。"
+  },
+  {
+   "start": 1012.175,
+   "end": 1016.725,
+   "text": "The block density is the product of the n single-sample densities.",
+   "translation": "块密度等于n个单样本密度之积。"
+  },
+  {
+   "start": 1017.175,
+   "end": 1020.425,
+   "text": "Take negative log two and divide by n.",
+   "translation": "取负对数并除以n。"
+  },
+  {
+   "start": 1020.875,
+   "end": 1025.725,
+   "text": "The result is the sample average of negative log two f of X i.",
+   "translation": "所得结果是−log₂f(Xᵢ)的样本平均。"
+  },
+  {
+   "start": 1026.175,
+   "end": 1028.375,
+   "text": "Each term has mean h of X.",
+   "translation": "每项的均值是h(X)。"
+  },
+  {
+   "start": 1028.825,
+   "end": 1032.775,
+   "text": "The strong law makes the average converge almost surely to h.",
+   "translation": "强大数定律保证该平均几乎必然趋于h。"
+  },
+  {
+   "start": 1033.225,
+   "end": 1035.75,
+   "text": "Fix epsilon greater than zero.",
+   "translation": "固定ε>0。"
+  },
+  {
+   "start": 1036.2,
+   "end": 1042.6,
+   "text": "Call a block typical when its negative log density per coordinate lies within epsilon of h.",
+   "translation": "若每坐标负对数密度位于h的ε邻域内，就称该块典型。"
+  },
+  {
+   "start": 1043.05,
+   "end": 1049.475,
+   "text": "Equivalently, the typicality test places each block density between two exponential bounds.",
+   "translation": "等价地，典型性检验将每个块密度限制在两个指数界之间。"
+  },
+  {
+   "start": 1049.925,
+   "end": 1057.85,
+   "text": "For any delta between zero and one, sufficiently large n gives typical-set probability at least one minus delta.",
+   "translation": "任取0<δ<1，n充分大时典型集概率至少为1−δ。"
+  },
+  {
+   "start": 1058.3,
+   "end": 1062.95,
+   "text": "The typical set is a subset of continuous n-dimensional space.",
+   "translation": "典型集是连续n维空间的一个子集。"
+  },
+  {
+   "start": 1063.4,
+   "end": 1068.45,
+   "text": "Its probability mass is the integral of the block density over that set.",
+   "translation": "其概率质量是块密度在该集合上的积分。"
+  },
+  {
+   "start": 1068.9,
+   "end": 1074.325,
+   "text": "On the set, density is at most two to negative n times h minus epsilon.",
+   "translation": "在该集合上，密度至多为2^(−n(h−ε))。"
+  },
+  {
+   "start": 1074.775,
+   "end": 1079.325,
+   "text": "Therefore its mass is at most that density bound times its volume.",
+   "translation": "因此其质量至多为该密度上界乘以体积。"
+  },
+  {
+   "start": 1079.775,
+   "end": 1085.575,
+   "text": "The volume is at least one minus delta times two to n times h minus epsilon.",
+   "translation": "因此体积至少为(1−δ)2^(n(h−ε))。"
+  },
+  {
+   "start": 1086.025,
+   "end": 1091.425,
+   "text": "On the same set, density is at least two to negative n times h plus epsilon.",
+   "translation": "在同一集合上，密度至少为2^(−n(h+ε))。"
+  },
+  {
+   "start": 1091.875,
+   "end": 1094.2,
+   "text": "Its mass cannot exceed one.",
+   "translation": "其质量不能超过一。"
+  },
+  {
+   "start": 1094.65,
+   "end": 1098.575,
+   "text": "So volume is at most two to n times h plus epsilon.",
+   "translation": "所以体积至多为2^(n(h+ε))。"
+  },
+  {
+   "start": 1099.025,
+   "end": 1103.25,
+   "text": "Together, these bounds place logarithmic volume per coordinate near h.",
+   "translation": "两界共同将每坐标对数体积限制在h附近。"
+  },
+  {
+   "start": 1103.7,
+   "end": 1106.95,
+   "text": "First hold epsilon fixed and let n grow.",
+   "translation": "先固定ε并令n增大。"
+  },
+  {
+   "start": 1107.4,
+   "end": 1111.05,
+   "text": "Then choose arbitrarily smaller positive epsilon.",
+   "translation": "随后再选择任意更小的正ε。"
+  },
+  {
+   "start": 1111.5,
+   "end": 1115.225,
+   "text": "The volume exponent approaches differential entropy.",
+   "translation": "体积指数率趋于微分熵。"
+  },
+  {
+   "start": 1115.675,
+   "end": 1120.6,
+   "text": "This is a geometric volume statement, not a probability-mass statement.",
+   "translation": "这是几何体积结论，不是概率质量结论。"
+  },
+  {
+   "start": 1121.05,
+   "end": 1124.25,
+   "text": "It is also not a count of discrete sequences.",
+   "translation": "它也不是离散序列数量的计数。"
+  },
+  {
+   "start": 1124.7,
+   "end": 1131.425,
+   "text": "Differential entropy can be negative. Can a set of probability one have vanishing coordinate volume?",
+   "translation": "微分熵可能为负。概率为一的集合，其坐标体积能趋于零吗？"
+  },
+  {
+   "start": 1134.875,
+   "end": 1143.6,
+   "text": "For uniform zero to one quarter, h is negative two. The full block support has mass one and volume four to negative n.",
+   "translation": "对零到四分之一的均匀分布，h为负二。整个块支持集的概率为一，体积为4的负n次方。"
+  },
+  {
+   "start": 1144.05,
+   "end": 1149.325,
+   "text": "A coordinate rescaling changes both density units and differential entropy.",
+   "translation": "坐标缩放会同时改变密度单位与微分熵。"
+  },
+  {
+   "start": 1149.775,
+   "end": 1155.525,
+   "text": "The probability mass remains unchanged under the corresponding change of variables.",
+   "translation": "相应换元下概率质量保持不变。"
+  },
+  {
+   "start": 1155.975,
+   "end": 1160.6,
+   "text": "Thus volume must always be interpreted with its coordinate units.",
+   "translation": "因此体积始终必须结合坐标单位解释。"
+  },
+  {
+   "start": 1161.05,
+   "end": 1166.225,
+   "text": "The absolute-integrability assumption is not automatic for every density.",
+   "translation": "绝对可积假设并非对每个密度都自动成立。"
+  },
+  {
+   "start": 1166.675,
+   "end": 1169.275,
+   "text": "Without it, this strong-law route may fail.",
+   "translation": "若不满足该条件，这条强大数定律证明路线可能失效。"
+  },
+  {
+   "start": 1169.725,
+   "end": 1174.775,
+   "text": "The continuous AEP therefore has explicit regularity requirements.",
+   "translation": "因此连续AEP具有明确的正则条件。"
+  },
+  {
+   "start": 1175.225,
+   "end": 1179.1,
+   "text": "Next, use Gaussian entropy bounds in channel models.",
+   "translation": "下一集将在信道模型中使用高斯熵界。"
+  }
+ ]
+}

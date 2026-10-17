@@ -1,0 +1,1933 @@
+{
+ "language": "en",
+ "episode": "e01-entropy-information",
+ "duration": 1487.1,
+ "chapters": [
+  {
+   "id": "c01-communication",
+   "index": 0,
+   "start": 5.0,
+   "end": 280.2,
+   "title": "Messages, Noise, and Reliable Rates",
+   "music": "motivation",
+   "sentenceStarts": [
+    2.4,
+    9.475,
+    14.425,
+    21.025,
+    29.425,
+    34.275,
+    42.475,
+    48.85,
+    54.5,
+    60.975,
+    67.225,
+    72.775,
+    78.7,
+    83.7,
+    89.925,
+    96.65,
+    102.8,
+    109.425,
+    115.425,
+    121.7,
+    128.85,
+    136.2,
+    142.2,
+    149.6,
+    156.5,
+    162.625,
+    168.65,
+    175.225,
+    181.075,
+    188.225,
+    197.975,
+    204.7,
+    211.75,
+    217.5,
+    224.25,
+    231.15,
+    238.075,
+    244.325,
+    249.75,
+    255.925,
+    262.55,
+    269.725
+   ],
+   "sentenceEnds": [
+    9.025,
+    13.975,
+    20.575,
+    25.975,
+    33.825,
+    42.025,
+    48.4,
+    54.05,
+    60.525,
+    66.775,
+    72.325,
+    78.25,
+    83.25,
+    89.475,
+    96.2,
+    102.35,
+    108.975,
+    114.975,
+    121.25,
+    128.4,
+    135.75,
+    141.75,
+    149.15,
+    156.05,
+    162.175,
+    168.2,
+    174.775,
+    180.625,
+    187.775,
+    197.525,
+    204.25,
+    211.3,
+    217.05,
+    223.8,
+    230.7,
+    237.625,
+    243.875,
+    249.3,
+    255.475,
+    262.1,
+    269.275,
+    273.6
+   ]
+  },
+  {
+   "id": "c02-surprisal",
+   "index": 1,
+   "start": 280.2,
+   "end": 570.0,
+   "title": "From One Surprising Outcome to an Average",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    7.85,
+    15.2,
+    20.25,
+    26.275,
+    30.825,
+    41.0,
+    46.675,
+    52.225,
+    58.7,
+    64.0,
+    70.75,
+    78.45,
+    86.0,
+    94.5,
+    101.825,
+    108.6,
+    116.325,
+    127.925,
+    133.5,
+    139.2,
+    145.575,
+    152.75,
+    158.125,
+    165.975,
+    173.9,
+    180.7,
+    185.45,
+    192.7,
+    198.45,
+    205.125,
+    213.85,
+    221.85,
+    228.2,
+    236.025,
+    243.4,
+    250.75,
+    259.425,
+    266.275,
+    274.2,
+    281.4
+   ],
+   "sentenceEnds": [
+    7.4,
+    14.75,
+    19.8,
+    25.825,
+    30.375,
+    38.05,
+    46.225,
+    51.775,
+    58.25,
+    63.55,
+    70.3,
+    78.0,
+    85.55,
+    94.05,
+    101.375,
+    108.15,
+    115.875,
+    127.475,
+    133.05,
+    138.75,
+    145.125,
+    152.3,
+    157.675,
+    165.525,
+    173.45,
+    180.25,
+    185.0,
+    192.25,
+    198.0,
+    204.675,
+    210.9,
+    221.4,
+    227.75,
+    235.575,
+    242.95,
+    250.3,
+    258.975,
+    265.825,
+    273.75,
+    280.95,
+    288.2
+   ]
+  },
+  {
+   "id": "c03-conditional",
+   "index": 2,
+   "start": 570.0,
+   "end": 837.1,
+   "title": "When Knowing More Can Leave Us Less Certain",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    6.95,
+    12.65,
+    17.825,
+    21.625,
+    26.25,
+    31.925,
+    37.3,
+    42.35,
+    46.925,
+    52.475,
+    57.325,
+    60.875,
+    66.425,
+    71.6,
+    76.3,
+    80.025,
+    83.9,
+    87.6,
+    91.975,
+    98.2,
+    103.275,
+    107.925,
+    113.425,
+    117.85,
+    122.525,
+    128.975,
+    139.05,
+    142.875,
+    148.075,
+    153.1,
+    157.9,
+    163.375,
+    169.275,
+    174.375,
+    180.225,
+    185.825,
+    190.875,
+    201.3,
+    207.525,
+    213.15,
+    217.95,
+    222.8,
+    228.2,
+    233.45,
+    237.25,
+    242.725,
+    248.15,
+    254.575,
+    259.7
+   ],
+   "sentenceEnds": [
+    6.5,
+    12.2,
+    17.375,
+    21.175,
+    25.8,
+    31.475,
+    36.85,
+    41.9,
+    46.475,
+    52.025,
+    56.875,
+    60.425,
+    65.975,
+    71.15,
+    75.85,
+    79.575,
+    83.45,
+    87.15,
+    91.525,
+    97.75,
+    102.825,
+    107.475,
+    112.975,
+    117.4,
+    122.075,
+    128.525,
+    136.1,
+    142.425,
+    147.625,
+    152.65,
+    157.45,
+    162.925,
+    168.825,
+    173.925,
+    179.775,
+    185.375,
+    190.425,
+    198.35,
+    207.075,
+    212.7,
+    217.5,
+    222.35,
+    227.75,
+    233.0,
+    236.8,
+    242.275,
+    247.7,
+    254.125,
+    259.25,
+    265.475
+   ]
+  },
+  {
+   "id": "c04-mutual",
+   "index": 3,
+   "start": 837.1,
+   "end": 1168.6667,
+   "title": "Shared Information as Uncertainty Removed",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.5,
+    12.1,
+    18.325,
+    26.95,
+    32.675,
+    39.825,
+    45.4,
+    52.0,
+    55.95,
+    64.4,
+    69.25,
+    74.45,
+    80.725,
+    86.525,
+    91.875,
+    97.15,
+    101.1,
+    106.225,
+    112.925,
+    118.625,
+    122.4,
+    131.4,
+    138.6,
+    145.0,
+    154.425,
+    160.325,
+    166.325,
+    173.725,
+    179.5,
+    187.125,
+    193.625,
+    198.3,
+    204.625,
+    210.65,
+    220.3,
+    225.75,
+    232.575,
+    240.1,
+    245.05,
+    251.5,
+    258.675,
+    266.8,
+    274.775,
+    280.575,
+    287.625,
+    294.4,
+    300.8,
+    306.5,
+    311.225,
+    317.475,
+    321.975
+   ],
+   "sentenceEnds": [
+    7.05,
+    11.65,
+    17.875,
+    26.5,
+    32.225,
+    39.375,
+    44.95,
+    51.55,
+    55.5,
+    63.95,
+    68.8,
+    74.0,
+    80.275,
+    86.075,
+    91.425,
+    96.7,
+    100.65,
+    105.775,
+    112.475,
+    118.175,
+    121.95,
+    130.95,
+    138.15,
+    142.05,
+    153.975,
+    159.875,
+    165.875,
+    173.275,
+    179.05,
+    186.675,
+    193.175,
+    197.85,
+    204.175,
+    210.2,
+    219.85,
+    225.3,
+    232.125,
+    239.65,
+    244.6,
+    251.05,
+    258.225,
+    266.35,
+    274.325,
+    280.125,
+    287.175,
+    293.95,
+    300.35,
+    306.05,
+    310.775,
+    317.025,
+    321.525,
+    329.95
+   ]
+  },
+  {
+   "id": "c05-recap",
+   "index": 4,
+   "start": 1168.6667,
+   "end": 1482.1,
+   "title": "Check Both Routes Through One Joint Table",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    8.275,
+    14.9,
+    20.775,
+    25.325,
+    31.775,
+    37.675,
+    44.05,
+    50.725,
+    57.15,
+    62.8,
+    66.675,
+    73.7,
+    79.925,
+    85.975,
+    93.425,
+    98.95,
+    105.15,
+    111.475,
+    119.925,
+    127.675,
+    136.475,
+    142.15,
+    149.675,
+    156.85,
+    163.95,
+    171.425,
+    177.55,
+    183.65,
+    189.725,
+    195.875,
+    201.275,
+    207.45,
+    213.575,
+    219.95,
+    226.5,
+    232.2,
+    237.05,
+    241.2,
+    245.475,
+    251.725,
+    262.075,
+    269.275,
+    277.0,
+    282.4,
+    288.05,
+    296.2,
+    304.05
+   ],
+   "sentenceEnds": [
+    7.825,
+    14.45,
+    20.325,
+    24.875,
+    31.325,
+    37.225,
+    43.6,
+    50.275,
+    56.7,
+    62.35,
+    66.225,
+    73.25,
+    79.475,
+    85.525,
+    92.975,
+    98.5,
+    104.7,
+    111.025,
+    119.475,
+    127.225,
+    133.525,
+    141.7,
+    149.225,
+    156.4,
+    163.5,
+    170.975,
+    177.1,
+    183.2,
+    189.275,
+    195.425,
+    200.825,
+    207.0,
+    213.125,
+    219.5,
+    226.05,
+    231.75,
+    236.6,
+    240.75,
+    245.025,
+    251.275,
+    259.125,
+    268.825,
+    274.05,
+    281.95,
+    287.6,
+    295.75,
+    303.6,
+    311.825
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 14.025,
+   "text": "I hide one of four messages: A, B, C, or D. You may identify it with yes-or-no questions.",
+   "translation": "我藏起A、B、C、D中的一个消息，你可以用是非问题找出它。"
+  },
+  {
+   "start": 14.475,
+   "end": 18.975,
+   "text": "Their probabilities are one half, one quarter, one eighth, and one eighth.",
+   "translation": "它们的概率依次为二分之一、四分之一、八分之一、八分之一。"
+  },
+  {
+   "start": 19.425,
+   "end": 25.575,
+   "text": "One tree splits the four choices evenly. Another asks about the most likely message first.",
+   "translation": "一棵树均匀划分四个选择，另一棵先询问最可能的消息。"
+  },
+  {
+   "start": 26.025,
+   "end": 30.975,
+   "text": "Which tree uses fewer questions on average, under this probability model?",
+   "translation": "在这个概率模型下，哪棵树的平均提问次数更少？"
+  },
+  {
+   "start": 34.425,
+   "end": 38.825,
+   "text": "The balanced tree always takes two questions, so its average is two.",
+   "translation": "平衡树总是需要两次提问，因此平均次数为二。"
+  },
+  {
+   "start": 39.275,
+   "end": 47.025,
+   "text": "The other costs one half times one, plus one quarter times two, plus two eighths times three: one point seven five.",
+   "translation": "另一棵的代价是二分之一乘一，加四分之一乘二，再加两个八分之一乘三：一点七五。"
+  },
+  {
+   "start": 47.475,
+   "end": 53.4,
+   "text": "Its rare outcomes still need three questions. A lower average does not shorten every path.",
+   "translation": "它的稀有结果仍需三次提问；平均值更小，并不代表每条路径都更短。"
+  },
+  {
+   "start": 53.85,
+   "end": 59.05,
+   "text": "What quantity measures this average uncertainty before we choose a question tree?",
+   "translation": "在选择提问树之前，什么量能度量这种平均不确定性？"
+  },
+  {
+   "start": 59.5,
+   "end": 65.525,
+   "text": "A communication system begins with a sender, a message source, a channel, and a receiver.",
+   "translation": "通信系统从发送者、消息信源、信道和接收者开始。"
+  },
+  {
+   "start": 65.975,
+   "end": 71.775,
+   "text": "The source chooses a symbol, and the sender represents that symbol using a physical signal.",
+   "translation": "信源选出一个符号，发送者再用物理信号表示它。"
+  },
+  {
+   "start": 72.225,
+   "end": 77.325,
+   "text": "The channel carries that signal, while noise can alter what arrives at the receiver.",
+   "translation": "信道传送该信号，而噪声可能改变接收端收到的内容。"
+  },
+  {
+   "start": 77.775,
+   "end": 83.25,
+   "text": "The receiver observes an output and uses it to infer which input symbol was sent.",
+   "translation": "接收者观察输出，并据此推断发送了哪个输入符号。"
+  },
+  {
+   "start": 83.7,
+   "end": 88.25,
+   "text": "We describe the chosen source symbol by a random variable called X.",
+   "translation": "我们用随机变量X描述信源选出的符号。"
+  },
+  {
+   "start": 88.7,
+   "end": 94.475,
+   "text": "For a finite source, X takes values from a finite alphabet, such as zero and one.",
+   "translation": "对于有限信源，X取自有限字母表，例如零和一。"
+  },
+  {
+   "start": 94.925,
+   "end": 101.2,
+   "text": "A source model assigns probabilities to those symbols before any particular message is drawn.",
+   "translation": "信源模型在抽取具体消息之前，为这些符号指定概率。"
+  },
+  {
+   "start": 101.65,
+   "end": 107.35,
+   "text": "Those probabilities describe the source's behavior, not errors introduced by the channel.",
+   "translation": "这些概率描述信源行为，而非信道引入的错误。"
+  },
+  {
+   "start": 107.8,
+   "end": 113.975,
+   "text": "A binary source might choose zero with probability one half and one with probability one half.",
+   "translation": "二元信源可以用各二分之一的概率选择零或一。"
+  },
+  {
+   "start": 114.425,
+   "end": 119.975,
+   "text": "Another binary source might choose zero nine times out of ten and one once out of ten.",
+   "translation": "另一个二元信源可以以十分之九的概率选零，十分之一的概率选一。"
+  },
+  {
+   "start": 120.425,
+   "end": 126.25,
+   "text": "Both sources use the same alphabet, but their probability patterns differ substantially.",
+   "translation": "两个信源使用相同字母表，但概率分布差异很大。"
+  },
+  {
+   "start": 126.7,
+   "end": 133.4,
+   "text": "A probability model lets us distinguish common messages from rare messages before transmission.",
+   "translation": "概率模型让我们在传输前区分常见消息与罕见消息。"
+  },
+  {
+   "start": 133.85,
+   "end": 140.75,
+   "text": "The channel has a separate description: for each input, it specifies probabilities of possible outputs.",
+   "translation": "信道有独立描述：对每个输入，它规定各种输出的概率。"
+  },
+  {
+   "start": 141.2,
+   "end": 146.75,
+   "text": "We call the input random variable X and the received output random variable Y.",
+   "translation": "我们把输入随机变量记为X，把接收输出随机变量记为Y。"
+  },
+  {
+   "start": 147.2,
+   "end": 154.15,
+   "text": "The conditional probability of Y given X captures the channel's noise and transformation behavior.",
+   "translation": "给定X时Y的条件概率刻画信道噪声与变换行为。"
+  },
+  {
+   "start": 154.6,
+   "end": 161.05,
+   "text": "A noiseless channel makes its output determine its input, although the source may still be unpredictable.",
+   "translation": "无噪信道使输出能够确定输入，但信源仍可能不可预测。"
+  },
+  {
+   "start": 161.5,
+   "end": 167.175,
+   "text": "A noisy channel can produce several possible outputs from the same transmitted input.",
+   "translation": "有噪信道可能让同一个发送输入对应多个可能输出。"
+  },
+  {
+   "start": 167.625,
+   "end": 173.2,
+   "text": "Thus source uncertainty and channel uncertainty refer to different parts of the system.",
+   "translation": "因此，信源不确定性与信道不确定性属于系统的不同部分。"
+  },
+  {
+   "start": 173.65,
+   "end": 179.775,
+   "text": "A communication code maps messages into sequences of channel inputs called codewords.",
+   "translation": "通信码将消息映射为一串信道输入，称为码字。"
+  },
+  {
+   "start": 180.225,
+   "end": 185.625,
+   "text": "A block code assigns one length n codeword to each of M possible messages.",
+   "translation": "分组码为M个可能消息各分配一个长度为n的码字。"
+  },
+  {
+   "start": 186.075,
+   "end": 192.775,
+   "text": "Suppose those M messages are equally likely, so the message choice contains log base two of M bits.",
+   "translation": "假设M个消息等可能，因此消息选择包含log₂M比特。"
+  },
+  {
+   "start": 193.225,
+   "end": 202.525,
+   "text": "Each transmission uses n channel symbols. The fixed block rate R is log base two of M, with that entire logarithm divided by n.",
+   "translation": "每次传输使用n个信道符号，因此固定分组码率R=log₂M/n。"
+  },
+  {
+   "start": 202.975,
+   "end": 209.25,
+   "text": "The receiver applies a decoder to its observed output sequence and selects one of the M messages.",
+   "translation": "接收者对观测到的输出序列译码，并从M个消息中选出一个。"
+  },
+  {
+   "start": 209.7,
+   "end": 216.3,
+   "text": "Reliability concerns the probability that this decoded message differs from the transmitted message.",
+   "translation": "可靠性关注译出的消息不同于发送消息的概率。"
+  },
+  {
+   "start": 216.75,
+   "end": 222.05,
+   "text": "A high rate alone does not guarantee a small decoding error probability.",
+   "translation": "仅有高码率并不能保证译码错误概率很小。"
+  },
+  {
+   "start": 222.5,
+   "end": 228.8,
+   "text": "Changing the code can trade block rate against error probability while the physical channel remains fixed.",
+   "translation": "物理信道固定时，改变编码可以权衡分组码率与错误概率。"
+  },
+  {
+   "start": 229.25,
+   "end": 235.7,
+   "text": "Channel capacity marks the supremum of rates whose block error can vanish as block length grows.",
+   "translation": "信道容量标记分组长度增长时错误概率可趋于零的码率上确界。"
+  },
+  {
+   "start": 236.15,
+   "end": 242.625,
+   "text": "A coding theorem is needed to prove that claim; the system diagram alone does not establish it.",
+   "translation": "该结论需要编码定理证明，系统图本身并不能确立它。"
+  },
+  {
+   "start": 243.075,
+   "end": 248.875,
+   "text": "For now, ask a more basic question: how much information does one source outcome carry?",
+   "translation": "现在先问一个更基础的问题：信源的一个结果携带多少信息？"
+  },
+  {
+   "start": 249.325,
+   "end": 254.3,
+   "text": "A rare outcome should tell us more than an outcome we expected almost certainly.",
+   "translation": "罕见结果应比几乎必然发生的结果告诉我们更多。"
+  },
+  {
+   "start": 254.75,
+   "end": 260.475,
+   "text": "To make that idea precise, we need a numerical measure that depends on probability.",
+   "translation": "要精确表达这个想法，我们需要一个依赖概率的数值度量。"
+  },
+  {
+   "start": 260.925,
+   "end": 267.1,
+   "text": "We will measure one observed event first, then average its information over the source distribution.",
+   "translation": "我们先度量一次观测事件的信息，再对信源分布取平均。"
+  },
+  {
+   "start": 267.55,
+   "end": 274.275,
+   "text": "That average quantifies source uncertainty independently of channel noise and decoding performance.",
+   "translation": "这个平均量刻画信源不确定性，独立于信道噪声和译码表现。"
+  },
+  {
+   "start": 274.725,
+   "end": 278.6,
+   "text": "Our next measure depends on source probabilities alone.",
+   "translation": "接下来定义的度量只依赖信源概率。"
+  },
+  {
+   "start": 282.6,
+   "end": 287.6,
+   "text": "Let x be an outcome with probability p of occurring, where p is positive.",
+   "translation": "令x为概率p大于零的结果。"
+  },
+  {
+   "start": 288.05,
+   "end": 294.95,
+   "text": "Its surprisal, also called self-information, is I of x equal to log base two of one over p.",
+   "translation": "它的自信息定义为I(x)等于以二为底的log(1/p)。"
+  },
+  {
+   "start": 295.4,
+   "end": 300.0,
+   "text": "The logarithm uses base two, so information is measured in bits.",
+   "translation": "对数采用以二为底，因此信息单位为比特。"
+  },
+  {
+   "start": 300.45,
+   "end": 306.025,
+   "text": "An event with probability one has zero surprisal because it provides no surprise.",
+   "translation": "概率为一的事件自信息为零，因为它毫无意外。"
+  },
+  {
+   "start": 306.475,
+   "end": 310.575,
+   "text": "An event with probability one half has surprisal one bit.",
+   "translation": "概率为二分之一的事件自信息为一比特。"
+  },
+  {
+   "start": 311.025,
+   "end": 318.25,
+   "text": "An event with probability one quarter has two bits of surprisal. What if that probability is cut in half again?",
+   "translation": "概率为四分之一的事件有两比特自信息。再把概率减半，会怎样？"
+  },
+  {
+   "start": 321.2,
+   "end": 326.425,
+   "text": "Each time probability is halved, surprisal increases by exactly one bit.",
+   "translation": "概率每减半一次，自信息恰好增加一比特。"
+  },
+  {
+   "start": 326.875,
+   "end": 331.975,
+   "text": "This scaling also agrees with independent events: their joint surprisal adds.",
+   "translation": "这种尺度也符合独立事件的情形：联合自信息相加。"
+  },
+  {
+   "start": 332.425,
+   "end": 338.45,
+   "text": "If A and B are independent, the probability that both occur is p of A times p of B.",
+   "translation": "若A与B独立，两者同时发生的概率是p(A)乘p(B)。"
+  },
+  {
+   "start": 338.9,
+   "end": 343.75,
+   "text": "Taking the negative base two logarithm turns that product into a sum.",
+   "translation": "取负的以二为底对数，就把乘积变成和。"
+  },
+  {
+   "start": 344.2,
+   "end": 350.5,
+   "text": "Thus the joint surprisal equals the surprisal of event A, plus the surprisal of event B.",
+   "translation": "因此，A与B同时发生的自信息等于各自自信息之和。"
+  },
+  {
+   "start": 350.95,
+   "end": 358.2,
+   "text": "For a source X, different outcomes have different surprisal values, so one value cannot describe every draw.",
+   "translation": "对信源X，不同结果有不同自信息，因此单个数值无法描述每次抽取。"
+  },
+  {
+   "start": 358.65,
+   "end": 365.75,
+   "text": "Entropy is the expected surprisal: H of X equals the sum over x of p of x times I of x.",
+   "translation": "熵是自信息的期望：H(X)等于对x求和p(x)I(x)。"
+  },
+  {
+   "start": 366.2,
+   "end": 374.25,
+   "text": "Substituting the surprisal definition gives H of X equal to minus the sum p of x log base two p of x.",
+   "translation": "代入自信息定义，得到H(X)等于负的各项p(x)log₂p(x)之和。"
+  },
+  {
+   "start": 374.7,
+   "end": 381.575,
+   "text": "An outcome with probability zero never occurs, so it contributes zero to the expected surprisal.",
+   "translation": "概率为零的结果从不发生，因此对期望自信息贡献为零。"
+  },
+  {
+   "start": 382.025,
+   "end": 388.35,
+   "text": "We define zero times log of zero to equal zero by the continuous limit of p log p.",
+   "translation": "根据p log p的连续极限，约定零乘log零等于零。"
+  },
+  {
+   "start": 388.8,
+   "end": 396.075,
+   "text": "Now consider a binary variable whose probability of one is p and probability of zero is one minus p.",
+   "translation": "现在考虑二元变量：取一的概率为p，取零的概率为一减p。"
+  },
+  {
+   "start": 396.525,
+   "end": 407.675,
+   "text": "Binary entropy adds two terms: p times log two of one over p, and the quantity one minus p multiplied by log two of one over the quantity one minus p.",
+   "translation": "H_b等于p乘log(1/p)，加上(1−p)乘log(1/(1−p))。"
+  },
+  {
+   "start": 408.125,
+   "end": 413.25,
+   "text": "At p equal to zero, the binary outcome is fixed, and its entropy is zero.",
+   "translation": "p等于零时，二元结果固定，熵为零。"
+  },
+  {
+   "start": 413.7,
+   "end": 418.95,
+   "text": "At p equal to one, the outcome is also fixed, and entropy is again zero.",
+   "translation": "p等于一时，结果同样固定，熵仍为零。"
+  },
+  {
+   "start": 419.4,
+   "end": 425.325,
+   "text": "At p equal to one half, either outcome is equally likely, and entropy reaches one bit.",
+   "translation": "p等于二分之一时，两种结果等可能，熵达到一比特。"
+  },
+  {
+   "start": 425.775,
+   "end": 432.5,
+   "text": "The curve is symmetric around one half because swapping zero and one replaces p by one minus p.",
+   "translation": "曲线关于二分之一对称，因为交换零和一会把p换成一减p。"
+  },
+  {
+   "start": 432.95,
+   "end": 437.875,
+   "text": "The curve rises from zero, peaks at one half, then falls back to zero.",
+   "translation": "曲线从零上升，在二分之一处达到峰值，再降回零。"
+  },
+  {
+   "start": 438.325,
+   "end": 445.725,
+   "text": "This curve describes average uncertainty, while surprisal describes the information of one realized outcome.",
+   "translation": "这条曲线描述平均不确定性，而自信息描述一次实际结果的信息量。"
+  },
+  {
+   "start": 446.175,
+   "end": 453.65,
+   "text": "A useful numerical example has four symbols with probabilities one half, one quarter, one eighth, and one eighth.",
+   "translation": "一个有用例子含四个符号，概率依次为二分之一、四分之一、八分之一、八分之一。"
+  },
+  {
+   "start": 454.1,
+   "end": 460.45,
+   "text": "Imagine identifying the symbol by asking yes-or-no questions, with each answer choosing a branch.",
+   "translation": "想象用是非问题识别符号，每个回答选择一条分支。"
+  },
+  {
+   "start": 460.9,
+   "end": 465.2,
+   "text": "Ask first whether the symbol is the one with probability one half.",
+   "translation": "先问符号是否为概率二分之一的那个。"
+  },
+  {
+   "start": 465.65,
+   "end": 472.45,
+   "text": "If yes, identification ends after one question; if no, three symbols remain in the other branch.",
+   "translation": "若是，一问即可识别；若否，另一分支还剩三个符号。"
+  },
+  {
+   "start": 472.9,
+   "end": 478.2,
+   "text": "Ask next whether the remaining symbol is the one with probability one quarter.",
+   "translation": "接着询问剩余符号是否为概率四分之一的那个。"
+  },
+  {
+   "start": 478.65,
+   "end": 484.875,
+   "text": "That outcome ends after two questions, while the two one-eighth outcomes require one more question.",
+   "translation": "该符号两问结束，而两个八分之一概率的符号还需再问一题。"
+  },
+  {
+   "start": 485.325,
+   "end": 491.1,
+   "text": "The leaf depths are one, two, three, and three. Should an average treat every leaf equally?",
+   "translation": "叶深为一、二、三、三。求平均时，应当给所有叶子相同权重吗？"
+  },
+  {
+   "start": 494.05,
+   "end": 501.6,
+   "text": "Weight each depth by its symbol probability: one half times one, one quarter times two, and two eighths times three.",
+   "translation": "用符号概率加权深度：二分之一乘一、四分之一乘二、两个八分之一乘三。"
+  },
+  {
+   "start": 502.05,
+   "end": 507.95,
+   "text": "The average depth is one half plus one half plus three quarters, which equals seven quarters.",
+   "translation": "平均深度为二分之一加二分之一加四分之三，等于四分之七。"
+  },
+  {
+   "start": 508.4,
+   "end": 515.775,
+   "text": "The entropy of this distribution is also seven quarters bits because its surprisal values match those depths.",
+   "translation": "此分布的熵也为四分之七比特，因为自信息值恰好对应这些深度。"
+  },
+  {
+   "start": 516.225,
+   "end": 523.15,
+   "text": "This tree illustrates a distribution and its average; it does not prove a general optimal coding theorem.",
+   "translation": "这棵树展示了分布与平均值，并未证明一般的最优编码定理。"
+  },
+  {
+   "start": 523.6,
+   "end": 530.5,
+   "text": "An expectation is a probability-weighted sum, so frequent outcomes contribute more often to entropy.",
+   "translation": "期望是按概率加权求和，因此常见结果对熵贡献更频繁。"
+  },
+  {
+   "start": 530.95,
+   "end": 539.175,
+   "text": "An unlikely result has larger surprisal, but its contribution to entropy is still multiplied by its small probability.",
+   "translation": "罕见结果自信息较大，但它对熵的贡献仍乘以较小概率。"
+  },
+  {
+   "start": 539.625,
+   "end": 546.025,
+   "text": "For probabilities one half and one half, each outcome carries one bit and the average is one bit.",
+   "translation": "概率各半时，每个结果携带一比特，平均值也是一比特。"
+  },
+  {
+   "start": 546.475,
+   "end": 553.95,
+   "text": "For probabilities one and zero, the certain outcome carries zero bits and the impossible outcome contributes nothing.",
+   "translation": "概率为一和零时，确定结果携带零比特，不可能结果不贡献。"
+  },
+  {
+   "start": 554.4,
+   "end": 561.15,
+   "text": "These examples show why entropy depends on the full distribution rather than the alphabet size alone.",
+   "translation": "这些例子说明熵取决于完整分布，而非仅由字母表大小决定。"
+  },
+  {
+   "start": 561.6,
+   "end": 568.4,
+   "text": "The question tree gives each symbol a distinct leaf, so following answers identifies the source outcome.",
+   "translation": "问题树为每个符号分配不同叶子，因此沿回答路径即可识别信源结果。"
+  },
+  {
+   "start": 572.4,
+   "end": 576.5,
+   "text": "This example asks whether knowing X can make Y more uncertain.",
+   "translation": "这个例子问：知道X，会不会让我们对Y更不确定？"
+  },
+  {
+   "start": 576.95,
+   "end": 582.2,
+   "text": "Recall, an outcome's surprisal is larger when its probability is smaller.",
+   "translation": "回顾一下：结果的概率越小，它的自信息越大。"
+  },
+  {
+   "start": 582.65,
+   "end": 587.375,
+   "text": "Entropy averages those surprisal values using their probabilities.",
+   "translation": "熵按各结果的概率，对自信息取平均。"
+  },
+  {
+   "start": 587.825,
+   "end": 591.175,
+   "text": "Let X and Y each take the values zero and one.",
+   "translation": "令X和Y都只取零或一。"
+  },
+  {
+   "start": 591.625,
+   "end": 595.8,
+   "text": "The joint table lists the probability of every ordered pair.",
+   "translation": "联合表列出每一对取值的概率。"
+  },
+  {
+   "start": 596.25,
+   "end": 601.475,
+   "text": "At X zero and Y zero, the joint probability is zero point zero five.",
+   "translation": "X为零且Y为零的联合概率是零点零五。"
+  },
+  {
+   "start": 601.925,
+   "end": 606.85,
+   "text": "The cell for X zero and Y one also contains zero point zero five.",
+   "translation": "X为零且Y为一的格子也是零点零五。"
+  },
+  {
+   "start": 607.3,
+   "end": 611.9,
+   "text": "For X one and Y zero, the joint probability is zero point nine.",
+   "translation": "X为一且Y为零的联合概率是零点九。"
+  },
+  {
+   "start": 612.35,
+   "end": 616.475,
+   "text": "The final cell, X one and Y one, has probability zero.",
+   "translation": "最后一格，即X和Y都为一，概率为零。"
+  },
+  {
+   "start": 616.925,
+   "end": 622.025,
+   "text": "These four entries are joint probabilities, not yet conditional probabilities.",
+   "translation": "这四个数是联合概率，还不是条件概率。"
+  },
+  {
+   "start": 622.475,
+   "end": 626.875,
+   "text": "Add across the X zero row to get probability zero point one.",
+   "translation": "把X为零这一行相加，得到概率零点一。"
+  },
+  {
+   "start": 627.325,
+   "end": 630.425,
+   "text": "The X one row totals zero point nine.",
+   "translation": "X为一这一行的总和是零点九。"
+  },
+  {
+   "start": 630.875,
+   "end": 635.975,
+   "text": "So X has marginal probabilities zero point one and zero point nine.",
+   "translation": "所以X的边缘概率分别是零点一和零点九。"
+  },
+  {
+   "start": 636.425,
+   "end": 641.15,
+   "text": "Now sum down each column to find the marginal distribution of Y.",
+   "translation": "现在沿列相加，求出Y的边缘分布。"
+  },
+  {
+   "start": 641.6,
+   "end": 645.85,
+   "text": "For Y zero, add zero point zero five and zero point nine.",
+   "translation": "Y为零的概率是零点零五加零点九。"
+  },
+  {
+   "start": 646.3,
+   "end": 649.575,
+   "text": "This gives probability zero point nine five.",
+   "translation": "结果是零点九五。"
+  },
+  {
+   "start": 650.025,
+   "end": 653.45,
+   "text": "For Y one, add zero point zero five and zero.",
+   "translation": "Y为一的概率是零点零五加零。"
+  },
+  {
+   "start": 653.9,
+   "end": 657.15,
+   "text": "Its probability is zero point zero five.",
+   "translation": "它的概率是零点零五。"
+  },
+  {
+   "start": 657.6,
+   "end": 661.525,
+   "text": "The column totals sum to one, so they form a distribution.",
+   "translation": "列总和为一，因此确实构成一个分布。"
+  },
+  {
+   "start": 661.975,
+   "end": 667.75,
+   "text": "Before seeing X, the entropy of Y is binary entropy at zero point zero five.",
+   "translation": "观察X之前，Y的熵是概率零点零五处的二元熵。"
+  },
+  {
+   "start": 668.2,
+   "end": 672.825,
+   "text": "Numerically, H of Y is about zero point two eight six four bits.",
+   "translation": "数值上，Y的熵约为零点二八六四比特。"
+  },
+  {
+   "start": 673.275,
+   "end": 677.475,
+   "text": "This is our prior uncertainty about Y, before observing X.",
+   "translation": "这是观察X之前，对Y的不确定性。"
+  },
+  {
+   "start": 677.925,
+   "end": 682.975,
+   "text": "To condition on an observed X, divide its joint row by that row's total.",
+   "translation": "要对观察到的X取条件，就用联合表该行除以行总和。"
+  },
+  {
+   "start": 683.425,
+   "end": 687.4,
+   "text": "When X is zero, the row total is only zero point one.",
+   "translation": "当X为零时，该行总和只有零点一。"
+  },
+  {
+   "start": 687.85,
+   "end": 692.075,
+   "text": "Both joint entries in that row equal zero point zero five.",
+   "translation": "这一行的两个联合概率都是零点零五。"
+  },
+  {
+   "start": 692.525,
+   "end": 698.525,
+   "text": "Dividing each by zero point one makes both conditional probabilities zero point five.",
+   "translation": "分别除以零点一后，两个条件概率都变成零点五。"
+  },
+  {
+   "start": 698.975,
+   "end": 706.1,
+   "text": "Given X zero, Y has equal probabilities. Will its uncertainty now be above or below the prior value?",
+   "translation": "给定X为零时，Y两种结果等概率。它的不确定性比先验值更高，还是更低？"
+  },
+  {
+   "start": 709.05,
+   "end": 712.425,
+   "text": "The entropy of Y given X zero is one bit.",
+   "translation": "已知X为零时，Y的熵是一比特。"
+  },
+  {
+   "start": 712.875,
+   "end": 717.625,
+   "text": "This exceeds the prior entropy of about zero point two eight six four bits.",
+   "translation": "这高于约零点二八六四比特的先验熵。"
+  },
+  {
+   "start": 718.075,
+   "end": 722.65,
+   "text": "Thus this rare observation of X has increased uncertainty about Y.",
+   "translation": "所以，这个罕见的X观测反而增加了对Y的不确定性。"
+  },
+  {
+   "start": 723.1,
+   "end": 727.45,
+   "text": "Now condition on X one, whose row total is zero point nine.",
+   "translation": "现在看X为一的条件分布，该行总和为零点九。"
+  },
+  {
+   "start": 727.9,
+   "end": 732.925,
+   "text": "Its joint entries are zero point nine for Y zero and zero for Y one.",
+   "translation": "其中Y为零的联合概率是零点九，Y为一的是零。"
+  },
+  {
+   "start": 733.375,
+   "end": 738.825,
+   "text": "Divide by zero point nine to obtain conditional probabilities one and zero.",
+   "translation": "除以零点九后，条件概率分别为一和零。"
+  },
+  {
+   "start": 739.275,
+   "end": 743.925,
+   "text": "Given X one, Y is known exactly, so its entropy is zero bits.",
+   "translation": "已知X为一时，Y完全确定，因此熵为零比特。"
+  },
+  {
+   "start": 744.375,
+   "end": 749.775,
+   "text": "The two possible observations have moved uncertainty in opposite directions.",
+   "translation": "这两种观测使不确定性朝相反方向变化。"
+  },
+  {
+   "start": 750.225,
+   "end": 755.375,
+   "text": "Conditional entropy averages the row entropies with the probabilities of X.",
+   "translation": "条件熵按X各取值的概率，对行熵加权平均。"
+  },
+  {
+   "start": 755.825,
+   "end": 760.425,
+   "text": "The X zero row contributes weight zero point one times one bit.",
+   "translation": "X为零这一行贡献零点一乘一比特。"
+  },
+  {
+   "start": 760.875,
+   "end": 768.35,
+   "text": "The other row contributes point nine times zero. Is the weighted average above or below the prior uncertainty?",
+   "translation": "另一行贡献零点九乘零。加权平均值比先验不确定性更高，还是更低？"
+  },
+  {
+   "start": 771.3,
+   "end": 777.075,
+   "text": "Adding these contributions gives H of Y given X equal to zero point one bit.",
+   "translation": "相加后，给定X时Y的熵为零点一比特。"
+  },
+  {
+   "start": 777.525,
+   "end": 782.7,
+   "text": "This average is below H of Y, about zero point two eight six four bits.",
+   "translation": "这个平均值低于Y的熵，约零点二八六四比特。"
+  },
+  {
+   "start": 783.15,
+   "end": 787.5,
+   "text": "The inequality concerns the average, not each observed row.",
+   "translation": "这个不等式约束的是平均值，而不是每个观测行。"
+  },
+  {
+   "start": 787.95,
+   "end": 792.35,
+   "text": "It does not say every observation must reduce uncertainty.",
+   "translation": "它并没有说每次观测都会降低不确定性。"
+  },
+  {
+   "start": 792.8,
+   "end": 797.75,
+   "text": "In this example, the rare X zero row raises uncertainty to one bit.",
+   "translation": "在本例中，罕见的X零行把不确定性提高到一比特。"
+  },
+  {
+   "start": 798.2,
+   "end": 803.0,
+   "text": "Its small probability keeps the weighted average below the prior entropy.",
+   "translation": "它的概率很小，因此加权平均仍低于先验熵。"
+  },
+  {
+   "start": 803.45,
+   "end": 806.8,
+   "text": "We can verify the joint entropy with the chain rule.",
+   "translation": "我们可以用链式法则核对联合熵。"
+  },
+  {
+   "start": 807.25,
+   "end": 812.275,
+   "text": "It says H of X and Y equals H of X plus H of Y given X.",
+   "translation": "它说，X与Y的联合熵等于X的熵加上给定X时Y的熵。"
+  },
+  {
+   "start": 812.725,
+   "end": 817.7,
+   "text": "The entropy of X is about zero point four six eight nine nine six bits.",
+   "translation": "X的熵约为零点四六八九九六比特。"
+  },
+  {
+   "start": 818.15,
+   "end": 824.125,
+   "text": "Add zero point one to get joint entropy zero point five six eight nine nine six bits.",
+   "translation": "加上零点一，联合熵约为零点五六八九九六比特。"
+  },
+  {
+   "start": 824.575,
+   "end": 829.25,
+   "text": "The result matches the entropy computed directly from the joint table.",
+   "translation": "这个结果与直接从联合表计算出的熵一致。"
+  },
+  {
+   "start": 829.7,
+   "end": 835.475,
+   "text": "A rare observation can raise uncertainty, even when knowing X lowers it on average.",
+   "translation": "罕见观测可以增加不确定性，即使知道X会降低平均不确定性。"
+  },
+  {
+   "start": 839.5,
+   "end": 844.15,
+   "text": "We now compare the uncertainty of Y before and after observing X.",
+   "translation": "现在比较观察X之前与之后Y的不确定性。"
+  },
+  {
+   "start": 844.6,
+   "end": 848.75,
+   "text": "Before observing X, uncertainty about Y is H of Y.",
+   "translation": "观察X之前，对Y的不确定性是H(Y)。"
+  },
+  {
+   "start": 849.2,
+   "end": 854.975,
+   "text": "After observing X, the remaining average uncertainty is H of Y given X.",
+   "translation": "观察X之后，剩余的平均不确定性是H(Y|X)。"
+  },
+  {
+   "start": 855.425,
+   "end": 863.6,
+   "text": "Their difference defines mutual information: I of X semicolon Y equals H of Y minus H of Y given X.",
+   "translation": "两者之差定义互信息：I(X;Y)=H(Y)−H(Y|X)。"
+  },
+  {
+   "start": 864.05,
+   "end": 869.325,
+   "text": "It measures how much knowing X reduces uncertainty about Y on average.",
+   "translation": "它衡量平均而言，知道X减少了多少关于Y的不确定性。"
+  },
+  {
+   "start": 869.775,
+   "end": 876.475,
+   "text": "Terms with zero joint probability contribute zero, using the continuous limit of p log p.",
+   "translation": "联合概率为零的项按p log p的连续极限约定贡献为零。"
+  },
+  {
+   "start": 876.925,
+   "end": 882.05,
+   "text": "To derive another form, start with the joint entropy sum over x and y.",
+   "translation": "要推出另一形式，从对x和y求和的联合熵开始。"
+  },
+  {
+   "start": 882.5,
+   "end": 888.65,
+   "text": "For every positive joint probability, the product rule gives p of x,y as a product.",
+   "translation": "对每个正联合概率，乘法法则将p(x,y)写成乘积。"
+  },
+  {
+   "start": 889.1,
+   "end": 892.6,
+   "text": "The factors are p of x and p of y given x.",
+   "translation": "两个因子是p(x)与p(y|x)。"
+  },
+  {
+   "start": 893.05,
+   "end": 901.05,
+   "text": "Taking the negative logarithm converts that product into minus log p of x minus log p of y given x.",
+   "translation": "取负对数把乘积变成−log p(x)−log p(y|x)。"
+  },
+  {
+   "start": 901.5,
+   "end": 905.9,
+   "text": "Multiply by p of x,y and sum over both variables.",
+   "translation": "将其乘以p(x,y)，再对两个变量求和。"
+  },
+  {
+   "start": 906.35,
+   "end": 911.1,
+   "text": "The first sum collects each x contribution and becomes H of X.",
+   "translation": "第一项对每个x汇总，得到H(X)。"
+  },
+  {
+   "start": 911.55,
+   "end": 917.375,
+   "text": "The second sum is exactly the average conditional entropy H of Y given X.",
+   "translation": "第二项恰好是条件熵平均值H(Y|X)。"
+  },
+  {
+   "start": 917.825,
+   "end": 923.175,
+   "text": "Therefore H of X comma Y equals H of X plus H of Y given X.",
+   "translation": "因此H(X,Y)=H(X)+H(Y|X)。"
+  },
+  {
+   "start": 923.625,
+   "end": 928.525,
+   "text": "Repeating the factorization in the opposite order gives the other chain rule.",
+   "translation": "反向重复该分解，得到另一条熵链式法则。"
+  },
+  {
+   "start": 928.975,
+   "end": 933.8,
+   "text": "H of X comma Y equals H of Y plus H of X given Y.",
+   "translation": "H(X,Y)=H(Y)+H(X|Y)。"
+  },
+  {
+   "start": 934.25,
+   "end": 937.75,
+   "text": "Subtract H of Y given X from H of Y.",
+   "translation": "用H(Y)减去H(Y|X)。"
+  },
+  {
+   "start": 938.2,
+   "end": 942.875,
+   "text": "The result is H of X plus H of Y minus H of X comma Y.",
+   "translation": "结果是H(X)+H(Y)−H(X,Y)。"
+  },
+  {
+   "start": 943.325,
+   "end": 949.575,
+   "text": "Swapping X and Y leaves this expression unchanged, so mutual information is symmetric.",
+   "translation": "交换X与Y后表达式不变，所以互信息是对称的。"
+  },
+  {
+   "start": 950.025,
+   "end": 955.275,
+   "text": "The alternative mutual information formula is the sum of marginal entropies.",
+   "translation": "互信息的等价公式是边缘熵之和。"
+  },
+  {
+   "start": 955.725,
+   "end": 959.05,
+   "text": "Subtract the joint entropy H of X comma Y.",
+   "translation": "再减去联合熵H(X,Y)。"
+  },
+  {
+   "start": 959.5,
+   "end": 968.05,
+   "text": "The joint entropy chain rule also says the pair's uncertainty is uncertainty in X plus the remaining uncertainty in Y.",
+   "translation": "联合熵链式法则还说明，成对变量的不确定性等于X的不确定性加上Y的剩余不确定性。"
+  },
+  {
+   "start": 968.5,
+   "end": 975.25,
+   "text": "The order can be reversed without changing joint entropy, although the conditional term changes accordingly.",
+   "translation": "顺序可以反转而联合熵不变，但条件项也随之改变。"
+  },
+  {
+   "start": 975.7,
+   "end": 979.15,
+   "text": "Does shared information mean that X causes Y?",
+   "translation": "共享信息是否意味着X导致了Y？"
+  },
+  {
+   "start": 982.1,
+   "end": 991.075,
+   "text": "No. Mutual information measures statistical dependence; a common cause can associate X and Y without either causing the other.",
+   "translation": "不是。互信息度量统计依赖；共同原因可以使X与Y相关，而无需它们彼此致因。"
+  },
+  {
+   "start": 991.525,
+   "end": 996.975,
+   "text": "Now let Z be a third variable, and ask what X and Z share after Y is known.",
+   "translation": "现在令Z为第三个变量，并询问已知Y后X与Z还共享什么信息。"
+  },
+  {
+   "start": 997.425,
+   "end": 1002.975,
+   "text": "Define conditional mutual information by subtracting two conditional entropies.",
+   "translation": "条件互信息定义为两个条件熵之差。"
+  },
+  {
+   "start": 1003.425,
+   "end": 1010.375,
+   "text": "I of X semicolon Z given Y equals H of Z given Y minus H of Z given X,Y.",
+   "translation": "I(X;Z|Y)=H(Z|Y)−H(Z|X,Y)。"
+  },
+  {
+   "start": 1010.825,
+   "end": 1016.15,
+   "text": "Each entropy here is already averaged over the variables being conditioned upon.",
+   "translation": "这里每个熵都已经对其条件变量取了平均。"
+  },
+  {
+   "start": 1016.6,
+   "end": 1023.775,
+   "text": "So this difference measures the additional average reduction in uncertainty about Z from also learning X.",
+   "translation": "因此该差值衡量再获知X带来的Z平均不确定性额外减少。"
+  },
+  {
+   "start": 1024.225,
+   "end": 1030.275,
+   "text": "Expand I of X semicolon Y,Z using the same entropy-difference definition.",
+   "translation": "用同一熵差定义展开I(X;Y,Z)。"
+  },
+  {
+   "start": 1030.725,
+   "end": 1034.95,
+   "text": "It equals H of Y,Z minus H of Y,Z given X.",
+   "translation": "它等于H(Y,Z)减H(Y,Z|X)。"
+  },
+  {
+   "start": 1035.4,
+   "end": 1041.275,
+   "text": "Apply the entropy chain rule to the first term: H of Y plus H of Z given Y.",
+   "translation": "对第一项应用熵链式法则：H(Y)+H(Z|Y)。"
+  },
+  {
+   "start": 1041.725,
+   "end": 1047.3,
+   "text": "For each fixed X value, apply the joint entropy chain rule to the pair Y and Z.",
+   "translation": "对每个固定的X取值，对Y与Z这对变量应用联合熵链式法则。"
+  },
+  {
+   "start": 1047.75,
+   "end": 1056.95,
+   "text": "This gives H of Y,Z given X=x equal H of Y given X=x plus H of Z given Y,X=x.",
+   "translation": "得到H(Y,Z|X=x)=H(Y|X=x)+H(Z|Y,X=x)。"
+  },
+  {
+   "start": 1057.4,
+   "end": 1062.4,
+   "text": "Average that identity over X, weighting each value by its probability.",
+   "translation": "按X各取值的概率，对该恒等式加权平均。"
+  },
+  {
+   "start": 1062.85,
+   "end": 1069.225,
+   "text": "Then H of Y,Z given X equals H of Y given X plus H of Z given X,Y.",
+   "translation": "于是H(Y,Z|X)=H(Y|X)+H(Z|X,Y)。"
+  },
+  {
+   "start": 1069.675,
+   "end": 1076.75,
+   "text": "Apply its conditional version to the second term: H of Y given X plus H of Z given X,Y.",
+   "translation": "对第二项应用条件版本：H(Y|X)+H(Z|X,Y)。"
+  },
+  {
+   "start": 1077.2,
+   "end": 1081.7,
+   "text": "Regroup the first terms as H of Y minus H of Y given X.",
+   "translation": "把前两项重组为H(Y)−H(Y|X)。"
+  },
+  {
+   "start": 1082.15,
+   "end": 1088.15,
+   "text": "Regroup the remaining terms as H of Z given Y minus H of Z given X,Y.",
+   "translation": "把剩余项重组为H(Z|Y)−H(Z|X,Y)。"
+  },
+  {
+   "start": 1088.6,
+   "end": 1095.325,
+   "text": "The first group is I of X semicolon Y, and the second is I of X semicolon Z given Y.",
+   "translation": "第一组是I(X;Y)，第二组是I(X;Z|Y)。"
+  },
+  {
+   "start": 1095.775,
+   "end": 1103.45,
+   "text": "Thus I of X semicolon Y,Z equals I of X semicolon Y plus I of X semicolon Z given Y.",
+   "translation": "因此I(X;Y,Z)=I(X;Y)+I(X;Z|Y)。"
+  },
+  {
+   "start": 1103.9,
+   "end": 1111.425,
+   "text": "This is the mutual information chain rule: information about a pair separates into sequential contributions.",
+   "translation": "这就是互信息链式法则：关于一对变量的信息分成依次加入的贡献。"
+  },
+  {
+   "start": 1111.875,
+   "end": 1117.225,
+   "text": "The second contribution is measured after conditioning on the first variable Y.",
+   "translation": "第二项是在对第一个变量Y取条件之后度量的。"
+  },
+  {
+   "start": 1117.675,
+   "end": 1124.275,
+   "text": "Changing the order gives another valid decomposition with Y and Z exchanged inside the pair.",
+   "translation": "交换次序会得到另一种合法分解，即在成对变量中交换Y和Z。"
+  },
+  {
+   "start": 1124.725,
+   "end": 1131.05,
+   "text": "No nonnegativity proof has been used here; that will follow later from divergence arguments.",
+   "translation": "这里尚未证明非负性；稍后将从散度论证推出。"
+  },
+  {
+   "start": 1131.5,
+   "end": 1137.45,
+   "text": "For now, the definitions and algebra establish what each term means and how the terms add.",
+   "translation": "目前，定义与代数说明了各项含义以及它们如何相加。"
+  },
+  {
+   "start": 1137.9,
+   "end": 1143.15,
+   "text": "For the earlier table, Y has entropy H sub b of zero point zero five.",
+   "translation": "对前面的表，Y的熵为H_b(0.05)。"
+  },
+  {
+   "start": 1143.6,
+   "end": 1147.875,
+   "text": "That value is about zero point two eight six three nine seven bits.",
+   "translation": "该值约为零点二八六三九七比特。"
+  },
+  {
+   "start": 1148.325,
+   "end": 1154.125,
+   "text": "Conditional entropy was zero point one bit, so the difference is mutual information.",
+   "translation": "条件熵为零点一比特，两者之差就是互信息。"
+  },
+  {
+   "start": 1154.575,
+   "end": 1158.625,
+   "text": "Its value is zero point one eight six three nine seven bits.",
+   "translation": "其数值为零点一八六三九七比特。"
+  },
+  {
+   "start": 1159.075,
+   "end": 1167.05,
+   "text": "This numerical difference agrees with the interpretation as average uncertainty removed about Y by learning X.",
+   "translation": "这个数值差符合其解释：获知X后，关于Y的平均不确定性减少量。"
+  },
+  {
+   "start": 1171.0667,
+   "end": 1176.4917,
+   "text": "We finish by computing every quantity from one new binary joint distribution.",
+   "translation": "最后，我们从一个新的二元联合分布计算各个量。"
+  },
+  {
+   "start": 1176.9417,
+   "end": 1183.1167,
+   "text": "Rows correspond to X zero and X one, while columns correspond to Y zero and Y one.",
+   "translation": "行对应X为零和一，列对应Y为零和一。"
+  },
+  {
+   "start": 1183.5667,
+   "end": 1188.9917,
+   "text": "The first row contains joint probabilities zero point three and zero point two.",
+   "translation": "第一行的联合概率为零点三和零点二。"
+  },
+  {
+   "start": 1189.4417,
+   "end": 1193.5417,
+   "text": "The second row contains zero point one and zero point four.",
+   "translation": "第二行的联合概率为零点一和零点四。"
+  },
+  {
+   "start": 1193.9917,
+   "end": 1199.9917,
+   "text": "All four entries are nonnegative and sum to one, so this is a valid joint distribution.",
+   "translation": "四项都非负且总和为一，因此这是有效联合分布。"
+  },
+  {
+   "start": 1200.4417,
+   "end": 1205.8917,
+   "text": "Add across the first row to obtain probability zero point five for X zero.",
+   "translation": "第一行相加，得到X为零的概率零点五。"
+  },
+  {
+   "start": 1206.3417,
+   "end": 1212.2667,
+   "text": "The second row also sums to zero point five, giving probability one half for X one.",
+   "translation": "第二行也和为零点五，所以X为一的概率也是二分之一。"
+  },
+  {
+   "start": 1212.7167,
+   "end": 1218.9417,
+   "text": "Now add down the first column: zero point three plus zero point one equals zero point four.",
+   "translation": "再沿第一列相加：零点三加零点一等于零点四。"
+  },
+  {
+   "start": 1219.3917,
+   "end": 1225.3667,
+   "text": "The second column sums to zero point six, so Y one has probability zero point six.",
+   "translation": "第二列和为零点六，所以Y为一的概率是零点六。"
+  },
+  {
+   "start": 1225.8167,
+   "end": 1231.0167,
+   "text": "These are the marginals: X is balanced, while Y favors one over zero.",
+   "translation": "这就是边缘分布：X均衡，而Y取一比取零更常见。"
+  },
+  {
+   "start": 1231.4667,
+   "end": 1234.8917,
+   "text": "For a fair binary X, H of X is one bit.",
+   "translation": "均衡二元X的熵为一比特。"
+  },
+  {
+   "start": 1235.3417,
+   "end": 1241.9167,
+   "text": "For Y with probability zero point six of one, H of Y is H sub b of zero point six.",
+   "translation": "Y取一的概率为零点六，因此H(Y)=H_b(0.6)。"
+  },
+  {
+   "start": 1242.3667,
+   "end": 1248.1417,
+   "text": "Numerically, that entropy is about zero point nine seven zero nine five zero bits.",
+   "translation": "数值上，该熵约为零点九七零九五零比特。"
+  },
+  {
+   "start": 1248.5917,
+   "end": 1254.1917,
+   "text": "To find Y given X zero, divide the first row by its total, zero point five.",
+   "translation": "求给定X为零时Y的分布，将第一行除以行和零点五。"
+  },
+  {
+   "start": 1254.6417,
+   "end": 1261.6417,
+   "text": "The resulting conditional probabilities are zero point six for Y zero and zero point four for Y one.",
+   "translation": "给定X=0时，Y=0的概率为零点六，Y=1的概率为零点四。"
+  },
+  {
+   "start": 1262.0917,
+   "end": 1267.1667,
+   "text": "Given X one, divide the second row by the same total, zero point five.",
+   "translation": "给定X为一时，将第二行除以同样的行和零点五。"
+  },
+  {
+   "start": 1267.6167,
+   "end": 1273.3667,
+   "text": "That conditional row is zero point two for Y zero and zero point eight for Y one.",
+   "translation": "该条件行中，Y为零的概率零点二，Y为一的概率零点八。"
+  },
+  {
+   "start": 1273.8167,
+   "end": 1279.6917,
+   "text": "For each fixed row, its two conditional probabilities sum to one after normalization.",
+   "translation": "对每一行，归一化后的两个条件概率之和为一。"
+  },
+  {
+   "start": 1280.1417,
+   "end": 1288.1417,
+   "text": "The first row entropy is H sub b of zero point four, about zero point nine seven zero nine five zero bits.",
+   "translation": "第一行熵为H_b(0.4)，约零点九七零九五零比特。"
+  },
+  {
+   "start": 1288.5917,
+   "end": 1295.8917,
+   "text": "The second row entropy is H sub b of zero point eight, about zero point seven two one nine two eight bits.",
+   "translation": "第二行熵为H_b(0.8)，约零点七二一九二八比特。"
+  },
+  {
+   "start": 1296.3417,
+   "end": 1302.1917,
+   "text": "Both X values have probability one half. What average do these two row entropies give?",
+   "translation": "X的两个值均以二分之一概率出现。这两个行熵给出怎样的平均值？"
+  },
+  {
+   "start": 1305.1417,
+   "end": 1310.3667,
+   "text": "H of Y given X is about zero point eight four six four three nine bits.",
+   "translation": "H(Y|X)约为零点八四六四三九比特。"
+  },
+  {
+   "start": 1310.8167,
+   "end": 1317.8917,
+   "text": "Subtracting from H of Y gives mutual information about zero point one two four five one one bits.",
+   "translation": "用H(Y)减去它，得到互信息约零点一二四五一一比特。"
+  },
+  {
+   "start": 1318.3417,
+   "end": 1325.0667,
+   "text": "For a symmetric check, normalize the Y zero column, whose total probability is zero point four.",
+   "translation": "为做对称核对，将Y为零的列归一化，该列总概率为零点四。"
+  },
+  {
+   "start": 1325.5167,
+   "end": 1332.1667,
+   "text": "Then X zero has conditional probability three quarters, and X one has probability one quarter.",
+   "translation": "于是X为零的条件概率为四分之三，X为一为四分之一。"
+  },
+  {
+   "start": 1332.6167,
+   "end": 1339.6417,
+   "text": "In the Y one column, the conditional probabilities of X zero and X one are one third and two thirds.",
+   "translation": "在Y为一的列中，X为零和一的条件概率分别为三分之一、三分之二。"
+  },
+  {
+   "start": 1340.0917,
+   "end": 1345.7667,
+   "text": "Weight the two column entropies by probabilities zero point four and zero point six.",
+   "translation": "用零点四和零点六分别加权两列熵。"
+  },
+  {
+   "start": 1346.2167,
+   "end": 1351.8667,
+   "text": "This gives H of X given Y about zero point eight seven five four eight nine bits.",
+   "translation": "得到H(X|Y)约零点八七五四八九比特。"
+  },
+  {
+   "start": 1352.3167,
+   "end": 1357.9417,
+   "text": "Subtracting that from H of X, one bit, returns the same mutual information.",
+   "translation": "用H(X)一比特减去它，也得到相同互信息。"
+  },
+  {
+   "start": 1358.3917,
+   "end": 1364.0917,
+   "text": "We can check the same value using H of X plus H of Y minus joint entropy.",
+   "translation": "我们可用H(X)+H(Y)−H(X,Y)核对同一数值。"
+  },
+  {
+   "start": 1364.5417,
+   "end": 1369.4917,
+   "text": "The joint entropy is the sum of each cell probability times its surprisal.",
+   "translation": "联合熵是每个格子的概率乘其自信息后求和。"
+  },
+  {
+   "start": 1369.9417,
+   "end": 1375.6667,
+   "text": "The zero point three cell contributes about zero point five two one zero nine bits.",
+   "translation": "零点三的格子贡献约零点五二一零九比特。"
+  },
+  {
+   "start": 1376.1167,
+   "end": 1381.7917,
+   "text": "The zero point two cell contributes about zero point four six four three eight six bits.",
+   "translation": "零点二的格子贡献约零点四六四三八六比特。"
+  },
+  {
+   "start": 1382.2417,
+   "end": 1388.1667,
+   "text": "The zero point one cell contributes about zero point three three two one nine two bits.",
+   "translation": "零点一的格子贡献约零点三三二一九二比特。"
+  },
+  {
+   "start": 1388.6167,
+   "end": 1394.7167,
+   "text": "The zero point four cell contributes about zero point five two eight seven seven one bits.",
+   "translation": "零点四的格子贡献约零点五二八七七一比特。"
+  },
+  {
+   "start": 1395.1667,
+   "end": 1400.4167,
+   "text": "Adding them gives joint entropy about one point eight four six four three nine bits.",
+   "translation": "相加得到联合熵约一点八四六四三九比特。"
+  },
+  {
+   "start": 1400.8667,
+   "end": 1405.2667,
+   "text": "Compute one plus zero point nine seven zero nine five zero.",
+   "translation": "先算一加零点九七零九五零。"
+  },
+  {
+   "start": 1405.7167,
+   "end": 1409.4167,
+   "text": "Then subtract one point eight four six four three nine.",
+   "translation": "再减去一点八四六四三九。"
+  },
+  {
+   "start": 1409.8667,
+   "end": 1413.6917,
+   "text": "The result is zero point one two four five one one.",
+   "translation": "结果为零点一二四五一一。"
+  },
+  {
+   "start": 1414.1417,
+   "end": 1419.9417,
+   "text": "Both routes agree, checking the conditional entropy and joint entropy chain calculations.",
+   "translation": "两条路径结果一致，核对了条件熵与联合熵链式计算。"
+  },
+  {
+   "start": 1420.3917,
+   "end": 1427.7917,
+   "text": "For the same marginals, use rows point two, point three; and point two, point three. What shared information remains?",
+   "translation": "保持相同边缘分布，使用两行零点二、零点三。此时还剩多少共享信息？"
+  },
+  {
+   "start": 1430.7417,
+   "end": 1437.4917,
+   "text": "Independence makes H of Y given X equal H of Y, so mutual information becomes zero.",
+   "translation": "独立时H(Y|X)=H(Y)，因此互信息为零。"
+  },
+  {
+   "start": 1437.9417,
+   "end": 1442.7167,
+   "text": "Now let X be fair and set Y equal to X. How many bits do they share?",
+   "translation": "现在令X等概率取值，并令Y等于X。它们共享多少比特？"
+  },
+  {
+   "start": 1445.6667,
+   "end": 1450.6167,
+   "text": "The X zero row is one half, zero; the X one row is zero, one half.",
+   "translation": "X为零行是二分之一、零；X为一行是零、二分之一。"
+  },
+  {
+   "start": 1451.0667,
+   "end": 1456.2667,
+   "text": "Then H of Y given X is zero and mutual information equals one bit.",
+   "translation": "此时H(Y|X)为零，互信息等于一比特。"
+  },
+  {
+   "start": 1456.7167,
+   "end": 1464.4167,
+   "text": "Our table lies between these cases: dependence exists, but uncertainty about Y remains after X is known.",
+   "translation": "本例处于两者之间：变量相关，但知道X后Y仍有不确定性。"
+  },
+  {
+   "start": 1464.8667,
+   "end": 1472.2667,
+   "text": "The table, marginals, row averages, and two matching formulas provide a reusable calculation routine.",
+   "translation": "联合表、边缘、行平均和两条相符公式构成可复用的计算流程。"
+  },
+  {
+   "start": 1472.7167,
+   "end": 1480.4917,
+   "text": "Next, divergence will let us prove why mutual information is nonnegative and why independence gives exactly zero.",
+   "translation": "下一集将用散度证明互信息为何非负，以及它为何恰在独立时为零。"
+  }
+ ]
+}

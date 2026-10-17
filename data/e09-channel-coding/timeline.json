@@ -1,0 +1,2005 @@
+{
+ "language": "en",
+ "episode": "e09-channel-coding",
+ "duration": 1315.5,
+ "chapters": [
+  {
+   "id": "c01-code",
+   "index": 0,
+   "start": 5.0,
+   "end": 246.8,
+   "title": "Can redundancy rescue a noisy bit?",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    6.7,
+    17.225,
+    25.15,
+    30.45,
+    35.2,
+    43.5,
+    51.975,
+    59.2,
+    63.525,
+    65.875,
+    71.85,
+    76.275,
+    80.925,
+    84.5,
+    88.35,
+    92.9,
+    97.625,
+    101.65,
+    106.65,
+    110.8,
+    116.4,
+    120.475,
+    125.1,
+    130.7,
+    136.675,
+    141.6,
+    150.95,
+    159.8,
+    168.025,
+    176.7,
+    182.1,
+    187.325,
+    192.1,
+    197.225,
+    201.35,
+    205.725,
+    211.2,
+    216.0,
+    221.3,
+    225.025,
+    231.25,
+    235.375
+   ],
+   "sentenceEnds": [
+    6.25,
+    16.775,
+    21.7,
+    30.0,
+    34.75,
+    43.05,
+    51.525,
+    58.75,
+    63.075,
+    65.425,
+    71.4,
+    75.825,
+    80.475,
+    84.05,
+    87.9,
+    92.45,
+    97.175,
+    101.2,
+    106.2,
+    110.35,
+    115.95,
+    120.025,
+    124.65,
+    130.25,
+    136.225,
+    141.15,
+    150.5,
+    159.35,
+    164.575,
+    176.25,
+    181.65,
+    186.875,
+    191.65,
+    196.775,
+    200.9,
+    205.275,
+    210.75,
+    215.55,
+    220.85,
+    224.575,
+    230.8,
+    234.925,
+    240.175
+   ]
+  },
+  {
+   "id": "c02-joint",
+   "index": 1,
+   "start": 246.8,
+   "end": 470.2,
+   "title": "Three surprisal windows control true and wrong pairs",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    9.1,
+    12.675,
+    17.25,
+    21.225,
+    26.225,
+    30.225,
+    35.325,
+    39.5,
+    44.5,
+    48.75,
+    55.5,
+    65.85,
+    73.925,
+    83.1,
+    87.875,
+    92.725,
+    98.275,
+    103.275,
+    108.55,
+    113.325,
+    120.2,
+    124.975,
+    130.7,
+    134.875,
+    140.675,
+    148.975,
+    157.475,
+    165.8,
+    169.875,
+    177.45,
+    181.25,
+    187.325,
+    192.45,
+    199.75,
+    204.275,
+    209.85,
+    213.9,
+    217.7
+   ],
+   "sentenceEnds": [
+    8.65,
+    12.225,
+    16.8,
+    20.775,
+    25.775,
+    29.775,
+    34.875,
+    39.05,
+    44.05,
+    48.3,
+    55.05,
+    62.4,
+    73.475,
+    82.65,
+    87.425,
+    92.275,
+    97.825,
+    102.825,
+    108.1,
+    112.875,
+    119.75,
+    124.525,
+    130.25,
+    134.425,
+    140.225,
+    148.525,
+    157.025,
+    165.35,
+    169.425,
+    177.0,
+    180.8,
+    186.875,
+    192.0,
+    199.3,
+    203.825,
+    209.4,
+    213.45,
+    217.25,
+    221.8
+   ]
+  },
+  {
+   "id": "c03-random",
+   "index": 2,
+   "start": 470.2,
+   "end": 639.2667,
+   "title": "One transmitted pair plus a union bound",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.425,
+    11.375,
+    16.3,
+    21.075,
+    24.3,
+    29.55,
+    40.95,
+    48.875,
+    54.975,
+    59.2,
+    62.05,
+    65.775,
+    70.9,
+    76.5,
+    82.95,
+    89.3,
+    92.55,
+    96.125,
+    100.825,
+    107.175,
+    114.675,
+    121.85,
+    124.775,
+    128.525,
+    134.7,
+    138.25,
+    141.575,
+    145.4,
+    152.65,
+    157.975,
+    162.725
+   ],
+   "sentenceEnds": [
+    6.975,
+    10.925,
+    15.85,
+    20.625,
+    23.85,
+    29.1,
+    37.5,
+    48.425,
+    54.525,
+    58.75,
+    61.6,
+    65.325,
+    70.45,
+    76.05,
+    82.5,
+    88.85,
+    92.1,
+    95.675,
+    100.375,
+    106.725,
+    114.225,
+    121.4,
+    124.325,
+    128.075,
+    134.25,
+    137.8,
+    141.125,
+    144.95,
+    152.2,
+    157.525,
+    162.275,
+    167.45
+   ]
+  },
+  {
+   "id": "c04-expurgation",
+   "index": 3,
+   "start": 639.2667,
+   "end": 765.6667,
+   "title": "Remove a vanishing fraction of bad messages",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    6.925,
+    11.625,
+    15.55,
+    24.25,
+    29.2,
+    33.125,
+    37.025,
+    41.75,
+    46.725,
+    51.5,
+    56.9,
+    60.725,
+    65.175,
+    69.05,
+    76.975,
+    82.0,
+    85.275,
+    90.725,
+    96.625,
+    101.3,
+    106.95,
+    109.975,
+    115.55,
+    121.3
+   ],
+   "sentenceEnds": [
+    6.475,
+    11.175,
+    15.1,
+    20.8,
+    28.75,
+    32.675,
+    36.575,
+    41.3,
+    46.275,
+    51.05,
+    56.45,
+    60.275,
+    64.725,
+    68.6,
+    76.525,
+    81.55,
+    84.825,
+    90.275,
+    96.175,
+    100.85,
+    106.5,
+    109.525,
+    115.1,
+    120.85,
+    124.775
+   ]
+  },
+  {
+   "id": "c05-converse",
+   "index": 4,
+   "start": 765.6667,
+   "end": 936.6333,
+   "title": "Single-letter capacity bounds every reliable code",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.2,
+    14.1,
+    18.9,
+    27.4,
+    33.825,
+    40.1,
+    44.0,
+    48.375,
+    52.425,
+    57.875,
+    63.1,
+    69.375,
+    75.075,
+    81.35,
+    87.825,
+    91.775,
+    95.9,
+    101.15,
+    107.125,
+    111.35,
+    117.475,
+    121.25,
+    128.05,
+    133.25,
+    137.275,
+    142.5,
+    149.3,
+    153.75,
+    160.25,
+    165.8
+   ],
+   "sentenceEnds": [
+    7.75,
+    13.65,
+    18.45,
+    26.95,
+    33.375,
+    39.65,
+    43.55,
+    47.925,
+    51.975,
+    57.425,
+    62.65,
+    68.925,
+    74.625,
+    80.9,
+    87.375,
+    91.325,
+    95.45,
+    100.7,
+    106.675,
+    110.9,
+    117.025,
+    120.8,
+    127.6,
+    132.8,
+    136.825,
+    142.05,
+    148.85,
+    153.3,
+    159.8,
+    165.35,
+    169.35
+   ]
+  },
+  {
+   "id": "c06-separation",
+   "index": 5,
+   "start": 936.6333,
+   "end": 1150.6,
+   "title": "Compare source bits with channel information budget",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.825,
+    12.3,
+    17.525,
+    21.425,
+    27.0,
+    31.525,
+    35.925,
+    43.05,
+    47.65,
+    52.475,
+    56.05,
+    60.05,
+    64.8,
+    69.5,
+    73.975,
+    80.2,
+    84.5,
+    90.175,
+    94.4,
+    101.575,
+    106.75,
+    115.25,
+    119.5,
+    125.225,
+    130.5,
+    138.05,
+    144.35,
+    149.875,
+    155.075,
+    160.875,
+    168.15,
+    173.75,
+    180.525,
+    186.5,
+    192.275,
+    197.725,
+    201.35,
+    207.45
+   ],
+   "sentenceEnds": [
+    7.375,
+    11.85,
+    17.075,
+    20.975,
+    26.55,
+    31.075,
+    35.475,
+    42.6,
+    47.2,
+    52.025,
+    55.6,
+    59.6,
+    64.35,
+    69.05,
+    73.525,
+    79.75,
+    84.05,
+    89.725,
+    93.95,
+    101.125,
+    106.3,
+    114.8,
+    119.05,
+    124.775,
+    130.05,
+    137.6,
+    143.9,
+    149.425,
+    154.625,
+    160.425,
+    167.7,
+    173.3,
+    180.075,
+    186.05,
+    191.825,
+    197.275,
+    200.9,
+    207.0,
+    212.35
+   ]
+  },
+  {
+   "id": "c07-feedback",
+   "index": 6,
+   "start": 1150.6,
+   "end": 1310.5,
+   "title": "Condition on past outputs one use at a time",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    8.325,
+    14.175,
+    19.55,
+    25.125,
+    35.575,
+    41.85,
+    45.775,
+    51.55,
+    58.275,
+    62.875,
+    67.925,
+    73.5,
+    79.425,
+    83.975,
+    88.925,
+    93.0,
+    98.875,
+    103.825,
+    108.3,
+    112.625,
+    117.825,
+    121.725,
+    127.225,
+    131.75,
+    137.125,
+    141.8,
+    145.55,
+    149.6,
+    153.55
+   ],
+   "sentenceEnds": [
+    7.875,
+    13.725,
+    19.1,
+    24.675,
+    32.125,
+    41.4,
+    45.325,
+    51.1,
+    57.825,
+    62.425,
+    67.475,
+    73.05,
+    78.975,
+    83.525,
+    88.475,
+    92.55,
+    98.425,
+    103.375,
+    107.85,
+    112.175,
+    117.375,
+    121.275,
+    126.775,
+    131.3,
+    136.675,
+    141.35,
+    145.1,
+    149.15,
+    153.1,
+    158.3
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 11.25,
+   "text": "Can repeating yourself make a noisy link more reliable?",
+   "translation": "重复自己，能让有噪声的链路更可靠吗？"
+  },
+  {
+   "start": 11.7,
+   "end": 21.775,
+   "text": "Send zero as zero zero zero and one as one one one through three independent BSC uses, each with crossover probability zero point one.",
+   "translation": "用三次独立的BSC(0.10)信道使用，把0发成000，把1发成111。"
+  },
+  {
+   "start": 22.225,
+   "end": 26.7,
+   "text": "The receiver sees zero one zero. Which original bit should it choose?",
+   "translation": "接收者看到010。它应该选择哪个原始比特？"
+  },
+  {
+   "start": 30.15,
+   "end": 35.0,
+   "text": "Majority decoding selects zero. It corrects any one flipped position.",
+   "translation": "多数判决选择0，能够纠正任意一个位置的翻转。"
+  },
+  {
+   "start": 35.45,
+   "end": 39.75,
+   "text": "An error now requires at least two of the three positions to flip.",
+   "translation": "现在，至少三个位置中有两个翻转才会出错。"
+  },
+  {
+   "start": 40.2,
+   "end": 48.05,
+   "text": "The probability is three times .10 squared times .90, plus .10 cubed: .028.",
+   "translation": "概率为3×0.10²×0.90+0.10³，即0.028。"
+  },
+  {
+   "start": 48.5,
+   "end": 56.525,
+   "text": "Error falls from .10 to .028, but the rate is only one information bit per three channel uses.",
+   "translation": "错误率从0.10降到0.028，但速率只有每三次信道使用传一个信息比特。"
+  },
+  {
+   "start": 56.975,
+   "end": 63.75,
+   "text": "Can longer blocks make error vanish at a positive rate? A finite repetition example cannot prove that.",
+   "translation": "更长的块能在正速率下让错误趋于零吗？一个有限重复码例子还不能证明这一点。"
+  },
+  {
+   "start": 64.2,
+   "end": 68.075,
+   "text": "A length n block code starts with a finite message set.",
+   "translation": "长度为n的分组码从有限消息集合开始。"
+  },
+  {
+   "start": 68.525,
+   "end": 70.425,
+   "text": "Write its size as M.",
+   "translation": "将其大小记为M。"
+  },
+  {
+   "start": 70.875,
+   "end": 76.4,
+   "text": "A deterministic encoder maps each message to an input sequence of length n.",
+   "translation": "确定性编码器将每条消息映射为长度n的输入序列。"
+  },
+  {
+   "start": 76.85,
+   "end": 80.825,
+   "text": "The channel produces a random output sequence of length n.",
+   "translation": "信道产生长度为n的随机输出序列。"
+  },
+  {
+   "start": 81.275,
+   "end": 85.475,
+   "text": "A decoder maps each received sequence to a message estimate.",
+   "translation": "译码器将每个接收序列映射为消息估计。"
+  },
+  {
+   "start": 85.925,
+   "end": 89.05,
+   "text": "The code rate is log two M divided by n.",
+   "translation": "码率R=(log₂M)/n。"
+  },
+  {
+   "start": 89.5,
+   "end": 92.9,
+   "text": "Its unit is information bits per channel use.",
+   "translation": "其单位是每次信道使用的信息比特数。"
+  },
+  {
+   "start": 93.35,
+   "end": 97.45,
+   "text": "For message m, define its conditional error probability.",
+   "translation": "对消息m，定义其条件错误概率。"
+  },
+  {
+   "start": 97.9,
+   "end": 102.175,
+   "text": "Average error is the mean of these probabilities over messages.",
+   "translation": "平均错误概率是这些条件错误概率对消息的平均。"
+  },
+  {
+   "start": 102.625,
+   "end": 106.2,
+   "text": "This convention gives every message equal weight.",
+   "translation": "这种约定给每条消息相同权重。"
+  },
+  {
+   "start": 106.65,
+   "end": 111.2,
+   "text": "Maximal error is the largest conditional error among messages.",
+   "translation": "最大错误概率是所有消息条件错误中的最大值。"
+  },
+  {
+   "start": 111.65,
+   "end": 115.35,
+   "text": "The maximal value cannot be smaller than the average.",
+   "translation": "最大值不可能小于平均值。"
+  },
+  {
+   "start": 115.8,
+   "end": 120.95,
+   "text": "An average criterion can hide a few messages with large conditional error.",
+   "translation": "平均准则可能掩盖少数条件错误很大的消息。"
+  },
+  {
+   "start": 121.4,
+   "end": 125.025,
+   "text": "A maximal criterion rules out that disparity.",
+   "translation": "最大错误准则排除了这种差异。"
+  },
+  {
+   "start": 125.475,
+   "end": 129.65,
+   "text": "Both criteria are defined using the channel law and decoder.",
+   "translation": "两种准则都由信道概率律和译码器定义。"
+  },
+  {
+   "start": 130.1,
+   "end": 135.25,
+   "text": "A maximum a posteriori decoder uses prior message probabilities.",
+   "translation": "最大后验译码器使用消息先验概率。"
+  },
+  {
+   "start": 135.7,
+   "end": 141.225,
+   "text": "With uniform messages, maximum a posteriori and maximum likelihood agree.",
+   "translation": "消息均匀时，最大后验与最大似然译码一致。"
+  },
+  {
+   "start": 141.675,
+   "end": 146.15,
+   "text": "With nonuniform messages, the prior can change the best decision.",
+   "translation": "消息不均匀时，先验可能改变最优判决。"
+  },
+  {
+   "start": 146.6,
+   "end": 155.5,
+   "text": "Use codewords zero zero zero and one one one on a BSC with crossover probability zero point two. Receive zero one one.",
+   "translation": "在BSC(0.20)上使用码字000和111，接收到011。"
+  },
+  {
+   "start": 155.95,
+   "end": 164.35,
+   "text": "The likelihoods are .032 versus .128. But the message priors are .90 versus .10.",
+   "translation": "两个似然分别为0.032和0.128，但消息先验分别为0.90和0.10。"
+  },
+  {
+   "start": 164.8,
+   "end": 169.575,
+   "text": "Does multiplying by those priors keep or reverse the likelihood decision?",
+   "translation": "乘上这些先验后，原来的似然判决会保留还是反转？"
+  },
+  {
+   "start": 173.025,
+   "end": 181.25,
+   "text": "The weighted values are zero point zero two eight eight versus zero point zero one two eight. MAP chooses zero zero zero.",
+   "translation": "加权后分别为0.0288和0.0128。最大后验判决选择000。"
+  },
+  {
+   "start": 181.7,
+   "end": 186.65,
+   "text": "This episode first studies deterministic encoders and decoders.",
+   "translation": "本集先研究确定性编码器与译码器。"
+  },
+  {
+   "start": 187.1,
+   "end": 191.875,
+   "text": "Random codebooks will be a proof device for finding deterministic codes.",
+   "translation": "随机码本将作为寻找确定码的证明工具。"
+  },
+  {
+   "start": 192.325,
+   "end": 196.65,
+   "text": "A code is reliable when its block error probability is small.",
+   "translation": "当分组错误概率较小时，称该码可靠。"
+  },
+  {
+   "start": 197.1,
+   "end": 201.775,
+   "text": "Vanishing error refers to a sequence of codes as block length grows.",
+   "translation": "错误趋零是指块长增长时的一列编码。"
+  },
+  {
+   "start": 202.225,
+   "end": 205.9,
+   "text": "It is not a zero-error promise for every finite block.",
+   "translation": "这并不保证每个有限块都零错误。"
+  },
+  {
+   "start": 206.35,
+   "end": 210.275,
+   "text": "The central question is which rates permit vanishing error.",
+   "translation": "核心问题是哪些码率允许错误概率趋零。"
+  },
+  {
+   "start": 210.725,
+   "end": 215.75,
+   "text": "For a discrete memoryless channel, the answer will involve mutual information.",
+   "translation": "对离散无记忆信道，答案将由互信息决定。"
+  },
+  {
+   "start": 216.2,
+   "end": 220.55,
+   "text": "First we need a test for whether an input-output pair looks typical.",
+   "translation": "首先需要检验输入输出对是否典型。"
+  },
+  {
+   "start": 221.0,
+   "end": 225.85,
+   "text": "The test must distinguish the true pair from an independent wrong codeword.",
+   "translation": "该检验必须区分真实配对与独立错误码字。"
+  },
+  {
+   "start": 226.3,
+   "end": 229.575,
+   "text": "Both steps use different probability arguments.",
+   "translation": "这两步分别使用不同的概率论证。"
+  },
+  {
+   "start": 230.025,
+   "end": 235.8,
+   "text": "The input and output marginal tests prevent atypical sequences from entering.",
+   "translation": "输入与输出边缘检验排除非典型序列。"
+  },
+  {
+   "start": 236.25,
+   "end": 239.925,
+   "text": "The joint test checks compatibility under the channel law.",
+   "translation": "联合检验检查输入输出是否符合信道规律。"
+  },
+  {
+   "start": 240.375,
+   "end": 245.175,
+   "text": "Next, define weak joint typicality through three surprisal tests.",
+   "translation": "接下来通过三项自信息检验定义弱联合典型性。"
+  },
+  {
+   "start": 249.2,
+   "end": 255.45,
+   "text": "Fix an input distribution P X and a discrete memoryless channel, named letter W.",
+   "translation": "固定输入分布P_X与离散无记忆信道W。"
+  },
+  {
+   "start": 255.9,
+   "end": 259.025,
+   "text": "Together they define a joint law P X Y.",
+   "translation": "二者共同定义联合分布P_XY。"
+  },
+  {
+   "start": 259.475,
+   "end": 263.6,
+   "text": "Draw n input-output pairs independently from this joint law.",
+   "translation": "从该联合分布独立抽取n组输入输出对。"
+  },
+  {
+   "start": 264.05,
+   "end": 267.575,
+   "text": "The weak joint typical set uses three conditions.",
+   "translation": "弱联合典型集由三个条件构成。"
+  },
+  {
+   "start": 268.025,
+   "end": 272.575,
+   "text": "First, input sequence surprisal per symbol is near H of X.",
+   "translation": "第一，输入序列每符号自信息接近H(X)。"
+  },
+  {
+   "start": 273.025,
+   "end": 276.575,
+   "text": "Its distance from H of X is at most epsilon.",
+   "translation": "它与H(X)的差距至多为ε。"
+  },
+  {
+   "start": 277.025,
+   "end": 281.675,
+   "text": "Second, output sequence surprisal per symbol is near H of Y.",
+   "translation": "第二，输出序列每符号自信息接近H(Y)。"
+  },
+  {
+   "start": 282.125,
+   "end": 285.85,
+   "text": "Its distance from H of Y is at most epsilon.",
+   "translation": "它与H(Y)的差距至多为ε。"
+  },
+  {
+   "start": 286.3,
+   "end": 290.85,
+   "text": "Third, joint sequence surprisal per symbol is near H of X,Y.",
+   "translation": "第三，联合序列每符号自信息接近H(X,Y)。"
+  },
+  {
+   "start": 291.3,
+   "end": 295.1,
+   "text": "Its distance from joint entropy is at most epsilon.",
+   "translation": "它与联合熵的差距至多为ε。"
+  },
+  {
+   "start": 295.55,
+   "end": 301.85,
+   "text": "These are marginal and joint probability tests, rather than empirical joint-frequency tests.",
+   "translation": "这些是边缘和联合概率检验，并非经验联合频率检验。"
+  },
+  {
+   "start": 302.3,
+   "end": 309.2,
+   "text": "Each fair four-bit string passes its marginal test. Does every displayed pair then pass the joint test?",
+   "translation": "每个公平四比特串都通过边缘检验。那么图中的每一对也都能通过联合检验吗？"
+  },
+  {
+   "start": 312.65,
+   "end": 320.275,
+   "text": "No. With epsilon .04, the joint test keeps exactly the pairs one bit apart in this four-bit example.",
+   "translation": "不是。在这个四比特例子中，ε=0.04的联合检验恰好只保留相差一位的串对。"
+  },
+  {
+   "start": 320.725,
+   "end": 329.45,
+   "text": "The true-pair probability here is zero point four two one eight seven five. Probability approaching one concerns growing block length.",
+   "translation": "这些串对的真实联合概率为0.421875。趋于一的概率结论针对的是不断增长的块长。"
+  },
+  {
+   "start": 329.9,
+   "end": 334.225,
+   "text": "For the true pair, each tested surprisal is a sample average.",
+   "translation": "对真实配对，每项自信息检验都是样本平均。"
+  },
+  {
+   "start": 334.675,
+   "end": 339.075,
+   "text": "The input surprisal terms are independent with mean H of X.",
+   "translation": "输入自信息项独立，均值为H(X)。"
+  },
+  {
+   "start": 339.525,
+   "end": 344.625,
+   "text": "The output marginal sequence is IID with mean surprisal H of Y.",
+   "translation": "输出边缘序列IID，其平均自信息为H(Y)。"
+  },
+  {
+   "start": 345.075,
+   "end": 349.625,
+   "text": "Joint pair surprisal terms are IID with mean H of X,Y.",
+   "translation": "联合配对自信息项IID，均值为H(X,Y)。"
+  },
+  {
+   "start": 350.075,
+   "end": 354.9,
+   "text": "Zero-probability events occur with probability zero and are ignored.",
+   "translation": "零概率事件发生概率为零，因此忽略。"
+  },
+  {
+   "start": 355.35,
+   "end": 359.675,
+   "text": "The weak law makes each test pass with probability approaching one.",
+   "translation": "弱大数定律保证每项检验通过概率趋于一。"
+  },
+  {
+   "start": 360.125,
+   "end": 366.55,
+   "text": "A union bound over the three failures shows the true pair is typical with probability approaching one.",
+   "translation": "对三项失败事件用并集界，可知真实配对典型概率趋于一。"
+  },
+  {
+   "start": 367.0,
+   "end": 371.325,
+   "text": "Now consider an independently generated wrong input sequence.",
+   "translation": "现在考虑独立生成的错误输入序列。"
+  },
+  {
+   "start": 371.775,
+   "end": 377.05,
+   "text": "It is independent of the actual channel output under the random-code ensemble.",
+   "translation": "在随机码本系综下，它独立于实际信道输出。"
+  },
+  {
+   "start": 377.5,
+   "end": 381.225,
+   "text": "This is exact independence, not an approximation.",
+   "translation": "这是精确独立，而非近似独立。"
+  },
+  {
+   "start": 381.675,
+   "end": 387.025,
+   "text": "The independent pair has distribution P X to n times P Y to n.",
+   "translation": "独立配对的分布为P_X^n乘P_Y^n。"
+  },
+  {
+   "start": 387.475,
+   "end": 395.325,
+   "text": "For every marginally typical input, its probability is at most two to negative n times H X minus epsilon.",
+   "translation": "每个边缘典型输入的概率至多为2^(−n(H(X)−ε))。"
+  },
+  {
+   "start": 395.775,
+   "end": 403.825,
+   "text": "For every marginally typical output, its probability is at most two to negative n times H Y minus epsilon.",
+   "translation": "每个边缘典型输出的概率至多为2^(−n(H(Y)−ε))。"
+  },
+  {
+   "start": 404.275,
+   "end": 412.15,
+   "text": "Their independent product is therefore at most two to negative n times H X plus H Y minus two epsilon.",
+   "translation": "独立乘积因此至多为2^(−n(H(X)+H(Y)−2ε))。"
+  },
+  {
+   "start": 412.6,
+   "end": 416.225,
+   "text": "We also need to count possible joint-typical pairs.",
+   "translation": "还需计算可能的联合典型配对数量。"
+  },
+  {
+   "start": 416.675,
+   "end": 423.8,
+   "text": "Each joint-typical pair has probability at least two to negative n times H X,Y plus epsilon.",
+   "translation": "每个联合典型配对的概率至少为2^(−n(H(X,Y)+ε))。"
+  },
+  {
+   "start": 424.25,
+   "end": 427.6,
+   "text": "All such joint probabilities sum to at most one.",
+   "translation": "所有这些联合概率之和至多为一。"
+  },
+  {
+   "start": 428.05,
+   "end": 433.675,
+   "text": "Hence the set contains at most two to n times H X,Y plus epsilon pairs.",
+   "translation": "因此该集合至多含2^(n(H(X,Y)+ε))个配对。"
+  },
+  {
+   "start": 434.125,
+   "end": 438.8,
+   "text": "Multiply this count by the largest independent-pair probability.",
+   "translation": "将该计数乘以独立配对概率的上界。"
+  },
+  {
+   "start": 439.25,
+   "end": 446.1,
+   "text": "The result is at most two to negative n times the quantity mutual information minus three epsilon.",
+   "translation": "结果至多为2^(−n(I(X;Y)−3ε))。"
+  },
+  {
+   "start": 446.55,
+   "end": 450.625,
+   "text": "Here I equals H X plus H Y minus H X,Y.",
+   "translation": "这里I(X;Y)=H(X)+H(Y)−H(X,Y)。"
+  },
+  {
+   "start": 451.075,
+   "end": 456.2,
+   "text": "This bounds the chance that one independent wrong codeword passes all tests.",
+   "translation": "这就界定了一个独立错误码字通过全部检验的概率。"
+  },
+  {
+   "start": 456.65,
+   "end": 460.25,
+   "text": "The true pair used a law of large numbers instead.",
+   "translation": "真实配对则使用大数定律论证。"
+  },
+  {
+   "start": 460.7,
+   "end": 464.05,
+   "text": "That distinction powers the random-coding proof.",
+   "translation": "这一区别支撑随机编码证明。"
+  },
+  {
+   "start": 464.5,
+   "end": 468.6,
+   "text": "Next, union-bound the wrong candidates in a random codebook.",
+   "translation": "接下来对随机码本中的错误候选使用并集界。"
+  },
+  {
+   "start": 472.6,
+   "end": 477.175,
+   "text": "Fix an input distribution P X with mutual information I.",
+   "translation": "固定输入分布P_X，其互信息记为I。"
+  },
+  {
+   "start": 477.625,
+   "end": 481.125,
+   "text": "Choose a positive target rate R strictly below I.",
+   "translation": "选择满足0<R<I的目标速率R。"
+  },
+  {
+   "start": 481.575,
+   "end": 486.05,
+   "text": "For block length n, set M to the integer floor of two to n R.",
+   "translation": "块长为n时，令M=⌊2^(nR)⌋。"
+  },
+  {
+   "start": 486.5,
+   "end": 490.825,
+   "text": "The realized rate R n equals log two M divided by n.",
+   "translation": "实际码率Rₙ=(log₂M)/n。"
+  },
+  {
+   "start": 491.275,
+   "end": 494.05,
+   "text": "As n grows, R n tends to R.",
+   "translation": "n增大时，Rₙ趋于R。"
+  },
+  {
+   "start": 494.5,
+   "end": 499.3,
+   "text": "Generate each of the M codewords independently using P X to n.",
+   "translation": "按照P_X^n独立生成M个码字。"
+  },
+  {
+   "start": 499.75,
+   "end": 507.7,
+   "text": "Transmit a uniform message through the DMC. Does this displayed output identify a unique typical candidate?",
+   "translation": "通过DMC发送均匀消息。图中的输出能唯一确定一个典型候选吗？"
+  },
+  {
+   "start": 511.15,
+   "end": 518.625,
+   "text": "The decoder seeks a unique jointly typical codeword. Here two qualify, so this possible book fails the test.",
+   "translation": "译码器寻找唯一的联合典型码字。这里有两个候选符合，因此这本可能的码表未通过检验。"
+  },
+  {
+   "start": 519.075,
+   "end": 524.725,
+   "text": "If none or several qualify, choose a fixed default message and count a test failure.",
+   "translation": "若没有或有多个候选通过，就选定默认消息，并计为检验失败。"
+  },
+  {
+   "start": 525.175,
+   "end": 528.95,
+   "text": "An error can occur because the true pair is not typical.",
+   "translation": "真实配对不典型可能造成错误。"
+  },
+  {
+   "start": 529.4,
+   "end": 531.8,
+   "text": "Call this probability A sub n.",
+   "translation": "将该事件概率记为aₙ。"
+  },
+  {
+   "start": 532.25,
+   "end": 535.525,
+   "text": "The weak law gives A sub n tending to zero.",
+   "translation": "弱大数定律给出aₙ趋于零。"
+  },
+  {
+   "start": 535.975,
+   "end": 540.65,
+   "text": "An error can also occur when a wrong codeword is jointly typical.",
+   "translation": "错误码字联合典型也可能造成错误。"
+  },
+  {
+   "start": 541.1,
+   "end": 546.25,
+   "text": "Fix which message was transmitted, while retaining the random-code ensemble.",
+   "translation": "固定所发消息的编号，同时保留随机码本系综。"
+  },
+  {
+   "start": 546.7,
+   "end": 552.7,
+   "text": "Every other random codeword is independent of the actual output under that ensemble.",
+   "translation": "在该系综下，每个其他随机码字都独立于实际输出。"
+  },
+  {
+   "start": 553.15,
+   "end": 559.05,
+   "text": "Averaging over that wrong codeword and output gives the preceding joint-typicality bound.",
+   "translation": "对该错误码字与输出共同取平均，得到上一章的联合典型概率界。"
+  },
+  {
+   "start": 559.5,
+   "end": 562.3,
+   "text": "There are M minus one wrong candidates.",
+   "translation": "错误候选共有M−1个。"
+  },
+  {
+   "start": 562.75,
+   "end": 565.875,
+   "text": "The union bound sums their probabilities.",
+   "translation": "并集界将这些概率相加。"
+  },
+  {
+   "start": 566.325,
+   "end": 570.575,
+   "text": "Average over messages, channel outputs, and random codebooks.",
+   "translation": "对消息、信道输出及随机码本取平均。"
+  },
+  {
+   "start": 571.025,
+   "end": 576.925,
+   "text": "Expected average error is at most A sub n plus M minus one times that bound.",
+   "translation": "期望平均错误至多为aₙ+(M−1)乘该概率界。"
+  },
+  {
+   "start": 577.375,
+   "end": 584.425,
+   "text": "Since M is at most two to n R, wrong-candidate confusion is bounded by two to negative n Delta.",
+   "translation": "由于M≤2^(nR)，错误候选混淆概率至多为2^(−nΔ)。"
+  },
+  {
+   "start": 584.875,
+   "end": 591.6,
+   "text": "Choose epsilon positive so Delta, equal to I minus R minus three epsilon, stays positive.",
+   "translation": "选择ε>0，使Δ=I−R−3ε保持为正。"
+  },
+  {
+   "start": 592.05,
+   "end": 594.525,
+   "text": "Then the exponent gap is positive.",
+   "translation": "这样指数间隔为正。"
+  },
+  {
+   "start": 594.975,
+   "end": 598.275,
+   "text": "Thus ensemble-average error tends to zero.",
+   "translation": "因此系综平均错误趋于零。"
+  },
+  {
+   "start": 598.725,
+   "end": 604.45,
+   "text": "At each n, some deterministic codebook has error no greater than its ensemble mean.",
+   "translation": "对每个n，都存在错误不超过系综均值的确定码本。"
+  },
+  {
+   "start": 604.9,
+   "end": 608.0,
+   "text": "Otherwise every codebook would exceed the mean.",
+   "translation": "否则每个码本都超过其平均值。"
+  },
+  {
+   "start": 608.45,
+   "end": 611.325,
+   "text": "This proves existence of a good codebook.",
+   "translation": "这证明了好码本的存在。"
+  },
+  {
+   "start": 611.775,
+   "end": 615.15,
+   "text": "It does not claim every random codebook is good.",
+   "translation": "这并不声称每个随机码本都好。"
+  },
+  {
+   "start": 615.6,
+   "end": 622.4,
+   "text": "For any input law, rates below its mutual information are achievable with vanishing average error.",
+   "translation": "对任意输入分布，低于其互信息的速率可实现平均错误趋零。"
+  },
+  {
+   "start": 622.85,
+   "end": 627.725,
+   "text": "Maximizing over input laws gives rates below channel capacity.",
+   "translation": "对输入分布最大化，便得到所有低于信道容量的速率。"
+  },
+  {
+   "start": 628.175,
+   "end": 632.475,
+   "text": "A rate of zero is trivially achievable by sending one message.",
+   "translation": "零速率可通过只发送一条消息而平凡实现。"
+  },
+  {
+   "start": 632.925,
+   "end": 637.65,
+   "text": "Next, convert average error control into maximal error control.",
+   "translation": "接下来将平均错误控制转为最大错误控制。"
+  },
+  {
+   "start": 641.6667,
+   "end": 645.7417,
+   "text": "Take a length n code with average conditional error eta.",
+   "translation": "取一个平均条件错误为η的长度n码。"
+  },
+  {
+   "start": 646.1917,
+   "end": 650.4417,
+   "text": "Assume eta lies strictly between zero and one for the moment.",
+   "translation": "暂时假设0<η<1。"
+  },
+  {
+   "start": 650.8917,
+   "end": 654.3667,
+   "text": "Set the bad-message threshold to square root eta.",
+   "translation": "将坏消息阈值设为√η。"
+  },
+  {
+   "start": 654.8167,
+   "end": 660.0667,
+   "text": "Call a message bad when its error exceeds the threshold. What fraction can be bad?",
+   "translation": "条件错误率超过阈值的消息称为坏消息。坏消息比例最多能有多大？"
+  },
+  {
+   "start": 663.5167,
+   "end": 668.0167,
+   "text": "The average error is at least the bad fraction times the threshold.",
+   "translation": "平均错误至少等于坏消息比例乘以阈值。"
+  },
+  {
+   "start": 668.4667,
+   "end": 671.9417,
+   "text": "Therefore the bad fraction is at most square root eta.",
+   "translation": "因此坏消息比例至多为√η。"
+  },
+  {
+   "start": 672.3917,
+   "end": 675.8417,
+   "text": "Delete all bad messages and retain the others.",
+   "translation": "删除所有坏消息，保留其余消息。"
+  },
+  {
+   "start": 676.2917,
+   "end": 680.5667,
+   "text": "At least M times one minus square root eta messages remain.",
+   "translation": "至少保留M(1−√η)条消息。"
+  },
+  {
+   "start": 681.0167,
+   "end": 685.5417,
+   "text": "Every retained message had conditional error at most square root eta.",
+   "translation": "每条保留消息的条件错误至多为√η。"
+  },
+  {
+   "start": 685.9917,
+   "end": 690.3167,
+   "text": "Keep each retained message’s original correct decoding region.",
+   "translation": "保留每条保留消息原有的正确译码区域。"
+  },
+  {
+   "start": 690.7667,
+   "end": 695.7167,
+   "text": "Reassign outputs of deleted messages to any one retained message.",
+   "translation": "将原先分给已删消息的输出，重新分给任意一条保留消息。"
+  },
+  {
+   "start": 696.1667,
+   "end": 699.5417,
+   "text": "This does not shrink any retained correct region.",
+   "translation": "这样不会缩小任何保留消息的正确区域。"
+  },
+  {
+   "start": 699.9917,
+   "end": 703.9917,
+   "text": "So no retained message’s error probability increases.",
+   "translation": "因此保留消息的错误概率不会增加。"
+  },
+  {
+   "start": 704.4417,
+   "end": 707.8667,
+   "text": "The new maximal error is at most square root eta.",
+   "translation": "新码的最大错误至多为√η。"
+  },
+  {
+   "start": 708.3167,
+   "end": 715.7917,
+   "text": "The retained rate satisfies R prime at least R plus log two of one minus square root eta divided by n.",
+   "translation": "保留码率满足R′≥R+log₂(1−√η)/n。"
+  },
+  {
+   "start": 716.2417,
+   "end": 720.8167,
+   "text": "The added term is a vanishing rate loss when eta tends to zero.",
+   "translation": "当η趋于零时，新增项对应消失的码率损失。"
+  },
+  {
+   "start": 721.2667,
+   "end": 724.0917,
+   "text": "If eta equals zero, delete nothing.",
+   "translation": "若η=0，则无需删除任何消息。"
+  },
+  {
+   "start": 724.5417,
+   "end": 729.5417,
+   "text": "Average-error achievability below capacity follows from random coding.",
+   "translation": "容量以下的平均错误可达性由随机编码得到。"
+  },
+  {
+   "start": 729.9917,
+   "end": 735.4417,
+   "text": "Expurgation then gives maximal-error achievability at the same limiting rates.",
+   "translation": "随后剔除法在相同极限速率下给出最大错误可达性。"
+  },
+  {
+   "start": 735.8917,
+   "end": 740.1167,
+   "text": "Conversely, maximal error always dominates average error.",
+   "translation": "反过来，最大错误始终不小于平均错误。"
+  },
+  {
+   "start": 740.5667,
+   "end": 745.7667,
+   "text": "Thus average and maximal error capacities agree for a finite DMC.",
+   "translation": "因此有限DMC的平均错误容量与最大错误容量相同。"
+  },
+  {
+   "start": 746.2167,
+   "end": 748.7917,
+   "text": "No symmetry of the channel was used.",
+   "translation": "此处没有使用信道对称性。"
+  },
+  {
+   "start": 749.2417,
+   "end": 754.3667,
+   "text": "This is an asymptotic conversion, not equality for every finite code.",
+   "translation": "这是渐近转换，并非每个有限码都相等。"
+  },
+  {
+   "start": 754.8167,
+   "end": 760.1167,
+   "text": "The argument assumes uniform averaging when defining the starting average error.",
+   "translation": "该论证假设初始平均错误按均匀消息定义。"
+  },
+  {
+   "start": 760.5667,
+   "end": 764.0417,
+   "text": "Next, the Fano bound supplies the rate converse.",
+   "translation": "接下来由Fano界得到速率逆向定理。"
+  },
+  {
+   "start": 768.0667,
+   "end": 773.4167,
+   "text": "Consider a deterministic length n code with M equiprobable messages.",
+   "translation": "考虑一个有M条等概率消息的确定性长度n码。"
+  },
+  {
+   "start": 773.8667,
+   "end": 779.3167,
+   "text": "Let J denote the random message, and M at least two the number of possible messages.",
+   "translation": "用J表示随机消息，用M≥2表示消息数。"
+  },
+  {
+   "start": 779.7667,
+   "end": 784.1167,
+   "text": "Let P sub e denote the average block error probability.",
+   "translation": "令P_e表示其平均分组错误概率。"
+  },
+  {
+   "start": 784.5667,
+   "end": 792.6167,
+   "text": "Fano’s inequality gives H of J given Y n at most one plus P sub e times log two of M minus one.",
+   "translation": "Fano不等式给出H(J|Yⁿ)≤1+P_e log₂(M−1)。"
+  },
+  {
+   "start": 793.0667,
+   "end": 799.0417,
+   "text": "Since entropy of J is log two M, information is at least log M minus that bound.",
+   "translation": "消息熵为log₂M，因此互信息至少为log₂M减去该上界。"
+  },
+  {
+   "start": 799.4917,
+   "end": 805.3167,
+   "text": "Fano gives I of J and Y n at least log M times one minus P e, less one.",
+   "translation": "Fano给出I(J;Yⁿ)≥(1−P_e)log₂M−1。"
+  },
+  {
+   "start": 805.7667,
+   "end": 809.2167,
+   "text": "The deterministic encoder maps J to X n.",
+   "translation": "确定性编码器将J映射为Xⁿ。"
+  },
+  {
+   "start": 809.6667,
+   "end": 813.5917,
+   "text": "The memoryless channel then generates Y n from X n.",
+   "translation": "随后无记忆信道根据Xⁿ生成Yⁿ。"
+  },
+  {
+   "start": 814.0417,
+   "end": 817.6417,
+   "text": "This forms the Markov chain J to X n to Y n.",
+   "translation": "这构成Markov链J→Xⁿ→Yⁿ。"
+  },
+  {
+   "start": 818.0917,
+   "end": 823.0917,
+   "text": "Data processing bounds I of J and Y n by I of X n and Y n.",
+   "translation": "数据处理不等式给出I(J;Yⁿ)≤I(Xⁿ;Yⁿ)。"
+  },
+  {
+   "start": 823.5417,
+   "end": 828.3167,
+   "text": "Expand the latter as H of Y n minus H of Y n given X n.",
+   "translation": "将后者展开为H(Yⁿ)−H(Yⁿ|Xⁿ)。"
+  },
+  {
+   "start": 828.7667,
+   "end": 834.5917,
+   "text": "Output entropy subadditivity gives H of Y n at most the sum of H of Y i.",
+   "translation": "输出熵次可加性给出H(Yⁿ)≤ΣᵢH(Yᵢ)。"
+  },
+  {
+   "start": 835.0417,
+   "end": 840.2917,
+   "text": "Memorylessness factors the conditional output law given the input sequence.",
+   "translation": "无记忆性使给定输入序列后的条件输出分布因子化。"
+  },
+  {
+   "start": 840.7417,
+   "end": 846.5667,
+   "text": "Therefore H of Y n given X n equals the sum of H of Y i given X i.",
+   "translation": "因此H(Yⁿ|Xⁿ)=ΣᵢH(Yᵢ|Xᵢ)。"
+  },
+  {
+   "start": 847.0167,
+   "end": 853.0417,
+   "text": "Combining these yields I of X n and Y n at most the sum of I of X i and Y i.",
+   "translation": "合并两式得I(Xⁿ;Yⁿ)≤ΣᵢI(Xᵢ;Yᵢ)。"
+  },
+  {
+   "start": 853.4917,
+   "end": 856.9917,
+   "text": "Each term uses the same single-use channel W.",
+   "translation": "每一项使用同一个单次信道W。"
+  },
+  {
+   "start": 857.4417,
+   "end": 861.1167,
+   "text": "Let P bar be the average of the n input marginals.",
+   "translation": "令P̅为n个输入边缘分布的平均。"
+  },
+  {
+   "start": 861.5667,
+   "end": 866.3667,
+   "text": "Mutual information is concave in the input law for a fixed channel.",
+   "translation": "固定信道时，互信息关于输入分布凹。"
+  },
+  {
+   "start": 866.8167,
+   "end": 872.3417,
+   "text": "Therefore the sum of the n terms is at most n times I of P bar and W.",
+   "translation": "因此n项之和至多为nI(P̅,W)。"
+  },
+  {
+   "start": 872.7917,
+   "end": 876.5667,
+   "text": "That is at most n C by the capacity definition.",
+   "translation": "根据容量定义，它又至多为nC。"
+  },
+  {
+   "start": 877.0167,
+   "end": 882.6917,
+   "text": "Thus log M times one minus P sub e, less one, is at most n times C.",
+   "translation": "因此(1−P_e)log₂M−1≤nC。"
+  },
+  {
+   "start": 883.1417,
+   "end": 886.4667,
+   "text": "The rate R n is log two M divided by n.",
+   "translation": "码率Rₙ=(log₂M)/n。"
+  },
+  {
+   "start": 886.9167,
+   "end": 893.2667,
+   "text": "Rearranging gives R n at most C plus one over n, all divided by one minus P sub e.",
+   "translation": "整理得到Rₙ≤(C+1/n)/(1−P_e)。"
+  },
+  {
+   "start": 893.7167,
+   "end": 898.4667,
+   "text": "As the error probability tends to zero, the upper bound tends to C.",
+   "translation": "当P_e趋于零时，该上界趋于C。"
+  },
+  {
+   "start": 898.9167,
+   "end": 902.4917,
+   "text": "Divide by n and let block error tend to zero.",
+   "translation": "两边除以n，并令分组错误趋于零。"
+  },
+  {
+   "start": 902.9417,
+   "end": 907.7167,
+   "text": "Every reliable code sequence then has limiting upper rate at most C.",
+   "translation": "于是每一列可靠编码的极限上码率至多为C。"
+  },
+  {
+   "start": 908.1667,
+   "end": 914.5167,
+   "text": "This proof uses Fano, data processing, output entropy subadditivity, and memorylessness.",
+   "translation": "证明分别使用Fano、数据处理、输出熵次可加性与无记忆性。"
+  },
+  {
+   "start": 914.9667,
+   "end": 918.9667,
+   "text": "Concavity performs the final single-letter averaging step.",
+   "translation": "最后的单字母平均步骤依赖互信息凹性。"
+  },
+  {
+   "start": 919.4167,
+   "end": 925.4667,
+   "text": "Together with achievability, this identifies capacity as the reliable-rate boundary.",
+   "translation": "结合可达性，这确定了可靠传输速率边界为容量。"
+  },
+  {
+   "start": 925.9167,
+   "end": 931.0167,
+   "text": "This converse uses no feedback; inputs are fixed before outputs arrive.",
+   "translation": "该逆向证明无反馈，输入在收到输出前已确定。"
+  },
+  {
+   "start": 931.4667,
+   "end": 935.0167,
+   "text": "Next, combine source compression and channel coding.",
+   "translation": "接下来结合信源压缩与信道编码。"
+  },
+  {
+   "start": 939.0333,
+   "end": 944.0083,
+   "text": "Begin with an IID finite-alphabet source of entropy H per symbol.",
+   "translation": "先考虑每符号熵为H的有限字母IID信源。"
+  },
+  {
+   "start": 944.4583,
+   "end": 948.4833,
+   "text": "Choose a source-code rate H plus delta for these m symbols.",
+   "translation": "为这m个符号选择H+δ的信源码率。"
+  },
+  {
+   "start": 948.9333,
+   "end": 953.7083,
+   "text": "This requires at most about two to m times H plus delta messages.",
+   "translation": "这至多需要约2^(m(H+δ))条压缩消息。"
+  },
+  {
+   "start": 954.1583,
+   "end": 957.6083,
+   "text": "Use n times of a DMC with capacity C.",
+   "translation": "使用容量为C的DMC共n次。"
+  },
+  {
+   "start": 958.0583,
+   "end": 963.1833,
+   "text": "Reliable channel coding supports message counts below roughly two to n C.",
+   "translation": "可靠信道编码支持低于约2^(nC)的消息数量。"
+  },
+  {
+   "start": 963.6333,
+   "end": 967.7083,
+   "text": "A strict inequality leaves room for finite-block margins.",
+   "translation": "严格不等式为有限块长误差留出裕量。"
+  },
+  {
+   "start": 968.1583,
+   "end": 972.1083,
+   "text": "Choose delta positive and smaller than channel capacity.",
+   "translation": "选择满足0<δ<C的裕量δ。"
+  },
+  {
+   "start": 972.5583,
+   "end": 979.2333,
+   "text": "Require m times the sum H plus delta to be below n times the difference C minus delta.",
+   "translation": "要求m(H+δ)<n(C−δ)。"
+  },
+  {
+   "start": 979.6833,
+   "end": 983.8333,
+   "text": "Source coding then makes its block error probability vanish.",
+   "translation": "信源编码由此使分组错误趋于零。"
+  },
+  {
+   "start": 984.2833,
+   "end": 988.6583,
+   "text": "Choose a channel code for the compressed messages at rate below C.",
+   "translation": "为压缩消息选择低于C的信道码。"
+  },
+  {
+   "start": 989.1083,
+   "end": 992.2333,
+   "text": "Use a maximal-error channel code for this step.",
+   "translation": "这一步使用最大错误信道码。"
+  },
+  {
+   "start": 992.6833,
+   "end": 996.2333,
+   "text": "The compressed messages need not be equiprobable.",
+   "translation": "压缩消息不必等概率。"
+  },
+  {
+   "start": 996.6833,
+   "end": 1000.9833,
+   "text": "A maximal-error bound controls every message distribution.",
+   "translation": "最大错误界控制任意消息分布。"
+  },
+  {
+   "start": 1001.4333,
+   "end": 1005.6833,
+   "text": "An end-to-end error requires source failure or channel failure.",
+   "translation": "端到端错误要求信源译码失败或信道译码失败。"
+  },
+  {
+   "start": 1006.1333,
+   "end": 1010.1583,
+   "text": "The total error is at most the sum of those two probabilities.",
+   "translation": "总错误至多为这两种错误概率之和。"
+  },
+  {
+   "start": 1010.6083,
+   "end": 1016.3833,
+   "text": "Now extend from an IID source to a stationary ergodic finite-alphabet source.",
+   "translation": "现在将IID信源推广到平稳遍历有限字母信源。"
+  },
+  {
+   "start": 1016.8333,
+   "end": 1020.6833,
+   "text": "Its block entropy divided by m tends to H bar.",
+   "translation": "其块熵除以m趋于H̅。"
+  },
+  {
+   "start": 1021.1333,
+   "end": 1026.3583,
+   "text": "E05 gives this source an asymptotic equipartition property.",
+   "translation": "E05已给出该信源的渐近等分性质。"
+  },
+  {
+   "start": 1026.8083,
+   "end": 1030.5833,
+   "text": "Source coding rates can approach H bar asymptotically.",
+   "translation": "渐近地，信源编码速率可趋近H̅。"
+  },
+  {
+   "start": 1031.0333,
+   "end": 1037.7583,
+   "text": "Require m times the sum H bar plus delta below n times the difference C minus delta.",
+   "translation": "要求m(H̅+δ)<n(C−δ)。"
+  },
+  {
+   "start": 1038.2083,
+   "end": 1042.9333,
+   "text": "Keep a positive margin to select both long-block codes reliably.",
+   "translation": "保留正裕量，以便可靠选取两个长块编码。"
+  },
+  {
+   "start": 1043.3833,
+   "end": 1051.4333,
+   "text": "With m over n tending to a finite positive rho, every strict inequality rho H bar below C is achievable.",
+   "translation": "若m/n趋于有限正数ρ，则每个严格满足ρH̅<C的比率均可达。"
+  },
+  {
+   "start": 1051.8833,
+   "end": 1055.6833,
+   "text": "The IID special case replaces H bar by H.",
+   "translation": "IID特例中以H替代H̅。"
+  },
+  {
+   "start": 1056.1333,
+   "end": 1061.4083,
+   "text": "The converse also covers codes that jointly map source blocks to channel blocks.",
+   "translation": "逆向证明也适用于直接将信源块映为信道块的联合码。"
+  },
+  {
+   "start": 1061.8583,
+   "end": 1066.6833,
+   "text": "For the converse, let U m be the source block over alphabet size K.",
+   "translation": "反向证明中，令Uᵐ为字母表大小K上的信源块。"
+  },
+  {
+   "start": 1067.1333,
+   "end": 1074.2333,
+   "text": "For the converse, a deterministic nonfeedback joint encoder produces a length-n channel input sequence.",
+   "translation": "反向证明中，确定性无反馈联合编码器输出长度n的信道输入序列。"
+  },
+  {
+   "start": 1074.6833,
+   "end": 1080.5333,
+   "text": "For K at least two, Fano bounds the conditional entropy by one plus P e m log K.",
+   "translation": "K≥2时，Fano界定条件熵至多为1+P_emlog₂K。"
+  },
+  {
+   "start": 1080.9833,
+   "end": 1086.0583,
+   "text": "The deterministic nonfeedback encoder gives U m to X n to Y n.",
+   "translation": "确定性无反馈编码器形成Uᵐ→Xⁿ→Yⁿ。"
+  },
+  {
+   "start": 1086.5083,
+   "end": 1091.2583,
+   "text": "The source-block mutual information is at most n C for a DMC.",
+   "translation": "DMC上的信源块互信息至多为nC。"
+  },
+  {
+   "start": 1091.7083,
+   "end": 1097.0583,
+   "text": "Decompose H of U m into that information plus conditional entropy.",
+   "translation": "将H(Uᵐ)分解为该互信息与条件熵。"
+  },
+  {
+   "start": 1097.5083,
+   "end": 1104.3333,
+   "text": "Thus H of U m is at most n times C, plus one, plus P sub e times m times log K.",
+   "translation": "因此H(Uᵐ)≤nC+1+P_emlog₂K。"
+  },
+  {
+   "start": 1104.7833,
+   "end": 1109.9333,
+   "text": "Divide by n and take m and n large with m over n tending to rho.",
+   "translation": "两边除以n，并令m、n增大且m/n趋于ρ。"
+  },
+  {
+   "start": 1110.3833,
+   "end": 1116.7083,
+   "text": "Vanishing error and H of U m over m tending to H bar yield rho H bar at most C.",
+   "translation": "错误趋零且H(Uᵐ)/m趋于H̅，得到ρH̅≤C。"
+  },
+  {
+   "start": 1117.1583,
+   "end": 1122.6833,
+   "text": "Strict inequality is achievable; exceeding the necessary bound is impossible.",
+   "translation": "严格不等式保证可达；超过必要上界则不可能。"
+  },
+  {
+   "start": 1123.1333,
+   "end": 1128.4583,
+   "text": "These arguments alone do not decide reliability at the equality boundary.",
+   "translation": "仅凭这些论证，不能判定等号边界处能否可靠传输。"
+  },
+  {
+   "start": 1128.9083,
+   "end": 1133.9083,
+   "text": "This is a separation statement under the stated source and channel assumptions.",
+   "translation": "这就是在所述信源与信道假设下的分离结论。"
+  },
+  {
+   "start": 1134.3583,
+   "end": 1137.5333,
+   "text": "It does not assert finite-delay optimality.",
+   "translation": "它不声称有限时延下仍然最优。"
+  },
+  {
+   "start": 1137.9833,
+   "end": 1143.6333,
+   "text": "A one-symbol source alphabet is deterministic and needs no compression converse.",
+   "translation": "单符号信源字母表对应确定信源，无需压缩逆向证明。"
+  },
+  {
+   "start": 1144.0833,
+   "end": 1148.9833,
+   "text": "Next, test whether causal feedback changes the DMC capacity.",
+   "translation": "接下来检验因果反馈是否改变DMC容量。"
+  },
+  {
+   "start": 1153.0,
+   "end": 1158.475,
+   "text": "Let J be a uniform message among M choices, with noiseless causal feedback.",
+   "translation": "令J为M种取值上的均匀消息，反馈无噪声且因果。"
+  },
+  {
+   "start": 1158.925,
+   "end": 1164.325,
+   "text": "At time i, the encoder chooses X i as a function of J and past outputs.",
+   "translation": "时刻i，编码器根据J与过去输出选择Xᵢ。"
+  },
+  {
+   "start": 1164.775,
+   "end": 1169.7,
+   "text": "Write X i equals f i of J and Y one through Y i minus one.",
+   "translation": "记Xᵢ=fᵢ(J,Y₁,…,Yᵢ₋₁)。"
+  },
+  {
+   "start": 1170.15,
+   "end": 1175.275,
+   "text": "The feedback encoder is causal because X i uses no future output.",
+   "translation": "反馈编码器具有因果性，因为Xᵢ不使用未来输出。"
+  },
+  {
+   "start": 1175.725,
+   "end": 1182.725,
+   "text": "The decoder estimates J from all outputs. Can this causal feedback raise the DMC capacity?",
+   "translation": "译码器根据所有输出估计J。这种因果反馈能提高DMC容量吗？"
+  },
+  {
+   "start": 1186.175,
+   "end": 1192.0,
+   "text": "Fano gives I of J and Y n at least log M times one minus P e, less one.",
+   "translation": "Fano给出I(J;Yⁿ)≥(1−P_e)log₂M−1。"
+  },
+  {
+   "start": 1192.45,
+   "end": 1195.925,
+   "text": "Expand this mutual information by the chain rule.",
+   "translation": "用链式法则展开该互信息。"
+  },
+  {
+   "start": 1196.375,
+   "end": 1201.7,
+   "text": "I of J and Y n is the sum of I of J and Y i given past outputs.",
+   "translation": "I(J;Yⁿ)=ΣᵢI(J;Yᵢ|Yⁱ⁻¹)。"
+  },
+  {
+   "start": 1202.15,
+   "end": 1208.425,
+   "text": "Each term equals H of Y i given its past minus H of Y i given J and its past.",
+   "translation": "每项等于H(Yᵢ|过去)−H(Yᵢ|J,过去)。"
+  },
+  {
+   "start": 1208.875,
+   "end": 1213.025,
+   "text": "The first entropy is at most the unconditional H of Y i.",
+   "translation": "第一项至多为无条件熵H(Yᵢ)。"
+  },
+  {
+   "start": 1213.475,
+   "end": 1218.075,
+   "text": "Given J and past outputs, the causal encoder fixes X i.",
+   "translation": "给定J和过去输出后，因果编码器确定Xᵢ。"
+  },
+  {
+   "start": 1218.525,
+   "end": 1223.65,
+   "text": "The memoryless channel then draws Y i using only W given X i.",
+   "translation": "无记忆信道随后只按W(·|Xᵢ)产生Yᵢ。"
+  },
+  {
+   "start": 1224.1,
+   "end": 1229.575,
+   "text": "Therefore H of Y i given J and past equals H of Y i given X i.",
+   "translation": "因此H(Yᵢ|J,过去)=H(Yᵢ|Xᵢ)。"
+  },
+  {
+   "start": 1230.025,
+   "end": 1234.125,
+   "text": "The conditional past does not change the current transition law.",
+   "translation": "给定过去不会改变当前转移律。"
+  },
+  {
+   "start": 1234.575,
+   "end": 1239.075,
+   "text": "Each chain-rule term is consequently at most I of X i and Y i.",
+   "translation": "因此每个链式项至多为I(Xᵢ;Yᵢ)。"
+  },
+  {
+   "start": 1239.525,
+   "end": 1243.15,
+   "text": "That single-use mutual information is at most C.",
+   "translation": "该单次互信息至多为C。"
+  },
+  {
+   "start": 1243.6,
+   "end": 1249.025,
+   "text": "Summing over all n channel uses bounds I of J and Y n by n times C.",
+   "translation": "对n次使用求和得I(J;Yⁿ)≤nC。"
+  },
+  {
+   "start": 1249.475,
+   "end": 1253.975,
+   "text": "Fano then gives the same converse rate bound as without feedback.",
+   "translation": "Fano不等式由此给出与无反馈时相同的逆向速率界。"
+  },
+  {
+   "start": 1254.425,
+   "end": 1258.45,
+   "text": "For achievability, the encoder may simply ignore feedback.",
+   "translation": "在可达性证明中，编码器可以直接忽略反馈。"
+  },
+  {
+   "start": 1258.9,
+   "end": 1262.775,
+   "text": "The nonfeedback code already achieves every rate below C.",
+   "translation": "无反馈编码已能达到所有低于C的速率。"
+  },
+  {
+   "start": 1263.225,
+   "end": 1267.975,
+   "text": "Thus noiseless causal feedback does not change DMC capacity.",
+   "translation": "因此无噪声因果反馈不改变DMC容量。"
+  },
+  {
+   "start": 1268.425,
+   "end": 1271.875,
+   "text": "The proof conditions on the output past at each time.",
+   "translation": "证明在每个时刻都对输出过去进行条件化。"
+  },
+  {
+   "start": 1272.325,
+   "end": 1277.375,
+   "text": "It does not assert a whole-block Markov chain from J through X n to Y n.",
+   "translation": "它没有声称整块存在J→Xⁿ→Yⁿ的Markov链。"
+  },
+  {
+   "start": 1277.825,
+   "end": 1281.9,
+   "text": "Feedback makes X i depend on past channel outputs.",
+   "translation": "有反馈时，Xᵢ依赖过去信道输出。"
+  },
+  {
+   "start": 1282.35,
+   "end": 1287.275,
+   "text": "Feedback may still affect delay, error exponents, or coding strategies.",
+   "translation": "反馈仍可能影响时延、错误指数或编码策略。"
+  },
+  {
+   "start": 1287.725,
+   "end": 1291.95,
+   "text": "Those effects do not alter the capacity conclusion proved here.",
+   "translation": "这些影响不改变此处证明的容量结论。"
+  },
+  {
+   "start": 1292.4,
+   "end": 1295.7,
+   "text": "The argument is specific to a memoryless channel.",
+   "translation": "该论证针对无记忆信道。"
+  },
+  {
+   "start": 1296.15,
+   "end": 1299.75,
+   "text": "Channels with memory require a separate analysis.",
+   "translation": "有记忆信道需要另行分析。"
+  },
+  {
+   "start": 1300.2,
+   "end": 1303.7,
+   "text": "The chain rule keeps the causal dependence visible.",
+   "translation": "链式法则使因果依赖始终显式可见。"
+  },
+  {
+   "start": 1304.15,
+   "end": 1308.9,
+   "text": "Next, continuous alphabets require densities and careful units.",
+   "translation": "下一集转向连续字母表，需要密度与谨慎的单位处理。"
+  }
+ ]
+}

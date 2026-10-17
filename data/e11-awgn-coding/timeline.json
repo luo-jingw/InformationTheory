@@ -1,0 +1,1737 @@
+{
+ "language": "en",
+ "episode": "e11-awgn-coding",
+ "duration": 1214.9667,
+ "chapters": [
+  {
+   "id": "c01-awgn",
+   "index": 0,
+   "start": 5.0,
+   "end": 163.3,
+   "title": "The Real AWGN Model",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    7.95,
+    12.15,
+    14.975,
+    20.35,
+    25.225,
+    31.0,
+    36.575,
+    50.0,
+    55.55,
+    60.825,
+    66.2,
+    69.325,
+    74.2,
+    81.225,
+    85.375,
+    89.25,
+    93.825,
+    98.05,
+    104.125,
+    108.9,
+    112.9,
+    117.2,
+    122.275,
+    127.275,
+    132.525,
+    137.15,
+    141.875,
+    147.65,
+    152.5
+   ],
+   "sentenceEnds": [
+    7.5,
+    11.7,
+    14.525,
+    19.9,
+    24.775,
+    30.55,
+    36.125,
+    46.55,
+    55.1,
+    60.375,
+    65.75,
+    68.875,
+    73.75,
+    80.775,
+    84.925,
+    88.8,
+    93.375,
+    97.6,
+    103.675,
+    108.45,
+    112.45,
+    116.75,
+    121.825,
+    126.825,
+    132.075,
+    136.7,
+    141.425,
+    147.2,
+    152.05,
+    156.675
+   ]
+  },
+  {
+   "id": "c02-upper",
+   "index": 1,
+   "start": 163.3,
+   "end": 335.3,
+   "title": "The Converse Bound",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.65,
+    12.125,
+    19.1,
+    28.0,
+    32.75,
+    37.675,
+    43.7,
+    51.0,
+    56.2,
+    61.375,
+    66.85,
+    71.575,
+    76.0,
+    81.95,
+    87.325,
+    92.95,
+    96.6,
+    102.225,
+    107.125,
+    112.425,
+    119.975,
+    124.475,
+    129.075,
+    132.875,
+    139.825,
+    145.0,
+    150.75,
+    156.525,
+    161.05,
+    166.975
+   ],
+   "sentenceEnds": [
+    7.2,
+    11.675,
+    18.65,
+    27.55,
+    32.3,
+    37.225,
+    43.25,
+    50.55,
+    55.75,
+    60.925,
+    66.4,
+    71.125,
+    75.55,
+    81.5,
+    86.875,
+    92.5,
+    96.15,
+    101.775,
+    106.675,
+    111.975,
+    119.525,
+    124.025,
+    128.625,
+    132.425,
+    139.375,
+    144.55,
+    150.3,
+    156.075,
+    160.6,
+    166.525,
+    170.4
+   ]
+  },
+  {
+   "id": "c03-codebook",
+   "index": 2,
+   "start": 335.3,
+   "end": 618.5333,
+   "title": "Gaussian Random Codebooks",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.15,
+    14.825,
+    20.725,
+    26.475,
+    31.325,
+    37.075,
+    42.85,
+    48.5,
+    55.825,
+    61.55,
+    69.575,
+    75.2,
+    79.45,
+    84.75,
+    92.575,
+    102.125,
+    109.775,
+    117.3,
+    121.525,
+    129.875,
+    137.625,
+    144.025,
+    148.2,
+    152.75,
+    159.325,
+    169.525,
+    175.15,
+    180.475,
+    187.85,
+    190.675,
+    200.225,
+    204.375,
+    209.75,
+    215.65,
+    222.0,
+    227.45,
+    233.0,
+    240.225,
+    245.525,
+    251.075,
+    257.225,
+    263.125,
+    266.375,
+    271.625,
+    276.575
+   ],
+   "sentenceEnds": [
+    7.7,
+    14.375,
+    20.275,
+    26.025,
+    30.875,
+    36.625,
+    42.4,
+    48.05,
+    55.375,
+    61.1,
+    69.125,
+    74.75,
+    79.0,
+    84.3,
+    92.125,
+    101.675,
+    109.325,
+    116.85,
+    121.075,
+    129.425,
+    137.175,
+    143.575,
+    147.75,
+    152.3,
+    158.875,
+    166.075,
+    174.7,
+    180.025,
+    187.4,
+    190.225,
+    199.775,
+    203.925,
+    209.3,
+    215.2,
+    221.55,
+    227.0,
+    232.55,
+    239.775,
+    245.075,
+    250.625,
+    256.775,
+    262.675,
+    265.925,
+    271.175,
+    276.125,
+    281.625
+   ]
+  },
+  {
+   "id": "c04-geometry",
+   "index": 3,
+   "start": 618.5333,
+   "end": 783.1,
+   "title": "A Volume Analogy",
+   "music": "motivation",
+   "sentenceStarts": [
+    2.4,
+    7.775,
+    15.35,
+    19.2,
+    24.05,
+    32.925,
+    37.35,
+    43.675,
+    54.2,
+    59.7,
+    65.575,
+    71.1,
+    75.7,
+    80.025,
+    86.025,
+    91.425,
+    96.325,
+    100.975,
+    105.375,
+    110.35,
+    115.15,
+    119.85,
+    124.325,
+    130.025,
+    135.0,
+    139.6,
+    143.125,
+    148.35,
+    154.6,
+    159.1
+   ],
+   "sentenceEnds": [
+    7.325,
+    14.9,
+    18.75,
+    23.6,
+    32.475,
+    36.9,
+    43.225,
+    50.75,
+    59.25,
+    65.125,
+    70.65,
+    75.25,
+    79.575,
+    85.575,
+    90.975,
+    95.875,
+    100.525,
+    104.925,
+    109.9,
+    114.7,
+    119.4,
+    123.875,
+    129.575,
+    134.55,
+    139.15,
+    142.675,
+    147.9,
+    154.15,
+    158.65,
+    162.95
+   ]
+  },
+  {
+   "id": "c05-bpsk",
+   "index": 4,
+   "start": 783.1,
+   "end": 1022.3,
+   "title": "BPSK Soft and Hard Decisions",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    9.45,
+    16.125,
+    21.875,
+    27.1,
+    34.15,
+    39.225,
+    44.1,
+    48.0,
+    59.45,
+    64.275,
+    70.0,
+    76.9,
+    85.35,
+    93.475,
+    101.725,
+    108.575,
+    114.25,
+    122.475,
+    128.35,
+    133.45,
+    141.425,
+    146.325,
+    150.925,
+    156.125,
+    163.425,
+    170.25,
+    177.3,
+    184.275,
+    191.25,
+    196.075,
+    200.825,
+    205.175,
+    210.475,
+    215.85,
+    220.25,
+    225.85,
+    232.875
+   ],
+   "sentenceEnds": [
+    9.0,
+    15.675,
+    21.425,
+    26.65,
+    33.7,
+    38.775,
+    43.65,
+    47.55,
+    56.0,
+    63.825,
+    69.55,
+    76.45,
+    84.9,
+    93.025,
+    101.275,
+    108.125,
+    113.8,
+    122.025,
+    127.9,
+    133.0,
+    140.975,
+    145.875,
+    150.475,
+    155.675,
+    162.975,
+    169.8,
+    176.85,
+    183.825,
+    190.8,
+    195.625,
+    200.375,
+    204.725,
+    210.025,
+    215.4,
+    219.8,
+    225.4,
+    232.425,
+    237.575
+   ]
+  },
+  {
+   "id": "c06-comparison",
+   "index": 5,
+   "start": 1022.3,
+   "end": 1209.9667,
+   "title": "Comparing Input Constraints",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    7.75,
+    12.825,
+    18.725,
+    22.95,
+    28.6,
+    36.0,
+    43.725,
+    47.95,
+    60.825,
+    67.725,
+    74.325,
+    79.475,
+    85.4,
+    91.1,
+    96.975,
+    102.3,
+    107.275,
+    113.075,
+    118.0,
+    124.6,
+    131.15,
+    135.225,
+    140.05,
+    144.975,
+    149.675,
+    154.3,
+    159.425,
+    165.025,
+    169.9,
+    175.575,
+    180.625
+   ],
+   "sentenceEnds": [
+    7.3,
+    12.375,
+    18.275,
+    22.5,
+    28.15,
+    35.55,
+    43.275,
+    47.5,
+    57.375,
+    67.275,
+    73.875,
+    79.025,
+    84.95,
+    90.65,
+    96.525,
+    101.85,
+    106.825,
+    112.625,
+    117.55,
+    124.15,
+    130.7,
+    134.775,
+    139.6,
+    144.525,
+    149.225,
+    153.85,
+    158.975,
+    164.575,
+    169.45,
+    175.125,
+    180.175,
+    186.05
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 12.5,
+   "text": "For each real channel use, the receiver observes Y equals X plus Z.",
+   "translation": "每次实信道使用中，接收端观测Y=X+Z。"
+  },
+  {
+   "start": 12.95,
+   "end": 16.7,
+   "text": "The noise Z is Gaussian with mean zero and variance N.",
+   "translation": "噪声Z服从均值零、方差N的高斯分布。"
+  },
+  {
+   "start": 17.15,
+   "end": 19.525,
+   "text": "Assume N is strictly positive.",
+   "translation": "假设N严格为正。"
+  },
+  {
+   "start": 19.975,
+   "end": 24.9,
+   "text": "Across uses, the noises are independent and identically distributed.",
+   "translation": "各次使用中的噪声独立同分布。"
+  },
+  {
+   "start": 25.35,
+   "end": 29.775,
+   "text": "They are also independent of the message and transmitted codeword.",
+   "translation": "噪声还与消息及发送码字独立。"
+  },
+  {
+   "start": 30.225,
+   "end": 35.55,
+   "text": "A block code assigns one real vector x of length n to each message m.",
+   "translation": "分组码为每个消息m分配一个长度为n的实向量x。"
+  },
+  {
+   "start": 36.0,
+   "end": 41.125,
+   "text": "The transmitted vector is the codeword associated with the selected message.",
+   "translation": "发送向量就是所选消息对应的码字。"
+  },
+  {
+   "start": 41.575,
+   "end": 51.55,
+   "text": "Constrain every codeword separately. With n equal to two and P equal to one, does a codeword with both coordinates equal to one point five qualify?",
+   "translation": "每个码字分别受约束。当n为二、P为一时，点(1.5,1.5)合格吗？"
+  },
+  {
+   "start": 55.0,
+   "end": 60.1,
+   "text": "For every message m, its squared Euclidean norm is at most n times P.",
+   "translation": "对每个消息m，其欧几里得范数平方至多为nP。"
+  },
+  {
+   "start": 60.55,
+   "end": 65.375,
+   "text": "Equivalently, the average squared coordinate of each codeword is at most P.",
+   "translation": "等价地，每个码字的坐标平方平均至多为P。"
+  },
+  {
+   "start": 65.825,
+   "end": 70.75,
+   "text": "This is stronger than bounding power only after averaging over messages.",
+   "translation": "这比只对消息平均后限制功率更强。"
+  },
+  {
+   "start": 71.2,
+   "end": 73.875,
+   "text": "The parameter P is nonnegative.",
+   "translation": "参数P非负。"
+  },
+  {
+   "start": 74.325,
+   "end": 78.75,
+   "text": "When P is zero, every allowed codeword must be the zero vector.",
+   "translation": "当P为零时，每个允许码字都必须是零向量。"
+  },
+  {
+   "start": 79.2,
+   "end": 85.775,
+   "text": "The output then contains only noise, so reliable positive-rate communication is impossible.",
+   "translation": "此时输出只有噪声，因此无法可靠传输正速率。"
+  },
+  {
+   "start": 86.225,
+   "end": 89.925,
+   "text": "The signal-to-noise ratio is P divided by N.",
+   "translation": "信噪比是P除以N。"
+  },
+  {
+   "start": 90.375,
+   "end": 93.8,
+   "text": "Both P and N are measured per real channel use.",
+   "translation": "P与N都按每次实信道使用计量。"
+  },
+  {
+   "start": 94.25,
+   "end": 98.375,
+   "text": "The capacity will therefore be measured in bits per real use.",
+   "translation": "因此容量单位是每次实信道使用的比特数。"
+  },
+  {
+   "start": 98.825,
+   "end": 102.6,
+   "text": "Each use contributes one scalar coordinate to the block.",
+   "translation": "每次使用向分组贡献一个标量坐标。"
+  },
+  {
+   "start": 103.05,
+   "end": 108.675,
+   "text": "The channel law is memoryless because each output uses its own independent noise.",
+   "translation": "由于每个输出使用各自独立的噪声，该信道是无记忆的。"
+  },
+  {
+   "start": 109.125,
+   "end": 113.45,
+   "text": "The input coordinates need not be independent for the converse.",
+   "translation": "反向证明不要求输入坐标相互独立。"
+  },
+  {
+   "start": 113.9,
+   "end": 117.45,
+   "text": "The code may coordinate all coordinates of a codeword.",
+   "translation": "编码器可以协调一个码字的所有坐标。"
+  },
+  {
+   "start": 117.9,
+   "end": 121.75,
+   "text": "Only the total squared norm of each codeword is constrained.",
+   "translation": "约束的只是每个码字的总范数平方。"
+  },
+  {
+   "start": 122.2,
+   "end": 126.825,
+   "text": "We first use this exact constraint to bound every reliable code.",
+   "translation": "我们先用这一精确约束界定所有可靠码。"
+  },
+  {
+   "start": 127.275,
+   "end": 131.825,
+   "text": "Then random Gaussian codewords will approach the bound while respecting it.",
+   "translation": "随后将用高斯随机码字逼近该界并满足约束。"
+  },
+  {
+   "start": 132.275,
+   "end": 137.075,
+   "text": "The random ensemble itself may contain codewords that exceed the limit.",
+   "translation": "随机码本整体中可能含有超出限制的码字。"
+  },
+  {
+   "start": 137.525,
+   "end": 141.7,
+   "text": "The proof will remove those words before claiming a valid code.",
+   "translation": "证明会在宣称码本有效之前删去这些码字。"
+  },
+  {
+   "start": 142.15,
+   "end": 146.425,
+   "text": "Keep this distinction between an ensemble and a selected codebook.",
+   "translation": "请区分随机码本集合与最终选定的码本。"
+  },
+  {
+   "start": 146.875,
+   "end": 152.2,
+   "text": "No probability average can replace the requirement on every retained message.",
+   "translation": "对概率取平均不能替代对每个保留消息的要求。"
+  },
+  {
+   "start": 152.65,
+   "end": 157.05,
+   "text": "The model is now fixed for the converse and achievability arguments.",
+   "translation": "现在模型已固定，可以进行反向证明与可达性证明。"
+  },
+  {
+   "start": 157.5,
+   "end": 161.675,
+   "text": "We next derive the rate ceiling from Fano and Gaussian entropy.",
+   "translation": "接下来用Fano不等式和高斯熵推出速率上界。"
+  },
+  {
+   "start": 165.7,
+   "end": 170.5,
+   "text": "Consider a code with M equiprobable messages and block length n.",
+   "translation": "考虑含M个等概率消息、块长为n的码。"
+  },
+  {
+   "start": 170.95,
+   "end": 174.975,
+   "text": "Let the average decoding error probability be P sub e.",
+   "translation": "令平均译码错误概率为Pe。"
+  },
+  {
+   "start": 175.425,
+   "end": 181.95,
+   "text": "Fano bounds the remaining message uncertainty by one plus P sub e times log base two of M.",
+   "translation": "Fano不等式将剩余消息不确定性界为1加Pe log₂M。"
+  },
+  {
+   "start": 182.4,
+   "end": 190.85,
+   "text": "The product of one minus P sub e and log base two of M, minus one, is at most the message-output mutual information.",
+   "translation": "因此(1−Pe)log₂M−1不超过消息与输出的互信息。"
+  },
+  {
+   "start": 191.3,
+   "end": 195.6,
+   "text": "The encoded vector is a deterministic function of the message.",
+   "translation": "编码向量是消息的确定函数。"
+  },
+  {
+   "start": 196.05,
+   "end": 200.525,
+   "text": "The message, codeword, and output form a Markov chain in that order.",
+   "translation": "消息、码字与输出依次构成马尔可夫链。"
+  },
+  {
+   "start": 200.975,
+   "end": 206.55,
+   "text": "Data processing bounds message-output information by codeword-output information.",
+   "translation": "由数据处理不等式，消息与输出的互信息不超过码字与输出的互信息。"
+  },
+  {
+   "start": 207.0,
+   "end": 213.85,
+   "text": "Independence of noise gives codeword-output information as h of Y block minus h of Z block.",
+   "translation": "噪声独立，因此码字与输出互信息为h(Y^n)−h(Z^n)。"
+  },
+  {
+   "start": 214.3,
+   "end": 219.05,
+   "text": "The output block entropy is at most the sum of its coordinate entropies.",
+   "translation": "输出块熵至多为各坐标熵之和。"
+  },
+  {
+   "start": 219.5,
+   "end": 224.225,
+   "text": "This is entropy subadditivity; the outputs need not be independent.",
+   "translation": "这是熵的次可加性；输出不必相互独立。"
+  },
+  {
+   "start": 224.675,
+   "end": 229.7,
+   "text": "For each coordinate, Gaussian noise is independent of the input coordinate.",
+   "translation": "对每个坐标，高斯噪声与输入坐标独立。"
+  },
+  {
+   "start": 230.15,
+   "end": 234.425,
+   "text": "Therefore its output variance equals input variance plus N.",
+   "translation": "因此输出方差等于输入方差加N。"
+  },
+  {
+   "start": 234.875,
+   "end": 238.85,
+   "text": "Input variance is no greater than input second moment.",
+   "translation": "输入方差不超过输入二阶矩。"
+  },
+  {
+   "start": 239.3,
+   "end": 244.8,
+   "text": "The maximum-entropy property bounds each output entropy by a Gaussian entropy.",
+   "translation": "最大熵性质用高斯熵界定每个输出熵。"
+  },
+  {
+   "start": 245.25,
+   "end": 250.175,
+   "text": "Subtract the entropy of the independent Gaussian noise in every coordinate.",
+   "translation": "在每个坐标上减去独立高斯噪声的熵。"
+  },
+  {
+   "start": 250.625,
+   "end": 255.8,
+   "text": "The result is at most one half log two of one plus input second moment over N.",
+   "translation": "结果至多为二分之一log₂(1加输入二阶矩除以N)。"
+  },
+  {
+   "start": 256.25,
+   "end": 259.45,
+   "text": "Summing leaves one logarithm for each coordinate.",
+   "translation": "求和后每个坐标贡献一个对数项。"
+  },
+  {
+   "start": 259.9,
+   "end": 265.075,
+   "text": "The codeword constraint bounds the sum of these second moments by n times P.",
+   "translation": "码字约束将这些二阶矩之和限制为nP。"
+  },
+  {
+   "start": 265.525,
+   "end": 269.975,
+   "text": "Apply Jensen because log one plus power over N is concave.",
+   "translation": "由于log(1加功率除以N)是凹函数，应用Jensen不等式。"
+  },
+  {
+   "start": 270.425,
+   "end": 275.275,
+   "text": "The average of the logarithms is at most the logarithm at average power.",
+   "translation": "对数的平均值至多为平均功率处的对数。"
+  },
+  {
+   "start": 275.725,
+   "end": 282.825,
+   "text": "This gives mutual information at most n divided by two, times log base two of one plus P over N.",
+   "translation": "由此互信息至多为n/2 log₂(1+P/N)。"
+  },
+  {
+   "start": 283.275,
+   "end": 287.325,
+   "text": "The factor one half comes from a real Gaussian degree of freedom.",
+   "translation": "因子二分之一来自一个实高斯自由度。"
+  },
+  {
+   "start": 287.775,
+   "end": 291.925,
+   "text": "It is not a conversion from bits per use to bits per second.",
+   "translation": "它不是从每次使用比特数换算成每秒比特数。"
+  },
+  {
+   "start": 292.375,
+   "end": 295.725,
+   "text": "Combine this bound with Fano and divide by n.",
+   "translation": "将此界与Fano不等式合并并除以n。"
+  },
+  {
+   "start": 296.175,
+   "end": 302.675,
+   "text": "For a sequence of codes with P sub e tending to zero, the limiting rate cannot exceed this value.",
+   "translation": "若一列码的Pe趋于零，其极限速率不超过该值。"
+  },
+  {
+   "start": 303.125,
+   "end": 307.85,
+   "text": "When P is zero, the expression is zero, matching the noise-only channel.",
+   "translation": "当P为零时，该表达式为零，与纯噪声信道相符。"
+  },
+  {
+   "start": 308.3,
+   "end": 313.6,
+   "text": "For positive P and N, the ceiling is one half log two of one plus SNR.",
+   "translation": "当P与N为正时，上界为二分之一log₂(1+SNR)。"
+  },
+  {
+   "start": 314.05,
+   "end": 319.375,
+   "text": "The proof used the power of every codeword, not merely ensemble-average power.",
+   "translation": "证明使用了每个码字的功率，而非仅用码本平均功率。"
+  },
+  {
+   "start": 319.825,
+   "end": 323.9,
+   "text": "We next construct codes approaching any rate below the ceiling.",
+   "translation": "接下来构造逼近该上界以下任意速率的码。"
+  },
+  {
+   "start": 324.35,
+   "end": 329.825,
+   "text": "The construction needs a fixed power margin before selecting a deterministic code.",
+   "translation": "该构造需要先留出固定功率裕量，再选出确定码。"
+  },
+  {
+   "start": 330.275,
+   "end": 333.7,
+   "text": "That margin makes the later expurgation rigorous.",
+   "translation": "该裕量使后续删选步骤严格成立。"
+  },
+  {
+   "start": 337.7,
+   "end": 343.0,
+   "text": "Assume P is positive and choose a fixed P prime strictly between zero and P.",
+   "translation": "假设P为正，选取固定的P′，使0<P′<P。"
+  },
+  {
+   "start": 343.45,
+   "end": 349.675,
+   "text": "Generate each codeword with independent, zero-mean Gaussian coordinates of variance P prime.",
+   "translation": "为每个码字生成独立、零均值、方差P′的高斯坐标。"
+  },
+  {
+   "start": 350.125,
+   "end": 355.575,
+   "text": "Choose a positive rate R below one half log two of one plus P prime over N.",
+   "translation": "选择正速率R，低于0.5log₂(1+P′/N)。"
+  },
+  {
+   "start": 356.025,
+   "end": 361.325,
+   "text": "The information density between one true codeword and its output has that mean.",
+   "translation": "真实码字与其输出之间的信息密度均值就是该量。"
+  },
+  {
+   "start": 361.775,
+   "end": 366.175,
+   "text": "The output is zero-mean Gaussian with variance P prime plus N.",
+   "translation": "输出为零均值、方差P′+N的高斯。"
+  },
+  {
+   "start": 366.625,
+   "end": 371.925,
+   "text": "Subtracting the Gaussian noise entropy gives exactly that mutual information.",
+   "translation": "减去高斯噪声熵，恰好得到该互信息。"
+  },
+  {
+   "start": 372.375,
+   "end": 377.7,
+   "text": "Use M equal to the integer floor of two raised to n times R messages.",
+   "translation": "取消息数M=⌊2^(nR)⌋。"
+  },
+  {
+   "start": 378.15,
+   "end": 383.35,
+   "text": "Fix epsilon positive with three epsilon smaller than the gap I minus R.",
+   "translation": "选定ε>0，使3ε小于I−R。"
+  },
+  {
+   "start": 383.8,
+   "end": 390.675,
+   "text": "Independent coordinates make the true pair satisfy typical density tests with probability approaching one.",
+   "translation": "独立坐标使真实码字对以趋近一的概率满足典型密度检验。"
+  },
+  {
+   "start": 391.125,
+   "end": 396.4,
+   "text": "Use three negative-log-density tests for input, output, and their joint law.",
+   "translation": "分别对输入、输出及联合分布使用三项负对数密度检验。"
+  },
+  {
+   "start": 396.85,
+   "end": 404.425,
+   "text": "Their empirical negative log densities approach the corresponding expectations by the law of large numbers.",
+   "translation": "由大数定律，其经验负对数密度趋于相应期望。"
+  },
+  {
+   "start": 404.875,
+   "end": 410.05,
+   "text": "A wrong codeword is independent of the received output under the ensemble.",
+   "translation": "在随机码本集合下，错误码字与接收输出相互独立。"
+  },
+  {
+   "start": 410.5,
+   "end": 414.3,
+   "text": "This independence is exact, not an approximation.",
+   "translation": "这种独立是精确的，而非近似。"
+  },
+  {
+   "start": 414.75,
+   "end": 419.6,
+   "text": "On the joint typical set, the likelihood ratio is exponentially large.",
+   "translation": "在联合典型集上，似然比呈指数级增大。"
+  },
+  {
+   "start": 420.05,
+   "end": 427.425,
+   "text": "Joint surprisal bounds make fXY at least two raised to negative n times (hXY plus epsilon).",
+   "translation": "联合自信息界使f_XY^n至少为2^(−n(h(X,Y)+ε))。"
+  },
+  {
+   "start": 427.875,
+   "end": 436.975,
+   "text": "Input and output surprisal bounds make fX and fY at most two raised to negative n times (their entropies minus epsilon).",
+   "translation": "输入与输出自信息界使f_X^n、f_Y^n至多为各自2^(−n(h−ε))。"
+  },
+  {
+   "start": 437.425,
+   "end": 444.625,
+   "text": "Their product divided by fXY is at most two raised to negative n times (I minus three epsilon).",
+   "translation": "二者乘积除以fXY至多为2^(−n(I−3ε))。"
+  },
+  {
+   "start": 445.075,
+   "end": 452.15,
+   "text": "Integrate under the independent product law and replace its density by that ratio times fXY.",
+   "translation": "在独立乘积分布下积分，并将其密度改写为该比值乘fXY。"
+  },
+  {
+   "start": 452.6,
+   "end": 456.375,
+   "text": "The joint probability of the typical set is at most one.",
+   "translation": "联合典型集的概率至多为一。"
+  },
+  {
+   "start": 456.825,
+   "end": 464.725,
+   "text": "Therefore the independent wrong-pair probability is at most two raised to negative n times (I minus three epsilon).",
+   "translation": "因此独立错误码字对概率至多为2^(−n(I−3ε))。"
+  },
+  {
+   "start": 465.175,
+   "end": 472.475,
+   "text": "A union bound over fewer than two raised to n times R competitors makes this vanish when R is below I.",
+   "translation": "当R<I时，对少于2^(nR)个竞争码字作并集界可使概率趋零。"
+  },
+  {
+   "start": 472.925,
+   "end": 478.875,
+   "text": "Together with the true-pair atypical probability, ensemble-average error tends to zero.",
+   "translation": "结合真实码字对的非典型概率，码本集合平均错误趋于零。"
+  },
+  {
+   "start": 479.325,
+   "end": 483.05,
+   "text": "Now check power separately for each generated codeword.",
+   "translation": "现在分别检查每个生成码字的功率。"
+  },
+  {
+   "start": 483.5,
+   "end": 487.6,
+   "text": "Its coordinate squares are independent with mean P prime.",
+   "translation": "其坐标平方独立，均值为P′。"
+  },
+  {
+   "start": 488.05,
+   "end": 494.175,
+   "text": "The law of large numbers makes the probability of average power above P tend to zero.",
+   "translation": "大数定律使平均功率超过P的概率趋于零。"
+  },
+  {
+   "start": 494.625,
+   "end": 501.375,
+   "text": "The strict power margin matters. If P prime equals P, must the overpowered fraction still vanish?",
+   "translation": "严格功率裕量很关键。如果P′等于P，超功率比例还一定趋于零吗？"
+  },
+  {
+   "start": 504.825,
+   "end": 510.0,
+   "text": "At variance exactly P, exceedance probability need not tend to zero.",
+   "translation": "方差恰为P时，超限概率未必趋于零。"
+  },
+  {
+   "start": 510.45,
+   "end": 515.325,
+   "text": "The expected fraction of overpowered codewords therefore tends to zero.",
+   "translation": "因此，超功率码字比例的期望趋于零。"
+  },
+  {
+   "start": 515.775,
+   "end": 522.7,
+   "text": "Let beta n denote that expected fraction and epsilon n the expected average decoding error.",
+   "translation": "令βₙ为该比例期望，εₙ为平均译码错误的期望。"
+  },
+  {
+   "start": 523.15,
+   "end": 525.525,
+   "text": "Both quantities tend to zero.",
+   "translation": "这两个量都趋于零。"
+  },
+  {
+   "start": 525.975,
+   "end": 535.075,
+   "text": "Select a deterministic codebook whose actual average error plus actual overpowered fraction is at most epsilon n plus beta n.",
+   "translation": "选定确定码本，使其实际平均错误加实际超功率比例不超过εₙ+βₙ。"
+  },
+  {
+   "start": 535.525,
+   "end": 539.225,
+   "text": "In that codebook, discard every overpowered message.",
+   "translation": "在该码本中，删去所有超功率消息。"
+  },
+  {
+   "start": 539.675,
+   "end": 544.6,
+   "text": "Define delta n as epsilon n plus beta n, which tends to zero.",
+   "translation": "定义δₙ=εₙ+βₙ，它趋于零。"
+  },
+  {
+   "start": 545.05,
+   "end": 550.5,
+   "text": "If delta n is zero, all messages already have valid power and zero error.",
+   "translation": "若δₙ为零，则所有消息都满足功率且错误为零。"
+  },
+  {
+   "start": 550.95,
+   "end": 556.85,
+   "text": "Otherwise also discard messages whose conditional error exceeds square root delta n.",
+   "translation": "否则，再删去条件错误超过√δₙ的消息。"
+  },
+  {
+   "start": 557.3,
+   "end": 562.3,
+   "text": "Markov inequality bounds the latter fraction by square root of delta n.",
+   "translation": "Markov不等式将后者比例界为√δₙ。"
+  },
+  {
+   "start": 562.75,
+   "end": 567.85,
+   "text": "The total discarded fraction is at most delta n plus square root delta n.",
+   "translation": "总删去比例至多为δₙ+√δₙ。"
+  },
+  {
+   "start": 568.3,
+   "end": 575.075,
+   "text": "Reassign deleted decoding outputs to retained messages, preserving every retained correct region.",
+   "translation": "将已删消息的译码输出重新分给保留消息，保留原有正确区域。"
+  },
+  {
+   "start": 575.525,
+   "end": 580.375,
+   "text": "Every retained codeword satisfies the power constraint individually.",
+   "translation": "每个保留码字都逐个满足功率约束。"
+  },
+  {
+   "start": 580.825,
+   "end": 585.925,
+   "text": "Every retained message has conditional error tending uniformly to zero.",
+   "translation": "每个保留消息的条件错误率都一致趋于零。"
+  },
+  {
+   "start": 586.375,
+   "end": 592.075,
+   "text": "Retaining a fraction tending to one changes the rate by a quantity tending to zero.",
+   "translation": "保留趋于一的比例只使速率改变趋零量。"
+  },
+  {
+   "start": 592.525,
+   "end": 597.975,
+   "text": "For each fixed P prime, rates below its Gaussian mutual information are achievable.",
+   "translation": "对每个固定P′，低于其高斯互信息的速率均可达。"
+  },
+  {
+   "start": 598.425,
+   "end": 601.225,
+   "text": "Finally let P prime increase toward P.",
+   "translation": "最后令P′逐渐增至P。"
+  },
+  {
+   "start": 601.675,
+   "end": 606.475,
+   "text": "Continuity gives every rate strictly below the claimed capacity.",
+   "translation": "由连续性可得容量以下的每个严格较低速率。"
+  },
+  {
+   "start": 606.925,
+   "end": 611.425,
+   "text": "If P is zero, the trivial zero-rate code handles the boundary.",
+   "translation": "若P为零，平凡零速率码处理该边界。"
+  },
+  {
+   "start": 611.875,
+   "end": 616.925,
+   "text": "This is an existence proof, not a claim that every random codebook is good.",
+   "translation": "这是存在性证明，不表示每个随机码本都好。"
+  },
+  {
+   "start": 620.9333,
+   "end": 625.8583,
+   "text": "A high-dimensional picture can explain the capacity formula intuitively.",
+   "translation": "高维图像可以直观解释容量公式。"
+  },
+  {
+   "start": 626.3083,
+   "end": 633.4333,
+   "text": "Every permitted input vector lies inside the ball with radius equal to the square root of n times P.",
+   "translation": "每个允许输入向量都位于半径√(nP)的球内。"
+  },
+  {
+   "start": 633.8833,
+   "end": 637.2833,
+   "text": "This input ball expresses the codeword constraint.",
+   "translation": "这个输入球表达码字约束。"
+  },
+  {
+   "start": 637.7333,
+   "end": 642.1333,
+   "text": "It is not the numerator of the decisive output-volume ratio.",
+   "translation": "它不是关键输出体积比的分子。"
+  },
+  {
+   "start": 642.5833,
+   "end": 651.0083,
+   "text": "For a zero-mean Gaussian input with variance P, typical output norm is about the square root of n times the sum P plus N.",
+   "translation": "零均值、方差P的高斯输入下，典型输出范数约为√(n(P+N))。"
+  },
+  {
+   "start": 651.4583,
+   "end": 655.4333,
+   "text": "Typical noise norm is about the square root of n times N.",
+   "translation": "典型噪声范数约为√(nN)。"
+  },
+  {
+   "start": 655.8833,
+   "end": 661.7583,
+   "text": "Thus the receiver-side region has squared radius about n times the sum P plus N.",
+   "translation": "因此接收端区域的半径平方约为n(P+N)。"
+  },
+  {
+   "start": 662.2083,
+   "end": 669.2833,
+   "text": "Noise neighborhoods have squared radius about n times N. Which outer region belongs in the volume ratio?",
+   "translation": "噪声邻域的半径平方约为nN。体积比中应该用哪个外部区域？"
+  },
+  {
+   "start": 672.7333,
+   "end": 677.7833,
+   "text": "Compare these receiver-side volumes, not the input ball against the noise ball.",
+   "translation": "比较的是接收端体积，而非输入球与噪声球。"
+  },
+  {
+   "start": 678.2333,
+   "end": 683.6583,
+   "text": "In n real dimensions, ball volume is proportional to radius raised to power n.",
+   "translation": "在n维实空间中，球体积正比于半径的n次方。"
+  },
+  {
+   "start": 684.1083,
+   "end": 689.1833,
+   "text": "The ratio therefore contributes one half log two of P plus N over N.",
+   "translation": "该比值因此贡献二分之一log₂((P+N)/N)。"
+  },
+  {
+   "start": 689.6333,
+   "end": 693.7833,
+   "text": "This simplifies to one half log two of one plus P over N.",
+   "translation": "这化简为二分之一log₂(1+P/N)。"
+  },
+  {
+   "start": 694.2333,
+   "end": 698.1083,
+   "text": "The exponent one half comes from comparing squared radii.",
+   "translation": "指数中的二分之一来自比较半径平方。"
+  },
+  {
+   "start": 698.5583,
+   "end": 704.1083,
+   "text": "A packing picture places distinguishable noise neighborhoods inside the output region.",
+   "translation": "打包图像将可区分的噪声邻域置于输出区域内。"
+  },
+  {
+   "start": 704.5583,
+   "end": 709.5083,
+   "text": "The volume ratio suggests how many neighborhoods can fit exponentially.",
+   "translation": "体积比提示可指数级容纳多少个邻域。"
+  },
+  {
+   "start": 709.9583,
+   "end": 714.4083,
+   "text": "Taking logarithms converts that count into bits per coordinate.",
+   "translation": "取对数便将该数量转换为每坐标比特数。"
+  },
+  {
+   "start": 714.8583,
+   "end": 719.0583,
+   "text": "This is an analogy for the exponent, not a disjoint-sphere proof.",
+   "translation": "这是指数率的类比，并非互不相交球的证明。"
+  },
+  {
+   "start": 719.5083,
+   "end": 723.4583,
+   "text": "Actual Gaussian codewords are not a perfect sphere packing.",
+   "translation": "实际高斯码字并非完美球堆积。"
+  },
+  {
+   "start": 723.9083,
+   "end": 728.4333,
+   "text": "The earlier random-coding argument supplies the probability proof.",
+   "translation": "前面的随机编码论证才提供概率证明。"
+  },
+  {
+   "start": 728.8833,
+   "end": 733.2333,
+   "text": "The converse also came from entropy rather than literal packing.",
+   "translation": "反向证明也来自熵界，而非字面球堆积。"
+  },
+  {
+   "start": 733.6833,
+   "end": 737.9333,
+   "text": "The separate input ball remains useful as a visual power check.",
+   "translation": "单独的输入球仍可用于可视化功率检查。"
+  },
+  {
+   "start": 738.3833,
+   "end": 742.4083,
+   "text": "Keep its radius label distinct from the output radius.",
+   "translation": "要将它的半径标签与输出半径区分开。"
+  },
+  {
+   "start": 742.8583,
+   "end": 748.1083,
+   "text": "The noise radius represents uncertainty remaining after the signal arrives.",
+   "translation": "噪声半径表示信号到达后仍然存在的不确定性。"
+  },
+  {
+   "start": 748.5583,
+   "end": 753.0833,
+   "text": "More signal power enlarges the output region relative to noise.",
+   "translation": "信号功率越大，输出区域相对噪声区域越大。"
+  },
+  {
+   "start": 753.5333,
+   "end": 757.6833,
+   "text": "That enlarges the volume ratio and the logarithmic rate.",
+   "translation": "这会增大体积比和对数速率。"
+  },
+  {
+   "start": 758.1333,
+   "end": 761.2083,
+   "text": "Increasing noise has the opposite effect.",
+   "translation": "增大噪声则产生相反效果。"
+  },
+  {
+   "start": 761.6583,
+   "end": 766.4333,
+   "text": "The formula is exact even though this geometric story is approximate.",
+   "translation": "尽管几何解释近似，容量公式本身是精确的。"
+  },
+  {
+   "start": 766.8833,
+   "end": 772.6833,
+   "text": "Typical regions concentrate probability rather than contain every possible vector.",
+   "translation": "典型区域集中大部分概率，而非包含所有可能向量。"
+  },
+  {
+   "start": 773.1333,
+   "end": 777.1833,
+   "text": "Next restrict the input to two antipodal signal points.",
+   "translation": "接下来将输入限制为两个相反信号点。"
+  },
+  {
+   "start": 777.6333,
+   "end": 781.4833,
+   "text": "That finite alphabet creates a different information curve.",
+   "translation": "这个有限字母表会产生不同的信息曲线。"
+  },
+  {
+   "start": 785.5,
+   "end": 792.1,
+   "text": "BPSK restricts the input to two real values, plus square root P and minus square root P.",
+   "translation": "BPSK将输入限制为两个实数值：正√P与负√P。"
+  },
+  {
+   "start": 792.55,
+   "end": 798.775,
+   "text": "For this binary-input Gaussian channel, equiprobable symbols maximize mutual information.",
+   "translation": "对此二元输入高斯信道，等概率符号使互信息最大。"
+  },
+  {
+   "start": 799.225,
+   "end": 804.525,
+   "text": "For a fixed channel, mutual information is concave in the input distribution.",
+   "translation": "固定信道时，互信息关于输入分布是凹函数。"
+  },
+  {
+   "start": 804.975,
+   "end": 809.75,
+   "text": "Reflection swaps the two input symbols and preserves the channel law.",
+   "translation": "反射会交换两个输入符号，并保持信道规律不变。"
+  },
+  {
+   "start": 810.2,
+   "end": 816.8,
+   "text": "Averaging an input law with its reflection gives equal probabilities without reducing information.",
+   "translation": "将输入分布与其反射取平均便得到等概率，且不会降低互信息。"
+  },
+  {
+   "start": 817.25,
+   "end": 821.875,
+   "text": "Reflecting the output swaps the two conditional Gaussian density curves.",
+   "translation": "反射输出坐标会交换两个条件高斯密度曲线。"
+  },
+  {
+   "start": 822.325,
+   "end": 826.75,
+   "text": "The binary input has one bit of entropy under this distribution.",
+   "translation": "该输入分布下二元输入熵为一比特。"
+  },
+  {
+   "start": 827.2,
+   "end": 830.65,
+   "text": "The receiver observes the noisy real value R.",
+   "translation": "接收端观测含噪实数R。"
+  },
+  {
+   "start": 831.1,
+   "end": 839.1,
+   "text": "A soft decision retains sign and magnitude. Do received values .25 and 2 imply the same confidence?",
+   "translation": "软判决保留符号与幅度。接收值0.25和2意味着相同置信度吗？"
+  },
+  {
+   "start": 842.55,
+   "end": 846.925,
+   "text": "A hard decision keeps only whether R is positive or negative.",
+   "translation": "硬判决只保留R为正还是为负。"
+  },
+  {
+   "start": 847.375,
+   "end": 852.65,
+   "text": "The sign operation is a deterministic function of the soft observation.",
+   "translation": "取符号是软观测的确定函数。"
+  },
+  {
+   "start": 853.1,
+   "end": 859.55,
+   "text": "Data processing therefore gives hard-decision information no greater than soft information.",
+   "translation": "由数据处理不等式，硬判决信息不超过软信息。"
+  },
+  {
+   "start": 860.0,
+   "end": 868.0,
+   "text": "Normalize the observation by square root N, giving unit noise variance and signal power gamma equal to P over N.",
+   "translation": "将观测除以√N，噪声方差归一为一，信号功率γ=P/N。"
+  },
+  {
+   "start": 868.45,
+   "end": 876.125,
+   "text": "The natural log likelihood ratio for a received value r equals two square root P times r divided by N.",
+   "translation": "接收值r的自然对数似然比为2√P·r/N。"
+  },
+  {
+   "start": 876.575,
+   "end": 884.375,
+   "text": "The posterior probability of the positive symbol is one divided by one plus the exponential of minus that ratio.",
+   "translation": "正符号的后验概率为1/[1+exp(−该对数似然比)]。"
+  },
+  {
+   "start": 884.825,
+   "end": 891.225,
+   "text": "Conditional entropy averages the negative log posterior of the actual transmitted symbol.",
+   "translation": "条件熵对实际所发符号的负对数后验概率取平均。"
+  },
+  {
+   "start": 891.675,
+   "end": 896.9,
+   "text": "Reflection symmetry makes that average identical for either transmitted sign.",
+   "translation": "反射对称性使两个发送符号对应的平均相同。"
+  },
+  {
+   "start": 897.35,
+   "end": 905.125,
+   "text": "Given the positive symbol, substitute r equal square root P plus square root N times a standard normal variable.",
+   "translation": "给定正符号，代入r=√P+√N乘以标准正态变量。"
+  },
+  {
+   "start": 905.575,
+   "end": 911.0,
+   "text": "The soft mutual information equals one minus an expected log expression.",
+   "translation": "软输出互信息等于一减去一个对数项的期望。"
+  },
+  {
+   "start": 911.45,
+   "end": 916.1,
+   "text": "Draw a standard normal variable Z inside that expectation.",
+   "translation": "在该期望中取标准正态变量Z。"
+  },
+  {
+   "start": 916.55,
+   "end": 924.075,
+   "text": "Then subtract the expectation of log two of one plus exp of negative two gamma minus two root gamma Z.",
+   "translation": "再减去log₂(1+exp(−2γ−2√γ Z))的期望。"
+  },
+  {
+   "start": 924.525,
+   "end": 928.975,
+   "text": "This is a numerical integral over the standard normal density.",
+   "translation": "这是对标准正态密度的数值积分。"
+  },
+  {
+   "start": 929.425,
+   "end": 933.575,
+   "text": "It is a computed formula value, not a measured experiment.",
+   "translation": "这是公式计算值，不是实验测量值。"
+  },
+  {
+   "start": 934.025,
+   "end": 938.775,
+   "text": "For hard decisions, the error probability is Q of square root gamma.",
+   "translation": "硬判决的错误概率为Q(√γ)。"
+  },
+  {
+   "start": 939.225,
+   "end": 946.075,
+   "text": "The resulting binary symmetric channel has information one minus binary entropy of that probability.",
+   "translation": "所得二元对称信道的互信息为一减该错误概率的二元熵。"
+  },
+  {
+   "start": 946.525,
+   "end": 952.9,
+   "text": "At gamma one, soft information is about zero point four eight five nine four four bits per use.",
+   "translation": "γ=1时，软信息约为每次使用0.485944比特。"
+  },
+  {
+   "start": 953.35,
+   "end": 959.95,
+   "text": "The hard-decision value at that point is about zero point three six eight nine one seven bits per use.",
+   "translation": "同一点的硬判决信息约为每次使用0.368917比特。"
+  },
+  {
+   "start": 960.4,
+   "end": 966.925,
+   "text": "At gamma ten, soft information is about zero point nine nine six seven five six bits per use.",
+   "translation": "γ=10时，软信息约为每次使用0.996756比特。"
+  },
+  {
+   "start": 967.375,
+   "end": 973.9,
+   "text": "Hard-decision information there is about zero point nine nine zero seven nine four bits per use.",
+   "translation": "此时硬判决信息约为每次使用0.990794比特。"
+  },
+  {
+   "start": 974.35,
+   "end": 978.725,
+   "text": "Both values approach one bit at high signal-to-noise ratio.",
+   "translation": "信噪比很高时，两者都趋近一比特。"
+  },
+  {
+   "start": 979.175,
+   "end": 983.475,
+   "text": "The soft value never exceeds the input entropy of one bit.",
+   "translation": "软信息不会超过一比特的输入熵。"
+  },
+  {
+   "start": 983.925,
+   "end": 987.825,
+   "text": "The Gaussian-input formula has no such one-bit ceiling.",
+   "translation": "高斯输入公式没有这一比特上限。"
+  },
+  {
+   "start": 988.275,
+   "end": 993.125,
+   "text": "Its input alphabet contains continuously many possible values.",
+   "translation": "它的输入字母表包含连续多个可能值。"
+  },
+  {
+   "start": 993.575,
+   "end": 998.5,
+   "text": "The two capacities differ because the permitted input distributions differ.",
+   "translation": "两种容量不同，是因为允许的输入分布不同。"
+  },
+  {
+   "start": 998.95,
+   "end": 1002.9,
+   "text": "They use the same power and the same Gaussian noise variance.",
+   "translation": "它们使用相同功率与相同高斯噪声方差。"
+  },
+  {
+   "start": 1003.35,
+   "end": 1008.5,
+   "text": "The formula does not imply BPSK achieves Gaussian-input capacity.",
+   "translation": "该公式不意味着BPSK达到高斯输入容量。"
+  },
+  {
+   "start": 1008.95,
+   "end": 1015.525,
+   "text": "The next comparison uses identical power and noise for both input families at each SNR.",
+   "translation": "下一段在每个信噪比下，为两种输入族采用相同功率和噪声。"
+  },
+  {
+   "start": 1015.975,
+   "end": 1020.675,
+   "text": "The numerical integration settings should accompany any plotted values.",
+   "translation": "绘制数值时应同时记录数值积分设置。"
+  },
+  {
+   "start": 1024.7,
+   "end": 1029.6,
+   "text": "Compare both models at the same real-use power P and noise variance N.",
+   "translation": "在相同的每次实使用功率P与噪声方差N下比较两种模型。"
+  },
+  {
+   "start": 1030.05,
+   "end": 1034.675,
+   "text": "The Gaussian-input capacity is one half log two of one plus P over N.",
+   "translation": "高斯输入容量为二分之一log₂(1+P/N)。"
+  },
+  {
+   "start": 1035.125,
+   "end": 1040.575,
+   "text": "The BPSK information is the soft-output integral from the previous chapter.",
+   "translation": "BPSK信息量是上一章的软输出积分。"
+  },
+  {
+   "start": 1041.025,
+   "end": 1044.8,
+   "text": "Both quantities are measured in bits per real channel use.",
+   "translation": "两者单位都是每次实信道使用的比特数。"
+  },
+  {
+   "start": 1045.25,
+   "end": 1050.45,
+   "text": "For normalized noise variance one, set P equal to the SNR value s.",
+   "translation": "噪声方差归一为一时，令P等于信噪比s。"
+  },
+  {
+   "start": 1050.9,
+   "end": 1057.85,
+   "text": "At s equal one tenth, Gaussian capacity is about zero point zero six eight seven five two bits.",
+   "translation": "s=0.1时，高斯容量约为0.068752比特。"
+  },
+  {
+   "start": 1058.3,
+   "end": 1065.575,
+   "text": "BPSK soft information is about zero point zero six eight seven four three bits at the same point.",
+   "translation": "同一点的BPSK软信息约为0.068743比特。"
+  },
+  {
+   "start": 1066.025,
+   "end": 1069.8,
+   "text": "At s equal one, the Gaussian value is one half bit.",
+   "translation": "s=1时，高斯容量为二分之一比特。"
+  },
+  {
+   "start": 1070.25,
+   "end": 1079.675,
+   "text": "BPSK gives about zero point four eight five nine four four bits at SNR one. Will it keep tracking the Gaussian curve at SNR ten?",
+   "translation": "SNR为一时，BPSK约有0.485944比特。SNR升到十时，它还能继续紧随高斯曲线吗？"
+  },
+  {
+   "start": 1083.125,
+   "end": 1089.575,
+   "text": "At s equal ten, Gaussian capacity is about one point seven two nine seven one six bits.",
+   "translation": "s=10时，高斯容量约为1.729716比特。"
+  },
+  {
+   "start": 1090.025,
+   "end": 1096.175,
+   "text": "BPSK soft information is about zero point nine nine six seven five six bits.",
+   "translation": "BPSK软信息约为0.996756比特。"
+  },
+  {
+   "start": 1096.625,
+   "end": 1101.325,
+   "text": "These values come from a finite-interval Gaussian quadrature calculation.",
+   "translation": "这些数值来自有限区间上的高斯求积计算。"
+  },
+  {
+   "start": 1101.775,
+   "end": 1107.25,
+   "text": "The integration used standard normal values between negative twelve and twelve.",
+   "translation": "积分使用了负十二至十二之间的标准正态取值。"
+  },
+  {
+   "start": 1107.7,
+   "end": 1112.95,
+   "text": "The reported quadrature errors were below four times ten to the negative nine.",
+   "translation": "报告的求积误差低于四乘十的负九次方。"
+  },
+  {
+   "start": 1113.4,
+   "end": 1118.825,
+   "text": "The omitted normal tails have negligible probability at the displayed precision.",
+   "translation": "在所示精度下，被省略的正态尾部概率可忽略。"
+  },
+  {
+   "start": 1119.275,
+   "end": 1124.15,
+   "text": "Those are numerical integration error estimates, not channel measurements.",
+   "translation": "这些是数值积分误差估计，不是信道测量。"
+  },
+  {
+   "start": 1124.6,
+   "end": 1129.125,
+   "text": "At high SNR, BPSK approaches at most one bit per use.",
+   "translation": "高信噪比下，BPSK至多趋近每次使用一比特。"
+  },
+  {
+   "start": 1129.575,
+   "end": 1134.925,
+   "text": "The Gaussian formula continues increasing without that finite-alphabet ceiling.",
+   "translation": "高斯公式则继续增长，不受有限字母表上限限制。"
+  },
+  {
+   "start": 1135.375,
+   "end": 1139.85,
+   "text": "Hard decisions lie below soft decisions by data processing.",
+   "translation": "由数据处理不等式，硬判决低于软判决。"
+  },
+  {
+   "start": 1140.3,
+   "end": 1146.45,
+   "text": "At SNR ten, the hard value is about zero point nine nine zero seven nine four bits.",
+   "translation": "信噪比为十时，硬判决值约为0.990794比特。"
+  },
+  {
+   "start": 1146.9,
+   "end": 1153.0,
+   "text": "The soft value at the same SNR is about zero point nine nine six seven five six bits.",
+   "translation": "相同信噪比下，软判决值约为0.996756比特。"
+  },
+  {
+   "start": 1153.45,
+   "end": 1157.075,
+   "text": "The difference comes from discarding the received magnitude.",
+   "translation": "差异来自丢弃接收幅值。"
+  },
+  {
+   "start": 1157.525,
+   "end": 1161.9,
+   "text": "No additional noise was introduced by changing the decision rule.",
+   "translation": "改变判决规则并未引入额外噪声。"
+  },
+  {
+   "start": 1162.35,
+   "end": 1166.825,
+   "text": "Rather, the hard output retains less information about the input.",
+   "translation": "相反，硬输出保留的输入信息更少。"
+  },
+  {
+   "start": 1167.275,
+   "end": 1171.525,
+   "text": "At low SNR, the BPSK and Gaussian curves are close.",
+   "translation": "低信噪比时，BPSK与高斯曲线接近。"
+  },
+  {
+   "start": 1171.975,
+   "end": 1176.15,
+   "text": "At high SNR, the alphabet restriction dominates the gap.",
+   "translation": "高信噪比时，字母表限制主导两者差距。"
+  },
+  {
+   "start": 1176.6,
+   "end": 1181.275,
+   "text": "The comparison assumes equal average power and equal noise variance.",
+   "translation": "该比较假设平均功率与噪声方差相同。"
+  },
+  {
+   "start": 1181.725,
+   "end": 1186.875,
+   "text": "The Gaussian capacity permits optimized continuous input distributions.",
+   "translation": "高斯容量允许优化连续输入分布。"
+  },
+  {
+   "start": 1187.325,
+   "end": 1191.75,
+   "text": "BPSK permits only its two antipodal signal values.",
+   "translation": "BPSK只允许两个相反的信号值。"
+  },
+  {
+   "start": 1192.2,
+   "end": 1197.425,
+   "text": "This distinction separates modulation performance from the channel coding limit.",
+   "translation": "这一区别将调制性能与信道编码极限区分开。"
+  },
+  {
+   "start": 1197.875,
+   "end": 1202.475,
+   "text": "The capacity formula remains the benchmark for all allowed codes.",
+   "translation": "容量公式仍是所有允许码的基准。"
+  },
+  {
+   "start": 1202.925,
+   "end": 1208.35,
+   "text": "The next episode converts bits per use into bits per second using bandwidth.",
+   "translation": "下一集将利用带宽把每次使用比特数转换为每秒比特数。"
+  }
+ ]
+}

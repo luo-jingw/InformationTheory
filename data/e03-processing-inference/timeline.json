@@ -1,0 +1,2381 @@
+{
+ "language": "en",
+ "episode": "e03-processing-inference",
+ "duration": 1617.7667,
+ "chapters": [
+  {
+   "id": "c01-markov",
+   "index": 0,
+   "start": 5.0,
+   "end": 303.4,
+   "title": "Conditional independence and its boundary",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    10.075,
+    14.475,
+    20.05,
+    27.1,
+    34.35,
+    41.15,
+    47.8,
+    55.85,
+    62.025,
+    67.925,
+    75.275,
+    80.325,
+    85.025,
+    92.3,
+    97.4,
+    101.675,
+    106.5,
+    111.175,
+    113.8,
+    117.325,
+    120.75,
+    126.525,
+    130.1,
+    136.025,
+    141.45,
+    145.2,
+    148.675,
+    153.1,
+    157.025,
+    160.175,
+    165.7,
+    173.6,
+    177.525,
+    182.6,
+    186.6,
+    191.8,
+    197.075,
+    200.975,
+    205.575,
+    210.975,
+    214.525,
+    219.925,
+    225.775,
+    230.475,
+    238.65,
+    242.45,
+    245.875,
+    252.225,
+    257.55,
+    263.975,
+    269.175,
+    274.325,
+    277.825,
+    281.25,
+    287.0,
+    293.075
+   ],
+   "sentenceEnds": [
+    9.625,
+    14.025,
+    19.6,
+    23.65,
+    33.9,
+    40.7,
+    47.35,
+    55.4,
+    61.575,
+    67.475,
+    74.825,
+    79.875,
+    84.575,
+    91.85,
+    96.95,
+    101.225,
+    106.05,
+    110.725,
+    113.35,
+    116.875,
+    120.3,
+    126.075,
+    129.65,
+    135.575,
+    141.0,
+    144.75,
+    148.225,
+    152.65,
+    156.575,
+    159.725,
+    165.25,
+    173.15,
+    177.075,
+    182.15,
+    186.15,
+    191.35,
+    196.625,
+    200.525,
+    205.125,
+    210.525,
+    214.075,
+    219.475,
+    225.325,
+    230.025,
+    238.2,
+    242.0,
+    245.425,
+    251.775,
+    257.1,
+    263.525,
+    268.725,
+    273.875,
+    277.375,
+    280.8,
+    286.55,
+    292.625,
+    296.8
+   ]
+  },
+  {
+   "id": "c02-dpi",
+   "index": 1,
+   "start": 303.4,
+   "end": 558.1,
+   "title": "Information cannot increase along a chain",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.15,
+    13.225,
+    18.475,
+    24.075,
+    29.225,
+    36.25,
+    42.875,
+    47.55,
+    51.95,
+    56.7,
+    60.975,
+    65.9,
+    71.25,
+    76.275,
+    80.25,
+    84.375,
+    88.625,
+    93.875,
+    98.9,
+    104.025,
+    109.8,
+    114.0,
+    121.05,
+    125.975,
+    130.5,
+    132.7,
+    137.95,
+    141.1,
+    150.575,
+    157.2,
+    160.025,
+    168.625,
+    173.125,
+    177.25,
+    181.5,
+    185.825,
+    191.5,
+    199.1,
+    204.275,
+    208.375,
+    216.075,
+    220.875,
+    225.875,
+    230.775,
+    235.125,
+    237.875,
+    240.875,
+    246.1
+   ],
+   "sentenceEnds": [
+    7.7,
+    12.775,
+    18.025,
+    23.625,
+    28.775,
+    35.8,
+    42.425,
+    47.1,
+    51.5,
+    56.25,
+    60.525,
+    65.45,
+    70.8,
+    75.825,
+    79.8,
+    83.925,
+    88.175,
+    93.425,
+    98.45,
+    103.575,
+    109.35,
+    113.55,
+    120.6,
+    125.525,
+    130.05,
+    132.25,
+    137.5,
+    140.65,
+    147.625,
+    156.75,
+    159.575,
+    168.175,
+    172.675,
+    176.8,
+    181.05,
+    185.375,
+    191.05,
+    198.65,
+    203.825,
+    207.925,
+    215.625,
+    220.425,
+    225.425,
+    230.325,
+    234.675,
+    237.425,
+    240.425,
+    245.65,
+    253.1
+   ]
+  },
+  {
+   "id": "c03-sufficiency",
+   "index": 2,
+   "start": 558.1,
+   "end": 1022.9667,
+   "title": "Compressing samples without losing parameter information",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    9.475,
+    14.575,
+    20.35,
+    25.55,
+    31.675,
+    36.875,
+    41.25,
+    46.675,
+    52.375,
+    58.725,
+    66.05,
+    74.475,
+    78.425,
+    84.1,
+    89.3,
+    100.075,
+    107.375,
+    113.7,
+    118.55,
+    126.0,
+    131.1,
+    139.125,
+    144.025,
+    151.025,
+    156.375,
+    162.775,
+    169.2,
+    175.475,
+    179.4,
+    186.825,
+    194.325,
+    199.15,
+    203.35,
+    208.3,
+    213.4,
+    219.925,
+    223.9,
+    230.125,
+    237.875,
+    246.525,
+    250.225,
+    254.275,
+    257.8,
+    261.45,
+    268.5,
+    271.9,
+    275.6,
+    282.825,
+    288.025,
+    295.475,
+    305.55,
+    309.75,
+    314.95,
+    320.975,
+    323.65,
+    328.4,
+    334.5,
+    340.675,
+    345.65,
+    350.05,
+    357.45,
+    363.875,
+    374.825,
+    382.85,
+    389.0,
+    396.575,
+    402.375,
+    408.05,
+    417.65,
+    428.45,
+    433.425,
+    437.775,
+    440.725,
+    446.875,
+    452.65,
+    457.725
+   ],
+   "sentenceEnds": [
+    9.025,
+    14.125,
+    19.9,
+    25.1,
+    31.225,
+    36.425,
+    40.8,
+    46.225,
+    51.925,
+    58.275,
+    65.6,
+    74.025,
+    77.975,
+    83.65,
+    88.85,
+    97.125,
+    106.925,
+    113.25,
+    118.1,
+    125.55,
+    130.65,
+    138.675,
+    143.575,
+    150.575,
+    155.925,
+    162.325,
+    168.75,
+    175.025,
+    178.95,
+    186.375,
+    193.875,
+    198.7,
+    202.9,
+    207.85,
+    212.95,
+    219.475,
+    223.45,
+    229.675,
+    237.425,
+    246.075,
+    249.775,
+    253.825,
+    257.35,
+    261.0,
+    268.05,
+    271.45,
+    275.15,
+    282.375,
+    287.575,
+    295.025,
+    305.1,
+    309.3,
+    314.5,
+    320.525,
+    323.2,
+    327.95,
+    334.05,
+    340.225,
+    345.2,
+    349.6,
+    357.0,
+    363.425,
+    374.375,
+    382.4,
+    388.55,
+    396.125,
+    401.925,
+    407.6,
+    417.2,
+    428.0,
+    432.975,
+    437.325,
+    440.275,
+    446.425,
+    452.2,
+    457.275,
+    463.25
+   ]
+  },
+  {
+   "id": "c04-fano",
+   "index": 3,
+   "start": 1022.9667,
+   "end": 1262.3667,
+   "title": "Error probability bounds remaining uncertainty",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.475,
+    14.075,
+    19.875,
+    22.425,
+    27.475,
+    32.175,
+    38.675,
+    43.45,
+    49.3,
+    53.175,
+    59.375,
+    63.925,
+    68.0,
+    75.425,
+    80.3,
+    85.925,
+    90.7,
+    94.25,
+    98.95,
+    108.15,
+    112.875,
+    118.975,
+    124.75,
+    128.075,
+    133.1,
+    141.8,
+    146.2,
+    152.875,
+    158.025,
+    163.375,
+    167.675,
+    173.85,
+    179.65,
+    182.775,
+    186.875,
+    192.55,
+    197.95,
+    204.425,
+    210.7,
+    216.75,
+    222.075,
+    226.2,
+    231.8
+   ],
+   "sentenceEnds": [
+    7.025,
+    13.625,
+    19.425,
+    21.975,
+    27.025,
+    31.725,
+    38.225,
+    43.0,
+    48.85,
+    52.725,
+    58.925,
+    63.475,
+    67.55,
+    74.975,
+    79.85,
+    85.475,
+    90.25,
+    93.8,
+    98.5,
+    105.2,
+    112.425,
+    118.525,
+    124.3,
+    127.625,
+    132.65,
+    141.35,
+    145.75,
+    152.425,
+    157.575,
+    162.925,
+    167.225,
+    173.4,
+    179.2,
+    182.325,
+    186.425,
+    192.1,
+    197.5,
+    203.975,
+    210.25,
+    216.3,
+    221.625,
+    225.75,
+    231.35,
+    237.775
+   ]
+  },
+  {
+   "id": "c05-estimation",
+   "index": 4,
+   "start": 1262.3667,
+   "end": 1612.7667,
+   "title": "Decision rules and information limits",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    8.25,
+    10.925,
+    17.475,
+    24.525,
+    31.1,
+    36.425,
+    42.45,
+    47.225,
+    53.95,
+    61.35,
+    67.25,
+    70.775,
+    76.025,
+    81.775,
+    91.275,
+    97.95,
+    100.35,
+    106.275,
+    108.775,
+    113.475,
+    119.6,
+    124.875,
+    130.475,
+    135.675,
+    142.85,
+    145.6,
+    151.55,
+    156.575,
+    161.8,
+    168.225,
+    174.575,
+    178.45,
+    183.925,
+    189.325,
+    192.025,
+    199.325,
+    208.0,
+    213.25,
+    216.575,
+    221.775,
+    226.65,
+    232.4,
+    237.65,
+    244.075,
+    247.3,
+    253.2,
+    260.325,
+    263.525,
+    267.875,
+    273.1,
+    276.8,
+    279.45,
+    287.45,
+    293.4,
+    299.125,
+    303.65,
+    310.525,
+    317.025,
+    325.35,
+    332.45,
+    341.3
+   ],
+   "sentenceEnds": [
+    7.8,
+    10.475,
+    17.025,
+    24.075,
+    30.65,
+    35.975,
+    42.0,
+    46.775,
+    53.5,
+    60.9,
+    66.8,
+    70.325,
+    75.575,
+    81.325,
+    88.325,
+    97.5,
+    99.9,
+    105.825,
+    108.325,
+    113.025,
+    119.15,
+    124.425,
+    130.025,
+    135.225,
+    142.4,
+    145.15,
+    151.1,
+    156.125,
+    161.35,
+    167.775,
+    174.125,
+    178.0,
+    183.475,
+    188.875,
+    191.575,
+    198.875,
+    207.55,
+    212.8,
+    216.125,
+    221.325,
+    226.2,
+    231.95,
+    237.2,
+    243.625,
+    246.85,
+    252.75,
+    259.875,
+    263.075,
+    267.425,
+    272.65,
+    276.35,
+    279.0,
+    284.5,
+    292.95,
+    298.675,
+    303.2,
+    310.075,
+    316.575,
+    324.9,
+    332.0,
+    340.85,
+    348.8
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 14.625,
+   "text": "Our secret is one of four equally likely two-bit words: zero zero, zero one, one zero, or one one.",
+   "translation": "秘密是四个等概率二比特码字之一：00、01、10、11。"
+  },
+  {
+   "start": 15.075,
+   "end": 19.025,
+   "text": "A device keeps only the first bit. The second bit is gone.",
+   "translation": "一个装置只保留第一比特，第二比特丢失了。"
+  },
+  {
+   "start": 19.475,
+   "end": 24.6,
+   "text": "A button called sharpen appends zero to the kept bit, making a complete-looking word.",
+   "translation": "一个名为“锐化”的按钮在保留的比特后添零，产生看似完整的码字。"
+  },
+  {
+   "start": 25.05,
+   "end": 28.65,
+   "text": "Will this processing recover every original secret?",
+   "translation": "这种处理能恢复每一个原始秘密吗？"
+  },
+  {
+   "start": 32.1,
+   "end": 38.9,
+   "text": "Zero zero and zero one both become zero zero. One zero and one one both become one zero.",
+   "translation": "00和01都变成00；10和11都变成10。"
+  },
+  {
+   "start": 39.35,
+   "end": 45.7,
+   "text": "For each kept bit, two originals remain equally likely. Any guess succeeds at most half the time.",
+   "translation": "对每个保留比特，两个原始值仍等概率。任意猜测的成功概率至多为二分之一。"
+  },
+  {
+   "start": 46.15,
+   "end": 52.35,
+   "text": "Give the receiver the actual missing bit as extra data, and it can recover every original word.",
+   "translation": "把真正丢失的比特作为额外数据交给接收者，就能恢复全部原始码字。"
+  },
+  {
+   "start": 52.8,
+   "end": 60.4,
+   "text": "Processing an observation and adding new information are different operations. Let us make that distinction precise.",
+   "translation": "处理已有观察与增加新信息是两种操作。下面精确刻画这一区别。"
+  },
+  {
+   "start": 60.85,
+   "end": 66.575,
+   "text": "A probability arrow records a factorization, not automatically a physical cause.",
+   "translation": "概率箭头记录的是因子分解，并不自动表示物理因果。"
+  },
+  {
+   "start": 67.025,
+   "end": 72.475,
+   "text": "For three finite random variables, write the proposed chain as Z to X to Y.",
+   "translation": "对三个有限随机变量，先写出候选链Z→X→Y。"
+  },
+  {
+   "start": 72.925,
+   "end": 79.825,
+   "text": "Its defining factorization is p of z, times p of x given z, times p of y given x.",
+   "translation": "它的定义性分解是p(z)p(x|z)p(y|x)。"
+  },
+  {
+   "start": 80.275,
+   "end": 84.875,
+   "text": "The final factor does not depend on z once x is specified.",
+   "translation": "一旦给定x，最后一项就不依赖z。"
+  },
+  {
+   "start": 85.325,
+   "end": 89.575,
+   "text": "Therefore Y and Z are conditionally independent given X.",
+   "translation": "因此给定X时，Y与Z条件独立。"
+  },
+  {
+   "start": 90.025,
+   "end": 96.85,
+   "text": "Equivalently, p of y given x,z equals p of y given x whenever the condition is defined.",
+   "translation": "等价地，在条件有定义时，p(y|x,z)=p(y|x)。"
+  },
+  {
+   "start": 97.3,
+   "end": 101.95,
+   "text": "The product form contains the full joint law, not merely a diagram.",
+   "translation": "乘积形式描述完整联合分布，而不只是图示。"
+  },
+  {
+   "start": 102.4,
+   "end": 106.225,
+   "text": "Summing over y recovers the joint law of Z and X.",
+   "translation": "对y求和会恢复(Z,X)的联合分布。"
+  },
+  {
+   "start": 106.675,
+   "end": 111.05,
+   "text": "Summing over z also recovers the joint law of X and Y.",
+   "translation": "对z求和也会恢复(X,Y)的联合分布。"
+  },
+  {
+   "start": 111.5,
+   "end": 115.725,
+   "text": "Each conditional distribution must sum to one on its support.",
+   "translation": "每个条件分布都必须在其支持集上求和为一。"
+  },
+  {
+   "start": 116.175,
+   "end": 118.35,
+   "text": "Start with a fair source bit Z.",
+   "translation": "从公平信源比特Z开始。"
+  },
+  {
+   "start": 118.8,
+   "end": 121.875,
+   "text": "Let X copy Z, then let Y copy X.",
+   "translation": "令X复制Z，再令Y复制X。"
+  },
+  {
+   "start": 122.325,
+   "end": 125.3,
+   "text": "The chain factorization holds exactly.",
+   "translation": "该链因子分解精确成立。"
+  },
+  {
+   "start": 125.75,
+   "end": 131.075,
+   "text": "Given X, both Z and Y are fixed, so their conditional joint law factors.",
+   "translation": "给定X后，Z和Y都确定，因此它们的条件联合分布可分解。"
+  },
+  {
+   "start": 131.525,
+   "end": 134.65,
+   "text": "This example has conditional independence.",
+   "translation": "这个例子满足条件独立。"
+  },
+  {
+   "start": 135.1,
+   "end": 140.575,
+   "text": "Yet Z and Y are identical fair bits, so they are not ordinarily independent.",
+   "translation": "但Z和Y是相同的公平比特，所以它们并非普通独立。"
+  },
+  {
+   "start": 141.025,
+   "end": 146.0,
+   "text": "Thus conditional independence does not imply ordinary independence.",
+   "translation": "因此条件独立不推出普通独立。"
+  },
+  {
+   "start": 146.45,
+   "end": 149.75,
+   "text": "Now take X and Y as independent fair bits.",
+   "translation": "现在令X和Y为独立公平比特。"
+  },
+  {
+   "start": 150.2,
+   "end": 153.225,
+   "text": "Let Z indicate whether the two bits differ.",
+   "translation": "令Z表示两个比特是否不同。"
+  },
+  {
+   "start": 153.675,
+   "end": 157.65,
+   "text": "Before observing Z, X and Y remain independent.",
+   "translation": "观测Z之前，X与Y仍然独立。"
+  },
+  {
+   "start": 158.1,
+   "end": 161.575,
+   "text": "After fixing Z, one bit determines the other.",
+   "translation": "给定Z后，一个比特就决定另一个比特。"
+  },
+  {
+   "start": 162.025,
+   "end": 164.725,
+   "text": "They are then conditionally dependent.",
+   "translation": "此时二者条件相关。"
+  },
+  {
+   "start": 165.175,
+   "end": 170.25,
+   "text": "Therefore ordinary independence does not imply conditional independence.",
+   "translation": "因此普通独立也不推出条件独立。"
+  },
+  {
+   "start": 170.7,
+   "end": 178.15,
+   "text": "For a genuine chain, conditioning on X removes the remaining statistical association between Z and Y.",
+   "translation": "对真正的链，给定X会消除Z与Y之间剩余的统计关联。"
+  },
+  {
+   "start": 178.6,
+   "end": 182.075,
+   "text": "This statement is about the joint probability law.",
+   "translation": "这句话描述的是联合概率律。"
+  },
+  {
+   "start": 182.525,
+   "end": 187.15,
+   "text": "It does not tell us whether an experiment physically caused one variable.",
+   "translation": "它不说明某个变量是否在物理实验中造成了另一个变量。"
+  },
+  {
+   "start": 187.6,
+   "end": 191.15,
+   "text": "The arrows specify how the distribution factors.",
+   "translation": "箭头指定分布如何因子分解。"
+  },
+  {
+   "start": 191.6,
+   "end": 196.35,
+   "text": "A causal interpretation would require an additional structural model.",
+   "translation": "因果解释还需要额外的结构模型。"
+  },
+  {
+   "start": 196.8,
+   "end": 201.625,
+   "text": "The factorization also provides a mathematical sampling recipe.",
+   "translation": "该因子分解还给出一种数学上的抽样步骤。"
+  },
+  {
+   "start": 202.075,
+   "end": 205.525,
+   "text": "First choose Z from its marginal distribution.",
+   "translation": "先从边缘分布中抽取Z。"
+  },
+  {
+   "start": 205.975,
+   "end": 210.125,
+   "text": "Then draw X using the conditional distribution given Z.",
+   "translation": "再按给定Z的条件分布抽取X。"
+  },
+  {
+   "start": 210.575,
+   "end": 215.525,
+   "text": "Finally draw Y using only the conditional distribution given X.",
+   "translation": "最后只按给定X的条件分布抽取Y。"
+  },
+  {
+   "start": 215.975,
+   "end": 219.075,
+   "text": "The last sampling step cannot inspect Z.",
+   "translation": "最后一步的抽样不能查看Z。"
+  },
+  {
+   "start": 219.525,
+   "end": 224.475,
+   "text": "That restriction is precisely the conditional independence in the chain.",
+   "translation": "这个限制正是链中的条件独立。"
+  },
+  {
+   "start": 224.925,
+   "end": 230.325,
+   "text": "If Y also uses Z through a bypass, the proposed factorization can fail.",
+   "translation": "如果Y还通过旁路使用Z，原先的因子分解就可能失效。"
+  },
+  {
+   "start": 230.775,
+   "end": 235.025,
+   "text": "A direct arrow in a picture is only a warning to test the law.",
+   "translation": "图中的直连箭头只是提醒我们检验概率律。"
+  },
+  {
+   "start": 235.475,
+   "end": 243.2,
+   "text": "For each x with positive probability, compare p of z,y given x with the product of its conditional marginals.",
+   "translation": "对每个正概率x，比较p(z,y|x)与条件边缘分布的乘积。"
+  },
+  {
+   "start": 243.65,
+   "end": 247.0,
+   "text": "Equality at every such x verifies the chain.",
+   "translation": "所有这类x都满足等式，便验证了该链。"
+  },
+  {
+   "start": 247.45,
+   "end": 250.425,
+   "text": "Failure at even one such x rules it out.",
+   "translation": "只要其中一个x不满足等式，就可排除该链。"
+  },
+  {
+   "start": 250.875,
+   "end": 256.775,
+   "text": "Reversing the whole chain preserves the same middle variable and conditional independence.",
+   "translation": "将整条链反向，仍保留相同的中间变量与条件独立关系。"
+  },
+  {
+   "start": 257.225,
+   "end": 262.1,
+   "text": "Moving a different variable into the middle generally changes the assertion.",
+   "translation": "若换一个变量放在中间，所断言的条件独立通常就会改变。"
+  },
+  {
+   "start": 262.55,
+   "end": 268.525,
+   "text": "A chain asserts independence of its endpoints only after conditioning on the middle variable.",
+   "translation": "链断言的只是给定中间变量后端点独立。"
+  },
+  {
+   "start": 268.975,
+   "end": 273.725,
+   "text": "It does not generally assert that Z and Y are marginally independent.",
+   "translation": "它通常不意味着Z与Y边缘独立。"
+  },
+  {
+   "start": 274.175,
+   "end": 278.875,
+   "text": "An observation can be a noisy copy rather than an exact copy.",
+   "translation": "观测可以是带噪复制，而不必是精确复制。"
+  },
+  {
+   "start": 279.325,
+   "end": 282.375,
+   "text": "Passing Z through one channel creates X.",
+   "translation": "将Z通过一个信道得到X。"
+  },
+  {
+   "start": 282.825,
+   "end": 285.8,
+   "text": "Passing X through another channel creates Y.",
+   "translation": "再将X通过另一个信道得到Y。"
+  },
+  {
+   "start": 286.25,
+   "end": 291.55,
+   "text": "If the second channel uses only X, the Markov factorization still holds.",
+   "translation": "若第二个信道只使用X，马尔可夫因子分解仍成立。"
+  },
+  {
+   "start": 292.0,
+   "end": 297.625,
+   "text": "The combined path may lose information even when neither step erases everything.",
+   "translation": "即便两个步骤都没有完全抹去信息，整条路径仍可能损失信息。"
+  },
+  {
+   "start": 298.075,
+   "end": 301.8,
+   "text": "We will quantify that loss using mutual information.",
+   "translation": "接下来我们将用互信息量化这种损失。"
+  },
+  {
+   "start": 305.8,
+   "end": 311.1,
+   "text": "The data processing inequality compares information before and after a channel.",
+   "translation": "数据处理不等式比较信道处理前后的信息量。"
+  },
+  {
+   "start": 311.55,
+   "end": 316.175,
+   "text": "Suppose Z, X, and Y form the Markov chain Z to X to Y.",
+   "translation": "假设Z、X、Y形成马尔可夫链Z→X→Y。"
+  },
+  {
+   "start": 316.625,
+   "end": 321.425,
+   "text": "The chain rule expands information about the pair X,Y in two orders.",
+   "translation": "链式法则可以按两种顺序展开关于(X,Y)的信息。"
+  },
+  {
+   "start": 321.875,
+   "end": 327.025,
+   "text": "Mutual information is entropy of Z minus conditional entropy of Z.",
+   "translation": "互信息等于Z的熵减去给定条件时Z的条件熵。"
+  },
+  {
+   "start": 327.475,
+   "end": 332.175,
+   "text": "For the first order, split the conditional entropy after revealing X.",
+   "translation": "第一种顺序中，先揭示X再拆分条件熵。"
+  },
+  {
+   "start": 332.625,
+   "end": 339.2,
+   "text": "The difference H of Z given X minus H of Z given X,Y is I of Z with Y given X.",
+   "translation": "H(Z|X)−H(Z|X,Y)正是I(Z;Y|X)。"
+  },
+  {
+   "start": 339.65,
+   "end": 345.825,
+   "text": "First, I of Z with X,Y equals I of Z with X plus I of Z with Y given X.",
+   "translation": "第一种展开是I(Z;X,Y)=I(Z;X)+I(Z;Y|X)。"
+  },
+  {
+   "start": 346.275,
+   "end": 350.5,
+   "text": "The chain makes Y conditionally independent of Z given X.",
+   "translation": "该链使给定X时的Y与Z条件独立。"
+  },
+  {
+   "start": 350.95,
+   "end": 354.9,
+   "text": "Therefore the conditional mutual information term is zero.",
+   "translation": "因此条件互信息项为零。"
+  },
+  {
+   "start": 355.35,
+   "end": 359.65,
+   "text": "The joint information consequently equals I of Z with X.",
+   "translation": "所以联合信息等于I(Z;X)。"
+  },
+  {
+   "start": 360.1,
+   "end": 363.925,
+   "text": "Expand the same joint information in the opposite order.",
+   "translation": "按相反顺序展开同一个联合信息。"
+  },
+  {
+   "start": 364.375,
+   "end": 368.85,
+   "text": "It equals I of Z with Y plus I of Z with X given Y.",
+   "translation": "它等于I(Z;Y)+I(Z;X|Y)。"
+  },
+  {
+   "start": 369.3,
+   "end": 374.2,
+   "text": "This second expansion splits conditional entropy after revealing Y.",
+   "translation": "第二种展开是在揭示Y后拆分条件熵。"
+  },
+  {
+   "start": 374.65,
+   "end": 379.225,
+   "text": "The remaining difference is exactly I of Z with X given Y.",
+   "translation": "剩余差值恰为I(Z;X|Y)。"
+  },
+  {
+   "start": 379.675,
+   "end": 383.2,
+   "text": "Conditional mutual information is nonnegative.",
+   "translation": "条件互信息非负。"
+  },
+  {
+   "start": 383.65,
+   "end": 387.325,
+   "text": "Thus I of Z with Y cannot exceed I of Z with X.",
+   "translation": "因此I(Z;Y)不超过I(Z;X)。"
+  },
+  {
+   "start": 387.775,
+   "end": 391.575,
+   "text": "The processing step cannot increase information about Z.",
+   "translation": "处理步骤不会增加关于Z的信息。"
+  },
+  {
+   "start": 392.025,
+   "end": 396.825,
+   "text": "Equality holds exactly when I of Z with X given Y is zero.",
+   "translation": "当且仅当I(Z;X|Y)=0时取等。"
+  },
+  {
+   "start": 397.275,
+   "end": 401.85,
+   "text": "Equivalently, Z and X are conditionally independent given Y.",
+   "translation": "等价地，给定Y时Z与X条件独立。"
+  },
+  {
+   "start": 402.3,
+   "end": 406.975,
+   "text": "That condition says Y retains all information X carried about Z.",
+   "translation": "该条件表示Y保留了X所携带的关于Z的全部信息。"
+  },
+  {
+   "start": 407.425,
+   "end": 412.75,
+   "text": "The conditional distribution of Z given X,Y then matches that given Y.",
+   "translation": "此时给定X、Y的Z条件分布等于给定Y的条件分布。"
+  },
+  {
+   "start": 413.2,
+   "end": 416.95,
+   "text": "It does not require Y to reconstruct X exactly.",
+   "translation": "它不要求Y精确重建X。"
+  },
+  {
+   "start": 417.4,
+   "end": 424.0,
+   "text": "It requires only that the remaining uncertainty about Z not improve upon seeing X after Y.",
+   "translation": "它只要求已知Y后再看X，不会进一步减少对Z的不确定性。"
+  },
+  {
+   "start": 424.45,
+   "end": 428.925,
+   "text": "Now follow a fair bit Z through two binary symmetric channels.",
+   "translation": "现在让公平比特Z依次通过两个二元对称信道。"
+  },
+  {
+   "start": 429.375,
+   "end": 433.45,
+   "text": "The first channel flips its input with probability point one.",
+   "translation": "第一个信道以0.1概率翻转输入。"
+  },
+  {
+   "start": 433.9,
+   "end": 435.65,
+   "text": "Call its output X.",
+   "translation": "将输出记为X。"
+  },
+  {
+   "start": 436.1,
+   "end": 440.9,
+   "text": "The second channel flips X with probability point two to produce Y.",
+   "translation": "第二个信道以0.2概率翻转X，得到Y。"
+  },
+  {
+   "start": 441.35,
+   "end": 444.05,
+   "text": "The two flip events are independent.",
+   "translation": "两次翻转事件相互独立。"
+  },
+  {
+   "start": 444.5,
+   "end": 451.025,
+   "text": "Two independent flips can undo each other. What is the final probability that Y differs from Z?",
+   "translation": "两次独立翻转可以相互抵消。最终Y不同于Z的概率是多少？"
+  },
+  {
+   "start": 453.975,
+   "end": 460.15,
+   "text": "Exactly one flip causes an error: point one times point eight plus point nine times point two.",
+   "translation": "恰好一次翻转导致错误：零点一乘零点八，加零点九乘零点二。"
+  },
+  {
+   "start": 460.6,
+   "end": 462.975,
+   "text": "That value is point two six.",
+   "translation": "结果是0.26。"
+  },
+  {
+   "start": 463.425,
+   "end": 471.575,
+   "text": "For a fair bit through a binary symmetric channel, mutual information is one minus binary entropy of the flip probability.",
+   "translation": "公平比特通过二元对称信道时，互信息为1减去翻转概率的二元熵。"
+  },
+  {
+   "start": 472.025,
+   "end": 476.075,
+   "text": "Therefore I of Z with X is one minus h of point one.",
+   "translation": "因此I(Z;X)=1−h₂(0.1)。"
+  },
+  {
+   "start": 476.525,
+   "end": 480.2,
+   "text": "Its value is approximately point five three one bits.",
+   "translation": "数值约为0.531比特。"
+  },
+  {
+   "start": 480.65,
+   "end": 484.45,
+   "text": "I of Z with Y is one minus h of point two six.",
+   "translation": "I(Z;Y)=1−h₂(0.26)。"
+  },
+  {
+   "start": 484.9,
+   "end": 488.775,
+   "text": "Its value is approximately point one seven three bits.",
+   "translation": "数值约为0.173比特。"
+  },
+  {
+   "start": 489.225,
+   "end": 494.45,
+   "text": "The difference between the two mutual informations is about point three five eight bits.",
+   "translation": "两个互信息之差约为0.358比特。"
+  },
+  {
+   "start": 494.9,
+   "end": 502.05,
+   "text": "The conditional mutual information records information about Z remaining in X after Y is observed.",
+   "translation": "条件互信息记录观测Y后X中仍保留的关于Z的信息。"
+  },
+  {
+   "start": 502.5,
+   "end": 507.225,
+   "text": "The second noisy step strictly reduces information in this example.",
+   "translation": "在这个例子中，第二次加噪严格减少了信息。"
+  },
+  {
+   "start": 507.675,
+   "end": 511.325,
+   "text": "The strict gap equals I of Z with X given Y.",
+   "translation": "严格差值等于I(Z;X|Y)。"
+  },
+  {
+   "start": 511.775,
+   "end": 519.025,
+   "text": "More generally, I of Z with X minus I of Z with Y equals that conditional mutual information.",
+   "translation": "一般地，I(Z;X)−I(Z;Y)等于该条件互信息。"
+  },
+  {
+   "start": 519.475,
+   "end": 523.825,
+   "text": "A path diagram alone is not enough to invoke this inequality.",
+   "translation": "仅有路径图还不足以使用该不等式。"
+  },
+  {
+   "start": 524.275,
+   "end": 528.825,
+   "text": "The factorization or conditional independence must actually hold.",
+   "translation": "必须确实满足相应的因子分解或条件独立。"
+  },
+  {
+   "start": 529.275,
+   "end": 533.725,
+   "text": "For a counterexample, let X be independent of a fair bit Z.",
+   "translation": "看一个反例：令X与公平比特Z独立。"
+  },
+  {
+   "start": 534.175,
+   "end": 538.075,
+   "text": "Set Y equal to Z through a bypass that ignores X.",
+   "translation": "令Y通过一条忽略X的旁路直接等于Z。"
+  },
+  {
+   "start": 538.525,
+   "end": 540.825,
+   "text": "Then I of Z with X is zero.",
+   "translation": "此时I(Z;X)=0。"
+  },
+  {
+   "start": 541.275,
+   "end": 543.825,
+   "text": "But I of Z with Y is one bit.",
+   "translation": "而I(Z;Y)=1比特。"
+  },
+  {
+   "start": 544.275,
+   "end": 549.05,
+   "text": "The claimed inequality would fail because its Markov premise is false.",
+   "translation": "由于马尔可夫前提不成立，所声称的不等式就会失败。"
+  },
+  {
+   "start": 549.5,
+   "end": 556.5,
+   "text": "Data processing is a theorem about specified conditional independence, not every three-stage story.",
+   "translation": "数据处理定理依赖明确的条件独立，并不适用于所有三阶段叙述。"
+  },
+  {
+   "start": 560.5,
+   "end": 567.125,
+   "text": "A statistical model is a family of sampling distributions indexed by a parameter theta.",
+   "translation": "统计模型是由参数θ索引的一族抽样分布。"
+  },
+  {
+   "start": 567.575,
+   "end": 572.225,
+   "text": "The parameter is fixed but unknown during one sampling experiment.",
+   "translation": "一次抽样实验中，参数固定但未知。"
+  },
+  {
+   "start": 572.675,
+   "end": 578.0,
+   "text": "The observed sample X is random under the distribution selected by theta.",
+   "translation": "观测样本X在θ选定的分布下随机产生。"
+  },
+  {
+   "start": 578.45,
+   "end": 583.2,
+   "text": "One may place a prior distribution on theta for Bayesian analysis.",
+   "translation": "在贝叶斯分析中，可以给θ指定先验分布。"
+  },
+  {
+   "start": 583.65,
+   "end": 589.325,
+   "text": "That prior makes capital Theta a random variable across experiments or beliefs.",
+   "translation": "该先验使大写Θ成为跨实验或信念中的随机变量。"
+  },
+  {
+   "start": 589.775,
+   "end": 594.525,
+   "text": "The fixed parameter theta and random parameter Theta play different roles.",
+   "translation": "固定参数θ与随机参数Θ扮演不同角色。"
+  },
+  {
+   "start": 594.975,
+   "end": 598.9,
+   "text": "A statistic T is a function of the observed sample.",
+   "translation": "统计量T是观测样本的函数。"
+  },
+  {
+   "start": 599.35,
+   "end": 604.325,
+   "text": "It compresses X to a value intended to retain information about theta.",
+   "translation": "它把X压缩为一个值，目标是保留关于θ的信息。"
+  },
+  {
+   "start": 604.775,
+   "end": 610.025,
+   "text": "The model-family definition of sufficiency is conditional-distribution based.",
+   "translation": "模型族中的充分性以条件分布定义。"
+  },
+  {
+   "start": 610.475,
+   "end": 616.375,
+   "text": "T is sufficient when the conditional law of X given T does not depend on theta.",
+   "translation": "若给定T后X的条件律不依赖θ，则T充分。"
+  },
+  {
+   "start": 616.825,
+   "end": 623.7,
+   "text": "Equivalently, within a fixed T-value class, the remaining sample pattern carries no parameter dependence.",
+   "translation": "等价地，在固定T值的样本类中，剩余样本排列不再携带参数依赖。"
+  },
+  {
+   "start": 624.15,
+   "end": 632.125,
+   "text": "For any prior supported on finitely many candidate parameter values, sufficiency preserves mutual information.",
+   "translation": "对支持于有限个候选参数值的任意先验，充分统计量都保留互信息。"
+  },
+  {
+   "start": 632.575,
+   "end": 636.075,
+   "text": "The reason is the Markov chain Theta to X to T.",
+   "translation": "原因是Θ→X→T构成马尔可夫链。"
+  },
+  {
+   "start": 636.525,
+   "end": 641.75,
+   "text": "Sufficiency also makes X and Theta conditionally independent given T.",
+   "translation": "充分性还使给定T时X与Θ条件独立。"
+  },
+  {
+   "start": 642.2,
+   "end": 646.95,
+   "text": "The chain rule then gives I of Theta with X equal I of Theta with T.",
+   "translation": "链式法则于是给出I(Θ;X)=I(Θ;T)。"
+  },
+  {
+   "start": 647.4,
+   "end": 655.225,
+   "text": "A prior concentrated on one parameter makes both informations zero. Does that certify sufficiency for the family?",
+   "translation": "先验集中于一个参数时，两个互信息均为零。这能证明整个模型族的充分性吗？"
+  },
+  {
+   "start": 658.175,
+   "end": 665.025,
+   "text": "No. That prior makes Theta known in advance; every statistic gives both mutual informations zero.",
+   "translation": "不能。此先验使Theta事先已知；任何统计量都会使两个互信息为零。"
+  },
+  {
+   "start": 665.475,
+   "end": 671.35,
+   "text": "We now prove a factorization criterion in a finite sample space with counting measure.",
+   "translation": "现在在有限样本空间及计数测度下证明因子分解判据。"
+  },
+  {
+   "start": 671.8,
+   "end": 676.2,
+   "text": "Suppose the family has probability mass function p theta of x.",
+   "translation": "设该模型族的概率质量函数为pθ(x)。"
+  },
+  {
+   "start": 676.65,
+   "end": 683.65,
+   "text": "Assume nonnegative factors g theta of T x and h of x multiply to p theta of x.",
+   "translation": "假设非负因子gθ(T(x))与h(x)相乘等于pθ(x)。"
+  },
+  {
+   "start": 684.1,
+   "end": 688.75,
+   "text": "Fix a statistic value t with positive probability under theta.",
+   "translation": "固定一个在该θ下概率为正的统计量值t。"
+  },
+  {
+   "start": 689.2,
+   "end": 696.775,
+   "text": "For T of x equal t, its conditional probability is p theta of x over P theta of T equal t.",
+   "translation": "对满足T(x)=t的样本，其条件概率是pθ(x)除以Pθ(T=t)。"
+  },
+  {
+   "start": 697.225,
+   "end": 701.675,
+   "text": "The numerator factors into g theta of t times h of x.",
+   "translation": "分子分解为gθ(t)h(x)。"
+  },
+  {
+   "start": 702.125,
+   "end": 708.675,
+   "text": "The denominator sums the same factor over all samples x prime with T x prime equal t.",
+   "translation": "分母则对所有T(x′)=t的样本求和同一因子。"
+  },
+  {
+   "start": 709.125,
+   "end": 714.025,
+   "text": "The common g theta of t cancels from numerator and denominator.",
+   "translation": "分子分母的共同因子gθ(t)相消。"
+  },
+  {
+   "start": 714.475,
+   "end": 720.425,
+   "text": "The resulting conditional law is h of x divided by the sum of h over that class.",
+   "translation": "所得条件律为h(x)除以该样本类内h值之和。"
+  },
+  {
+   "start": 720.875,
+   "end": 726.85,
+   "text": "This conditional law is independent of theta wherever the class has positive probability.",
+   "translation": "只要该样本类的概率为正，这个条件律就不依赖θ。"
+  },
+  {
+   "start": 727.3,
+   "end": 733.125,
+   "text": "A zero-probability class imposes no conditional-law requirement for that parameter.",
+   "translation": "对某参数，概率为零的样本类不施加条件律要求。"
+  },
+  {
+   "start": 733.575,
+   "end": 737.05,
+   "text": "Therefore the factorization implies sufficiency.",
+   "translation": "因此因子分解推出充分性。"
+  },
+  {
+   "start": 737.5,
+   "end": 744.475,
+   "text": "For the converse, assume that conditional law q of x given T=t is independent of theta.",
+   "translation": "反过来，假设给定T=t时x的条件律q(x|t)不依赖θ。"
+  },
+  {
+   "start": 744.925,
+   "end": 751.975,
+   "text": "For every x, factor its probability as the probability of T=t times q of x given t.",
+   "translation": "对每个x，将其概率分解为T=t的概率乘q(x|t)。"
+  },
+  {
+   "start": 752.425,
+   "end": 756.8,
+   "text": "Set g theta of t equal to P theta that T equals t.",
+   "translation": "令gθ(t)=Pθ(T=t)。"
+  },
+  {
+   "start": 757.25,
+   "end": 761.0,
+   "text": "Set h of x equal to q of x given T of x.",
+   "translation": "令h(x)=q(x|T(x))。"
+  },
+  {
+   "start": 761.45,
+   "end": 765.95,
+   "text": "Then p theta of x equals g theta of T x times h of x.",
+   "translation": "于是pθ(x)=gθ(T(x))h(x)。"
+  },
+  {
+   "start": 766.4,
+   "end": 771.05,
+   "text": "This proves the factorization criterion in the stated finite model.",
+   "translation": "这就证明了所述有限模型中的因子分解判据。"
+  },
+  {
+   "start": 771.5,
+   "end": 777.575,
+   "text": "Fisher's factorization theorem extends the criterion to dominated density families.",
+   "translation": "Fisher因子分解定理将该判据扩展到有共同支配测度的密度模型族。"
+  },
+  {
+   "start": 778.025,
+   "end": 781.55,
+   "text": "The finite proof uses counting measure explicitly.",
+   "translation": "这里的有限样本证明明确使用计数测度。"
+  },
+  {
+   "start": 782.0,
+   "end": 787.775,
+   "text": "Common support is not a universal prerequisite for every factorization theorem.",
+   "translation": "共同支持并不是所有因子分解定理的普遍前提。"
+  },
+  {
+   "start": 788.225,
+   "end": 795.525,
+   "text": "Consider n independent Bernoulli observations with parameter theta strictly between zero and one.",
+   "translation": "考虑n个参数θ严格介于零与一之间的独立Bernoulli观测。"
+  },
+  {
+   "start": 795.975,
+   "end": 804.175,
+   "text": "The likelihood is theta raised to the count t, multiplied by the quantity one minus theta, raised to the power n minus t.",
+   "translation": "含t个一的序列似然为θ的t次方乘(1−θ)的n−t次方。"
+  },
+  {
+   "start": 804.625,
+   "end": 807.875,
+   "text": "It depends on the sample only through the count T.",
+   "translation": "似然只通过计数T依赖样本。"
+  },
+  {
+   "start": 808.325,
+   "end": 811.925,
+   "text": "Thus the factorization theorem makes T sufficient.",
+   "translation": "因此因子分解定理说明T充分。"
+  },
+  {
+   "start": 812.375,
+   "end": 815.45,
+   "text": "There are n choose t sequences with that count.",
+   "translation": "具有该计数的序列共有C(n,t)个。"
+  },
+  {
+   "start": 815.9,
+   "end": 819.1,
+   "text": "Every such sequence has the same likelihood.",
+   "translation": "每个这样的序列似然都相同。"
+  },
+  {
+   "start": 819.55,
+   "end": 826.15,
+   "text": "Conditioned on T=t, each arrangement therefore has probability one over n choose t.",
+   "translation": "给定T=t后，每种排列的概率均为1/C(n,t)。"
+  },
+  {
+   "start": 826.6,
+   "end": 829.55,
+   "text": "That conditional law contains no theta.",
+   "translation": "该条件律不含θ。"
+  },
+  {
+   "start": 830.0,
+   "end": 833.25,
+   "text": "Now define minimal sufficiency precisely.",
+   "translation": "现在精确定义最小充分性。"
+  },
+  {
+   "start": 833.7,
+   "end": 840.475,
+   "text": "A sufficient statistic T is minimal if it is a function of every other sufficient statistic S.",
+   "translation": "充分统计量T若是任意其他充分统计量S的函数，就称为最小充分统计量。"
+  },
+  {
+   "start": 840.925,
+   "end": 845.675,
+   "text": "Minimality means no other sufficient summary can compress it further.",
+   "translation": "最小性表示没有其他充分摘要能再压缩它。"
+  },
+  {
+   "start": 846.125,
+   "end": 853.125,
+   "text": "Suppose another statistic S groups together two Bernoulli samples with different counts t and t prime.",
+   "translation": "假设另一个统计量S把计数为t与t′的两个Bernoulli样本归为一类。"
+  },
+  {
+   "start": 853.575,
+   "end": 863.2,
+   "text": "Their likelihood ratio is theta divided by the quantity one minus theta, with that entire ratio raised to the difference t minus t prime.",
+   "translation": "两样本的似然比为(θ/(1−θ))^(t−t′)。"
+  },
+  {
+   "start": 863.65,
+   "end": 867.4,
+   "text": "Because their counts differ, this ratio varies with theta.",
+   "translation": "由于计数不同，该比值随θ变化。"
+  },
+  {
+   "start": 867.85,
+   "end": 872.6,
+   "text": "Given S, the odds of these two samples equal that likelihood ratio.",
+   "translation": "给定S后，这两个样本的条件概率之比就是该似然比。"
+  },
+  {
+   "start": 873.05,
+   "end": 878.625,
+   "text": "The conditional probabilities of the two samples given S therefore depend on theta.",
+   "translation": "因此给定S后这两个样本的条件概率依赖θ。"
+  },
+  {
+   "start": 879.075,
+   "end": 881.3,
+   "text": "So S cannot be sufficient.",
+   "translation": "所以S不可能充分。"
+  },
+  {
+   "start": 881.75,
+   "end": 886.05,
+   "text": "Every sufficient S must distinguish samples with different counts.",
+   "translation": "任何充分统计量S都必须区分计数不同的样本。"
+  },
+  {
+   "start": 886.5,
+   "end": 892.15,
+   "text": "If S merged them, the conditional odds would vary as theta varies across the family.",
+   "translation": "若S把它们合并，条件概率比就会随模型族中的θ变化。"
+  },
+  {
+   "start": 892.6,
+   "end": 898.325,
+   "text": "That dependence violates the defining conditional-law criterion for sufficiency.",
+   "translation": "这种依赖违反充分性的条件律定义。"
+  },
+  {
+   "start": 898.775,
+   "end": 903.3,
+   "text": "Consequently the count T is a function of every sufficient S.",
+   "translation": "因此计数T是任意充分统计量S的函数。"
+  },
+  {
+   "start": 903.75,
+   "end": 907.7,
+   "text": "The count is minimal sufficient for this Bernoulli family.",
+   "translation": "对该Bernoulli模型族，计数是最小充分统计量。"
+  },
+  {
+   "start": 908.15,
+   "end": 915.1,
+   "text": "A second example uses independent Gaussian observations with known positive variance sigma squared.",
+   "translation": "第二个例子使用方差σ²已知且为正的独立高斯观测。"
+  },
+  {
+   "start": 915.55,
+   "end": 921.525,
+   "text": "Each observation has a normal density with mean theta and known variance sigma squared.",
+   "translation": "每个观测服从均值θ、已知方差σ²的正态密度。"
+  },
+  {
+   "start": 921.975,
+   "end": 932.475,
+   "text": "The normalizer raises the entire quantity two times pi times sigma squared to the power negative n divided by two. It multiplies an exponential.",
+   "translation": "联合密度为(2πσ²)^(−n/2)乘一个指数项。"
+  },
+  {
+   "start": 932.925,
+   "end": 940.5,
+   "text": "The exponent is the negative sum of squared differences from theta, divided by the product of two and sigma squared.",
+   "translation": "指数为各观测与θ之差的平方和，除以2σ²后取负。"
+  },
+  {
+   "start": 940.95,
+   "end": 946.65,
+   "text": "Expand each square into x i squared minus two theta x i plus theta squared.",
+   "translation": "将每个平方展开为xᵢ²−2θxᵢ+θ²。"
+  },
+  {
+   "start": 947.1,
+   "end": 954.225,
+   "text": "Summing gives the sum of x i squared minus two theta times the sum of x i plus n theta squared.",
+   "translation": "求和得到Σxᵢ²−2θΣxᵢ+nθ²。"
+  },
+  {
+   "start": 954.675,
+   "end": 960.025,
+   "text": "The parameter-dependent factor uses the sample only through the sum of x i.",
+   "translation": "含参数的因子只通过Σxᵢ依赖样本。"
+  },
+  {
+   "start": 960.475,
+   "end": 965.7,
+   "text": "Separate the density into a theta-dependent factor and a sample-only factor.",
+   "translation": "将密度分为依赖θ的因子与仅依赖样本的因子。"
+  },
+  {
+   "start": 966.15,
+   "end": 975.3,
+   "text": "The first factor is exp of a difference: theta times the sample sum over sigma squared, minus n theta squared over twice sigma squared.",
+   "translation": "前者为exp(θΣxᵢ/σ²−nθ²/(2σ²))。"
+  },
+  {
+   "start": 975.75,
+   "end": 986.1,
+   "text": "The second factor is the normalizing constant times an exponential whose exponent is the negative sum of x i squared, divided by twice sigma squared.",
+   "translation": "后者为归一化常数乘exp(−Σxᵢ²/(2σ²))。"
+  },
+  {
+   "start": 986.55,
+   "end": 991.075,
+   "text": "This is the factorization with statistic equal to the sample sum.",
+   "translation": "这就是以样本和为统计量的因子分解。"
+  },
+  {
+   "start": 991.525,
+   "end": 995.425,
+   "text": "The remaining factor depends on the sample but not theta.",
+   "translation": "剩余因子依赖样本，但不依赖θ。"
+  },
+  {
+   "start": 995.875,
+   "end": 998.375,
+   "text": "Thus the sample sum is sufficient.",
+   "translation": "因此样本和是充分统计量。"
+  },
+  {
+   "start": 998.825,
+   "end": 1004.525,
+   "text": "For known n, the sample mean is an invertible rescaling and is sufficient as well.",
+   "translation": "n已知时，样本均值是样本和的可逆缩放，因此也充分。"
+  },
+  {
+   "start": 1004.975,
+   "end": 1010.3,
+   "text": "The ordinary Lebesgue measure supplies a common dominating measure for this family.",
+   "translation": "Lebesgue测度为该模型族提供共同支配测度。"
+  },
+  {
+   "start": 1010.75,
+   "end": 1015.375,
+   "text": "No differential entropy is needed for either sufficiency example.",
+   "translation": "这两个充分性例子都不需要微分熵。"
+  },
+  {
+   "start": 1015.825,
+   "end": 1021.35,
+   "text": "Next, we convert estimation error into a bound on remaining uncertainty.",
+   "translation": "下一步将把估计错误转化为剩余不确定性的上界。"
+  },
+  {
+   "start": 1025.3667,
+   "end": 1029.9917,
+   "text": "Let Theta take values in a finite set with M at least two elements.",
+   "translation": "令Θ取值于含M≥2个元素的有限集合。"
+  },
+  {
+   "start": 1030.4417,
+   "end": 1036.5917,
+   "text": "Let Theta hat be a function g of observation X, taking values in that parameter set.",
+   "translation": "令Θ帽为观测X的函数g(X)，且其值属于该参数集合。"
+  },
+  {
+   "start": 1037.0417,
+   "end": 1042.3917,
+   "text": "Define the error indicator E to equal one when Theta differs from Theta hat.",
+   "translation": "当Θ不等于Θ帽时，定义错误指示变量E=1。"
+  },
+  {
+   "start": 1042.8417,
+   "end": 1044.9417,
+   "text": "Otherwise E equals zero.",
+   "translation": "否则E=0。"
+  },
+  {
+   "start": 1045.3917,
+   "end": 1049.9917,
+   "text": "The probability that E equals one is the error probability P e.",
+   "translation": "E=1的概率就是错误概率Pₑ。"
+  },
+  {
+   "start": 1050.4417,
+   "end": 1054.6917,
+   "text": "We want to bound the uncertainty in Theta after seeing the estimate.",
+   "translation": "我们要界定看到估计值后Θ的剩余不确定性。"
+  },
+  {
+   "start": 1055.1417,
+   "end": 1061.1917,
+   "text": "Since E is determined by Theta and Theta hat, adding E changes no conditional entropy.",
+   "translation": "因为E由Θ和Θ帽决定，加入E不改变条件熵。"
+  },
+  {
+   "start": 1061.6417,
+   "end": 1065.9667,
+   "text": "In particular, H of E given Theta and Theta hat is zero.",
+   "translation": "特别地，H(E|Θ,Θ帽)=0。"
+  },
+  {
+   "start": 1066.4167,
+   "end": 1071.8167,
+   "text": "Thus H of Theta given Theta hat equals H of E,Theta given Theta hat.",
+   "translation": "所以H(Θ|Θ帽)=H(E,Θ|Θ帽)。"
+  },
+  {
+   "start": 1072.2667,
+   "end": 1075.6917,
+   "text": "Apply the entropy chain rule, first revealing E.",
+   "translation": "应用熵链式法则，先揭示E。"
+  },
+  {
+   "start": 1076.1417,
+   "end": 1081.8917,
+   "text": "The result is H of E given Theta hat plus H of Theta given E and Theta hat.",
+   "translation": "结果为H(E|Θ帽)+H(Θ|E,Θ帽)。"
+  },
+  {
+   "start": 1082.3417,
+   "end": 1086.4417,
+   "text": "The first term is at most the entropy of the error indicator E.",
+   "translation": "第一项不超过H(E)。"
+  },
+  {
+   "start": 1086.8917,
+   "end": 1090.5167,
+   "text": "On average, conditioning cannot increase entropy.",
+   "translation": "平均而言，条件化不会增加熵。"
+  },
+  {
+   "start": 1090.9667,
+   "end": 1097.9417,
+   "text": "Because E is Bernoulli with error probability P e, its entropy is the binary entropy h of P e.",
+   "translation": "由于E以概率Pₑ取一，H(E)=h₂(Pₑ)。"
+  },
+  {
+   "start": 1098.3917,
+   "end": 1102.8167,
+   "text": "All logarithms and entropies in this derivation use base two.",
+   "translation": "这段推导中的对数与熵均以二为底。"
+  },
+  {
+   "start": 1103.2667,
+   "end": 1108.4417,
+   "text": "The binary entropy term measures uncertainty about whether an error occurred.",
+   "translation": "二元熵项度量错误是否发生的不确定性。"
+  },
+  {
+   "start": 1108.8917,
+   "end": 1113.2167,
+   "text": "When E equals zero, Theta is already determined by Theta hat.",
+   "translation": "当E=0时，Θ已由Θ帽确定。"
+  },
+  {
+   "start": 1113.6667,
+   "end": 1116.7667,
+   "text": "The conditional entropy on that branch is zero.",
+   "translation": "该分支的条件熵为零。"
+  },
+  {
+   "start": 1117.2167,
+   "end": 1121.4667,
+   "text": "When E equals one, Theta cannot equal the reported estimate.",
+   "translation": "当E=1时，Θ不能等于报告的估计值。"
+  },
+  {
+   "start": 1121.9167,
+   "end": 1128.1667,
+   "text": "The estimate is one of M possible values. If it is wrong, how many alternatives can remain?",
+   "translation": "估计值是M个可能值之一。如果估计错误，还可能剩下多少个备选值？"
+  },
+  {
+   "start": 1131.1167,
+   "end": 1135.3917,
+   "text": "At most M minus one parameter values remain possible.",
+   "translation": "最多还剩M−1个参数值。"
+  },
+  {
+   "start": 1135.8417,
+   "end": 1141.4917,
+   "text": "An entropy on at most M minus one values is at most their uniform entropy.",
+   "translation": "至多M−1个候选值上的熵，不超过其均匀熵。"
+  },
+  {
+   "start": 1141.9417,
+   "end": 1147.2667,
+   "text": "Entropy on that branch is at most log base two of the quantity M minus one.",
+   "translation": "该分支上的熵至多为log₂(M−1)。"
+  },
+  {
+   "start": 1147.7167,
+   "end": 1150.5917,
+   "text": "Weight this branch by its probability P e.",
+   "translation": "用该分支概率Pₑ加权。"
+  },
+  {
+   "start": 1151.0417,
+   "end": 1155.6167,
+   "text": "A branch with zero probability contributes zero to this average.",
+   "translation": "概率为零的分支，对这个平均值贡献为零。"
+  },
+  {
+   "start": 1156.0667,
+   "end": 1164.3167,
+   "text": "H of Theta given the estimate is at most h of P e plus P e times log base two of the quantity M minus one.",
+   "translation": "H(Θ|Θ帽)≤h₂(Pₑ)+Pₑlog₂(M−1)。"
+  },
+  {
+   "start": 1164.7667,
+   "end": 1168.7167,
+   "text": "This is Fano's inequality for a finite parameter set.",
+   "translation": "这就是有限参数集合上的Fano不等式。"
+  },
+  {
+   "start": 1169.1667,
+   "end": 1175.3917,
+   "text": "When M equals two, the error branch has one alternative and its logarithmic term is zero.",
+   "translation": "当M=2时，错误分支只剩一个选项，因此对应的对数项为零。"
+  },
+  {
+   "start": 1175.8417,
+   "end": 1180.5417,
+   "text": "The bound depends on the finite number of possible parameter values.",
+   "translation": "该界依赖有限的参数候选数量。"
+  },
+  {
+   "start": 1180.9917,
+   "end": 1185.8917,
+   "text": "It also depends on the specified estimator and its actual error event.",
+   "translation": "它还依赖指定的估计量及其实际错误事件。"
+  },
+  {
+   "start": 1186.3417,
+   "end": 1190.1917,
+   "text": "Now connect the estimate to the original observation.",
+   "translation": "现在把估计值与原始观测联系起来。"
+  },
+  {
+   "start": 1190.6417,
+   "end": 1196.3667,
+   "text": "The estimate is a function of X, so Theta to X to Theta hat is a Markov chain.",
+   "translation": "估计值是X的函数，因此Θ→X→Θ帽构成马尔可夫链。"
+  },
+  {
+   "start": 1196.8167,
+   "end": 1202.1667,
+   "text": "Data processing says I of Theta with Theta hat is at most I of Theta with X.",
+   "translation": "数据处理不等式给出I(Θ;Θ帽)≤I(Θ;X)。"
+  },
+  {
+   "start": 1202.6167,
+   "end": 1205.2917,
+   "text": "Subtract each side from H of Theta.",
+   "translation": "用H(Θ)分别减去不等式两侧。"
+  },
+  {
+   "start": 1205.7417,
+   "end": 1209.3917,
+   "text": "This reverses the order of conditional entropies.",
+   "translation": "这样条件熵的不等方向会反过来。"
+  },
+  {
+   "start": 1209.8417,
+   "end": 1215.0667,
+   "text": "We obtain H of Theta given X at most H of Theta given Theta hat.",
+   "translation": "于是H(Θ|X)≤H(Θ|Θ帽)。"
+  },
+  {
+   "start": 1215.5167,
+   "end": 1220.4667,
+   "text": "X contains at least as much information about Theta as its estimate does.",
+   "translation": "X所含的关于Θ的信息，至少与其估计值所含的信息一样多。"
+  },
+  {
+   "start": 1220.9167,
+   "end": 1226.9417,
+   "text": "Conditioning on X can only reduce uncertainty relative to conditioning on its function.",
+   "translation": "相较于其函数，给定X只会减少或保持不确定性。"
+  },
+  {
+   "start": 1227.3917,
+   "end": 1233.2167,
+   "text": "Combining with Fano bounds uncertainty after seeing X by the same error expression.",
+   "translation": "结合Fano不等式，用同一错误表达式上界观测X后的不确定性。"
+  },
+  {
+   "start": 1233.6667,
+   "end": 1239.2667,
+   "text": "The direction matters: processing X into an estimate cannot improve information.",
+   "translation": "不等方向很重要：把X处理成估计值不能增加信息。"
+  },
+  {
+   "start": 1239.7167,
+   "end": 1244.5917,
+   "text": "The finite-alphabet and discrete-parameter assumptions are explicit here.",
+   "translation": "这里明确假设有限字母表与离散参数。"
+  },
+  {
+   "start": 1245.0417,
+   "end": 1248.7167,
+   "text": "The bound applies to every such estimator based on X.",
+   "translation": "该界适用于每个这样的基于X的估计量。"
+  },
+  {
+   "start": 1249.1667,
+   "end": 1254.3167,
+   "text": "Fano's inequality is a necessary relation, not a decoding recipe.",
+   "translation": "Fano不等式给出必要关系，而不是译码步骤。"
+  },
+  {
+   "start": 1254.7667,
+   "end": 1260.7417,
+   "text": "Next, we choose an estimator whose error probability is smallest under a stated loss.",
+   "translation": "下一步将在指定损失下选择错误概率最小的估计量。"
+  },
+  {
+   "start": 1264.7667,
+   "end": 1270.1667,
+   "text": "Assume a finite parameter set and equal cost for every incorrect decision.",
+   "translation": "假设参数集合有限，且每种错误判决代价相同。"
+  },
+  {
+   "start": 1270.6167,
+   "end": 1272.8417,
+   "text": "This is the zero-one loss.",
+   "translation": "这就是零一损失。"
+  },
+  {
+   "start": 1273.2917,
+   "end": 1279.3917,
+   "text": "For a fixed observation x, consider the posterior probabilities of all parameter values.",
+   "translation": "固定观测x，考察所有参数值的后验概率。"
+  },
+  {
+   "start": 1279.8417,
+   "end": 1286.4417,
+   "text": "If we choose theta, the conditional probability of error is one minus its posterior probability.",
+   "translation": "若选择θ，条件错误概率就是1减去它的后验概率。"
+  },
+  {
+   "start": 1286.8917,
+   "end": 1293.0167,
+   "text": "Minimizing this quantity means choosing a parameter with largest posterior probability.",
+   "translation": "最小化该量就应选择后验概率最大的参数。"
+  },
+  {
+   "start": 1293.4667,
+   "end": 1298.3417,
+   "text": "That rule is maximum a posteriori estimation, abbreviated MAP.",
+   "translation": "该规则称为最大后验估计，简称MAP。"
+  },
+  {
+   "start": 1298.7917,
+   "end": 1304.3667,
+   "text": "A tie can be broken arbitrarily without changing the conditional error probability.",
+   "translation": "出现并列时可任意打破平局，而不改变条件错误概率。"
+  },
+  {
+   "start": 1304.8167,
+   "end": 1309.1417,
+   "text": "The posterior combines a prior and an observation likelihood.",
+   "translation": "后验由先验与观测似然共同决定。"
+  },
+  {
+   "start": 1309.5917,
+   "end": 1315.8667,
+   "text": "Bayes' rule multiplies prior probability by likelihood, then normalizes across candidates.",
+   "translation": "贝叶斯公式将先验概率乘以似然，再对候选归一化。"
+  },
+  {
+   "start": 1316.3167,
+   "end": 1323.2667,
+   "text": "For observation x, posterior probability is prior times likelihood divided by total evidence.",
+   "translation": "观测x的后验概率等于先验乘似然，再除以总证据。"
+  },
+  {
+   "start": 1323.7167,
+   "end": 1329.1667,
+   "text": "A likelihood alone does not include how probable each parameter was beforehand.",
+   "translation": "单独的似然不包含参数事先出现的概率。"
+  },
+  {
+   "start": 1329.6167,
+   "end": 1332.6917,
+   "text": "Consider two parameters, zero and one.",
+   "translation": "考虑两个参数零和一。"
+  },
+  {
+   "start": 1333.1417,
+   "end": 1337.9417,
+   "text": "Let the prior probabilities be point nine for zero and point one for one.",
+   "translation": "令先验概率分别为P(0)=0.9、P(1)=0.1。"
+  },
+  {
+   "start": 1338.3917,
+   "end": 1343.6917,
+   "text": "Suppose observation one has likelihood point two under parameter zero.",
+   "translation": "假设参数零下观测到一的似然为0.2。"
+  },
+  {
+   "start": 1344.1417,
+   "end": 1350.6917,
+   "text": "That likelihood is point eight under parameter one. With these priors, which parameter should MAP choose?",
+   "translation": "参数为一时，该似然为零点八。结合这些先验，MAP应选哪个参数？"
+  },
+  {
+   "start": 1353.6417,
+   "end": 1359.8667,
+   "text": "The joint probability of parameter zero and observation one is point nine times point two.",
+   "translation": "参数零与观测一的联合概率为0.9×0.2。"
+  },
+  {
+   "start": 1360.3167,
+   "end": 1362.2667,
+   "text": "It equals point one eight.",
+   "translation": "结果为0.18。"
+  },
+  {
+   "start": 1362.7167,
+   "end": 1368.1917,
+   "text": "The corresponding joint probability for parameter one is point one times point eight.",
+   "translation": "参数一对应的联合概率为0.1×0.8。"
+  },
+  {
+   "start": 1368.6417,
+   "end": 1370.6917,
+   "text": "It equals point zero eight.",
+   "translation": "结果为0.08。"
+  },
+  {
+   "start": 1371.1417,
+   "end": 1375.3917,
+   "text": "The observation-one probability is their sum, point two six.",
+   "translation": "观测一的概率为二者之和0.26。"
+  },
+  {
+   "start": 1375.8417,
+   "end": 1381.5167,
+   "text": "The posterior probability of parameter one is point zero eight over point two six.",
+   "translation": "参数一的后验概率为0.08/0.26。"
+  },
+  {
+   "start": 1381.9667,
+   "end": 1386.7917,
+   "text": "That equals four thirteenths, approximately point three zero seven seven.",
+   "translation": "它等于4/13，约为0.3077。"
+  },
+  {
+   "start": 1387.2417,
+   "end": 1392.3917,
+   "text": "The posterior probability of zero is approximately point six nine two three.",
+   "translation": "参数零的后验概率约为0.6923。"
+  },
+  {
+   "start": 1392.8417,
+   "end": 1397.5917,
+   "text": "The two posterior probabilities sum to one after normalization.",
+   "translation": "归一化后的两个后验概率之和为一。"
+  },
+  {
+   "start": 1398.0417,
+   "end": 1404.7667,
+   "text": "MAP therefore chooses zero even though observation one has larger likelihood under parameter one.",
+   "translation": "因此MAP选择零，尽管观测一在参数一下似然更大。"
+  },
+  {
+   "start": 1405.2167,
+   "end": 1407.5167,
+   "text": "The prior changes the decision.",
+   "translation": "先验改变了判决。"
+  },
+  {
+   "start": 1407.9667,
+   "end": 1413.4667,
+   "text": "For every observation, MAP minimizes posterior error under zero-one loss.",
+   "translation": "对每个观测，MAP在零一损失下最小化后验错误。"
+  },
+  {
+   "start": 1413.9167,
+   "end": 1418.4917,
+   "text": "Its conditional error is one minus the largest posterior mass.",
+   "translation": "其条件错误概率是1减去最大的后验概率。"
+  },
+  {
+   "start": 1418.9417,
+   "end": 1423.7167,
+   "text": "No other choice at that observation can have smaller conditional error.",
+   "translation": "在该观测下，其他选择都不可能有更小条件错误概率。"
+  },
+  {
+   "start": 1424.1667,
+   "end": 1430.1417,
+   "text": "Averaging those conditional errors shows MAP minimizes overall probability of error.",
+   "translation": "对条件错误取平均，可知MAP最小化总体错误概率。"
+  },
+  {
+   "start": 1430.5917,
+   "end": 1436.4917,
+   "text": "The averaging uses the actual distribution of observations under the prior and channel.",
+   "translation": "该平均依据先验与信道共同决定的真实观测分布。"
+  },
+  {
+   "start": 1436.9417,
+   "end": 1440.3667,
+   "text": "Other loss functions can choose a different action.",
+   "translation": "其他损失函数可能选择不同动作。"
+  },
+  {
+   "start": 1440.8167,
+   "end": 1445.8417,
+   "text": "MAP is not automatically optimal for squared error or unequal costs.",
+   "translation": "MAP对平方误差或不等代价并非自动最优。"
+  },
+  {
+   "start": 1446.2917,
+   "end": 1451.2417,
+   "text": "Now suppose the true parameter Theta is uniform over M candidates.",
+   "translation": "现在假设真实参数Θ在M个候选中均匀分布。"
+  },
+  {
+   "start": 1451.6917,
+   "end": 1453.9417,
+   "text": "Its entropy is log two M.",
+   "translation": "它的熵为log₂M。"
+  },
+  {
+   "start": 1454.3917,
+   "end": 1461.2417,
+   "text": "For any estimate based on X, Fano gives H of Theta given X at most one plus P e log two M.",
+   "translation": "对任何基于X的估计，Fano给出H(Θ|X)≤1+Pₑlog₂M。"
+  },
+  {
+   "start": 1461.6917,
+   "end": 1469.9167,
+   "text": "Here we used binary entropy at most one, and log base two of the quantity M minus one at most log base two of M.",
+   "translation": "这里使用h₂(Pₑ)≤1以及log₂(M−1)≤log₂M。"
+  },
+  {
+   "start": 1470.3667,
+   "end": 1475.1667,
+   "text": "But H of Theta given X equals log two M minus I of Theta with X.",
+   "translation": "另一方面H(Θ|X)=log₂M−I(Θ;X)。"
+  },
+  {
+   "start": 1475.6167,
+   "end": 1478.4917,
+   "text": "Combine these inequalities and rearrange.",
+   "translation": "合并并整理这两个不等式。"
+  },
+  {
+   "start": 1478.9417,
+   "end": 1483.6917,
+   "text": "First divide mutual information plus one by log base two of M.",
+   "translation": "先把互信息加一，除以log₂M。"
+  },
+  {
+   "start": 1484.1417,
+   "end": 1488.5667,
+   "text": "Subtract that ratio from one to obtain a lower bound on P e.",
+   "translation": "用一减去这个比值，就得到Pₑ的下界。"
+  },
+  {
+   "start": 1489.0167,
+   "end": 1494.3167,
+   "text": "If the right side is negative, the bound only says probability is nonnegative.",
+   "translation": "若右侧为负，该界只说明概率非负。"
+  },
+  {
+   "start": 1494.7667,
+   "end": 1499.5667,
+   "text": "The inequality is necessary for reliable recovery, not sufficient.",
+   "translation": "该不等式是可靠恢复的必要条件，而非充分条件。"
+  },
+  {
+   "start": 1500.0167,
+   "end": 1505.9917,
+   "text": "For a large candidate set, small error requires information close to log base two of M.",
+   "translation": "候选集合较大时，小错误概率要求信息量接近log₂M。"
+  },
+  {
+   "start": 1506.4417,
+   "end": 1509.2167,
+   "text": "The coarse bound allows a one-bit slack.",
+   "translation": "这个粗略界允许一比特的余量。"
+  },
+  {
+   "start": 1509.6667,
+   "end": 1515.1167,
+   "text": "It does not construct an estimator or promise that a particular estimator works.",
+   "translation": "它不构造估计量，也不保证某个特定估计量有效。"
+  },
+  {
+   "start": 1515.5667,
+   "end": 1522.2417,
+   "text": "For a fair binary parameter observed through a crossover point one channel, MAP chooses the received bit.",
+   "translation": "公平二元参数通过交叉概率0.1的信道观测时，MAP选择接收比特。"
+  },
+  {
+   "start": 1522.6917,
+   "end": 1525.4417,
+   "text": "Its error probability is point one.",
+   "translation": "其错误概率为0.1。"
+  },
+  {
+   "start": 1525.8917,
+   "end": 1529.7917,
+   "text": "The posterior entropy is binary entropy at point one.",
+   "translation": "后验熵为H_b(0.1)。"
+  },
+  {
+   "start": 1530.2417,
+   "end": 1535.0167,
+   "text": "Fano's right side is h of point one plus point one log two of one.",
+   "translation": "Fano右侧为h₂(0.1)+0.1log₂1。"
+  },
+  {
+   "start": 1535.4667,
+   "end": 1538.7167,
+   "text": "The second term is zero, so equality holds.",
+   "translation": "第二项为零，因此取等。"
+  },
+  {
+   "start": 1539.1667,
+   "end": 1541.3667,
+   "text": "This shows the bound can be sharp.",
+   "translation": "这说明该界可以取到等号。"
+  },
+  {
+   "start": 1541.8167,
+   "end": 1546.8667,
+   "text": "If X reveals Theta perfectly, must every estimator have zero error?",
+   "translation": "如果X完全揭示Theta，每个估计器都一定零误差吗？"
+  },
+  {
+   "start": 1549.8167,
+   "end": 1555.3167,
+   "text": "Suppose X reveals Theta perfectly, but an estimator always reports zero.",
+   "translation": "假设X完全揭示Θ，但估计量总是报告零。"
+  },
+  {
+   "start": 1555.7667,
+   "end": 1561.0417,
+   "text": "For a uniform M-valued parameter, its error is one minus one over M.",
+   "translation": "对均匀的M值参数，该估计量错误概率为1−1/M。"
+  },
+  {
+   "start": 1561.4917,
+   "end": 1565.5667,
+   "text": "The posterior uncertainty is zero despite that poor rule.",
+   "translation": "尽管该规则很差，后验不确定性仍为零。"
+  },
+  {
+   "start": 1566.0167,
+   "end": 1572.4417,
+   "text": "Fano constrains error through information; it does not rescue a deliberately bad decision rule.",
+   "translation": "Fano通过信息限制错误，但不会挽救故意选差的决策规则。"
+  },
+  {
+   "start": 1572.8917,
+   "end": 1578.9417,
+   "text": "To use the lower bound, specify the prior, observation model, and information available.",
+   "translation": "使用该下界时，须明确先验、观测模型和可用信息。"
+  },
+  {
+   "start": 1579.3917,
+   "end": 1587.2667,
+   "text": "Return to the fair two-bit secret X. Keeping its first bit Y leaves exactly one bit of uncertainty about X.",
+   "translation": "回到等概率二比特秘密X。仅保留第一比特Y后，X恰好仍有一比特不确定性。"
+  },
+  {
+   "start": 1587.7167,
+   "end": 1594.3667,
+   "text": "Appending zero preserves the same one bit of information. Its best guess still has error one half.",
+   "translation": "添零仍只保留同样的一比特信息；最佳猜测的错误概率仍为二分之一。"
+  },
+  {
+   "start": 1594.8167,
+   "end": 1603.2167,
+   "text": "The extra true bit S instead makes X equal two Y plus S. Both bits are available, and exact recovery is possible.",
+   "translation": "额外真实比特S则给出X=2Y+S。此时两比特均可用，因而能够精确恢复。"
+  },
+  {
+   "start": 1603.6667,
+   "end": 1611.1667,
+   "text": "The next episode uses asymptotic equipartition to turn information limits into block compression rates.",
+   "translation": "下一集将用渐近等分性质把信息限制转化为分组压缩率。"
+  }
+ ]
+}

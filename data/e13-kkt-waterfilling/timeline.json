@@ -1,0 +1,1605 @@
+{
+ "language": "en",
+ "episode": "e13-kkt-waterfilling",
+ "duration": 1061.7667,
+ "chapters": [
+  {
+   "id": "c01-dmc-optimum",
+   "index": 0,
+   "start": 5.0,
+   "end": 268.8,
+   "title": "The Optimal Input to a Discrete Channel",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    10.2,
+    15.425,
+    20.525,
+    24.475,
+    30.675,
+    37.975,
+    42.95,
+    49.85,
+    54.425,
+    59.325,
+    63.925,
+    69.45,
+    75.35,
+    79.625,
+    84.475,
+    89.675,
+    95.925,
+    101.7,
+    106.875,
+    111.475,
+    116.375,
+    121.925,
+    127.275,
+    131.7,
+    138.4,
+    146.4,
+    153.075,
+    160.675,
+    171.725,
+    175.95,
+    181.4,
+    186.125,
+    188.4,
+    194.475,
+    202.225,
+    206.95,
+    211.575,
+    222.775,
+    229.3,
+    233.95,
+    240.225,
+    246.825,
+    252.475,
+    256.925
+   ],
+   "sentenceEnds": [
+    9.75,
+    14.975,
+    20.075,
+    24.025,
+    30.225,
+    37.525,
+    42.5,
+    49.4,
+    53.975,
+    58.875,
+    63.475,
+    69.0,
+    74.9,
+    79.175,
+    84.025,
+    89.225,
+    95.475,
+    101.25,
+    106.425,
+    111.025,
+    115.925,
+    121.475,
+    126.825,
+    131.25,
+    137.95,
+    145.95,
+    152.625,
+    160.225,
+    168.275,
+    175.5,
+    180.95,
+    185.675,
+    187.95,
+    194.025,
+    201.775,
+    206.5,
+    211.125,
+    222.325,
+    228.85,
+    233.5,
+    239.775,
+    246.375,
+    252.025,
+    256.475,
+    262.2
+   ]
+  },
+  {
+   "id": "c02-kkt",
+   "index": 1,
+   "start": 268.8,
+   "end": 495.9,
+   "title": "KKT Conditions for Power Allocation",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    8.35,
+    11.15,
+    14.15,
+    18.775,
+    23.4,
+    28.55,
+    33.475,
+    39.425,
+    45.1,
+    55.6,
+    62.45,
+    68.45,
+    73.8,
+    81.725,
+    91.55,
+    96.675,
+    101.625,
+    105.625,
+    110.8,
+    115.775,
+    121.45,
+    126.375,
+    133.575,
+    138.1,
+    143.675,
+    153.8,
+    159.9,
+    166.775,
+    173.4,
+    177.5,
+    182.9,
+    187.725,
+    192.575,
+    197.3,
+    201.925,
+    206.125,
+    211.75,
+    217.175,
+    221.4
+   ],
+   "sentenceEnds": [
+    7.9,
+    10.7,
+    13.7,
+    18.325,
+    22.95,
+    28.1,
+    33.025,
+    38.975,
+    44.65,
+    55.15,
+    62.0,
+    68.0,
+    73.35,
+    81.275,
+    88.1,
+    96.225,
+    101.175,
+    105.175,
+    110.35,
+    115.325,
+    121.0,
+    125.925,
+    133.125,
+    137.65,
+    143.225,
+    153.35,
+    159.45,
+    166.325,
+    172.95,
+    177.05,
+    182.45,
+    187.275,
+    192.125,
+    196.85,
+    201.475,
+    205.675,
+    211.3,
+    216.725,
+    220.95,
+    225.475
+   ]
+  },
+  {
+   "id": "c03-parallel",
+   "index": 2,
+   "start": 495.9,
+   "end": 672.3667,
+   "title": "Parallel Real Gaussian Modes",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.925,
+    12.525,
+    17.025,
+    20.45,
+    27.1,
+    33.275,
+    38.1,
+    42.2,
+    47.15,
+    52.025,
+    57.525,
+    62.2,
+    67.6,
+    72.325,
+    77.775,
+    82.45,
+    87.825,
+    93.15,
+    97.85,
+    103.175,
+    106.625,
+    112.0,
+    115.85,
+    121.775,
+    127.975,
+    132.25,
+    138.125,
+    142.875,
+    148.15,
+    152.025,
+    156.975,
+    161.025,
+    165.35,
+    169.625
+   ],
+   "sentenceEnds": [
+    7.475,
+    12.075,
+    16.575,
+    20.0,
+    26.65,
+    32.825,
+    37.65,
+    41.75,
+    46.7,
+    51.575,
+    57.075,
+    61.75,
+    67.15,
+    71.875,
+    77.325,
+    82.0,
+    87.375,
+    92.7,
+    97.4,
+    102.725,
+    106.175,
+    111.55,
+    115.4,
+    121.325,
+    127.525,
+    131.8,
+    137.675,
+    142.425,
+    147.7,
+    151.575,
+    156.525,
+    160.575,
+    164.9,
+    169.175,
+    174.85
+   ]
+  },
+  {
+   "id": "c04-waterfill",
+   "index": 3,
+   "start": 672.3667,
+   "end": 877.7667,
+   "title": "Deriving the Water Level",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    8.55,
+    16.65,
+    20.675,
+    26.6,
+    32.2,
+    36.525,
+    42.05,
+    47.5,
+    51.55,
+    58.65,
+    65.675,
+    69.85,
+    73.475,
+    77.5,
+    83.975,
+    87.75,
+    93.275,
+    98.15,
+    104.4,
+    108.5,
+    112.525,
+    116.525,
+    121.775,
+    130.8,
+    135.425,
+    139.775,
+    146.775,
+    157.15,
+    165.275,
+    169.375,
+    173.85,
+    178.375,
+    183.05,
+    188.8,
+    193.775,
+    198.825
+   ],
+   "sentenceEnds": [
+    8.1,
+    16.2,
+    20.225,
+    26.15,
+    31.75,
+    36.075,
+    41.6,
+    47.05,
+    51.1,
+    58.2,
+    65.225,
+    69.4,
+    73.025,
+    77.05,
+    83.525,
+    87.3,
+    92.825,
+    97.7,
+    103.95,
+    108.05,
+    112.075,
+    116.075,
+    121.325,
+    130.35,
+    134.975,
+    139.325,
+    146.325,
+    153.7,
+    164.825,
+    168.925,
+    173.4,
+    177.925,
+    182.6,
+    188.35,
+    193.325,
+    198.375,
+    203.8
+   ]
+  },
+  {
+   "id": "c05-check",
+   "index": 4,
+   "start": 877.7667,
+   "end": 1056.7667,
+   "title": "Auditing a Water-Filling Solution",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    7.05,
+    10.55,
+    13.55,
+    19.075,
+    22.325,
+    27.225,
+    32.125,
+    42.2,
+    44.675,
+    49.45,
+    52.125,
+    55.6,
+    60.325,
+    63.875,
+    70.6,
+    77.35,
+    85.125,
+    88.4,
+    93.2,
+    98.5,
+    103.55,
+    108.3,
+    116.15,
+    119.275,
+    123.5,
+    132.55,
+    138.825,
+    143.2,
+    148.6,
+    153.225,
+    158.575,
+    163.475,
+    168.6,
+    172.7
+   ],
+   "sentenceEnds": [
+    6.6,
+    10.1,
+    13.1,
+    18.625,
+    21.875,
+    26.775,
+    31.675,
+    38.75,
+    44.225,
+    49.0,
+    51.675,
+    55.15,
+    59.875,
+    63.425,
+    70.15,
+    76.9,
+    84.675,
+    87.95,
+    92.75,
+    98.05,
+    103.1,
+    107.85,
+    115.7,
+    118.825,
+    123.05,
+    129.1,
+    138.375,
+    142.75,
+    148.15,
+    152.775,
+    158.125,
+    163.025,
+    168.15,
+    172.25,
+    177.375
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 14.75,
+   "text": "Must a capacity-achieving input use every symbol? Let a finite DMC have input x and output y.",
+   "translation": "达到容量的输入分布必须使用每个符号吗？设有限DMC的输入为x、输出为y。"
+  },
+  {
+   "start": 15.2,
+   "end": 19.975,
+   "text": "Each input x selects an output distribution W sub x.",
+   "translation": "每个输入x对应一个输出分布W_x。"
+  },
+  {
+   "start": 20.425,
+   "end": 25.075,
+   "text": "Choose an input distribution p over the finite input alphabet.",
+   "translation": "在有限输入字母表上选取输入分布p。"
+  },
+  {
+   "start": 25.525,
+   "end": 29.025,
+   "text": "The induced output distribution is q sub p.",
+   "translation": "由此诱导的输出分布记为q_p。"
+  },
+  {
+   "start": 29.475,
+   "end": 35.225,
+   "text": "Mutual information equals the input-weighted row divergences from that output law.",
+   "translation": "互信息等于各输入行相对输出分布的散度加权和。"
+  },
+  {
+   "start": 35.675,
+   "end": 42.525,
+   "text": "Write I of p as the sum of p sub x times D of W sub x relative to q sub p.",
+   "translation": "写作I(p)=Σ_x p_x D(W_x‖q_p)。"
+  },
+  {
+   "start": 42.975,
+   "end": 47.5,
+   "text": "The capacity C is the maximum of I over the input simplex.",
+   "translation": "容量C是输入单纯形上I的最大值。"
+  },
+  {
+   "start": 47.95,
+   "end": 54.4,
+   "text": "A maximizer exists because the simplex is compact and mutual information is continuous.",
+   "translation": "单纯形紧致且互信息连续，因此最大值存在。"
+  },
+  {
+   "start": 54.85,
+   "end": 58.975,
+   "text": "First remove output symbols unreachable from every input.",
+   "translation": "先删除所有输入都无法到达的输出符号。"
+  },
+  {
+   "start": 59.425,
+   "end": 63.875,
+   "text": "Their probabilities are always zero and they affect no divergence.",
+   "translation": "这些符号的概率始终为零，不影响任何散度。"
+  },
+  {
+   "start": 64.325,
+   "end": 68.475,
+   "text": "Call an output reachable if at least one input can produce it.",
+   "translation": "若至少一个输入可产生某输出，就称该输出可达。"
+  },
+  {
+   "start": 68.925,
+   "end": 74.0,
+   "text": "At an optimal input, every reachable output has positive probability.",
+   "translation": "在最优输入下，每个可达输出的概率都为正。"
+  },
+  {
+   "start": 74.45,
+   "end": 79.9,
+   "text": "Suppose instead that a reachable output y has zero optimal probability.",
+   "translation": "反设某个可达输出y在最优分布下概率为零。"
+  },
+  {
+   "start": 80.35,
+   "end": 84.175,
+   "text": "Choose an input row that assigns positive mass to y.",
+   "translation": "选择一个在y处赋正概率的输入行。"
+  },
+  {
+   "start": 84.625,
+   "end": 89.025,
+   "text": "Mix a small amount epsilon of that row into the optimal input.",
+   "translation": "向最优输入混入少量ε的该输入行。"
+  },
+  {
+   "start": 89.475,
+   "end": 94.225,
+   "text": "The new output law gives y probability proportional to epsilon.",
+   "translation": "新输出分布会赋予y与ε成比例的概率。"
+  },
+  {
+   "start": 94.675,
+   "end": 100.475,
+   "text": "Its output entropy gains a positive epsilon log one over epsilon term.",
+   "translation": "其输出熵增加正的εlog(1/ε)项。"
+  },
+  {
+   "start": 100.925,
+   "end": 106.25,
+   "text": "Changes at already-positive output coordinates are only of order epsilon.",
+   "translation": "原先已为正的输出坐标，其熵变化只有ε阶。"
+  },
+  {
+   "start": 106.7,
+   "end": 111.425,
+   "text": "The conditional output entropy changes only linearly with epsilon.",
+   "translation": "条件输出熵只随ε线性变化。"
+  },
+  {
+   "start": 111.875,
+   "end": 116.025,
+   "text": "For sufficiently small epsilon, the entropy gain dominates.",
+   "translation": "ε足够小时，熵增益占主导。"
+  },
+  {
+   "start": 116.475,
+   "end": 120.925,
+   "text": "That would increase mutual information and contradict optimality.",
+   "translation": "这会提高互信息，与最优性矛盾。"
+  },
+  {
+   "start": 121.375,
+   "end": 126.475,
+   "text": "Thus logarithmic derivatives are well defined on every reachable output.",
+   "translation": "因此每个可达输出上的对数导数都有定义。"
+  },
+  {
+   "start": 126.925,
+   "end": 131.825,
+   "text": "Consider moving a small probability mass from the optimum toward row i.",
+   "translation": "考虑将少量概率质量从最优分布移向第i行。"
+  },
+  {
+   "start": 132.275,
+   "end": 136.25,
+   "text": "The output direction is W sub i minus q star.",
+   "translation": "输出分布的变化方向为W_i−q*。"
+  },
+  {
+   "start": 136.7,
+   "end": 142.95,
+   "text": "Differentiating its entropy gives minus the sum of that direction times log two q star.",
+   "translation": "对其熵求导，得到负的Σ_y(W_i(y)−q*(y))log₂q*(y)。"
+  },
+  {
+   "start": 143.4,
+   "end": 150.95,
+   "text": "The derivative of conditional entropy is row entropy of W sub i minus the current average row entropy.",
+   "translation": "条件熵导数为第i行熵减去当前平均行熵。"
+  },
+  {
+   "start": 151.4,
+   "end": 157.625,
+   "text": "Subtracting these two derivatives gives the row divergence minus the current mutual information.",
+   "translation": "两导数相减，得到行散度减去当前互信息。"
+  },
+  {
+   "start": 158.075,
+   "end": 165.225,
+   "text": "The directional derivative of mutual information is D of W sub i relative to q star minus C.",
+   "translation": "互信息方向导数为D(W_i‖q*)−C。"
+  },
+  {
+   "start": 165.675,
+   "end": 173.275,
+   "text": "At a maximum, each feasible directional derivative is nonpositive. Must an unused row have divergence C?",
+   "translation": "在最大值处，每个可行单侧方向导数都非正。未使用行的散度也必须等于C吗？"
+  },
+  {
+   "start": 176.725,
+   "end": 180.5,
+   "text": "Therefore every input row has divergence at most C.",
+   "translation": "因此每个输入行的散度都不超过C。"
+  },
+  {
+   "start": 180.95,
+   "end": 185.95,
+   "text": "Now average these divergences using the optimal input probabilities.",
+   "translation": "现在用最优输入概率对这些散度取平均。"
+  },
+  {
+   "start": 186.4,
+   "end": 190.675,
+   "text": "Their weighted average equals mutual information at the optimum.",
+   "translation": "这些散度的加权平均等于最优点处的互信息。"
+  },
+  {
+   "start": 191.125,
+   "end": 192.95,
+   "text": "That value is C.",
+   "translation": "该值就是C。"
+  },
+  {
+   "start": 193.4,
+   "end": 199.025,
+   "text": "An average of values at most C equals C only when every used value equals C.",
+   "translation": "不超过C的数值平均为C，意味着每个被使用的数值都等于C。"
+  },
+  {
+   "start": 199.475,
+   "end": 206.775,
+   "text": "Thus positive-probability input rows satisfy D of W sub i relative to q star equals C.",
+   "translation": "因此正概率输入行满足D(W_i‖q*)=C。"
+  },
+  {
+   "start": 207.225,
+   "end": 211.5,
+   "text": "Unused rows need only satisfy the inequality at most C.",
+   "translation": "未使用行只需满足不超过C的不等式。"
+  },
+  {
+   "start": 211.95,
+   "end": 216.125,
+   "text": "This is a boundary condition, not equality for every row.",
+   "translation": "这是边界条件，并非所有输入行都取等号。"
+  },
+  {
+   "start": 216.575,
+   "end": 227.325,
+   "text": "For any input p, mutual information equals its input-weighted average row divergence to q star, minus the divergence of q sub p relative to q star.",
+   "translation": "对任意p，I(p)=Σ_i p_iD(W_i‖q*)−D(q_p‖q*)。"
+  },
+  {
+   "start": 227.775,
+   "end": 233.85,
+   "text": "To check sufficiency, start with any candidate input and call its information value J.",
+   "translation": "验证充分性时，从任意候选输入出发，将其互信息记为J。"
+  },
+  {
+   "start": 234.3,
+   "end": 238.5,
+   "text": "Suppose every row divergence to its output law is at most J.",
+   "translation": "假设每行到其输出分布的散度均至多为J。"
+  },
+  {
+   "start": 238.95,
+   "end": 244.775,
+   "text": "Add and subtract the log of that candidate output law inside each row divergence.",
+   "translation": "在每个行散度中，加减候选输出分布的对数。"
+  },
+  {
+   "start": 245.225,
+   "end": 251.375,
+   "text": "Averaging the added output log ratio produces the divergence between the two output laws.",
+   "translation": "对所加的输出对数比取平均，就得到两个输出分布之间的散度。"
+  },
+  {
+   "start": 251.825,
+   "end": 257.025,
+   "text": "The same identity therefore bounds every other input’s information by J.",
+   "translation": "因此同一恒等式将所有其他输入的互信息界为J。"
+  },
+  {
+   "start": 257.475,
+   "end": 261.475,
+   "text": "The candidate attains that value and is globally optimal.",
+   "translation": "候选自身达到该值，因此全局最优。"
+  },
+  {
+   "start": 261.925,
+   "end": 267.2,
+   "text": "The same equal-marginal-benefit idea will reappear in power allocation.",
+   "translation": "同一等边际收益思想将在功率分配中再次出现。"
+  },
+  {
+   "start": 271.2,
+   "end": 276.7,
+   "text": "Now maximize a differentiable concave objective F of powers p sub i.",
+   "translation": "现在最大化关于功率p_i的可微凹目标F。"
+  },
+  {
+   "start": 277.15,
+   "end": 279.5,
+   "text": "Each power must be nonnegative.",
+   "translation": "每个功率都必须非负。"
+  },
+  {
+   "start": 279.95,
+   "end": 282.5,
+   "text": "Their sum cannot exceed the budget P.",
+   "translation": "功率总和不能超过预算P。"
+  },
+  {
+   "start": 282.95,
+   "end": 287.125,
+   "text": "Write the constraints as sum p sub i minus P at most zero.",
+   "translation": "将总功率约束写成Σp_i−P≤0。"
+  },
+  {
+   "start": 287.575,
+   "end": 291.75,
+   "text": "Write each lower bound as negative p sub i at most zero.",
+   "translation": "将每个下界写成−p_i≤0。"
+  },
+  {
+   "start": 292.2,
+   "end": 296.9,
+   "text": "Assign multiplier lambda at least zero to the total-power constraint.",
+   "translation": "给总功率约束分配非负乘子λ。"
+  },
+  {
+   "start": 297.35,
+   "end": 301.825,
+   "text": "Assign multiplier mu sub i at least zero to each lower bound.",
+   "translation": "给每个下界分配非负乘子μ_i。"
+  },
+  {
+   "start": 302.275,
+   "end": 307.775,
+   "text": "For this maximization convention, subtract lambda times the total constraint.",
+   "translation": "按此最大化约定，从目标中减去λ乘总约束。"
+  },
+  {
+   "start": 308.225,
+   "end": 313.45,
+   "text": "Adding mu sub i times p sub i enforces its nonnegative boundary.",
+   "translation": "加上μ_i p_i项以处理其非负边界。"
+  },
+  {
+   "start": 313.9,
+   "end": 323.95,
+   "text": "The Lagrangian is F minus lambda times the difference between total allocated power and budget P, plus the sum of mu sub i times p sub i.",
+   "translation": "拉格朗日函数为F−λ(Σp_i−P)+Σμ_i p_i。"
+  },
+  {
+   "start": 324.4,
+   "end": 330.8,
+   "text": "Stationarity sets every power derivative minus lambda plus mu sub i equal to zero.",
+   "translation": "驻点条件令每个功率导数减λ再加μ_i等于零。"
+  },
+  {
+   "start": 331.25,
+   "end": 336.8,
+   "text": "Primal feasibility requires nonnegative powers and total power at most P.",
+   "translation": "原始可行性要求功率非负且总功率不超过P。"
+  },
+  {
+   "start": 337.25,
+   "end": 342.15,
+   "text": "Dual feasibility requires lambda and every mu sub i nonnegative.",
+   "translation": "对偶可行性要求λ与每个μ_i均非负。"
+  },
+  {
+   "start": 342.6,
+   "end": 350.075,
+   "text": "Complementary slackness sets lambda times the difference between total allocated power and budget P to zero.",
+   "translation": "互补松弛令λ(Σp_i−P)=0。"
+  },
+  {
+   "start": 350.525,
+   "end": 356.9,
+   "text": "For each mode, mu i times p i equals zero. If power is positive, which factor vanishes?",
+   "translation": "每个模式都满足μ_i p_i=0。若功率为正，哪个因子必须为零？"
+  },
+  {
+   "start": 360.35,
+   "end": 365.025,
+   "text": "Thus a positive power forces its lower-bound multiplier to zero.",
+   "translation": "因此正功率会迫使其下界乘子为零。"
+  },
+  {
+   "start": 365.475,
+   "end": 369.975,
+   "text": "A zero power may instead have a positive lower-bound multiplier.",
+   "translation": "零功率则可能对应正的下界乘子。"
+  },
+  {
+   "start": 370.425,
+   "end": 373.975,
+   "text": "If the total budget is slack, lambda must be zero.",
+   "translation": "若总预算未用满，则λ必须为零。"
+  },
+  {
+   "start": 374.425,
+   "end": 379.15,
+   "text": "For a strictly increasing objective and positive P, the budget is tight.",
+   "translation": "若目标严格递增且P为正，预算必定用满。"
+  },
+  {
+   "start": 379.6,
+   "end": 384.125,
+   "text": "Then lambda can represent the marginal value of additional budget.",
+   "translation": "此时λ可表示增加预算的边际价值。"
+  },
+  {
+   "start": 384.575,
+   "end": 389.8,
+   "text": "At a strictly positive power, stationarity gives derivative equal to lambda.",
+   "translation": "功率严格为正时，驻点条件令导数等于λ。"
+  },
+  {
+   "start": 390.25,
+   "end": 394.725,
+   "text": "At a zero power, stationarity gives derivative at most lambda.",
+   "translation": "在零功率处，驻点条件给出导数至多为λ。"
+  },
+  {
+   "start": 395.175,
+   "end": 401.925,
+   "text": "A larger derivative at an unused mode would make a transfer from a used mode improve the objective.",
+   "translation": "若未用模式的导数更大，从已用模式转移少量功率就会提高目标。"
+  },
+  {
+   "start": 402.375,
+   "end": 406.45,
+   "text": "The constraints are affine, so the feasible region is convex.",
+   "translation": "这些约束是仿射的，因此可行域是凸集。"
+  },
+  {
+   "start": 406.9,
+   "end": 412.025,
+   "text": "A concave objective makes any feasible KKT point globally optimal.",
+   "translation": "目标为凹函数时，任一满足KKT的可行点都是全局最优。"
+  },
+  {
+   "start": 412.475,
+   "end": 422.15,
+   "text": "For any feasible q, concavity bounds F of q by F of p star plus the dot product of its gradient with the difference q minus p star.",
+   "translation": "对任意可行q，凹性给出F(q)≤F(p*)+∇F(p*)·(q−p*)。"
+  },
+  {
+   "start": 422.6,
+   "end": 428.25,
+   "text": "Substitute the gradient components lambda minus mu sub i from stationarity.",
+   "translation": "由驻点条件，将梯度分量替换成λ−μ_i。"
+  },
+  {
+   "start": 428.7,
+   "end": 435.125,
+   "text": "The lambda contribution is nonpositive by the total constraint and complementary slackness.",
+   "translation": "由总约束与互补松弛，λ对应的项非正。"
+  },
+  {
+   "start": 435.575,
+   "end": 441.75,
+   "text": "The remaining contribution is minus the sum of mu sub i q sub i, also nonpositive.",
+   "translation": "其余项为−Σμ_iq_i，也非正。"
+  },
+  {
+   "start": 442.2,
+   "end": 445.85,
+   "text": "Thus no feasible q can improve the objective.",
+   "translation": "因此不存在目标更优的可行q。"
+  },
+  {
+   "start": 446.3,
+   "end": 451.25,
+   "text": "For positive P, choose all powers positive with sum strictly below P.",
+   "translation": "P为正时，可选全正且总和严格低于P的功率。"
+  },
+  {
+   "start": 451.7,
+   "end": 456.075,
+   "text": "This is a Slater point and supplies the constraint qualification.",
+   "translation": "这就是Slater点，并提供约束资格条件。"
+  },
+  {
+   "start": 456.525,
+   "end": 460.925,
+   "text": "KKT conditions are then necessary as well as sufficient.",
+   "translation": "因此KKT条件既必要也充分。"
+  },
+  {
+   "start": 461.375,
+   "end": 465.65,
+   "text": "At P equal zero, the only feasible allocation is zero.",
+   "translation": "P等于零时，唯一可行分配为全零。"
+  },
+  {
+   "start": 466.1,
+   "end": 470.275,
+   "text": "That boundary case is solved directly without claiming Slater.",
+   "translation": "该边界情形直接求解，不宣称满足Slater条件。"
+  },
+  {
+   "start": 470.725,
+   "end": 474.475,
+   "text": "A one-variable example checks the multiplier sign.",
+   "translation": "一个单变量例子可以核对乘子符号。"
+  },
+  {
+   "start": 474.925,
+   "end": 480.1,
+   "text": "Maximize log one plus p subject to p at most P and p nonnegative.",
+   "translation": "在p≤P且p≥0下最大化log(1+p)。"
+  },
+  {
+   "start": 480.55,
+   "end": 485.525,
+   "text": "Its optimum uses p equal P, with positive lambda and zero mu.",
+   "translation": "最优解用满p=P，λ为正而μ为零。"
+  },
+  {
+   "start": 485.975,
+   "end": 489.75,
+   "text": "This matches the stationarity equation and tight budget.",
+   "translation": "这与驻点方程及紧约束相符。"
+  },
+  {
+   "start": 490.2,
+   "end": 494.275,
+   "text": "Next apply these conditions to independent Gaussian modes.",
+   "translation": "接下来将这些条件用于独立高斯模式。"
+  },
+  {
+   "start": 498.3,
+   "end": 503.375,
+   "text": "Consider a finite collection of independent real Gaussian channel modes.",
+   "translation": "考虑有限个相互独立的实高斯信道模式。"
+  },
+  {
+   "start": 503.825,
+   "end": 507.975,
+   "text": "Mode i has noise variance N sub i, strictly positive.",
+   "translation": "第i个模式的噪声方差为N_i，且严格为正。"
+  },
+  {
+   "start": 508.425,
+   "end": 512.475,
+   "text": "Allocate nonnegative input power p sub i to each mode.",
+   "translation": "为每个模式分配非负输入功率p_i。"
+  },
+  {
+   "start": 512.925,
+   "end": 515.9,
+   "text": "The total allocation cannot exceed P.",
+   "translation": "分配总功率不得超过P。"
+  },
+  {
+   "start": 516.35,
+   "end": 522.55,
+   "text": "For one real mode, capacity is one half log two of one plus p sub i over N sub i.",
+   "translation": "一个实模式的容量为二分之一log₂(1+p_i/N_i)。"
+  },
+  {
+   "start": 523.0,
+   "end": 528.725,
+   "text": "With independent input coordinates as well, the mutual informations add across modes.",
+   "translation": "若输入坐标也相互独立，互信息即可跨模式相加。"
+  },
+  {
+   "start": 529.175,
+   "end": 533.55,
+   "text": "The optimization objective is the sum of these mode capacities.",
+   "translation": "优化目标是这些模式容量之和。"
+  },
+  {
+   "start": 534.0,
+   "end": 537.65,
+   "text": "Only the sum-power constraint couples the allocations.",
+   "translation": "只有总功率约束将各分配耦合起来。"
+  },
+  {
+   "start": 538.1,
+   "end": 542.6,
+   "text": "A lower noise variance gives a larger initial marginal return.",
+   "translation": "噪声方差较低的模式具有更大的初始边际收益。"
+  },
+  {
+   "start": 543.05,
+   "end": 547.475,
+   "text": "Different noise levels therefore make equal allocation suspicious.",
+   "translation": "因此噪声水平不同会使均匀分配值得怀疑。"
+  },
+  {
+   "start": 547.925,
+   "end": 552.975,
+   "text": "We must also justify that separate powers capture the full vector channel.",
+   "translation": "还需说明分配独立功率已能刻画完整向量信道。"
+  },
+  {
+   "start": 553.425,
+   "end": 557.65,
+   "text": "Let X vector be any possibly correlated input vector.",
+   "translation": "令X向量为任意可能相关的输入向量。"
+  },
+  {
+   "start": 558.1,
+   "end": 563.05,
+   "text": "Conditional output entropy given X equals the sum of noise entropies.",
+   "translation": "给定X时的输出条件熵等于各噪声熵之和。"
+  },
+  {
+   "start": 563.5,
+   "end": 567.775,
+   "text": "Output entropy is at most the sum of marginal output entropies.",
+   "translation": "输出熵至多为各边缘输出熵之和。"
+  },
+  {
+   "start": 568.225,
+   "end": 573.225,
+   "text": "Each marginal output variance is its input variance plus N sub i.",
+   "translation": "每个边缘输出方差等于输入方差加N_i。"
+  },
+  {
+   "start": 573.675,
+   "end": 577.9,
+   "text": "Gaussian maximum entropy bounds that marginal entropy.",
+   "translation": "高斯最大熵性质界定该边缘熵。"
+  },
+  {
+   "start": 578.35,
+   "end": 583.275,
+   "text": "Input variance is no larger than its assigned second moment p sub i.",
+   "translation": "输入方差不超过分配的二阶矩p_i。"
+  },
+  {
+   "start": 583.725,
+   "end": 588.6,
+   "text": "Subtracting the noise entropies gives the sum of scalar capacity bounds.",
+   "translation": "减去噪声熵后得到各标量容量界之和。"
+  },
+  {
+   "start": 589.05,
+   "end": 593.3,
+   "text": "Thus correlations cannot improve on the separate-mode objective.",
+   "translation": "因此跨模式相关不能超过独立模式目标。"
+  },
+  {
+   "start": 593.75,
+   "end": 598.625,
+   "text": "Independent Gaussian inputs with variances p sub i attain each bound.",
+   "translation": "方差为p_i的独立高斯输入可达到各自上界。"
+  },
+  {
+   "start": 599.075,
+   "end": 602.075,
+   "text": "They also make output modes independent.",
+   "translation": "它们也使输出模式相互独立。"
+  },
+  {
+   "start": 602.525,
+   "end": 607.45,
+   "text": "So maximizing the sum of mode formulas gives the vector capacity.",
+   "translation": "因此最大化各模式公式之和即得向量容量。"
+  },
+  {
+   "start": 607.9,
+   "end": 611.3,
+   "text": "The objective is a sum of concave logarithms.",
+   "translation": "该目标是凹对数函数之和。"
+  },
+  {
+   "start": 611.75,
+   "end": 617.225,
+   "text": "Each mode utility is strictly increasing for every finite nonnegative power.",
+   "translation": "每个模式效用在有限非负功率上都严格递增。"
+  },
+  {
+   "start": 617.675,
+   "end": 623.425,
+   "text": "Every term has strictly negative second derivative throughout the nonnegative power range.",
+   "translation": "每项在整个非负功率范围内均有严格负的二阶导数。"
+  },
+  {
+   "start": 623.875,
+   "end": 627.7,
+   "text": "With P positive, the optimal allocation is unique.",
+   "translation": "P为正时，最优分配唯一。"
+  },
+  {
+   "start": 628.15,
+   "end": 633.575,
+   "text": "The sum-power budget is used fully because every mode benefits from added power.",
+   "translation": "每个模式都受益于增功率，因此总预算会用满。"
+  },
+  {
+   "start": 634.025,
+   "end": 638.325,
+   "text": "The model here uses real modes and one half per logarithm.",
+   "translation": "这里采用实模式，每个对数前有二分之一。"
+  },
+  {
+   "start": 638.775,
+   "end": 643.6,
+   "text": "Complex modes would require a separately stated variance convention.",
+   "translation": "复模式需要另行声明方差约定。"
+  },
+  {
+   "start": 644.05,
+   "end": 647.475,
+   "text": "Do not silently double the real-mode capacity.",
+   "translation": "不要在未说明时将实模式容量加倍。"
+  },
+  {
+   "start": 647.925,
+   "end": 652.425,
+   "text": "The finite-mode model will make the active-set calculation explicit.",
+   "translation": "有限模式模型将使活跃集计算明确可行。"
+  },
+  {
+   "start": 652.875,
+   "end": 656.475,
+   "text": "The modes with excessive noise may receive no power.",
+   "translation": "噪声过大的模式可能得不到功率。"
+  },
+  {
+   "start": 656.925,
+   "end": 660.8,
+   "text": "Their derivatives will determine the active-set threshold.",
+   "translation": "它们的导数将决定活跃集阈值。"
+  },
+  {
+   "start": 661.25,
+   "end": 665.075,
+   "text": "The solution remains subject to one shared total budget.",
+   "translation": "所有解仍受一个共同总预算约束。"
+  },
+  {
+   "start": 665.525,
+   "end": 670.75,
+   "text": "Next, stationarity turns equal marginal returns into a water level.",
+   "translation": "接下来，驻点条件会将边际收益相等转化为水位。"
+  },
+  {
+   "start": 674.7667,
+   "end": 680.4667,
+   "text": "For mode i, differentiate one half log two of one plus p sub i over N sub i.",
+   "translation": "对第i项二分之一log₂(1+p_i/N_i)求导。"
+  },
+  {
+   "start": 680.9167,
+   "end": 688.5667,
+   "text": "The derivative is one divided by the product of two, natural log two, and the quantity N sub i plus p sub i.",
+   "translation": "导数为1/[2ln2(N_i+p_i)]。"
+  },
+  {
+   "start": 689.0167,
+   "end": 692.5917,
+   "text": "Let lambda be the nonnegative price of total power.",
+   "translation": "令λ为总功率的非负价格。"
+  },
+  {
+   "start": 693.0417,
+   "end": 698.5167,
+   "text": "The multiplier is a marginal price; the water level will be its scaled reciprocal.",
+   "translation": "该乘子是边际价格，水位则是其带比例的倒数。"
+  },
+  {
+   "start": 698.9667,
+   "end": 704.1167,
+   "text": "For a mode receiving positive power, its lower-bound multiplier is zero.",
+   "translation": "获得正功率的模式，其下界乘子为零。"
+  },
+  {
+   "start": 704.5667,
+   "end": 708.4417,
+   "text": "Stationarity sets that mode derivative equal to lambda.",
+   "translation": "驻点条件令该模式导数等于λ。"
+  },
+  {
+   "start": 708.8917,
+   "end": 713.9667,
+   "text": "Thus all active modes have equal marginal capacity per extra watt.",
+   "translation": "因此所有活跃模式每增加一瓦的边际容量相同。"
+  },
+  {
+   "start": 714.4167,
+   "end": 719.4167,
+   "text": "For an unused mode, its derivative at zero is no greater than lambda.",
+   "translation": "对未使用模式，其零点导数不超过λ。"
+  },
+  {
+   "start": 719.8667,
+   "end": 723.4667,
+   "text": "If it exceeded lambda, transferring power there would help.",
+   "translation": "若其超过λ，将功率转移到该模式便会有利。"
+  },
+  {
+   "start": 723.9167,
+   "end": 730.5667,
+   "text": "For P positive, at least one powered mode has positive derivative, forcing lambda to be positive.",
+   "translation": "P为正时，至少一个有功率模式的导数为正，从而λ为正。"
+  },
+  {
+   "start": 731.0167,
+   "end": 737.5917,
+   "text": "Define the water level nu as one divided by the product of two, natural log two, and lambda.",
+   "translation": "定义水位ν=1/(2ln2λ)。"
+  },
+  {
+   "start": 738.0417,
+   "end": 741.7667,
+   "text": "The symbols nu and lambda describe different quantities.",
+   "translation": "ν与λ表示不同量。"
+  },
+  {
+   "start": 742.2167,
+   "end": 745.3917,
+   "text": "The multiplier lambda is a marginal price.",
+   "translation": "乘子λ是边际价格。"
+  },
+  {
+   "start": 745.8417,
+   "end": 749.4167,
+   "text": "The water level nu has units of noise variance.",
+   "translation": "水位ν具有噪声方差的单位。"
+  },
+  {
+   "start": 749.8667,
+   "end": 755.8917,
+   "text": "Solving the active stationarity equation gives p sub i equal nu minus N sub i.",
+   "translation": "求解活跃模式驻点式得p_i=ν−N_i。"
+  },
+  {
+   "start": 756.3417,
+   "end": 759.6667,
+   "text": "Nonnegative power clips that expression at zero.",
+   "translation": "功率非负约束将该表达式截断于零。"
+  },
+  {
+   "start": 760.1167,
+   "end": 765.1917,
+   "text": "Therefore p sub i equals the positive part of nu minus N sub i.",
+   "translation": "因此p_i=(ν−N_i)^+。"
+  },
+  {
+   "start": 765.6417,
+   "end": 770.0667,
+   "text": "The water level is chosen so all allocated powers sum to P.",
+   "translation": "水位由所有分配功率之和等于P来确定。"
+  },
+  {
+   "start": 770.5167,
+   "end": 776.3167,
+   "text": "The allocated sum increases continuously with the water level while modes activate.",
+   "translation": "模式逐渐激活时，分配总和随水位连续增加。"
+  },
+  {
+   "start": 776.7667,
+   "end": 780.4167,
+   "text": "For positive P, this budget equality is active.",
+   "translation": "P为正时，该预算等式活跃。"
+  },
+  {
+   "start": 780.8667,
+   "end": 784.4417,
+   "text": "Sort the noise variances from smallest to largest.",
+   "translation": "将噪声方差从小到大排序。"
+  },
+  {
+   "start": 784.8917,
+   "end": 788.4417,
+   "text": "Begin by assuming the k smallest modes are active.",
+   "translation": "先假设最小的k个模式活跃。"
+  },
+  {
+   "start": 788.8917,
+   "end": 793.6917,
+   "text": "Their total power equation is k nu minus their noise sum equals P.",
+   "translation": "它们的总功率方程为kν减去噪声之和等于P。"
+  },
+  {
+   "start": 794.1417,
+   "end": 802.7167,
+   "text": "Solve to get nu sub k as P plus the sum of the first k noise variances, with that entire numerator divided by k.",
+   "translation": "解得ν_k=(P加前k个噪声方差之和)/k。"
+  },
+  {
+   "start": 803.1667,
+   "end": 807.3417,
+   "text": "If every mode is active, there is no next-noise upper test.",
+   "translation": "若所有模式均活跃，则无需检查下一个噪声阈值。"
+  },
+  {
+   "start": 807.7917,
+   "end": 811.6917,
+   "text": "The active-set test is N sub k less than nu sub k.",
+   "translation": "活跃集检验为N_k<ν_k。"
+  },
+  {
+   "start": 812.1417,
+   "end": 818.6917,
+   "text": "The next mode stays inactive when nu sub k is at most the noise variance of mode k plus one.",
+   "translation": "当ν_k≤N_{k+1}时，下一个模式保持不活跃。"
+  },
+  {
+   "start": 819.1417,
+   "end": 826.0667,
+   "text": "Equality at a noise floor still gives zero power. For floors one, two, five, when does mode three switch on?",
+   "translation": "水位等于噪声底时，功率仍为零。噪声底为一、二、五时，第三个模式何时开启？"
+  },
+  {
+   "start": 829.5167,
+   "end": 837.1917,
+   "text": "It stays dry up through budget seven and receives power strictly above seven. Raising P raises the water level.",
+   "translation": "预算不超过七时，它仍是干的；严格超过七才分到功率。增加P会抬高水位。"
+  },
+  {
+   "start": 837.6417,
+   "end": 841.2917,
+   "text": "Increasing one noise floor can deactivate its mode.",
+   "translation": "提高某个噪声底可能使该模式退出活跃集。"
+  },
+  {
+   "start": 841.7417,
+   "end": 845.7667,
+   "text": "The rule fills only modes whose floors lie below the water.",
+   "translation": "该规则只填充噪声底低于水位的模式。"
+  },
+  {
+   "start": 846.2167,
+   "end": 850.2917,
+   "text": "Each active mode then has the same marginal derivative.",
+   "translation": "每个活跃模式随后具有相同边际导数。"
+  },
+  {
+   "start": 850.7417,
+   "end": 854.9667,
+   "text": "Inactive modes have no greater derivative than the shared price.",
+   "translation": "不活跃模式的导数不超过共同价格。"
+  },
+  {
+   "start": 855.4167,
+   "end": 860.7167,
+   "text": "These are precisely the KKT stationarity and complementary conditions.",
+   "translation": "这正是KKT驻点条件与互补条件。"
+  },
+  {
+   "start": 861.1667,
+   "end": 865.6917,
+   "text": "Concavity makes the resulting allocation globally optimal.",
+   "translation": "由凹性，所得分配是全局最优的。"
+  },
+  {
+   "start": 866.1417,
+   "end": 870.7417,
+   "text": "A numeric example will check the budget and both derivative cases.",
+   "translation": "数值例子将核对预算及两类导数条件。"
+  },
+  {
+   "start": 871.1917,
+   "end": 876.1667,
+   "text": "The next chapter reports computed values as arithmetic, not measurements.",
+   "translation": "下一章将把计算值作为算术结果报告，而非测量值。"
+  },
+  {
+   "start": 880.1667,
+   "end": 884.3667,
+   "text": "Take three real modes with noise variances one, two, and five.",
+   "translation": "取三个实模式，噪声方差分别为1、2、5。"
+  },
+  {
+   "start": 884.8167,
+   "end": 887.8667,
+   "text": "Set the total power budget P equal to six.",
+   "translation": "令总功率预算P=6。"
+  },
+  {
+   "start": 888.3167,
+   "end": 890.8667,
+   "text": "Assume the first two modes are active.",
+   "translation": "假设前两个模式活跃。"
+  },
+  {
+   "start": 891.3167,
+   "end": 896.3917,
+   "text": "Their water level is the sum of six, one, and two, all divided by two.",
+   "translation": "其水位为(6+1+2)/2。"
+  },
+  {
+   "start": 896.8417,
+   "end": 899.6417,
+   "text": "This gives nu equal to four point five.",
+   "translation": "得到ν=4.5。"
+  },
+  {
+   "start": 900.0917,
+   "end": 904.5417,
+   "text": "The first power is four point five minus one, or three point five.",
+   "translation": "第一个功率为4.5−1，即3.5。"
+  },
+  {
+   "start": 904.9917,
+   "end": 909.4417,
+   "text": "The second power is four point five minus two, or two point five.",
+   "translation": "第二个功率为4.5−2，即2.5。"
+  },
+  {
+   "start": 909.8917,
+   "end": 916.5167,
+   "text": "The third noise floor is five, above water level 4.5. Should that mode receive any power?",
+   "translation": "第三个噪声底为五，高于水位4.5。这个模式应该分到功率吗？"
+  },
+  {
+   "start": 919.9667,
+   "end": 921.9917,
+   "text": "It receives zero power.",
+   "translation": "它获得零功率。"
+  },
+  {
+   "start": 922.4417,
+   "end": 926.7667,
+   "text": "The allocation is three point five, two point five, and zero.",
+   "translation": "功率分配为3.5、2.5、0。"
+  },
+  {
+   "start": 927.2167,
+   "end": 929.4417,
+   "text": "Their sum is exactly six.",
+   "translation": "它们的和恰为6。"
+  },
+  {
+   "start": 929.8917,
+   "end": 932.9167,
+   "text": "The arithmetic budget residual is zero.",
+   "translation": "算术预算残差为零。"
+  },
+  {
+   "start": 933.3667,
+   "end": 937.6417,
+   "text": "For active mode one, noise plus power equals four point five.",
+   "translation": "第一个活跃模式的噪声加功率为4.5。"
+  },
+  {
+   "start": 938.0917,
+   "end": 941.1917,
+   "text": "The same total holds for active mode two.",
+   "translation": "第二个活跃模式的总量也为4.5。"
+  },
+  {
+   "start": 941.6417,
+   "end": 947.9167,
+   "text": "Both derivatives therefore equal one divided by the product of nine and natural log two.",
+   "translation": "因此两者导数均为1/(9ln2)。"
+  },
+  {
+   "start": 948.3667,
+   "end": 954.6667,
+   "text": "The shadow price lambda is also one divided by the product of nine and natural log two.",
+   "translation": "影子价格λ也为1/(9ln2)。"
+  },
+  {
+   "start": 955.1167,
+   "end": 962.4417,
+   "text": "For unused mode three, the derivative at zero is one divided by the product of ten and natural log two.",
+   "translation": "第三个未用模式在零功率处的导数为1/(10ln2)。"
+  },
+  {
+   "start": 962.8917,
+   "end": 965.7167,
+   "text": "That derivative is smaller than lambda.",
+   "translation": "该导数小于λ。"
+  },
+  {
+   "start": 966.1667,
+   "end": 970.5167,
+   "text": "Its lower-bound multiplier is lambda minus that derivative.",
+   "translation": "其下界乘子为λ减去该导数。"
+  },
+  {
+   "start": 970.9667,
+   "end": 975.8167,
+   "text": "This equals one divided by the product of ninety and natural log two.",
+   "translation": "该值为1/(90ln2)。"
+  },
+  {
+   "start": 976.2667,
+   "end": 980.8667,
+   "text": "All primal, dual, stationarity, and complementarity checks hold.",
+   "translation": "原始可行、对偶可行、驻点与互补条件均成立。"
+  },
+  {
+   "start": 981.3167,
+   "end": 985.6167,
+   "text": "The optimized capacity is the sum of three half-log terms.",
+   "translation": "最优容量是三个二分之一对数项之和。"
+  },
+  {
+   "start": 986.0667,
+   "end": 993.4667,
+   "text": "For powers three point five, two point five, and zero, it is about one point six six nine nine two five bits.",
+   "translation": "功率为3.5、2.5、0时，容量约为1.669925比特。"
+  },
+  {
+   "start": 993.9167,
+   "end": 996.5917,
+   "text": "The unit is bits per vector use.",
+   "translation": "单位是每次向量使用的比特数。"
+  },
+  {
+   "start": 997.0417,
+   "end": 1000.8167,
+   "text": "Now allocate two units of power to every mode instead.",
+   "translation": "现在改为每个模式都分配2单位功率。"
+  },
+  {
+   "start": 1001.2667,
+   "end": 1006.8667,
+   "text": "Equal allocation uses total power six too. Does it achieve the same capacity?",
+   "translation": "均分同样使用总功率六。它能达到相同的容量吗？"
+  },
+  {
+   "start": 1010.3167,
+   "end": 1016.1417,
+   "text": "Its capacity is about one point five three five one nine five bits per vector use.",
+   "translation": "其容量约为每次向量使用1.535195比特。"
+  },
+  {
+   "start": 1016.5917,
+   "end": 1020.5167,
+   "text": "The difference comes from directing more power toward lower noise.",
+   "translation": "差异来自将更多功率分配给较低噪声模式。"
+  },
+  {
+   "start": 1020.9667,
+   "end": 1025.9167,
+   "text": "Both values are direct formula calculations, not physical measurements.",
+   "translation": "两个数值都是公式直接计算所得，并非物理测量。"
+  },
+  {
+   "start": 1026.3667,
+   "end": 1030.5417,
+   "text": "Displayed rounding does not change the underlying allocation.",
+   "translation": "显示时的舍入不会改变底层分配。"
+  },
+  {
+   "start": 1030.9917,
+   "end": 1035.8917,
+   "text": "The third mode remains inactive because its marginal return is lower.",
+   "translation": "第三个模式保持不活跃，因为其边际收益较低。"
+  },
+  {
+   "start": 1036.3417,
+   "end": 1040.7917,
+   "text": "A numerical audit checks equations rather than the water-tank drawing.",
+   "translation": "数值核查依据方程，而非水箱图像。"
+  },
+  {
+   "start": 1041.2417,
+   "end": 1045.9167,
+   "text": "For other noise lists, sorting gives the active set systematically.",
+   "translation": "对其他噪声列表，排序可系统确定活跃集。"
+  },
+  {
+   "start": 1046.3667,
+   "end": 1050.0167,
+   "text": "For continuous spectra, sums will become integrals.",
+   "translation": "对连续频谱，求和将变为积分。"
+  },
+  {
+   "start": 1050.4667,
+   "end": 1055.1417,
+   "text": "That extension leads to spectral water-filling in the next episode.",
+   "translation": "该推广将引出下一集的频谱注水。"
+  }
+ ]
+}

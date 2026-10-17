@@ -1,0 +1,1849 @@
+{
+ "language": "en",
+ "episode": "e14-colored-channels",
+ "duration": 1207.6333,
+ "chapters": [
+  {
+   "id": "c01-toeplitz",
+   "index": 0,
+   "start": 5.0,
+   "end": 217.6333,
+   "title": "Finite Stationary Gaussian Blocks",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    8.775,
+    13.9,
+    17.475,
+    22.125,
+    25.525,
+    30.55,
+    36.6,
+    41.775,
+    47.2,
+    51.325,
+    57.875,
+    63.475,
+    70.125,
+    77.925,
+    83.575,
+    88.6,
+    93.15,
+    96.8,
+    105.775,
+    110.05,
+    116.0,
+    119.625,
+    125.15,
+    129.925,
+    134.35,
+    138.225,
+    148.05,
+    150.95,
+    157.175,
+    162.9,
+    168.35,
+    171.975,
+    176.55,
+    180.35,
+    186.175,
+    190.15,
+    195.1,
+    201.95,
+    205.45
+   ],
+   "sentenceEnds": [
+    8.325,
+    13.45,
+    17.025,
+    21.675,
+    25.075,
+    30.1,
+    36.15,
+    41.325,
+    46.75,
+    50.875,
+    57.425,
+    63.025,
+    69.675,
+    77.475,
+    83.125,
+    88.15,
+    92.7,
+    96.35,
+    102.325,
+    109.6,
+    115.55,
+    119.175,
+    124.7,
+    129.475,
+    133.9,
+    137.775,
+    147.6,
+    150.5,
+    156.725,
+    162.45,
+    167.9,
+    171.525,
+    176.1,
+    179.9,
+    185.725,
+    189.7,
+    194.65,
+    201.5,
+    205.0,
+    211.025
+   ]
+  },
+  {
+   "id": "c02-spectrum",
+   "index": 1,
+   "start": 217.6333,
+   "end": 416.3667,
+   "title": "Toeplitz Eigenvalue Distribution",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.15,
+    13.5,
+    18.45,
+    22.525,
+    28.15,
+    34.475,
+    38.1,
+    42.0,
+    47.275,
+    51.225,
+    57.425,
+    63.725,
+    69.025,
+    74.75,
+    79.45,
+    85.5,
+    89.6,
+    96.05,
+    100.125,
+    105.55,
+    111.5,
+    115.375,
+    121.625,
+    125.7,
+    130.125,
+    135.4,
+    140.925,
+    150.3,
+    155.85,
+    160.1,
+    165.175,
+    172.225,
+    177.1,
+    184.5,
+    188.975,
+    193.575
+   ],
+   "sentenceEnds": [
+    6.7,
+    13.05,
+    18.0,
+    22.075,
+    27.7,
+    34.025,
+    37.65,
+    41.55,
+    46.825,
+    50.775,
+    56.975,
+    63.275,
+    68.575,
+    74.3,
+    79.0,
+    85.05,
+    89.15,
+    95.6,
+    99.675,
+    105.1,
+    111.05,
+    114.925,
+    121.175,
+    125.25,
+    129.675,
+    134.95,
+    140.475,
+    147.35,
+    155.4,
+    159.65,
+    164.725,
+    171.775,
+    176.65,
+    184.05,
+    188.525,
+    193.125,
+    197.125
+   ]
+  },
+  {
+   "id": "c03-frequency",
+   "index": 2,
+   "start": 416.3667,
+   "end": 608.0667,
+   "title": "Discrete and Continuous Spectral Water-Filling",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.15,
+    12.625,
+    17.825,
+    23.925,
+    27.675,
+    35.4,
+    39.875,
+    43.625,
+    47.225,
+    52.975,
+    57.075,
+    62.425,
+    67.175,
+    72.575,
+    79.125,
+    82.0,
+    85.475,
+    88.375,
+    97.05,
+    104.55,
+    110.725,
+    114.975,
+    121.3,
+    127.55,
+    132.475,
+    137.15,
+    143.125,
+    149.425,
+    153.75,
+    160.35,
+    170.6,
+    175.375,
+    180.0,
+    185.0
+   ],
+   "sentenceEnds": [
+    6.7,
+    12.175,
+    17.375,
+    23.475,
+    27.225,
+    34.95,
+    39.425,
+    43.175,
+    46.775,
+    52.525,
+    56.625,
+    61.975,
+    66.725,
+    72.125,
+    78.675,
+    81.55,
+    85.025,
+    87.925,
+    96.6,
+    104.1,
+    110.275,
+    114.525,
+    120.85,
+    127.1,
+    132.025,
+    136.7,
+    142.675,
+    148.975,
+    153.3,
+    159.9,
+    170.15,
+    174.925,
+    179.55,
+    184.55,
+    190.075
+   ]
+  },
+  {
+   "id": "c04-filter",
+   "index": 3,
+   "start": 608.0667,
+   "end": 798.3667,
+   "title": "Filtering and Effective Modes",
+   "music": "definition",
+   "sentenceStarts": [
+    2.4,
+    7.975,
+    12.075,
+    16.8,
+    20.4,
+    26.425,
+    30.275,
+    39.825,
+    46.075,
+    50.725,
+    56.575,
+    59.575,
+    66.35,
+    72.5,
+    78.125,
+    83.05,
+    87.775,
+    94.925,
+    99.4,
+    104.05,
+    114.65,
+    119.35,
+    125.2,
+    131.25,
+    136.475,
+    140.25,
+    145.35,
+    150.675,
+    154.875,
+    159.125,
+    163.75,
+    169.0,
+    173.8,
+    179.45,
+    184.225
+   ],
+   "sentenceEnds": [
+    7.525,
+    11.625,
+    16.35,
+    19.95,
+    25.975,
+    29.825,
+    39.375,
+    45.625,
+    50.275,
+    56.125,
+    59.125,
+    65.9,
+    72.05,
+    77.675,
+    82.6,
+    87.325,
+    94.475,
+    98.95,
+    103.6,
+    111.7,
+    118.9,
+    124.75,
+    130.8,
+    136.025,
+    139.8,
+    144.9,
+    150.225,
+    154.425,
+    158.675,
+    163.3,
+    168.55,
+    173.35,
+    179.0,
+    183.775,
+    188.675
+   ]
+  },
+  {
+   "id": "c05-feedback-boundary",
+   "index": 4,
+   "start": 798.3667,
+   "end": 977.2667,
+   "title": "Finite-Block Gaussian Feedback",
+   "music": "proof",
+   "sentenceStarts": [
+    2.4,
+    7.325,
+    13.575,
+    20.0,
+    23.6,
+    26.95,
+    32.225,
+    36.775,
+    42.1,
+    47.975,
+    51.625,
+    56.675,
+    61.4,
+    66.65,
+    71.975,
+    77.175,
+    82.45,
+    86.475,
+    97.75,
+    101.875,
+    106.65,
+    111.2,
+    116.575,
+    121.5,
+    125.15,
+    129.325,
+    134.275,
+    138.6,
+    142.575,
+    147.0,
+    151.95,
+    155.4,
+    160.3,
+    164.5,
+    169.525,
+    173.95
+   ],
+   "sentenceEnds": [
+    6.875,
+    13.125,
+    19.55,
+    23.15,
+    26.5,
+    31.775,
+    36.325,
+    41.65,
+    47.525,
+    51.175,
+    56.225,
+    60.95,
+    66.2,
+    71.525,
+    76.725,
+    82.0,
+    86.025,
+    94.8,
+    101.425,
+    106.2,
+    110.75,
+    116.125,
+    121.05,
+    124.7,
+    128.875,
+    133.825,
+    138.15,
+    142.125,
+    146.55,
+    151.5,
+    154.95,
+    159.85,
+    164.05,
+    169.075,
+    173.5,
+    177.275
+   ]
+  },
+  {
+   "id": "c06-course-map",
+   "index": 5,
+   "start": 977.2667,
+   "end": 1202.6333,
+   "title": "The Information-Theory Course Map",
+   "music": "recap",
+   "sentenceStarts": [
+    2.4,
+    9.7,
+    15.175,
+    22.3,
+    27.15,
+    32.275,
+    38.4,
+    43.4,
+    50.05,
+    54.975,
+    60.55,
+    65.825,
+    72.475,
+    76.7,
+    81.25,
+    88.125,
+    92.95,
+    98.3,
+    109.825,
+    115.25,
+    119.175,
+    123.4,
+    132.625,
+    138.4,
+    143.625,
+    149.825,
+    155.225,
+    161.075,
+    166.2,
+    171.125,
+    175.7,
+    180.7,
+    189.05,
+    194.85,
+    200.95,
+    205.275,
+    210.025,
+    216.0
+   ],
+   "sentenceEnds": [
+    9.25,
+    14.725,
+    21.85,
+    26.7,
+    31.825,
+    37.95,
+    42.95,
+    49.6,
+    54.525,
+    60.1,
+    65.375,
+    72.025,
+    76.25,
+    80.8,
+    87.675,
+    92.5,
+    97.85,
+    106.875,
+    114.8,
+    118.725,
+    122.95,
+    132.175,
+    137.95,
+    143.175,
+    149.375,
+    154.775,
+    160.625,
+    165.75,
+    170.675,
+    175.25,
+    180.25,
+    188.6,
+    194.4,
+    200.5,
+    204.825,
+    209.575,
+    215.55,
+    223.75
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 7.4,
+   "end": 13.325,
+   "text": "Let Z one through Z n be a finite block from a real stationary Gaussian noise process.",
+   "translation": "令Z₁至Zₙ是实平稳高斯噪声过程的有限块。"
+  },
+  {
+   "start": 13.775,
+   "end": 18.45,
+   "text": "Stationarity makes covariance depend only on the index difference.",
+   "translation": "平稳性使协方差只依赖索引差。"
+  },
+  {
+   "start": 18.9,
+   "end": 22.025,
+   "text": "Write K sub i j as r of i minus j.",
+   "translation": "写作K_ij=r(i−j)。"
+  },
+  {
+   "start": 22.475,
+   "end": 26.675,
+   "text": "Every diagonal therefore repeats the same covariance lag.",
+   "translation": "因此每条对角线都重复同一协方差时滞。"
+  },
+  {
+   "start": 27.125,
+   "end": 30.075,
+   "text": "The resulting finite matrix is Toeplitz.",
+   "translation": "所得有限矩阵是Toeplitz矩阵。"
+  },
+  {
+   "start": 30.525,
+   "end": 35.1,
+   "text": "Assume the finite-block covariance matrix is positive definite.",
+   "translation": "假设有限块协方差矩阵正定。"
+  },
+  {
+   "start": 35.55,
+   "end": 41.15,
+   "text": "For a Gaussian vector, an orthogonal eigenbasis diagonalizes this covariance.",
+   "translation": "对高斯向量，正交特征基可对角化该协方差。"
+  },
+  {
+   "start": 41.6,
+   "end": 46.325,
+   "text": "Rotating into that basis produces independent Gaussian noise modes.",
+   "translation": "旋转到该基底后，得到相互独立的高斯噪声模式。"
+  },
+  {
+   "start": 46.775,
+   "end": 51.75,
+   "text": "Their variances are the covariance eigenvalues lambda one through lambda n.",
+   "translation": "各模式方差就是协方差特征值λ₁至λₙ。"
+  },
+  {
+   "start": 52.2,
+   "end": 55.875,
+   "text": "The expected block energy budget is n times P.",
+   "translation": "整块的期望能量预算为nP。"
+  },
+  {
+   "start": 56.325,
+   "end": 62.425,
+   "text": "Orthogonal rotation preserves squared Euclidean norm, so it preserves this energy budget.",
+   "translation": "正交旋转保持欧氏范数平方，因此保持该能量预算。"
+  },
+  {
+   "start": 62.875,
+   "end": 68.025,
+   "text": "Let capital P sub i denote input variance allocated to eigenmode i.",
+   "translation": "令大写P_i表示分配给第i个特征模式的输入方差。"
+  },
+  {
+   "start": 68.475,
+   "end": 74.675,
+   "text": "Independent Gaussian inputs attain the parallel-mode information bound established earlier.",
+   "translation": "独立高斯输入达到前面推导的并行模式信息上界。"
+  },
+  {
+   "start": 75.125,
+   "end": 82.475,
+   "text": "For allocations P sub i, normalized block information is the sum of log terms divided by two n.",
+   "translation": "对分配P_i，归一化分组信息为对数项之和除以2n。"
+  },
+  {
+   "start": 82.925,
+   "end": 88.125,
+   "text": "Maximizing this expression under the block budget gives capacity C sub n.",
+   "translation": "在分组预算约束下最大化该式，得到容量C_n。"
+  },
+  {
+   "start": 88.575,
+   "end": 93.15,
+   "text": "Each term is log two of one plus P sub i over lambda sub i.",
+   "translation": "每项为log₂(1+P_i/λ_i)。"
+  },
+  {
+   "start": 93.6,
+   "end": 97.7,
+   "text": "The allocations are nonnegative and sum to at most n P.",
+   "translation": "各分配非负且总和不超过nP。"
+  },
+  {
+   "start": 98.15,
+   "end": 101.35,
+   "text": "Eigenvectors are exact finite-block modes.",
+   "translation": "特征向量是精确的有限块模式。"
+  },
+  {
+   "start": 101.8,
+   "end": 107.325,
+   "text": "At finite n, must these eigenvectors be exactly the discrete Fourier vectors?",
+   "translation": "有限n时，这些特征向量一定恰好是离散Fourier向量吗？"
+  },
+  {
+   "start": 110.775,
+   "end": 114.6,
+   "text": "Consider a noise covariance with r zero equal one.",
+   "translation": "考虑r₀=1的噪声协方差。"
+  },
+  {
+   "start": 115.05,
+   "end": 120.55,
+   "text": "Let the lag-one covariances r plus one and r minus one equal point three.",
+   "translation": "令一阶协方差r₁与r₋₁均为0.3。"
+  },
+  {
+   "start": 121.0,
+   "end": 124.175,
+   "text": "All other nonzero-lag covariances vanish.",
+   "translation": "其他非零时滞协方差均为零。"
+  },
+  {
+   "start": 124.625,
+   "end": 129.7,
+   "text": "The finite matrix is tridiagonal with point three on adjacent diagonals.",
+   "translation": "有限矩阵为三对角矩阵，相邻对角线元素为0.3。"
+  },
+  {
+   "start": 130.15,
+   "end": 134.475,
+   "text": "Its spectral density is one plus point six cosine omega.",
+   "translation": "其谱密度为1+0.6cosω。"
+  },
+  {
+   "start": 134.925,
+   "end": 138.9,
+   "text": "This density stays between point four and one point six.",
+   "translation": "该谱密度始终介于0.4与1.6之间。"
+  },
+  {
+   "start": 139.35,
+   "end": 142.775,
+   "text": "The noise spectrum is therefore strictly positive.",
+   "translation": "因此噪声谱严格为正。"
+  },
+  {
+   "start": 143.225,
+   "end": 152.6,
+   "text": "The finite eigenvalues are one plus zero point six times the cosine of the fraction k times pi divided by the quantity n plus one.",
+   "translation": "有限特征值为1+0.6cos(kπ/(n+1))。"
+  },
+  {
+   "start": 153.05,
+   "end": 155.5,
+   "text": "Here k ranges from one through n.",
+   "translation": "这里k从1取到n。"
+  },
+  {
+   "start": 155.95,
+   "end": 161.725,
+   "text": "The corresponding eigenvectors are sine vectors, not finite discrete Fourier vectors.",
+   "translation": "对应特征向量是正弦向量，而非有限离散Fourier向量。"
+  },
+  {
+   "start": 162.175,
+   "end": 167.45,
+   "text": "This example shows why finite modes and frequency bins must be distinguished.",
+   "translation": "此例说明必须区分有限模式与频率格点。"
+  },
+  {
+   "start": 167.9,
+   "end": 172.9,
+   "text": "At large block lengths, eigenvalue distributions can approach the spectrum.",
+   "translation": "块长增大时，特征值分布可以趋近谱分布。"
+  },
+  {
+   "start": 173.35,
+   "end": 176.525,
+   "text": "That statement needs regularity assumptions.",
+   "translation": "该结论需要正则性假设。"
+  },
+  {
+   "start": 176.975,
+   "end": 181.1,
+   "text": "Stationarity alone is not enough for every spectral limit.",
+   "translation": "仅有平稳性不足以保证所有谱极限。"
+  },
+  {
+   "start": 181.55,
+   "end": 184.9,
+   "text": "We next state one sufficient Toeplitz theorem setting.",
+   "translation": "接下来说明一种充分的Toeplitz定理条件。"
+  },
+  {
+   "start": 185.35,
+   "end": 190.725,
+   "text": "The theorem concerns empirical eigenvalue averages, not termwise matching.",
+   "translation": "定理讨论特征值经验平均，而非逐项匹配。"
+  },
+  {
+   "start": 191.175,
+   "end": 194.7,
+   "text": "This distinction will matter when applying water-filling.",
+   "translation": "应用注水法时，这一区别很重要。"
+  },
+  {
+   "start": 195.15,
+   "end": 199.65,
+   "text": "Finite eigenvalues remain the exact starting point for each block.",
+   "translation": "每个分组仍以精确有限特征值为起点。"
+  },
+  {
+   "start": 200.1,
+   "end": 206.5,
+   "text": "The asymptotic spectrum replaces their empirical distribution under stated hypotheses.",
+   "translation": "满足明确假设时，渐近谱可替代其经验分布。"
+  },
+  {
+   "start": 206.95,
+   "end": 210.0,
+   "text": "No continuous-time units have entered yet.",
+   "translation": "此处尚未引入连续时间单位。"
+  },
+  {
+   "start": 210.45,
+   "end": 216.025,
+   "text": "We are still counting bits per real transmission, after dividing block information by n.",
+   "translation": "分组信息除以n后，单位仍为每次实传输比特数。"
+  },
+  {
+   "start": 220.0333,
+   "end": 224.3333,
+   "text": "Let r of k be an absolutely summable covariance sequence.",
+   "translation": "令r(k)为绝对可和的协方差序列。"
+  },
+  {
+   "start": 224.7833,
+   "end": 230.6833,
+   "text": "Its Fourier series defines a continuous real nonnegative spectrum S of omega.",
+   "translation": "其Fourier级数定义连续、实且非负的谱S(ω)。"
+  },
+  {
+   "start": 231.1333,
+   "end": 235.6333,
+   "text": "Build the n by n Toeplitz covariance matrix from these lags.",
+   "translation": "用这些时滞构造n乘n Toeplitz协方差矩阵。"
+  },
+  {
+   "start": 236.0833,
+   "end": 239.7083,
+   "text": "Let lambda one through lambda n be its eigenvalues.",
+   "translation": "令λ₁至λₙ为该矩阵特征值。"
+  },
+  {
+   "start": 240.1583,
+   "end": 245.3333,
+   "text": "For every continuous test function F, the eigenvalue average converges.",
+   "translation": "对每个连续测试函数F，特征值平均值均收敛。"
+  },
+  {
+   "start": 245.7833,
+   "end": 251.6583,
+   "text": "The limit is the integral of F of S omega, divided by the product of two and pi.",
+   "translation": "极限为(1/(2π))∫F(S(ω))dω。"
+  },
+  {
+   "start": 252.1083,
+   "end": 255.2833,
+   "text": "The integral runs from negative pi to pi.",
+   "translation": "积分区间为−π至π。"
+  },
+  {
+   "start": 255.7333,
+   "end": 259.1833,
+   "text": "This is convergence of empirical distributions.",
+   "translation": "这是经验分布的收敛。"
+  },
+  {
+   "start": 259.6333,
+   "end": 264.4583,
+   "text": "It does not pair every finite eigenvalue with one exact frequency.",
+   "translation": "它不把每个有限特征值与某个精确频率配对。"
+  },
+  {
+   "start": 264.9083,
+   "end": 268.4083,
+   "text": "Here is the proof roadmap, not a full theorem proof.",
+   "translation": "下面给出证明路线，而非完整定理证明。"
+  },
+  {
+   "start": 268.8583,
+   "end": 274.6083,
+   "text": "First truncate the absolutely summable covariance sequence to a finite lag range.",
+   "translation": "首先将绝对可和协方差序列截断到有限时滞范围。"
+  },
+  {
+   "start": 275.0583,
+   "end": 280.9083,
+   "text": "For the truncated sequence, first consider polynomial test functions of the eigenvalues.",
+   "translation": "对截断序列，先考虑特征值的多项式测试函数。"
+  },
+  {
+   "start": 281.3583,
+   "end": 286.2083,
+   "text": "Normalized traces of powers are sums of products of covariance lags.",
+   "translation": "归一化幂迹是协方差时滞乘积之和。"
+  },
+  {
+   "start": 286.6583,
+   "end": 291.9333,
+   "text": "For fixed polynomial degree and lag range, only a fixed-width boundary differs.",
+   "translation": "对固定多项式次数与时滞范围，只有固定宽度的边界部分不同。"
+  },
+  {
+   "start": 292.3833,
+   "end": 296.6333,
+   "text": "That boundary contribution divided by n tends to zero.",
+   "translation": "该边界贡献除以n后趋于零。"
+  },
+  {
+   "start": 297.0833,
+   "end": 302.6833,
+   "text": "Absolute summability makes the truncation error vanish as the lag range grows.",
+   "translation": "时滞范围增大时，绝对可和性使截断误差趋于零。"
+  },
+  {
+   "start": 303.1333,
+   "end": 306.7833,
+   "text": "Thus the limit holds for polynomial test functions.",
+   "translation": "因此该极限对多项式测试函数成立。"
+  },
+  {
+   "start": 307.2333,
+   "end": 313.2333,
+   "text": "On the compact spectral interval, approximate continuous F uniformly by polynomials.",
+   "translation": "在紧谱区间上，用多项式一致逼近连续函数F。"
+  },
+  {
+   "start": 313.6833,
+   "end": 317.3083,
+   "text": "Uniform approximation transfers the limit to F.",
+   "translation": "一致逼近将极限推广到F。"
+  },
+  {
+   "start": 317.7583,
+   "end": 322.7333,
+   "text": "This argument requires absolute summability and continuity as stated.",
+   "translation": "该论证需要前述绝对可和与连续性条件。"
+  },
+  {
+   "start": 323.1833,
+   "end": 328.6833,
+   "text": "For water-filling, assume additionally that S is bounded below by a positive m.",
+   "translation": "对注水法，还假设S有正下界m。"
+  },
+  {
+   "start": 329.1333,
+   "end": 332.5583,
+   "text": "Assume it is bounded above by a finite M as well.",
+   "translation": "同时假设其有有限上界M。"
+  },
+  {
+   "start": 333.0083,
+   "end": 338.8083,
+   "text": "For fixed water level nu, allocated power is the positive part of nu minus S.",
+   "translation": "固定水位ν时，功率密度为(ν−S)^+。"
+  },
+  {
+   "start": 339.2583,
+   "end": 342.8833,
+   "text": "This function is continuous in the spectral value.",
+   "translation": "该函数关于谱值连续。"
+  },
+  {
+   "start": 343.3333,
+   "end": 347.3083,
+   "text": "So the eigenvalue theorem gives its empirical mean limit.",
+   "translation": "因此特征值定理给出其经验均值极限。"
+  },
+  {
+   "start": 347.7583,
+   "end": 352.5833,
+   "text": "The capacity integrand is continuous under the same positive bounds.",
+   "translation": "在相同正下界条件下，容量被积函数连续。"
+  },
+  {
+   "start": 353.0333,
+   "end": 358.1083,
+   "text": "For positive P, choose the finite-block water level to meet its power budget.",
+   "translation": "对正功率P，选择有限块水位以满足功率预算。"
+  },
+  {
+   "start": 358.5583,
+   "end": 364.9833,
+   "text": "Bracket the limiting water level by two nearby fixed levels. How can this constrain nu sub n?",
+   "translation": "用两个相邻固定水位夹住极限水位。这如何约束ν_n？"
+  },
+  {
+   "start": 367.9333,
+   "end": 373.0333,
+   "text": "Monotonicity of allocated power transfers this bracket to nu sub n.",
+   "translation": "分配功率的单调性将该夹逼传递给ν_n。"
+  },
+  {
+   "start": 373.4833,
+   "end": 377.2833,
+   "text": "As the bracket narrows, nu sub n converges to nu.",
+   "translation": "夹逼区间收窄时，ν_n趋于ν。"
+  },
+  {
+   "start": 377.7333,
+   "end": 382.3583,
+   "text": "Continuity then transfers the limit to the optimized capacity.",
+   "translation": "随后由连续性将极限传递到最优容量。"
+  },
+  {
+   "start": 382.8083,
+   "end": 389.4083,
+   "text": "When P is zero, all allocations and capacities vanish without requiring a unique water level.",
+   "translation": "P为零时，各功率分配与容量均为零，无需唯一水位。"
+  },
+  {
+   "start": 389.8583,
+   "end": 394.2833,
+   "text": "These steps do not assert the result for every stationary process.",
+   "translation": "这些步骤并未断言该结果适用于所有平稳过程。"
+  },
+  {
+   "start": 394.7333,
+   "end": 401.6833,
+   "text": "These conclusions use absolute summability together with a continuous spectrum bounded away from zero.",
+   "translation": "这些结论采用绝对可和性，以及有正下界的连续谱。"
+  },
+  {
+   "start": 402.1333,
+   "end": 406.1583,
+   "text": "Finite-block fluctuations remain before taking the limit.",
+   "translation": "取极限之前，有限块波动仍然存在。"
+  },
+  {
+   "start": 406.6083,
+   "end": 410.7583,
+   "text": "Next translate these discrete frequencies into physical hertz.",
+   "translation": "接下来将离散频率换算为物理赫兹。"
+  },
+  {
+   "start": 411.2083,
+   "end": 414.7583,
+   "text": "The normalization changes with that translation.",
+   "translation": "这种换算会改变归一化方式。"
+  },
+  {
+   "start": 418.7667,
+   "end": 423.0667,
+   "text": "First use discrete time with normalized frequency omega.",
+   "translation": "首先考虑归一化角频率ω下的离散时间模型。"
+  },
+  {
+   "start": 423.5167,
+   "end": 428.5417,
+   "text": "Its angular frequency ranges from negative pi to positive pi.",
+   "translation": "其角频率范围为−π至π。"
+  },
+  {
+   "start": 428.9917,
+   "end": 433.7417,
+   "text": "Define the input spectrum S sub x under a two-sided convention.",
+   "translation": "按双边约定定义输入谱S_x。"
+  },
+  {
+   "start": 434.1917,
+   "end": 439.8417,
+   "text": "Average input power is its spectral integral divided by the product of two and pi.",
+   "translation": "平均输入功率为(1/(2π))乘谱积分。"
+  },
+  {
+   "start": 440.2917,
+   "end": 443.5917,
+   "text": "That integral runs from negative pi to pi.",
+   "translation": "积分区间为−π至π。"
+  },
+  {
+   "start": 444.0417,
+   "end": 451.3167,
+   "text": "For a real discrete-time Gaussian channel, capacity is the log integral divided by the product of four and pi.",
+   "translation": "对实离散时间高斯信道，容量为(1/(4π))乘以对数积分。"
+  },
+  {
+   "start": 451.7667,
+   "end": 455.7917,
+   "text": "The integrand is log two of one plus S x over S z.",
+   "translation": "被积函数为log₂(1+S_x/S_z)。"
+  },
+  {
+   "start": 456.2417,
+   "end": 459.5417,
+   "text": "Its unit is bits per real discrete-time use.",
+   "translation": "其单位是每次实离散时间使用的比特数。"
+  },
+  {
+   "start": 459.9917,
+   "end": 463.1417,
+   "text": "The one half accounts for a real degree of freedom.",
+   "translation": "因子二分之一来自实自由度。"
+  },
+  {
+   "start": 463.5917,
+   "end": 468.8917,
+   "text": "The discrete-time water-filling spectrum is the positive part of nu minus S z.",
+   "translation": "离散时间注水谱为(ν−S_z)^+。"
+  },
+  {
+   "start": 469.3417,
+   "end": 472.9917,
+   "text": "Now use continuous time and frequency f in hertz.",
+   "translation": "现在考虑以赫兹计量的连续时间频率f。"
+  },
+  {
+   "start": 473.4417,
+   "end": 478.3417,
+   "text": "For a real signal, integrate over both positive and negative frequencies.",
+   "translation": "对实信号，要对正负频率两侧积分。"
+  },
+  {
+   "start": 478.7917,
+   "end": 483.0917,
+   "text": "Transmit power is the integral of S x over the real line.",
+   "translation": "发送功率为S_x在实数频率轴上的积分。"
+  },
+  {
+   "start": 483.5417,
+   "end": 488.4917,
+   "text": "Continuous-time capacity is one half the log integral over hertz.",
+   "translation": "连续时间容量为赫兹域对数积分的一半。"
+  },
+  {
+   "start": 488.9417,
+   "end": 495.0417,
+   "text": "It equals one half integral over the reals of log two of one plus S x over S z.",
+   "translation": "即实数域上log₂(1+S_x/S_z)积分的一半。"
+  },
+  {
+   "start": 495.4917,
+   "end": 497.9167,
+   "text": "Its unit is bits per second.",
+   "translation": "其单位为比特每秒。"
+  },
+  {
+   "start": 498.3667,
+   "end": 501.3917,
+   "text": "Here S x and S z use power per hertz.",
+   "translation": "这里S_x与S_z均采用功率每赫兹单位。"
+  },
+  {
+   "start": 501.8417,
+   "end": 504.2917,
+   "text": "Their ratio is dimensionless.",
+   "translation": "二者之比是无量纲量。"
+  },
+  {
+   "start": 504.7417,
+   "end": 512.9667,
+   "text": "For alias-free sampling, band-limit signal and observed noise to negative W through W, and sample at two W.",
+   "translation": "无混叠采样时，将信号与观测噪声限于−W至W，并以2W采样。"
+  },
+  {
+   "start": 513.4167,
+   "end": 520.4667,
+   "text": "Map hertz f to omega: f equals F s times omega, divided by the product of two and pi.",
+   "translation": "用f=F_sω/(2π)将赫兹频率映射到ω。"
+  },
+  {
+   "start": 520.9167,
+   "end": 526.6417,
+   "text": "The discrete spectrum equals F s times the continuous spectrum at that frequency.",
+   "translation": "离散谱等于该频率处连续谱乘F_s。"
+  },
+  {
+   "start": 527.0917,
+   "end": 530.8917,
+   "text": "Thus the signal-to-noise spectral ratio is unchanged.",
+   "translation": "因此信噪谱比保持不变。"
+  },
+  {
+   "start": 531.3417,
+   "end": 537.2167,
+   "text": "In the discrete integral, d omega equals two pi divided by F s, times d f.",
+   "translation": "频率微分按2π/F_s缩放。"
+  },
+  {
+   "start": 537.6667,
+   "end": 543.4667,
+   "text": "Multiplying discrete bits per use by F s uses per second gives bits per second.",
+   "translation": "将每次使用比特数乘以每秒F_s次，得到比特每秒。"
+  },
+  {
+   "start": 543.9167,
+   "end": 548.3917,
+   "text": "This exactly yields the continuous-time half-integral convention.",
+   "translation": "这恰好得到连续时间的半积分约定。"
+  },
+  {
+   "start": 548.8417,
+   "end": 553.0667,
+   "text": "Now take white noise with two-sided density N zero over two.",
+   "translation": "现在令白噪声双边谱密度为N₀/2。"
+  },
+  {
+   "start": 553.5167,
+   "end": 559.0417,
+   "text": "Restrict transmission to the lowpass band from negative W to positive W.",
+   "translation": "将发送限制在−W至W的低通频带。"
+  },
+  {
+   "start": 559.4917,
+   "end": 565.3417,
+   "text": "Uniform optimal input density is P divided by the product of two and W.",
+   "translation": "均匀最优输入谱密度为P/(2W)。"
+  },
+  {
+   "start": 565.7917,
+   "end": 569.6667,
+   "text": "Its power integral over width two W equals P.",
+   "translation": "该谱密度在总宽2W上积分为P。"
+  },
+  {
+   "start": 570.1167,
+   "end": 576.2667,
+   "text": "The ratio to noise density becomes P divided by the product N zero times W.",
+   "translation": "与噪声谱密度之比变为P/(N₀W)。"
+  },
+  {
+   "start": 576.7167,
+   "end": 586.5167,
+   "text": "The capacity integral reduces to W times log base two of one plus the ratio P divided by the product N zero times W.",
+   "translation": "容量积分化为Wlog₂(1+P/(N₀W))。"
+  },
+  {
+   "start": 586.9667,
+   "end": 591.2917,
+   "text": "This matches the real lowpass formula from the bandwidth episode.",
+   "translation": "这与带宽章节的实低通公式一致。"
+  },
+  {
+   "start": 591.7417,
+   "end": 595.9167,
+   "text": "The half factor and the two-sided band must travel together.",
+   "translation": "二分之一因子与双边频带必须配套使用。"
+  },
+  {
+   "start": 596.3667,
+   "end": 600.9167,
+   "text": "Changing to one-sided spectra requires consistent conversion.",
+   "translation": "改用单边谱时必须一致换算。"
+  },
+  {
+   "start": 601.3667,
+   "end": 606.4417,
+   "text": "Next consider frequency response before assigning the effective noise floor.",
+   "translation": "接下来先考虑频率响应，再定义有效噪声底。"
+  },
+  {
+   "start": 610.4667,
+   "end": 615.5917,
+   "text": "Consider a linear time-invariant channel with frequency response H of f.",
+   "translation": "考虑频率响应为H(f)的线性时不变信道。"
+  },
+  {
+   "start": 616.0417,
+   "end": 619.6917,
+   "text": "The transmitted signal spectrum is S x of f.",
+   "translation": "发送信号谱为S_x(f)。"
+  },
+  {
+   "start": 620.1417,
+   "end": 624.4167,
+   "text": "The receiver observes H times X plus additive noise N.",
+   "translation": "接收端观测H乘X再加加性噪声N。"
+  },
+  {
+   "start": 624.8667,
+   "end": 628.0167,
+   "text": "The input power constraint applies before H.",
+   "translation": "输入功率约束施加在H之前。"
+  },
+  {
+   "start": 628.4667,
+   "end": 634.0417,
+   "text": "The signal contribution to output spectrum is absolute H squared times S x.",
+   "translation": "输出谱中的信号项为|H|²S_x。"
+  },
+  {
+   "start": 634.4917,
+   "end": 637.8917,
+   "text": "Let additive noise have spectrum S n of f.",
+   "translation": "令加性噪声谱为S_n(f)。"
+  },
+  {
+   "start": 638.3417,
+   "end": 647.4417,
+   "text": "At a frequency with nonzero H, output signal-to-noise ratio is absolute H squared times S x, all divided by S n.",
+   "translation": "在H非零的频率，输出信噪比为|H|²S_x/S_n。"
+  },
+  {
+   "start": 647.8917,
+   "end": 653.6917,
+   "text": "Equivalently, the effective input noise floor is S n over absolute H squared.",
+   "translation": "等价地，有效输入噪声底为S_n/|H|²。"
+  },
+  {
+   "start": 654.1417,
+   "end": 658.3417,
+   "text": "This equivalent floor is defined only when H is nonzero.",
+   "translation": "该等效噪声底仅在H非零时定义。"
+  },
+  {
+   "start": 658.7917,
+   "end": 664.1917,
+   "text": "When H equals zero and noise remains positive, no input signal passes.",
+   "translation": "当H为零且噪声仍为正时，没有输入信号通过。"
+  },
+  {
+   "start": 664.6417,
+   "end": 667.1917,
+   "text": "That mode carries zero information.",
+   "translation": "该模式承载零信息。"
+  },
+  {
+   "start": 667.6417,
+   "end": 673.9667,
+   "text": "The effective-noise quotient is undefined there; the direct signal-to-noise expression gives zero.",
+   "translation": "该处等效噪声商未定义；直接信噪比表达式给出零。"
+  },
+  {
+   "start": 674.4167,
+   "end": 680.1167,
+   "text": "A zero at an isolated frequency has measure zero in a continuous integral.",
+   "translation": "连续积分中单个孤立频率的测度为零。"
+  },
+  {
+   "start": 680.5667,
+   "end": 685.7417,
+   "text": "Such a point does not automatically remove positive integral capacity.",
+   "translation": "因此该点不会自动损失正的积分容量。"
+  },
+  {
+   "start": 686.1917,
+   "end": 690.6667,
+   "text": "Assume S n is strictly positive wherever the formula is used.",
+   "translation": "假设公式使用处的S_n严格为正。"
+  },
+  {
+   "start": 691.1167,
+   "end": 695.3917,
+   "text": "A zero-noise mode lies outside this stated formula regime.",
+   "translation": "零噪声模式不属于此处声明的公式范围。"
+  },
+  {
+   "start": 695.8417,
+   "end": 702.5417,
+   "text": "Their capacity requires separate assumptions on the noiseless degrees of freedom and admissible inputs.",
+   "translation": "其容量需要另行声明无噪自由度与允许输入的假设。"
+  },
+  {
+   "start": 702.9917,
+   "end": 707.0167,
+   "text": "Now place a receive filter G after the additive noise.",
+   "translation": "现在将接收滤波器G置于加性噪声之后。"
+  },
+  {
+   "start": 707.4667,
+   "end": 711.6667,
+   "text": "It multiplies the signal spectrum by absolute G squared.",
+   "translation": "它将信号谱乘以|G|²。"
+  },
+  {
+   "start": 712.1167,
+   "end": 719.7667,
+   "text": "It also multiplies the noise spectrum by absolute G squared. Can amplification alone improve their ratio?",
+   "translation": "它也将噪声谱乘以|G|²。仅靠放大能提高二者比值吗？"
+  },
+  {
+   "start": 722.7167,
+   "end": 726.9667,
+   "text": "Where G is nonzero, these factors cancel in their ratio.",
+   "translation": "G非零处，这些因子在比值中抵消。"
+  },
+  {
+   "start": 727.4167,
+   "end": 732.8167,
+   "text": "Thus receive weighting alone cannot improve that modewise signal-to-noise ratio.",
+   "translation": "因此仅靠接收加权不能提高该模式信噪比。"
+  },
+  {
+   "start": 733.2667,
+   "end": 738.8667,
+   "text": "This cancellation does not reverse the location of the transmitter power constraint.",
+   "translation": "这种抵消不会改变发射功率约束的位置。"
+  },
+  {
+   "start": 739.3167,
+   "end": 744.0917,
+   "text": "Thus an invertible receive weighting does not change that mode ratio.",
+   "translation": "因此可逆接收加权不会改变该模式信噪比。"
+  },
+  {
+   "start": 744.5417,
+   "end": 747.8667,
+   "text": "Where G is zero, the filter erases the mode.",
+   "translation": "G为零处，滤波器会抹去该模式。"
+  },
+  {
+   "start": 748.3167,
+   "end": 752.9667,
+   "text": "There the ratio is not evaluated by cancelling zero over zero.",
+   "translation": "此处不能通过抵消0/0来计算比值。"
+  },
+  {
+   "start": 753.4167,
+   "end": 758.2917,
+   "text": "Input filtering and receive filtering have different power consequences.",
+   "translation": "输入滤波与接收滤波对功率约束的影响不同。"
+  },
+  {
+   "start": 758.7417,
+   "end": 762.4917,
+   "text": "The transmitter pays for power before the channel response.",
+   "translation": "发射端为信道响应之前的功率付出预算。"
+  },
+  {
+   "start": 762.9417,
+   "end": 766.7417,
+   "text": "A receive filter acts after signal and noise arrive.",
+   "translation": "接收滤波器作用于信号与噪声到达之后。"
+  },
+  {
+   "start": 767.1917,
+   "end": 771.3667,
+   "text": "A frequency-dependent H can make some modes more favorable.",
+   "translation": "频率相关的H会使某些模式更有利。"
+  },
+  {
+   "start": 771.8167,
+   "end": 776.6167,
+   "text": "Power allocation should account for that effective signal-to-noise ratio.",
+   "translation": "功率分配应考虑该有效信噪比。"
+  },
+  {
+   "start": 777.0667,
+   "end": 781.4167,
+   "text": "The spectrum integral must retain its stated units and domain.",
+   "translation": "谱积分必须保留声明的单位与定义域。"
+  },
+  {
+   "start": 781.8667,
+   "end": 787.0667,
+   "text": "The power constraint remains the integral of the transmitted input spectrum.",
+   "translation": "功率约束始终是发送输入谱的积分。"
+  },
+  {
+   "start": 787.5167,
+   "end": 791.8417,
+   "text": "Next state the separate finite-block result for causal feedback.",
+   "translation": "接下来陈述因果反馈的独立有限块结果。"
+  },
+  {
+   "start": 792.2917,
+   "end": 796.7417,
+   "text": "Its half-bit comparison is per real transmission, not per second.",
+   "translation": "其半比特比较按每次实传输计，而非每秒。"
+  },
+  {
+   "start": 800.7667,
+   "end": 805.2417,
+   "text": "Now return to a discrete-time real additive Gaussian sequence channel.",
+   "translation": "现在回到离散时间实加性高斯序列信道。"
+  },
+  {
+   "start": 805.6917,
+   "end": 811.4917,
+   "text": "The block noise is Gaussian with positive-definite covariance and may be nonstationary.",
+   "translation": "分组噪声为协方差正定的高斯噪声，且可以非平稳。"
+  },
+  {
+   "start": 811.9417,
+   "end": 817.9167,
+   "text": "No stationarity or Toeplitz structure is required for this finite-block comparison.",
+   "translation": "该有限块比较不要求平稳性或Toeplitz结构。"
+  },
+  {
+   "start": 818.3667,
+   "end": 821.5167,
+   "text": "Its coordinates may be correlated across time.",
+   "translation": "其坐标可以在时间上相关。"
+  },
+  {
+   "start": 821.9667,
+   "end": 824.8667,
+   "text": "The noise is independent of the message.",
+   "translation": "噪声与消息独立。"
+  },
+  {
+   "start": 825.3167,
+   "end": 830.1417,
+   "text": "The transmitter has noiseless causal access to previous channel outputs.",
+   "translation": "发送端无噪声地因果获知先前信道输出。"
+  },
+  {
+   "start": 830.5917,
+   "end": 834.6917,
+   "text": "Thus input X sub i may depend on Y before time i.",
+   "translation": "因此输入X_i可依赖时刻i之前的输出。"
+  },
+  {
+   "start": 835.1417,
+   "end": 840.0167,
+   "text": "The power constraint averages expected squared input across the block.",
+   "translation": "功率约束对整个分组的输入平方取期望平均。"
+  },
+  {
+   "start": 840.4667,
+   "end": 845.8917,
+   "text": "One over n times the sum of expected X sub i squared is at most P.",
+   "translation": "(1/n)ΣE[X_i²]≤P。"
+  },
+  {
+   "start": 846.3417,
+   "end": 849.5417,
+   "text": "This is an expected average-power constraint.",
+   "translation": "这是期望平均功率约束。"
+  },
+  {
+   "start": 849.9917,
+   "end": 854.5917,
+   "text": "It is not a separate deterministic bound on every message codeword.",
+   "translation": "它不是对每个消息码字分别施加的确定性约束。"
+  },
+  {
+   "start": 855.0417,
+   "end": 859.3167,
+   "text": "Cover and Pombra give finite-block comparisons for this model.",
+   "translation": "Cover与Pombra为该模型给出有限块比较界。"
+  },
+  {
+   "start": 859.7667,
+   "end": 864.5667,
+   "text": "Let C sub n denote the normalized no-feedback information bound.",
+   "translation": "令C_n表示归一化无反馈信息界。"
+  },
+  {
+   "start": 865.0167,
+   "end": 869.8917,
+   "text": "It divides the best no-feedback block information by n transmissions.",
+   "translation": "它将无反馈最优分组信息量除以n次传输。"
+  },
+  {
+   "start": 870.3417,
+   "end": 875.0917,
+   "text": "Let C sub n feedback denote the corresponding feedback quantity.",
+   "translation": "令C_{n,fb}表示相应的反馈量。"
+  },
+  {
+   "start": 875.5417,
+   "end": 880.3667,
+   "text": "The feedback quantity uses the same normalization and power budget.",
+   "translation": "反馈量采用相同归一化与功率预算。"
+  },
+  {
+   "start": 880.8167,
+   "end": 884.3917,
+   "text": "Their comparison is C n at most C n feedback.",
+   "translation": "其比较关系为C_n≤C_{n,fb}。"
+  },
+  {
+   "start": 884.8417,
+   "end": 893.1667,
+   "text": "The feedback quantity is at most the smaller of twice C sub n and C sub n plus one half. Is that half a bit per second?",
+   "translation": "反馈量至多为2C_n与C_n+1/2中的较小值。这里是每秒半比特吗？"
+  },
+  {
+   "start": 896.1167,
+   "end": 899.7917,
+   "text": "These quantities are measured in bits per real transmission.",
+   "translation": "这些量以每次实传输比特数计量。"
+  },
+  {
+   "start": 900.2417,
+   "end": 904.5667,
+   "text": "The half-bit increment is not a universal half bit per second.",
+   "translation": "半比特增量不是通用的每秒半比特。"
+  },
+  {
+   "start": 905.0167,
+   "end": 909.1167,
+   "text": "A conversion to bits per second needs an explicit use rate.",
+   "translation": "换算成比特每秒需要明确的使用速率。"
+  },
+  {
+   "start": 909.5667,
+   "end": 914.4917,
+   "text": "It also needs a continuous-time model with matching bandwidth assumptions.",
+   "translation": "还需要具有匹配带宽假设的连续时间模型。"
+  },
+  {
+   "start": 914.9417,
+   "end": 919.4167,
+   "text": "This is an invoked advanced comparison, not a derivation here.",
+   "translation": "这里引用这项高级比较结果，而不作推导。"
+  },
+  {
+   "start": 919.8667,
+   "end": 923.0667,
+   "text": "It is not a finite-block zero-error guarantee.",
+   "translation": "它不是有限块零错误保证。"
+  },
+  {
+   "start": 923.5167,
+   "end": 927.2417,
+   "text": "Nor does it make every feedback code attain the upper bound.",
+   "translation": "它也不意味着每个反馈码都能达到上界。"
+  },
+  {
+   "start": 927.6917,
+   "end": 932.1917,
+   "text": "Memoryless Gaussian channels have no feedback capacity increase.",
+   "translation": "无记忆高斯信道的容量不会因反馈而增加。"
+  },
+  {
+   "start": 932.6417,
+   "end": 936.5167,
+   "text": "That agrees with the memoryless-channel argument from earlier.",
+   "translation": "这与前面对无记忆信道的论证一致。"
+  },
+  {
+   "start": 936.9667,
+   "end": 940.4917,
+   "text": "Colored noise has memory that feedback can exploit.",
+   "translation": "彩色噪声具有反馈可能利用的记忆。"
+  },
+  {
+   "start": 940.9417,
+   "end": 944.9167,
+   "text": "Its finite-block comparison therefore has a different scope.",
+   "translation": "因此其有限块比较具有不同适用范围。"
+  },
+  {
+   "start": 945.3667,
+   "end": 949.8667,
+   "text": "Keep the message, causal outputs, and current input in time order.",
+   "translation": "应按时间顺序排列消息、过去输出与当前输入。"
+  },
+  {
+   "start": 950.3167,
+   "end": 953.3167,
+   "text": "Feedback cannot depend on future outputs.",
+   "translation": "反馈不能依赖未来输出。"
+  },
+  {
+   "start": 953.7667,
+   "end": 958.2167,
+   "text": "The stated covariance and power assumptions matter to the result.",
+   "translation": "声明的协方差与功率假设对该结果至关重要。"
+  },
+  {
+   "start": 958.6667,
+   "end": 962.4167,
+   "text": "This bound concerns a real discrete-time sequence channel.",
+   "translation": "该界针对实离散时间序列信道。"
+  },
+  {
+   "start": 962.8667,
+   "end": 967.4417,
+   "text": "It does not automatically extend to every continuous spectrum.",
+   "translation": "它不会自动推广到每种连续频谱模型。"
+  },
+  {
+   "start": 967.8917,
+   "end": 971.8667,
+   "text": "The final chapter will connect source rates and channel budgets.",
+   "translation": "最后一章将连接信源速率与信道预算。"
+  },
+  {
+   "start": 972.3167,
+   "end": 975.6417,
+   "text": "It will preserve each theorem’s assumptions and units.",
+   "translation": "它将保留各定理的假设与单位。"
+  },
+  {
+   "start": 979.6667,
+   "end": 986.5167,
+   "text": "A source produces symbols that must be represented or transmitted with a specified error requirement.",
+   "translation": "信源产生符号，需要在明确错误要求下表示或传输。"
+  },
+  {
+   "start": 986.9667,
+   "end": 991.9917,
+   "text": "For a finite memoryless source, typical code lengths are governed by entropy.",
+   "translation": "有限无记忆信源的典型码长由熵控制。"
+  },
+  {
+   "start": 992.4417,
+   "end": 999.1167,
+   "text": "For a stationary ergodic finite-alphabet source, entropy rate replaces single-symbol entropy.",
+   "translation": "对平稳遍历有限字母表信源，熵率取代单符号熵。"
+  },
+  {
+   "start": 999.5667,
+   "end": 1003.9667,
+   "text": "The source coding theorem states its own asymptotic assumptions.",
+   "translation": "信源编码定理有其自身渐近假设。"
+  },
+  {
+   "start": 1004.4167,
+   "end": 1009.0917,
+   "text": "The channel coding theorem asks whether messages can cross reliably.",
+   "translation": "信道编码定理讨论消息能否可靠传输。"
+  },
+  {
+   "start": 1009.5417,
+   "end": 1015.2167,
+   "text": "For a discrete memoryless channel, capacity is maximum mutual information per use.",
+   "translation": "对离散无记忆信道，容量是每次使用最大互信息。"
+  },
+  {
+   "start": 1015.6667,
+   "end": 1020.2167,
+   "text": "For real AWGN, the unit is bits per real channel use.",
+   "translation": "对实AWGN，单位是每次实信道使用比特数。"
+  },
+  {
+   "start": 1020.6667,
+   "end": 1026.8667,
+   "text": "For continuous-time real lowpass AWGN, capacity is measured in bits per second.",
+   "translation": "对连续时间实低通AWGN，容量单位为比特每秒。"
+  },
+  {
+   "start": 1027.3167,
+   "end": 1031.7917,
+   "text": "Bandwidth converts real uses per second into a physical rate.",
+   "translation": "带宽将每秒实使用次数转换为物理速率。"
+  },
+  {
+   "start": 1032.2417,
+   "end": 1037.3667,
+   "text": "A sequence of m source symbols requires about m times entropy rate bits.",
+   "translation": "m个信源符号约需要m乘熵率个比特。"
+  },
+  {
+   "start": 1037.8167,
+   "end": 1042.6417,
+   "text": "A channel block of n uses offers about n times capacity bits.",
+   "translation": "n次信道使用约提供n乘容量个比特。"
+  },
+  {
+   "start": 1043.0917,
+   "end": 1049.2917,
+   "text": "A strict gap suffices for reliable separation under the source and channel coding assumptions.",
+   "translation": "在信源与信道编码假设下，严格余量足以保证可靠分离。"
+  },
+  {
+   "start": 1049.7417,
+   "end": 1053.5167,
+   "text": "Let block lengths grow with a fixed source-to-channel ratio.",
+   "translation": "令分组长度增长，同时保持信源块与信道块的固定比例。"
+  },
+  {
+   "start": 1053.9667,
+   "end": 1058.0667,
+   "text": "Choose m times entropy rate less than n times capacity.",
+   "translation": "选择m乘熵率小于n乘容量。"
+  },
+  {
+   "start": 1058.5167,
+   "end": 1064.9417,
+   "text": "Writing rho as m over n, the strict condition is rho times entropy rate below capacity.",
+   "translation": "令ρ=m/n，严格条件为ρ乘熵率小于容量。"
+  },
+  {
+   "start": 1065.3917,
+   "end": 1069.7667,
+   "text": "The channel model and source theorem hypotheses must both hold.",
+   "translation": "信道模型与信源定理假设必须同时成立。"
+  },
+  {
+   "start": 1070.2167,
+   "end": 1075.1167,
+   "text": "A fixed positive margin lets both coding error probabilities vanish.",
+   "translation": "固定正余量可使两端编码错误概率都趋于零。"
+  },
+  {
+   "start": 1075.5667,
+   "end": 1084.1417,
+   "text": "A converse requires the source rate not exceed capacity. Does this inequality itself certify achievability at equality?",
+   "translation": "反向结论要求信源速率不超过容量。这条不等式本身能证明等号处可达吗？"
+  },
+  {
+   "start": 1087.0917,
+   "end": 1092.0667,
+   "text": "At equality, asymptotic achievability itself needs separate analysis.",
+   "translation": "等号边界处，渐近可达性本身也需要单独分析。"
+  },
+  {
+   "start": 1092.5167,
+   "end": 1095.9917,
+   "text": "The entropy rate has units of bits per source symbol.",
+   "translation": "熵率单位是每个信源符号的比特数。"
+  },
+  {
+   "start": 1096.4417,
+   "end": 1100.2167,
+   "text": "Channel capacity has units of bits per channel use.",
+   "translation": "信道容量单位是每次信道使用的比特数。"
+  },
+  {
+   "start": 1100.6667,
+   "end": 1109.4417,
+   "text": "When capacity is positive, entropy rate divided by capacity gives the asymptotic threshold of channel uses per source symbol.",
+   "translation": "容量为正时，熵率除以容量给出每信源符号所需信道使用次数的渐近门槛。"
+  },
+  {
+   "start": 1109.8917,
+   "end": 1115.2167,
+   "text": "AWGN capacity turns available power and noise into a rate.",
+   "translation": "AWGN容量将可用功率与噪声转换为速率。"
+  },
+  {
+   "start": 1115.6667,
+   "end": 1120.4417,
+   "text": "Water-filling distributes a shared power budget across parallel modes.",
+   "translation": "注水法将共享功率预算分配到并行模式。"
+  },
+  {
+   "start": 1120.8917,
+   "end": 1126.6417,
+   "text": "Toeplitz eigenvalue limits connect stationary covariance to asymptotic modes.",
+   "translation": "Toeplitz特征值极限将平稳协方差连接到渐近模式。"
+  },
+  {
+   "start": 1127.0917,
+   "end": 1132.0417,
+   "text": "That connection needs spectral regularity such as absolute summability.",
+   "translation": "该连接需要绝对可和等谱正则条件。"
+  },
+  {
+   "start": 1132.4917,
+   "end": 1137.8917,
+   "text": "Continuous-time spectra require hertz and two-sided density conventions.",
+   "translation": "连续时间频谱需要明确赫兹与双边谱密度约定。"
+  },
+  {
+   "start": 1138.3417,
+   "end": 1143.0167,
+   "text": "A finite-block feedback bound returns to bits per real transmission.",
+   "translation": "有限块反馈界则回到每次实传输比特数。"
+  },
+  {
+   "start": 1143.4667,
+   "end": 1147.9417,
+   "text": "No per-use constant becomes a rate without an explicit use rate.",
+   "translation": "没有明确使用速率时，每次使用常数不能变成速率。"
+  },
+  {
+   "start": 1148.3917,
+   "end": 1152.5167,
+   "text": "Each result therefore carries a model, a limit, and a unit.",
+   "translation": "因此每个结果都带有模型、极限与单位。"
+  },
+  {
+   "start": 1152.9667,
+   "end": 1157.5167,
+   "text": "Computed examples illustrate formulas but do not replace proofs.",
+   "translation": "计算示例用于说明公式，却不能替代证明。"
+  },
+  {
+   "start": 1157.9667,
+   "end": 1165.8667,
+   "text": "The Gaussian feedback comparison is an invoked result under its covariance, causality, and expected-power assumptions.",
+   "translation": "高斯反馈比较是在其协方差、因果性与期望功率假设下引用的结果。"
+  },
+  {
+   "start": 1166.3167,
+   "end": 1171.6667,
+   "text": "The spectral water-fill limit is likewise conditional on Toeplitz hypotheses.",
+   "translation": "谱注水极限同样依赖Toeplitz假设。"
+  },
+  {
+   "start": 1172.1167,
+   "end": 1177.7667,
+   "text": "Together, entropy, coding, capacity, and allocation form a reusable chain.",
+   "translation": "熵、编码、容量与分配共同构成可复用推理链。"
+  },
+  {
+   "start": 1178.2167,
+   "end": 1182.0917,
+   "text": "A new source or channel model requires new assumptions.",
+   "translation": "新的信源或信道模型需要新的假设。"
+  },
+  {
+   "start": 1182.5417,
+   "end": 1186.8417,
+   "text": "Nonstationary or non-Gaussian extensions are not automatic.",
+   "translation": "非平稳或非高斯推广并非自动成立。"
+  },
+  {
+   "start": 1187.2917,
+   "end": 1192.8167,
+   "text": "Given a source and a channel, first express their information budgets in matching units.",
+   "translation": "面对一个信源和一个信道，先用一致的单位表达它们的信息预算。"
+  },
+  {
+   "start": 1193.2667,
+   "end": 1201.0167,
+   "text": "Then identify the assumptions that justify compression, transmission, and allocation. That makes the budget usable.",
+   "translation": "再确定压缩、传输和分配各自依赖的假设，这样才能运用这个预算。"
+  }
+ ]
+}

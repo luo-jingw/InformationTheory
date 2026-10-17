@@ -1,0 +1,117 @@
+{
+ "title": "Information Theory from the Ground Up",
+ "episodes": [
+  {
+   "id": "e01-entropy-information",
+   "order": 1,
+   "title": "Entropy and Shared Information",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "2ae5908c4e43"
+  },
+  {
+   "id": "e02-divergence-convexity",
+   "order": 2,
+   "title": "Divergence, Convexity and Information Inequalities",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "7f772727707a"
+  },
+  {
+   "id": "e03-processing-inference",
+   "order": 3,
+   "title": "Markov Chains, Processing and Inference",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "9cdea7ccc1c4"
+  },
+  {
+   "id": "e04-typical-compression",
+   "order": 4,
+   "title": "Typical Sets and the Compression Limit",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "00f28d36324d"
+  },
+  {
+   "id": "e05-memory-entropy-rate",
+   "order": 5,
+   "title": "Memory, Stationarity and Entropy Rate",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "992c74b6b7e3"
+  },
+  {
+   "id": "e06-prefix-kraft",
+   "order": 6,
+   "title": "Code Trees, Kraft and Entropy Bounds",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "34de6dccf9f8"
+  },
+  {
+   "id": "e07-huffman-universal",
+   "order": 7,
+   "title": "Huffman and Universal Compression",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "db5913e7dbbe"
+  },
+  {
+   "id": "e08-channel-capacity",
+   "order": 8,
+   "title": "Discrete Channels and Capacity",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "f3dfb041b1dc"
+  },
+  {
+   "id": "e09-channel-coding",
+   "order": 9,
+   "title": "Why Reliable Communication Is Possible",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "8c44ee4f0733"
+  },
+  {
+   "id": "e10-differential-gaussian",
+   "order": 10,
+   "title": "Differential Entropy and Gaussian Extremality",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "3b8d036d186e"
+  },
+  {
+   "id": "e11-awgn-coding",
+   "order": 11,
+   "title": "Gaussian Channels, Coding and Modulation",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "1b940c820353"
+  },
+  {
+   "id": "e12-bandwidth-energy",
+   "order": 12,
+   "title": "Bandwidth, Energy and the Shannon Limit",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "673cf85bf0af"
+  },
+  {
+   "id": "e13-kkt-waterfilling",
+   "order": 13,
+   "title": "Capacity Optimization and Water-Filling",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "39ced39111fc"
+  },
+  {
+   "id": "e14-colored-channels",
+   "order": 14,
+   "title": "From Eigenmodes to Spectral Water-Filling",
+   "status": "delivered",
+   "kind": "episode",
+   "audioVersion": "0b3d52789565"
+  }
+ ]
+}
