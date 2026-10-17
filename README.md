@@ -1,26 +1,26 @@
 # Information Theory from the Ground Up
 
-14 集信息论数学动画课程：英文女声讲解，英文在上、中文在下的双语字幕。内容从熵、信息不等式与统计推断延伸到无损压缩、信道编码、高斯信道及谱水填充。核心结论包含成立条件、推导与具体算例。每集采用对应叙事事件的独立分段配乐。
+A 14-episode animated course in information theory, with English female narration and bilingual subtitles: English above Chinese. Topics range from entropy, information inequalities, and statistical inference to lossless compression, channel coding, Gaussian channels, and spectral water-filling. Core results include their assumptions, derivations, and worked examples. Each episode has an original score with distinct sections aligned to the narrative.
 
-**在线课程：[GitHub Pages](https://luo-jingw.github.io/InformationTheory/)**
+**Watch the course: [GitHub Pages](https://luo-jingw.github.io/InformationTheory/)**
 
-`main` 保存可维护源码；[`gh-pages`](https://github.com/luo-jingw/InformationTheory/tree/gh-pages) 保存完整网页发布产物。
+`main` contains the maintained source code. [`gh-pages`](https://github.com/luo-jingw/InformationTheory/tree/gh-pages) contains the complete published website.
 
-## 目录
+## Repository Layout
 
-| 目录 | 内容 |
+| Directory | Contents |
 |---|---|
-| `content/` | 14 集双语脚本、分镜、术语、配乐谱面与句子锚点 |
-| `player/src/` | Three.js 动画场景、公式字幕、课程首页和章节播放器 |
-| `player/render/` | 确定性逐帧捕获、分块缓存与静态网页构建 |
-| `pipeline/rvideo/` | 语音、实测时间轴、配乐、混音、字幕与视频交付管线 |
-| `assets/music/` | 乐器采样清单、公开下载地址、校验值及许可文本 |
-| `docs/` | 画面编排、状态归属与数学算例说明 |
-| `.claude/skills/` | 计划、制作、审查和整理工作流 |
+| `content/` | Bilingual scripts, storyboards, terminology, music scores, and sentence anchors for all 14 episodes |
+| `player/src/` | Three.js animation scenes, equation captions, course homepage, and chapter player |
+| `player/render/` | Deterministic frame capture, chunk caching, and static website builds |
+| `pipeline/rvideo/` | Narration, measured timelines, music, mixing, subtitles, and video delivery |
+| `assets/music/` | Instrument sample manifests, public download URLs, checksums, and licenses |
+| `docs/` | Visual composition, state ownership, and worked mathematical examples |
+| `.claude/skills/` | Planning, production, review, and project closure workflows |
 
-## 开发与构建
+## Development and Builds
 
-播放器使用 Node.js 22，依赖及锁定版本见 `player/package.json` 和 `player/package-lock.json`。准备依赖后可执行：
+The player uses Node.js 22. Dependencies and locked versions are listed in `player/package.json` and `player/package-lock.json`. Once dependencies are available, run:
 
 ```bash
 cd player
@@ -28,9 +28,9 @@ npm run typecheck
 npm run dev
 ```
 
-Python 管线依赖见 `pipeline/pyproject.toml`，运行时读取项目内的 `.venv`。本地 Kokoro 和 Whisper 权重分别放在 `.models/kokoro` 与 `.models/whisper`，乐器录音按 `assets/music/source-records.json` 中的路径和 SHA-256 准备。源码分支不附带这些权重、录音或生成音轨。
+Python pipeline dependencies are listed in `pipeline/pyproject.toml`. The pipeline uses the project's `.venv` at runtime. Place local Kokoro and Whisper model weights in `.models/kokoro` and `.models/whisper`, respectively. Prepare instrument recordings using the paths and SHA-256 checksums in `assets/music/source-records.json`. Model weights, recordings, and generated audio tracks are excluded from the source branch.
 
-以第一集为例，从项目根目录执行：
+For example, to produce the audio and subtitles for the first episode, run these commands from the repository root:
 
 ```bash
 pipeline/run.sh validate e01-entropy-information
@@ -41,10 +41,10 @@ pipeline/run.sh music e01-entropy-information
 pipeline/run.sh mix e01-entropy-information
 ```
 
-`npm run site:build` 从各集已生成的时间轴和混音构建 `site/`。因此，首次克隆源码后需要先准备这些产物。只想观看课程时，可直接使用在线课程或检出 `gh-pages`。
+From `player/`, run `npm run site:build` to build `site/` from the generated episode timelines and audio mixes. These artifacts must be prepared before building from a fresh source checkout. To watch the course, use the online player or check out `gh-pages`.
 
-## 源码发布范围
+## Source Publication Scope
 
-该分支仅包含轻量文本源码和必要配置。讲义 `notes/`、个人运行记录、凭据、依赖环境、模型、采样、生成媒体与缓存均排除；本次源码快照每个文件不超过 1 MiB。
+This branch contains lightweight text source files and required configuration. Lecture notes in `notes/`, personal operational records, credentials, dependency environments, models, samples, generated media, and caches are excluded. Every file in this source snapshot is at most 1 MiB.
 
-架构与状态归属见 [video-architecture](docs/video-architecture.md)，场景契约见 [scene-authoring](docs/scene-authoring.md)，具体计算见 [mathematical-examples](docs/mathematical-examples.md)。采样来源与许可保存在 `assets/music/`。
+See [Video Architecture](docs/video-architecture.md) for architecture and state ownership, [Scene Authoring](docs/scene-authoring.md) for scene contracts, and [Mathematical Examples](docs/mathematical-examples.md) for worked calculations. Sample sources and licenses are documented in `assets/music/`.
